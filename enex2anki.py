@@ -103,19 +103,56 @@ def limpar_tag(texto):
     return re.sub(r"\s+", "_", texto.strip())
 
 
+# Exportação HTML do Evernote guarda as cores em variáveis CSS do tema claro.
+VARIAVEIS_CELULA = {"--background-color-lightmode": "background-color", "--text-color-lightmode": "color"}
+
+
 def estilo_da_celula(td):
     partes = []
     for decl in (td.get("style") or "").split(";"):
         if ":" in decl:
             prop, val = decl.split(":", 1)
-            if prop.strip().lower() in ESTILOS_CELULA:
-                partes.append(f"{prop.strip()}:{val.strip()}")
+            prop = VARIAVEIS_CELULA.get(prop.strip().lower(), prop.strip().lower())
+            if prop in ESTILOS_CELULA:
+                partes.append(f"{prop}:{val.strip()}")
     if td.get("bgcolor"):
         partes.append(f"background-color:{td['bgcolor']}")
     # Cor de texto sem cor de fundo some no modo noturno do Anki: só a mantém junto do fundo.
     if not any(p.startswith("background") for p in partes):
         partes = [p for p in partes if not p.startswith("color")]
     return ";".join(partes)
+
+
+CORES_REALCE = {"yellow": "#FFEF9E", "green": "#B7F5C1", "blue": "#BFE3FF", "pink": "#FFC9E4",
+                "orange": "#FFD8A8", "purple": "#E1CCFF", "red": "#FFC4C4"}
+
+
+def normalizar_html_evernote(soup):
+    """Converte a marcação da exportação HTML do Evernote (editor novo) em HTML simples.
+
+    Não altera notas vindas de .enex (ENML), que não têm essas marcações.
+    """
+    for el in soup.select("div.list-bullet-todo-container, div.list-counter-wrapper"):
+        el.decompose()  # checkbox invisível e contador desenhado por CSS (o <ol> já numera)
+    for el in soup.select("div.list-content"):
+        el.unwrap()
+    for span in soup.find_all("span"):
+        estilo = span.get("style") or ""
+        m = re.search(r"--lightmode-color:\s*([^;]+)", estilo)
+        novos = [f"color:{m.group(1).strip()}"] if m else []
+        realce = span.get("data-highlight")
+        if realce:
+            novos.append(f"background-color:{CORES_REALCE.get(realce, realce)}")
+        if novos:
+            span["style"] = ";".join(novos)
+        elif estilo.startswith("--"):
+            del span["style"]
+    for el in soup.find_all(True):
+        for a in ("class", "draggable", "contenteditable", "spellcheck", "role", "data-highlight"):
+            if a in el.attrs and el.name not in ("td", "th"):
+                del el[a]
+        if el.name not in ("td", "th", "span") and (el.get("style") or "").lstrip().startswith("--"):
+            del el["style"]
 
 
 def marcar_trilha(td):
@@ -138,54 +175,94 @@ def marcar_trilha(td):
     bloco.replace_with(nova)
 
 
-LACUNA = re.compile(r"_{3,}(?:\s*\[([^\]]*)\])?")
+# Lacuna ______ (pode estar dentro de <b>/<span>) + dica opcional logo depois: [2], (8), [quando, 2].
+LACUNA = re.compile(r"_{3,}(?P<fecha>(?:\s*</[^>]+>)*)"
+                    r"(?:\s*(?:<(?P<tag>b|i|strong|em|span)\b[^>]*>[\[(](?P<dica1>[^\])<]*)[\])]</(?P=tag)>"
+                    r"|[\[(](?P<dica2>[^\])<]*)[\])]))?")
+
+
+def dica_da_lacuna(lac):
+    return lac.group("dica1") or lac.group("dica2")
 ITEM = re.compile(r"^\s*(?:<[^>]+>\s*)*(\d+)[.)]\s*")
+CITACAO = re.compile(r"^\s*(⚖|\()")
 
 
-def tentar_cloze(frente, td_v, um_card_por_lacuna=False):
-    """Se a frente tem lacunas (______) e o verso é uma lista numerada que as preenche,
-    devolve (texto_cloze, extra). Senão, None.
+def _sem_pontuacao_final(fragmento):
+    """Tira ponto/ponto e vírgula do fim da resposta (a frase do cloze já tem a sua)."""
+    # Resposta vai no meio da frase: blocos (<div>, <p>) viram quebras de linha simples.
+    fragmento = re.sub(r"</(div|p)>\s*<(div|p)\b[^>]*>", "<br>", fragmento.strip())
+    fragmento = re.sub(r"</?(div|p)\b[^>]*>", "", fragmento)
+    fragmento = re.sub(r"^((?:<[^/>][^>]*>)*)(?:\s|<br\s*/?>)+", r"\1", fragmento.strip())
+    fragmento = re.sub(r"(?:\s|<br\s*/?>)+((?:</[^>]+>\s*)*)$", r"\1", fragmento)
+    return re.sub(r"[\s.;,]+((?:</[^>]+>\s*)*)$", r"\1", fragmento)
 
-    Dicas depois da lacuna viram dica do cloze: '______ [quando, 2]' -> {{c1::…::quando, 2}}.
-    Se a contagem simples não bater, usa o número da dica como quantidade de itens da lacuna.
-    """
-    lacunas = list(LACUNA.finditer(frente))
-    if not lacunas:
-        return None
-    itens, extra = [], []
+
+def _itens_do_verso(td_v):
+    """Separa o verso em itens numerados (respostas) e o resto (citação, comentários)."""
+    itens, resto = [], []
     for filho in td_v.find_all(recursive=False):
-        interno = filho.decode_contents().strip() if hasattr(filho, "decode_contents") else str(filho)
-        texto = filho.get_text(" ", strip=True) if hasattr(filho, "get_text") else str(filho).strip()
+        if not hasattr(filho, "get_text"):
+            if str(filho).strip():
+                resto.append(str(filho).strip())
+            continue
+        texto = filho.get_text(" ", strip=True)
         if not texto:
             continue
+        if filho.name in ("ol", "ul"):
+            for li in filho.find_all("li", recursive=False):
+                if li.get_text(strip=True):
+                    itens.append(li.decode_contents().strip())
+            continue
+        interno = filho.decode_contents().strip()
         m = ITEM.match(interno)
         if m and texto.startswith(m.group(1)):
             itens.append(ITEM.sub(lambda mm: mm.group(0)[:mm.start(1) - mm.start(0)], interno, count=1).strip())
         else:
-            extra.append(interno)
-    if not itens:
+            resto.append(interno)
+    return itens, resto
+
+
+def tentar_cloze(frente, td_v, um_card_por_lacuna=False):
+    """Se a frente tem lacunas (______) e o verso as preenche, devolve (texto_cloze, extra). Senão, None.
+
+    - Verso numerado (1., 2. … ou lista <ol>): cada item preenche uma lacuna, na ordem.
+    - Dica logo depois da lacuna vira dica do cloze: '______ [quando, 2]' ou '______ (8)'.
+      Se a contagem simples não bater, o número da dica diz quantos itens cabem naquela lacuna.
+    - Uma lacuna só e verso sem numeração: a resposta é o verso (menos a citação ⚖️/(art. …)).
+    """
+    lacunas = list(LACUNA.finditer(frente))
+    if not lacunas:
         return None
+    itens, extra = _itens_do_verso(td_v)
+    if not itens:
+        if len(lacunas) != 1:
+            return None
+        resposta = [e for e in extra if not CITACAO.match(BeautifulSoup(e, "html.parser").get_text())]
+        if not resposta:
+            return None
+        itens = [" ".join(resposta)]
+        extra = [e for e in extra if e not in resposta]
 
     pesos = [1] * len(lacunas)
     if len(itens) != len(lacunas):
         pesos = []
         for lac in lacunas:
-            n = re.search(r"(\d+)\s*$", lac.group(1) or "")
-            pesos.append(int(n.group(1)) if n else 1)
+            n = re.search(r"\d+", dica_da_lacuna(lac) or "")
+            pesos.append(int(n.group(0)) if n else 1)
         if sum(pesos) != len(itens):
             return None
 
     respostas, i = [], 0
     for p in pesos:
-        respostas.append("; ".join(itens[i:i + p]))
+        respostas.append("; ".join(_sem_pontuacao_final(x) for x in itens[i:i + p]))
         i += p
 
     partes, pos = [], 0
     for k, (lac, resp) in enumerate(zip(lacunas, respostas), start=1):
         n = k if um_card_por_lacuna else 1
-        dica = f"::{lac.group(1).strip()}" if lac.group(1) else ""
+        dica = f"::{dica_da_lacuna(lac).strip()}" if dica_da_lacuna(lac) else ""
         resp = resp.replace("}}", "} }").replace("::", ": :")
-        partes.append(frente[pos:lac.start()] + f"{{{{c{n}::{resp}{dica}}}}}")
+        partes.append(frente[pos:lac.start()] + f"{{{{c{n}::{resp}{dica}}}}}" + lac.group("fecha"))
         pos = lac.end()
     partes.append(frente[pos:])
     return "".join(partes), "".join(f"<div>{e}</div>" for e in extra)
@@ -259,11 +336,24 @@ def ler_enex(caminho, pasta_midia):
 
 
 def ler_html(caminho):
-    """Lê uma nota exportada do Evernote como HTML (sem imagens)."""
-    soup = BeautifulSoup(Path(caminho).read_text(encoding="utf-8", errors="replace"), "html.parser")
-    titulo = soup.title.get_text(strip=True) if soup.title else ""
-    corpo = soup.body or soup
-    return [{"titulo": titulo or Path(caminho).stem, "tags": [], "html": str(corpo), "midias": {}}]
+    """Lê notas exportadas do Evernote como HTML (sem imagens).
+
+    Um arquivo pode conter várias notas em sequência; cada uma começa com
+    <meta itemprop="title" content="…">, seguido de <div class="noteTitle">.
+    """
+    texto = Path(caminho).read_text(encoding="utf-8", errors="replace")
+    marcas = list(re.finditer(r'<meta itemprop="title" content="([^"]*)"\s*/?>', texto))
+    if not marcas:
+        soup = BeautifulSoup(texto, "html.parser")
+        titulo = soup.title.get_text(strip=True) if soup.title else ""
+        return [{"titulo": titulo or Path(caminho).stem, "tags": [], "html": texto, "midias": {}}]
+    notas = []
+    for i, m in enumerate(marcas):
+        fim = marcas[i + 1].start() if i + 1 < len(marcas) else len(texto)
+        trecho = re.sub(r'<div class="noteTitle"[^>]*>.*?</div>', "", texto[m.end():fim], count=1, flags=re.S)
+        trecho = re.sub(r"<icons>.*?</icons>|<svg\b.*?</svg>", "", trecho, flags=re.S)
+        notas.append({"titulo": html.unescape(m.group(1)).strip(), "tags": [], "html": trecho, "midias": {}})
+    return notas
 
 
 EXTENSOES = (".enex", ".html", ".htm")
@@ -335,7 +425,8 @@ def main():
 
     cfg = json.loads(Path(args.config).read_text(encoding="utf-8")) if args.config else {}
     raiz = args.baralho or cfg.get("baralho", "Evernote")
-    secao = normalizar(cfg["secao_h1"]) if cfg.get("secao_h1") else None
+    secoes = cfg.get("secao_h1") or []
+    secoes = [normalizar(x) for x in ([secoes] if isinstance(secoes, str) else secoes)]
     por_nota = cfg.get("sub_baralho_por_nota", False)
     remover = cfg.get("remover_do_nome_do_baralho", [])
     modelo, modelo_cloze = criar_modelos(cfg.get("estilo_trilha", "A"))
@@ -357,6 +448,12 @@ def main():
         caderno = enex.stem
         notas = ler_enex(enex, pasta_midia) if enex.suffix.lower() == ".enex" else ler_html(enex)
         for nota in notas:
+            nota["titulo"] = re.sub(r"\s+", " ", unicodedata.normalize("NFC", nota["titulo"]))
+            for sufixo in (unicodedata.normalize("NFC", x) for x in cfg.get("remover_sufixos_titulo", [])):
+                if nota["titulo"].endswith(" " + sufixo):
+                    resto = nota["titulo"][: -len(sufixo) - 1].rstrip()
+                    if re.search(r"—.*[^\W\d_]", resto):  # não deixa o título só com número + emoji
+                        nota["titulo"] = resto
             if args.baralho_unico:
                 nome_baralho = raiz
             elif por_nota:
@@ -364,14 +461,15 @@ def main():
             else:
                 nome_baralho = f"{raiz}::{caderno}"
             soup = BeautifulSoup(nota["html"], "html.parser")
+            normalizar_html_evernote(soup)
             tags = tags_da_nota(nota, caderno, cfg)
             ref = nota["titulo"] if por_nota else f"{caderno} › {nota['titulo']}"
-            if secao and not any(secao in normalizar(h.get_text()) for h in soup.find_all("h1")):
+            if secoes and not any(x in normalizar(h.get_text()) for h in soup.find_all("h1") for x in secoes):
                 sem_secao.append(ref)
                 continue
             n_nota = 0
             for i, td_f, td_v in linhas_de_tabelas(soup):
-                if secao and secao not in (secao_da_tabela(td_f.find_parent("table")) or ""):
+                if secoes and not any(x in (secao_da_tabela(td_f.find_parent("table")) or "") for x in secoes):
                     continue
                 if pular_cab and i == 0:
                     continue
@@ -423,7 +521,7 @@ def main():
         for n in lacuna_sem_cloze:
             print(f"  - {n}")
     if sem_secao:
-        print(f"\n{len(sem_secao)} nota(s) sem o título H1 '{cfg['secao_h1']}' (ignoradas):")
+        print(f"\n{len(sem_secao)} nota(s) sem o título H1 {cfg['secao_h1']} (ignoradas):")
         for n in sem_secao:
             print(f"  - {n}")
     if sem_cards:

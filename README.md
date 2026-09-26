@@ -47,4 +47,9 @@ python3 enex2anki.py entrada/ --config regimentos.json -o saida/regimentos.apkg
 - `cloze_um_card_por_lacuna`: `false` = um card com todas as lacunas; `true` = um card por lacuna
 - `tag_fundo_colorido`: tag para os cards cuja frente tem fundo colorido (ex.: `REG-CARD-GERAL`)
 
-Também aceita notas exportadas como `.html` (sem imagens), no lugar do `.enex`.
+Também aceita notas exportadas como `.html` (sem imagens), no lugar do `.enex`, inclusive um único
+`.html` com o caderno inteiro (o script separa as notas pelo título).
+
+Outras opções do `.json`:
+- `secao_h1` pode ser uma lista (ex.: `["flashcards", "👾 deck"]`)
+- `remover_sufixos_titulo`: textos a cortar do fim do título das notas (restos de títulos de bloco)

@@ -1,6 +1,9 @@
 {
   "baralho": "Regimentos",
-  "secao_h1": "flashcards",
+  "secao_h1": [
+    "flashcards",
+    "👾 deck"
+  ],
   "sub_baralho_por_nota": true,
   "remover_do_nome_do_baralho": [
     "⭐"
@@ -42,5 +45,14 @@
   "estilo_trilha": "A",
   "cloze": true,
   "cloze_um_card_por_lacuna": false,
-  "tag_fundo_colorido": "REG-CARD-GERAL"
+  "tag_fundo_colorido": "REG-CARD-GERAL",
+  "remover_sufixos_titulo": [
+    "Mesa, Presidência e Órgãos Institucionais",
+    "Comissões",
+    "Sessões da Câmara",
+    "Proposições",
+    "Apreciação, Discussão e Votação",
+    "Matérias Sujeitas a Disposições Especiais",
+    "Estatuto dos Parlamentares e Administração (RICD)"
+  ]
 }

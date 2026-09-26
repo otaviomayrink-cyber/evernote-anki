@@ -41,3 +41,10 @@ python3 enex2anki.py entrada/ --config regimentos.json -o saida/regimentos.apkg
 - `tags_por_numero`: tag temática pelo número do título da nota (01, 02, …)
 - `prioritarios` / `tag_prioritario`: tag de prioridade (também aplicada se o título tiver ⭐)
 - `manter_tags_evernote`: se `true`, também copia as tags da nota no Evernote
+- `estilo_trilha`: aparência da linha `[REG › …]` no topo da frente: `original`, `A`, `B`, `C` ou `D` (escondida)
+- `cloze`: frentes com lacunas `______` e verso numerado (`1. …`, `2. …`) viram cards Cloze;
+  dicas como `______ [quando, 2]` viram dica do cloze
+- `cloze_um_card_por_lacuna`: `false` = um card com todas as lacunas; `true` = um card por lacuna
+- `tag_fundo_colorido`: tag para os cards cuja frente tem fundo colorido (ex.: `REG-CARD-GERAL`)
+
+Também aceita notas exportadas como `.html` (sem imagens), no lugar do `.enex`.

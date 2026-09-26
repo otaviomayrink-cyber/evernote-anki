@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Converte tabelas de 2 colunas de notas do Evernote (.enex) em um baralho do Anki (.apkg).
+"""Converte tabelas de 2 colunas de notas do Evernote (.enex ou .html) em um baralho do Anki (.apkg).
 
 Cada linha de tabela vira um card: 1ª coluna = frente, 2ª coluna = verso.
 Formatação (negrito, cores, realces, cor de fundo da célula) e imagens são preservadas.
+Frentes com lacunas (______) e verso numerado (1. …, 2. …) viram cards Cloze.
 
 Uso:
     python3 enex2anki.py ARQUIVO_OU_PASTA [...] -o saida/meu_baralho.apkg
@@ -32,31 +33,66 @@ warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 # IDs fixos: permitem reimportar no Anki e ATUALIZAR os cards em vez de duplicá-los.
 MODEL_ID = 1607392319
+MODEL_CLOZE_ID = 1607392320
 DECK_ID_BASE = 2059400110
 
-CSS = """
+CSS_BASE = """
 .card { font-family: Arial, sans-serif; font-size: 20px; text-align: left;
         color: black; background-color: white; }
 .nightMode.card { color: #eee; background-color: #2f2f31; }
 .celula { padding: 8px; border-radius: 4px; }
 .origem { margin-top: 18px; font-size: 12px; color: #888; }
+.cloze { font-weight: bold; color: #0050c8; }
+.nightMode .cloze { color: #7fb2ff; }
 table { border-collapse: collapse; }
 td, th { border: 1px solid #bbb; padding: 4px; }
 img { max-width: 100%; }
 """
 
-MODELO = genanki.Model(
-    MODEL_ID,
-    "Evernote (Frente/Verso)",
-    fields=[{"name": "Frente"}, {"name": "Verso"}, {"name": "Origem"}],
-    templates=[{
-        "name": "Card 1",
-        "qfmt": "{{Frente}}",
-        "afmt": '{{FrontSide}}<hr id="answer">{{Verso}}'
-                '<div class="origem">{{Origem}}</div>',
-    }],
-    css=CSS,
-)
+# Estilos da "trilha" ([REG › Assunto › Subassunto]) no topo da frente.
+# Dá para trocar depois no próprio Anki: Ferramentas › Gerenciar Tipos de Nota › Cartões › Estilo.
+ESTILOS_TRILHA = {
+    "original": ".trilha { font-family: monospace; margin-bottom: 14px; }"
+                ".trilha::before { content: '['; } .trilha::after { content: ']'; }",
+    "A": ".trilha { font-family: monospace; font-size: 12px; color: #888; margin-bottom: 10px; }"
+         ".trilha::before { content: '['; } .trilha::after { content: ']'; }",
+    "B": ".trilha { font-size: 11px; color: #999; text-transform: uppercase;"
+         " letter-spacing: .06em; margin-bottom: 10px; }",
+    "C": ".trilha { display: inline-block; font-size: 12px; color: #555; background: #eceff3;"
+         " border-radius: 10px; padding: 2px 10px; margin-bottom: 12px; }"
+         ".nightMode .trilha { color: #ccc; background: #45474d; }",
+    "D": ".trilha { display: none; }",
+}
+
+
+def criar_modelos(estilo_trilha="A"):
+    css = CSS_BASE + ESTILOS_TRILHA[estilo_trilha]
+    basico = genanki.Model(
+        MODEL_ID,
+        "Evernote (Frente/Verso)",
+        fields=[{"name": "Frente"}, {"name": "Verso"}, {"name": "Origem"}],
+        templates=[{
+            "name": "Card 1",
+            "qfmt": "{{Frente}}",
+            "afmt": '{{FrontSide}}<hr id="answer">{{Verso}}'
+                    '<div class="origem">{{Origem}}</div>',
+        }],
+        css=css,
+    )
+    cloze = genanki.Model(
+        MODEL_CLOZE_ID,
+        "Evernote (Cloze)",
+        fields=[{"name": "Texto"}, {"name": "Extra"}, {"name": "Origem"}],
+        templates=[{
+            "name": "Cloze",
+            "qfmt": "{{cloze:Texto}}",
+            "afmt": '{{cloze:Texto}}<hr id="answer">{{Extra}}'
+                    '<div class="origem">{{Origem}}</div>',
+        }],
+        css=css,
+        model_type=genanki.Model.CLOZE,
+    )
+    return basico, cloze
 
 # Estilos da célula que valem a pena levar para o card (o resto é layout do Evernote).
 ESTILOS_CELULA = ("background-color", "background", "color", "text-align", "font-weight")
@@ -80,6 +116,79 @@ def estilo_da_celula(td):
     if not any(p.startswith("background") for p in partes):
         partes = [p for p in partes if not p.startswith("color")]
     return ";".join(partes)
+
+
+def marcar_trilha(td):
+    """Troca a 1ª linha '<code>[REG › A › B]</code>' por <div class="trilha">REG › A › B</div>.
+
+    A aparência da trilha passa a ser definida pelo CSS do tipo de nota.
+    """
+    code = td.find("code")
+    if not code:
+        return
+    m = re.fullmatch(r"\s*\[(.+)\]\s*", code.get_text())
+    if not m:
+        return
+    bloco = code.find_parent("div") if code.find_parent("div") in td.find_all("div") else code
+    seguinte = bloco.find_next_sibling()
+    if seguinte is not None and seguinte.name == "div" and not seguinte.get_text(strip=True) \
+            and not seguinte.find("img"):
+        seguinte.decompose()  # a linha em branco depois da trilha
+    nova = BeautifulSoup(f'<div class="trilha">{html.escape(m.group(1).strip())}</div>', "html.parser").div
+    bloco.replace_with(nova)
+
+
+LACUNA = re.compile(r"_{3,}(?:\s*\[([^\]]*)\])?")
+ITEM = re.compile(r"^\s*(?:<[^>]+>\s*)*(\d+)[.)]\s*")
+
+
+def tentar_cloze(frente, td_v, um_card_por_lacuna=False):
+    """Se a frente tem lacunas (______) e o verso é uma lista numerada que as preenche,
+    devolve (texto_cloze, extra). Senão, None.
+
+    Dicas depois da lacuna viram dica do cloze: '______ [quando, 2]' -> {{c1::…::quando, 2}}.
+    Se a contagem simples não bater, usa o número da dica como quantidade de itens da lacuna.
+    """
+    lacunas = list(LACUNA.finditer(frente))
+    if not lacunas:
+        return None
+    itens, extra = [], []
+    for filho in td_v.find_all(recursive=False):
+        interno = filho.decode_contents().strip() if hasattr(filho, "decode_contents") else str(filho)
+        texto = filho.get_text(" ", strip=True) if hasattr(filho, "get_text") else str(filho).strip()
+        if not texto:
+            continue
+        m = ITEM.match(interno)
+        if m and texto.startswith(m.group(1)):
+            itens.append(ITEM.sub(lambda mm: mm.group(0)[:mm.start(1) - mm.start(0)], interno, count=1).strip())
+        else:
+            extra.append(interno)
+    if not itens:
+        return None
+
+    pesos = [1] * len(lacunas)
+    if len(itens) != len(lacunas):
+        pesos = []
+        for lac in lacunas:
+            n = re.search(r"(\d+)\s*$", lac.group(1) or "")
+            pesos.append(int(n.group(1)) if n else 1)
+        if sum(pesos) != len(itens):
+            return None
+
+    respostas, i = [], 0
+    for p in pesos:
+        respostas.append("; ".join(itens[i:i + p]))
+        i += p
+
+    partes, pos = [], 0
+    for k, (lac, resp) in enumerate(zip(lacunas, respostas), start=1):
+        n = k if um_card_por_lacuna else 1
+        dica = f"::{lac.group(1).strip()}" if lac.group(1) else ""
+        resp = resp.replace("}}", "} }").replace("::", ": :")
+        partes.append(frente[pos:lac.start()] + f"{{{{c{n}::{resp}{dica}}}}}")
+        pos = lac.end()
+    partes.append(frente[pos:])
+    return "".join(partes), "".join(f"<div>{e}</div>" for e in extra)
 
 
 def conteudo_da_celula(td, midias, usadas):
@@ -149,15 +258,26 @@ def ler_enex(caminho, pasta_midia):
     return notas
 
 
+def ler_html(caminho):
+    """Lê uma nota exportada do Evernote como HTML (sem imagens)."""
+    soup = BeautifulSoup(Path(caminho).read_text(encoding="utf-8", errors="replace"), "html.parser")
+    titulo = soup.title.get_text(strip=True) if soup.title else ""
+    corpo = soup.body or soup
+    return [{"titulo": titulo or Path(caminho).stem, "tags": [], "html": str(corpo), "midias": {}}]
+
+
+EXTENSOES = (".enex", ".html", ".htm")
+
+
 def arquivos_enex(entradas):
     for e in entradas:
         p = Path(e)
         if p.is_dir():
-            yield from sorted(p.rglob("*.enex"))
-        elif p.suffix.lower() == ".enex":
+            yield from sorted(x for x in p.rglob("*") if x.suffix.lower() in EXTENSOES)
+        elif p.suffix.lower() in EXTENSOES:
             yield p
         else:
-            print(f"Aviso: ignorando {p} (não é .enex nem pasta)", file=sys.stderr)
+            print(f"Aviso: ignorando {p} (não é .enex, .html nem pasta)", file=sys.stderr)
 
 
 def normalizar(texto):
@@ -218,11 +338,14 @@ def main():
     secao = normalizar(cfg["secao_h1"]) if cfg.get("secao_h1") else None
     por_nota = cfg.get("sub_baralho_por_nota", False)
     remover = cfg.get("remover_do_nome_do_baralho", [])
+    modelo, modelo_cloze = criar_modelos(cfg.get("estilo_trilha", "A"))
+    usar_cloze = cfg.get("cloze", True)
+    tag_fundo = cfg.get("tag_fundo_colorido")
     pular_cab = args.pular_cabecalho or cfg.get("pular_cabecalho", False)
 
     pasta_midia = Path(tempfile.mkdtemp(prefix="enex_midia_"))
     baralhos, arquivos_midia = {}, set()
-    total_cards, sem_secao, sem_cards = 0, [], []
+    total_cards, n_cloze, sem_secao, sem_cards, lacuna_sem_cloze = 0, 0, [], [], []
 
     def baralho(nome):
         if nome not in baralhos:
@@ -232,7 +355,7 @@ def main():
 
     for enex in arquivos_enex(args.entradas):
         caderno = enex.stem
-        notas = ler_enex(enex, pasta_midia)
+        notas = ler_enex(enex, pasta_midia) if enex.suffix.lower() == ".enex" else ler_html(enex)
         for nota in notas:
             if args.baralho_unico:
                 nome_baralho = raiz
@@ -253,17 +376,30 @@ def main():
                 if pular_cab and i == 0:
                     continue
                 usadas = set()
+                assunto = td_f.find_parent("table").find_previous(["h2", "h3"])
+                origem = html.escape(ref + (f" › {assunto.get_text(' ', strip=True)}" if assunto else ""))
+                marcar_trilha(td_f)
                 frente = conteudo_da_celula(td_f, nota["midias"], usadas)
+                cloze = tentar_cloze(frente, td_v, cfg.get("cloze_um_card_por_lacuna", False)) \
+                    if usar_cloze else None
                 verso = conteudo_da_celula(td_v, nota["midias"], usadas)
                 if texto_vazio(frente) or texto_vazio(verso):
                     continue
-                # GUID estável: mesma nota + mesma frente => mesmo card ao reimportar,
-                # mesmo que o .enex tenha outro nome (exportações em partes).
-                guid = genanki.guid_for(nota["titulo"], frente)
-                assunto = td_f.find_parent("table").find_previous(["h2", "h3"])
-                origem = ref + (f" › {assunto.get_text(' ', strip=True)}" if assunto else "")
-                baralho(nome_baralho).add_note(genanki.Note(
-                    model=MODELO, fields=[frente, verso, html.escape(origem)], tags=tags, guid=guid))
+                tags_card = tags + ([tag_fundo] if tag_fundo and "background" in estilo_da_celula(td_f) else [])
+                if cloze:
+                    guid = genanki.guid_for(nota["titulo"], frente, "cloze")
+                    nota_anki = genanki.Note(model=modelo_cloze, fields=[cloze[0], cloze[1], origem],
+                                             tags=tags_card, guid=guid)
+                    n_cloze += 1
+                else:
+                    if usar_cloze and LACUNA.search(frente):
+                        lacuna_sem_cloze.append(f"{ref}: {BeautifulSoup(frente, 'html.parser').get_text(' ', strip=True)[:90]}")
+                    # GUID estável: mesma nota + mesma frente => mesmo card ao reimportar,
+                    # mesmo que o arquivo tenha outro nome (exportações em partes).
+                    guid = genanki.guid_for(nota["titulo"], frente)
+                    nota_anki = genanki.Note(model=modelo, fields=[frente, verso, origem],
+                                             tags=tags_card, guid=guid)
+                baralho(nome_baralho).add_note(nota_anki)
                 arquivos_midia.update(str(pasta_midia / n) for n in usadas)
                 n_nota += 1
             if n_nota == 0:
@@ -280,7 +416,12 @@ def main():
     pacote.media_files = sorted(arquivos_midia)
     pacote.write_to_file(saida)
 
-    print(f"\n{total_cards} cards gerados em {len(baralhos)} baralho(s) -> {saida}")
+    print(f"\n{total_cards} cards gerados ({n_cloze} cloze) em {len(baralhos)} baralho(s) -> {saida}")
+    if lacuna_sem_cloze:
+        print(f"\n{len(lacuna_sem_cloze)} card(s) com lacuna mantidos como frente/verso "
+              "(nº de lacunas ≠ nº de itens do verso):")
+        for n in lacuna_sem_cloze:
+            print(f"  - {n}")
     if sem_secao:
         print(f"\n{len(sem_secao)} nota(s) sem o título H1 '{cfg['secao_h1']}' (ignoradas):")
         for n in sem_secao:

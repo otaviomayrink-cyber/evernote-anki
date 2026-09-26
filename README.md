@@ -68,4 +68,7 @@ Outras opções do `.json`:
 | Geografia | `geografia.json` | `python3 enex2anki.py entrada/geo/ --config geografia.json -o saida/geografia.apkg` |
 | História Mundial | `historia_mundial.json` | `python3 enex2anki.py entrada/hm/ --config historia_mundial.json -o saida/historia_mundial.apkg` |
 
+Se o `.apkg` passar de 30 MB (limite de envio no chat), gere em partes com `--numeros 01-39` e `--numeros 40-99`:
+os baralhos têm o mesmo nome e se juntam no Anki.
+
 Arquivos `.7z` podem ser extraídos com `pip install py7zr` e `python3 -c "import py7zr; py7zr.SevenZipFile('arq.7z').extractall('entrada/x')"`.

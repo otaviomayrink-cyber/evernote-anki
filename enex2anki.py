@@ -423,6 +423,7 @@ def main():
                     help="ignora a 1ª linha de cada tabela (use se ela for só 'Pergunta | Resposta')")
     ap.add_argument("--baralho-unico", action="store_true",
                     help="põe tudo num baralho só, sem sub-baralhos")
+    ap.add_argument("--numeros", help="só notas com número nessa faixa, ex.: 01-39 (para dividir .apkg grandes)")
     args = ap.parse_args()
 
     cfg = json.loads(Path(args.config).read_text(encoding="utf-8")) if args.config else {}
@@ -476,6 +477,11 @@ def main():
     n_guid_repetido = 0
 
     # 2ª passada: gera os cards.
+    if args.numeros:
+        ini, fim = (int(x) for x in args.numeros.split("-"))
+        todas = [(c, n) for c, n in todas
+                 if codigo_da_nota(n["titulo"])[0] and ini <= int(codigo_da_nota(n["titulo"])[0]) <= fim]
+
     for caderno, nota in todas:
             questao = eh_questao(nota["titulo"])
             if args.baralho_unico:

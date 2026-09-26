@@ -15,10 +15,12 @@ import argparse
 import base64
 import hashlib
 import html
+import json
 import mimetypes
 import re
 import sys
 import tempfile
+import unicodedata
 import warnings
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -151,56 +153,116 @@ def arquivos_enex(entradas):
             print(f"Aviso: ignorando {p} (não é .enex nem pasta)", file=sys.stderr)
 
 
+def normalizar(texto):
+    sem_acento = unicodedata.normalize("NFKD", texto)
+    return "".join(c for c in sem_acento if not unicodedata.combining(c)).lower()
+
+
+def secao_da_tabela(tabela):
+    """Texto do último <h1> antes da tabela (ou None se não houver)."""
+    h1 = tabela.find_previous("h1")
+    return normalizar(h1.get_text(" ", strip=True)) if h1 else None
+
+
+def codigo_da_nota(titulo):
+    """Extrai o código do título: '⭐ 01-A — 🤝 Partidos...' -> ('01', '01-A')."""
+    m = re.search(r"\b(\d{2})(?:\s*-\s*([A-Z]))?\b", titulo)
+    if not m:
+        return None, None
+    return m.group(1), m.group(1) + (f"-{m.group(2)}" if m.group(2) else "")
+
+
+def nome_sub_baralho(titulo, remover):
+    for r in remover:
+        titulo = titulo.replace(r, "")
+    titulo = titulo.replace("::", ":")
+    return re.sub(r"\s+", " ", titulo).strip() or "Sem título"
+
+
+def tags_da_nota(nota, caderno, cfg):
+    tags = []
+    if cfg.get("manter_tags_evernote", True):
+        tags.append(f"evernote::{limpar_tag(caderno)}")
+        tags += [limpar_tag(t) for t in nota["tags"]]
+    tags += cfg.get("tags_fixas", [])
+    numero, codigo = codigo_da_nota(nota["titulo"])
+    tema = cfg.get("tags_por_numero", {}).get(numero or "")
+    if tema:
+        tags.append(tema)
+    if cfg.get("tag_prioritario") and ("⭐" in nota["titulo"] or codigo in cfg.get("prioritarios", [])):
+        tags.append(cfg["tag_prioritario"])
+    return list(dict.fromkeys(limpar_tag(t) for t in tags))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("entradas", nargs="+", help="arquivos .enex ou pastas contendo .enex")
     ap.add_argument("-o", "--saida", default="saida/evernote.apkg", help="arquivo .apkg de saída")
-    ap.add_argument("--baralho", default="Evernote",
-                    help="nome do baralho-mãe; cada .enex vira um sub-baralho (padrão: Evernote)")
+    ap.add_argument("--config", help="arquivo .json com regras de baralhos/tags (ex.: regimentos.json)")
+    ap.add_argument("--baralho", help="nome do baralho-mãe (padrão: Evernote)")
     ap.add_argument("--pular-cabecalho", action="store_true",
                     help="ignora a 1ª linha de cada tabela (use se ela for só 'Pergunta | Resposta')")
     ap.add_argument("--baralho-unico", action="store_true",
-                    help="põe tudo num baralho só, sem sub-baralhos por arquivo")
+                    help="põe tudo num baralho só, sem sub-baralhos")
     args = ap.parse_args()
+
+    cfg = json.loads(Path(args.config).read_text(encoding="utf-8")) if args.config else {}
+    raiz = args.baralho or cfg.get("baralho", "Evernote")
+    secao = normalizar(cfg["secao_h1"]) if cfg.get("secao_h1") else None
+    por_nota = cfg.get("sub_baralho_por_nota", False)
+    remover = cfg.get("remover_do_nome_do_baralho", [])
+    pular_cab = args.pular_cabecalho or cfg.get("pular_cabecalho", False)
 
     pasta_midia = Path(tempfile.mkdtemp(prefix="enex_midia_"))
     baralhos, arquivos_midia = {}, set()
-    total_cards, notas_sem_tabela = 0, []
+    total_cards, sem_secao, sem_cards = 0, [], []
+
+    def baralho(nome):
+        if nome not in baralhos:
+            deck_id = DECK_ID_BASE + int(hashlib.md5(nome.encode()).hexdigest()[:8], 16)
+            baralhos[nome] = genanki.Deck(deck_id, nome)
+        return baralhos[nome]
 
     for enex in arquivos_enex(args.entradas):
         caderno = enex.stem
-        nome_baralho = args.baralho if args.baralho_unico else f"{args.baralho}::{caderno}"
-        if nome_baralho not in baralhos:
-            deck_id = DECK_ID_BASE + int(hashlib.md5(nome_baralho.encode()).hexdigest()[:8], 16)
-            baralhos[nome_baralho] = genanki.Deck(deck_id, nome_baralho)
-        baralho = baralhos[nome_baralho]
-
-        for nota in ler_enex(enex, pasta_midia):
+        notas = ler_enex(enex, pasta_midia)
+        for nota in notas:
+            if args.baralho_unico:
+                nome_baralho = raiz
+            elif por_nota:
+                nome_baralho = f"{raiz}::{nome_sub_baralho(nota['titulo'], remover)}"
+            else:
+                nome_baralho = f"{raiz}::{caderno}"
             soup = BeautifulSoup(nota["html"], "html.parser")
-            tags = [f"evernote::{limpar_tag(caderno)}"] + [limpar_tag(t) for t in nota["tags"]]
+            tags = tags_da_nota(nota, caderno, cfg)
+            ref = f"{caderno} › {nota['titulo']}"
+            if secao and not any(secao in normalizar(h.get_text()) for h in soup.find_all("h1")):
+                sem_secao.append(ref)
+                continue
             n_nota = 0
             for i, td_f, td_v in linhas_de_tabelas(soup):
-                if args.pular_cabecalho and i == 0:
+                if secao and secao not in (secao_da_tabela(td_f.find_parent("table")) or ""):
+                    continue
+                if pular_cab and i == 0:
                     continue
                 frente = conteudo_da_celula(td_f, nota["midias"])
                 verso = conteudo_da_celula(td_v, nota["midias"])
                 if texto_vazio(frente) or texto_vazio(verso):
                     continue
-                origem = html.escape(f"{caderno} › {nota['titulo']}")
                 # GUID estável: mesmo caderno + nota + frente => mesmo card ao reimportar.
                 guid = genanki.guid_for(caderno, nota["titulo"], frente)
-                baralho.add_note(genanki.Note(model=MODELO, fields=[frente, verso, origem],
-                                              tags=tags, guid=guid))
+                baralho(nome_baralho).add_note(genanki.Note(
+                    model=MODELO, fields=[frente, verso, html.escape(ref)], tags=tags, guid=guid))
                 n_nota += 1
             for nome in nota["midias"].values():
                 arquivos_midia.add(str(pasta_midia / nome))
             if n_nota == 0:
-                notas_sem_tabela.append(f"{caderno} › {nota['titulo']}")
+                sem_cards.append(ref)
             total_cards += n_nota
-        print(f"{enex.name}: ok")
+        print(f"{enex.name}: {len(notas)} nota(s) lidas")
 
     if not baralhos:
-        sys.exit("Nenhum arquivo .enex encontrado.")
+        sys.exit("Nenhum card gerado (confira os arquivos .enex e as regras do --config).")
 
     saida = Path(args.saida)
     saida.parent.mkdir(parents=True, exist_ok=True)
@@ -209,9 +271,13 @@ def main():
     pacote.write_to_file(saida)
 
     print(f"\n{total_cards} cards gerados em {len(baralhos)} baralho(s) -> {saida}")
-    if notas_sem_tabela:
-        print(f"\n{len(notas_sem_tabela)} nota(s) sem tabela de 2 colunas (nenhum card gerado):")
-        for n in notas_sem_tabela:
+    if sem_secao:
+        print(f"\n{len(sem_secao)} nota(s) sem o título H1 '{cfg['secao_h1']}' (ignoradas):")
+        for n in sem_secao:
+            print(f"  - {n}")
+    if sem_cards:
+        print(f"\n{len(sem_cards)} nota(s) sem tabela de 2 colunas na parte certa (nenhum card gerado):")
+        for n in sem_cards:
             print(f"  - {n}")
 
 

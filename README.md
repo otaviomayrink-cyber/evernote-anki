@@ -27,3 +27,17 @@ Opções:
 4. No Anki: **Arquivo → Importar** → escolha o `.apkg`.
 
 Ao final, o script lista as notas em que não encontrou nenhuma tabela.
+
+## Regras por caderno (`--config`)
+
+Um arquivo `.json` define baralhos e tags de um caderno específico. Exemplo: `regimentos.json`:
+
+```
+python3 enex2anki.py entrada/ --config regimentos.json -o saida/regimentos.apkg
+```
+
+- `secao_h1`: só usa as tabelas que ficam abaixo do título H1 com esse texto (ex.: "flashcards")
+- `sub_baralho_por_nota`: cada nota vira um sub-baralho (`Regimentos::01-A — …`)
+- `tags_por_numero`: tag temática pelo número do título da nota (01, 02, …)
+- `prioritarios` / `tag_prioritario`: tag de prioridade (também aplicada se o título tiver ⭐)
+- `manter_tags_evernote`: se `true`, também copia as tags da nota no Evernote

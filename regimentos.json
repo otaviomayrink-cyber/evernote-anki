@@ -2,7 +2,8 @@
   "baralho": "Regimentos",
   "secao_h1": [
     "flashcards",
-    "👾 deck"
+    "👾 deck",
+    "❓ questões"
   ],
   "sub_baralho_por_nota": true,
   "remover_do_nome_do_baralho": [
@@ -67,5 +68,10 @@
     "09": "8. Estatuto dos parlamentares e administração (RICD)",
     "10": "9. Regimento Comum do Congresso Nacional (RCCN)",
     "11": "9. Regimento Comum do Congresso Nacional (RCCN)"
+  },
+  "questoes": {
+    "padrao_titulo": "-\\d+ - Obj\\.?$",
+    "sub_baralho": "📝 Questões",
+    "tag": "REG-QUESTAO"
   }
 }

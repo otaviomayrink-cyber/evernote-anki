@@ -33,7 +33,7 @@ Ao final, o script lista as notas em que não encontrou nenhuma tabela.
 Um arquivo `.json` define baralhos e tags de um caderno específico. Exemplo: `regimentos.json`:
 
 ```
-python3 enex2anki.py entrada/ --config regimentos.json -o saida/regimentos.apkg
+python3 enex2anki.py entrada/teoria.html entrada/questoes.html --config regimentos.json -o saida/regimentos.apkg
 ```
 
 - `secao_h1`: só usa as tabelas que ficam abaixo do título H1 com esse texto (ex.: "flashcards")
@@ -53,4 +53,6 @@ Também aceita notas exportadas como `.html` (sem imagens), no lugar do `.enex`,
 Outras opções do `.json`:
 - `secao_h1` pode ser uma lista (ex.: `["flashcards", "👾 deck"]`)
 - `blocos`: nível intermediário de baralho pelo número da nota (ex.: `"01": "1. Disposições preliminares…"`)
+- `questoes`: notas de questões (título casando com `padrao_titulo`, ex.: `01-A-1 - Obj.`) viram o
+  sub-baralho `sub_baralho` dentro da nota de teoria de mesmo código, com a tag `tag`
 - `remover_sufixos_titulo`: textos a cortar do fim do título das notas (restos de títulos de bloco)

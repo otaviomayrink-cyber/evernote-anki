@@ -444,9 +444,11 @@ def main():
             baralhos[nome] = genanki.Deck(deck_id, nome)
         return baralhos[nome]
 
-    for enex in arquivos_enex(args.entradas):
-        caderno = enex.stem
-        notas = ler_enex(enex, pasta_midia) if enex.suffix.lower() == ".enex" else ler_html(enex)
+    # 1ª passada: lê todas as notas e limpa os títulos.
+    todas = []
+    for arq in arquivos_enex(args.entradas):
+        notas = ler_enex(arq, pasta_midia) if arq.suffix.lower() == ".enex" else ler_html(arq)
+        print(f"{arq.name}: {len(notas)} nota(s) lidas")
         for nota in notas:
             nota["titulo"] = re.sub(r"\s+", " ", unicodedata.normalize("NFC", nota["titulo"]))
             for sufixo in (unicodedata.normalize("NFC", x) for x in cfg.get("remover_sufixos_titulo", [])):
@@ -454,17 +456,40 @@ def main():
                     resto = nota["titulo"][: -len(sufixo) - 1].rstrip()
                     if re.search(r"—.*[^\W\d_]", resto):  # não deixa o título só com número + emoji
                         nota["titulo"] = resto
+            todas.append((arq.stem, nota))
+
+    # Notas de questões ("01-A-1 - Obj.") viram sub-baralho da nota de teoria de mesmo código.
+    cfg_q = cfg.get("questoes") or {}
+    eh_questao = (lambda t: bool(re.search(cfg_q["padrao_titulo"], t))) if cfg_q else (lambda t: False)
+    blocos = cfg.get("blocos", {})
+
+    def baralho_da_teoria(titulo):
+        numero = codigo_da_nota(titulo)[0] or ""
+        meio = f"{blocos[numero]}::" if numero in blocos else ""
+        return f"{raiz}::{meio}{nome_sub_baralho(titulo, remover)}"
+
+    teoria_por_codigo = {codigo_da_nota(n["titulo"])[1]: baralho_da_teoria(n["titulo"])
+                         for _, n in todas if por_nota and not eh_questao(n["titulo"])}
+    guids = set()
+    n_guid_repetido = 0
+
+    # 2ª passada: gera os cards.
+    for caderno, nota in todas:
+            questao = eh_questao(nota["titulo"])
             if args.baralho_unico:
                 nome_baralho = raiz
+            elif por_nota and questao:
+                numero, codigo = codigo_da_nota(nota["titulo"])
+                pai = teoria_por_codigo.get(codigo) or \
+                    f"{raiz}::{blocos[numero] + '::' if numero in blocos else ''}{codigo or nota['titulo']}"
+                nome_baralho = f"{pai}::{cfg_q.get('sub_baralho', 'Questões')}"
             elif por_nota:
-                bloco = cfg.get("blocos", {}).get(codigo_da_nota(nota["titulo"])[0] or "")
-                meio = f"{bloco}::" if bloco else ""
-                nome_baralho = f"{raiz}::{meio}{nome_sub_baralho(nota['titulo'], remover)}"
+                nome_baralho = baralho_da_teoria(nota["titulo"])
             else:
                 nome_baralho = f"{raiz}::{caderno}"
             soup = BeautifulSoup(nota["html"], "html.parser")
             normalizar_html_evernote(soup)
-            tags = tags_da_nota(nota, caderno, cfg)
+            tags = tags_da_nota(nota, caderno, cfg) + ([cfg_q["tag"]] if questao and cfg_q.get("tag") else [])
             ref = nota["titulo"] if por_nota else f"{caderno} › {nota['titulo']}"
             if secoes and not any(x in normalizar(h.get_text()) for h in soup.find_all("h1") for x in secoes):
                 sem_secao.append(ref)
@@ -499,13 +524,16 @@ def main():
                     guid = genanki.guid_for(nota["titulo"], frente)
                     nota_anki = genanki.Note(model=modelo, fields=[frente, verso, origem],
                                              tags=tags_card, guid=guid)
+                if nota_anki.guid in guids:  # mesma frente repetida na mesma nota: não deixa uma sumir
+                    n_guid_repetido += 1
+                    nota_anki.guid = genanki.guid_for(nota_anki.guid, n_guid_repetido)
+                guids.add(nota_anki.guid)
                 baralho(nome_baralho).add_note(nota_anki)
                 arquivos_midia.update(str(pasta_midia / n) for n in usadas)
                 n_nota += 1
             if n_nota == 0:
                 sem_cards.append(ref)
             total_cards += n_nota
-        print(f"{enex.name}: {len(notas)} nota(s) lidas")
 
     if not baralhos:
         sys.exit("Nenhum card gerado (confira os arquivos .enex e as regras do --config).")
@@ -517,6 +545,8 @@ def main():
     pacote.write_to_file(saida)
 
     print(f"\n{total_cards} cards gerados ({n_cloze} cloze) em {len(baralhos)} baralho(s) -> {saida}")
+    if n_guid_repetido:
+        print(f"\n{n_guid_repetido} card(s) com frente repetida dentro da mesma nota (mantidos, cada um com seu ID)")
     if lacuna_sem_cloze:
         print(f"\n{len(lacuna_sem_cloze)} card(s) com lacuna mantidos como frente/verso "
               "(nº de lacunas ≠ nº de itens do verso):")

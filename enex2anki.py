@@ -76,14 +76,21 @@ def estilo_da_celula(td):
                 partes.append(f"{prop.strip()}:{val.strip()}")
     if td.get("bgcolor"):
         partes.append(f"background-color:{td['bgcolor']}")
+    # Cor de texto sem cor de fundo some no modo noturno do Anki: só a mantém junto do fundo.
+    if not any(p.startswith("background") for p in partes):
+        partes = [p for p in partes if not p.startswith("color")]
     return ";".join(partes)
 
 
-def conteudo_da_celula(td, midias):
-    """HTML interno da célula, com <en-media> trocado por <img> e cor de fundo preservada."""
+def conteudo_da_celula(td, midias, usadas):
+    """HTML interno da célula, com <en-media> trocado por <img> e cor de fundo preservada.
+
+    Os arquivos de imagem usados são acrescentados a `usadas`.
+    """
     for m in td.find_all("en-media"):
         nome = midias.get(m.get("hash", ""))
         if nome:
+            usadas.add(nome)
             img = BeautifulSoup(f'<img src="{html.escape(nome)}">', "html.parser").img
             m.replace_with(img)
         else:
@@ -235,7 +242,7 @@ def main():
                 nome_baralho = f"{raiz}::{caderno}"
             soup = BeautifulSoup(nota["html"], "html.parser")
             tags = tags_da_nota(nota, caderno, cfg)
-            ref = f"{caderno} › {nota['titulo']}"
+            ref = nota["titulo"] if por_nota else f"{caderno} › {nota['titulo']}"
             if secao and not any(secao in normalizar(h.get_text()) for h in soup.find_all("h1")):
                 sem_secao.append(ref)
                 continue
@@ -245,17 +252,20 @@ def main():
                     continue
                 if pular_cab and i == 0:
                     continue
-                frente = conteudo_da_celula(td_f, nota["midias"])
-                verso = conteudo_da_celula(td_v, nota["midias"])
+                usadas = set()
+                frente = conteudo_da_celula(td_f, nota["midias"], usadas)
+                verso = conteudo_da_celula(td_v, nota["midias"], usadas)
                 if texto_vazio(frente) or texto_vazio(verso):
                     continue
-                # GUID estável: mesmo caderno + nota + frente => mesmo card ao reimportar.
-                guid = genanki.guid_for(caderno, nota["titulo"], frente)
+                # GUID estável: mesma nota + mesma frente => mesmo card ao reimportar,
+                # mesmo que o .enex tenha outro nome (exportações em partes).
+                guid = genanki.guid_for(nota["titulo"], frente)
+                assunto = td_f.find_parent("table").find_previous(["h2", "h3"])
+                origem = ref + (f" › {assunto.get_text(' ', strip=True)}" if assunto else "")
                 baralho(nome_baralho).add_note(genanki.Note(
-                    model=MODELO, fields=[frente, verso, html.escape(ref)], tags=tags, guid=guid))
+                    model=MODELO, fields=[frente, verso, html.escape(origem)], tags=tags, guid=guid))
+                arquivos_midia.update(str(pasta_midia / n) for n in usadas)
                 n_nota += 1
-            for nome in nota["midias"].values():
-                arquivos_midia.add(str(pasta_midia / nome))
             if n_nota == 0:
                 sem_cards.append(ref)
             total_cards += n_nota

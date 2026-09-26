@@ -66,3 +66,6 @@ Outras opções do `.json`:
 |---|---|---|
 | Regimentos (RICD/RCCN) | `regimentos.json` | `python3 enex2anki.py entrada/geral/ entrada/questoes/ --config regimentos.json -o saida/regimentos.apkg` |
 | Geografia | `geografia.json` | `python3 enex2anki.py entrada/geo/ --config geografia.json -o saida/geografia.apkg` |
+| História Mundial | `historia_mundial.json` | `python3 enex2anki.py entrada/hm/ --config historia_mundial.json -o saida/historia_mundial.apkg` |
+
+Arquivos `.7z` podem ser extraídos com `pip install py7zr` e `python3 -c "import py7zr; py7zr.SevenZipFile('arq.7z').extractall('entrada/x')"`.

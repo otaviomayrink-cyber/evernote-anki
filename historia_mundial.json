@@ -1,0 +1,391 @@
+{
+  "baralho": "História Mundial",
+  "secao_h1": [
+    "flashcards",
+    "👾 deck",
+    "❓ questões"
+  ],
+  "sub_baralho_por_nota": true,
+  "remover_do_nome_do_baralho": [
+    "⭐"
+  ],
+  "remover_sufixos_titulo": [
+    "América Latina no Século XX"
+  ],
+  "manter_tags_evernote": false,
+  "tags_fixas": [],
+  "estilo_trilha": "A",
+  "cloze": true,
+  "cloze_um_card_por_lacuna": false,
+  "tag_fundo_colorido": "HM-CARD-GERAL",
+  "questoes": {
+    "padrao_titulo": "-\\d+ - Obj\\.?$",
+    "sub_baralho": "📝 Questões",
+    "tag": "HM-QUESTAO",
+    "tag_fonte": "HM-FONTE::"
+  },
+  "blocos": {
+    "01": "1. A Era Moderna e o século XVIII",
+    "02": "1. A Era Moderna e o século XVIII",
+    "03": "1. A Era Moderna e o século XVIII",
+    "04": "1. A Era Moderna e o século XVIII",
+    "06": "2. Revoluções burguesas e formação das Américas",
+    "07": "2. Revoluções burguesas e formação das Américas",
+    "08": "2. Revoluções burguesas e formação das Américas",
+    "09": "2. Revoluções burguesas e formação das Américas",
+    "12": "3. O século XIX: Restauração, revoluções e ideologias",
+    "13": "3. O século XIX: Restauração, revoluções e ideologias",
+    "14": "3. O século XIX: Restauração, revoluções e ideologias",
+    "15": "3. O século XIX: Restauração, revoluções e ideologias",
+    "16": "3. O século XIX: Restauração, revoluções e ideologias",
+    "17": "3. O século XIX: Restauração, revoluções e ideologias",
+    "18": "3. O século XIX: Restauração, revoluções e ideologias",
+    "20": "4. Geopolítica europeia e as Américas no século XIX",
+    "21": "4. Geopolítica europeia e as Américas no século XIX",
+    "22": "4. Geopolítica europeia e as Américas no século XIX",
+    "23": "4. Geopolítica europeia e as Américas no século XIX",
+    "25": "4. Geopolítica europeia e as Américas no século XIX",
+    "26": "4. Geopolítica europeia e as Américas no século XIX",
+    "27": "4. Geopolítica europeia e as Américas no século XIX",
+    "28": "4. Geopolítica europeia e as Américas no século XIX",
+    "31": "5. Imperialismo e a Primeira Guerra Mundial",
+    "32": "5. Imperialismo e a Primeira Guerra Mundial",
+    "33": "5. Imperialismo e a Primeira Guerra Mundial",
+    "34": "5. Imperialismo e a Primeira Guerra Mundial",
+    "35": "5. Imperialismo e a Primeira Guerra Mundial",
+    "38": "5. Imperialismo e a Primeira Guerra Mundial",
+    "39": "5. Imperialismo e a Primeira Guerra Mundial",
+    "40": "6. O entreguerras e a Segunda Guerra Mundial",
+    "41": "6. O entreguerras e a Segunda Guerra Mundial",
+    "42": "6. O entreguerras e a Segunda Guerra Mundial",
+    "43": "6. O entreguerras e a Segunda Guerra Mundial",
+    "44": "6. O entreguerras e a Segunda Guerra Mundial",
+    "45": "6. O entreguerras e a Segunda Guerra Mundial",
+    "46": "6. O entreguerras e a Segunda Guerra Mundial",
+    "47": "6. O entreguerras e a Segunda Guerra Mundial",
+    "48": "6. O entreguerras e a Segunda Guerra Mundial",
+    "49": "6. O entreguerras e a Segunda Guerra Mundial",
+    "52": "7. Guerra Fria e descolonização",
+    "53": "7. Guerra Fria e descolonização",
+    "54": "7. Guerra Fria e descolonização",
+    "56": "7. Guerra Fria e descolonização",
+    "57": "7. Guerra Fria e descolonização",
+    "58": "7. Guerra Fria e descolonização",
+    "59": "7. Guerra Fria e descolonização",
+    "67": "7. Guerra Fria e descolonização",
+    "61": "8. América Latina no século XX",
+    "62": "8. América Latina no século XX",
+    "63": "8. América Latina no século XX",
+    "64": "8. América Latina no século XX",
+    "65": "8. América Latina no século XX",
+    "68": "8. América Latina no século XX",
+    "70": "9. O fim da Guerra Fria e o mundo contemporâneo",
+    "71": "9. O fim da Guerra Fria e o mundo contemporâneo",
+    "72": "9. O fim da Guerra Fria e o mundo contemporâneo",
+    "73": "9. O fim da Guerra Fria e o mundo contemporâneo",
+    "74": "9. O fim da Guerra Fria e o mundo contemporâneo",
+    "75": "9. O fim da Guerra Fria e o mundo contemporâneo",
+    "77": "9. O fim da Guerra Fria e o mundo contemporâneo",
+    "78": "9. O fim da Guerra Fria e o mundo contemporâneo"
+  },
+  "tags_por_numero": {
+    "01": [
+      "HM-ERA-MODERNA",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::GUERRAS"
+    ],
+    "02": [
+      "HM-ERA-MODERNA",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::INGLATERRA",
+      "HM-TEMA::REVOLUCOES"
+    ],
+    "03": [
+      "HM-ERA-MODERNA",
+      "HM-TEMA::IDEOLOGIAS"
+    ],
+    "04": [
+      "HM-ERA-MODERNA",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::INGLATERRA",
+      "HM-TEMA::ECONOMIA-E-CAPITALISMO"
+    ],
+    "06": [
+      "HM-REVOLUCOES-BURGUESAS",
+      "HM-REGIAO::EUA",
+      "HM-PAIS::EUA"
+    ],
+    "07": [
+      "HM-REVOLUCOES-BURGUESAS",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::FRANCA",
+      "HM-TEMA::REVOLUCOES"
+    ],
+    "08": [
+      "HM-REVOLUCOES-BURGUESAS",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::FRANCA"
+    ],
+    "09": [
+      "HM-REVOLUCOES-BURGUESAS",
+      "HM-REGIAO::AMERICA-LATINA"
+    ],
+    "12": [
+      "HM-SECULO-XIX",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::ORDEM-INTERNACIONAL"
+    ],
+    "13": [
+      "HM-SECULO-XIX",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::INGLATERRA",
+      "HM-TEMA::ORDEM-INTERNACIONAL"
+    ],
+    "14": [
+      "HM-SECULO-XIX",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::REVOLUCOES"
+    ],
+    "15": [
+      "HM-SECULO-XIX",
+      "HM-TEMA::IDEOLOGIAS"
+    ],
+    "16": [
+      "HM-SECULO-XIX",
+      "HM-TEMA::ECONOMIA-E-CAPITALISMO"
+    ],
+    "17": [
+      "HM-SECULO-XIX",
+      "HM-TEMA::IDEOLOGIAS"
+    ],
+    "18": [
+      "HM-SECULO-XIX",
+      "HM-TEMA::CULTURA"
+    ],
+    "20": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::ORDEM-INTERNACIONAL"
+    ],
+    "21": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::ALEMANHA-ITALIA"
+    ],
+    "22": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::ALEMANHA-ITALIA",
+      "HM-TEMA::ORDEM-INTERNACIONAL"
+    ],
+    "23": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::PENINSULA-IBERICA"
+    ],
+    "25": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::AMERICA-LATINA"
+    ],
+    "26": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::EUA",
+      "HM-PAIS::EUA"
+    ],
+    "27": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::AMERICA-LATINA",
+      "HM-PAIS::ARGENTINA"
+    ],
+    "28": [
+      "HM-GEOPOLITICA-XIX",
+      "HM-REGIAO::AMERICA-LATINA",
+      "HM-PAIS::MEXICO"
+    ],
+    "31": [
+      "HM-IMPERIALISMO-1GM",
+      "HM-REGIAO::AFRICA",
+      "HM-TEMA::IMPERIALISMO"
+    ],
+    "32": [
+      "HM-IMPERIALISMO-1GM",
+      "HM-REGIAO::ASIA",
+      "HM-TEMA::IMPERIALISMO"
+    ],
+    "33": [
+      "HM-IMPERIALISMO-1GM",
+      "HM-REGIAO::ASIA",
+      "HM-PAIS::CHINA"
+    ],
+    "34": [
+      "HM-IMPERIALISMO-1GM",
+      "HM-REGIAO::EUA",
+      "HM-PAIS::EUA",
+      "HM-TEMA::IMPERIALISMO"
+    ],
+    "35": [
+      "HM-IMPERIALISMO-1GM",
+      "HM-REGIAO::ASIA",
+      "HM-PAIS::JAPAO"
+    ],
+    "38": [
+      "HM-IMPERIALISMO-1GM",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::GUERRAS"
+    ],
+    "39": [
+      "HM-IMPERIALISMO-1GM",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::GUERRAS"
+    ],
+    "40": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-REGIAO::RUSSIA-URSS",
+      "HM-PAIS::RUSSIA-URSS",
+      "HM-TEMA::REVOLUCOES"
+    ],
+    "41": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::ORDEM-INTERNACIONAL"
+    ],
+    "42": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-REGIAO::ORIENTE-MEDIO"
+    ],
+    "43": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-TEMA::CULTURA"
+    ],
+    "44": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-TEMA::CULTURA"
+    ],
+    "45": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-TEMA::ECONOMIA-E-CAPITALISMO"
+    ],
+    "46": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-REGIAO::RUSSIA-URSS",
+      "HM-PAIS::RUSSIA-URSS"
+    ],
+    "47": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-REGIAO::EUROPA",
+      "HM-TEMA::IDEOLOGIAS"
+    ],
+    "48": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::PENINSULA-IBERICA"
+    ],
+    "49": [
+      "HM-ENTREGUERRAS-2GM",
+      "HM-TEMA::GUERRAS"
+    ],
+    "52": [
+      "HM-GUERRA-FRIA",
+      "HM-TEMA::GUERRA-FRIA"
+    ],
+    "53": [
+      "HM-GUERRA-FRIA",
+      "HM-REGIAO::ASIA",
+      "HM-PAIS::CHINA"
+    ],
+    "54": [
+      "HM-GUERRA-FRIA",
+      "HM-REGIAO::ASIA",
+      "HM-TEMA::DESCOLONIZACAO"
+    ],
+    "56": [
+      "HM-GUERRA-FRIA",
+      "HM-TEMA::GUERRA-FRIA"
+    ],
+    "57": [
+      "HM-GUERRA-FRIA",
+      "HM-REGIAO::AFRICA",
+      "HM-TEMA::DESCOLONIZACAO"
+    ],
+    "58": [
+      "HM-GUERRA-FRIA",
+      "HM-REGIAO::ASIA",
+      "HM-TEMA::GUERRAS"
+    ],
+    "59": [
+      "HM-GUERRA-FRIA",
+      "HM-REGIAO::EUROPA",
+      "HM-PAIS::PENINSULA-IBERICA"
+    ],
+    "67": [
+      "HM-GUERRA-FRIA",
+      "HM-REGIAO::RUSSIA-URSS",
+      "HM-PAIS::RUSSIA-URSS",
+      "HM-TEMA::GUERRA-FRIA"
+    ],
+    "61": [
+      "HM-AMERICA-LATINA-XX",
+      "HM-REGIAO::AMERICA-LATINA"
+    ],
+    "62": [
+      "HM-AMERICA-LATINA-XX",
+      "HM-REGIAO::AMERICA-LATINA",
+      "HM-PAIS::ARGENTINA"
+    ],
+    "63": [
+      "HM-AMERICA-LATINA-XX",
+      "HM-REGIAO::AMERICA-LATINA",
+      "HM-PAIS::MEXICO",
+      "HM-TEMA::REVOLUCOES"
+    ],
+    "64": [
+      "HM-AMERICA-LATINA-XX",
+      "HM-REGIAO::AMERICA-LATINA",
+      "HM-PAIS::CUBA",
+      "HM-TEMA::REVOLUCOES"
+    ],
+    "65": [
+      "HM-AMERICA-LATINA-XX",
+      "HM-REGIAO::AMERICA-LATINA",
+      "HM-PAIS::CHILE"
+    ],
+    "68": [
+      "HM-AMERICA-LATINA-XX",
+      "HM-REGIAO::AMERICA-LATINA"
+    ],
+    "70": [
+      "HM-CONTEMPORANEO",
+      "HM-REGIAO::EUA",
+      "HM-PAIS::EUA"
+    ],
+    "71": [
+      "HM-CONTEMPORANEO",
+      "HM-REGIAO::AFRICA",
+      "HM-TEMA::DESCOLONIZACAO"
+    ],
+    "72": [
+      "HM-CONTEMPORANEO",
+      "HM-TEMA::ECONOMIA-E-CAPITALISMO"
+    ],
+    "73": [
+      "HM-CONTEMPORANEO",
+      "HM-REGIAO::EUA",
+      "HM-PAIS::EUA"
+    ],
+    "74": [
+      "HM-CONTEMPORANEO",
+      "HM-TEMA::ORDEM-INTERNACIONAL"
+    ],
+    "75": [
+      "HM-CONTEMPORANEO",
+      "HM-TEMA::CULTURA"
+    ],
+    "77": [
+      "HM-CONTEMPORANEO",
+      "HM-REGIAO::ORIENTE-MEDIO"
+    ],
+    "78": [
+      "HM-CONTEMPORANEO"
+    ]
+  }
+}

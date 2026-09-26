@@ -389,9 +389,11 @@ def codigo_da_nota(titulo):
     return m.group(1), m.group(1) + (f"-{m.group(2)}" if m.group(2) else "")
 
 
-def nome_sub_baralho(titulo, remover):
+def nome_sub_baralho(titulo, remover, padroes=()):
     for r in remover:
         titulo = titulo.replace(r, "")
+    for padrao in padroes:  # ex.: tirar "(Pop)" ou parênteses longos do fim
+        titulo = re.sub(padrao, "", titulo)
     titulo = titulo.replace("::", ":")
     return re.sub(r"\s+", " ", titulo).strip() or "Sem título"
 
@@ -405,7 +407,7 @@ def tags_da_nota(nota, caderno, cfg):
     numero, codigo = codigo_da_nota(nota["titulo"])
     tema = cfg.get("tags_por_numero", {}).get(numero or "")
     if tema:
-        tags.append(tema)
+        tags += [tema] if isinstance(tema, str) else tema
     if cfg.get("tag_prioritario") and ("⭐" in nota["titulo"] or codigo in cfg.get("prioritarios", [])):
         tags.append(cfg["tag_prioritario"])
     return list(dict.fromkeys(limpar_tag(t) for t in tags))
@@ -466,7 +468,7 @@ def main():
     def baralho_da_teoria(titulo):
         numero = codigo_da_nota(titulo)[0] or ""
         meio = f"{blocos[numero]}::" if numero in blocos else ""
-        return f"{raiz}::{meio}{nome_sub_baralho(titulo, remover)}"
+        return f"{raiz}::{meio}{nome_sub_baralho(titulo, remover, cfg.get('encurtar_nome_baralho', []))}"
 
     teoria_por_codigo = {codigo_da_nota(n["titulo"])[1]: baralho_da_teoria(n["titulo"])
                          for _, n in todas if por_nota and not eh_questao(n["titulo"])}
@@ -504,13 +506,20 @@ def main():
                 assunto = td_f.find_parent("table").find_previous(["h2", "h3"])
                 origem = html.escape(ref + (f" › {assunto.get_text(' ', strip=True)}" if assunto else ""))
                 marcar_trilha(td_f)
+                tags_fonte = []
+                trilha = td_f.find(class_="trilha")
+                if questao and trilha and cfg_q.get("tag_fonte"):
+                    # "[C/E - FGV › Assunto]" -> GEO-BANCA::FGV
+                    m = re.match(r"\s*[^›]*?\s-\s*([^›]+?)\s*(?:›|$)", trilha.get_text())
+                    if m:
+                        tags_fonte.append(cfg_q["tag_fonte"] + m.group(1))
                 frente = conteudo_da_celula(td_f, nota["midias"], usadas)
                 cloze = tentar_cloze(frente, td_v, cfg.get("cloze_um_card_por_lacuna", False)) \
                     if usar_cloze else None
                 verso = conteudo_da_celula(td_v, nota["midias"], usadas)
                 if texto_vazio(frente) or texto_vazio(verso):
                     continue
-                tags_card = tags + ([tag_fundo] if tag_fundo and "background" in estilo_da_celula(td_f) else [])
+                tags_card = tags + [limpar_tag(t) for t in tags_fonte] + ([tag_fundo] if tag_fundo and "background" in estilo_da_celula(td_f) else [])
                 if cloze:
                     guid = genanki.guid_for(nota["titulo"], frente, "cloze")
                     nota_anki = genanki.Note(model=modelo_cloze, fields=[cloze[0], cloze[1], origem],

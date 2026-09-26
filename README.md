@@ -55,4 +55,14 @@ Outras opções do `.json`:
 - `blocos`: nível intermediário de baralho pelo número da nota (ex.: `"01": "1. Disposições preliminares…"`)
 - `questoes`: notas de questões (título casando com `padrao_titulo`, ex.: `01-A-1 - Obj.`) viram o
   sub-baralho `sub_baralho` dentro da nota de teoria de mesmo código, com a tag `tag`
+- `encurtar_nome_baralho`: expressões regulares removidas só do nome do sub-baralho (ex.: `(Pop)`, parênteses longos)
+- `tags_por_numero` aceita uma lista de tags por número de nota
+- `questoes.tag_fonte`: prefixo de tag para a fonte da questão, lida do cabeçalho `[C/E - Fonte › …]`
 - `remover_sufixos_titulo`: textos a cortar do fim do título das notas (restos de títulos de bloco)
+
+## Cadernos configurados
+
+| Caderno | Config | Comando |
+|---|---|---|
+| Regimentos (RICD/RCCN) | `regimentos.json` | `python3 enex2anki.py entrada/geral/ entrada/questoes/ --config regimentos.json -o saida/regimentos.apkg` |
+| Geografia | `geografia.json` | `python3 enex2anki.py entrada/geo/ --config geografia.json -o saida/geografia.apkg` |

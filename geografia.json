@@ -1,0 +1,320 @@
+{
+  "baralho": "Geografia",
+  "secao_h1": [
+    "flashcards",
+    "👾 deck",
+    "❓ questões"
+  ],
+  "sub_baralho_por_nota": true,
+  "remover_do_nome_do_baralho": [
+    "⭐"
+  ],
+  "encurtar_nome_baralho": [
+    "\\s*\\((Pop|Urb|Eco|Agr|Pol|Fís|Amb)\\)",
+    "\\s*\\([^()]{16,}\\)\\s*$"
+  ],
+  "remover_sufixos_titulo": [
+    "Geografia"
+  ],
+  "manter_tags_evernote": false,
+  "tags_fixas": [],
+  "estilo_trilha": "A",
+  "cloze": true,
+  "cloze_um_card_por_lacuna": false,
+  "tag_fundo_colorido": "GEO-CARD-GERAL",
+  "questoes": {
+    "padrao_titulo": "-\\d+ - Obj\\.?$",
+    "sub_baralho": "📝 Questões",
+    "tag": "GEO-QUESTAO",
+    "tag_fonte": "GEO-FONTE::"
+  },
+  "blocos": {
+    "01": "1. História e conceitos fundamentais da Geografia",
+    "02": "1. História e conceitos fundamentais da Geografia",
+    "03": "1. História e conceitos fundamentais da Geografia",
+    "04": "2. Geografia da população: demografia e migrações",
+    "05": "2. Geografia da população: demografia e migrações",
+    "06": "2. Geografia da população: demografia e migrações",
+    "07": "2. Geografia da população: demografia e migrações",
+    "08": "2. Geografia da população: demografia e migrações",
+    "09": "2. Geografia da população: demografia e migrações",
+    "10": "2. Geografia da população: demografia e migrações",
+    "11": "3. Geografia urbana",
+    "12": "3. Geografia urbana",
+    "13": "3. Geografia urbana",
+    "14": "4. Geografia econômica: indústria, energia e logística",
+    "15": "4. Geografia econômica: indústria, energia e logística",
+    "16": "4. Geografia econômica: indústria, energia e logística",
+    "17": "4. Geografia econômica: indústria, energia e logística",
+    "18": "4. Geografia econômica: indústria, energia e logística",
+    "19": "4. Geografia econômica: indústria, energia e logística",
+    "20": "4. Geografia econômica: indústria, energia e logística",
+    "21": "4. Geografia econômica: indústria, energia e logística",
+    "22": "4. Geografia econômica: indústria, energia e logística",
+    "23": "4. Geografia econômica: indústria, energia e logística",
+    "24": "4. Geografia econômica: indústria, energia e logística",
+    "25": "4. Geografia econômica: indústria, energia e logística",
+    "26": "5. Geografia agrária",
+    "27": "5. Geografia agrária",
+    "28": "5. Geografia agrária",
+    "29": "6. Geografia política e formação territorial",
+    "30": "6. Geografia política e formação territorial",
+    "31": "6. Geografia política e formação territorial",
+    "32": "6. Geografia política e formação territorial",
+    "33": "6. Geografia política e formação territorial",
+    "34": "6. Geografia política e formação territorial",
+    "35": "6. Geografia política e formação territorial",
+    "36": "6. Geografia política e formação territorial",
+    "37": "6. Geografia política e formação territorial",
+    "38": "6. Geografia política e formação territorial",
+    "39": "6. Geografia política e formação territorial",
+    "40": "7. Geografia física e recursos hídricos",
+    "41": "7. Geografia física e recursos hídricos",
+    "42": "7. Geografia física e recursos hídricos",
+    "43": "7. Geografia física e recursos hídricos",
+    "44": "7. Geografia física e recursos hídricos",
+    "45": "7. Geografia física e recursos hídricos",
+    "46": "7. Geografia física e recursos hídricos",
+    "47": "8. Geografia ambiental e gestão do território",
+    "48": "8. Geografia ambiental e gestão do território",
+    "49": "8. Geografia ambiental e gestão do território",
+    "50": "8. Geografia ambiental e gestão do território",
+    "51": "8. Geografia ambiental e gestão do território",
+    "52": "8. Geografia ambiental e gestão do território"
+  },
+  "tags_por_numero": {
+    "01": [
+      "GEO-FUNDAMENTOS"
+    ],
+    "02": [
+      "GEO-FUNDAMENTOS"
+    ],
+    "03": [
+      "GEO-FUNDAMENTOS"
+    ],
+    "04": [
+      "GEO-POPULACAO"
+    ],
+    "05": [
+      "GEO-POPULACAO",
+      "GEO-ESCALA::MUNDO"
+    ],
+    "06": [
+      "GEO-POPULACAO",
+      "GEO-ESCALA::BRASIL"
+    ],
+    "07": [
+      "GEO-POPULACAO"
+    ],
+    "08": [
+      "GEO-POPULACAO",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::MIGRACOES"
+    ],
+    "09": [
+      "GEO-POPULACAO",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::MIGRACOES"
+    ],
+    "10": [
+      "GEO-POPULACAO",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::MIGRACOES"
+    ],
+    "11": [
+      "GEO-URBANA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::URBANIZACAO"
+    ],
+    "12": [
+      "GEO-URBANA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::URBANIZACAO"
+    ],
+    "13": [
+      "GEO-URBANA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::URBANIZACAO"
+    ],
+    "14": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::MUNDO"
+    ],
+    "15": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::MUNDO"
+    ],
+    "16": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::MUNDO"
+    ],
+    "17": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::INDUSTRIA"
+    ],
+    "18": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::INDUSTRIA"
+    ],
+    "19": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::ENERGIA"
+    ],
+    "20": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::ENERGIA"
+    ],
+    "21": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::ENERGIA"
+    ],
+    "22": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::ENERGIA"
+    ],
+    "23": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::LOGISTICA"
+    ],
+    "24": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::LOGISTICA"
+    ],
+    "25": [
+      "GEO-ECONOMICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::LOGISTICA"
+    ],
+    "26": [
+      "GEO-AGRARIA",
+      "GEO-ESCALA::MUNDO"
+    ],
+    "27": [
+      "GEO-AGRARIA",
+      "GEO-ESCALA::BRASIL"
+    ],
+    "28": [
+      "GEO-AGRARIA"
+    ],
+    "29": [
+      "GEO-POLITICA",
+      "GEO-TEMA::GEOPOLITICA"
+    ],
+    "30": [
+      "GEO-POLITICA",
+      "GEO-TEMA::GEOPOLITICA"
+    ],
+    "31": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::GEOPOLITICA"
+    ],
+    "32": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::GEOPOLITICA"
+    ],
+    "33": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::FORMACAO-TERRITORIAL"
+    ],
+    "34": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::FORMACAO-TERRITORIAL"
+    ],
+    "35": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::BRASIL"
+    ],
+    "36": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::BRASIL"
+    ],
+    "37": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::AMAZONIAS"
+    ],
+    "38": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::GEOPOLITICA"
+    ],
+    "39": [
+      "GEO-POLITICA",
+      "GEO-ESCALA::BRASIL"
+    ],
+    "40": [
+      "GEO-FISICA",
+      "GEO-ESCALA::MUNDO"
+    ],
+    "41": [
+      "GEO-FISICA",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::AGUA"
+    ],
+    "42": [
+      "GEO-FISICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::NATUREZA-DO-BRASIL"
+    ],
+    "43": [
+      "GEO-FISICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::NATUREZA-DO-BRASIL"
+    ],
+    "44": [
+      "GEO-FISICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::AGUA"
+    ],
+    "45": [
+      "GEO-FISICA",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::AGUA"
+    ],
+    "46": [
+      "GEO-FISICA"
+    ],
+    "47": [
+      "GEO-AMBIENTAL",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::MEIO-AMBIENTE"
+    ],
+    "48": [
+      "GEO-AMBIENTAL",
+      "GEO-ESCALA::MUNDO",
+      "GEO-TEMA::MEIO-AMBIENTE"
+    ],
+    "49": [
+      "GEO-AMBIENTAL",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::NATUREZA-DO-BRASIL"
+    ],
+    "50": [
+      "GEO-AMBIENTAL",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::MEIO-AMBIENTE"
+    ],
+    "51": [
+      "GEO-AMBIENTAL",
+      "GEO-ESCALA::BRASIL",
+      "GEO-TEMA::AMAZONIAS"
+    ],
+    "52": [
+      "GEO-AMBIENTAL",
+      "GEO-TEMA::MEIO-AMBIENTE"
+    ]
+  }
+}

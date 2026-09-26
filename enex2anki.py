@@ -54,7 +54,7 @@ img { max-width: 100%; }
 ESTILOS_TRILHA = {
     "original": ".trilha { font-family: monospace; margin-bottom: 14px; }"
                 ".trilha::before { content: '['; } .trilha::after { content: ']'; }",
-    "A": ".trilha { font-family: monospace; font-size: 12px; color: #888; margin-bottom: 10px; }"
+    "A": ".trilha { font-family: monospace; font-size: 14px; color: #888; margin-bottom: 22px; }"
          ".trilha::before { content: '['; } .trilha::after { content: ']'; }",
     "B": ".trilha { font-size: 11px; color: #999; text-transform: uppercase;"
          " letter-spacing: .06em; margin-bottom: 10px; }",
@@ -457,7 +457,9 @@ def main():
             if args.baralho_unico:
                 nome_baralho = raiz
             elif por_nota:
-                nome_baralho = f"{raiz}::{nome_sub_baralho(nota['titulo'], remover)}"
+                bloco = cfg.get("blocos", {}).get(codigo_da_nota(nota["titulo"])[0] or "")
+                meio = f"{bloco}::" if bloco else ""
+                nome_baralho = f"{raiz}::{meio}{nome_sub_baralho(nota['titulo'], remover)}"
             else:
                 nome_baralho = f"{raiz}::{caderno}"
             soup = BeautifulSoup(nota["html"], "html.parser")

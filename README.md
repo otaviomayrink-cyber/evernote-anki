@@ -52,4 +52,5 @@ Também aceita notas exportadas como `.html` (sem imagens), no lugar do `.enex`,
 
 Outras opções do `.json`:
 - `secao_h1` pode ser uma lista (ex.: `["flashcards", "👾 deck"]`)
+- `blocos`: nível intermediário de baralho pelo número da nota (ex.: `"01": "1. Disposições preliminares…"`)
 - `remover_sufixos_titulo`: textos a cortar do fim do título das notas (restos de títulos de bloco)

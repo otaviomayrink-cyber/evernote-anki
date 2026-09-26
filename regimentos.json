@@ -54,5 +54,18 @@
     "Apreciação, Discussão e Votação",
     "Matérias Sujeitas a Disposições Especiais",
     "Estatuto dos Parlamentares e Administração (RICD)"
-  ]
+  ],
+  "blocos": {
+    "01": "1. Disposições preliminares, partidos e lideranças",
+    "02": "2. Mesa, Presidência e órgãos institucionais",
+    "03": "3. Comissões",
+    "04": "4. Sessões da Câmara",
+    "05": "5. Proposições",
+    "06": "6. Apreciação, discussão e votação",
+    "07": "7. Matérias sujeitas a disposições especiais",
+    "08": "8. Estatuto dos parlamentares e administração (RICD)",
+    "09": "8. Estatuto dos parlamentares e administração (RICD)",
+    "10": "9. Regimento Comum do Congresso Nacional (RCCN)",
+    "11": "9. Regimento Comum do Congresso Nacional (RCCN)"
+  }
 }

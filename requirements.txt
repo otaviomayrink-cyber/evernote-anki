@@ -1,0 +1,3 @@
+genanki
+beautifulsoup4
+lxml

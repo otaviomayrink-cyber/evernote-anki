@@ -413,6 +413,18 @@ def tags_da_nota(nota, caderno, cfg):
     return list(dict.fromkeys(limpar_tag(t) for t in tags))
 
 
+def compactar_apkg(caminho):
+    """O genanki grava o .apkg sem compressão; recompacta (o Anki lê normalmente) — fica ~5x menor."""
+    import shutil
+    import zipfile
+    tmp = caminho.with_suffix(".tmp")
+    with zipfile.ZipFile(caminho) as origem, \
+            zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as destino:
+        for item in origem.infolist():
+            destino.writestr(item.filename, origem.read(item.filename))
+    shutil.move(tmp, caminho)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("entradas", nargs="+", help="arquivos .enex ou pastas contendo .enex")
@@ -558,6 +570,7 @@ def main():
     pacote = genanki.Package(list(baralhos.values()))
     pacote.media_files = sorted(arquivos_midia)
     pacote.write_to_file(saida)
+    compactar_apkg(saida)
 
     print(f"\n{total_cards} cards gerados ({n_cloze} cloze) em {len(baralhos)} baralho(s) -> {saida}")
     if n_guid_repetido:

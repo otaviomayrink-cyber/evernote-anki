@@ -1006,8 +1006,8 @@ CARDS = [
             "3,50 + 2,00 = 5,50 = CMg. Note que, isoladamente, nenhuma pessoa pagaria 5,50 pela unidade.",
             "O mercado não chega lá: como ninguém é excluído, cada um subdeclara a disposição a pagar "
             "(" + azb("carona") + ") e a provisão voluntária fica abaixo de q*, quando existe.",
-            "Contraste com Pindyck: a mesma lógica vale para bens privados (BMg = CMg); o que muda no bem "
-            "público é <b>como</b> se mede o benefício marginal.",
+            "Síntese de " + oc("Pindyck") + ": o princípio é o mesmo dos bens privados (benefício marginal = "
+            "custo marginal); o que muda no bem público é <b>como</b> se mede o benefício marginal.",
         ],
         "grafico_verso": "ECO-E3-L00266-1-V1",
         "dissecando": (cz("[literalidade]") + " Item extraído quase palavra por palavra do " + oc("Pindyck")
@@ -1152,9 +1152,9 @@ CARDS = [
             "virgem sobe em relação ao custo de coletar, separar e processar a sucata, a demanda pelo reciclado "
             "cresce — " + azb("substituição de insumos") + " movida por preços relativos.",
             "Exemplos: latas de alumínio e sucata de cobre (o alumínio reciclado poupa grande parte da energia "
-            "da produção primária); papelão e embalagens. No " + rx("Brasil") + ", a reciclagem de latas é "
-            "altíssima sem obrigação legal específica, sustentada pelo preço da sucata e por catadores e "
-            "cooperativas.",
+            "da produção primária); papelão e embalagens. No " + rx("Brasil") + ", o índice de reciclagem de "
+            "latas de alumínio está entre os mais altos do mundo, sustentado sobretudo pelo valor da sucata e "
+            "pelo trabalho de catadores e cooperativas.",
             "Por que ainda há espaço para política: a reciclagem gera " + azb("externalidade positiva") + " "
             "(menos aterro, menos extração, menos emissões) que o preço não remunera, e o descarte em lixão "
             "tem custo social que o consumidor não paga. O mercado recicla, mas " + azb("menos que o ótimo")

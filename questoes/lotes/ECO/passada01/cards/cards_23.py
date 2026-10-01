@@ -41,6 +41,9 @@ EXCERTO_COASE_2 = (
     "danos causados a diversas propriedades etc.</i></p>"
     '<p><span style="color: rgb(160, 160, 160);">R. H. Coase. O problema do custo social. In: Journal of Law and '
     "Economics. 1960 (traduzido e adaptado).</span></p>")
+ALERTA_2023 = ("banca_provavel: não confirmada — a fonte só traz o ano (2023); a classificação sugere prova do "
+               "CACD, sem confirmação")
+CMD_SEMI = "Julgue o item a seguir, relativo à classificação dos bens públicos, semipúblicos e meritórios."
 CMD_FALHAS = "Julgue o item a seguir, relativo às falhas de mercado e à classificação dos bens."
 
 ALERTA_E1_CACD = ("banca_provavel: CEBRASPE (estilo e ano compatíveis com a prova do CACD; a fonte só traz o ano, "
@@ -1027,8 +1030,9 @@ CARDS = [
                       "será um equilíbrio instável, caso o jogo não tenha repetição infinita."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("O equilíbrio de Nash em um jogo de duopólio ") + vm("é um equilíbrio de estratégias "
-                    "dominantes") + az(", porém ") + vm("será um equilíbrio instável, caso o jogo não tenha "
-                                                       "repetição infinita") + az(".")),
+                    "dominantes") + az(", ") + vm("porém será um equilíbrio instável, caso") + az(" o jogo não "
+                                                                                          "tenha repetição "
+                                                                                          "infinita.")),
         "poucas": ("Dois erros: o " + azb("equilíbrio de Nash") + " não exige estratégias dominantes (todo "
                    "equilíbrio em dominantes é Nash, não o contrário); e ele é estável por definição — ninguém "
                    "ganha desviando sozinho —, com ou sem repetição."),
@@ -1057,7 +1061,7 @@ CARDS = [
             "dominância)",
         ])],
         "reescrita": ("O equilíbrio de Nash em um jogo de duopólio " + hl("não é necessariamente") + " um "
-                      "equilíbrio de estratégias dominantes" + hl(" e é estável por definição, mesmo que") + " o "
+                      "equilíbrio de estratégias dominantes, " + hl("e é estável por definição, ainda que") + " o "
                       "jogo não tenha repetição infinita."),
         "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": ("Dois erros: Nash não é necessariamente em estratégias dominantes (Cournot é exemplo); "
@@ -1306,5 +1310,298 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
         "alertas": [ALERTA_E1_CACD],
+    },
+    # ------------------------------------------------------------------ E1-0252
+    {
+        "id": "ECO-E1-0252-1", "fonte_ref": "E1-0252", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando o preço de equilíbrio não considera custos impostos pela transação a agentes "
+                      "terceiros, não envolvidos diretamente na transação em estudo, ocorre externalidade negativa."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quando o preço de equilíbrio <u>não considera custos impostos</u> pela transação a agentes "
+                      "<u>terceiros</u>, não envolvidos diretamente na transação em estudo, ocorre externalidade "
+                      "negativa."),
+        "poucas": ("É a definição de " + azb("externalidade negativa") + ": custo que recai sobre quem está fora "
+                   "da transação e que o preço de mercado não incorpora. Resultado: " + azb("custo marginal "
+                   "social > custo marginal privado") + " e produção excessiva."),
+        "destrinchando": [
+            "Comprador e vendedor só levam em conta os próprios custos e benefícios. Se a produção impõe custos "
+            "a terceiros (poluição de um rio que prejudica pescadores, ruído, congestionamento), esses custos "
+            "ficam fora do preço.",
+            "Graficamente: a oferta reflete o " + azb("CMg privado") + "; somando o dano marginal a terceiros, "
+            "obtém-se o " + azb("CMg social") + ", acima dela. O mercado produz qₘ, onde a demanda corta a "
+            "oferta privada; o ótimo social é q* < qₘ, onde a demanda corta o CMg social.",
+            "As unidades entre q* e qₘ custam à sociedade mais do que valem para os consumidores: é o "
+            + azb("peso morto") + " da externalidade. O preço de mercado fica " + vm("baixo demais") + " e a "
+            "quantidade, alta demais.",
+            "Espelho: na " + azb("externalidade positiva") + " (vacinação, educação, P&amp;D), o benefício "
+            "marginal social supera o privado, e o mercado produz <b>menos</b> que o ótimo.",
+            "Correções: imposto pigouviano igual ao dano marginal; regulação de quantidade; licenças "
+            "negociáveis; negociação coasiana, se os custos de transação forem baixos.",
+        ],
+        "grafico_verso": "ECO-E1-0252-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " Reescreve a definição de manual (“custos impostos a terceiros "
+                       "não refletidos no preço”) com palavras próprias. O risco está em confundir com "
+                       "externalidade positiva ou com custo de transação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na presença de externalidade negativa na produção, o mercado produz quantidade inferior à "
+            "socialmente ótima.”</i> → ERRADO (inversão: produz em excesso)",
+            "<i>“Na externalidade negativa, o custo marginal social supera o custo marginal privado.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Definição de externalidade negativa (custos a terceiros não refletidos no preço), "
+                             "exemplos da fábrica que polui o rio e da indústria de detergentes; CMgS > CMgP e "
+                             "produção acima do ótimo; espelho da externalidade positiva."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (87).png, image (85).png", "tipo_fonte": "não preservadas",
+                           "lado": "verso", "acao": "irrecuperavel (mecanismo redesenhado em ECO-E1-0252-1-V1)"}],
+        "alertas": [ALERTA_2023],
+    },
+    # ------------------------------------------------------------------ E1-0253
+    {
+        "id": "ECO-E1-0253-1", "fonte_ref": "E1-0253", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": "Bens rivais são uma falha de mercado relativa a marcas concorrentes de um mesmo produto.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Bens rivais ") + vm("são uma falha de mercado relativa a marcas concorrentes de um mesmo "
+                                            "produto") + az(".")),
+        "poucas": ("" + azb("Rivalidade") + " é uma característica do <b>consumo</b> do bem (o que eu consumo "
+                   "deixa de estar disponível para você), não uma falha de mercado nem uma questão de marcas."),
+        "destrinchando": [
+            azb("Bem rival") + ": o consumo por um agente reduz a quantidade disponível para os demais (uma "
+            "maçã, um litro de gasolina). " + azb("Bem não rival") + ": o consumo de um não reduz o dos outros "
+            "(a luz do farol, um sinal de rádio, uma ideia).",
+            "Combinado com a " + azb("excludabilidade") + " (é possível impedir quem não paga?), dá a "
+            "classificação de quatro casas: privado (rival e excludente), público (não rival e não "
+            "excludente), " + azb("recurso comum") + " (rival e não excludente: peixes no mar) e "
+            + azb("bem de clube") + " ou monopólio natural (não rival e excludente: TV por assinatura).",
+            "A maior parte dos bens é rival — e o mercado os aloca bem. As " + azb("falhas de mercado") + " são "
+            "outras: bens públicos, externalidades, poder de mercado, informação assimétrica. Rivalidade só "
+            "se liga a falha quando combinada com não exclusão: a " + azb("tragédia dos comuns") + " (sobre-"
+            "exploração).",
+            "Marcas concorrentes do mesmo produto têm a ver com estrutura de mercado (concorrência "
+            "monopolística, diferenciação), não com rivalidade no consumo.",
+            "Nota: um dos comentários da fonte mistura o conceito econômico de bem público com o jurídico "
+            "(bens de uso comum, inalienabilidade) — são noções distintas; na economia, “público” se define "
+            "por não rivalidade e não exclusão, não pela titularidade estatal.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Usa “rival” no sentido coloquial (concorrente) para "
+                       "fabricar uma definição falsa e ainda a rotula de falha de mercado. Pista: rivalidade "
+                       "descreve o consumo, não a oferta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Bens rivais e não excludentes, como os estoques pesqueiros em alto-mar, tendem à "
+            "sobre-exploração.”</i> → CERTO",
+            "<i>“A rivalidade no consumo é, por si só, uma falha de mercado.”</i> → ERRADO (troca de conceito: "
+            "é a característica da maioria dos bens privados)",
+        ])],
+        "reescrita": ("Bens rivais " + hl("são aqueles cujo consumo por um agente reduz a quantidade disponível "
+                      "para os demais, característica que não constitui, por si só, falha de mercado") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Vários comentários: rivalidade é característica do bem, não falha de mercado; falhas "
+                             "são externalidades, bens públicos, assimetria, monopólio; um deles mistura o conceito "
+                             "jurídico de bem público (inalienabilidade, impenhorabilidade); outro chama bens "
+                             "rivais de falha de mercado."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_2023,
+                    "qualidade_fonte: um dos comentários afirma que “bens rivais são uma falha de mercado” e outro "
+                    "confunde bem público econômico com bem público jurídico — corrigido"],
+    },
+    # ------------------------------------------------------------------ E1-0254
+    {
+        "id": "ECO-E1-0254-1", "fonte_ref": "E1-0254", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Um bem público é uma falha de mercado originada pela produção do bem pelo setor público, ou "
+                      "seja, pelo governo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um bem público é uma falha de mercado ") + vm("originada pela produção do bem pelo setor "
+                                                                      "público, ou seja, pelo governo") + az(".")),
+        "poucas": ("Bem público se define pelas características do consumo — " + azb("não rivalidade") + " e "
+                   + azb("não exclusão") + " —, não por quem o produz. A falha vem do " + azb("carona") + ", e "
+                   "a provisão estatal é a <b>resposta</b> a ela, não a causa."),
+        "destrinchando": [
+            "Definição (" + oc("Samuelson") + ", 1954): bem público puro é não rival (o consumo de um não reduz "
+            "o dos demais) e não excludente (não se pode impedir quem não paga de usufruir). Exemplos: defesa "
+            "nacional, iluminação pública, farol.",
+            "Por que é falha de mercado: sem exclusão, cada um prefere esperar que os outros paguem — o "
+            + azb("problema do carona") + " (<i>free rider</i>). A disposição a pagar fica oculta, e a "
+            "provisão privada é insuficiente ou nula.",
+            "Por isso o governo costuma prover (ou financiar com impostos) esses bens. Mas a causalidade é a "
+            "inversa da do item: o bem é público pela natureza; a produção estatal é a solução.",
+            "Provisão ótima: como todos consomem a mesma unidade, soma-se " + azb("verticalmente") + " a "
+            "disposição marginal a pagar: Σ BMg = CMg (condição de Samuelson). Nos bens privados, a soma é "
+            "horizontal.",
+            "Contraexemplos que a banca usa: o governo produz bens privados (energia, correios, crédito de "
+            "bancos públicos), e há bens públicos providos privadamente (software livre, sinal aberto de TV "
+            "financiado por anúncios).",
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " Confunde o sentido econômico de “público” "
+                       "(característica do bem) com o jurídico/administrativo (de propriedade ou produção "
+                       "estatal) e inverte causa e solução. A 1ª parte (“é uma falha de mercado”) é verdadeira "
+                       "e serve de isca."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Bens públicos são não rivais e não excludentes, o que dá origem ao problema do carona.”</i> → "
+            "CERTO",
+            "<i>“Todo bem produzido pelo governo é um bem público.”</i> → ERRADO (modulador absoluto: o governo "
+            "também produz bens privados)",
+        ])],
+        "reescrita": ("Um bem público é uma falha de mercado " + hl("decorrente de suas características de não "
+                      "rivalidade e não exclusão, que levam ao problema do carona, e não da sua produção pelo "
+                      "governo") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O erro é associar a falha à produção pelo governo; bens públicos são não exclusivos "
+                             "e não rivais; carona; o governo provê por isso; um comentário reescreve o item de "
+                             "forma confusa (agentes que não querem pagar pela produção estatal)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (84).png", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "irrecuperavel (conteúdo coberto pelo texto)"}],
+        "alertas": [ALERTA_2023],
+    },
+    # ------------------------------------------------------------------ E1-0321
+    {
+        "id": "ECO-E1-0321-1", "fonte_ref": "E1-0321", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_SEMI,
+        "rotulo_item": "Item",
+        "assertiva": "Temos como exemplo de bem semipúblico ou meritório a defesa nacional.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Temos como exemplo de bem ") + vm("semipúblico ou meritório") + az(" a defesa "
+                                                                                          "nacional.")),
+        "poucas": ("A defesa nacional é o exemplo clássico de " + azb("bem público puro") + ": não rival e não "
+                   "excludente. Meritórios são bens como " + vd("educação e saúde") + ", que podem ser vendidos "
+                   "no mercado, mas que o Estado oferta por seu valor social."),
+        "destrinchando": [
+            azb("Bem público puro") + ": todos os habitantes são protegidos ao mesmo tempo (não rival) e não "
+            "há como excluir quem não paga impostos (não excludente). Só o Estado consegue financiá-lo, por "
+            "tributação compulsória.",
+            azb("Bens semipúblicos ou meritórios") + " (" + oc("Musgrave") + "): bens que <b>podem</b> ser "
+            "providos pelo mercado — há rivalidade e é possível excluir quem não paga —, mas que o Estado "
+            "oferta (total ou parcialmente) porque geram " + azb("externalidades positivas") + " ou porque a "
+            "sociedade julga que todos devem tê-los, independentemente da renda.",
+            "Exemplos de meritórios: " + rx("educação básica, saúde pública (SUS), merenda escolar, "
+            "vacinação, habitação popular") + ". O consumo individual traz benefício também a terceiros "
+            "(população mais instruída e saudável).",
+            "Nas funções do governo de Musgrave, a provisão de bens públicos e meritórios pertence à "
+            + azb("função alocativa") + "; ao lado dela, a distributiva e a estabilizadora.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca o exemplo-modelo de uma categoria pelo de outra. "
+                       "Teste rápido: dá para excluir alguém da defesa nacional? Não — então não é semipúblico."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A educação pública é exemplo de bem semipúblico ou meritório.”</i> → CERTO",
+            "<i>“A defesa nacional é bem público por ser produzida pelo governo.”</i> → ERRADO (nexo indevido: é "
+            "público por ser não rival e não excludente)",
+        ])],
+        "reescrita": ("Temos como exemplo de bem " + hl("público puro") + " a defesa nacional."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A defesa nacional é bem público puro: não rival e não excludente.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (76).jpeg", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "irrecuperavel (conteúdo coberto pelo texto)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0322
+    {
+        "id": "ECO-E1-0322-1", "fonte_ref": "E1-0322", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_SEMI,
+        "rotulo_item": "Item",
+        "assertiva": "Temos como exemplo de bem semipúblico ou meritório: a utilização de um parque/praça na cidade.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": (az("Temos como exemplo de bem ") + vm("semipúblico ou meritório") + az(": a utilização de um "
+                                                                                           "parque/praça na "
+                                                                                           "cidade.")),
+        "poucas": ("Praça e parque abertos são " + azb("bens públicos") + " (locais): ninguém é excluído e, até "
+                   "lotar, o uso de um não atrapalha o de outro. Não se encaixam no conceito de bem "
+                   + azb("meritório") + " (educação, saúde)."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "parte da literatura chama de “semipúblicos” os " + azb("bens públicos impuros") + " "
+                          "— não excludentes, mas sujeitos a congestionamento —, categoria em que um parque "
+                          "lotado poderia caber. O gabarito ERRADO segue a leitura mais usual, em que "
+                          "“semipúblico” é sinônimo de “meritório” (Musgrave), e o parque, bem público local.")],
+        "destrinchando": [
+            "Parque ou praça abertos: " + azb("não excludentes") + " (acesso livre) e " + azb("não rivais")
+            + " até o ponto de congestionamento. São " + azb("bens públicos locais") + ": beneficiam sobretudo "
+            "os moradores de uma área, por isso costumam ser providos pelos municípios.",
+            "Com lotação, surge rivalidade parcial: é o " + azb("bem público congestionável") + " (ou "
+            "impuro). Se se cobrar ingresso, passa a " + azb("bem de clube") + " (excludente e não rival até a "
+            "capacidade).",
+            azb("Bens meritórios") + " são outra coisa: bens privados por natureza (rivais e excludentes) que o "
+            "Estado oferta por considerar que todos devem consumi-los — educação, saúde, vacinação. O critério é "
+            "o <b>mérito social</b> do consumo, não a impossibilidade de excluir.",
+            "Quadro-resumo: defesa nacional e iluminação → públicos puros; parque, rua sem pedágio → públicos "
+            "locais/congestionáveis; escola e hospital públicos → meritórios; peixes no mar → recurso comum.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Mesmo molde do item sobre a defesa nacional: oferece um "
+                       "exemplo de outra categoria. Pista: o parque não é bem privado oferecido pelo Estado por "
+                       "mérito — é acesso livre, típico de bem público."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um parque público sujeito a lotação nos fins de semana é exemplo de bem público "
+            "congestionável.”</i> → CERTO",
+            "<i>“Bens meritórios são, por definição, não rivais e não excludentes.”</i> → ERRADO (troca de "
+            "conceito: essa é a definição de bem público puro)",
+        ])],
+        "reescrita": ("Temos como exemplo de bem " + hl("público (local)") + ": a utilização de um parque/praça na "
+                      "cidade."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Parque público é bem público local, com rivalidade limitada (pode lotar) e não "
+                             "excludente."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (81).jpeg", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "irrecuperavel (conteúdo coberto pelo texto)"}],
+        "alertas": ["contestavel: “semipúblico” às vezes designa bem público impuro (congestionável), categoria em "
+                    "que o parque caberia; gabarito ERRADO da fonte mantido pela leitura semipúblico = meritório"],
+    },
+    # ------------------------------------------------------------------ E1-0323
+    {
+        "id": "ECO-E1-0323-1", "fonte_ref": "E1-0323", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos bens públicos e às externalidades.",
+        "rotulo_item": "Item",
+        "assertiva": ("No que se refere à promoção da mudança tecnológica, a pesquisa básica é um bem público. Isso "
+                      "significa que as despesas com pesquisa e desenvolvimento para invenções ou inovações nunca "
+                      "foram fontes de externalidades."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No que se refere à promoção da mudança tecnológica, a pesquisa básica é um bem público. "
+                       "Isso significa que as despesas com pesquisa e desenvolvimento para invenções ou inovações ")
+                    + vm("nunca foram") + az(" fontes de externalidades.")),
+        "poucas": ("A 1ª frase está certa; a conclusão, invertida. Justamente por ser bem público, o conhecimento "
+                   "gerado pela pesquisa " + azb("transborda") + " para terceiros: P&amp;D é fonte clássica de "
+                   + azb("externalidades positivas") + "."),
+        "destrinchando": [
+            "Conhecimento científico é " + azb("não rival") + " (um teorema serve a todos ao mesmo tempo) e "
+            "dificilmente " + azb("excludente") + " (publicações, imitação, mobilidade de pesquisadores). "
+            "Pesquisa básica é, assim, bem público.",
+            "Consequência: quem financia a pesquisa captura só parte do ganho social, e o resto beneficia "
+            "outras empresas e setores — " + azb("transbordamentos (spillovers)") + ". O retorno social da "
+            "P&amp;D supera o privado, e o mercado investe " + vm("menos") + " que o ótimo.",
+            "Respostas de política: financiamento público direto (universidades, institutos), subsídios e "
+            "incentivos fiscais à P&amp;D, patentes (exclusão temporária para restaurar o incentivo). No "
+            + rx("Brasil") + ": CNPq, CAPES, FINEP, Embrapa e a Lei do Bem (Lei 11.196/2005).",
+            "Nas teorias de crescimento endógeno (" + oc("Romer") + ", 1990), esses transbordamentos de "
+            "conhecimento sustentam o crescimento de longo prazo.",
+        ],
+        "dissecando": (cz("[contradição · modulador absoluto]") + " A 2ª frase contradiz a 1ª: se é bem "
+                       "público, gera externalidades. O “nunca” é a bandeira vermelha."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Por ser bem público, a pesquisa básica tende a ser subprovida pelo mercado.”</i> → CERTO",
+            "<i>“As patentes eliminam por completo as externalidades da pesquisa.”</i> → ERRADO (modulador "
+            "absoluto: a patente divulga o conhecimento e só restringe o uso comercial por um prazo)",
+        ])],
+        "reescrita": ("No que se refere à promoção da mudança tecnológica, a pesquisa básica é um bem público. Isso "
+                      "significa que as despesas com pesquisa e desenvolvimento para invenções ou inovações "
+                      + hl("são importantes") + " fontes de externalidades " + hl("positivas") + "."),
+        "tipo_erro": ["CONTRADICAO", "GENERALIZACAO"], "moduladores": ["nunca"], "dificuldade": 1,
+        "comentario_fonte": ("Pesquisas básicas geram muitas externalidades positivas ao disseminar conhecimento "
+                             "útil a múltiplos agentes."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
     },
 ]

@@ -49,14 +49,22 @@
    "sobre": "F1",
    "x": 5,
    "rotulo": "A",
-   "projetar": true
+   "projetar": true,
+   "rotulo_desloc": [
+    -24,
+    -24
+   ]
   },
   {
    "id": "B",
    "sobre": "F2",
    "x": 5.8,
    "rotulo": "B",
-   "projetar": true
+   "projetar": true,
+   "rotulo_desloc": [
+    2,
+    16
+   ]
   }
  ],
  "setas": [

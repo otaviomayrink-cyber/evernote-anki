@@ -462,4 +462,312 @@ CARDS = [
                           "as alocações eficientes sejam implementadas via preços."),
         qualidade_fonte="bom",
     ),
+    # ------------------------------------------------------------------ E1-0145
+    card(
+        "E1-0145", "efi", COM_PARETO,
+        assertiva=("O ótimo de Pareto é caracterizado por uma “alocação eficiente” ou “Pareto ótima” se ela está "
+                   "na fronteira de Pareto (caso contrário, ela é ineficiente)."),
+        gabarito="CERTO",
+        anotada=az("O ótimo de Pareto é caracterizado por uma “alocação eficiente” ou “Pareto ótima” se ela está "
+                   "<u>na fronteira de Pareto</u> (caso contrário, ela é ineficiente)."),
+        poucas=("A " + azb("fronteira de Pareto") + " é o conjunto das alocações eficientes: sobre ela, "
+                "melhorar alguém exige piorar outro; fora dela, ainda há " + vd("trocas mutuamente "
+                "vantajosas") + "."),
+        destrinchando=[
+            "Quatro formulações equivalentes de alocação Pareto-eficiente: (1) não é possível que todos "
+            "melhorem; (2) não é possível melhorar alguém sem piorar outro; (3) os ganhos de troca se "
+            "esgotaram; (4) não restam trocas mutuamente vantajosas.",
+            "Na " + azb("caixa de Edgeworth") + ", a fronteira de Pareto aparece como a " + azb("curva de "
+            "contrato") + " (pontos de tangência entre as curvas de indiferença dos dois consumidores). No "
+            "espaço das utilidades (U<sub>A</sub> × U<sub>B</sub>), aparece como a " + azb("fronteira de "
+            "possibilidades de utilidade") + ", negativamente inclinada.",
+            "Partindo de uma dotação fora da curva de contrato, as curvas de indiferença que passam por ela "
+            "se cruzam e formam uma <b>lente</b>: toda alocação dentro da lente melhora os dois. As trocas "
+            "levam a economia até o trecho da curva de contrato dentro da lente (o " + azb("núcleo") + ").",
+            "Nos mercados, a mesma ideia: eficiente é o nível de produção em que a disposição marginal a "
+            "pagar iguala o custo marginal de produzir — nem mais, nem menos.",
+            vm("Regra-âncora: sobre a fronteira → eficiente (toda melhora tem custo para alguém); dentro dela → "
+               "ineficiente (existe melhora gratuita)."),
+        ],
+        grafico_verso="ECO-E1-0145-1-V1",
+        dissecando=(cz("[paráfrase fiel]") + " Redação truncada (“o ótimo de Pareto é caracterizado por uma "
+                    "alocação eficiente… se ela está na fronteira”), mas o conteúdo é a definição correta. A "
+                    "armadilha é o candidato rejeitar o item pela forma; julgue o conteúdo."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Todo ponto sobre a fronteira de Pareto é preferido por ambos os consumidores a qualquer ponto "
+            "fora dela.”</i> → ERRADO (modulador absoluto: só os pontos dentro da lente melhoram os dois)",
+            "<i>“Uma alocação no interior da fronteira de possibilidades de utilidade admite melhoria de "
+            "Pareto.”</i> → CERTO",
+        ])],
+        tipo_erro=["PARAFRASE_FIEL"], dificuldade=1,
+        comentario_fonte=("CERTO. Alocação no ótimo de Pareto está sobre a fronteira; fora dela há ineficiência. "
+                          "Eficiente: disposição marginal a comprar = disposição marginal a vender; quatro "
+                          "formulações equivalentes de eficiência. Caixa de Edgeworth: área sombreada = trocas "
+                          "mutuamente vantajosas; TMS de Ana e Bruno dão as tangentes no ponto A. [imagem]"),
+        qualidade_fonte="bom",
+        figuras_fonte=[{"ref": "Untitled (36).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                        "acao": "irrecuperavel (imagem não preservada; o texto descreve uma caixa de Edgeworth com "
+                                "a lente de trocas vantajosas — mecanismo redesenhado em ECO-E1-0145-1-V1)"}],
+    ),
+    # ------------------------------------------------------------------ E1-0146
+    card(
+        "E1-0146", "efi", COM_PARETO,
+        assertiva=("Uma característica de um ponto da curva de contrato é que ela pertence ao conjunto de Pareto, "
+                   "independente da dotação inicial."),
+        gabarito="CERTO",
+        anotada=az("Uma característica de um ponto da curva de contrato é que ela pertence ao conjunto de Pareto, "
+                   "<u>independente da dotação inicial</u>."),
+        poucas=("A " + azb("curva de contrato") + " é, por construção, o conjunto de " + vd("todas") + " as "
+                "alocações Pareto-eficientes. A dotação inicial só decide em <b>qual</b> ponto dela as trocas "
+                "terminam."),
+        destrinchando=[
+            "Na caixa de Edgeworth, a curva de contrato reúne os pontos em que as curvas de indiferença dos dois "
+            "consumidores são " + azb("tangentes") + ": " + vd("TMS<sub>A</sub> = TMS<sub>B</sub>") + ". Em "
+            "cada um deles, qualquer movimento melhora um e piora o outro.",
+            "A eficiência de um ponto depende só das preferências e das quantidades totais (o tamanho da "
+            "caixa) — não de onde a economia começou. Por isso “independente da dotação inicial” está certo.",
+            "O que a dotação muda é o <b>resultado</b>: partindo de ω, as trocas voluntárias levam a algum ponto "
+            "da curva de contrato dentro da lente de ω (o " + azb("núcleo") + "); outra dotação leva a outro "
+            "trecho. Uma dotação muito desigual gera um ponto eficiente e muito desigual.",
+            "Daí o " + azb("2º Teorema do Bem-Estar") + ": para chegar a um ponto eficiente específico da "
+            "curva, redistribui-se a dotação e deixa-se o mercado agir.",
+            vm("Regra-âncora: a dotação escolhe o ponto; a curva de contrato garante a eficiência."),
+        ],
+        grafico_verso="ECO-E1-0146-1-V1",
+        dissecando=(cz("[detalhe · contraintuitivo]") + " A cláusula final (“independente da dotação "
+                    "inicial”) parece exagero e induz ao ERRADO; mas ela fala da <b>eficiência</b> de cada "
+                    "ponto, que de fato não depende da dotação. O que dependeria é o ponto alcançado."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“A partir de qualquer dotação inicial, as trocas voluntárias podem levar a qualquer ponto da "
+            "curva de contrato.”</i> → ERRADO (generalização: só aos pontos dentro da lente da dotação)",
+            "<i>“Ao longo da curva de contrato, as taxas marginais de substituição dos dois consumidores são "
+            "iguais.”</i> → CERTO",
+        ])],
+        tipo_erro=["DETALHE", "CONTRAINTUITIVO"], dificuldade=2,
+        comentario_fonte=("CERTO. Todo ponto na curva de contrato é eficiente no sentido de Pareto, e essa curva "
+                          "representa o conjunto das alocações Pareto eficientes, independentemente da dotação "
+                          "inicial. A curva de contrato contém todas as alocações em que as curvas de indiferença "
+                          "são tangentes. [imagem]"),
+        qualidade_fonte="bom",
+        figuras_fonte=[{"ref": "Untitled (37).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                        "acao": "irrecuperavel (imagem não preservada; o texto descreve a curva de contrato — "
+                                "mecanismo redesenhado em ECO-E1-0146-1-V1)"}],
+    ),
+    # ------------------------------------------------------------------ E1-0147
+    card(
+        "E1-0147", "efi", COM_PARETO,
+        assertiva=("A eficiência máxima na alocação de recursos, equivalente ao Ótimo de Pareto, é atingida "
+                   "quando todos usufruem de um nível satisfatório de bem-estar."),
+        gabarito="ERRADO",
+        anotada=(az("A eficiência máxima na alocação de recursos, equivalente ao Ótimo de Pareto, é atingida "
+                    "quando ") + vm("todos usufruem de um nível satisfatório de bem-estar") + az(".")),
+        poucas=("O " + azb("ótimo de Pareto") + " não fixa nenhum piso de bem-estar: é atingido quando "
+                + vd("não se pode melhorar ninguém sem piorar outro") + " — mesmo que alguns estejam na "
+                "miséria."),
+        destrinchando=[
+            "Pareto é um critério de " + azb("eficiência") + ", não de " + azb("justiça") + " nem de "
+            "suficiência. Ele compara situações apenas pela possibilidade de ganhos sem perdedores.",
+            "Exemplo-limite: uma economia em que uma pessoa detém todos os recursos e as demais nada têm é "
+            "Pareto-eficiente — qualquer transferência piora o dono. Ninguém diria que todos “usufruem de nível "
+            "satisfatório”.",
+            "Inversamente, uma situação em que todos estão razoavelmente bem pode ser ineficiente, se houver "
+            "recursos ociosos ou trocas vantajosas não realizadas.",
+            "Critérios que incorporam distribuição exigem uma " + azb("função de bem-estar social") + ": "
+            "utilitarista (soma das utilidades, " + oc("Bentham") + "), rawlsiana (maximizar o bem-estar do "
+            "mais pobre, " + oc("Rawls") + "), ou intermediárias. Elas escolhem <b>um</b> ponto da fronteira "
+            "de Pareto.",
+            vm("Regra-âncora: Pareto mede desperdício, não suficiência nem igualdade."),
+        ],
+        dissecando=(cz("[troca de conceito]") + " O item substitui o critério de Pareto (impossibilidade de "
+                    "melhora sem perdedor) por um critério normativo de bem-estar mínimo. O adjetivo "
+                    "“satisfatório” é vago e valorativo — sinal de que não pertence a uma definição de "
+                    "eficiência."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Uma alocação extremamente desigual pode ser eficiente no sentido de Pareto.”</i> → CERTO",
+            "<i>“O ótimo de Pareto corresponde ao ponto da fronteira de utilidades que maximiza o bem-estar do "
+            "indivíduo mais pobre.”</i> → ERRADO (troca de conceito: esse é o critério rawlsiano, um ponto "
+            "específico entre muitos ótimos de Pareto)",
+        ])],
+        reescrita=("A eficiência máxima na alocação de recursos, equivalente ao Ótimo de Pareto, é atingida "
+                   "quando " + hl("não é possível melhorar o bem-estar de alguém sem reduzir o de outro") + "."),
+        tipo_erro=["TROCA_CONCEITO"], dificuldade=1,
+        comentario_fonte=("ERRADO. A eficiência de Pareto não considera igualdade ou bem-estar mínimo (ou, "
+                          "meramente “satisfatório”); apenas considera se é possível melhorar alguém sem "
+                          "prejudicar outro."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0148
+    card(
+        "E1-0148", "efi", COM_TEOREMAS,
+        assertiva=("O primeiro teorema do Bem-Estar determina que todo equilíbrio de mercado competitivo é "
+                   "eficiente no sentido de Pareto."),
+        gabarito="CERTO",
+        anotada=az("O primeiro teorema do Bem-Estar determina que todo equilíbrio de mercado "
+                   "<u>competitivo</u> é eficiente no sentido de Pareto."),
+        poucas=("É o " + azb("1º Teorema do Bem-Estar") + ": sob concorrência perfeita, mercados completos e "
+                "sem externalidades, o equilíbrio competitivo é " + vd("Pareto-eficiente") + " — a versão "
+                "formal da “mão invisível”."),
+        destrinchando=[
+            "Mecanismo: em concorrência, todos enfrentam os <b>mesmos preços</b>. Cada consumidor iguala sua "
+            "TMS à razão de preços; cada firma iguala a TMST à razão dos preços dos fatores e o custo "
+            "marginal ao preço. Logo as TMS de todos se igualam (eficiência na troca), as TMST também "
+            "(eficiência na produção) e TMS = taxa marginal de transformação (eficiência no mix).",
+            "Hipóteses: " + vd("mercados completos") + ", agentes tomadores de preço, " + vd("ausência de "
+            "externalidades") + " e de bens públicos, informação perfeita e não saciedade local. "
+            "<b>Não</b> exige preferências convexas (essa é hipótese do 2º).",
+            "É a formalização da “mão invisível” de " + oc("Adam Smith") + ", feita por " + oc("Arrow")
+            + " e " + oc("Debreu") + " nos anos 1950.",
+            "O que o teorema <b>não</b> diz: que o equilíbrio é justo. Ele parte das dotações iniciais, "
+            "quaisquer que sejam; a eficiência pode conviver com enorme desigualdade.",
+            "Cada hipótese violada abre uma " + azb("falha de mercado") + " (monopólio, externalidade, bem "
+            "público, assimetria de informação) — e com ela a justificativa econômica para intervir.",
+        ],
+        dissecando=(cz("[literalidade]") + " Enunciado-padrão do 1º Teorema, sem as hipóteses explícitas — a "
+                    "banca considera implícitas as condições do modelo competitivo. O adjetivo decisivo é "
+                    "“competitivo”: o item irmão troca por “não competitivo” e vira ERRADO."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“O primeiro teorema do bem-estar garante que o equilíbrio competitivo é eficiente mesmo na "
+            "presença de externalidades.”</i> → ERRADO (hipótese violada: exige ausência de externalidades)",
+            "<i>“Segundo o primeiro teorema do bem-estar, o equilíbrio competitivo é eficiente, mas não "
+            "necessariamente equitativo.”</i> → CERTO",
+        ])],
+        tipo_erro=["LITERAL"], dificuldade=1,
+        comentario_fonte=("CERTO. Enunciado clássico do 1º Teorema do Bem-Estar: todo equilíbrio competitivo (em "
+                          "mercados completos e com preferências bem-comportadas) é eficiente de Pareto. [imagem]"),
+        qualidade_fonte="com_erro",
+        figuras_fonte=[img_verso("Untitled (42).jpeg")],
+        alertas=["qualidade_fonte: o comentário de origem inclui “preferências bem-comportadas” entre as "
+                 "hipóteses do 1º Teorema; a convexidade é exigida pelo 2º — o 1º só requer não saciedade "
+                 "local (corrigido no 📖)"],
+    ),
+    # ------------------------------------------------------------------ E1-0149
+    card(
+        "E1-0149", "efi", COM_TEOREMAS,
+        assertiva=("O primeiro teorema do Bem-Estar determina que todo equilíbrio de mercado não competitivo é "
+                   "eficiente no sentido de Pareto."),
+        gabarito="ERRADO",
+        anotada=(az("O primeiro teorema do Bem-Estar determina que todo equilíbrio de mercado ")
+                 + vm("não competitivo") + az(" é eficiente no sentido de Pareto.")),
+        poucas=("O 1º Teorema vale para o equilíbrio " + azb("competitivo") + ". Com " + azb("poder de "
+                "mercado") + ", o preço fica acima do custo marginal, a quantidade cai e surge " + vd("peso "
+                "morto") + "."),
+        destrinchando=[
+            "A peça-chave do 1º Teorema é que todos são <b>tomadores de preço</b>: p = CMg na produção e "
+            "TMS = razão de preços no consumo. Isso garante que a última unidade produzida vale, para o "
+            "consumidor, exatamente o que custa.",
+            "No " + azb("monopólio") + ", a firma produz onde RMg = CMg e cobra p > RMg = CMg. Há consumidores "
+            "dispostos a pagar mais que o custo marginal que ficam sem o bem: é o " + azb("peso morto do "
+            "monopólio") + ". Raciocínio análogo vale para oligopólios e concorrência monopolística (preço "
+            "com markup).",
+            "Exceção que confirma a regra: o monopolista que pratica " + azb("discriminação perfeita de "
+            "preços") + " (1º grau) produz a quantidade eficiente — não há peso morto, mas todo o excedente "
+            "vai para ele. Ainda assim, nenhum teorema afirma que “todo” equilíbrio não competitivo é "
+            "eficiente.",
+            "Concorrência imperfeita é uma das " + azb("falhas de mercado") + " que justificam defesa da "
+            "concorrência e regulação (ex.: " + rx("CADE") + " e agências reguladoras no " + rx("Brasil")
+            + ").",
+        ],
+        dissecando=(cz("[troca de conceito]") + " Item gêmeo do enunciado correto, com um só termo trocado "
+                    "(“competitivo” → “não competitivo”). 🔥 Em blocos de itens irmãos, compare palavra por "
+                    "palavra: a banca muda um adjetivo e inverte o gabarito."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“O monopólio com discriminação perfeita de preços produz a quantidade socialmente "
+            "eficiente.”</i> → CERTO",
+            "<i>“Em um monopólio sem discriminação de preços, o preço é igual ao custo marginal.”</i> → ERRADO "
+            "(troca de conceito: p > CMg; é a RMg que iguala o CMg)",
+        ])],
+        reescrita=("O primeiro teorema do Bem-Estar determina que todo equilíbrio de mercado "
+                   + hl("competitivo") + " é eficiente no sentido de Pareto."),
+        tipo_erro=["TROCA_CONCEITO"], dificuldade=1,
+        comentario_fonte=("ERRADO. Mercados não competitivos (como monopólios ou oligopólios) geralmente não são "
+                          "eficientes de Pareto, pois distorcem preços e quantidades."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0150
+    card(
+        "E1-0150", "efi", COM_TEOREMAS,
+        assertiva=("O Primeiro Teorema do Bem-Estar determina que toda alocação eficiente de Pareto é uma "
+                   "alocação de equilíbrio de mercado para uma redistribuição de dotações e preferências "
+                   "convexas."),
+        gabarito="ERRADO",
+        anotada=(az("O ") + vm("Primeiro") + az(" Teorema do Bem-Estar determina que toda alocação eficiente "
+                 "de Pareto é uma alocação de equilíbrio de mercado para uma redistribuição de dotações e "
+                 "preferências convexas.")),
+        poucas=("O conteúdo descrito (eficiente → equilíbrio, com redistribuição de dotações e preferências "
+                "convexas) é o " + azb("2º Teorema") + ". O 1º vai no sentido inverso: " + vd("equilíbrio "
+                "competitivo → eficiente") + "."),
+        destrinchando=[
+            "Como separar os dois pela <b>direção da implicação</b>: " + azb("1º Teorema") + " — parte do "
+            "mercado (equilíbrio competitivo) e conclui eficiência. " + azb("2º Teorema") + " — parte de uma "
+            "alocação eficiente qualquer e conclui que o mercado pode alcançá-la.",
+            "Como separar pelas <b>hipóteses</b>: só o 2º menciona " + vd("redistribuição de dotações") + " e "
+            + vd("preferências convexas") + ". Se essas expressões aparecem, o teorema é o 2º.",
+            "Como separar pela <b>mensagem</b>: o 1º justifica a confiança no mercado (mão invisível); o 2º "
+            "separa eficiência de distribuição (a equidade se busca redistribuindo riqueza, não controlando "
+            "preços).",
+            vm("Regra-âncora: 1º = mercado ⇒ eficiência; 2º = eficiência ⇒ mercado (após redistribuir)."),
+        ],
+        dissecando=(cz("[troca de conceito]") + " Enunciado correto do 2º Teorema com o rótulo trocado. Pista "
+                    "infalível: “redistribuição de dotações” e “preferências convexas” só aparecem no 2º."),
+        modulos=[("🧠 Mnemônico", ["<b>1º</b>: do mercado <b>para</b> a eficiência (ida). <b>2º</b>: da "
+                                   "eficiência <b>de volta</b> ao mercado (volta, com a mala da "
+                                   "redistribuição)."]),
+                 ("😈 Para dificultar", [
+                     "<i>“O Segundo Teorema do Bem-Estar determina que toda alocação eficiente de Pareto pode "
+                     "ser obtida como equilíbrio de mercado, mediante redistribuição de dotações, se as "
+                     "preferências forem convexas.”</i> → CERTO",
+                 ])],
+        reescrita=("O " + hl("Segundo") + " Teorema do Bem-Estar determina que toda alocação eficiente de "
+                   "Pareto é uma alocação de equilíbrio de mercado para uma redistribuição de dotações e "
+                   "preferências convexas."),
+        tipo_erro=["TROCA_CONCEITO"], dificuldade=1,
+        comentario_fonte="ERRADO. Isso descreve o Segundo Teorema do Bem-Estar, e não o primeiro.",
+        qualidade_fonte="raso",
+    ),
+    # ------------------------------------------------------------------ E1-0151
+    card(
+        "E1-0151", "efi", COM_TEOREMAS,
+        assertiva=("O Primeiro Teorema do Bem-Estar determina que toda alocação eficiente de Pareto é uma "
+                   "alocação de equilíbrio de mercado para uma redistribuição de dotações e preferências não "
+                   "convexas."),
+        gabarito="ERRADO",
+        anotada=(az("O ") + vm("Primeiro") + az(" Teorema do Bem-Estar determina que toda alocação eficiente "
+                 "de Pareto é uma alocação de equilíbrio de mercado para uma redistribuição de dotações e "
+                 "preferências ") + vm("não convexas") + az(".")),
+        poucas=("Dois erros: o enunciado é o do " + azb("2º Teorema") + " (não do 1º), e o 2º exige "
+                "preferências " + vd("convexas") + ", não “não convexas”."),
+        destrinchando=[
+            "O 2º Teorema afirma que toda alocação Pareto-eficiente pode ser obtida como equilíbrio "
+            "competitivo após redistribuição das dotações — desde que as preferências (e tecnologias) sejam "
+            + azb("convexas") + ".",
+            "Por que a convexidade importa: com curvas de indiferença convexas, a reta de preços tangente no "
+            "ponto eficiente deixa cada consumidor escolhendo exatamente aquela cesta. Com curvas não "
+            "convexas, o consumidor pode preferir outro ponto da mesma reta, e o ótimo não se sustenta como "
+            "equilíbrio.",
+            "Hipóteses gerais dos teoremas: mercados completos e competitivos, informação perfeita, ausência "
+            "de externalidades e de bens públicos, não saciedade local; para o 2º, ainda " + vd("convexidade")
+            + " e transferências de montante fixo.",
+            "Atenção: a convexidade <b>não</b> é exigida pelo 1º Teorema. Listas de “hipóteses necessárias” que "
+            "misturam os dois teoremas são fonte frequente de erro.",
+        ],
+        dissecando=(cz("[troca de conceito · inversão]") + " Item construído sobre o irmão (que já trocava 1º "
+                    "por 2º), acrescentando a inversão da hipótese (convexas → não convexas). Basta um dos "
+                    "erros para o ERRADO; a reescrita precisa corrigir os dois."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Com preferências não convexas, o Segundo Teorema do Bem-Estar pode falhar.”</i> → CERTO",
+            "<i>“O Primeiro Teorema do Bem-Estar exige preferências convexas.”</i> → ERRADO (troca de teorema: "
+            "o 1º só exige não saciedade local; a convexidade é do 2º)",
+        ])],
+        reescrita=("O " + hl("Segundo") + " Teorema do Bem-Estar determina que toda alocação eficiente de "
+                   "Pareto é uma alocação de equilíbrio de mercado para uma redistribuição de dotações e "
+                   "preferências " + hl("convexas") + "."),
+        tipo_erro=["TROCA_CONCEITO", "INVERSAO"], dificuldade=1,
+        comentario_fonte=("ERRADO. Além de confundir com o segundo teorema, a afirmação menciona preferências não "
+                          "convexas, o que viola as hipóteses necessárias (preferências convexas; mercados "
+                          "perfeitamente competitivos; racionalidade; informação perfeita; ausência de "
+                          "externalidades)."),
+        qualidade_fonte="com_erro",
+        alertas=["qualidade_fonte: o comentário de origem lista as “hipóteses necessárias” sem distinguir os "
+                 "teoremas; a convexidade é exigida só pelo 2º (precisado no 📖)"],
+    ),
 ]

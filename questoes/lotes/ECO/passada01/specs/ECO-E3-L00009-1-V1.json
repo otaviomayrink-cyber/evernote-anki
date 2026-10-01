@@ -34,25 +34,41 @@
     0,
     8
    ],
-   "rotulo": "A"
+   "rotulo": "A",
+   "rotulo_desloc": [
+    8,
+    14
+   ]
   },
   {
    "id": "B",
    "sobre": "F",
    "x": 2,
-   "rotulo": "B"
+   "rotulo": "B",
+   "rotulo_desloc": [
+    -24,
+    -26
+   ]
   },
   {
    "id": "C",
    "sobre": "F",
    "x": 4,
-   "rotulo": "C"
+   "rotulo": "C",
+   "rotulo_desloc": [
+    -24,
+    -26
+   ]
   },
   {
    "id": "D",
    "sobre": "F",
    "x": 6,
-   "rotulo": "D"
+   "rotulo": "D",
+   "rotulo_desloc": [
+    -24,
+    -26
+   ]
   },
   {
    "id": "E",

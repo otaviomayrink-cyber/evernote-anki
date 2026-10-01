@@ -74,8 +74,13 @@
     "P2"
    ],
    "projetar": "x",
-   "rotulo_x": "q LP",
-   "rotulo_y": "p₂"
+   "rotulo_x": "q₂ (LP)",
+   "rotulo_y": "p₂",
+   "rotulo": "LP",
+   "rotulo_desloc": [
+    -14,
+    16
+   ]
   },
   {
    "id": "C",
@@ -83,8 +88,11 @@
     "DCP",
     "P2"
    ],
-   "projetar": "x",
-   "rotulo_x": "q CP"
+   "rotulo": "CP",
+   "rotulo_desloc": [
+    -34,
+    14
+   ]
   }
  ],
  "checar": [

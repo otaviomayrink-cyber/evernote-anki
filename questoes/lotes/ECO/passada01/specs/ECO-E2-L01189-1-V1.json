@@ -44,7 +44,11 @@
    ],
    "familia": "quarta",
    "rotulo": "CVMe",
-   "rotulo_em": 38
+   "rotulo_em": 38,
+   "rotulo_desloc": [
+    16,
+    0
+   ]
   },
   {
    "id": "P",

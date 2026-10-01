@@ -73,7 +73,11 @@
     "S"
    ],
    "rotulo": "E₁",
-   "projetar": "x"
+   "projetar": "x",
+   "rotulo_desloc": [
+    10,
+    16
+   ]
   },
   {
    "id": "Qd",
@@ -105,7 +109,7 @@
    ],
    "cor": "vermelho",
    "estilo": "<|-|>",
-   "rotulo": "excesso de oferta = 4"
+   "rotulo": "sobra 4"
   }
  ],
  "checar": [

@@ -24,10 +24,10 @@
      ],
      "familia": "demanda",
      "rotulo": "D",
-     "rotulo_em": 9.0,
+     "rotulo_em": 0.6,
      "rotulo_desloc": [
-      6,
-      8
+      10,
+      4
      ]
     }
    ],

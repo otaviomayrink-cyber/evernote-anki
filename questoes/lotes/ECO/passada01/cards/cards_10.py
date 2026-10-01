@@ -1236,8 +1236,8 @@ CARDS = [
                       "menos unidades adicionais de cada bem."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Curvas de indiferença mais elevadas no espaço de consumo representam níveis ")
-                   + vm("menores") + az(" de utilidade quando se assume utilidade marginal decrescente, dado que "
-                                         "o consumidor valoriza menos unidades adicionais de cada bem."),
+                   + vm("menores") + az(" de utilidade quando se assume utilidade marginal decrescente, ")
+                   + vm("dado que o consumidor valoriza") + az(" menos unidades adicionais de cada bem."),
         "poucas": ("Pela " + azb("monotonicidade") + ", curvas mais afastadas da origem = " + vd("mais utilidade")
                    + ". UMg decrescente só faz a utilidade crescer mais devagar; enquanto UMg > 0, ela cresce."),
         "destrinchando": [
@@ -1262,9 +1262,8 @@ CARDS = [
             "UT)",
         ])],
         "reescrita": ("Curvas de indiferença mais elevadas no espaço de consumo representam níveis "
-                      + hl("maiores") + " de utilidade " + hl("mesmo") + " quando se assume utilidade marginal "
-                      "decrescente, dado que o consumidor valoriza menos " + hl("— mas ainda positivamente —")
-                      + " unidades adicionais de cada bem."),
+                      + hl("maiores") + " de utilidade quando se assume utilidade marginal decrescente, "
+                      + hl("embora o consumidor valorize") + " menos unidades adicionais de cada bem."),
         "tipo_erro": ["NEXO_INDEVIDO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Monotonicidade: curvas mais afastadas = maior utilidade; UMg decrescente só faz a "
                              "utilidade total crescer a taxas menores, enquanto UMg > 0."),

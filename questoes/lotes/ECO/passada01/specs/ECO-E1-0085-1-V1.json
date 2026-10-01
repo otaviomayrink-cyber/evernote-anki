@@ -67,8 +67,8 @@
    "rotulo": "E₁",
    "projetar": true,
    "rotulo_desloc": [
-    10,
-    -12
+    12,
+    8
    ]
   },
   {
@@ -104,7 +104,11 @@
     ]
    ],
    "papel": "ganho",
-   "rotulo": "+56"
+   "rotulo": "+56",
+   "rotulo_xy": [
+    2.4,
+    12
+   ]
   },
   {
    "tipo": "poligono",

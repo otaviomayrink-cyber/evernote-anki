@@ -1109,7 +1109,7 @@ CARDS = [
             vm("Regra-âncora: marshalliana → renda constante, utilidade varia; hicksiana → utilidade constante, "
                "renda compensada."),
         ],
-        "dissecando": (cz("[detalhe · troca de conceito potencial]") + " O item testa se o candidato confunde as "
+        "dissecando": (cz("[detalhe]") + " O item testa se o candidato confunde as "
                        "duas demandas. A versão ERRADA diria “mesmo nível de utilidade ao longo da curva de "
                        "demanda ordinária”."),
         "modulos": [("😈 Para dificultar", [

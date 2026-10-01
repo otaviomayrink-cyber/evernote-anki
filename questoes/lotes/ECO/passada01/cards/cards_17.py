@@ -955,4 +955,418 @@ CARDS = [
                            "acao": "cortada (mecanismo descrito no 📖; gráfico equivalente em ECO-E2-L00849-1-V1)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L01189
+    {
+        "id": "ECO-E2-L01189-1", "fonte_ref": "E2-L01189", "destino": "07-A", "subtema": CP,
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um mercado de concorrência perfeita, como existem livre entrada e livre saída de "
+                      "empresas no mercado, o lucro de curto prazo de uma empresa nunca é negativo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em um mercado de concorrência perfeita, como existem livre entrada e livre saída de "
+                       "empresas no mercado, o lucro de curto prazo de uma empresa ") + vm("nunca é negativo")
+                    + az(".")),
+        "poucas": ("No curto prazo há " + azb("custo fixo irrecuperável") + ": com CVMe ≤ P < CTMe a firma "
+                   "produz " + vd("com prejuízo") + ", porque parar custaria mais (todo o custo fixo)."),
+        "destrinchando": [
+            "Diferença entre <b>paralisar</b> e <b>sair</b>: quem paralisa (curto prazo) deixa de pagar o "
+            "custo variável, mas continua com o fixo — prejuízo = CF. Quem sai (longo prazo) deixa de pagar "
+            "os dois.",
+            "Por isso, no curto prazo, a firma ignora o custo fixo e decide pela margem sobre o variável: "
+            "paralisa se " + vd("RT < CV ⇔ P < CVMe") + "; produz se P ≥ CVMe.",
+            "Resumo das decisões de curto prazo (com q onde P = CMg): " + vd("P > CTMe") + " → lucro; "
+            + vd("CVMe ≤ P < CTMe") + " → produz com prejuízo; " + vd("P < CVMe") + " → paralisa.",
+            "Exemplo numérico: CT = 1.200 + 30q + 3q² e P = 120 → q = 15 (120 = 30 + 6q); CTMe(15) = 155; "
+            "prejuízo = (155 − 120) × 15 = " + vd("525") + ", menor que os " + vd("1.200") + " de custo fixo "
+            "que perderia parando.",
+            "A livre entrada e saída age no " + azb("longo prazo") + ": o prejuízo persistente provoca saída, "
+            "a oferta cai, o preço sobe e o lucro econômico volta a zero.",
+        ],
+        "grafico_verso": "ECO-E2-L01189-1-V1",
+        "dissecando": (cz("[anacronismo · modulador absoluto]") + " Mistura horizontes: usa um mecanismo de "
+                       "longo prazo (entrada e saída) para garantir um resultado de curto prazo, e fecha com o "
+                       "absoluto “nunca”. 🔥 O mesmo enunciado aparece em mais de um simulado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, no curto prazo, o prejuízo máximo de uma firma é igual ao seu custo "
+            "fixo.”</i> → CERTO",
+            "<i>“A firma que paralisa as atividades no curto prazo deixa de arcar com os custos fixos.”</i> → "
+            "ERRADO (confunde paralisar com sair do mercado)",
+        ])],
+        "reescrita": ("Em um mercado de concorrência perfeita, " + hl("embora") + " existam livre entrada e "
+                      "livre saída de empresas no mercado, o lucro de curto prazo de uma empresa "
+                      + hl("pode ser negativo, desde que o preço cubra o custo variável médio") + "."),
+        "tipo_erro": ["ANACRONISMO", "GENERALIZACAO"], "moduladores": ["nunca"], "dificuldade": 1,
+        "comentario_fonte": "Custo fixo irrecuperável no curto prazo; paralisar × sair; paralisa se RT < CV ⇔ "
+                            "P < CVMe; resumo: P > CTMe lucro, CVMe < P < CTMe prejuízo, P < CVMe para; gráfico "
+                            "de firma competitiva com prejuízo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 199", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01189-1-V1, com números próprios)"}],
+        "alertas": ["item_repetido: mesmo enunciado de ECO-E2-L00630-1 (Nabuco, 2026); mantidos os dois por "
+                    "virem de provas diferentes"],
+    },
+    # ------------------------------------------------------------------ E2-L01190
+    {
+        "id": "ECO-E2-L01190-1", "fonte_ref": "E2-L01190", "destino": "07-A", "subtema": HIP,
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23,
+        "rotulo_item": "Item",
+        "assertiva": ("Na concorrência perfeita, a demanda da empresa individual pode ser representada por uma "
+                      "curva negativamente inclinada com relação aos preços."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Na concorrência perfeita, a demanda da empresa individual pode ser representada por uma "
+                       "curva ") + vm("negativamente inclinada") + az(" com relação aos preços.")),
+        "poucas": ("O produtor competitivo vende todas as unidades ao preço P, qualquer que seja sua produção; "
+                   "acima de P, vende zero. Sua demanda é " + azb("horizontal") + " em P."),
+        "destrinchando": [
+            "Exemplo de manual: o mercado de trigo fixa P = " + vd("R$ 4") + " no cruzamento da demanda de "
+            "mercado (D, decrescente) com a oferta de mercado. Um agricultor pode vender 100 ou 10.000 "
+            "unidades a R$ 4; se pedir R$ 4,10, ninguém compra dele.",
+            "A demanda que ele enfrenta é, portanto, a reta horizontal em R$ 4: " + vd("perfeitamente "
+            "elástica") + ", coincidente com RMe e RMg.",
+            "A inclinação negativa pertence à demanda <b>de mercado</b>: é ela que, com a oferta agregada, "
+            "determina o preço que todos os produtores tomam.",
+            "Por que isso importa: como a firma não precisa baixar o preço para vender mais, sua RMg = P; daí "
+            "a regra de produção " + vd("P = CMg") + " e a eficiência alocativa do modelo.",
+            vm("Regra-âncora: firma competitiva → demanda horizontal; mercado → demanda decrescente."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Aplica à firma a curva do mercado; o “pode” suaviza, mas "
+                       "não salva: no modelo, a demanda da firma competitiva é sempre horizontal. 🔥 Enunciado "
+                       "repetido em diferentes simulados."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o produtor competitivo cobrar um preço superior ao de mercado, suas vendas cairão a "
+            "zero.”</i> → CERTO",
+            "<i>“Se o produtor competitivo reduzir o preço abaixo do de mercado, aumentará sua receita "
+            "total.”</i> → ERRADO (já vende tudo o que quiser a P: só perderia receita)",
+        ])],
+        "reescrita": ("Na concorrência perfeita, a demanda da empresa individual " + hl("é representada por uma "
+                      "reta horizontal ao nível do preço de mercado") + " " + hl("(perfeitamente elástica)")
+                      + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "Produtor vende todas as unidades ao preço P, independente da produção; preço acima "
+                            "de P derruba as vendas a zero; gráfico firma (horizontal em $4) × indústria (D "
+                            "decrescente).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 200", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (exemplo absorvido no 📖; desenho equivalente em ECO-E2-L00848-1-V1)"}],
+        "alertas": ["item_repetido: mesmo enunciado de ECO-E2-L00631-1 (Nabuco, 2026); mantidos os dois por "
+                    "virem de provas diferentes"],
+    },
+    # ------------------------------------------------------------------ E2-L01191
+    {
+        "id": "ECO-E2-L01191-1", "fonte_ref": "E2-L01191", "destino": "07-A", "subtema": HIP,
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23,
+        "rotulo_item": "Item",
+        "assertiva": "Se o mercado operar em concorrência perfeita, o custo marginal será igual à receita média no ponto ótimo.",
+        "gabarito": "CERTO", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": az("Se o mercado operar em concorrência perfeita, o custo marginal será igual à "
+                      "<u>receita média</u> no ponto ótimo."),
+        "poucas": ("A firma competitiva não altera o preço ao vender mais: " + vd("P = RMg = RMe") + ". Como "
+                   "o ótimo é RMg = CMg, segue " + vd("CMg = RMe") + "."),
+        "destrinchando": [
+            "Se a firma baixa o preço, não muda o preço de mercado; se sobe, perde as vendas. Logo vende ao "
+            "preço de mercado, e cada unidade a mais rende exatamente P.",
+            "RT = P·q → RMe = RT/q = P e RMg = ΔRT/Δq = P. Três nomes para a mesma reta horizontal.",
+            "Condição de ótimo (qualquer estrutura): " + vm("RMg = CMg") + ", no ramo ascendente do CMg. Com "
+            "RMg = RMe, vale CMg = RMe = P.",
+            "Teste de robustez: em monopólio, RMe = P > RMg = CMg — o item ficaria ERRADO. A igualdade "
+            "CMg = RMe é, portanto, uma " + azb("assinatura da concorrência perfeita") + " e a raiz de sua "
+            "eficiência alocativa.",
+            "Leitura gráfica: no ótimo, a reta P = RMe = RMg corta o CMg; a altura desse ponto é o preço, e a "
+            "distância até o CTMe dá o lucro (ou prejuízo) por unidade.",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " A banca escreve “receita média” onde o candidato "
+                       "espera “receita marginal”, apostando no reflexo de marcar ERRADO. Na concorrência "
+                       "perfeita as duas coincidem. 🔥 Enunciado repetido em diferentes simulados."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, no ponto ótimo, o custo marginal é inferior à receita média.”</i> → "
+            "ERRADO (troca de conceito: isso descreve o monopólio)",
+            "<i>“Em concorrência perfeita, o lucro é máximo onde o preço iguala o custo marginal crescente.”</i> "
+            "→ CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Verso só com imagem de texto: a firma competitiva não altera o preço de mercado; P "
+                            "= RMg = RMe.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 201", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": ["gabarito_inferido: a fonte não traz C/E explícito; CERTO inferido do texto da imagem do "
+                    "verso (P = RMg = RMe) e confirmado pelo conteúdo",
+                    "item_repetido: mesmo enunciado de ECO-E2-L00632-1 (Nabuco, 2026); mantidos os dois por "
+                    "virem de provas diferentes"],
+    },
+    # ------------------------------------------------------------------ E2-L01395
+    {
+        "id": "ECO-E2-L01395-1", "fonte_ref": "E2-L01395", "destino": "07-A", "subtema": CP,
+        "tipo": "C/E", "banca": "FCC", "prova": "Prefeitura de Santos/2005", "ano": 2005, "cacd": False,
+        "errei": False,
+        "comando": CMD_FCC + " (Item adaptado.)",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma empresa com rendimentos constantes de escala necessariamente apresenta uma curva de "
+                      "oferta de curto prazo horizontal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma empresa com rendimentos constantes de escala ") + vm("necessariamente apresenta uma "
+                    "curva de oferta de curto prazo horizontal") + az(".")),
+        "poucas": ("Rendimento de escala é conceito de " + azb("longo prazo") + ". No curto prazo há fator "
+                   "fixo, valem os " + azb("rendimentos marginais decrescentes") + ", o CMg sobe — e a oferta "
+                   "de curto prazo é " + vd("crescente") + "."),
+        "destrinchando": [
+            azb("Rendimentos de escala") + ": todos os fatores variam na mesma proporção (longo prazo). "
+            "Constantes = dobrar K e L dobra a produção → custo médio de longo prazo constante.",
+            azb("Rendimentos marginais") + ": um fator varia com o outro fixo (curto prazo). Com capital fixo, "
+            "acrescentar trabalho acaba rendendo cada vez menos (lei dos rendimentos decrescentes) → o "
+            + vd("CMg de curto prazo é crescente") + ".",
+            "Uma mesma tecnologia pode ter as duas coisas: a Cobb-Douglas Q = K<sup>0,5</sup>L<sup>0,5</sup> "
+            "tem rendimentos constantes de escala e produto marginal decrescente de cada fator.",
+            "Oferta de curto prazo da firma = ramo ascendente do CMg acima do mínimo do CVMe: inclinação "
+            "positiva, independentemente dos rendimentos de escala.",
+            "Onde os rendimentos constantes aparecem: no longo prazo, CMeLP = CMgLP constantes — a oferta de "
+            "longo prazo da firma é horizontal (e o tamanho da firma, indeterminado).",
+        ],
+        "dissecando": (cz("[anacronismo · modulador absoluto]") + " Aplica ao curto prazo uma propriedade de "
+                       "longo prazo e a reforça com “necessariamente”. Pista: “escala” + “curto prazo” na mesma "
+                       "frase quase sempre é erro de horizonte."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com rendimentos constantes de escala, o custo médio de longo prazo é constante.”</i> → CERTO",
+            "<i>“Rendimentos constantes de escala impedem rendimentos marginais decrescentes.”</i> → ERRADO "
+            "(conceitos independentes: a Cobb-Douglas com α + β = 1 tem os dois)",
+        ])],
+        "reescrita": ("Uma empresa com rendimentos constantes de escala " + hl("apresenta, no curto prazo, uma "
+                      "curva de oferta positivamente inclinada (CMg crescente, por rendimentos marginais "
+                      "decrescentes)") + "."),
+        "tipo_erro": ["ANACRONISMO", "GENERALIZACAO"], "moduladores": ["necessariamente"], "dificuldade": 2,
+        "comentario_fonte": "Curvas de oferta de curto prazo costumam ser crescentes, por custos marginais "
+                            "crescentes; rendimentos constantes de escala não tornam a oferta de curto prazo "
+                            "horizontal.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 290-292", "tipo_fonte": "GRÁFICO/TEXTO", "lado": "verso",
+                           "acao": "cortadas (quadrinhos; texto dos balões absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01396
+    {
+        "id": "ECO-E2-L01396-1", "fonte_ref": "E2-L01396", "destino": "07-A", "subtema": CP,
+        "tipo": "C/E", "banca": "FCC", "prova": "Prefeitura de Santos/2005", "ano": 2005, "cacd": False,
+        "errei": False,
+        "comando": CMD_FCC + " (Item adaptado.)",
+        "rotulo_item": "Item",
+        "assertiva": "Uma firma nunca deve operar caso o preço de seu produto seja inferior ao seu custo médio de produção.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma firma ") + vm("nunca") + az(" deve operar caso o preço de seu produto seja inferior "
+                    "ao seu custo ") + vm("médio") + az(" de produção.")),
+        "poucas": ("No curto prazo, a firma opera com P abaixo do " + azb("custo médio (total)") + " desde que "
+                   + vd("P ≥ CVMe") + ": o “nunca” ignora esse caso."),
+        "destrinchando": [
+            "Curto prazo: o custo fixo é pago de qualquer forma. Se P < CTMe mas P ≥ CVMe, operar cobre o "
+            "variável e parte do fixo — o prejuízo fica menor que o CF que se perderia parando.",
+            "Ponto de fechamento: " + vd("P = CVMe mínimo") + ". Abaixo dele, a firma paralisa no curto prazo.",
+            "Longo prazo: não há custo fixo; o custo médio relevante é o total. Aí, sim, a firma não opera "
+            "(sai) se P < CTMe mínimo. O item seria verdadeiro com a ressalva “no longo prazo”.",
+            "Exemplo: CTMe = 12, CVMe = 8, CFMe = 4, P = 10. Operar: perda de 2 por unidade; parar: perda de "
+            "4 por unidade de capacidade (o custo fixo). Opera.",
+            vm("Regra-âncora: curto prazo → opera se P ≥ CVMe; longo prazo → permanece se P ≥ CTMe."),
+        ],
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " “Nunca” sem horizonte temporal + "
+                       "“custo médio” no lugar de “custo variável médio”. A afirmação só vale no longo prazo; "
+                       "o absoluto a estende ao curto, onde é falsa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma firma não deve operar, no curto prazo, caso o preço seja inferior ao custo variável médio "
+            "mínimo.”</i> → CERTO",
+            "<i>“No longo prazo, uma firma permanece no mercado com preço inferior ao custo total médio.”</i> → "
+            "ERRADO (no longo prazo P < CTMe leva à saída)",
+        ])],
+        "reescrita": ("Uma firma " + hl("não") + " deve operar " + hl("no curto prazo") + " caso o preço de seu "
+                      "produto seja inferior ao seu custo " + hl("variável") + " médio de produção."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["nunca"], "dificuldade": 1,
+        "comentario_fonte": "A firma não deve operar caso o preço seja inferior ao custo variável médio.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01397
+    {
+        "id": "ECO-E2-L01397-1", "fonte_ref": "E2-L01397", "destino": "07-A", "subtema": CP,
+        "tipo": "C/E", "banca": "FCC", "prova": "Prefeitura de Santos/2005", "ano": 2005, "cacd": False,
+        "errei": False,
+        "comando": CMD_FCC + " (Item adaptado.)",
+        "rotulo_item": "Item",
+        "assertiva": ("A curva de oferta da firma é dada pelo ramo ascendente da curva de custo variável médio "
+                      "acima do ponto de cruzamento dessa curva com a curva de custo marginal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A curva de oferta da firma é dada pelo ramo ascendente da curva de custo ")
+                    + vm("variável médio") + az(" acima do ponto de cruzamento dessa curva com a curva de custo ")
+                    + vm("marginal") + az(".")),
+        "poucas": ("É o contrário: a oferta é o ramo ascendente do " + azb("CMg") + " acima do cruzamento com "
+                   "o " + azb("CVMe") + " (no mínimo deste). O CVMe não é curva de oferta."),
+        "destrinchando": [
+            "A firma escolhe q onde " + vd("P = CMg") + ". Cada preço corresponde a uma quantidade lida "
+            "<b>no CMg</b>: por definição, essa correspondência é a curva de oferta.",
+            "O CVMe entra só como piso: o CMg corta o CVMe no " + azb("mínimo do CVMe") + " (ponto de "
+            "fechamento). Abaixo desse preço, a firma não produz; acima, oferta = CMg.",
+            "Por que o CMg corta as curvas de custo médio nos seus mínimos: se o custo da unidade adicional "
+            "(CMg) está abaixo da média, puxa a média para baixo; se está acima, puxa para cima. A média é "
+            "mínima exatamente quando CMg = média.",
+            "Se a oferta fosse o CVMe, a firma produziria onde P = CVMe — lucro operacional zero, longe do "
+            "ótimo. Ao preço P, ler a quantidade no CVMe dá mais produção do que a ótima, com CMg > P nas "
+            "últimas unidades.",
+            "No longo prazo, a referência passa a ser o CTMe: oferta = CMgLP acima do mínimo do CMeLP.",
+        ],
+        "dissecando": (cz("[inversão]") + " Troca de papéis entre as duas curvas: o item põe o CVMe como "
+                       "oferta e o CMg como limite. Pista: oferta vem sempre da curva “marginal”, nunca da "
+                       "“média”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A curva de oferta de curto prazo da firma é dada pelo ramo ascendente da curva de custo marginal "
+            "acima do ponto de cruzamento dessa curva com a curva de custo variável médio.”</i> → CERTO",
+            "<i>“O custo marginal corta o custo total médio no ponto de máximo deste.”</i> → ERRADO (corta no "
+            "mínimo)",
+        ])],
+        "reescrita": ("A curva de oferta da firma é dada pelo ramo ascendente da curva de custo "
+                      + hl("marginal") + " acima do ponto de cruzamento dessa curva com a curva de custo "
+                      + hl("variável médio") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "É o contrário: oferta = ramo ascendente do CMg acima do cruzamento com o CVMe "
+                            "(curto prazo) e com o CTMe (longo prazo).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01399
+    {
+        "id": "ECO-E2-L01399-1", "fonte_ref": "E2-L01399", "destino": "07-A", "subtema": HIP,
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TCE/PA/2016", "ano": 2016, "cacd": False, "errei": True,
+        "comando": CMD_TCE,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um mercado em concorrência perfeita, o preço é independente da quantidade de bens "
+                      "produzida por uma empresa e a receita total é linear."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um mercado em concorrência perfeita, o preço é independente da quantidade de bens "
+                      "produzida <u>por uma empresa</u> e a receita total é <u>linear</u>."),
+        "poucas": ("A firma é " + azb("tomadora de preço") + ": P não muda com a sua produção. Então "
+                   + vd("RT = P·q") + " é uma reta que parte da origem com inclinação P."),
+        "destrinchando": [
+            "“Independente da quantidade produzida por uma empresa”: cada firma é pequena demais para afetar "
+            "o preço de mercado. Atenção: o preço depende, sim, da produção da <b>indústria</b> (oferta de "
+            "mercado); o item fala de uma empresa.",
+            "Com P constante, RT(q) = P·q é função linear de q. Inclinação = " + vd("RMg = P") + "; razão "
+            "RT/q = " + vd("RMe = P") + ".",
+            "Contraste com o monopólio: P depende de q (demanda inclinada), e RT = P(q)·q é uma parábola "
+            "(com demanda linear) — sobe, atinge o máximo onde RMg = 0 (elasticidade unitária) e depois cai.",
+            "Leitura gráfica: na concorrência perfeita, lucro = distância vertical entre a reta RT e a curva "
+            "CT; é máximo onde a inclinação de CT (CMg) iguala a de RT (P).",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Duas afirmações verdadeiras encadeadas. A "
+                       "insegurança vem do “independente”, que parece forte demais — mas está restrito a “uma "
+                       "empresa”. Se dissesse “da quantidade produzida pela indústria”, seria ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, o preço é independente da quantidade total ofertada pela "
+            "indústria.”</i> → ERRADO (troca de ator: a oferta de mercado determina o preço)",
+            "<i>“No monopólio, a receita total é linear na quantidade.”</i> → ERRADO (é côncava: P cai com q)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Firma tomadora de preço aceita o preço de mercado; preço fixo, independe da produção "
+                            "individual; RT = P × Q cresce linearmente.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 303-305", "tipo_fonte": "DECORATIVA/TEXTO", "lado": "verso",
+                           "acao": "cortadas (texto dos balões absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01400
+    {
+        "id": "ECO-E2-L01400-1", "fonte_ref": "E2-L01400", "destino": "07-A", "subtema": HIP,
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TCE/PA/2016", "ano": 2016, "cacd": False, "errei": False,
+        "comando": CMD_TCE,
+        "rotulo_item": "Item",
+        "assertiva": "A firma maximiza seus lucros quando seu preço é igual ao custo médio de produção.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A firma maximiza seus lucros quando seu preço é igual ao custo ") + vm("médio")
+                    + az(" de produção.")),
+        "poucas": ("Lucro máximo: " + vd("RMg = CMg") + " (na concorrência perfeita, " + vd("P = CMg")
+                   + "). P = custo médio é o " + azb("ponto de lucro zero") + " (nivelamento)."),
+        "destrinchando": [
+            "Lucro = (P − CTMe) × q. Com P = CTMe, o lucro é " + vd("zero") + " — é o " + azb("ponto de "
+            "nivelamento") + " (<i>break-even</i>), não o máximo.",
+            "A firma maximiza lucro produzindo até a unidade em que a receita adicional iguala o custo "
+            "adicional: RMg = CMg. Na concorrência perfeita, RMg = P, então " + vd("P = CMg") + ".",
+            "Os dois só coincidem quando P = CMg = CTMe, isto é, no " + azb("mínimo do CTMe") + " — situação "
+            "do equilíbrio de longo prazo competitivo. Ex.: com o mínimo do CTMe em R$ 35, ao preço de R$ 35 a "
+            "firma maximiza lucro e lucra zero; a qualquer outro preço, P = CTMe não é o ótimo.",
+            "Se P > CTMe mínimo, P = CTMe ocorre em dois níveis de produção (os dois lados do “U”), ambos com "
+            "lucro nulo; entre eles, onde P = CMg, o lucro é positivo e máximo.",
+            vm("Regra-âncora: ótimo → grandeza marginal (CMg); lucro zero → grandeza média (CTMe)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca “marginal” por “médio”. A banca pode tornar o item "
+                       "CERTO com um contexto: “no equilíbrio de longo prazo em concorrência perfeita, a firma "
+                       "maximiza o lucro com o preço igual ao custo médio mínimo”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No equilíbrio de longo prazo em concorrência perfeita, a firma maximiza lucros com preço igual "
+            "ao custo médio mínimo.”</i> → CERTO",
+            "<i>“A firma maximiza seus lucros quando a receita total iguala o custo total.”</i> → ERRADO (troca "
+            "de conceito: RT = CT é lucro zero)",
+        ])],
+        "reescrita": ("A firma maximiza seus lucros quando seu preço é igual ao custo " + hl("marginal")
+                      + " de produção."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Maximização de lucros quando RMg = CMg; gráfico com ponto A (P = 35) de lucro zero "
+                            "no cruzamento do CMg com o CTMe.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 306", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (exemplo de R$ 35 absorvido no 📖)"},
+                          {"ref": "IMAGEM 307", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01425
+    {
+        "id": "ECO-E2-L01425-1", "fonte_ref": "E2-L01425", "destino": "07-A", "subtema": CP,
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": "A respeito dos conceitos e teorias da microeconomia, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se durante a pandemia a queda das vendas fez a receita de um restaurante cair abaixo do custo "
+                      "variável médio, este restaurante vai seguir operando, ainda que com prejuízo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se durante a pandemia a queda das vendas fez a receita de um restaurante cair abaixo do "
+                       "custo variável médio, este restaurante ") + vm("vai seguir operando") + az(", ainda que "
+                       "com prejuízo.")),
+        "poucas": ("Receita abaixo do custo variável (" + vd("P < CVMe ⇔ RT < CV") + ") manda "
+                   + azb("paralisar") + ": operando, perderia o custo fixo <b>mais</b> a parte do variável não "
+                   "coberta."),
+        "destrinchando": [
+            "Regra de curto prazo: opera se RT ≥ CV (⇔ P ≥ CVMe); paralisa se RT < CV. Parado, o restaurante "
+            "perde só o custo fixo (aluguel, contratos); aberto, perderia o fixo e mais o que faltasse para "
+            "pagar ingredientes, energia e pessoal variável.",
+            "Exemplo: CF = 50 mil/mês; CV = 80 mil; RT = 60 mil. Aberto: 60 − 80 − 50 = " + vd("−70 mil")
+            + ". Fechado: " + vd("−50 mil") + ". Fecha temporariamente.",
+            "A paralisação é decisão de <b>curto prazo</b>: o restaurante segue existindo e pode reabrir quando "
+            "a receita voltar a cobrir o variável. Sair do mercado (encerrar contratos, vender a planta) é "
+            "decisão de longo prazo, quando P < CTMe de forma persistente.",
+            "Detalhe de redação: o item compara “receita” (total) com “custo variável médio” (unitário). Lê-se "
+            "como a regra do manual — preço (receita média) abaixo do CVMe, ou receita total abaixo do custo "
+            "variável total.",
+            "No mundo real da pandemia, o delivery serviu para manter RT ≥ CV com custos variáveis menores.",
+        ],
+        "dissecando": (cz("[troca de conceito · contraintuitivo]") + " O item aplica a regra do “opera com "
+                       "prejuízo” fora da faixa em que ela vale (CVMe ≤ P < CTMe). O contexto (pandemia, "
+                       "restaurante) tenta induzir a resposta por empatia. A pista é “custo variável”: abaixo "
+                       "dele, para."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a receita do restaurante cobrir os custos variáveis, mas não os totais, ele vai seguir "
+            "operando, ainda que com prejuízo.”</i> → CERTO",
+            "<i>“Ao paralisar as atividades no curto prazo, o restaurante deixa de ter prejuízo.”</i> → ERRADO "
+            "(continua arcando com o custo fixo)",
+        ])],
+        "reescrita": ("Se durante a pandemia a queda das vendas fez a receita de um restaurante cair abaixo do "
+                      "custo variável médio, este restaurante vai " + hl("paralisar as atividades no curto "
+                      "prazo, limitando o prejuízo ao custo fixo") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Receita abaixo do CVMe: firma fecha no curto prazo; opera com prejuízo só se RT ≥ CV "
+                            "(P ≥ CVM); operando, perderia mais que o custo fixo. Trecho errado: “vai seguir "
+                            "operando”.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 336", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": [],
+    },
 ]

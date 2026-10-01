@@ -777,3 +777,262 @@ CARDS += [
         "alertas": [],
     },
 ]
+
+# ====================================================================== bloco 4
+CARDS += [
+    # ------------------------------------------------------------------ E3-L00076
+    {
+        "id": "ECO-E3-L00076-1", "fonte_ref": "E3-L00076", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", **NIDI_JUL, "errei": False,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Se um consumidor considera ordenar estas três cestas de bens A, B e C, de modo que, B seja mais "
+                      "preferida do que A, C seja tão preferida quanto B e A seja tão preferida quanto C, podemos "
+                      "dizer que às preferências deste consumidor se aplicam tanto o princípio da transitividade como "
+                      "o da monotonicidade."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se um consumidor considera ordenar estas três cestas de bens A, B e C, de modo que, B seja mais "
+                      "preferida do que A, C seja tão preferida quanto B e A seja tão preferida quanto C, podemos "
+                      "dizer que às preferências deste consumidor ") + vm("se aplicam tanto o princípio da "
+                      "transitividade como o da monotonicidade") + az("."),
+        "poucas": ("A ordenação é " + azb("intransitiva") + ": de A ~ C e C ~ B segue A ~ B, o que contradiz B ≻ A. "
+                   "E a monotonicidade nem pode ser avaliada, pois o item não diz o que há em cada cesta."),
+        "destrinchando": [
+            azb("Transitividade") + " vale também para a indiferença: A ~ C e C ~ B ⇒ " + vd("A ~ B") + ". O item "
+            "afirma B ≻ A: contradição. Pelo outro caminho: B ≻ A e A ~ C ⇒ B ≻ C, mas o item diz C ~ B.",
+            "Consequência prática: preferências intransitivas não podem ser representadas por uma função de "
+            "utilidade (seria preciso u(B) > u(A) = u(C) = u(B)) e geram curvas de indiferença que se cruzariam.",
+            azb("Monotonicidade") + " (“mais é melhor”) compara cestas pelo <b>conteúdo</b>: se B tem pelo menos "
+            "tanto de cada bem que A e mais de algum, B ≻ A. O item só traz rótulos A, B, C, sem quantidades — "
+            "nada permite afirmar que ela vale.",
+            "Mapa dos axiomas: " + azb("completude") + " (comparar quaisquer cestas), " + azb("reflexividade") +
+            ", " + azb("transitividade") + " (coerência da ordem) formam a racionalidade; " + azb("monotonicidade")
+            + " e " + azb("convexidade") + " dão o formato “bem-comportado” das curvas.",
+        ],
+        "dissecando": (cz("[contradição · extrapolação]") + " Duas falhas empilhadas: a transitividade é desmentida "
+                       "pelas próprias relações do enunciado, e a monotonicidade é afirmada sem dado algum sobre as "
+                       "cestas. Truque de resolução: escreva as três relações em linha (B ≻ A ~ C ~ B) e veja o ciclo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se B ≻ A, B ~ C e C ≻ A, as preferências desse consumidor são compatíveis com a "
+            "transitividade.”</i> → CERTO",
+            "<i>“Se A ≻ B, B ≻ C e C ≻ A, as preferências violam a completude.”</i> → ERRADO (troca de conceito: "
+            "violam a transitividade; todas as cestas foram comparadas)",
+        ])],
+        "reescrita": ("Se um consumidor considera ordenar estas três cestas de bens A, B e C, de modo que, B seja mais "
+                      "preferida do que A, C seja tão preferida quanto B e A seja tão preferida quanto C, podemos "
+                      "dizer que as preferências deste consumidor " + hl("violam o princípio da transitividade, e "
+                      "nada se pode afirmar sobre a monotonicidade") + "."),
+        "tipo_erro": ["CONTRADICAO", "EXTRAPOLACAO"], "moduladores": ["tanto… como"], "dificuldade": 2,
+        "comentario_fonte": ("Viola a transitividade: A ~ C e C ~ B implicariam A ~ B, contra B ≻ A; monotonicidade "
+                             "não pode ser avaliada sem as quantidades das cestas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 26", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida no 📖"},
+                          {"ref": "IMAGEM 27-30", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvidas (definições dos axiomas no 📖)"},
+                          {"ref": "IMAGEM 31", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "irrecuperavel (ilegível)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00078
+    {
+        "id": "ECO-E3-L00078-1", "fonte_ref": "E3-L00078", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", **NIDI_JUL, "errei": False,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Com exceção da relação entre bens substitutos, a taxa marginal de substituição entre dois bens "
+                      "é geralmente expressa por uma taxa constante ao longo da curva de indiferença."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com exceção da relação entre bens ") + vm("substitutos") + az(", a taxa marginal de "
+                      "substituição entre dois bens é geralmente expressa por uma taxa ") + vm("constante")
+                   + az(" ao longo da curva de indiferença."),
+        "poucas": ("O item inverte regra e exceção: em geral a " + azb("TMS é decrescente") + " (curvas convexas); "
+                   "ela só é " + azb("constante") + " no caso de " + azb("substitutos perfeitos") + " (curvas "
+                   "retas)."),
+        "destrinchando": [
+            azb("TMS") + " = quanto de y o consumidor cede por mais uma unidade de x, mantendo a utilidade: TMS = "
+            "|Δy/Δx| = UMg<sub>x</sub>/UMg<sub>y</sub>, a inclinação (em módulo) da curva de indiferença.",
+            "Caso usual: quem tem muito y e pouco x aceita ceder muito y por um x; à medida que x fica abundante e "
+            "y escasso, cede cada vez menos. A TMS " + vd("cai") + " ao longo da curva — é a " + azb("convexidade")
+            + " (relação de abundância e escassez).",
+            "Exceção: " + azb("substitutos perfeitos") + " (u = ax + by): a taxa de troca é fixa em a/b, qualquer "
+            "que seja a cesta — curva reta, TMS constante. Exemplo da fonte: para guardar 32 GB, tanto faz 4 "
+            "pendrives de 8 GB ou 8 de 4 GB; a troca é sempre 2:1.",
+            "Atenção ao adjetivo: substitutos <b>imperfeitos</b> (café e chá, manteiga e margarina) têm curvas "
+            "convexas e TMS decrescente; só os <b>perfeitos</b> têm TMS constante. Complementares perfeitos: curva "
+            "em L, TMS indefinida no vértice (zero ou infinita nos braços).",
+        ],
+        "dissecando": (cz("[inversão · meia-verdade]") + " A frase pega a exceção (TMS constante) e a apresenta "
+                       "como regra, ressalvando justamente o caso em que ela vale. O “bens substitutos” sem "
+                       "“perfeitos” é outro descuido proposital. O mesmo item caiu no Simulado Março/2025 "
+                       "(ECO-E3-L00236-1)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com exceção da relação entre bens substitutos perfeitos, a taxa marginal de substituição é "
+            "geralmente decrescente ao longo da curva de indiferença.”</i> → CERTO",
+            "<i>“No caso de complementares perfeitos, a TMS é constante e igual à razão entre as proporções de "
+            "consumo.”</i> → ERRADO (TMS é zero, infinita ou indefinida)",
+        ])],
+        "reescrita": ("Com exceção da relação entre bens " + hl("substitutos perfeitos") + ", a taxa marginal de "
+                      "substituição entre dois bens é geralmente expressa por uma taxa " + hl("decrescente") +
+                      " ao longo da curva de indiferença."),
+        "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": ["geralmente", "com exceção"], "dificuldade": 1,
+        "comentario_fonte": ("TMS decrescente em curvas convexas; constante apenas para substitutos perfeitos; item "
+                             "inverte regra e exceção. Exemplo dos pendrives (troca 2:1)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 35", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (substitutos perfeitos e exemplo dos pendrives no 📖)"},
+                          {"ref": "IMAGEM 36-37", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "irrecuperavel (ilegíveis)"}],
+        "alertas": ["item_repetido: assertiva idêntica em ECO-E3-L00236-1 (Nidi, Simulado Março/2025); mantidos os "
+                    "dois por serem provas diferentes (Folha -Q §8.6)"],
+    },
+    # ------------------------------------------------------------------ E3-L00146
+    {
+        "id": "ECO-E3-L00146-1", "fonte_ref": "E3-L00146", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", **ANTT, "errei": True,
+        "comando": CMD_ANTT,
+        "excerto": EXC_ANTT,
+        "rotulo_item": "Item",
+        "assertiva": ("Se X e Y forem bens perfeitamente substitutos e as preferências do consumidor forem "
+                      "estritamente monotônicas, é possível que u(20, 20) > u(19, 30)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se X e Y forem bens perfeitamente substitutos e as preferências do consumidor forem "
+                      "estritamente monotônicas, <u>é possível</u> que u(20, 20) > u(19, 30)."),
+        "poucas": ("Substitutos perfeitos: " + vd("u = ax + by") + " com a, b > 0, em qualquer proporção. "
+                   "u(20, 20) > u(19, 30) ⇔ " + vd("a > 10b") + " — basta que X valha mais de dez vezes Y."),
+        "destrinchando": [
+            "O que define " + azb("substitutos perfeitos") + " é a " + azb("TMS constante") + " (curvas retas), "
+            "não a troca 1 por 1. A forma geral é u(x, y) = ax + by; a TMS é a/b.",
+            azb("Monotonicidade estrita") + " só exige a > 0 e b > 0 (mais de qualquer bem aumenta a utilidade). "
+            "Não fixa o peso relativo dos bens.",
+            "Conta: 20a + 20b > 19a + 30b ⇔ " + vd("a > 10b") + ". Exemplo: a = 11, b = 1 → u(20, 20) = "
+            + vd("240") + " > u(19, 30) = " + vd("239") + ". Uma unidade de X vale mais que dez de Y; perder um X "
+            "não é compensado por dez Y.",
+            "A pegadinha: com u = x + y (1:1), viria 40 < 49 e a desigualdade seria impossível. Quem supõe "
+            "troca 1:1 marca ERRADO. Note também que a cesta (19, 30) não domina (20, 20) — tem menos X —, então a "
+            "monotonicidade não decide a comparação.",
+            vm("Regra-âncora: “é possível” pede um exemplo; “pode-se garantir” pede uma regra que valha sempre."),
+        ],
+        "dissecando": (cz("[modulador relativo · contraintuitivo]") + " O “é possível” salva o item: basta um caso "
+                       "(a > 10b). Contraintuitivo porque a cesta com mais unidades no total perde. Compare com o "
+                       "item irmão (ECO-E3-L00148-1), que usa “pode-se garantir” numa cesta que domina a outra."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se X e Y forem perfeitamente substitutos e as preferências estritamente monotônicas, pode-se "
+            "garantir que u(19, 30) > u(20, 20).”</i> → ERRADO (depende de a e b: com a > 10b vale o contrário)",
+            "<i>“Se as preferências forem estritamente monotônicas, é possível que u(20, 20) > u(20, 30).”</i> → "
+            "ERRADO (a 2ª cesta domina a 1ª: nunca)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "CONTRAINTUITIVO"], "moduladores": ["é possível"], "dificuldade": 2,
+        "comentario_fonte": ("Substitutos perfeitos = TMS constante, u = ax + by; u(20,20) > u(19,30) ⇔ a > 10b; ex. "
+                             "a = 11, b = 1 dá 240 > 239; com u = x + y seria impossível."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [FIG_ANTT,
+                          {"ref": "IMAGEM 152", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto (u = ax + by)"},
+                          {"ref": "IMAGEM 153-154", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvidas (demonstração a > 10b)"},
+                          {"ref": "IMAGEM 155", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (três formatos de curva de indiferença, descritos no 📖)"},
+                          {"ref": "IMAGEM 156-157", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvidas no 📖"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00147
+    {
+        "id": "ECO-E3-L00147-1", "fonte_ref": "E3-L00147", "destino": "04", "subtema": H2["otimo"],
+        "tipo": "C/E", **ANTT, "errei": True,
+        "comando": CMD_ANTT,
+        "excerto": EXC_ANTT,
+        "rotulo_item": "Item",
+        "assertiva": ("Se X e Y forem bens perfeitamente substitutos e as preferências do consumidor forem "
+                      "estritamente monotônicas, o equilíbrio do consumidor, dada a restrição orçamentária, será uma "
+                      "solução de canto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se X e Y forem bens perfeitamente substitutos e as preferências do consumidor forem "
+                      "estritamente monotônicas, o equilíbrio do consumidor, dada a restrição orçamentária, ")
+                   + vm("será") + az(" uma solução de canto."),
+        "poucas": ("Solução de canto é o caso <b>típico</b>, não o obrigatório: se " + vd("TMS = a/b = "
+                   "p<sub>x</sub>/p<sub>y</sub>") + ", a reta orçamentária coincide com uma curva de indiferença e "
+                   "todas as cestas dela — inclusive as interiores — são ótimas."),
+        "destrinchando": [
+            "Com u = ax + by, compara-se a/p<sub>x</sub> com b/p<sub>y</sub> (utilidade por real): "
+            "a/p<sub>x</sub> > b/p<sub>y</sub> → só X (x = R/p<sub>x</sub>); a/p<sub>x</sub> < b/p<sub>y</sub> → só "
+            "Y; " + vd("a/p<sub>x</sub> = b/p<sub>y</sub>") + " → qualquer cesta da reta.",
+            "Gráfico: se a reta orçamentária é mais inclinada ou menos inclinada que as curvas de indiferença, a "
+            "curva mais alta é alcançada num eixo (canto). Se as inclinações coincidem, a reta <b>é</b> uma curva de "
+            "indiferença: há um segmento inteiro de ótimos (" + oc("Varian") + ", <i>Microeconomia: uma abordagem "
+            "moderna</i>, cap. 5, mostra os três casos).",
+            "A monotonicidade estrita garante só que a renda é toda gasta (o ótimo está na reta); não força o "
+            "canto.",
+            "Para o caso 1:1 (u = x + y), a regra vira: compra-se só o mais barato; preços iguais → indiferença "
+            "entre todas as combinações que esgotam a renda.",
+        ],
+        "grafico_verso": "ECO-E3-L00147-1-V1",
+        "dissecando": (cz("[modulador absoluto]") + " O “será” transforma o resultado típico em certeza e apaga o "
+                       "caso de empate de inclinações. 🔥 A banca adora o caso-limite: a solução de canto é "
+                       "<b>possível</b> (e típica) com substitutos perfeitos, não <b>necessária</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…se a TMS for diferente da razão de preços, o equilíbrio do consumidor será uma solução de "
+            "canto.”</i> → CERTO",
+            "<i>“…se a TMS for igual à razão de preços, o equilíbrio será único e interior.”</i> → ERRADO (há "
+            "infinitos ótimos, incluindo os cantos)",
+        ])],
+        "reescrita": ("Se X e Y forem bens perfeitamente substitutos e as preferências do consumidor forem "
+                      "estritamente monotônicas, o equilíbrio do consumidor, dada a restrição orçamentária, "
+                      + hl("poderá ser") + " uma solução de canto" + hl(", mas, se a TMS igualar a razão de preços, "
+                      "qualquer cesta da reta orçamentária será ótima") + "."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["será"], "dificuldade": 2,
+        "comentario_fonte": ("Não necessariamente canto: depende de px/py frente à TMS; se iguais, qualquer cesta da "
+                             "reta é ótima (Varian). Um comentário de fórum da fonte dava CERTO para item vizinho; "
+                             "outro raciocínio de aluno sobre monotonicidade estava equivocado."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [FIG_ANTT,
+                          {"ref": "IMAGEM 158", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (três casos de escolha)"},
+                          {"ref": "IMAGEM 159", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00147-1-V1, canto × segmento de ótimos)"}],
+        "alertas": ["qualidade_fonte: um dos comentários empilhados (aluno) argumentava que, por monotonicidade, uma "
+                    "cesta mista seria preferível a um canto — raciocínio incorreto, descartado"],
+    },
+    # ------------------------------------------------------------------ E3-L00148
+    {
+        "id": "ECO-E3-L00148-1", "fonte_ref": "E3-L00148", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", **ANTT, "errei": False,
+        "comando": CMD_ANTT,
+        "excerto": EXC_ANTT,
+        "rotulo_item": "Item",
+        "assertiva": ("Se as preferências do consumidor forem estritamente monotônicas, pode-se garantir que "
+                      "u(20, 30) > u(20, 25)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se as preferências do consumidor forem estritamente monotônicas, <u>pode-se garantir</u> que "
+                      "u(20, 30) > u(20, 25)."),
+        "poucas": ("(20, 30) tem o <b>mesmo</b> X e <b>mais</b> Y que (20, 25): pela " + azb("monotonicidade "
+                   "estrita") + ", é estritamente preferida, qualquer que seja a função de utilidade."),
+        "destrinchando": [
+            azb("Monotonicidade estrita") + ": se a cesta A tem pelo menos tanto de cada bem quanto B e mais de "
+            "pelo menos um, então A ≻ B, logo " + vd("u(A) > u(B)") + ". Aqui X = 20 nas duas e Y = 30 > 25.",
+            azb("Monotonicidade fraca") + " exigiria mais de <b>todos</b> os bens para garantir preferência "
+            "estrita; com mais de um só, garantiria apenas A ≿ B. É por isso que o item diz “estritamente”.",
+            "Como a conclusão vem do axioma, ela não depende da forma de u (linear, Cobb-Douglas…): é uma "
+            "<b>garantia</b>. Contraste com ECO-E3-L00146-1, em que as cestas não se dominam — (19, 30) tem menos X "
+            "— e o resultado depende dos pesos.",
+            "Graficamente: (20, 30) está diretamente acima de (20, 25), numa curva de indiferença mais alta. "
+            "Monotonicidade estrita também implica curvas negativamente inclinadas e sem “faixas grossas”.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Aplicação direta da definição. O “pode-se garantir” assusta quem vem "
+                       "do item irmão (“é possível”); aqui a garantia existe porque uma cesta " + azb("domina") +
+                       " a outra."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se as preferências forem estritamente monotônicas, pode-se garantir que u(21, 24) > u(20, "
+            "25).”</i> → ERRADO (as cestas não se dominam: depende de u)",
+            "<i>“Se as preferências forem apenas fracamente monotônicas, pode-se garantir que u(21, 31) > u(20, "
+            "30).”</i> → CERTO (mais de todos os bens)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["pode-se garantir"], "dificuldade": 1,
+        "comentario_fonte": ("Monotonicidade estrita: mesma quantidade de X e mais Y ⇒ cesta estritamente preferida; "
+                             "garantia independe de u; se X tivesse mudado não daria para garantir."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [FIG_ANTT,
+                          {"ref": "IMAGEM 160", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (cestas (20,30) e (20,25) descritas no 📖)"},
+                          {"ref": "IMAGEM 161-164", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvidas (monotonicidade forte × fraca)"}],
+        "alertas": [],
+    },
+]

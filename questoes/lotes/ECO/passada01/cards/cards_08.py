@@ -121,4 +121,144 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0178
+    {
+        "id": "ECO-E1-0178-1", "fonte_ref": "E1-0178", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à eficiência dos tributos.",
+        "rotulo_item": "Item",
+        "assertiva": ("Do ponto de vista econômico, impostos eficientes são aqueles que incidem com uma carga maior "
+                      "sobre produtos com demanda ou oferta inelástica."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Do ponto de vista econômico, impostos <u>eficientes</u> são aqueles que incidem com uma "
+                      "carga maior sobre produtos com demanda ou oferta <u>inelástica</u>."),
+        "poucas": ("Imposto eficiente é o que gera pouco " + azb("peso morto") + ", e o peso morto nasce da queda "
+                   "da quantidade. Onde demanda ou oferta é " + azb("inelástica") + ", a quantidade quase não "
+                   "reage: tributa-se sem distorcer."),
+        "destrinchando": [
+            "Na economia do bem-estar, " + azb("eficiência") + " = não destruir excedente. O imposto só destrói "
+            "excedente porque faz deixar de existir trocas que valiam a pena (qₜ < q₀). Se a quantidade não muda, "
+            "o imposto é pura <b>transferência</b> para o governo.",
+            "Aproximação útil: peso morto ≈ ½ · t² · (sensibilidade da quantidade ao preço). Ele cresce com as "
+            "elasticidades e com o <b>quadrado</b> da alíquota — por isso bases amplas com alíquotas baixas "
+            "distorcem menos que bases estreitas com alíquotas altas.",
+            azb("Regra de Ramsey") + " (" + oc("Frank Ramsey") + ", 1927): para arrecadar um montante dado com o "
+            "menor peso morto, as alíquotas devem ser <b>inversamente proporcionais</b> às elasticidades — mais "
+            "imposto onde a base é rígida.",
+            "Caso-limite do lado da oferta: a terra, de oferta fixa. " + oc("Henry George") + " (<i>Progresso e "
+            "Pobreza</i>, 1879) defendeu um imposto único sobre a terra justamente porque não reduziria a "
+            "quantidade ofertada.",
+            "O contraponto é a " + azb("equidade") + ": bens de demanda inelástica (alimentos básicos, energia, "
+            "remédios) pesam mais no orçamento dos pobres. Eficiência e justiça tributária frequentemente "
+            "puxam para lados opostos.",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " Soa injusto “carregar” mais nos bens essenciais, e o "
+                       "candidato tende a marcar ERRADO por equidade. Mas o item restringe o critério: “do ponto "
+                       "de vista econômico” e “eficientes” — eficiência, não justiça."),
+        "modulos": [
+            ("😈 Para dificultar", [
+                "<i>“Impostos eficientes são aqueles que incidem com carga maior sobre bens de demanda "
+                "elástica.”</i> → ERRADO (inversão: maximiza o peso morto)",
+                "<i>“A regra de Ramsey garante simultaneamente eficiência e progressividade.”</i> → ERRADO "
+                "(extrapolação: costuma sacrificar a equidade)",
+            ]),
+            ("🃏 Carta na manga", [
+                "Tributar bases inelásticas minimiza o peso morto (regra de " + oc("Ramsey") + "), mas tende a "
+                "ser regressivo: o desenho tributário ótimo combina eficiência na base com progressividade na "
+                "renda.",
+            ]),
+        ],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Um imposto eficiente influencia minimamente a decisão do agente.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": FIG_E1("Untitled (39).jpeg"),
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0179
+    {
+        "id": "ECO-E1-0179-1", "fonte_ref": "E1-0179", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos efeitos dos impostos sobre o equilíbrio de mercado.",
+        "rotulo_item": "Item",
+        "assertiva": ("Os impostos desencorajam a atividade do mercado pois quando um bem é tributado, a quantidade "
+                      "vendida desse bem é menor no novo equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os impostos desencorajam a atividade do mercado pois quando um bem é tributado, a "
+                      "<u>quantidade vendida</u> desse bem é <u>menor</u> no novo equilíbrio."),
+        "poucas": ("O imposto cria uma " + azb("cunha") + " entre o preço do comprador e o do vendedor: o "
+                   "primeiro sobe, o segundo cai, e ambos reduzem a quantidade — o mercado " + vd("encolhe") + "."),
+        "destrinchando": [
+            "Imposto específico t cobrado do vendedor: a oferta sobe t (O → O + t). Novo equilíbrio: "
+            + vd("pc > p₀") + ", " + vd("pv = pc − t < p₀") + " e " + vd("qₜ < q₀") + ".",
+            "Os dois lados dividem o ônus (a divisão depende das elasticidades) e o mercado diminui. É a "
+            "conclusão de " + oc("Mankiw") + " (<i>Introdução à Economia</i>): impostos desestimulam a atividade "
+            "de mercado.",
+            "Bem-estar: parte do excedente perdido vira " + azb("receita") + " (t × qₜ, transferência); a outra "
+            "parte, o triângulo entre qₜ e q₀, é " + azb("peso morto") + " — trocas que geravam valor e deixaram "
+            "de acontecer.",
+            "Exceção: se a demanda ou a oferta for perfeitamente inelástica (curva vertical), a quantidade não "
+            "muda e não há peso morto. Fora desses extremos, a quantidade sempre cai.",
+        ],
+        "grafico_verso": "ECO-E1-0179-1-V1",
+        "dissecando": (cz("[literalidade]") + " Paráfrase direta do manual. O risco é a desconfiança com o "
+                       "“desencorajam a atividade”, que soa opinativo: tecnicamente, é só outra forma de dizer "
+                       "que qₜ < q₀."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quando um bem é tributado, a quantidade vendida diminui, salvo se a demanda for perfeitamente "
+            "inelástica.”</i> → CERTO",
+            "<i>“O imposto reduz a quantidade porque desloca a curva de demanda do bem para a esquerda, qualquer "
+            "que seja o lado que o recolha.”</i> → ERRADO (cobrado do vendedor, desloca a oferta)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Imposto cria cunha entre preço do consumidor e do produtor, reduz a quantidade "
+                            "transacionada e o excedente total; oferta desloca-se para a esquerda; ônus "
+                            "compartilhado.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_E1("Untitled (44).jpeg"),
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0180
+    {
+        "id": "ECO-E1-0180-1", "fonte_ref": "E1-0180", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos efeitos dos impostos sobre o equilíbrio de mercado.",
+        "rotulo_item": "Item",
+        "assertiva": ("Quando o governo impõe um imposto sobre os consumidores, a curva de demanda se move para a "
+                      "esquerda e para baixo, indicando uma retração."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quando o governo impõe um imposto sobre os <u>consumidores</u>, a curva de "
+                      "<u>demanda</u> se move para a esquerda e para baixo, indicando uma retração."),
+        "poucas": ("Cobrado do comprador, o imposto reduz em t o que ele aceita pagar <b>ao vendedor</b>: a "
+                   + azb("demanda") + " desce t (D → D − t), para baixo e para a esquerda."),
+        "destrinchando": [
+            "Se o comprador aceitava pagar p por certa quantidade, agora só entrega ao vendedor p − t (o resto "
+            "vai ao fisco). A curva de demanda <b>vista pelo vendedor</b> desce verticalmente t em cada "
+            "quantidade.",
+            "Novo equilíbrio: o vendedor recebe " + vd("pv < p₀") + "; o comprador paga " + vd("pc = pv + t > p₀")
+            + "; a quantidade cai para qₜ. Os dois lados perdem excedente.",
+            azb("Equivalência") + ": o mesmo t cobrado do vendedor deslocaria a <b>oferta</b> para cima — e o "
+            "resultado seria idêntico (mesmos pc, pv e qₜ). Só muda qual curva se desenha deslocada.",
+            "A divisão do ônus entre comprador e vendedor continua sendo decidida pelas elasticidades, não por "
+            "quem recolhe.",
+        ],
+        "grafico_verso": "ECO-E1-0180-1-V1",
+        "dissecando": (cz("[literalidade · detalhe]") + " O item testa qual curva se move conforme o lado "
+                       "tributado. A pegadinha clássica é trocar a curva (“a oferta se desloca”) ou concluir que, "
+                       "por ser cobrado do consumidor, só ele perde."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quando o governo impõe um imposto sobre os consumidores, a curva de oferta se desloca para a "
+            "esquerda.”</i> → ERRADO (curva trocada: desloca-se a demanda)",
+            "<i>“Por ser cobrado dos consumidores, o imposto é suportado integralmente por eles.”</i> → ERRADO "
+            "(incidência legal ≠ econômica)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Demanda desloca-se para a esquerda e para baixo; vendedores recebem menos, "
+                            "compradores pagam mais; ambos compartilham as perdas.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": FIG_E1("Untitled (48).jpeg"),
+        "alertas": [],
+    },
 ]

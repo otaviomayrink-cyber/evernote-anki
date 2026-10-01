@@ -558,4 +558,601 @@ CARDS = [
         "alertas": ["quase_duplicata: ECO-E2-L00682-1 cobra a mesma definição de tragédia dos comuns (mesmo "
                     "curso, outra lista)"],
     },
+    # ------------------------------------------------------------------ E2-L00679
+    {
+        "id": "ECO-E2-L00679-1", "fonte_ref": "E2-L00679", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26B,
+        "rotulo_item": "Item",
+        "assertiva": ("A presença de externalidades negativas na produção faz com que o custo marginal social "
+                      "seja superior ao custo marginal privado, resultando em uma quantidade de equilíbrio de "
+                      "mercado superior à socialmente ótima."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A presença de externalidades negativas na produção faz com que o custo marginal social "
+                      "seja <u>superior</u> ao custo marginal privado, resultando em uma quantidade de equilíbrio "
+                      "de mercado <u>superior</u> à socialmente ótima."),
+        "poucas": (vd("CMgS = CMgP + custo externo marginal") + ". O produtor decide pelo CMgP, mais baixo, e "
+                   "produz até onde CMgP = demanda: " + azb("sobreprodução") + " em relação ao ótimo, onde "
+                   "CMgS = demanda."),
+        "destrinchando": [
+            "Externalidade negativa na produção (poluição de uma siderúrgica, por exemplo): parte do custo de "
+            "produzir recai sobre terceiros. O " + azb("custo marginal social") + " soma ao custo privado o "
+            + azb("custo externo marginal") + ": CMgS = CMgP + CExtMg, e por isso a curva social fica "
+            "<b>acima</b> da privada.",
+            "Equilíbrio de mercado: oferta (CMgP) = demanda → Qₘ, com preço baixo demais (não embute o dano). "
+            "Ótimo social: CMgS = demanda → " + vd("Q* < Qₘ") + ", com preço maior.",
+            "As unidades entre Q* e Qₘ custam à sociedade mais do que valem para os consumidores: o triângulo "
+            "entre CMgS e a demanda nesse trecho é o " + azb("peso morto") + " da externalidade.",
+            "Correção: " + azb("imposto pigouviano") + " igual ao CExtMg em Q*, que desloca a oferta privada "
+            "até cruzar a demanda no ótimo; ou cotas, padrões de emissão, licenças negociáveis.",
+            "Espelho: externalidade positiva → benefício social acima do privado → " + vd("Qₘ < Q*") + " "
+            "(subprodução).",
+        ],
+        "grafico_verso": "ECO-E2-L00679-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " Os dois “superior” estão no lugar certo. A banca fabrica o "
+                       "ERRADO invertendo um deles: CMgS “inferior” ao privado (ECO-E2-L00971-1) ou curva "
+                       "social “abaixo” (ECO-E2-L00871-1), ou ainda quantidade de mercado “inferior”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com externalidade negativa na produção, o preço de mercado fica acima do socialmente "
+            "ótimo.”</i> → ERRADO (inversão: fica abaixo)",
+            "<i>“Na presença de externalidade negativa, o equilíbrio competitivo deixa de ser eficiente no "
+            "sentido de Pareto.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CMgS = CMgP + custo externo marginal; mercado decide pelo CMgP: preço menor e "
+                             "quantidade maior que o ótimo social (superprodução)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00680
+    {
+        "id": "ECO-E2-L00680-1", "fonte_ref": "E2-L00680", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26B,
+        "rotulo_item": "Item",
+        "assertiva": ("O Teorema de Coase afirma que, na ausência de custos de transação e com direitos de "
+                      "propriedade bem definidos, a negociação privada levará a uma alocação eficiente de "
+                      "recursos, independentemente de a quem os direitos de propriedade sejam atribuídos "
+                      "inicialmente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O Teorema de Coase afirma que, na ausência de custos de transação e com direitos de "
+                      "propriedade bem definidos, a negociação privada levará a uma alocação eficiente de "
+                      "recursos, <u>independentemente de a quem</u> os direitos de propriedade sejam atribuídos "
+                      "inicialmente."),
+        "poucas": ("É o " + azb("teorema de Coase") + " em sua forma canônica: com direitos definidos e "
+                   "negociação sem custo, as partes chegam ao " + azb("ótimo de Pareto") + ", seja quem for o "
+                   "titular inicial do direito."),
+        "destrinchando": [
+            "Por que a atribuição não altera a alocação: o direito é um ativo negociável. Quem o valoriza mais "
+            "acaba com ele — comprando-o ou deixando de vendê-lo. Exemplo numérico: uma fábrica ganha "
+            + vd("50") + " poluindo um rio; pescadores perdem " + vd("80") + ".",
+            "Se os pescadores têm o direito ao rio limpo, a fábrica precisaria pagar mais de 80 para poluir, "
+            "mas só ganha 50: não polui. Se a fábrica tem o direito de poluir, os pescadores lhe pagam algo "
+            "entre 50 e 80 para que pare: não polui. " + vd("Mesma alocação") + " (rio limpo), "
+            "<b>distribuição diferente</b> (quem paga a quem).",
+            "Agora inverta os números (fábrica ganha 80, dano de 50): em qualquer atribuição, a fábrica polui "
+            "— e polui porque isso é eficiente. Coase não diz que a externalidade desaparece, e sim que se "
+            "chega ao nível <b>eficiente</b> dela.",
+            "Os limites estão nas premissas: custos de transação (muitas vítimas, litígio, fiscalização), "
+            "informação assimétrica e comportamento estratégico. Quando eles pesam, voltam à mesa as soluções "
+            "de " + oc("Pigou") + " (imposto) e a regulação.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Mesmo enunciado de ECO-E2-L00517-1, com “levará” em vez de "
+                       "“podem negociar”. O futuro categórico é seguro aqui porque as condições do teorema "
+                       "foram dadas. As versões erradas mexem na atribuição do direito ou retiram uma das "
+                       "condições."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pelo teorema de Coase, a negociação privada sempre elimina por completo a "
+            "externalidade.”</i> → ERRADO (leva ao nível eficiente, que pode ser positivo)",
+            "<i>“Pelo teorema de Coase, a atribuição inicial dos direitos afeta a distribuição de renda entre "
+            "as partes, mas não a eficiência.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["levará"], "dificuldade": 1,
+        "comentario_fonte": ("Direitos bem definidos e custos de transação nulos → negociação de compensações "
+                             "internaliza a externalidade; alocação eficiente (ótimo de Pareto) qualquer que seja "
+                             "o detentor inicial do direito."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00517-1 (mesmo curso, outra lista) e ECO-E2-L00333-1 cobram o "
+                    "mesmo enunciado com outra redação"],
+    },
+    # ------------------------------------------------------------------ E2-L00681
+    {
+        "id": "ECO-E2-L00681-1", "fonte_ref": "E2-L00681", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26B,
+        "rotulo_item": "Item",
+        "assertiva": ("Bens públicos puros são caracterizados por serem não rivais e não excludentes, o que leva "
+                      "ao problema do “carona” (free-rider) e à suboferta pelo mercado privado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Bens públicos puros são caracterizados por serem não rivais e não excludentes, o que leva "
+                      "ao problema do “carona” (free-rider) e à <u>suboferta</u> pelo mercado privado."),
+        "poucas": ("Não exclusão → cada um pode usufruir sem pagar → ninguém revela quanto valoriza o bem → "
+                   "a firma privada não consegue cobrar → " + azb("suboferta") + " (ou oferta nula)."),
+        "destrinchando": [
+            azb("Carona (free-rider)") + ": quem se beneficia de um bem sem contribuir para custeá-lo. Decorre "
+            "da " + azb("não exclusão") + ": se não posso ser barrado, é racional esperar que os outros paguem. "
+            "Se todos pensam assim, o bem não é produzido, embora valha mais, para o conjunto, do que custa.",
+            "A " + azb("não rivalidade") + " acrescenta outra razão: o custo de servir mais um usuário é zero, "
+            "e cobrar dele seria ineficiente mesmo que possível.",
+            "Condição de " + oc("Samuelson") + " (" + vd("1954") + "): o bem público deve ser ofertado até que "
+            + vd("a soma dos benefícios marginais de todos os usuários = custo marginal") + " (soma "
+            "<b>vertical</b> das demandas, ao contrário da soma horizontal dos bens privados). O mercado, que "
+            "só capta a disposição a pagar revelada, fica aquém.",
+            "Respostas: provisão pública financiada por " + azb("tributos") + " (defesa, iluminação pública, "
+            "pesquisa básica), contratação de produtores privados pelo Estado e, em pequenos grupos, "
+            "cooperação voluntária (" + oc("Olson") + ", <i>A lógica da ação coletiva</i>, 1965: quanto maior o "
+            "grupo, maior o incentivo à carona).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Cadeia causal correta (características → carona → suboferta). "
+                       "Cuidado com a variante que atribui a carona à não <b>rivalidade</b>: a causa direta é a "
+                       "não exclusão."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O problema do carona decorre da rivalidade no consumo dos bens públicos.”</i> → ERRADO (troca "
+            "de conceito: decorre da não exclusão)",
+            "<i>“A provisão eficiente de um bem público exige que a soma dos benefícios marginais dos "
+            "consumidores iguale o custo marginal.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Não rivalidade e não exclusão; a não exclusão gera o carona; firmas não conseguem "
+                             "cobrar, logo suboferta ou inexistência do bem no mercado."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00682
+    {
+        "id": "ECO-E2-L00682-1", "fonte_ref": "E2-L00682", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26B,
+        "rotulo_item": "Item",
+        "assertiva": ("O “Tragédia dos Comuns” refere-se ao uso excessivo de recursos comuns (bens rivais, mas "
+                      "não excludentes), pois os indivíduos não consideram a externalidade negativa que seu "
+                      "consumo impõe aos outros usuários."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O “Tragédia dos Comuns” refere-se ao uso excessivo de recursos comuns (bens <u>rivais, "
+                      "mas não excludentes</u>), pois os indivíduos não consideram a <u>externalidade "
+                      "negativa</u> que seu consumo impõe aos outros usuários."),
+        "poucas": ("A " + azb("tragédia dos comuns") + " é uma externalidade negativa: cada usuário compara seu "
+                   "benefício com seu custo privado e ignora o custo que impõe aos outros ao reduzir o estoque "
+                   "comum."),
+        "destrinchando": [
+            "Mecanismo: o usuário explora até que seu benefício marginal iguale seu " + azb("custo marginal "
+            "privado") + ". Mas cada unidade extraída também reduz a produtividade ou a disponibilidade do "
+            "recurso para os demais — custo que ele não paga. Como CMg social > CMg privado, o uso agregado "
+            "fica acima do eficiente.",
+            "Por que a dupla rival + não excludente: sem rivalidade, o uso de um não prejudicaria os outros "
+            "(não haveria tragédia); com exclusão, um dono cobraria pelo uso e racionaria o recurso.",
+            "Exemplos: sobrepesca, desmatamento de áreas sem dono definido, esgotamento de aquíferos, "
+            "congestionamento urbano, emissões de gases de efeito estufa (o clima como comum global).",
+            "Remédios: definir direitos (privatização, concessão), cotas e licenças, tributar o uso, gestão "
+            "comunitária (" + oc("Ostrom") + "). O texto clássico é de " + oc("Garrett Hardin") + " ("
+            + vd("1968") + "), retomando a parábola das pastagens comuns.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição completa e com a causa certa (externalidade "
+                       "ignorada). Mesmo tema de ECO-E2-L00518-1. A banca erra o item trocando “rivais” por "
+                       "“não rivais” ou atribuindo a tragédia aos bens públicos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A tragédia dos comuns afeta os bens públicos puros, cujo uso por um indivíduo reduz a "
+            "disponibilidade para os demais.”</i> → ERRADO (troca de conceito: bem público é não rival)",
+            "<i>“Na tragédia dos comuns, o custo marginal privado do uso do recurso é inferior ao custo marginal "
+            "social.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Recursos comuns rivais e não excludentes; cada um consome até benefício marginal = "
+                             "custo privado e ignora o custo imposto aos outros; resultado: sobreuso."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00518-1 (mesmo curso, outra lista), ECO-E2-L01011-1 e "
+                    "ECO-E2-L01175-1 cobram a tragédia dos comuns com outra redação"],
+    },
+    # ------------------------------------------------------------------ E2-L00744
+    {
+        "id": "ECO-E2-L00744-1", "fonte_ref": "E2-L00744", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EST,
+        "rotulo_item": "Item",
+        "assertiva": ("A instalação de estações de pedágio logo após cada via de entrada em uma rodovia "
+                      "administrada por concessionária privada resolve o problema do carona, a despeito dos "
+                      "custos da transação."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A instalação de estações de pedágio <u>logo após cada via de entrada</u> em uma rodovia "
+                      "administrada por concessionária privada resolve o problema do carona, <u>a despeito dos "
+                      "custos da transação</u>."),
+        "poucas": ("O pedágio em <b>todas</b> as entradas torna a rodovia " + azb("excludente") + ": quem não "
+                   "paga não usa. Sem a não exclusão, desaparece o carona — ainda que a cobrança tenha custos "
+                   "(cabines, cobrança, filas)."),
+        "destrinchando": [
+            "O carona nasce da " + azb("não exclusão") + ". Qualquer tecnologia que permita barrar quem não "
+            "paga — catraca, ingresso, senha, pedágio — o elimina e transforma o bem em algo que o mercado "
+            "consegue vender.",
+            "Classificação da rodovia segundo exclusão e rivalidade (" + oc("Mankiw") + "): "
+            + azb("livre e sem pedágio") + " → bem público; " + azb("congestionada e sem pedágio")
+            + " → recurso comum; " + azb("livre e com pedágio") + " → bem de clube (monopólio natural); "
+            + azb("congestionada e com pedágio") + " → bem privado.",
+            "O “a despeito dos custos da transação” lembra que excluir custa: a praça de pedágio, os "
+            "funcionários e o tempo dos motoristas são " + azb("custos de transação") + ". Eles não fazem o "
+            "carona voltar; só tornam a exclusão mais ou menos vantajosa. Hoje o pedágio eletrônico e o "
+            + rx("sistema free flow, em implantação nas rodovias brasileiras") + " ⏳ (out/2026), reduzem "
+            "esse custo.",
+            "A exclusão resolve o carona, mas, numa rodovia não congestionada, cobrar afasta usuários cujo "
+            "custo marginal é zero: há um peso morto típico dos bens de clube — por isso o debate entre "
+            "pedágio e financiamento por tributos.",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " O “logo após cada via de entrada” garante a "
+                       "exclusão completa (ninguém entra sem passar pelo pedágio) e o “a despeito dos custos” "
+                       "tenta assustar quem associa custos de transação ao fracasso da solução. A pergunta é "
+                       "só: dá para excluir? Sim."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma rodovia livre de congestionamento e com pedágio é um bem público puro.”</i> → ERRADO "
+            "(com exclusão vira bem de clube)",
+            "<i>“A cobrança de pedágio em uma rodovia congestionada a transforma em bem privado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Tabela de tipos de bens (exclusão × rivalidade) com exemplos de estradas; o pedágio "
+                             "torna a rodovia excludente e resolve o carona."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 108", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida (quadro exclusão × rivalidade no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00745
+    {
+        "id": "ECO-E2-L00745-1", "fonte_ref": "E2-L00745", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EST,
+        "rotulo_item": "Item",
+        "assertiva": "Uma rodovia sem pedágio, sob a administração federal, é sempre um bem público.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma rodovia sem pedágio, sob a administração federal, é ") + vm("sempre") + az(" um bem "
+                                                                                                    "público."),
+        "poucas": ("Sem pedágio, a rodovia é " + azb("não excludente") + ", mas só é bem público se também for "
+                   + azb("não rival") + ". Congestionada, o uso de um atrapalha o dos outros: vira "
+                   + azb("recurso comum") + "."),
+        "destrinchando": [
+            "Bem público exige as <b>duas</b> propriedades: não exclusão <i>e</i> não rivalidade. A ausência de "
+            "pedágio garante só a primeira.",
+            "A rivalidade de uma rodovia depende do tráfego: vazia, mais um carro não atrapalha ninguém (não "
+            "rival → bem público); congestionada, cada carro a mais reduz a velocidade de todos (rival → "
+            + azb("recurso comum") + ", sujeito à tragédia dos comuns e ao sobreuso).",
+            "“Sob a administração federal” é irrelevante: na economia, bem público é definido pelas "
+            "características de consumo, não pela " + azb("titularidade") + ". Um bem estatal pode ser privado "
+            "no sentido econômico (energia de estatal, cobrada por consumo), e um bem particular pode ter "
+            "traços de bem público (um farol privado).",
+            "O congestionamento é uma " + azb("externalidade negativa") + ": quem entra na via ignora o atraso "
+            "que impõe aos demais. Solução clássica: pedágio urbano de congestionamento (Londres, Estocolmo, "
+            "Singapura), que cobra mais no horário de pico.",
+            vm("Regra-âncora: público no sentido econômico = não rival + não excludente, seja quem for o "
+               "dono."),
+        ],
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " O “sempre” derruba o item: ignora a "
+                       "rodovia congestionada. A menção à administração federal é a isca para confundir bem "
+                       "público econômico com bem de propriedade pública."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma rodovia sem pedágio e não congestionada é exemplo de bem público.”</i> → CERTO",
+            "<i>“Toda rodovia de propriedade do Estado é bem público em sentido econômico.”</i> → ERRADO "
+            "(confunde titularidade com características de consumo)",
+        ])],
+        "reescrita": ("Uma rodovia sem pedágio, sob a administração federal, " + hl("só") + " é um bem público "
+                      + hl("se não for congestionada; congestionada, é um recurso comum") + "."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": ("Rodovia congestionada é rival, não bem público puro (fundido com o comentário da "
+                             "linha duplicada E2-L00853: sem pedágio é não excluível; só é bem público se não "
+                             "congestionada; congestionada é recurso comum)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00852
+    {
+        "id": "ECO-E2-L00852-1", "fonte_ref": "E2-L00852", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com o teorema de Coase, desde que atribuído o direito de propriedade em favor do "
+                      "agente que sofre os efeitos de uma externalidade negativa, a negociação privada entre quem "
+                      "produz e quem sofre os efeitos da externalidade resultará em uma alocação socialmente "
+                      "eficiente na ausência de custos de transação."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com o teorema de Coase, ")
+                    + vm("desde que atribuído o direito de propriedade em favor do agente que sofre os efeitos de "
+                         "uma externalidade negativa")
+                    + az(", a negociação privada entre quem produz e quem sofre os efeitos da externalidade "
+                         "resultará em uma alocação socialmente eficiente na ausência de custos de transação.")),
+        "poucas": ("Coase exige que o direito esteja " + azb("bem definido") + ", não que pertença à vítima. "
+                   "Atribuído ao poluidor ou ao prejudicado, a negociação chega à " + vd("mesma alocação "
+                   "eficiente") + "."),
+        "destrinchando": [
+            "O núcleo do " + azb("teorema de Coase") + " (" + oc("Ronald Coase") + ", " + vd("1960")
+            + ") é a <b>neutralidade</b> da atribuição: com custos de transação nulos, a eficiência vem de os "
+            "direitos estarem definidos e serem negociáveis, qualquer que seja o titular.",
+            "Teste com números: uma fazenda ganha 30 por usar um agrotóxico que causa dano de 20 ao apiário "
+            "vizinho. Direito do apicultor: a fazenda paga entre 20 e 30 pela permissão e usa o produto. "
+            "Direito da fazenda: o apicultor não consegue pagar mais de 20 para impedi-la; ela usa. Em ambos, "
+            "o agrotóxico é usado (eficiente, pois 30 > 20).",
+            "Dar o direito à vítima é intuição de <b>justiça</b> (“o poluidor-pagador”), não condição de "
+            "eficiência. A atribuição afeta a " + azb("distribuição") + " — quem paga a quem —, não a "
+            "alocação.",
+            "O direito ambiental brasileiro adota o " + rx("princípio do poluidor-pagador") + " (Lei "
+            + vd("6.938/1981") + ", art. 4º, VII), escolha normativa compatível com Coase, mas não exigida "
+            "por ele.",
+        ],
+        "dissecando": (cz("[restrição indevida]") + " A conclusão do item é verdadeira para a hipótese "
+                       "descrita, mas o “desde que” transforma um caso possível em condição necessária. Pista: "
+                       "qualquer enunciado de Coase que privilegie um dos lados está errado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pelo teorema de Coase, a alocação eficiente é alcançada tanto se o direito for atribuído ao "
+            "poluidor quanto se for atribuído ao prejudicado.”</i> → CERTO",
+            "<i>“Pelo teorema de Coase, só a atribuição do direito ao poluidor garante que ele internalize o "
+            "dano.”</i> → ERRADO (restrição indevida; a atribuição é neutra)",
+        ])],
+        "reescrita": ("De acordo com o teorema de Coase, " + hl("desde que bem definido o direito de "
+                      "propriedade, seja em favor do agente que gera, seja em favor do que sofre os efeitos de "
+                      "uma externalidade negativa") + ", a negociação privada entre quem produz e quem sofre os "
+                      "efeitos da externalidade resultará em uma alocação socialmente eficiente na ausência de "
+                      "custos de transação."),
+        "tipo_erro": ["RESTRICAO"], "moduladores": ["desde que"], "dificuldade": 2,
+        "comentario_fonte": ("Direitos bem definidos, independentemente de quem os detenha, e custos de "
+                             "transação nulos permitem resolver a externalidade pela negociação, sem coerção "
+                             "governamental (Coase, 1960)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00854
+    {
+        "id": "ECO-E2-L00854-1", "fonte_ref": "E2-L00854", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Por serem não excludentes e não rivais, os bens comuns em geral devem ser explorados e "
+                      "ofertados livremente pelo setor privado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Por serem não excludentes e ") + vm("não rivais") + az(", os bens comuns em geral ")
+                    + vm("devem ser explorados e ofertados livremente pelo setor privado") + az(".")),
+        "poucas": ("Bens comuns são não excludentes, mas " + azb("rivais") + ". Explorados livremente, tendem "
+                   "ao esgotamento (" + azb("tragédia dos comuns") + "): exigem regulação, não liberdade de "
+                   "exploração."),
+        "destrinchando": [
+            "Dois erros empilhados. (1) Classificação: “não excludente e não rival” é o " + azb("bem público")
+            + "; o " + azb("recurso comum") + " é não excludente e <b>rival</b> (ar e água limpos, fauna, "
+            "flora, cardumes, florestas).",
+            "(2) Prescrição: justamente por serem rivais e de acesso livre, cada usuário explora o recurso "
+            "sem considerar o custo que impõe aos outros — " + azb("externalidade negativa") + " que leva à "
+            "exaustão. A política adequada é limitar o uso (cotas, licenças, defeso, concessões, unidades de "
+            "conservação), não liberá-lo.",
+            "Também não faz sentido falar em “oferta” privada de bens não excludentes: sem poder cobrar, a "
+            "firma não tem como se remunerar. Quando o setor privado entra, é porque se criou exclusão "
+            "(concessão florestal, outorga de uso da água).",
+            rx("No Brasil") + ": a " + vd("Lei 9.433/1997") + " (Política Nacional de Recursos Hídricos) cobra "
+            "pelo uso da água e exige outorga; a " + vd("Lei 11.284/2006") + " criou as concessões de "
+            "florestas públicas — exemplos de transformação de comuns em bens com exclusão regulada.",
+        ],
+        "dissecando": (cz("[troca de conceito · juízo indevido]") + " O item cola a definição de bem público no "
+                       "bem comum e extrai dela uma recomendação de política sem base (“devem ser explorados "
+                       "livremente”). Basta um dos erros para o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Por serem não excludentes e rivais, os recursos comuns tendem a ser explorados além do nível "
+            "socialmente ótimo.”</i> → CERTO",
+            "<i>“Os bens comuns, por serem rivais, são excludentes.”</i> → ERRADO (rivalidade e exclusão são "
+            "critérios independentes)",
+        ])],
+        "reescrita": ("Por serem não excludentes e " + hl("rivais") + ", os bens comuns em geral "
+                      + hl("tendem a ser explorados em excesso e demandam regulação do seu uso") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "JUIZO_INDEVIDO"], "moduladores": ["em geral", "devem"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Bens comuns são não excluíveis e rivais; não são ofertados nem controlados pelo "
+                             "setor privado; uso excessivo leva à tragédia dos comuns; não rivais e não "
+                             "excluíveis são bens públicos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00855
+    {
+        "id": "ECO-E2-L00855-1", "fonte_ref": "E2-L00855", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("A função alocativa do governo faz com que este forneça bens e serviços à sociedade devido a "
+                      "característica de não-exclusão desses determinados. Bens meritórios não satisfazem o "
+                      "princípio da exclusão."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A função alocativa do governo faz com que este forneça bens e serviços à sociedade "
+                       "devido a característica de não-exclusão desses determinados. Bens meritórios ")
+                    + vm("não satisfazem") + az(" o princípio da exclusão.")),
+        "poucas": (azb("Bens meritórios") + " (saúde, educação) <b>são excludentes</b>: o mercado poderia "
+                   "vendê-los e barrar quem não paga. O Estado os provê por mérito social e externalidades, não "
+                   "por impossibilidade de exclusão."),
+        "destrinchando": [
+            "As três funções do governo de " + oc("Richard Musgrave") + " (<i>The Theory of Public Finance</i>, "
+            + vd("1959") + "): " + azb("alocativa") + " (prover bens que o mercado não provê ou provê mal), "
+            + azb("distributiva") + " (corrigir a distribuição de renda) e " + azb("estabilizadora")
+            + " (emprego, preços, crescimento).",
+            "Na função alocativa entram dois grupos distintos: " + azb("bens públicos") + ", providos porque a "
+            "não exclusão impede a cobrança; e " + azb("bens meritórios") + ", que <b>satisfazem</b> o princípio "
+            "da exclusão (escola e hospital podem cobrar), mas que a sociedade julga que todos devem consumir, "
+            "independentemente da renda ou da preferência individual.",
+            "Razões para prover meritórios: externalidades positivas (educação, vacinação), informação "
+            "imperfeita do consumidor sobre o próprio benefício e equidade. Por isso coexistem oferta pública "
+            "gratuita e oferta privada paga do mesmo bem.",
+            rx("No Brasil") + ", saúde e educação são direitos sociais (CF/88, art. " + vd("6º") + "), com "
+            "acesso universal ao SUS (art. " + vd("196") + ") e ensino público gratuito (art. " + vd("206, IV")
+            + ") — o caso típico de bens meritórios.",
+            vm("Regra-âncora: bem público → Estado provê porque não dá para excluir; bem meritório → dá para "
+               "excluir, mas não se quer excluir."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A primeira frase (truncada na fonte) descreve a provisão de "
+                       "bens públicos; a segunda estende a não exclusão aos meritórios por contágio. O erro é "
+                       "uma negação enxertada: “não satisfazem”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Bens meritórios podem ser ofertados pelo setor privado, pois satisfazem o princípio da "
+            "exclusão.”</i> → CERTO",
+            "<i>“A provisão de bens meritórios pelo governo justifica-se pela impossibilidade técnica de cobrar "
+            "por eles.”</i> → ERRADO (isso é o bem público)",
+        ])],
+        "reescrita": ("A função alocativa do governo faz com que este forneça bens e serviços à sociedade devido "
+                      "a característica de não-exclusão desses determinados. Bens meritórios "
+                      + hl("satisfazem") + " o princípio da exclusão" + hl(", mas são providos pelo governo por "
+                      "sua importância social") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Bens meritórios satisfazem o princípio da exclusão, mas o governo os produz por "
+                             "externalidades positivas e para não excluir a população de baixa renda; exemplos: "
+                             "saúde e educação, garantidas pela Constituição."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_parcial: a 1ª frase da assertiva vem truncada na fonte (“desses determinados”, "
+                    "provavelmente “desses determinados bens”); mantida fiel"],
+    },
+    # ------------------------------------------------------------------ E2-L00869
+    {
+        "id": "ECO-E2-L00869-1", "fonte_ref": "E2-L00869", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TIPOS,
+        "rotulo_item": "Item",
+        "assertiva": ("Os bens públicos e os recursos comuns não são excluíveis e estão à disposição de todos que "
+                      "queiram utilizá-los, mas os recursos comuns, por serem rivais, demandam dos formuladores de "
+                      "política econômica a regulação sobre as quantidades deles que podem ser utilizadas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os bens públicos e os recursos comuns <u>não são excluíveis</u> e estão à disposição de "
+                      "todos que queiram utilizá-los, mas os recursos comuns, <u>por serem rivais</u>, demandam "
+                      "dos formuladores de política econômica a regulação sobre as quantidades deles que podem "
+                      "ser utilizadas."),
+        "poucas": ("O que une bens públicos e recursos comuns é a " + azb("não exclusão") + "; o que os separa "
+                   "é a " + azb("rivalidade") + ". Por serem rivais, os comuns se esgotam com o uso e pedem "
+                   "limites de quantidade."),
+        "destrinchando": [
+            "Bem público (não rival): o problema é de <b>provisão</b> — ninguém paga, então ninguém produz; o "
+            "Estado financia por tributos. Recurso comum (rival): o problema é de <b>uso</b> — o recurso já "
+            "existe, mas é consumido em excesso; o Estado limita a quantidade usada.",
+            "Exemplo: a madeira de uma floresta aberta. Quem corta reduz o estoque disponível para os outros "
+            "(rivalidade) e ninguém pode ser impedido de cortar (não exclusão). Sabendo que o estoque diminui, "
+            "cada um corre para cortar antes: " + azb("tragédia dos comuns") + ".",
+            "Instrumentos de regulação quantitativa: cotas de captura e de corte, licenças, defeso, outorgas de "
+            "uso da água, áreas protegidas; e instrumentos de preço (tributar o uso) ou de direitos "
+            "(concessões, cotas individuais transferíveis).",
+            "Recursos comuns típicos: minerais, peixes, florestas, ar e água limpos, espectro de rádio sem "
+            "gestão, estradas congestionadas sem pedágio.",
+        ],
+        "dissecando": (cz("[literalidade]") + " O item acerta o ponto comum (não exclusão), a diferença "
+                       "(rivalidade) e a consequência de política. A banca costuma inverter a atribuição: "
+                       "“bens públicos, por serem rivais, exigem regulação”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os bens públicos, por serem rivais, exigem regulação das quantidades utilizadas.”</i> → "
+            "ERRADO (troca de ator: bem público é não rival)",
+            "<i>“A diferença entre bens públicos e recursos comuns está na rivalidade, não na "
+            "excludabilidade.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Bens comuns são rivais e não exclusivos; competição pelo uso leva à exploração "
+                             "excessiva e à tragédia dos comuns; exemplo da madeira; necessidade de "
+                             "regulamentação."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00871
+    {
+        "id": "ECO-E2-L00871-1", "fonte_ref": "E2-L00871", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TIPOS,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um mercado de equilíbrio competitivo com externalidade negativa, o custo social é maior "
+                      "que o custo privado; nessa circunstância, portanto, em uma representação gráfica da relação "
+                      "entre preço (eixo das ordenadas) e quantidade (eixo das abcissas), a curva de custo "
+                      "marginal social fica abaixo da curva de custo marginal privado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em um mercado de equilíbrio competitivo com externalidade negativa, o custo social é "
+                       "maior que o custo privado; nessa circunstância, portanto, em uma representação gráfica da "
+                       "relação entre preço (eixo das ordenadas) e quantidade (eixo das abcissas), a curva de "
+                       "custo marginal social fica ") + vm("abaixo") + az(" da curva de custo marginal privado.")),
+        "poucas": ("Se o custo social é <b>maior</b>, a curva de CMgS fica <b>acima</b> da de CMgP: a distância "
+                   "vertical entre elas é o " + azb("custo externo marginal") + ". O item tira a conclusão "
+                   "oposta da própria premissa."),
+        "destrinchando": [
+            vd("CMgS = CMgP + CExtMg") + ". Com o preço no eixo vertical, “custar mais” para a mesma quantidade "
+            "significa estar <b>mais alto</b> no gráfico: em cada Q, a curva social está acima da privada, à "
+            "distância do custo externo daquela unidade.",
+            "Se o dano por unidade cresce com a produção (poluição que se acumula), as curvas se afastam à "
+            "direita; se é constante, são paralelas.",
+            "Consequência: a oferta de mercado (CMgP) cruza a demanda à direita do ponto em que o CMgS a "
+            "cruza — " + azb("sobreprodução") + " e preço baixo demais.",
+            "Caso espelho em que a curva social fica abaixo: " + azb("externalidade positiva na produção")
+            + " (o pomar que beneficia o apicultor vizinho, ou a firma que treina mão de obra depois "
+            "contratada por concorrentes): CMgS = CMgP − benefício externo marginal.",
+        ],
+        "grafico_verso": "ECO-E2-L00871-1-V1",
+        "dissecando": (cz("[inversão · contradição]") + " O item enuncia a premissa certa (custo social > "
+                       "privado) e inverte a tradução gráfica. Itens de “representação gráfica” costumam "
+                       "apostar na confusão entre “acima” e “à direita”. Ver também ECO-E2-L00971-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com externalidade negativa na produção, a curva de custo marginal social situa-se à esquerda "
+            "da curva de custo marginal privado.”</i> → CERTO (acima e à esquerda descrevem o mesmo "
+            "deslocamento)",
+            "<i>“A distância vertical entre as curvas de custo marginal social e privado corresponde ao "
+            "benefício marginal do consumidor.”</i> → ERRADO (é o custo externo marginal)",
+        ])],
+        "reescrita": ("Em um mercado de equilíbrio competitivo com externalidade negativa, o custo social é "
+                      "maior que o custo privado; nessa circunstância, portanto, em uma representação gráfica da "
+                      "relação entre preço (eixo das ordenadas) e quantidade (eixo das abcissas), a curva de "
+                      "custo marginal social fica " + hl("acima") + " da curva de custo marginal privado."),
+        "tipo_erro": ["INVERSAO", "CONTRADICAO"], "moduladores": ["portanto"], "dificuldade": 1,
+        "comentario_fonte": ("CMg social = CMg privado + custo externo; a curva social fica acima da privada."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00971-1 cobra a mesma relação CMgS × CMgP com outra redação "
+                    "(mesmo curso, outra lista)"],
+    },
+    # ------------------------------------------------------------------ E2-L00872
+    {
+        "id": "ECO-E2-L00872-1", "fonte_ref": "E2-L00872", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TIPOS,
+        "rotulo_item": "Item",
+        "assertiva": ("Se, ao produzir, uma firma gera externalidade negativa na forma de poluição, para cobrar "
+                      "dessa firma um imposto de Pigou (que a faça considerar o custo social de produção, e não "
+                      "apenas o custo privado), deve-se conhecer a externalidade marginal no nível de produto "
+                      "socialmente eficiente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se, ao produzir, uma firma gera externalidade negativa na forma de poluição, para cobrar "
+                      "dessa firma um imposto de Pigou (que a faça considerar o custo social de produção, e não "
+                      "apenas o custo privado), deve-se conhecer a externalidade marginal <u>no nível de produto "
+                      "socialmente eficiente</u>."),
+        "poucas": ("O " + azb("imposto pigouviano ótimo") + " por unidade é igual ao " + vd("custo externo "
+                   "marginal em Q*") + ": assim a curva de custo privado + imposto cruza a demanda exatamente "
+                   "no ótimo. Calibrá-lo exige conhecer esse dano marginal."),
+        "destrinchando": [
+            "Mecânica: o imposto t por unidade desloca o custo privado para cima (CMgP + t). Para que a firma, "
+            "maximizando lucro, escolha Q*, a curva CMgP + t deve passar pelo ponto em que CMgS cruza a "
+            "demanda. Logo " + vd("t = CMgS(Q*) − CMgP(Q*) = CExtMg(Q*)") + ".",
+            "Por que no ótimo e não na produção de mercado: se o dano marginal cresce com a quantidade, o "
+            "CExtMg em Qₘ é <b>maior</b> que em Q*. Um imposto calibrado em Qₘ seria excessivo e levaria a "
+            "produção abaixo do ótimo.",
+            "Essa é a fraqueza prática da solução de " + oc("Pigou") + ": o regulador precisa conhecer as "
+            "curvas de dano e de custo — informação difícil e politicamente disputada. Daí as alternativas: "
+            + azb("licenças negociáveis") + " (fixa-se a quantidade e o mercado descobre o preço), "
+            "a negociação de " + oc("Coase") + " e padrões de emissão.",
+            "Imposto × licenças sob incerteza (" + oc("Weitzman") + ", 1974): o imposto fixa o preço da "
+            "poluição e deixa a quantidade incerta; a licença fixa a quantidade e deixa o preço incerto.",
+        ],
+        "grafico_verso": "ECO-E2-L00872-1-V1",
+        "dissecando": (cz("[detalhe]") + " O ponto fino é “no nível de produto socialmente eficiente”: a banca "
+                       "troca isso por “no nível de produção de mercado” ou por “o custo externo total” para "
+                       "fabricar o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O imposto de Pigou ótimo corresponde ao custo externo marginal avaliado na quantidade de "
+            "equilíbrio do mercado sem intervenção.”</i> → ERRADO (dado trocado: avalia-se em Q*)",
+            "<i>“O imposto de Pigou ótimo iguala o custo externo total dividido pela quantidade "
+            "produzida.”</i> → ERRADO (troca marginal por médio)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": ["deve-se"], "dificuldade": 2,
+        "comentario_fonte": ("Equilíbrio competitivo acima do ótimo; o imposto de Pigou desloca o CMg até o CMg "
+                             "social; o cobrador deve conhecer a externalidade marginal. Gráfico com CMgS = CMgP "
+                             "+ CMg da externalidade, pontos A (mercado) e B (ótimo)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 136", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00872-1-V1, com a cunha do imposto em Q*)"}],
+        "alertas": [],
+    },
 ]

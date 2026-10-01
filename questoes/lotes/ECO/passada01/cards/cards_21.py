@@ -1017,4 +1017,571 @@ CARDS = [
                            "acao": "cortada (gráfico de monopólio natural com a assertiva sobreposta)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0302
+    {
+        "id": "ECO-E1-0302-1", "fonte_ref": "E1-0302", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Nidi", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COM_CONC_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um mercado de concorrência monopolística não ocorre ineficiência no cenário de longo "
+                      "prazo, dado que o preço se iguala ao custo médio e, portanto, as empresas não operam com "
+                      "excesso de capacidade ociosa."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um mercado de concorrência monopolística ") + vm("não ocorre ineficiência") + az(" no "
+                      "cenário de longo prazo, dado que o preço se iguala ao custo médio e, portanto, as empresas ")
+                   + vm("não operam") + az(" com excesso de capacidade ociosa."),
+        "poucas": ("P = CMe no longo prazo é verdade, mas a igualdade se dá na " + azb("tangência") + " da demanda "
+                   "com o CMe na parte <b>descendente</b>, antes do mínimo: há " + azb("capacidade ociosa")
+                   + " e " + vd("P > CMg") + "."),
+        "destrinchando": [
+            "Modelo de " + oc("Chamberlin") + " (<i>The Theory of Monopolistic Competition</i>, 1933): muitas "
+            "firmas, " + azb("produto diferenciado") + " (marca, localização, qualidade) e " + azb("livre entrada")
+            + ". Cada firma enfrenta uma demanda própria negativamente inclinada e age como um pequeno monopolista.",
+            "Curto prazo: RMg = CMg, com P > CMe possível (lucro). O lucro atrai entrantes, que roubam clientela: a "
+            "demanda de cada firma desloca-se para a esquerda e fica mais elástica.",
+            "Longo prazo: a entrada para quando " + vd("lucro = 0") + ", ou seja, quando a demanda apenas "
+            + azb("tangencia") + " a curva de CMe. Como a demanda é inclinada, a tangência só pode ocorrer onde o "
+            "CMe também cai — à esquerda do mínimo.",
+            "Duas ineficiências: (i) " + azb("produtiva") + " — a firma produz abaixo da escala eficiente "
+            "(" + azb("excesso de capacidade") + "): poderia baixar o custo médio produzindo mais; (ii) "
+            + azb("alocativa") + " — P > CMg (markup positivo), com peso morto.",
+            "Contrapartida: a ineficiência é o “preço da variedade”. Consumidores valorizam a diversidade de "
+            "produtos, e parte da capacidade ociosa é o custo de ter muitas marcas e pontos de venda.",
+            vm("Regra-âncora: concorrência monopolística no longo prazo → lucro zero (P = CMe), mas P > CMg e CMe "
+               "acima do mínimo."),
+        ],
+        "dissecando": (cz("[nexo indevido · troca de conceito]") + " A premissa (P = CMe) é verdadeira; o “dado que” "
+                       "e o “portanto” tiram dela uma conclusão que só valeria se o preço igualasse o CMe "
+                       "<b>mínimo</b>, como na concorrência perfeita. Pista: lucro zero não é sinônimo de "
+                       "eficiência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, a firma em concorrência monopolística obtém lucro econômico nulo, mas opera à "
+            "esquerda do ponto de custo médio mínimo.”</i> → CERTO",
+            "<i>“No longo prazo, a firma em concorrência monopolística iguala preço e custo marginal.”</i> → ERRADO "
+            "(P > CMg: mantém markup)",
+        ])],
+        "reescrita": ("Em um mercado de concorrência monopolística " + hl("ocorre ineficiência") + " no cenário de "
+                      "longo prazo: " + hl("embora") + " o preço se iguale ao custo médio, " + hl("isso ocorre "
+                      "acima do custo médio mínimo, e") + " as empresas " + hl("operam") + " com excesso de "
+                      "capacidade ociosa."),
+        "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": ["portanto"], "dificuldade": 2,
+        "comentario_fonte": "P = CMe só é eficiente com custo médio mínimo; na concorrência monopolística a "
+                            "diferenciação faz o equilíbrio de longo prazo ficar longe do mínimo do CMe; a distância "
+                            "até a escala eficiente representa a ineficiência.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (122).png, (119).png, (114).png, (111).png", "tipo_fonte": "GRÁFICO",
+                           "lado": "verso",
+                           "acao": "irrecuperavel (imagens do verso não preservadas; mecanismo descrito no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0692
+    {
+        "id": "ECO-E1-0692-1", "fonte_ref": "E1-0692", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_CONC_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("A concorrência monopolística permite a entrada livre de novas empresas, combinada com "
+                      "diferenciação de produtos; no longo prazo, os lucros econômicos tendem a zero devido à entrada "
+                      "de competidores que diluem o poder de mercado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A concorrência monopolística permite a <u>entrada livre</u> de novas empresas, combinada com "
+                      "diferenciação de produtos; no longo prazo, os lucros econômicos <u>tendem a zero</u> devido à "
+                      "entrada de competidores que diluem o poder de mercado."),
+        "poucas": ("Livre entrada + produto diferenciado: o lucro de curto prazo atrai entrantes, que deslocam a "
+                   "demanda de cada firma para a esquerda até a " + azb("tangência com o CMe") + " — "
+                   + vd("lucro econômico zero") + "."),
+        "destrinchando": [
+            "As duas marcas do modelo de " + oc("Chamberlin") + " estão no item: " + azb("diferenciação") + " (dá "
+            "a cada firma uma demanda negativamente inclinada e algum poder de preço) e " + azb("livre entrada")
+            + " (impede que esse poder renda lucro duradouro).",
+            "Mecânica do ajuste, como descrevem " + oc("Pindyck e Rubinfeld") + ": lucro positivo → entram firmas "
+            "com substitutos próximos → cada firma perde clientes (demanda para a esquerda) e enfrenta demanda "
+            "mais elástica → o processo para quando " + vd("P = CMe") + ". Com prejuízo, o movimento é o inverso "
+            "(saída).",
+            "“Diluir o poder de mercado” não é eliminá-lo: no longo prazo a demanda continua inclinada e "
+            + vd("P > CMg") + " (markup positivo). O que zera é o <b>lucro</b>, não o poder de mercado.",
+            "Por isso o equilíbrio de longo prazo combina lucro zero (como na concorrência perfeita) com "
+            + azb("capacidade ociosa") + " e markup (resíduos do monopólio).",
+            "Exemplos típicos: restaurantes, salões de beleza, padarias, marcas de roupa, cervejas artesanais.",
+            vm("Regra-âncora: livre entrada zera o lucro; diferenciação mantém o markup."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " O item descreve o modelo padrão e se "
+                       "protege com “tendem a zero”. O risco é ler “diluem o poder de mercado” como “eliminam” e "
+                       "concluir que P = CMg — o que o item não diz. 🔥 Banca costuma trocar “lucro zero” por "
+                       "“eficiência” ou “P = CMg” para gerar o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, a entrada de competidores elimina o poder de mercado das firmas em concorrência "
+            "monopolística, que passam a cobrar preço igual ao custo marginal.”</i> → ERRADO (o markup "
+            "permanece)",
+            "<i>“Na concorrência monopolística, a entrada de novas firmas torna a demanda de cada firma mais "
+            "elástica.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["tendem a"], "dificuldade": 1,
+        "comentario_fonte": "Lucro de curto prazo atrai entrantes; segundo Pindyck e Rubinfeld, a demanda das firmas "
+                            "instaladas desloca-se para a esquerda até P = CMe; seguida de ficha-síntese do modelo "
+                            "em resposta de IA.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (227).png, (230).png, (228).png", "tipo_fonte": "GRÁFICO",
+                           "lado": "verso",
+                           "acao": "irrecuperavel (imagens do verso não preservadas; conteúdo descrito no 📖)"}],
+        "alertas": ["texto_corrigido: “tendem azero” → “tendem a zero” (OCR)"],
+    },
+    # ------------------------------------------------------------------ E2-L00023
+    {
+        "id": "ECO-E2-L00023-1", "fonte_ref": "E2-L00023", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Na concorrência monopolística, os agentes possuem uma capacidade ilimitada de determinar o "
+                      "preço dos produtos, semelhante ao monopólio, o que lhes permite ter lucros elevados tanto no "
+                      "curto quanto no longo prazo, independentemente da entrada de novos concorrentes."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na concorrência monopolística, os agentes possuem uma capacidade ") + vm("ilimitada")
+                   + az(" de determinar o preço dos produtos, ") + vm("semelhante ao monopólio") + az(", o que lhes "
+                   "permite ter lucros elevados ") + vm("tanto no curto quanto no longo prazo, independentemente da "
+                   "entrada de novos concorrentes") + az("."),
+        "poucas": ("O poder de preço é " + azb("limitado") + " (há muitos substitutos próximos) e a " + azb("livre "
+                   "entrada") + " zera o lucro econômico no longo prazo. Lucro elevado só no curto prazo."),
+        "destrinchando": [
+            "A diferenciação dá a cada firma uma demanda negativamente inclinada, mas " + azb("muito elástica")
+            + ": se o restaurante sobe demais o preço, o cliente vai ao vizinho. O poder de preço existe, mas é "
+            "pequeno — nada parecido com o do monopolista, que não enfrenta substitutos próximos.",
+            "Diferença estrutural decisiva: no " + azb("monopólio") + " há " + azb("barreiras à entrada") + " e o "
+            "lucro pode persistir no longo prazo; na " + azb("concorrência monopolística") + " a entrada é livre, e "
+            "o lucro atrai concorrentes até que " + vd("P = CMe") + " (lucro econômico zero).",
+            "Curto prazo: lucro positivo, nulo ou prejuízo, conforme a posição da demanda em relação ao CMe. Longo "
+            "prazo: lucro zero por tangência, com capacidade ociosa e P > CMg.",
+            "Quadro-resumo de longo prazo: concorrência perfeita (P = CMg = CMe mínimo); concorrência "
+            "monopolística (P = CMe > CMg, acima do mínimo); monopólio (P > CMe possível, lucro persistente).",
+            vm("Regra-âncora: sem barreira à entrada, não há lucro econômico no longo prazo."),
+        ],
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " Três exageros encadeados: “ilimitada”, "
+                       "“semelhante ao monopólio” e “independentemente da entrada”. O item empresta ao modelo as "
+                       "propriedades do monopólio e ignora a livre entrada, que é a peça-chave. Pista: qualquer "
+                       "“ilimitado” sobre poder de preço é suspeito — nem o monopolista o tem (está preso à "
+                       "demanda)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na concorrência monopolística, as firmas têm algum poder de preço, mas a livre entrada elimina os "
+            "lucros extraordinários no longo prazo.”</i> → CERTO",
+            "<i>“Mesmo o monopolista tem capacidade limitada de fixar preços, pois está restrito pela curva de "
+            "demanda.”</i> → CERTO",
+        ])],
+        "reescrita": ("Na concorrência monopolística, os agentes possuem uma capacidade " + hl("limitada") + " de "
+                      "determinar o preço dos produtos, " + hl("menor que a do monopólio") + ", o que lhes permite "
+                      "ter lucros elevados " + hl("apenas no curto prazo, pois a entrada de novos concorrentes os "
+                      "elimina no longo prazo") + "."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["ilimitada", "independentemente"],
+        "dificuldade": 1,
+        "comentario_fonte": "Capacidade de determinação de preço limitada; a entrada de concorrentes nivela os "
+                            "lucros para perto de zero no longo prazo.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00024
+    {
+        "id": "ECO-E2-L00024-1", "fonte_ref": "E2-L00024", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Diferentemente de mercados de monopólio, na concorrência monopolística a entrada de novos "
+                      "concorrentes em um mercado sem barreiras tende a rebaixar os lucros exorbitantes de curto "
+                      "prazo, aproximando as condições de mercado de uma concorrência perfeita no longo prazo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Diferentemente de mercados de monopólio, na concorrência monopolística a entrada de novos "
+                      "concorrentes em um mercado <u>sem barreiras</u> <u>tende a</u> rebaixar os lucros exorbitantes "
+                      "de curto prazo, <u>aproximando</u> as condições de mercado de uma concorrência perfeita no "
+                      "longo prazo."),
+        "poucas": ("A " + azb("livre entrada") + " é o que separa a concorrência monopolística do monopólio: ela "
+                   "dissipa o lucro de curto prazo até " + vd("P = CMe") + ", como na concorrência perfeita — "
+                   "“aproximando”, não igualando."),
+        "destrinchando": [
+            "Monopólio: barreiras (legais, de escala, de insumo) protegem o lucro, que pode durar indefinidamente. "
+            "Concorrência monopolística: sem barreiras, o lucro sinaliza oportunidade e atrai entrantes.",
+            "A entrada desloca a demanda de cada firma para a esquerda e a torna mais elástica. O ajuste termina na "
+            + azb("tangência demanda–CMe") + ": " + vd("lucro econômico zero") + ", tal como na concorrência "
+            "perfeita.",
+            "Por que “aproximando” e não “igualando”: no longo prazo ainda há " + vd("P > CMg") + " (markup) e "
+            "produção abaixo da escala eficiente (" + azb("capacidade ociosa") + "). A semelhança com a "
+            "concorrência perfeita está no lucro zero e na pressão competitiva, não na eficiência.",
+            "Quanto mais firmas e menos diferenciação, mais elástica a demanda de cada uma e mais o resultado se "
+            "aproxima do competitivo.",
+            vm("Regra-âncora: concorrência monopolística ≈ concorrência perfeita no lucro (zero), ≠ na eficiência "
+               "(P > CMg, capacidade ociosa)."),
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " O item é salvo por “tende a” e "
+                       "“aproximando”. Uma versão com “igualando as condições de concorrência perfeita” ou "
+                       "“eliminando a ineficiência” seria ERRADA. O adjetivo “exorbitantes” é retórico e não altera "
+                       "o julgamento."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, a concorrência monopolística reproduz integralmente o equilíbrio da concorrência "
+            "perfeita, inclusive a produção no custo médio mínimo.”</i> → ERRADO (há capacidade ociosa)",
+            "<i>“No monopólio, as barreiras à entrada permitem que o lucro extraordinário persista no longo "
+            "prazo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["tende a", "aproximando"],
+        "dificuldade": 1,
+        "comentario_fonte": "A facilidade de entrada distingue a concorrência monopolística do monopólio; lucros de "
+                            "curto prazo se dissipam com a entrada, como na concorrência perfeita.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00025
+    {
+        "id": "ECO-E2-L00025-1", "fonte_ref": "E2-L00025", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("No curto prazo, as empresas em mercados de concorrência monopolística podem obter lucros "
+                      "extraordinários, pois têm a capacidade de discriminar preços, mesmo com a presença de muitos "
+                      "concorrentes com produtos substitutos próximos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("No curto prazo, as empresas em mercados de concorrência monopolística <u>podem</u> obter "
+                      "lucros extraordinários, pois têm a <u>capacidade de discriminar preços</u>, mesmo com a "
+                      "presença de muitos concorrentes com produtos substitutos próximos."),
+        "poucas": ("Lucro extraordinário no curto prazo é possível, porque a " + azb("diferenciação") + " dá a cada "
+                   "firma algum " + azb("poder de preço") + " (demanda inclinada). A fonte lê “discriminar preços” "
+                   "como esse poder de fixar o próprio preço."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "Em sentido técnico, " + azb("discriminar preços") + " é cobrar preços diferentes pelo "
+                          "mesmo bem, e não é isso que explica o lucro de curto prazo no modelo de "
+                          + oc("Chamberlin") + ": a causa é o poder de mercado gerado pela diferenciação. Uma banca "
+                          "rigorosa poderia dar ERRADO pelo nexo. O CERTO da fonte se sustenta lendo a expressão "
+                          "como “capacidade de fixar preço acima do custo marginal” — firmas com algum poder de "
+                          "mercado também podem, de fato, discriminar.")],
+        "destrinchando": [
+            "Curto prazo: o número de firmas está dado. Cada uma escolhe q onde RMg = CMg e lê o preço na sua "
+            "demanda; se esse preço superar o CMe, há " + vd("lucro extraordinário") + " (se ficar abaixo, "
+            "prejuízo).",
+            "A origem do poder de preço é a " + azb("diferenciação do produto") + ": marca, localização, qualidade, "
+            "atendimento. Mesmo com muitos concorrentes e substitutos próximos, o cliente fiel não troca de "
+            "fornecedor por qualquer centavo — a demanda é inclinada, ainda que elástica.",
+            "Firmas com algum poder de mercado podem, além disso, " + azb("discriminar") + " (happy hour, "
+            "fidelidade, cupons), o que reforça a captura de excedente. Mas isso é ferramenta adicional, não a "
+            "condição do lucro.",
+            "No longo prazo, o lucro atrai entrantes, a demanda de cada firma recua e fica mais elástica até a "
+            "tangência com o CMe: " + vd("lucro zero") + ".",
+            vm("Regra-âncora: lucro de curto prazo na concorrência monopolística vem do poder de preço dado pela "
+               "diferenciação; a livre entrada o elimina no longo prazo."),
+        ],
+        "dissecando": (cz("[modulador relativo · detalhe]") + " A conclusão (lucro no curto prazo) está certa e "
+                       "protegida pelo “podem”; o ponto frágil é a justificativa (“discriminar preços”), usada em "
+                       "sentido amplo. Ao julgar itens de curso, confira se a banca usa o termo técnico ou o "
+                       "coloquial."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No curto prazo, as empresas em concorrência monopolística podem obter lucros extraordinários "
+            "graças ao poder de mercado conferido pela diferenciação de seus produtos.”</i> → CERTO",
+            "<i>“No longo prazo, as empresas em concorrência monopolística mantêm lucros extraordinários graças à "
+            "diferenciação.”</i> → ERRADO (a livre entrada zera o lucro)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "DETALHE"], "moduladores": ["podem", "mesmo com"], "dificuldade": 2,
+        "comentario_fonte": "No curto prazo as firmas obtêm lucros extraordinários por terem algum poder de preço "
+                            "devido à diferenciação, o que permitiria praticar discriminação de preços apesar da "
+                            "rivalidade.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: “discriminar preços” não é a causa técnica do lucro de curto prazo (é o poder de "
+                    "mercado da diferenciação); CERTO da fonte mantido na leitura ampla da expressão"],
+    },
+    # ------------------------------------------------------------------ E2-L00026
+    {
+        "id": "ECO-E2-L00026-1", "fonte_ref": "E2-L00026", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A concorrência monopolística, apesar de compartilhar características com o monopólio em "
+                      "termos de capacidade de preço, permite a mobilidade de entrada de novos agentes, o que no "
+                      "longo prazo faz com que o mercado se aproxime da estrutura de concorrência perfeita, "
+                      "eliminando os lucros extraordinários."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A concorrência monopolística, apesar de compartilhar características com o monopólio em "
+                      "termos de capacidade de preço, permite a <u>mobilidade de entrada</u> de novos agentes, o que "
+                      "no longo prazo faz com que o mercado <u>se aproxime</u> da estrutura de concorrência perfeita, "
+                      "eliminando os lucros extraordinários."),
+        "poucas": ("Estrutura " + azb("híbrida") + ": do monopólio herda o poder de preço (demanda inclinada); da "
+                   "concorrência perfeita, a " + azb("livre entrada") + ", que zera o lucro no longo prazo."),
+        "destrinchando": [
+            "O nome resume o modelo: “monopolística” pela " + azb("diferenciação") + " — cada firma é a única "
+            "vendedora da <b>sua</b> marca e tem demanda inclinada (P > RMg); “concorrência” pelo " + azb("grande "
+            "número de firmas") + " e pela " + azb("livre entrada e saída") + ".",
+            "Longo prazo: a entrada desloca a demanda de cada firma até a tangência com o CMe → "
+            + vd("lucro extraordinário = 0") + ". Nesse ponto o resultado se parece com o da concorrência "
+            "perfeita (lucro normal).",
+            "O que permanece de monopólio: " + vd("P > CMg") + " (markup) e produção à esquerda do CMe mínimo "
+            "(" + azb("capacidade ociosa") + "). Por isso o item diz “se aproxime”, e não “se iguale”.",
+            "Comparação útil com o " + azb("oligopólio") + ": lá há poucas firmas, interdependência estratégica e, "
+            "em geral, barreiras; aqui, muitas firmas pequenas que não reagem umas às outras individualmente.",
+            vm("Regra-âncora: monopólio no curto prazo (poder de preço), concorrência no longo prazo (lucro zero)."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Mais uma variação do mesmo bloco: o item "
+                       "repete a lógica de lucro zero por livre entrada e se protege com “se aproxime”. O verbo "
+                       "decisivo é “eliminando os lucros extraordinários” — e não “eliminando as ineficiências”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A mobilidade de entrada faz com que, no longo prazo, a concorrência monopolística elimine o "
+            "markup e produza no custo médio mínimo.”</i> → ERRADO (só o lucro some; markup e capacidade ociosa "
+            "ficam)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["se aproxime"], "dificuldade": 1,
+        "comentario_fonte": "Combina elementos de monopólio e de concorrência perfeita; a mobilidade de entrada reduz "
+                            "os lucros extraordinários e o lucro econômico tende a zero no longo prazo.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00239
+    {
+        "id": "ECO-E2-L00239-1", "fonte_ref": "E2-L00239", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_CONC_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("No longo prazo, empresas em concorrência monopolística operam com capacidade plenamente "
+                      "utilizada, de forma que o preço se iguala tanto ao custo marginal quanto ao custo total "
+                      "médio, como na concorrência perfeita."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No longo prazo, empresas em concorrência monopolística operam com ")
+                   + vm("capacidade plenamente utilizada") + az(", de forma que o preço se iguala ")
+                   + vm("tanto ao custo marginal quanto") + az(" ao custo total médio, ")
+                   + vm("como na concorrência perfeita") + az("."),
+        "poucas": ("No longo prazo, " + vd("P = CTMe") + " (lucro zero), mas " + vd("P > CMg") + " e a produção "
+                   "fica abaixo da escala que minimiza o CTMe: há " + azb("capacidade ociosa") + "."),
+        "destrinchando": [
+            "Equilíbrio de longo prazo de " + oc("Chamberlin") + ": duas condições ao mesmo tempo — "
+            + vd("RMg = CMg") + " (a firma maximiza lucro) e " + vd("P = CTMe") + " (a entrada zerou o lucro). "
+            "Geometricamente, a demanda tangencia o CTMe.",
+            "Como a demanda da firma é inclinada, P > RMg = CMg. E a tangência de uma reta descendente com o CTMe "
+            "só pode ocorrer onde o CTMe também desce — à esquerda do mínimo. Logo: " + vd("P = CTMe > CMg")
+            + ".",
+            azb("Capacidade ociosa") + " (ou excesso de capacidade): a firma produz menos que a quantidade de custo "
+            "médio mínimo. Se aumentasse a produção, o custo unitário cairia, mas teria de baixar o preço de todas "
+            "as unidades, e a receita marginal não compensaria.",
+            "Na " + azb("concorrência perfeita") + ", a demanda da firma é horizontal; a tangência ocorre no "
+            "mínimo do CTMe e vale " + vd("P = CMg = CTMe mínimo") + " — as três igualdades que o item atribui, "
+            "por engano, à concorrência monopolística.",
+            vm("Regra-âncora: concorrência monopolística de longo prazo → P = CTMe > CMg, com capacidade ociosa."),
+        ],
+        "grafico_verso": "ECO-E2-L00239-1-V1",
+        "dissecando": (cz("[troca de conceito · meia-verdade]") + " O item copia o equilíbrio de longo prazo da "
+                       "concorrência perfeita. Há um pedaço verdadeiro (P = CTMe), cercado de dois enxertos falsos "
+                       "(capacidade plena e P = CMg). Pista: “como na concorrência perfeita” em item de concorrência "
+                       "monopolística costuma ser a armadilha. 🔥 Recorrente em CEBRASPE e simulados."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, empresas em concorrência monopolística têm lucro econômico nulo, mas operam com "
+            "capacidade ociosa e preço superior ao custo marginal.”</i> → CERTO",
+            "<i>“No longo prazo, a firma em concorrência monopolística produz no ponto de mínimo do custo total "
+            "médio.”</i> → ERRADO (produz à esquerda do mínimo)",
+        ])],
+        "reescrita": ("No longo prazo, empresas em concorrência monopolística operam com " + hl("capacidade ociosa")
+                      + ", de forma que o preço se iguala ao custo total médio" + hl(", mas supera o custo "
+                      "marginal") + ", " + hl("diferentemente do que ocorre") + " na concorrência perfeita."),
+        "tipo_erro": ["TROCA_CONCEITO", "MEIA_VERDADE"], "moduladores": ["plenamente", "tanto… quanto"],
+        "dificuldade": 1,
+        "comentario_fonte": "No longo prazo o lucro é zero, mas as firmas operam com capacidade ociosa, abaixo da "
+                            "escala que minimiza o CTM, e o preço permanece acima do custo marginal.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00288
+    {
+        "id": "ECO-E2-L00288-1", "fonte_ref": "E2-L00288", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": COM_CONC_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("Diferentemente da concorrência perfeita, onde o equilíbrio de longo prazo ocorre no ponto de "
+                      "escala eficiente mínima (custo total médio mínimo), na concorrência monopolística as firmas "
+                      "operam com excesso de capacidade (capacidade ociosa) no longo prazo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Diferentemente da concorrência perfeita, onde o equilíbrio de longo prazo ocorre no ponto de "
+                      "escala eficiente mínima (custo total médio mínimo), na concorrência monopolística as firmas "
+                      "operam com <u>excesso de capacidade</u> (capacidade ociosa) no longo prazo."),
+        "poucas": ("É o " + azb("teorema do excesso de capacidade") + ": a demanda inclinada tangencia o CTMe na "
+                   "parte descendente, antes do mínimo. A firma produz menos do que a " + vd("escala eficiente")
+                   + "."),
+        "destrinchando": [
+            azb("Concorrência perfeita") + ": demanda da firma horizontal; a entrada e a saída levam o preço ao "
+            "mínimo do CTMe → " + vd("P = CMg = CTMe mínimo") + ". Cada firma produz na " + azb("escala eficiente "
+            "mínima") + ".",
+            azb("Concorrência monopolística") + ": a demanda da firma é inclinada (produto diferenciado). A entrada "
+            "a empurra para baixo até tocar o CTMe sem cruzá-lo; uma reta descendente só tangencia uma curva em U "
+            "no trecho em que ela também desce. Resultado: q de longo prazo " + vd("à esquerda do mínimo") + ".",
+            "A distância entre a quantidade de longo prazo e a de CTMe mínimo é o " + azb("excesso de capacidade")
+            + ": a firma poderia reduzir o custo unitário produzindo mais, mas não o faz porque teria de baixar "
+            "o preço.",
+            "Leitura de bem-estar: parte dessa ineficiência é o custo da " + azb("variedade") + " — muitos "
+            "restaurantes meio vazios significam mais opções e menos deslocamento para o consumidor. Não há "
+            "consenso de que menos firmas, mais eficientes, seriam melhores.",
+            vm("Regra-âncora: tangência no trecho descendente do CTMe = capacidade ociosa."),
+        ],
+        "dissecando": (cz("[literalidade]") + " O item enuncia o teorema do excesso de capacidade em linguagem de "
+                       "manual. O risco é o candidato achar que lucro zero implica escala eficiente e marcar "
+                       "ERRADO. Pista: só a demanda horizontal toca o CTMe no mínimo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na concorrência monopolística, a firma de longo prazo opera à direita do ponto de custo total "
+            "médio mínimo.”</i> → ERRADO (opera à esquerda)",
+            "<i>“Na concorrência perfeita, o equilíbrio de longo prazo ocorre no mínimo do custo total médio.”</i> "
+            "→ CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Demanda inclinada tangencia o CTMe na parte declinante, antes do mínimo (teorema do "
+                            "excesso de capacidade); a firma poderia reduzir o custo médio produzindo mais, mas não o "
+                            "faz para não reduzir o preço.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00328
+    {
+        "id": "ECO-E2-L00328-1", "fonte_ref": "E2-L00328", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": COM_CONC_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de concorrência monopolística, o equilíbrio de longo prazo caracteriza-se pelo lucro "
+                      "econômico nulo e pela eficiência produtiva, uma vez que a livre entrada de firmas força o "
+                      "preço a se igualar ao custo médio em seu ponto de mínimo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de concorrência monopolística, o equilíbrio de longo prazo caracteriza-se pelo lucro "
+                      "econômico nulo e ") + vm("pela eficiência produtiva") + az(", uma vez que a livre entrada de "
+                      "firmas força o preço a se igualar ao custo médio ") + vm("em seu ponto de mínimo") + az("."),
+        "poucas": ("Lucro nulo, sim; " + azb("eficiência produtiva") + ", não. A livre entrada leva P ao CMe, mas no "
+                   "ponto de " + azb("tangência") + " com a demanda inclinada — no trecho descendente do CMe, acima "
+                   "do mínimo."),
+        "destrinchando": [
+            azb("Eficiência produtiva") + " = produzir ao menor custo médio possível (mínimo do CMe). "
+            + azb("Eficiência alocativa") + " = P = CMg. A concorrência perfeita de longo prazo tem as duas; a "
+            "concorrência monopolística não tem nenhuma.",
+            "A livre entrada garante só uma coisa: " + vd("lucro econômico zero") + " (P = CMe). Onde essa "
+            "igualdade ocorre depende do formato da demanda da firma. Horizontal (concorrência perfeita) → toca o "
+            "CMe no mínimo. Inclinada (produto diferenciado) → toca o CMe antes do mínimo.",
+            "Consequências da tangência à esquerda do mínimo: " + azb("capacidade ociosa") + " (q abaixo da escala "
+            "eficiente) e " + vd("P > CMg") + " (markup, peso morto).",
+            "Ficha-síntese do modelo: muitas firmas, produto diferenciado, livre entrada; curto prazo com lucro ou "
+            "prejuízo; longo prazo com lucro zero, P = CMe > CMg e excesso de capacidade.",
+            vm("Regra-âncora: livre entrada zera o lucro, mas só a demanda horizontal leva ao CMe mínimo."),
+        ],
+        "grafico_verso": "ECO-E2-L00328-1-V1",
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " “Lucro econômico nulo” é verdadeiro e funciona "
+                       "como isca; o erro está em importar da concorrência perfeita a eficiência produtiva e o “ponto "
+                       "de mínimo”. Pista: a justificativa (“livre entrada força P = CMe mínimo”) mistura a causa "
+                       "certa (livre entrada) com o resultado de outro modelo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de concorrência monopolística, o equilíbrio de longo prazo caracteriza-se pelo lucro "
+            "econômico nulo e pela produção em escala inferior à eficiente.”</i> → CERTO",
+            "<i>“No modelo de concorrência monopolística, o equilíbrio de longo prazo caracteriza-se pela "
+            "eficiência alocativa, com preço igual ao custo marginal.”</i> → ERRADO (P > CMg)",
+        ])],
+        "reescrita": ("No modelo de concorrência monopolística, o equilíbrio de longo prazo caracteriza-se pelo lucro "
+                      "econômico nulo e pela " + hl("ineficiência produtiva (capacidade ociosa)") + ", uma vez que a "
+                      "livre entrada de firmas força o preço a se igualar ao custo médio " + hl("no trecho "
+                      "descendente da curva, à esquerda de seu ponto de mínimo") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Lucro nulo, mas sem eficiência produtiva: a demanda tangencia o custo médio na parte "
+                            "descendente (teorema da capacidade ociosa) e P > CMg; uma resposta escreve “custo médio "
+                            "(CMg)” por engano; ficha-síntese do modelo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 042", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 043-044", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvidas (ficha-síntese no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01504
+    {
+        "id": "ECO-E2-L01504-1", "fonte_ref": "E2-L01504", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": COM_FIRMA_CUSTOS,
+        "rotulo_item": "Item",
+        "assertiva": ("A competição monopolística é uma estrutura de mercado caracterizada por lucro zero e nível de "
+                      "produção abaixo da escala eficiente, no longo prazo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A competição monopolística é uma estrutura de mercado caracterizada por <u>lucro zero</u> e "
+                      "nível de produção <u>abaixo da escala eficiente</u>, no longo prazo."),
+        "poucas": ("No longo prazo, a entrada empurra a demanda da firma até " + azb("tangenciar o CMe") + ": "
+                   + vd("lucro zero") + ", num ponto à esquerda do CMe mínimo — " + azb("capacidade ociosa") + "."),
+        "destrinchando": [
+            "Curto prazo (painel a): a firma escolhe q₁ onde RMg = CMg e cobra P₁ na demanda. Se P₁ > CMe, há "
+            "lucro — o retângulo (P₁ − CMe) × q₁.",
+            "Ajuste: o lucro atrai entrantes com produtos parecidos. A demanda de cada firma recua para a esquerda "
+            "e fica mais elástica, até que não haja mais lucro a disputar.",
+            "Longo prazo (painel b): a demanda apenas toca o CMe em q₂, onde também RMg = CMg. " + vd("P₂ = CMe")
+            + " (lucro zero) e " + vd("P₂ > CMg") + " (markup). Como a tangência ocorre no trecho descendente, q₂ "
+            "fica abaixo da " + azb("escala eficiente mínima") + " (mínimo do CMe).",
+            "As duas ineficiências apontadas por " + oc("Pindyck e Rubinfeld") + ": " + azb("capacidade ociosa")
+            + " (custo médio acima do mínimo) e " + azb("markup") + " (preço acima do CMg, peso morto). Em troca, "
+            "variedade de produtos.",
+            vm("Regra-âncora: longo prazo de Chamberlin = lucro zero + capacidade ociosa + P > CMg."),
+        ],
+        "grafico_verso": "ECO-E2-L01504-1-V1",
+        "dissecando": (cz("[literalidade]") + " Item-síntese que combina as duas marcas do longo prazo. O risco é "
+                       "achar que “lucro zero” obriga a produzir na escala eficiente, como na concorrência perfeita. "
+                       "“Competição monopolística” é só outro nome para concorrência monopolística."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A competição monopolística é caracterizada, no longo prazo, por lucro zero e produção na escala "
+            "eficiente mínima.”</i> → ERRADO (troca de modelo: é o resultado da concorrência perfeita)",
+            "<i>“Na competição monopolística, a firma pode ter lucro econômico positivo no curto prazo.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Duas respostas convergentes: lucro zero por livre entrada (P = CMe) e excesso de "
+                            "capacidade porque a tangência ocorre à esquerda do CMe mínimo; gráfico de Pindyck "
+                            "comparando curto e longo prazo; quadro sobre capacidade ociosa e markup.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 383", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01504-1-V1)"},
+                          {"ref": "IMAGEM 384", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01541
+    {
+        "id": "ECO-E2-L01541-1", "fonte_ref": "E2-L01541", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": COM_TEORIA_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("Num mercado em que a concorrência entre as firmas ocorre pela diferenciação de produto, a taxa "
+                      "de <i>mark up</i> será menor quanto mais firmas houver neste mercado e quanto menor for o grau "
+                      "de diferenciação do produto."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Num mercado em que a concorrência entre as firmas ocorre pela diferenciação de produto, a "
+                      "taxa de <i>mark up</i> será <u>menor</u> quanto <u>mais firmas</u> houver neste mercado e "
+                      "quanto <u>menor</u> for o grau de diferenciação do produto."),
+        "poucas": ("Markup = " + vd("1/|ε|") + " (Lerner). Mais firmas e produtos mais parecidos tornam a demanda de "
+                   "cada firma " + azb("mais elástica") + " — e o markup encolhe."),
+        "destrinchando": [
+            "Regra de " + oc("Lerner") + ": " + vd("(P − CMg)/P = 1/|ε|") + ", em que ε é a elasticidade da "
+            "demanda <b>da firma</b> (não a do mercado). Tudo o que aumenta |ε| reduz o markup.",
+            azb("Mais firmas") + ": cada uma tem mais concorrentes próximos; uma alta de preço desvia clientes com "
+            "mais facilidade → |ε| maior.",
+            azb("Menos diferenciação") + ": os produtos ficam mais parecidos, mais próximos de " + azb("substitutos "
+            "perfeitos") + "; no limite (produto homogêneo, muitas firmas), a demanda da firma é horizontal, "
+            + vd("|ε| → ∞") + " e " + vd("P → CMg") + ": concorrência perfeita.",
+            "Na direção oposta: marcas fortes, fidelidade e poucos rivais tornam a demanda inelástica e permitem "
+            "margens altas. Por isso firmas investem em publicidade e diferenciação — para reduzir a elasticidade "
+            "da própria demanda.",
+            vm("Regra-âncora: mais substitutos (mais firmas, menos diferenciação) → |ε| maior → markup menor."),
+        ],
+        "dissecando": (cz("[literalidade]") + " O item aplica Lerner à concorrência monopolística com duas "
+                       "variáveis no mesmo sentido. O risco é inverter uma delas (“menor diferenciação → markup "
+                       "maior”). Pista: tudo que aproxima o mercado da concorrência perfeita reduz o markup."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A taxa de mark up será menor quanto maior for o grau de diferenciação do produto.”</i> → ERRADO "
+            "(inversão: diferenciação reduz a elasticidade e eleva o markup)",
+            "<i>“O índice de Lerner relevante para a firma depende da elasticidade da demanda que ela enfrenta, "
+            "e não da demanda de mercado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["quanto mais", "quanto menor"], "dificuldade": 1,
+        "comentario_fonte": "Mais firmas e menor diferenciação elevam a elasticidade da demanda percebida pela firma "
+                            "e reduzem o markup (P − CMg)/P; o verso também traz, por engano, comentário sobre outro "
+                            "item (markup sobre custo médio × marginal).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 414", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (regra de Lerner no 📖)"}],
+        "alertas": [],
+    },
 ]

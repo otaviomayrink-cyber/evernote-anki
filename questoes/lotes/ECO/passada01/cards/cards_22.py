@@ -906,4 +906,389 @@ CARDS = [
                                    "conteúdo)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0690
+    {
+        "id": "ECO-E1-0690-1", "fonte_ref": "E1-0690", "destino": "10", "subtema": H2["cb"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos modelos de oligopólio, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de oligopólio de Cournot, cada firma escolhe sua quantidade de produção levando em "
+                      "consideração a reação esperada das concorrentes, e o equilíbrio ocorre quando nenhuma empresa "
+                      "deseja alterar unilateralmente sua produção, resultando em quantidades e preços estáveis."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("No modelo de oligopólio de Cournot, cada firma escolhe sua <u>quantidade</u> de produção "
+                      "levando em consideração a <u>reação esperada das concorrentes</u>, e o equilíbrio ocorre quando "
+                      "<u>nenhuma empresa deseja alterar unilateralmente</u> sua produção, resultando em quantidades e "
+                      "preços estáveis."),
+        "poucas": ("Em " + azb("Cournot") + " as firmas escolhem " + vd("quantidades") + " simultaneamente, cada "
+                   "uma dando a melhor resposta à produção esperada da rival; o equilíbrio é um "
+                   + azb("equilíbrio de Nash") + ": ninguém ganha mudando sozinho."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "A rigor, a firma de Cournot toma a <b>produção</b> esperada da rival como dada e supõe "
+                          "que ela <b>não reage</b> (variação conjectural nula); quem antecipa a reação da rival é "
+                          "a líder de Stackelberg. O CERTO se sustenta lendo “reação esperada” como a quantidade "
+                          "que a rival escolherá (a sua função de reação). Numa prova CEBRASPE, a expressão "
+                          "poderia ser usada para tornar o item ERRADO.")],
+        "destrinchando": [
+            "Modelo de " + oc("Cournot") + " (1838): duopólio, produto homogêneo, decisões " + azb("simultâneas")
+            + " sobre quantidade; o preço sai da demanda de mercado para a produção total.",
+            "Cada firma tem uma " + azb("função de reação") + ": a quantidade que maximiza seu lucro para cada "
+            "produção possível da rival, q₁ = R₁(q₂). Quanto mais a rival produz, menos vale a pena produzir.",
+            "O " + azb("equilíbrio de Cournot-Nash") + " é o cruzamento das duas funções de reação: as expectativas "
+            "se confirmam e nenhuma firma quer mudar sozinha. Exemplo: P = 14 − Q, CMg = 2 → "
+            + vd("q₁ = q₂ = 4") + ", Q = 8, P = 6 — entre o monopólio (Q = 6, P = 8) e a concorrência (Q = 12, "
+            "P = 2).",
+            "Com n firmas iguais, a produção total é " + vd("n/(n + 1)") + " da competitiva: o resultado converge "
+            "para a concorrência perfeita quando n cresce.",
+            vm("Regra-âncora: Cournot = quantidade + simultâneo + Nash no cruzamento das funções de reação."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " Item-definição com três peças certas (quantidade, "
+                       "simultaneidade implícita, Nash). O detalhe arriscado é “reação esperada”, que lembra "
+                       "Stackelberg. 🔥 As bancas trocam “quantidade” por “preço” (Bertrand) ou “simultânea” por "
+                       "“sequencial” (Stackelberg)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Cournot, as firmas escolhem simultaneamente os preços.”</i> → ERRADO (troca de "
+            "conceito: isso é Bertrand)",
+            "<i>“No equilíbrio de Cournot, cada firma está sobre a sua função de reação.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["unilateralmente"], "dificuldade": 2,
+        "comentario_fonte": ("Competição por quantidades; equilíbrio de Cournot-Nash com funções de melhor resposta; "
+                             "expectativas confirmadas e nenhum incentivo a desvio unilateral."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: “levando em consideração a reação esperada das concorrentes” é impreciso para "
+                    "Cournot (variação conjectural nula); gabarito CERTO mantido"],
+    },
+    # ------------------------------------------------------------------ E2-L00240
+    {
+        "id": "ECO-E2-L00240-1", "fonte_ref": "E2-L00240", "destino": "10", "subtema": H2["stack"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de duopólio de Stackelberg, a empresa seguidora, por reagir estrategicamente à "
+                      "produção da líder, obtém maior lucro do que obteria em um equilíbrio de Cournot, pois "
+                      "internaliza a ação da concorrente e ajusta sua produção em um nível superior."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de duopólio de Stackelberg, a empresa seguidora, por reagir estrategicamente à "
+                      "produção da líder, obtém ") + vm("maior") + az(" lucro do que obteria em um equilíbrio de "
+                      "Cournot, pois internaliza a ação da concorrente e ajusta sua produção em um nível ")
+                   + vm("superior") + az("."),
+        "poucas": ("Quem ganha com a ordem das jogadas é a " + azb("líder") + ". A seguidora produz " + vd("menos")
+                   + " e lucra " + vd("menos") + " que em Cournot."),
+        "destrinchando": [
+            "Em " + oc("Stackelberg") + " a líder escolhe q₁ antecipando a função de reação da seguidora; ao se "
+            "comprometer com uma produção grande, “ocupa” o mercado. A seguidora, diante de q₁ já fixado, só pode "
+            "dar a melhor resposta — que é produzir pouco.",
+            "Exemplo (P = 14 − Q, CMg = 2): Cournot → " + vd("4 + 4") + ", P = 6, lucro de " + vd("16")
+            + " para cada uma. Stackelberg → líder " + vd("6") + " e seguidora " + vd("3") + ", P = 5; lucros de "
+            + vd("18") + " (líder) e " + vd("9") + " (seguidora).",
+            "Comparação com Cournot: a líder produz e lucra mais; a seguidora produz e lucra menos; a produção "
+            "total é maior (9 > 8) e o preço menor (5 < 6) — o consumidor ganha.",
+            "Reagir não dá vantagem: no jogo sequencial em quantidades, a " + azb("vantagem do primeiro a jogar")
+            + " vem do compromisso. (Em jogos de preço com produtos diferenciados pode valer o contrário — "
+            "vantagem do segundo a jogar —, mas não no Stackelberg clássico.)",
+            vm("Regra-âncora: Stackelberg em quantidade → líder ↑ (q e lucro), seguidora ↓ (q e lucro)."),
+        ],
+        "dissecando": (cz("[inversão]") + " O item atribui à seguidora a vantagem que é da líder e cria um "
+                       "nexo plausível (“reagir estrategicamente”, “internalizar a ação da concorrente”). Pista: "
+                       "quem internaliza a função de reação da rival é a líder; a seguidora apenas reage."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Stackelberg, a seguidora produz menos do que produziria no equilíbrio de "
+            "Cournot.”</i> → CERTO",
+            "<i>“No modelo de Stackelberg, o lucro conjunto das duas empresas supera o de Cournot.”</i> → ERRADO "
+            "(com mais produção total e preço menor, o lucro conjunto cai: 27 < 32 no exemplo)",
+        ])],
+        "reescrita": ("No modelo de duopólio de Stackelberg, a empresa seguidora, por reagir estrategicamente à "
+                      "produção da líder, obtém " + hl("menor") + " lucro do que obteria em um equilíbrio de Cournot, "
+                      "pois internaliza a ação da concorrente e ajusta sua produção em um nível " + hl("inferior")
+                      + "."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A líder antecipa a reação da seguidora e maximiza seu lucro; a seguidora, reativa, "
+                             "produz menos e lucra menos que em Cournot."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00289
+    {
+        "id": "ECO-E2-L00289-1", "fonte_ref": "E2-L00289", "destino": "10", "subtema": H2["stack"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de duopólio de Stackelberg, a empresa líder, ao antecipar a função de reação da "
+                      "seguidora, produz uma quantidade superior à que produziria no equilíbrio de Cournot, enquanto "
+                      "a seguidora é forçada a produzir menos, resultando em um lucro maior para a líder."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de duopólio de Stackelberg, a empresa líder, <u>ao antecipar a função de reação da "
+                      "seguidora</u>, produz uma quantidade <u>superior</u> à que produziria no equilíbrio de Cournot, "
+                      "enquanto a seguidora é forçada a produzir <u>menos</u>, resultando em um lucro <u>maior</u> "
+                      "para a líder."),
+        "poucas": ("A líder usa a " + azb("vantagem do primeiro a jogar") + ": compromete-se com mais produção, a "
+                   "seguidora reage produzindo menos, e a líder lucra mais que em Cournot."),
+        "destrinchando": [
+            "A líder resolve o problema da seguidora antes dela: sabendo que q₂ = R₂(q₁), maximiza o lucro "
+            "escolhendo q₁ sobre essa curva. É um " + azb("jogo sequencial") + ", resolvido por "
+            + azb("indução retroativa") + " (equilíbrio de Nash perfeito em subjogos).",
+            "Como q₂ cai quando q₁ sobe (as quantidades são " + azb("substitutos estratégicos") + "), a líder tem "
+            "incentivo a produzir mais do que produziria se as decisões fossem simultâneas.",
+            "Números (P = 14 − Q, CMg = 2): Cournot " + vd("4 e 4") + ", lucros 16 e 16; Stackelberg "
+            + vd("6 e 3") + ", lucros " + vd("18 e 9") + ". Com demanda linear e custos iguais, a líder produz a "
+            "quantidade de monopólio e o dobro da seguidora.",
+            "O compromisso precisa ser crível (capacidade instalada, produção já feita): se a líder pudesse "
+            "rever a decisão depois, o jogo voltaria a ser simultâneo e o resultado, Cournot.",
+            vm("Regra-âncora: líder de Stackelberg produz mais e lucra mais; seguidora, menos e menos."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Item com quatro comparações (q da líder, q da seguidora, lucro "
+                       "da líder, mecanismo) e todas no sentido certo. A banca costuma inverter uma delas — "
+                       "geralmente o lucro da seguidora ou o da líder. Ver ECO-E2-L00240-1 e ECO-E2-L00678-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…resultando em lucro maior também para a seguidora.”</i> → ERRADO (a seguidora lucra menos que "
+            "em Cournot)",
+            "<i>“No Stackelberg com demanda linear e custos iguais, a líder produz a mesma quantidade que um "
+            "monopolista produziria.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["forçada"], "dificuldade": 1,
+        "comentario_fonte": ("Jogo sequencial de quantidades; vantagem de mover primeiro permite à líder escolher "
+                             "o ponto da curva de reação da seguidora que maximiza seu lucro."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00291
+    {
+        "id": "ECO-E2-L00291-1", "fonte_ref": "E2-L00291", "destino": "10", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Acerca das estruturas de mercado e da teoria dos mercados contestáveis, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria dos Mercados Contestáveis (Baumol) sugere que, na ausência de custos irrecuperáveis "
+                      "(<i>sunk costs</i>) e com livre entrada e saída, mesmo um mercado oligopolista ou monopolista "
+                      "pode apresentar preços próximos aos de concorrência perfeita devido à ameaça de entrada "
+                      "(<i>hit-and-run entry</i>)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria dos Mercados Contestáveis (Baumol) sugere que, <u>na ausência de custos "
+                      "irrecuperáveis</u> (<i>sunk costs</i>) e com livre entrada e saída, mesmo um mercado "
+                      "oligopolista ou monopolista <u>pode</u> apresentar preços próximos aos de concorrência perfeita "
+                      "devido à <u>ameaça de entrada</u> (<i>hit-and-run entry</i>)."),
+        "poucas": ("Sem " + azb("custos irrecuperáveis") + ", entrar e sair é grátis; a " + azb("ameaça de entrada "
+                   "relâmpago") + " impede o incumbente de cobrar acima do custo, mesmo sendo monopolista."),
+        "destrinchando": [
+            oc("Baumol") + " (com " + oc("Panzar e Willig") + ", 1982) inverteu a pergunta da organização "
+            "industrial: em vez de “quantas firmas há?”, “quão fácil é entrar e sair?”.",
+            "Mecanismo " + azb("hit-and-run") + ": se o incumbente cobra acima do custo médio, um entrante com a "
+            "mesma tecnologia vende um pouco mais barato, captura o mercado, realiza o lucro e sai antes que o "
+            "incumbente reaja. Antecipando isso, o incumbente cobra o " + vd("preço de lucro zero") + ".",
+            "Condição decisiva: " + vd("custos irrecuperáveis nulos") + ". Custo fixo recuperável (revenda do "
+            "ativo) não impede a contestação; o que trava a entrada é o gasto que se perde na saída "
+            "(publicidade, ativos específicos, P&D).",
+            "Usos e limites: a teoria apoiou desregulamentações (aviação, transporte rodoviário) e a ênfase "
+            "antitruste nas barreiras à entrada; críticos apontam que custos irrecuperáveis são a regra e que "
+            "incumbentes reagem rápido via preço, o que torna rara a contestabilidade perfeita.",
+            vm("Regra-âncora: contestabilidade depende de entrada e saída sem custo, não do número de firmas."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Definição completa e correta, com "
+                       "“pode” e “próximos” atenuando a conclusão. Itens errados do tema costumam exigir “grande "
+                       "número de firmas” ou dizer que sunk costs altos favorecem a contestabilidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo Baumol, a presença de elevados custos irrecuperáveis reforça a contestabilidade do "
+            "mercado.”</i> → ERRADO (inversão: custos irrecuperáveis são barreira à entrada)",
+            "<i>“Em mercado contestável, a estrutura concentrada não implica, por si só, poder de mercado.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["pode", "próximos"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Estrutura de mercado é menos relevante que a facilidade de entrada e saída; lucro "
+                             "extraordinário atrai entrantes que realizam o lucro e saem, disciplinando o preço."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00330
+    {
+        "id": "ECO-E2-L00330-1", "fonte_ref": "E2-L00330", "destino": "10", "subtema": H2["stack"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": COM_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de duopólio de Stackelberg, a firma líder (que decide primeiro) incorpora a função de "
+                      "reação da firma seguidora em sua maximização de lucro, resultando em uma quantidade total "
+                      "produzida no mercado superior àquela observada no equilíbrio de Cournot."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de duopólio de Stackelberg, a firma líder (que decide primeiro) incorpora a função de "
+                      "reação da firma seguidora em sua maximização de lucro, resultando em uma quantidade "
+                      "<u>total</u> produzida no mercado <u>superior</u> àquela observada no equilíbrio de "
+                      "Cournot."),
+        "poucas": ("A líder aumenta mais a produção do que a seguidora a reduz: a " + vd("quantidade total sobe")
+                   + " e o " + vd("preço cai") + " em relação a Cournot."),
+        "destrinchando": [
+            "Na função de reação linear da seguidora, cada unidade a mais da líder reduz a produção da seguidora "
+            "em só " + vd("meia unidade") + " (q₂ = (a − c − q₁)/2). Logo, quando a líder expande, o total cresce.",
+            "Exemplo (P = 14 − Q, CMg = 2): Cournot " + vd("4 + 4 = 8") + ", P = 6. Stackelberg " + vd("6 + 3 = 9")
+            + ", P = 5. O aumento de 2 da líder só tira 1 da seguidora.",
+            "Escada clássica (demanda linear, custos iguais e constantes): " + vd("Q monopólio < Q Cournot < Q "
+            "Stackelberg < Q Bertrand = Q concorrência perfeita") + " — com os preços na ordem inversa. Em "
+            "frações da quantidade competitiva: 1/2, 2/3, 3/4 e 1.",
+            "Bem-estar: mais produção e preço menor → consumidor ganha e o peso morto diminui; o lucro conjunto "
+            "das firmas cai (27 em Stackelberg contra 32 em Cournot, no exemplo).",
+            vm("Regra-âncora: Stackelberg é mais competitivo que Cournot — mais quantidade, menor preço."),
+        ],
+        "grafico_verso": "ECO-E2-L00330-1-V1",
+        "dissecando": (cz("[contraintuitivo]") + " Quem lembra só que a seguidora “é forçada a produzir menos” "
+                       "conclui que o total cai. O item testa o efeito líquido: a expansão da líder supera a "
+                       "contração da seguidora. Pista: “total”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No equilíbrio de Stackelberg, o preço de mercado é superior ao de Cournot.”</i> → ERRADO "
+            "(inversão: mais quantidade → preço menor)",
+            "<i>“A quantidade total de Stackelberg é inferior à de concorrência perfeita.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A líder antecipa a reação do seguidor, produz mais que em Cournot e o seguidor menos; "
+                             "no agregado, quantidade maior e preço menor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00440
+    {
+        "id": "ECO-E2-L00440-1", "fonte_ref": "E2-L00440", "destino": "10", "subtema": H2["cb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "A respeito das estruturas de mercado, julgue (C ou E) os itens a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de Cournot, as empresas competem escolhendo simultaneamente os níveis de preço, e o "
+                      "equilíbrio ocorre quando nenhuma empresa tem incentivo para alterar seu preço, dada a decisão "
+                      "da outra."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de Cournot, as empresas competem escolhendo simultaneamente os níveis de ")
+                   + vm("preço") + az(", e o equilíbrio ocorre quando nenhuma empresa tem incentivo para alterar seu ")
+                   + vm("preço") + az(", dada a decisão da outra."),
+        "poucas": ("Em " + azb("Cournot") + " a variável estratégica é a " + vd("quantidade") + "; escolha "
+                   "simultânea de preços é o modelo de " + azb("Bertrand") + ". A noção de equilíbrio (Nash) está "
+                   "certa."),
+        "destrinchando": [
+            "Quadro dos duopólios: " + azb("Cournot") + " — quantidade, simultâneo; " + azb("Bertrand")
+            + " — preço, simultâneo; " + azb("Stackelberg") + " — quantidade, sequencial; "
+            + azb("liderança de preço") + " — preço, sequencial. Em todos, o equilíbrio é de " + azb("Nash")
+            + " (no sequencial, perfeito em subjogos).",
+            "Por que a variável importa: com produto homogêneo, a competição em preço (Bertrand) derruba o preço "
+            "até o custo marginal; em quantidade (Cournot), o preço fica acima do CMg, entre o de monopólio e o "
+            "competitivo. Exemplo (P = 14 − Q, CMg = 2): Cournot " + vd("P = 6") + "; Bertrand " + vd("P = 2")
+            + ".",
+            "Interpretação de " + oc("Kreps e Scheinkman") + " (1983): quando as firmas primeiro escolhem a "
+            "capacidade e depois competem em preço, o resultado é o de Cournot — por isso Cournot descreve bem "
+            "setores com capacidade rígida (aço, cimento) e Bertrand, setores com capacidade flexível.",
+            vm("Regra-âncora: Cournot = Quantidade; Bertrand = preço (B de “baixa o preço”)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A banca copia a definição de Bertrand e troca o nome do "
+                       "modelo — ou, o que dá no mesmo, troca “quantidade” por “preço” na de Cournot. Como a lógica "
+                       "de equilíbrio é idêntica nos dois, só a variável denuncia o erro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Bertrand, as empresas escolhem simultaneamente os preços.”</i> → CERTO",
+            "<i>“No modelo de Cournot, o equilíbrio de Nash resulta em preço igual ao custo marginal.”</i> → "
+            "ERRADO (isso é Bertrand com produto homogêneo; em Cournot, P > CMg)",
+        ])],
+        "reescrita": ("No modelo de Cournot, as empresas competem escolhendo simultaneamente os níveis de "
+                      + hl("produção") + ", e o equilíbrio ocorre quando nenhuma empresa tem incentivo para alterar "
+                      "sua " + hl("quantidade") + ", dada a decisão da outra."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["simultaneamente"], "dificuldade": 1,
+        "comentario_fonte": ("Cournot escolhe níveis de produção, não preços; quadro dos cinco modelos (Stackelberg, "
+                             "liderança de preço, Cournot, Bertrand, cartel); gráfico comparando p e Q de cada "
+                             "modelo; discussão sobre equilíbrio de Nash em cada um e cartel como não-Nash."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 069", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (quadro dos modelos levado ao 📖)"},
+                          {"ref": "IMAGEM 070", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mesmo gráfico redesenhado em ECO-E2-L00330-1-V1)"},
+                          {"ref": "IMAGEM 071", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 072", "tipo_fonte": "TABELA", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00479
+    {
+        "id": "ECO-E2-L00479-1", "fonte_ref": "E2-L00479", "destino": "10", "subtema": H2["cb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à teoria microeconômica, julgue (C ou E) os itens a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de Bertrand, as empresas produzem uma mercadoria homogênea; cada uma delas considera "
+                      "fixo o preço das suas concorrentes, e todas decidem simultaneamente qual preço será cobrado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de Bertrand, as empresas produzem uma mercadoria <u>homogênea</u>; cada uma delas "
+                      "considera <u>fixo o preço</u> das suas concorrentes, e todas decidem <u>simultaneamente</u> "
+                      "qual preço será cobrado."),
+        "poucas": ("São as três premissas de " + azb("Bertrand") + ": " + vd("produto homogêneo") + ", "
+                   + vd("variável estratégica = preço") + " (com o preço rival tomado como dado) e "
+                   + vd("decisão simultânea") + "."),
+        "destrinchando": [
+            oc("Joseph Bertrand") + " (1883) criticou " + oc("Cournot") + ": firmas reais fixam preços, não "
+            "quantidades. Mantidos produto homogêneo e simultaneidade, trocou a variável estratégica.",
+            "Consequência das premissas: o consumidor compra de quem cobra menos (produto idêntico). Se a rival "
+            "cobra acima do custo, compensa cobrar um centavo a menos e levar o mercado todo. A guerra só para em "
+            + vd("P = CMg") + " — o " + azb("paradoxo de Bertrand") + ": duas firmas bastam para o resultado "
+            "competitivo, com lucro zero.",
+            "O resultado depende de custos marginais iguais e constantes e de capacidade ilimitada. Se os custos "
+            "diferem, a firma mais eficiente leva o mercado cobrando um pouco abaixo do custo da rival.",
+            "Saídas do paradoxo: " + azb("diferenciação de produto") + " (Bertrand diferenciado: P > CMg), "
+            + azb("restrição de capacidade") + " (Edgeworth; Kreps-Scheinkman → resultado de Cournot) e "
+            + azb("interação repetida") + " (conluio tácito).",
+            vm("Regra-âncora: Bertrand = homogêneo + preço + simultâneo → P = CMg."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Item-definição. Para errá-lo, a banca trocaria uma das três "
+                       "premissas: “quantidade” (Cournot), “sequencialmente” (liderança de preço) ou “produtos "
+                       "diferenciados” (Bertrand diferenciado, cujo resultado não é P = CMg)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Bertrand, cada empresa considera fixa a quantidade produzida pela concorrente.”</i> → "
+            "ERRADO (troca de conceito: essa é a conjectura de Cournot)",
+            "<i>“No modelo de Bertrand com custos marginais iguais e constantes, o lucro econômico das empresas "
+            "é nulo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["simultaneamente"], "dificuldade": 1,
+        "comentario_fonte": ("Premissas de Bertrand (preço, produto homogêneo, decisão simultânea, preço da rival "
+                             "tomado como fixo); preço igual ao custo marginal; paradoxo de Bertrand."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00532
+    {
+        "id": "ECO-E2-L00532-1", "fonte_ref": "E2-L00532", "destino": "10", "subtema": H2["cb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_NAB_ESTR_1,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um mercado em que duas empresas operam produzindo produtos homogêneos, o modelo que consegue "
+                      "reproduzir resultado mais próximo ao resultado do modelo de concorrência perfeita, isto é preço "
+                      "= custo marginal, é o modelo de Bertrand."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um mercado em que duas empresas operam produzindo produtos <u>homogêneos</u>, o modelo que "
+                      "consegue reproduzir resultado mais próximo ao resultado do modelo de concorrência perfeita, "
+                      "isto é preço = custo marginal, é o modelo de <u>Bertrand</u>."),
+        "poucas": ("Com produto homogêneo e custos iguais, a competição em " + azb("preço") + " leva a "
+                   + vd("P = CMg") + " com apenas duas firmas — exatamente o resultado competitivo."),
+        "destrinchando": [
+            "Ranking dos duopólios com produto homogêneo, demanda linear e CMg constante (P = 14 − Q, CMg = 2): "
+            "monopólio/cartel " + vd("Q = 6, P = 8") + "; Cournot " + vd("Q = 8, P = 6") + "; Stackelberg "
+            + vd("Q = 9, P = 5") + "; Bertrand " + vd("Q = 12, P = 2 = CMg") + ".",
+            "Por que Bertrand chega lá: produto idêntico → todo cliente vai para o preço mais baixo → qualquer "
+            "preço acima do CMg é atacado pela rival com um corte mínimo → o único equilíbrio de Nash é P = CMg "
+            "(" + azb("paradoxo de Bertrand") + ").",
+            "Cournot e Stackelberg ficam no meio do caminho porque, competindo em quantidade, cada firma internaliza "
+            "que produzir mais derruba o preço das próprias vendas — e se contém.",
+            "O resultado de Bertrand é frágil: com produtos diferenciados, restrição de capacidade ou custos "
+            "distintos, o preço fica acima do CMg.",
+            vm("Regra-âncora: Bertrand homogêneo = concorrência perfeita com duas firmas."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O item explicita a condição decisiva (“produtos "
+                       "homogêneos”). Sem ela — ou com produtos diferenciados —, a afirmação seria falsa. 🔥 A banca "
+                       "testa a escada monopólio > Cournot > Stackelberg > Bertrand em preços."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com produtos homogêneos, o modelo de Stackelberg reproduz o resultado de concorrência "
+            "perfeita.”</i> → ERRADO (troca de ator: em Stackelberg P > CMg)",
+            "<i>“No modelo de Bertrand com produtos diferenciados, o preço de equilíbrio supera o custo "
+            "marginal.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["mais próximo"], "dificuldade": 1,
+        "comentario_fonte": ("Competição simultânea em preço com produtos homogêneos e custos iguais leva a "
+                             "P = CMg; gráfico comparando monopólio, Cournot, Stackelberg e Bertrand."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 087", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mesmo gráfico redesenhado em ECO-E2-L00330-1-V1; ranking levado ao 📖)"}],
+        "alertas": [],
+    },
 ]

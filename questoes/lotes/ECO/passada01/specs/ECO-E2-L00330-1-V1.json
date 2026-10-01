@@ -1,0 +1,80 @@
+{
+ "id": "ECO-E2-L00330-1-V1",
+ "uso": "verso",
+ "legenda": "Demanda P = 14 − Q e custo marginal constante 2: a quantidade total cresce de monopólio/cartel (6) para Cournot (8), Stackelberg (9) e Bertrand = concorrência perfeita (CP, 12), e o preço cai na mesma ordem (8, 6, 5, 2).",
+ "eixos": {
+  "x": "Q",
+  "y": "P",
+  "xmax": 15,
+  "ymax": 15,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "14 - x",
+   "dominio": [
+    0,
+    13.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "CMg",
+   "tipo": "horizontal",
+   "y": 2,
+   "x": [
+    0,
+    15
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg = 2"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": 6,
+   "rotulo": "Monopólio/cartel",
+   "projetar": true
+  },
+  {
+   "id": "C",
+   "sobre": "D",
+   "x": 8,
+   "rotulo": "Cournot",
+   "projetar": true
+  },
+  {
+   "id": "S",
+   "sobre": "D",
+   "x": 9,
+   "rotulo": "Stackelberg",
+   "projetar": true
+  },
+  {
+   "id": "B",
+   "intersecao": [
+    "D",
+    "CMg"
+   ],
+   "rotulo": "Bertrand = CP",
+   "projetar": "x",
+   "rotulo_desloc": [
+    40,
+    22
+   ]
+  }
+ ],
+ "checar": [
+  "abs(M.y - 8) < 0.01",
+  "abs(C.y - 6) < 0.01",
+  "abs(S.y - 5) < 0.01",
+  "abs(B.x - 12) < 0.01",
+  "S.x > C.x",
+  "C.x > M.x"
+ ]
+}

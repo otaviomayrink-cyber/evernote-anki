@@ -1,0 +1,22 @@
+{
+ "id": "ECO-E2-L00872-1-V1",
+ "uso": "verso",
+ "legenda": "O imposto t, igual à distância entre CMgS e CMgP medida em Q*, eleva o custo privado para CMgP + t, que cruza a demanda exatamente no ótimo social. Medida em Qₘ, a distância seria maior e o imposto, excessivo.",
+ "eixos": {"x": "Q", "y": "p", "xmax": 13, "ymax": 12},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "11 - 0.6*x", "dominio": [0, 13], "familia": "demanda", "rotulo": "D"},
+  {"id": "CP", "tipo": "funcao", "expr": "1 + 0.4*x", "dominio": [0, 12.5], "familia": "oferta", "rotulo": "CMgP", "estado": "inicial"},
+  {"id": "CT", "tipo": "funcao", "expr": "1 + 20/7 + 0.4*x", "dominio": [0, 12.5], "familia": "oferta", "rotulo": "CMgP + t"},
+  {"id": "CS", "tipo": "funcao", "expr": "1 + 0.8*x", "dominio": [0, 12.5], "familia": "destaque", "rotulo": "CMgS"}
+ ],
+ "pontos": [
+  {"id": "Em", "intersecao": ["D", "CP"], "projetar": "x", "rotulo_x": "Qₘ"},
+  {"id": "Es", "intersecao": ["D", "CS"], "projetar": "x", "rotulo_x": "Q*"},
+  {"id": "Et", "intersecao": ["D", "CT"]},
+  {"id": "Ps", "sobre": "CP", "x": "Es.x"}
+ ],
+ "setas": [
+  {"de": ["Es.x - 0.35", "CP(Es.x)"], "para": ["Es.x - 0.35", "Es.y"], "estilo": "<|-|>", "rotulo": "t"}
+ ],
+ "checar": ["abs(Et.x - Es.x) < 0.01", "abs((Es.y - CP(Es.x)) - 20/7) < 0.01", "CS(Em.x) - CP(Em.x) > 20/7", "Es.x < Em.x"]
+}

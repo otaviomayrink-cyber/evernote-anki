@@ -569,4 +569,605 @@ CARDS = [
                              "justificam a função alocativa (subsídios, impostos, regulação)."),
         "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
     }),
+    # ------------------------------------------------------------------ E1-0338
+    dict(_base("E1-0338", "ext", COM_FALHAS), **{
+        "assertiva": ("Uma das principais falhas de mercado para justificar a função alocativa da ação do Governo é a "
+                      "existência de deseconomias de escala."),
+        "gabarito": "ERRADO",
+        "anotada": (az("Uma das principais falhas de mercado para justificar a função alocativa da ação do Governo "
+                       "é a existência de ") + vm("deseconomias de escala") + az(".")),
+        "poucas": ("A falha de mercado ligada à escala é a " + azb("economia de escala") + " (custo médio "
+                   "decrescente), que gera " + vd("monopólio natural") + ". Deseconomias de escala só limitam o "
+                   "tamanho eficiente da firma."),
+        "destrinchando": [
+            azb("Economias de escala") + ": o custo médio cai à medida que a produção cresce (custos fixos "
+            "altíssimos, como redes de água, gás, energia e ferrovias). Se o custo médio cai em toda a faixa "
+            "relevante da demanda, uma única firma abastece o mercado mais barato do que várias: "
+            + azb("monopólio natural") + ". Sem regulação, ele cobra preço de monopólio — daí a regulação "
+            "tarifária ou a provisão estatal.",
+            azb("Deseconomias de escala") + ": o custo médio sobe a partir de certo tamanho (problemas de "
+            "coordenação, burocracia interna). Isso <b>favorece</b> a concorrência, pois impede que uma firma "
+            "cresça indefinidamente; não é falha de mercado nem motivo para o governo intervir.",
+            "Lista usual de falhas que justificam a " + azb("função alocativa") + " (" + oc("Musgrave") + "; "
+            + oc("Giambiagi e Além") + "): bens públicos, externalidades, monopólios naturais, mercados "
+            "incompletos e falhas de informação.",
+            vm("Regra-âncora: economia de escala → monopólio natural → falha; deseconomia → não é falha."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca de prefixo: “economias” → “deseconomias”. O item "
+                       "aposta que o candidato associe “escala” à lista de falhas sem conferir o sentido. Mesmo "
+                       "comando do item-irmão sobre externalidades (CERTO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A existência de rendimentos crescentes de escala, que dão origem a monopólios naturais, é uma "
+            "das falhas de mercado que justificam a função alocativa do governo.”</i> → CERTO",
+        ])],
+        "reescrita": ("Uma das principais falhas de mercado para justificar a função alocativa da ação do Governo é "
+                      "a existência de " + hl("economias de escala (que dão origem a monopólios naturais)") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Deseconomias de escala dizem respeito a aumento do custo médio com a produção, mas não "
+                             "são falhas de mercado."),
+        "qualidade_fonte": "raso", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0339
+    dict(_base("E1-0339", "ext", COM_EXT), **{
+        "assertiva": "A competição perfeita é socialmente desejável, pois elimina a externalidade negativa.",
+        "gabarito": "ERRADO",
+        "anotada": (az("A competição perfeita é socialmente desejável, ") + vm("pois elimina a externalidade "
+                                                                               "negativa") + az(".")),
+        "poucas": ("A concorrência perfeita iguala preço ao custo marginal " + azb("privado") + "; com "
+                   "externalidade negativa, esse custo fica abaixo do social e o mercado " + vd("produz demais")
+                   + " — a externalidade persiste."),
+        "destrinchando": [
+            "O " + azb("1º teorema do bem-estar") + " diz que o equilíbrio competitivo é eficiente (Pareto) "
+            "<b>desde que não haja falhas de mercado</b>. A externalidade é justamente uma falha: o teorema "
+            "deixa de valer.",
+            "Mecanismo: a firma competitiva produz até P = CMgP. Como " + vd("CMgS = CMgP + dano externo")
+            + ", o mercado vai até Qₘ, além do ótimo Q* (onde BMg = CMgS). Cada unidade entre Q* e Qₘ custa à "
+            "sociedade mais do que vale: " + azb("peso morto") + ".",
+            "Ironia que a banca gosta de cobrar: com externalidade negativa, um " + azb("monopólio") + " poluidor "
+            "pode até chegar mais perto do ótimo, porque restringe a produção. A concorrência, que é virtude "
+            "sem falhas, amplia o dano quando há externalidade.",
+            "Correções: imposto pigouviano, licenças negociáveis, regulação ou barganha de Coase — todas "
+            "introduzem o custo externo na decisão privada.",
+            vm("Regra-âncora: concorrência perfeita não corrige falha de mercado; ela só é ótima na ausência "
+               "delas."),
+        ],
+        "grafico_verso": "ECO-E1-0339-1-V1",
+        "dissecando": (cz("[nexo indevido]") + " A 1ª oração tem fundo verdadeiro (o teorema do bem-estar); o "
+                       "erro está na justificativa enxertada com “pois”, que atribui à concorrência um efeito "
+                       "que ela não tem."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, a presença de externalidade negativa faz a quantidade de equilíbrio "
+            "superar a socialmente ótima.”</i> → CERTO",
+            "<i>“Com externalidade negativa, a concorrência perfeita produz menos do que o ótimo social.”</i> → "
+            "ERRADO (inversão: produz mais)",
+        ])],
+        "reescrita": ("A competição perfeita é socialmente desejável, " + hl("mas não elimina a externalidade "
+                      "negativa, que exige correção específica (imposto pigouviano, regulação ou negociação à "
+                      "Coase)") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["pois"], "dificuldade": 1,
+        "comentario_fonte": ("A concorrência perfeita não elimina externalidades; pode ampliar a produção "
+                             "ineficiente, pois as empresas não internalizam os custos sociais."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0341
+    dict(_base("E1-0341", "ext", COM_EXT), **{
+        "assertiva": ("Falhas de mercado na forma de externalidade ocorrem quando nem todos os custos e benefícios "
+                      "estão incluídos nos preços dos bens."),
+        "gabarito": "CERTO",
+        "anotada": az("Falhas de mercado na forma de externalidade ocorrem quando <u>nem todos os custos e "
+                      "benefícios estão incluídos nos preços</u> dos bens."),
+        "poucas": ("Externalidade é o efeito de uma atividade sobre " + azb("terceiros") + " que não passa pelo "
+                   "preço: custo que ninguém paga (negativa) ou benefício que ninguém cobra (positiva)."),
+        "destrinchando": [
+            "Definição operacional: a ação de um agente afeta o bem-estar de outro <b>sem compensação</b> pelo "
+            "mercado. O preço reflete só o custo e o benefício privados; a parte social fica de fora.",
+            "Quatro casos: produção negativa (fábrica que polui o rio), produção positiva (apicultor cujas "
+            "abelhas polinizam o pomar vizinho), consumo negativo (fumo em local fechado), consumo positivo "
+            "(vacinação, que protege os não vacinados).",
+            "Efeito na quantidade: negativa → " + vd("produção excessiva") + " (CMgS > CMgP); positiva → "
+            + vd("produção insuficiente") + " (BMgS > BMgP). Corrigir é " + azb("internalizar") + ": fazer o "
+            "preço carregar o efeito externo.",
+            "Não confundir com efeitos que passam <b>pelo</b> preço (" + azb("externalidade pecuniária") + "): "
+            "se a demanda por um bem sobe e encarece o insumo de outra firma, o mercado está funcionando — não "
+            "há falha.",
+            vm("Regra-âncora: externalidade = efeito sobre terceiros fora do sistema de preços."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Definição em linguagem de preços, correta. As versões erradas "
+                       "costumam restringir a externalidade a custos (“só efeitos negativos”) ou ao Estado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Externalidades são sempre efeitos negativos de uma atividade sobre terceiros.”</i> → ERRADO "
+            "(modulador absoluto: há externalidades positivas)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["nem todos"], "dificuldade": 1,
+        "comentario_fonte": ("Divergência entre custos/benefícios privados e sociais: nem todos refletidos no preço, "
+                             "o que compromete a eficiência alocativa."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0342
+    dict(_base("E1-0342", "ext", COM_FALHAS), **{
+        "assertiva": ("Não se trata de uma falha de mercado: a variação dos preços agrícolas ao longo do ano, devido à "
+                      "presença de períodos de safra e de entressafra."),
+        "gabarito": "CERTO",
+        "anotada": az("<u>Não</u> se trata de uma falha de mercado: a variação dos preços agrícolas ao longo do "
+                      "ano, devido à presença de períodos de safra e de entressafra."),
+        "poucas": ("Preço que cai na safra e sobe na entressafra é o " + azb("sistema de preços funcionando") + ": "
+                   "sinaliza escassez e abundância, estimula estocagem e racionaliza o consumo."),
+        "destrinchando": [
+            "Falha de mercado é a situação em que o equilíbrio de mercado " + azb("não é eficiente") + ": bens "
+            "públicos, externalidades, poder de mercado, informação assimétrica, mercados incompletos.",
+            "Na sazonalidade agrícola, o preço reflete a escassez real: na entressafra há menos produto, o "
+            "preço sobe e premia quem estocou; na safra, o preço cai e o consumo aumenta. É a " + azb("função "
+            "sinalizadora") + " dos preços em ação, não sua falha.",
+            "Volatilidade não é sinônimo de ineficiência. O governo pode intervir por outras razões — renda do "
+            "produtor, segurança alimentar — com " + rx("política de garantia de preços mínimos (PGPM) e "
+            "estoques reguladores da Conab") + ", mas isso é objetivo de política, não correção de falha "
+            "alocativa.",
+            "O que <b>seria</b> falha no mesmo setor: uso de agrotóxico que contamina o vizinho (externalidade), "
+            "seguro rural com seleção adversa (informação), ausência de mercado futuro para pequenos produtores "
+            "(mercado incompleto).",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " A formulação negativa (“não se trata”) e a ideia de que "
+                       "preço oscilante é “problema” induzem ao ERRADO. Itens desse tipo vêm de questões de "
+                       "múltipla escolha do tipo “assinale o que NÃO é falha de mercado”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Não se trata de uma falha de mercado: a poluição de um rio por indústria situada a montante de "
+            "uma comunidade de pescadores.”</i> → ERRADO (é externalidade negativa)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["não"], "dificuldade": 1,
+        "comentario_fonte": ("A variação sazonal reflete oscilações de oferta e demanda, dinâmica normal de "
+                             "mercado, não falha."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0333
+    dict(_base("E1-0333", "info", COM_FALHAS), **{
+        "assertiva": ("Ao analisar os conceitos microeconômicos de “falha de mercado” e de “informação assimétrica”: "
+                      "falhas de mercado estão associadas à sinalização inadequada a partir do sistema de preços."),
+        "gabarito": "CERTO",
+        "anotada": az("Ao analisar os conceitos microeconômicos de “falha de mercado” e de “informação "
+                      "assimétrica”: falhas de mercado estão associadas à <u>sinalização inadequada</u> a partir "
+                      "do sistema de preços."),
+        "poucas": ("No mercado eficiente, o preço resume custo e benefício " + azb("sociais") + ". Na falha de "
+                   "mercado, ele " + vd("sinaliza errado") + " — omite custo externo, não capta benefício "
+                   "coletivo ou não incorpora informação — e a alocação se desvia do ótimo."),
+        "destrinchando": [
+            "O preço tem três papéis: " + azb("sinalizar") + " (escassez relativa), " + azb("incentivar") + " "
+            "(produzir mais o que está caro) e " + azb("racionar") + " (alocar a quem valoriza mais). "
+            + oc("Hayek") + " (“The Use of Knowledge in Society”, 1945) destacou o preço como transmissor de "
+            "informação dispersa.",
+            "Em cada falha, a sinalização se rompe de um jeito: externalidade → o preço não inclui o dano a "
+            "terceiros; bem público → não há preço que revele a disposição a pagar; poder de mercado → preço "
+            "acima do custo marginal; " + azb("informação assimétrica") + " → o preço não distingue qualidade "
+            "ou risco (no mercado de “limões” de " + oc("Akerlof") + ", o preço médio expulsa os bons carros).",
+            "Por isso a correção típica atua sobre o preço (imposto, subsídio, regulação tarifária) ou sobre a "
+            "informação que o forma (transparência, certificação, garantias).",
+            vm("Regra-âncora: falha de mercado = preço que não reflete o custo ou o benefício social."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Formulação genérica e verdadeira. Itens assim costumam vir em "
+                       "bloco com outro que confunde os dois conceitos (por exemplo, “a informação assimétrica "
+                       "não é falha de mercado”, ERRADO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A informação assimétrica, por decorrer de escolhas individuais, não constitui falha de "
+            "mercado.”</i> → ERRADO (é uma das falhas clássicas)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Na falha de mercado o sinal de preços não reflete custos ou benefícios sociais, "
+                             "levando à má alocação (externalidades, assimetria de informação)."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0327
+    dict(_base("E1-0327", "reg", COM_REG), **{
+        "assertiva": ("De acordo com a teoria microeconômica convencional, na presença de falhas de mercado, a "
+                      "regulação dos mercados por parte do governo pode ser benéfica na presença de poder de "
+                      "mercado, como monopólios naturais ou legais que podem impor perdas substanciais de "
+                      "bem-estar aos consumidores."),
+        "gabarito": "CERTO",
+        "anotada": az("De acordo com a teoria microeconômica convencional, na presença de falhas de mercado, a "
+                      "regulação dos mercados por parte do governo <u>pode</u> ser benéfica na presença de poder "
+                      "de mercado, como monopólios naturais ou legais que podem impor perdas substanciais de "
+                      "bem-estar aos consumidores."),
+        "poucas": ("O monopolista cobra " + vd("P > CMg") + " e produz menos que o ótimo, gerando "
+                   + azb("peso morto") + "; a regulação de preço ou de entrada pode aproximar o resultado do "
+                   "competitivo."),
+        "destrinchando": [
+            "Poder de mercado é falha porque rompe P = CMg: a firma restringe a quantidade para elevar o preço, "
+            "transfere excedente do consumidor para si e destrói parte dele (peso morto).",
+            azb("Monopólio natural") + " (custo médio decrescente, como redes de saneamento e transmissão de "
+            "energia): uma firma só é o arranjo mais barato, então a solução não é fragmentar, e sim "
+            + azb("regular") + " — tarifa pelo custo médio, preço-teto (" + azb("price cap") + ") ou "
+            "regulação por taxa de retorno. No " + rx("Brasil") + ", esse é o papel de agências como "
+            + rx("ANEEL e ANA") + ".",
+            azb("Monopólio legal") + " (patentes, concessões exclusivas): o próprio Estado cria o poder de "
+            "mercado e, por isso, costuma acompanhá-lo de regras de preço, prazo e qualidade.",
+            "A ressalva do item — “pode ser benéfica” — importa: a regulação também falha (" + azb("captura")
+            + ", assimetria de informação entre regulador e regulado, custos administrativos). A teoria "
+            "convencional justifica a intervenção, mas não garante que ela melhore o resultado.",
+        ],
+        "dissecando": (cz("[modulador relativo · literalidade]") + " Dois “pode” blindam o item. Versões erradas "
+                       "trocam por “sempre aumenta o bem-estar” ou dizem que monopólios naturais devem ser "
+                       "desmembrados para gerar concorrência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, a solução eficiente é dividir a empresa em várias concorrentes.”</i> → "
+            "ERRADO (o custo médio subiria: uma firma é o arranjo mais barato)",
+            "<i>“A regulação de monopólios sempre eleva o bem-estar social.”</i> → ERRADO (modulador absoluto: "
+            "há falhas de governo)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "LITERAL"], "moduladores": ["pode", "podem"], "dificuldade": 1,
+        "comentario_fonte": ("Monopólios geram ineficiências alocativas e reduzem o excedente do consumidor; a "
+                             "regulação pode conter abusos e melhorar o bem-estar."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0343
+    dict(_base("E1-0343", "reg", COM_REG), **{
+        "assertiva": ("Quando uma agência reguladora atua em favor de interesses do setor regulado, diz-se que, nesta "
+                      "situação, encontramos a Teoria da captura."),
+        "gabarito": "CERTO",
+        "anotada": az("Quando uma agência reguladora atua em favor de interesses do <u>setor regulado</u>, diz-se "
+                      "que, nesta situação, encontramos a <u>Teoria da captura</u>."),
+        "poucas": ("A " + azb("captura regulatória") + " ocorre quando o regulador passa a servir aos interesses "
+                   "das empresas reguladas, e não ao interesse público — exemplo clássico de " + vd("falha de "
+                   "governo") + "."),
+        "destrinchando": [
+            "Origem: " + oc("George Stigler") + " (“The Theory of Economic Regulation”, 1971; Nobel de 1982), "
+            "na Escola de Chicago. Tese: a regulação é “adquirida” pela indústria e desenhada e operada "
+            "principalmente em seu benefício.",
+            "Por que acontece: " + azb("concentração de benefícios e dispersão de custos") + " — as poucas "
+            "firmas reguladas ganham muito com uma decisão favorável e se organizam para obtê-la; os milhões "
+            "de consumidores perdem pouco cada um e não se mobilizam (lógica de " + oc("Mancur Olson") + "). "
+            "Somam-se a assimetria de informação (o regulador depende de dados da empresa) e a "
+            + azb("porta giratória") + " entre agência e setor.",
+            "Contraste com a " + azb("teoria do interesse público") + " (regulação como correção desinteressada "
+            "de falhas de mercado). A captura mostra que corrigir uma falha de mercado pode criar uma " + azb(
+                "falha de governo") + ".",
+            "Antídotos: mandatos fixos e não coincidentes para dirigentes, quarentena, autonomia orçamentária, "
+            "consultas públicas e análise de impacto regulatório — no " + rx("Brasil") + ", em boa parte disciplinados pela "
+            + rx("Lei 13.848/2019") + " (Lei Geral das Agências Reguladoras).",
+            vm("Regra-âncora: regulador a serviço do regulado = captura (Stigler) = falha de governo."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta. A banca pode trocar o nome (“teoria do interesse "
+                       "público”, “risco moral”) ou o beneficiário (“atua em favor dos consumidores”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela teoria do interesse público, as agências tendem a ser capturadas pelos setores "
+            "regulados.”</i> → ERRADO (teoria trocada: é a da captura)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("As agências passam a defender os interesses das empresas que deveriam fiscalizar, "
+                             "perdendo a imparcialidade."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0344
+    dict(_base("E1-0344", "info", COM_INFO), **{
+        "assertiva": "A relação agente-principal é aplicável ao setor público.",
+        "gabarito": "CERTO",
+        "anotada": az("A relação agente-principal é <u>aplicável ao setor público</u>."),
+        "poucas": ("Sempre que alguém (" + azb("principal") + ") delega uma tarefa a outro (" + azb("agente")
+                   + ") que tem informação e interesses próprios há problema de agência — e o setor público está "
+                   "cheio dessas cadeias: " + vd("cidadão → político → burocrata") + "."),
+        "destrinchando": [
+            "O " + azb("problema agente-principal") + " nasce da combinação de três elementos: delegação, "
+            "interesses divergentes e " + azb("informação assimétrica") + " (o principal não observa "
+            "perfeitamente o esforço ou as informações do agente). Formalização clássica: " + oc("Jensen e "
+            "Meckling") + " (1976), para a relação acionista × administrador.",
+            "No setor público: eleitores (principal) × parlamentares e governantes (agente); Congresso × "
+            "Executivo; ministério × agência reguladora ou estatal; governo × gestor de uma empresa pública. O "
+            "agente pode perseguir reeleição, prestígio, orçamento maior ou interesses de grupos.",
+            "Agravante: no setor público os mecanismos de mercado que disciplinam o agente privado (preço da "
+            "ação, ameaça de aquisição hostil, falência) são fracos ou inexistentes.",
+            "Instrumentos de alinhamento: eleições, mandatos e prestação de contas (" + azb("accountability")
+            + "), controle externo (" + rx("TCU") + "), contratos de gestão com metas, remuneração por "
+            "desempenho, transparência e regras de governança das estatais (" + rx("Lei 13.303/2016") + ").",
+            vm("Regra-âncora: delegação + interesses divergentes + informação oculta = problema de agência, "
+               "público ou privado."),
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Quem associa o modelo só a empresas "
+                       "(acionista × gerente) tende a restringi-lo ao setor privado. Desconfie das versões "
+                       "com “aplica-se exclusivamente às relações privadas”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O problema agente-principal limita-se à relação entre acionistas e administradores de "
+            "empresas privadas.”</i> → ERRADO (restrição indevida)",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O cidadão (principal) delega ao político ou gestor (agente) decisões em seu nome, com "
+                             "risco de interesses desalinhados."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0345
+    dict(_base("E1-0345", "info", COM_INFO), **{
+        "assertiva": "O risco moral altera o comportamento dos indivíduos.",
+        "gabarito": "CERTO",
+        "anotada": az("O risco moral <u>altera o comportamento</u> dos indivíduos."),
+        "poucas": ("O " + azb("risco moral") + " (<i>moral hazard</i>) é exatamente a mudança de comportamento "
+                   + vd("depois") + " do contrato, quando o agente está protegido do risco e a outra parte não "
+                   "consegue observar suas ações."),
+        "destrinchando": [
+            "Dois problemas de informação assimétrica, distinguidos pelo <b>momento</b>: " + azb("seleção "
+            "adversa") + " — informação <b>oculta</b> antes do contrato (quem compra seguro saúde sabe mais "
+            "sobre a própria saúde); " + azb("risco moral") + " — <b>ação oculta</b> depois do contrato (o "
+            "segurado relaxa os cuidados).",
+            "Exemplos: motorista com seguro total que estaciona em qualquer lugar; paciente com plano que pede "
+            "exames desnecessários; banco “grande demais para quebrar” que assume riscos excessivos contando "
+            "com socorro (" + azb("too big to fail") + "); devedor que, com o dinheiro na mão, aplica em projeto "
+            "mais arriscado.",
+            "Remédios: " + azb("franquia") + " e " + azb("coparticipação") + " (o segurado volta a arcar com "
+            "parte do risco), bônus por ausência de sinistro, monitoramento, colateral no crédito, regulação "
+            "prudencial dos bancos.",
+            vm("Regra-âncora: seleção adversa = antes (quem contrata); risco moral = depois (como se "
+               "comporta)."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Item curto e verdadeiro por definição. A pegadinha usual troca o "
+                       "momento (“o risco moral ocorre antes da celebração do contrato”) ou o nome do problema "
+                       "(seleção adversa × risco moral)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O risco moral decorre de informação oculta antes da assinatura do contrato.”</i> → ERRADO "
+            "(troca de conceito: isso é seleção adversa)",
+            "<i>“A franquia nos contratos de seguro é um mecanismo de atenuação do risco moral.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O risco moral surge após a contratação, quando o indivíduo muda o comportamento por "
+                             "estar protegido dos riscos (seguros, crédito)."),
+        "qualidade_fonte": "bom", "figuras_fonte": [_img("Untitled (84).jpeg")], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0346
+    dict(_base("E1-0346", "info", COM_INFO), **{
+        "assertiva": ("Uma assimetria de informações caracterizada pela insuficiência destas pode levar as autoridades "
+                      "a atuarem por meio de regulação."),
+        "gabarito": "CERTO",
+        "anotada": az("Uma assimetria de informações caracterizada pela insuficiência destas <u>pode</u> levar as "
+                      "autoridades a atuarem por meio de <u>regulação</u>."),
+        "poucas": ("Informação assimétrica é " + azb("falha de mercado") + "; quando uma das partes não tem "
+                   "informação suficiente para decidir bem, a regulação (divulgação obrigatória, padrões, "
+                   "certificação) " + vd("pode") + " corrigir o desvio."),
+        "destrinchando": [
+            "Com informação insuficiente de um lado, o mercado pode encolher ou desaparecer (seleção adversa, "
+            "os “limões” de " + oc("Akerlof") + ", 1970) ou funcionar com comportamentos indesejados (risco "
+            "moral).",
+            "Formas de atuação estatal: " + azb("divulgação obrigatória") + " (prospecto de oferta de ações, "
+            "fiscalizado no " + rx("Brasil") + " pela " + rx("CVM") + "; rotulagem nutricional); "
+            + azb("padrões mínimos") + " e licenças profissionais (registro de medicamentos pela "
+            + rx("Anvisa") + "); " + azb("seguro obrigatório") + " (evita que só os de alto risco contratem); "
+            "proteção ao consumidor (direito de arrependimento, garantia legal).",
+            "O mercado também cria soluções privadas: " + azb("sinalização") + " (" + oc("Spence") + ": "
+            "diploma, garantia estendida), " + azb("filtragem") + " (" + oc("Stiglitz") + ": menu de contratos "
+            "com franquias diferentes), reputação e marcas. Akerlof, Spence e Stiglitz dividiram o Nobel de "
+            + vd("2001") + " por essa agenda.",
+            "O “pode” é essencial: a regulação também enfrenta assimetria (o regulador sabe menos que o "
+            "regulado) e pode ser capturada.",
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " Redação truncada (“insuficiência destas”), "
+                       "mas conteúdo correto e protegido pelo “pode”. O inverso típico seria “a assimetria de "
+                       "informação dispensa a regulação, pois o mercado a corrige integralmente”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A assimetria de informação só pode ser corrigida por regulação estatal.”</i> → ERRADO "
+            "(restrição indevida: há sinalização, filtragem e reputação)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Falha de mercado que pode justificar intervenção por regulação, transparência ou "
+                             "regras de mercado."),
+        "qualidade_fonte": "bom", "figuras_fonte": [_img("Untitled (82).jpeg")], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0347
+    dict(_base("E1-0347", "info", COM_INFO), **{
+        "assertiva": "O mercado de crédito é exemplo de setor sem informações assimétricas.",
+        "gabarito": "ERRADO",
+        "anotada": (az("O mercado de crédito é exemplo de setor ") + vm("sem") + az(" informações "
+                                                                                     "assimétricas.")),
+        "poucas": ("O crédito é o exemplo-padrão de " + azb("informação assimétrica") + ": o tomador conhece o "
+                   "próprio risco e as próprias intenções melhor que o banco — há " + vd("seleção adversa e "
+                   "risco moral") + "."),
+        "destrinchando": [
+            azb("Seleção adversa") + " (antes do empréstimo): se o banco sobe os juros, os bons pagadores "
+            "desistem e ficam os tomadores com projetos mais arriscados, dispostos a pagar qualquer taxa. Por "
+            "isso o banco prefere " + azb("racionar o crédito") + " a elevar a taxa — tese de " + oc("Stiglitz e "
+            "Weiss") + " (1981).",
+            azb("Risco moral") + " (depois): com o dinheiro na mão, o devedor pode aplicar em projeto mais "
+            "arriscado que o combinado ou se esforçar menos para pagar.",
+            "Respostas do mercado e do Estado: garantias e colateral, análise de cadastro e " + azb("cadastro "
+            "positivo") + ", covenants, relacionamento de longo prazo; no " + rx("Brasil") + ", o "
+            + rx("Sistema de Informações de Crédito (SCR) do Banco Central") + " e o cadastro positivo "
+            "reduzem a assimetria.",
+            "A assimetria também explica o " + azb("spread") + " bancário elevado e a dificuldade de crédito "
+            "para pequenas empresas sem histórico.",
+            vm("Regra-âncora: crédito e seguros = mercados-símbolo de seleção adversa e risco moral."),
+        ],
+        "dissecando": (cz("[contradição · troca de conceito]") + " Uma palavra (“sem”) inverte o exemplo mais "
+                       "clássico da literatura. Pista: qualquer mercado em que uma parte promete pagar no "
+                       "futuro envolve informação privada sobre a capacidade e a vontade de pagar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No mercado de crédito, a elevação da taxa de juros pode piorar a qualidade média dos tomadores, "
+            "levando os bancos a racionar o crédito.”</i> → CERTO",
+        ])],
+        "reescrita": ("O mercado de crédito é exemplo de setor " + hl("com") + " informações assimétricas"
+                      + hl(", sujeito a seleção adversa e risco moral") + "."),
+        "tipo_erro": ["CONTRADICAO", "TROCA_CONCEITO"], "moduladores": ["sem"], "dificuldade": 1,
+        "comentario_fonte": ("Um dos exemplos mais clássicos de informação assimétrica, com seleção adversa e risco "
+                             "moral antes e depois da concessão."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0348
+    dict(_base("E1-0348", "info", COM_FALHAS), **{
+        "assertiva": ("As falhas de mercado impedem a máxima eficiência na alocação de recursos. A presença de "
+                      "informação assimétrica pode ocasionar o problema do risco moral nos mercados de seguros de "
+                      "automóveis."),
+        "gabarito": "CERTO",
+        "anotada": az("As falhas de mercado impedem a máxima eficiência na alocação de recursos. A presença de "
+                      "informação assimétrica pode ocasionar o problema do <u>risco moral</u> nos mercados de "
+                      "seguros de automóveis."),
+        "poucas": ("Com o carro segurado, o motorista arca com menos risco e tende a ser " + vd("menos "
+                   "cuidadoso") + "; como a seguradora não observa o cuidado, há " + azb("risco moral") + "."),
+        "destrinchando": [
+            "O risco moral exige duas condições: a ação do segurado afeta a probabilidade ou o tamanho do "
+            "sinistro, e a seguradora " + azb("não consegue observá-la") + " (ação oculta). O seguro de "
+            "automóvel reúne as duas: velocidade, local de estacionamento e uso de alarme mudam o risco e não "
+            "são monitoráveis a custo baixo.",
+            "O mesmo mercado sofre também de " + azb("seleção adversa") + " (os motoristas mais arriscados têm "
+            "mais interesse em contratar). As seguradoras respondem a cada problema com instrumentos "
+            "diferentes: perfil e questionário (seleção adversa); " + azb("franquia") + ", bônus por anos sem "
+            "sinistro e rastreadores (risco moral).",
+            "A 1ª frase do item também é correta: falha de mercado é, por definição, situação em que o "
+            "equilíbrio não é eficiente no sentido de " + oc("Pareto") + ".",
+            vm("Regra-âncora: seguro + comportamento não observável depois do contrato = risco moral."),
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Exemplo de manual, com “pode ocasionar”. O "
+                       "par errado típico troca o nome do problema (“seleção adversa” para o descuido após a "
+                       "contratação) ou nega que haja assimetria."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Nos seguros de automóveis, o fato de motoristas mais imprudentes terem mais interesse em "
+            "contratar o seguro caracteriza o risco moral.”</i> → ERRADO (troca de conceito: é seleção "
+            "adversa)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("O comportamento do segurado muda após contratar o seguro, agindo de forma menos "
+                             "cautelosa."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0350
+    dict(_base("E1-0350", "info", COM_INFO), **{
+        "assertiva": ("Sobre assimetrias da informação: resultam sempre em externalidades positivas, pois envolvem "
+                      "benefícios não reconhecidos pelos agentes diretamente interessados em determinado tipo de "
+                      "transação."),
+        "gabarito": "ERRADO",
+        "anotada": (az("Sobre assimetrias da informação: ") + vm("resultam sempre em externalidades positivas, "
+                       "pois envolvem benefícios não reconhecidos pelos agentes diretamente interessados") + az(
+                       " em determinado tipo de transação.")),
+        "poucas": ("Assimetria de informação é uma falha de mercado " + azb("própria") + " — gera " + vd("seleção "
+                   "adversa e risco moral") + ", em geral com perdas — e não se confunde com externalidade, muito "
+                   "menos “sempre positiva”."),
+        "destrinchando": [
+            "São falhas distintas: na " + azb("externalidade") + ", o efeito recai sobre <b>terceiros</b> fora "
+            "da transação; na " + azb("assimetria de informação") + ", o problema está <b>dentro</b> da "
+            "transação — uma das partes sabe mais que a outra sobre qualidade, risco ou comportamento.",
+            "Consequências típicas são negativas: mercados que encolhem ou desaparecem (" + oc("Akerlof")
+            + ", os “limões”), racionamento de crédito, prêmios de seguro altos, comportamento menos cuidadoso "
+            "após o contrato.",
+            "A justificativa do item descreve, na verdade, um fenômeno vizinho: benefícios não apropriados por "
+            "quem os gera é a definição de " + azb("externalidade positiva") + " (ex.: pesquisa básica, "
+            "vacinação), não de assimetria de informação.",
+            vm("Regra-âncora: assimetria = informação desigual entre as partes; externalidade = efeito sobre "
+               "terceiros."),
+        ],
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " Dois erros: o “sempre” e a fusão de "
+                       "duas falhas diferentes. A justificativa com “pois” descreve corretamente uma "
+                       "externalidade positiva, para dar ar de verdade ao conjunto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Assimetrias de informação podem levar à seleção adversa, reduzindo a qualidade média dos bens "
+            "transacionados.”</i> → CERTO",
+        ])],
+        "reescrita": ("Sobre assimetrias da informação: " + hl("podem resultar em seleção adversa e risco moral, "
+                      "pois uma das partes detém informações relevantes que a outra não possui") + " em "
+                      "determinado tipo de transação."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": ("Assimetrias geram falhas de mercado, não externalidades; podem levar a seleção adversa "
+                             "e risco moral."),
+        "qualidade_fonte": "bom", "figuras_fonte": [_img("Untitled (86).jpeg")], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0351
+    dict(_base("E1-0351", "info", COM_INFO), **{
+        "assertiva": ("Sobre assimetrias da informação: podem ocorrer quando do estabelecimento de contratos "
+                      "financeiros, pois os elementos relevantes para a realização de uma transação financeira não "
+                      "são totalmente transparentes."),
+        "gabarito": "CERTO",
+        "anotada": az("Sobre assimetrias da informação: <u>podem ocorrer</u> quando do estabelecimento de contratos "
+                      "financeiros, pois os elementos relevantes para a realização de uma transação financeira "
+                      "não são totalmente transparentes."),
+        "poucas": ("Contratos financeiros trocam dinheiro hoje por promessa futura; quem promete sabe mais sobre "
+                   "a própria capacidade de cumprir: " + azb("assimetria de informação") + " com " + vd("seleção "
+                   "adversa") + " antes e " + vd("risco moral") + " depois."),
+        "destrinchando": [
+            "Empréstimo: o tomador conhece o risco do projeto melhor que o banco. Emissão de ações: os "
+            "administradores conhecem a empresa melhor que os investidores (por isso emitir ações pode ser lido "
+            "como sinal de que a ação está cara). Seguro: o segurado conhece o próprio risco.",
+            "Essa é a base da teoria moderna da intermediação: bancos existem em parte porque se especializam "
+            "em coletar e produzir informação sobre tomadores (análise de crédito, relacionamento), reduzindo a "
+            "assimetria que inviabilizaria o financiamento direto.",
+            "Regulação financeira como resposta: divulgação obrigatória (prospectos, demonstrações auditadas), "
+            "agências de rating, regras contra uso de informação privilegiada (" + azb("insider trading")
+            + "), fiscalizados no " + rx("Brasil") + " pela " + rx("CVM") + " e pelo " + rx("Banco Central") + ".",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " O “podem ocorrer” e o “não são totalmente "
+                       "transparentes” calibram bem a afirmação. É o item-irmão correto de um bloco cujo erro "
+                       "está no “sempre externalidades positivas”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em contratos financeiros, a assimetria de informação é eliminada pela livre negociação das "
+            "taxas de juros.”</i> → ERRADO (a taxa mais alta agrava a seleção adversa)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["podem", "totalmente"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Comum em contratos financeiros, em que uma das partes detém mais informações "
+                             "relevantes."),
+        "qualidade_fonte": "raso", "figuras_fonte": [], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0352
+    dict(_base("E1-0352", "info", COM_INFO), **{
+        "assertiva": ("No funcionamento dos mercados, algumas pessoas sabem de coisas que outras não sabem, o que pode "
+                      "impedir transações mutuamente benéficas. Essa falha de mercado é denominada: confiança do "
+                      "consumidor."),
+        "gabarito": "ERRADO",
+        "anotada": (az("No funcionamento dos mercados, algumas pessoas sabem de coisas que outras não sabem, o que "
+                       "pode impedir transações mutuamente benéficas. Essa falha de mercado é denominada: ")
+                    + vm("confiança do consumidor") + az(".")),
+        "poucas": ("A situação descrita é a " + azb("informação assimétrica") + ". “Confiança do consumidor” é um "
+                   + vd("indicador de expectativas") + " (sentimento sobre a economia), não uma falha de mercado."),
+        "destrinchando": [
+            "A descrição do item é a definição de manual (" + oc("Mankiw") + "): diferença de acesso a "
+            "informação relevante entre as partes, capaz de impedir trocas que seriam vantajosas para ambas.",
+            "Como a troca vantajosa deixa de ocorrer: no mercado de carros usados de " + oc("Akerlof")
+            + " (1970), o comprador não distingue o carro bom do “limão” e só aceita pagar o preço médio; os "
+            "donos de carros bons, que valem mais, retiram-se — e o mercado de bons carros desaparece, embora "
+            "houvesse compradores dispostos a pagar o valor justo.",
+            azb("Índice de confiança do consumidor") + ": pesquisa de expectativas sobre renda, emprego e "
+            "situação econômica (no " + rx("Brasil") + ", calculado pela " + rx("FGV") + "). Serve para "
+            "antecipar consumo; nada tem a ver com falhas de mercado.",
+            vm("Regra-âncora: “uns sabem o que outros não sabem” = informação assimétrica."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Item derivado de múltipla escolha: a descrição é correta e "
+                       "a etiqueta foi trocada por um termo econômico real, mas de outro campo "
+                       "(macroeconomia/conjuntura). Pista: falhas de mercado têm lista fechada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Essa falha de mercado é denominada informação assimétrica e pode gerar seleção adversa.”</i> → "
+            "CERTO",
+            "<i>“Essa falha de mercado é denominada externalidade.”</i> → ERRADO (troca de conceito: o efeito "
+            "não recai sobre terceiros)",
+        ])],
+        "reescrita": ("No funcionamento dos mercados, algumas pessoas sabem de coisas que outras não sabem, o que "
+                      "pode impedir transações mutuamente benéficas. Essa falha de mercado é denominada: "
+                      + hl("informação assimétrica") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Confiança do consumidor é indicador de sentimento econômico, não falha de mercado; o "
+                             "caso é de assimetria de informação."),
+        "qualidade_fonte": "bom", "figuras_fonte": [_img("Untitled (86).jpeg")], "alertas": [],
+    }),
+    # ------------------------------------------------------------------ E1-0353
+    dict(_base("E1-0353", "info", COM_INFO), **{
+        "assertiva": ("A presença de informação assimétrica entre agentes do mercado justifica a presença de "
+                      "regulação estatal, exigindo-se maior transparência nas transações entre agentes privados."),
+        "gabarito": "CERTO",
+        "anotada": az("A presença de informação assimétrica entre agentes do mercado <u>justifica</u> a presença "
+                      "de regulação estatal, exigindo-se <u>maior transparência</u> nas transações entre agentes "
+                      "privados."),
+        "poucas": ("Sendo " + azb("falha de mercado") + ", a assimetria fundamenta a intervenção; a resposta "
+                   "típica é " + vd("regulação de transparência") + " — obrigar quem sabe mais a revelar o que "
+                   "sabe."),
+        "destrinchando": [
+            "Lógica: se o problema é informação desigual, o remédio mais direto é reduzir a desigualdade — "
+            "divulgação obrigatória, padronização das informações, auditoria independente e punição da fraude.",
+            "Exemplos: demonstrações financeiras auditadas e fatos relevantes no mercado de capitais (" + rx(
+                "CVM") + "); Custo Efetivo Total (CET) obrigatório nos empréstimos (" + rx("Banco Central")
+            + "); dever de informação do " + rx("Código de Defesa do Consumidor") + " (art. 6º, III, e art. "
+            "31); rotulagem de alimentos.",
+            "Note o verbo: “justifica” não significa que toda regulação seja bem-sucedida. A teoria aponta "
+            "também falhas de governo (captura, custo de cumprimento) e soluções privadas (sinalização de "
+            + oc("Spence") + ", filtragem de " + oc("Stiglitz") + ", reputação).",
+            vm("Regra-âncora: falha de informação → remédio de informação (transparência)."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Conteúdo de manual sobre a fundamentação da regulação. Versões "
+                       "erradas costumam dizer que a regulação “elimina completamente” a assimetria ou que ela "
+                       "“dispensa” intervenção."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A exigência de transparência elimina por completo os problemas de seleção adversa e risco "
+            "moral.”</i> → ERRADO (modulador absoluto: atenua, não elimina)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["justifica"], "dificuldade": 1,
+        "comentario_fonte": ("Falha de mercado clássica que justifica intervenção estatal para promover "
+                             "transparência e proteção ao consumidor."),
+        "qualidade_fonte": "bom", "figuras_fonte": [], "alertas": [],
+    }),
 ]

@@ -1,0 +1,19 @@
+{
+ "id": "ECO-E2-L00871-1-V1",
+ "uso": "verso",
+ "legenda": "Para cada quantidade, o custo social soma ao privado o custo externo marginal (seta): por isso CMgS fica acima de CMgP. Com dano crescente, as curvas se afastam à direita, e o CMgS cruza a demanda antes do CMgP (Q* < Qₘ).",
+ "eixos": {"x": "Q", "y": "p", "xmax": 12, "ymax": 11},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "10 - 0.6*x", "dominio": [0, 12], "familia": "demanda", "rotulo": "D"},
+  {"id": "CP", "tipo": "funcao", "expr": "1 + 0.4*x", "dominio": [0, 11.5], "familia": "oferta", "rotulo": "CMgP"},
+  {"id": "CS", "tipo": "funcao", "expr": "1 + 0.75*x", "dominio": [0, 11.5], "familia": "destaque", "rotulo": "CMgS"}
+ ],
+ "pontos": [
+  {"id": "Em", "intersecao": ["D", "CP"], "projetar": "x", "rotulo_x": "Qₘ"},
+  {"id": "Es", "intersecao": ["D", "CS"], "projetar": "x", "rotulo_x": "Q*"}
+ ],
+ "setas": [
+  {"de": [10.5, "CP(10.5)"], "para": [10.5, "CS(10.5)"], "estilo": "<|-|>", "rotulo": "custo externo marginal"}
+ ],
+ "checar": ["CS(5) > CP(5)", "CS(10) - CP(10) > CS(2) - CP(2)", "Es.x < Em.x"]
+}

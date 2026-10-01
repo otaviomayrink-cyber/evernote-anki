@@ -463,9 +463,9 @@ CARDS = [
             "<i>“No curto prazo, a firma em competição monopolística sempre obtém lucro econômico nulo.”</i> → "
             "ERRADO (modulador absoluto: pode ter lucro ou prejuízo)",
         ])],
-        "reescrita": ("[...] Assim, o equilíbrio " + hl("de longo prazo") + " não ocorre como no mercado de "
-                      "concorrência perfeita, no qual preço é igual a custo marginal, mas no ponto onde preço se "
-                      "iguala ao custo médio."),
+        "reescrita": ("[...] Assim, o equilíbrio não ocorre como no mercado de concorrência perfeita, no qual preço "
+                      "é igual a custo marginal, mas, " + hl("no longo prazo,") + " no ponto onde preço se iguala ao "
+                      "custo médio."),
         "tipo_erro": ["OUTRO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": ("Anotação “CERTO > ANULADO (não especificou curto/longo prazo)”, correção manuscrita "
                              "“(no longo prazo)” e três respostas de IA sobre curto × longo prazo, tangência, markup "
@@ -1289,6 +1289,273 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 087", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (mesmo gráfico redesenhado em ECO-E2-L00330-1-V1; ranking levado ao 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00533
+    {
+        "id": "ECO-E2-L00533-1", "fonte_ref": "E2-L00533", "destino": "10", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_NAB_ESTR_1,
+        "rotulo_item": "Item",
+        "assertiva": ("Ao contrário de uma estrutura em concorrência perfeita, um mercado contestável é compatível com "
+                      "retornos crescentes de escala, interdependência de processos decisórios das firmas e estruturas "
+                      "de mercados oligopolizadas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Ao contrário de uma estrutura em concorrência perfeita, um mercado contestável é "
+                      "<u>compatível</u> com retornos crescentes de escala, interdependência de processos decisórios "
+                      "das firmas e estruturas de mercados oligopolizadas."),
+        "poucas": ("A contestabilidade não exige atomização: basta " + azb("entrada e saída sem custos "
+                   "irrecuperáveis") + ". Por isso convive com " + vd("economias de escala") + ", poucas firmas e "
+                   "decisões interdependentes — o que a concorrência perfeita não admite."),
+        "destrinchando": [
+            azb("Concorrência perfeita") + " pressupõe muitas firmas pequenas, tomadoras de preço e sem interação "
+            "estratégica. " + azb("Retornos crescentes de escala") + " são incompatíveis com ela: o custo médio "
+            "cairia indefinidamente e a maior firma tomaria o mercado (monopólio natural).",
+            "Na teoria de " + oc("Baumol, Panzar e Willig") + " (1982), o que disciplina o preço é o "
+            + azb("entrante potencial") + ". Uma única firma com economias de escala (monopólio natural) ou um "
+            "oligopólio de firmas interdependentes podem ser forçados ao preço de lucro zero, desde que a "
+            "entrada e a saída sejam livres e sem perdas.",
+            "Com retornos crescentes, o resultado contestável é o " + azb("ótimo de segunda melhor") + ": preço "
+            "igual ao custo médio (lucro zero), não ao custo marginal — que abaixo do CMe daria prejuízo.",
+            "A ideia ampliou o alcance da análise de bem-estar a setores concentrados (aviação, transporte) e "
+            "mudou o foco da política antitruste da estrutura para as " + azb("barreiras à entrada") + ".",
+            vm("Regra-âncora: mercado contestável ≠ mercado atomizado; o que importa é a ausência de custos "
+               "irrecuperáveis."),
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " O item lista três traços que, em geral, “estragam” a "
+                       "competição (escala, interdependência, oligopólio) e afirma que são compatíveis com um "
+                       "resultado eficiente. A palavra “compatível” é o ponto: não diz que a contestabilidade os "
+                       "exige."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um mercado contestável exige grande número de firmas, como na concorrência perfeita.”</i> → ERRADO "
+            "(o número de firmas é irrelevante)",
+            "<i>“Um monopólio natural pode ser contestável se não houver custos irrecuperáveis.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["compatível"], "dificuldade": 2,
+        "comentario_fonte": ("Incumbentes ameaçados por concorrentes potenciais; sem barreiras à entrada e saída, "
+                             "preços se aproximam do custo e não há lucros extraordinários, mesmo com economias de "
+                             "escala e poucas firmas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00678
+    {
+        "id": "ECO-E2-L00678-1", "fonte_ref": "E2-L00678", "destino": "10", "subtema": H2["stack"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Sobre as estruturas de mercado, julgue (C ou E) os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de liderança de preços de Stackelberg, a firma líder obtém um lucro menor do que "
+                      "obteria no equilíbrio de Cournot, pois ao mover-se primeiro ela revela informações à "
+                      "seguidora."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de liderança de ") + vm("preços") + az(" de Stackelberg, a firma líder obtém um "
+                      "lucro ") + vm("menor") + az(" do que obteria no equilíbrio de Cournot, pois ao mover-se "
+                      "primeiro ela ") + vm("revela informações à seguidora") + az("."),
+        "poucas": ("Stackelberg é liderança em " + azb("quantidade") + ", e a líder lucra " + vd("mais")
+                   + " que em Cournot: mover-se primeiro é um " + azb("compromisso") + " que força a seguidora a "
+                   "produzir menos."),
+        "destrinchando": [
+            "Em " + oc("Stackelberg") + " (1934) a líder escolhe a quantidade antes; a seguidora observa e reage "
+            "pela sua função de reação. A líder, antecipando essa reação, produz mais do que em Cournot.",
+            "Revelar a decisão não é desvantagem — é o objetivo. Como as quantidades são "
+            + azb("substitutos estratégicos") + ", a produção alta e irreversível da líder obriga a seguidora a "
+            "encolher. Exemplo (P = 14 − Q, CMg = 2): Cournot " + vd("16 e 16") + " de lucro; Stackelberg "
+            + vd("18") + " (líder) e " + vd("9") + " (seguidora).",
+            "A líder nunca lucra menos que em Cournot: ela poderia simplesmente produzir a quantidade de Cournot, "
+            "e a seguidora responderia com a de Cournot; se escolhe outra, é porque lucra mais (" + vd("“pelo "
+            "menos igual”") + " no pior caso).",
+            "Onde mover-se primeiro pode prejudicar: na competição em <b>preço</b> com produtos diferenciados, os "
+            "preços são " + azb("complementos estratégicos") + "; a seguidora cobra um pouco menos que a líder e "
+            "pode lucrar mais (vantagem do segundo a jogar). É a fonte da confusão que o item explora.",
+            vm("Regra-âncora: Stackelberg = liderança em quantidade = vantagem do primeiro a jogar."),
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " Dois erros empilhados: “liderança de preços” (o "
+                       "modelo é de quantidade) e “lucro menor” (é maior), costurados por um nexo plausível "
+                       "(“revela informações”). Basta um deles para o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Stackelberg, a líder obtém lucro maior que no equilíbrio de Cournot.”</i> → CERTO",
+            "<i>“No modelo de Stackelberg, a seguidora obtém lucro maior que no equilíbrio de Cournot.”</i> → "
+            "ERRADO (troca de ator: quem ganha é a líder)",
+        ])],
+        "reescrita": ("No modelo de liderança de " + hl("quantidade") + " de Stackelberg, a firma líder obtém um "
+                      "lucro " + hl("maior") + " do que obteria no equilíbrio de Cournot, pois ao mover-se primeiro "
+                      "ela " + hl("se compromete com uma produção que a seguidora toma como dada") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Vantagem do primeiro a jogar: a líder incorpora a função de reação da seguidora e "
+                             "obtém lucros superiores (ou pelo menos iguais) aos de Cournot; a seguidora lucra "
+                             "menos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00759
+    {
+        "id": "ECO-E2-L00759-1", "fonte_ref": "E2-L00759", "destino": "10", "subtema": H2["cb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_OLIG,
+        "rotulo_item": "Item",
+        "assertiva": "No modelo de duopólio de Bertrand, o preço escolhido pelas empresas é igual ao custo marginal.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de duopólio de Bertrand, o preço escolhido pelas empresas é <u>igual ao custo "
+                      "marginal</u>."),
+        "poucas": ("Produto homogêneo + competição simultânea em preço + custos iguais: qualquer preço acima do CMg "
+                   "é minado por um corte da rival. O único " + azb("equilíbrio de Nash") + " é " + vd("P = CMg")
+                   + "."),
+        "destrinchando": [
+            "Raciocínio de equilíbrio: suponha P₁ = P₂ > CMg. Cada firma leva metade do mercado; se baixar o preço "
+            "um centavo, leva o mercado inteiro com margem quase igual — vale desviar. Logo, nenhum preço acima "
+            "do CMg é equilíbrio.",
+            "Preço abaixo do CMg dá prejuízo em cada unidade — também não é equilíbrio. Em " + vd("P₁ = P₂ = CMg")
+            + ", ninguém ganha desviando: subir o preço zera as vendas; baixar dá prejuízo.",
+            "É o " + azb("paradoxo de Bertrand") + " (" + oc("Joseph Bertrand") + ", 1883): duas firmas bastam "
+            "para o resultado de concorrência perfeita, com " + vd("lucro econômico zero") + ".",
+            "Condições implícitas no item: bens " + azb("homogêneos") + ", custos marginais " + azb("iguais e "
+            "constantes") + ", capacidade suficiente para atender todo o mercado e jogo de uma só rodada. Sem "
+            "elas (diferenciação, capacidade limitada, interação repetida), o preço fica acima do CMg.",
+            vm("Regra-âncora: Bertrand com produto homogêneo e custos iguais → P = CMg, lucro zero."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Resultado-padrão do modelo, sem qualificações — e a banca o "
+                       "aceita como CERTO. Atenção se o item acrescentar “produtos diferenciados” ou “custos "
+                       "distintos”: aí P = CMg deixa de valer."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No duopólio de Bertrand, as firmas obtêm lucro econômico positivo, pois cada uma detém metade do "
+            "mercado.”</i> → ERRADO (com P = CMg o lucro é zero)",
+            "<i>“No modelo de Bertrand com custos marginais distintos, a firma de menor custo atende todo o "
+            "mercado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Escolha simultânea de preços com bens homogêneos e custos iguais: o único equilíbrio "
+                             "de Nash é P = CMg; preço acima do CMg seria minado pela rival (guerra de preços)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 113", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (premissas e raciocínio levados ao 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00760
+    {
+        "id": "ECO-E2-L00760-1", "fonte_ref": "E2-L00760", "destino": "10", "subtema": H2["stack"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_OLIG,
+        "rotulo_item": "Item",
+        "assertiva": ("Oligopólio é uma estrutura de mercado em que poucas empresas interagem estrategicamente. O "
+                      "modelo de duas empresas, em que uma é líder e escolhe a quantidade de produção, e a outra é "
+                      "seguidora denomina-se Stackelberg."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Oligopólio é uma estrutura de mercado em que poucas empresas <u>interagem "
+                      "estrategicamente</u>. O modelo de duas empresas, em que uma é líder e escolhe a "
+                      "<u>quantidade</u> de produção, e a outra é seguidora denomina-se Stackelberg."),
+        "poucas": ("Definição correta de " + azb("oligopólio") + " (poucas firmas interdependentes) e de "
+                   + azb("Stackelberg") + " (duopólio sequencial em quantidade, com líder e seguidora)."),
+        "destrinchando": [
+            azb("Oligopólio") + ": poucas firmas, cada uma grande o bastante para afetar o preço; por isso a "
+            "decisão de uma altera o lucro das outras — " + azb("interdependência estratégica") + ". O instrumento "
+            "natural de análise é a " + azb("teoria dos jogos") + ".",
+            "Classificação por variável e ordem das jogadas: quantidade simultânea → " + oc("Cournot")
+            + "; quantidade sequencial → " + oc("Stackelberg") + "; preço simultâneo → " + oc("Bertrand")
+            + "; preço sequencial → liderança de preço (firma dominante).",
+            "Em Stackelberg, a líder escolhe q₁ antecipando a reação da seguidora; a seguidora observa q₁ e "
+            "escolhe q₂ = R₂(q₁). Resultado (custos iguais, demanda linear): a líder produz o dobro da seguidora "
+            "e lucra mais que em Cournot; a produção total é maior e o preço menor que em Cournot.",
+            vm("Regra-âncora: líder + seguidora + quantidade = Stackelberg."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Item-definição em duas frases. A troca típica seria “escolhe o "
+                       "preço” (liderança de preço) ou “simultaneamente” (Cournot)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo de duas empresas em que uma é líder e fixa o preço, e as demais o aceitam, denomina-se "
+            "Cournot.”</i> → ERRADO (troca de ator: é a liderança de preço / firma dominante)",
+            "<i>“No modelo de Stackelberg, a seguidora toma a quantidade da líder como dada.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Duas respostas convergentes: duopólio sequencial; líder escolhe a quantidade "
+                             "primeiro, antecipando a reação da seguidora, que observa e maximiza seu lucro."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00761
+    {
+        "id": "ECO-E2-L00761-1", "fonte_ref": "E2-L00761", "destino": "10", "subtema": H2["cb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_OLIG,
+        "rotulo_item": "Item",
+        "assertiva": ("A situação em que as empresas escolhem simultaneamente o preço da mercadoria é melhor avaliada "
+                      "por um modelo de competição de Cournot."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A situação em que as empresas escolhem simultaneamente o preço da mercadoria é melhor avaliada "
+                      "por um modelo de competição de ") + vm("Cournot") + az("."),
+        "poucas": ("Escolha simultânea de " + azb("preços") + " é o modelo de " + vd("Bertrand") + "; em "
+                   + azb("Cournot") + " as firmas escolhem simultaneamente " + vd("quantidades") + "."),
+        "destrinchando": [
+            "O modelo de " + oc("Cournot") + " (1838) supõe que as firmas fixam a produção e deixam o preço ser "
+            "determinado pela demanda de mercado para a quantidade total. O de " + oc("Bertrand") + " (1883) "
+            "supõe que fixam o preço e atendem a demanda que aparecer.",
+            "A diferença muda o resultado: com produto homogêneo e custos iguais, Bertrand dá " + vd("P = CMg")
+            + " (resultado competitivo); Cournot dá P > CMg (exemplo P = 14 − Q, CMg = 2: " + vd("P = 6")
+            + " em Cournot, " + vd("P = 2") + " em Bertrand).",
+            "Qual usar na prática: setores em que a capacidade é decidida antes e é difícil de ajustar (aço, "
+            "cimento, commodities) aproximam-se de Cournot; setores com capacidade flexível e preço como variável "
+            "de ajuste rápido (serviços, varejo on-line) aproximam-se de Bertrand.",
+            vm("Regra-âncora: preço simultâneo = Bertrand; quantidade simultânea = Cournot."),
+        ],
+        "dissecando": (cz("[troca de ator]") + " A descrição (preço + simultâneo) está certa; o erro é o nome do "
+                       "modelo. Itens desse tipo se resolvem pelo quadro variável × timing."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A situação em que as empresas escolhem simultaneamente a quantidade produzida é melhor avaliada "
+            "pelo modelo de Cournot.”</i> → CERTO",
+            "<i>“A situação em que uma empresa fixa a quantidade antes da outra é melhor avaliada pelo modelo de "
+            "Bertrand.”</i> → ERRADO (troca de ator: é Stackelberg)",
+        ])],
+        "reescrita": ("A situação em que as empresas escolhem simultaneamente o preço da mercadoria é melhor avaliada "
+                      "por um modelo de competição de " + hl("Bertrand") + "."),
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Duas respostas convergentes: escolha simultânea de preço é Bertrand; em Cournot as "
+                             "firmas escolhem quantidades e o preço sai da demanda total."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00762
+    {
+        "id": "ECO-E2-L00762-1", "fonte_ref": "E2-L00762", "destino": "10", "subtema": H2["cartel"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_OLIG,
+        "rotulo_item": "Item",
+        "assertiva": "Um cartel tende a ser duradouro se a demanda pelo seu produto for expressa por uma curva horizontal.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um cartel tende a ser duradouro se a demanda pelo seu produto for expressa por uma curva ")
+                   + vm("horizontal") + az("."),
+        "poucas": ("Demanda horizontal = " + azb("perfeitamente elástica") + ": o cartel não consegue subir o preço "
+                   "sem perder todas as vendas. Cartéis duram mais com demanda " + vd("inelástica") + "."),
+        "destrinchando": [
+            "A razão de ser de um cartel é elevar o preço restringindo a produção. Com demanda horizontal, "
+            "qualquer preço acima do vigente zera as vendas: o conluio " + azb("não gera ganho") + " e não tem por "
+            "que existir.",
+            "Mesmo que o cartel fixasse uma cota, ao preço de mercado cada membro poderia vender quanto quisesse "
+            "— o incentivo a " + azb("trapacear") + " (produzir além da cota) seria máximo, e o acordo, instável.",
+            "Com demanda " + azb("inelástica") + " (curva inclinada, quase vertical), a alta de preço eleva a "
+            "receita total e o lucro conjunto; o ganho do acordo é grande, o que ajuda a sustentá-lo.",
+            "Outras condições de durabilidade: poucas firmas, produto homogêneo, custos semelhantes, demanda "
+            "estável, transparência de preços (desvios detectáveis) e punição crível em interação repetida.",
+            vm("Regra-âncora: quanto mais inelástica a demanda, mais o cartel lucra — e mais tende a durar."),
+        ],
+        "dissecando": (cz("[inversão]") + " O item disfarça “elasticidade” de forma gráfica: “curva horizontal” = "
+                       "perfeitamente elástica, o pior caso para o cartel. Mesma ideia, em palavras, em "
+                       "ECO-E1-0236-1 e ECO-E1-0247-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um cartel tende a ser mais estável quando a demanda pelo seu produto é pouco elástica.”</i> → "
+            "CERTO",
+            "<i>“Uma curva de demanda vertical inviabiliza a elevação de preços pelo cartel.”</i> → ERRADO "
+            "(inversão: vertical = perfeitamente inelástica, o caso mais favorável)",
+        ])],
+        "reescrita": ("Um cartel tende a ser duradouro se a demanda pelo seu produto for expressa por uma curva "
+                      + hl("bem inclinada (demanda inelástica)") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": ("Duas respostas convergentes: demanda horizontal é perfeitamente elástica, típica de "
+                             "concorrência perfeita; cartel sem poder de mercado e com incentivo à trapaça; cartéis "
+                             "mais estáveis com demanda inelástica."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
         "alertas": [],
     },
 ]

@@ -491,5 +491,369 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00068
+    {
+        "id": "ECO-E3-L00068-1", "fonte_ref": "E3-L00068", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Julho/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_NIDI_JUL,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando o Brasil emprega uma política de restrição à exportação de carne bovina para a Europa "
+                      "e, consequentemente, isso provoca um aumento no preço dos bens substitutos, como da carne de "
+                      "porco ou frango, nos países europeus, isso pode ser caracterizado como uma externalidade "
+                      "negativa da política de restrição brasileira."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Quando o Brasil emprega uma política de restrição à exportação de carne bovina para a Europa "
+                       "e, consequentemente, isso provoca um aumento no preço dos bens substitutos, como da carne "
+                       "de porco ou frango, nos países europeus, isso ")
+                    + vm("pode ser caracterizado como uma externalidade negativa") + az(" da política de "
+                                                                                       "restrição brasileira.")),
+        "poucas": ("Efeito transmitido <b>pelos preços</b> não é externalidade (falha de mercado): é o mercado "
+                   "funcionando. Externalidade é efeito sobre terceiros " + azb("por fora do sistema de preços")
+                   + "."),
+        "destrinchando": [
+            azb("Externalidade") + " (no sentido de falha de mercado, também chamada " + azb("tecnológica")
+            + "): a ação de um agente altera diretamente o bem-estar ou a produção de outro, sem passar pelo "
+            "mercado e sem compensação. Exemplos: fábrica que polui o rio dos pescadores, ruído do aeroporto, "
+            "abelhas que polinizam o pomar vizinho.",
+            "O caso do item: a restrição reduz a oferta de carne bovina na Europa → o preço sobe → os "
+            "consumidores migram para os " + azb("substitutos") + " (elasticidade-preço cruzada positiva) → a "
+            "demanda por porco e frango sobe → o preço deles sobe. Tudo isso ocorre <b>dentro</b> do sistema de "
+            "preços, que está sinalizando a nova escassez.",
+            "Esse tipo de efeito tem nome técnico: " + azb("externalidade pecuniária") + ". Apesar do nome, "
+            "não gera ineficiência nem justifica imposto ou subsídio: o que um perde com o preço maior, o "
+            "vendedor ganha. Se todo efeito via preços fosse falha de mercado, qualquer compra seria "
+            "externalidade (toda demanda adicional encarece o bem para o próximo comprador).",
+            "Contraste útil em política comercial: haveria externalidade tecnológica se, por exemplo, a "
+            "produção exportadora poluísse um rio que atravessa a fronteira.",
+            vm("Regra-âncora: passou pelo preço → não é externalidade; não passou pelo preço e não foi "
+               "compensado → é externalidade."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item descreve corretamente a cadeia de preços e cola "
+                       "nela o rótulo errado. A palavra “consequentemente” e a menção a bens substitutos "
+                       "entregam o mecanismo: é estática comparativa de oferta e demanda, não falha de mercado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O aumento do preço do frango na Europa, decorrente da restrição brasileira, reflete o "
+            "funcionamento do sistema de preços em mercados de bens substitutos.”</i> → CERTO",
+            "<i>“O ruído de um aeroporto que reduz o bem-estar dos moradores vizinhos é exemplo de externalidade "
+            "pecuniária.”</i> → ERRADO (troca de conceito: é externalidade tecnológica)",
+        ])],
+        "reescrita": ("Quando o Brasil emprega uma política de restrição à exportação de carne bovina para a Europa e, "
+                      "consequentemente, isso provoca um aumento no preço dos bens substitutos, como da carne de "
+                      "porco ou frango, nos países europeus, isso " + hl("não") + " pode ser caracterizado como "
+                      "uma externalidade negativa da política de restrição brasileira" + hl(", mas como ajuste "
+                      "normal de mercado, transmitido pelos preços") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 2,
+        "comentario_fonte": "Efeito de mercado normal (oferta menor, migração para substitutos, preço sobe), não "
+                            "externalidade; externalidade exige efeito não mediado por preços; é externalidade "
+                            "pecuniária, que não causa ineficiência.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 5", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "irrecuperavel (ilegível na transcrição)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00069
+    {
+        "id": "ECO-E3-L00069-1", "fonte_ref": "E3-L00069", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Julho/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_NIDI_JUL,
+        "rotulo_item": "Item",
+        "assertiva": ("As características inerentes aos Recursos de Uso Comum fazem com que o livre acesso a esses "
+                      "bens possa resultar em uma alocação socialmente eficiente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As características inerentes aos Recursos de Uso Comum fazem com que o livre acesso a esses "
+                       "bens possa resultar em uma alocação socialmente ") + vm("eficiente") + az(".")),
+        "poucas": ("Recurso comum = " + azb("rival e não excludente") + ". Com livre acesso, cada usuário ignora "
+                   "o custo que impõe aos demais e o recurso é " + azb("sobreutilizado") + ": a "
+                   + azb("tragédia dos comuns") + "."),
+        "destrinchando": [
+            "Matriz de bens (rivalidade × exclusão): " + azb("privados") + " (rivais e excludentes: sorvete, "
+            "roupa); " + azb("de clube") + " (excludentes e não rivais: TV a cabo, estrada com pedágio sem "
+            "congestionamento); " + azb("recursos comuns") + " (rivais e não excludentes: peixes no oceano, "
+            "pastagem aberta, aquífero); " + azb("públicos") + " (nem rivais nem excludentes: defesa nacional, "
+            "sirene de alerta).",
+            "No recurso comum, o benefício de pescar mais um peixe é todo do pescador; o custo — menos peixe e "
+            "estoque menor para os outros e para o futuro — é repartido entre todos. Cada um explora até o "
+            "ponto em que o benefício <b>privado</b> iguala o custo <b>privado</b>, além do ótimo social: "
+            "sobrepesca, dissipação da renda, colapso do estoque. É uma " + azb("externalidade negativa")
+            + " entre usuários.",
+            oc("Garrett Hardin") + " popularizou a expressão em <i>The Tragedy of the Commons</i> (" + vd("1968")
+            + "). Caso clássico: o colapso do bacalhau na Terra Nova, com moratória em " + vd("1992") + ".",
+            "Soluções: cotas, licenças e defeso (regulação); direitos de propriedade (privados ou cotas "
+            "individuais transferíveis); tributos sobre o uso; e a " + azb("gestão comunitária") + " estudada "
+            "por " + oc("Elinor Ostrom") + " (<i>Governing the Commons</i>, 1990; Nobel de " + vd("2009")
+            + "). Todas restringem o livre acesso.",
+            vm("Regra-âncora: recurso comum + livre acesso → uso excessivo → ineficiência."),
+        ],
+        "dissecando": (cz("[inversão]") + " Todo o item é fiel até a última palavra: o erro está em "
+                       "“eficiente”. O “possa” ainda tenta proteger a frase, mas não salva: a ineficiência é "
+                       "consequência das próprias características do recurso, não um acaso."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A gestão comunitária com regras de acesso, monitoramento e sanções pode evitar a tragédia dos "
+            "comuns.”</i> → CERTO",
+            "<i>“Os recursos comuns são não rivais e não excludentes.”</i> → ERRADO (troca de conceito: são "
+            "rivais)",
+        ])],
+        "reescrita": ("As características inerentes aos Recursos de Uso Comum fazem com que o livre acesso a esses "
+                      "bens possa resultar em uma alocação socialmente " + hl("ineficiente, com uso excessivo do "
+                      "recurso (a tragédia dos comuns)") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["possa"], "dificuldade": 1,
+        "comentario_fonte": "Livre acesso a recursos comuns (rivais e não excludentes) gera a tragédia dos comuns "
+                            "(Hardin, 1968): sobreuso e ineficiência; soluções de Ostrom, regulação, propriedade, "
+                            "tributação.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 6", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida no 📖 (matriz rivalidade × exclusão)"},
+                          {"ref": "IMAGEM 7-12", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "irrecuperavel (ilegível na transcrição)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00070
+    {
+        "id": "ECO-E3-L00070-1", "fonte_ref": "E3-L00070", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Julho/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_NIDI_JUL,
+        "rotulo_item": "Item",
+        "assertiva": ("Se duas empresas poluidoras possuem processos produtivos diferentes e diferentes custos de "
+                      "redução de emissões, taxas sobre a quantidade de poluente emitida podem ser preferíveis à "
+                      "imposição de um limite permitido."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se duas empresas poluidoras possuem processos produtivos diferentes e <u>diferentes custos de "
+                      "redução de emissões</u>, taxas sobre a quantidade de poluente emitida <u>podem ser "
+                      "preferíveis</u> à imposição de um limite permitido."),
+        "poucas": ("Com custos de abatimento diferentes, a taxa faz cada firma reduzir até " + vd("CMgA = t")
+                   + ": quem abate barato abate mais, e a meta é atingida ao " + azb("menor custo total")
+                   + ". O limite uniforme ignora essa diferença."),
+        "destrinchando": [
+            azb("Custo marginal de abatimento") + " (CMgA) é quanto custa reduzir mais uma tonelada de poluente. "
+            "Ele varia entre firmas (tecnologia, idade da planta) e cresce à medida que se abate mais.",
+            "Com uma " + azb("taxa") + " t por tonelada emitida, a firma abate enquanto abater for mais barato "
+            "que pagar a taxa: para em CMgA = t. Como t é igual para todas, os custos marginais se "
+            + azb("igualam") + " — condição de custo mínimo (princípio equimarginal).",
+            "Exemplo do gráfico: CMgA₁ = 0,5a e CMgA₂ = 1,5a; meta de 16 t. Taxa de 6 → firma 1 abate "
+            + vd("12") + ", firma 2 abate " + vd("4") + "; custo total " + vd("36 + 12 = 48") + ". Limite "
+            "uniforme de 8 para cada → custos " + vd("16 + 48 = 64") + ", com CMgA de 4 numa e 12 na outra: "
+            "transferir abatimento da firma 2 para a 1 baratearia a mesma meta.",
+            "Outras vantagens da taxa: o regulador não precisa conhecer o custo de cada firma (informação "
+            "descentralizada) e há incentivo contínuo a inovar, pois cada tonelada a menos poupa t. As "
+            + azb("licenças negociáveis") + " (<i>cap-and-trade</i>, como o mercado europeu de carbono) obtêm "
+            "a mesma equalização, fixando a quantidade e deixando o preço surgir no mercado.",
+            "Por que “podem ser”: com a taxa, a quantidade final emitida é incerta. Se o dano cresce muito "
+            "acima de certo nível (risco catastrófico), o limite pode ser preferível — é o debate preços × "
+            "quantidades de " + oc("Weitzman") + " (1974).",
+        ],
+        "grafico_verso": "ECO-E3-L00070-1-V1",
+        "dissecando": (cz("[modulador relativo · literalidade]") + " A condição (“custos de redução "
+                       "diferentes”) é exatamente a que dá vantagem à taxa, e o “podem ser preferíveis” evita a "
+                       "generalização. 🔥 O mesmo item aparece em outros simulados com redação quase idêntica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se todas as empresas tiverem custos de abatimento idênticos, o limite uniforme e a taxa podem "
+            "atingir a mesma meta com o mesmo custo total.”</i> → CERTO",
+            "<i>“Com a taxa sobre emissões, a empresa de maior custo de abatimento reduz mais a poluição.”</i> "
+            "→ ERRADO (inversão: reduz menos e paga mais taxa)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "LITERAL"], "moduladores": ["podem"], "dificuldade": 2,
+        "comentario_fonte": "Taxa permite que cada firma abata até CMgA = taxa, minimizando o custo total; limite "
+                            "uniforme é rígido. Exemplos numéricos, Weitzman (preços × quantidades), cap-and-trade.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 13", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "irrecuperavel (ilegível na transcrição)"},
+                          {"ref": "IMAGEM 14", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00070-1-V1)"}],
+        "alertas": ["quase_duplicata: ECO-E3-L00268-1 (Nidi, Fevereiro/2025) traz a mesma assertiva com redação "
+                    "ampliada; os dois cards foram mantidos e usam o mesmo gráfico"],
+    },
+    # ------------------------------------------------------------------ E3-L00071
+    {
+        "id": "ECO-E3-L00071-1", "fonte_ref": "E3-L00071", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Julho/2025", "ano": 2025,
+        "cacd": False, "errei": True,
+        "comando": COM_NIDI_JUL,
+        "rotulo_item": "Item",
+        "assertiva": ("Como o bem público é de uso não-disputável, para determinar o seu valor temos de somar os "
+                      "benefícios marginais de todas as pessoas que o consomem."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Como o bem público é de uso <u>não-disputável</u>, para determinar o seu valor temos de "
+                      "<u>somar os benefícios marginais</u> de todas as pessoas que o consomem."),
+        "poucas": ("Não rivalidade = todos consomem a <b>mesma</b> quantidade. O valor social de mais uma unidade é "
+                   "a " + azb("soma vertical") + " das disposições a pagar: " + vd("ΣBMg") + "."),
+        "destrinchando": [
+            "“Uso não disputável” é sinônimo de " + azb("não rivalidade") + ": o consumo de um não reduz o do "
+            "outro (o farol ilumina todos os navios, a defesa protege todos os moradores).",
+            "Bem privado: cada um consome uma quantidade diferente, e a demanda de mercado é a soma "
+            + azb("horizontal") + " (somam-se as quantidades a cada preço). Bem público: a quantidade é a mesma "
+            "para todos, e o que se soma são os valores — soma " + azb("vertical") + " das curvas de benefício "
+            "marginal, a cada quantidade.",
+            "Exemplo: o próximo poste vale R$ 50 para Maria, R$ 30 para João e R$ 20 para Ana: o benefício "
+            "marginal social é " + vd("R$ 100") + ". Se o poste custar R$ 90, vale instalar, embora nenhum "
+            "deles, sozinho, pagasse por ele.",
+            "Daí a " + azb("condição de Samuelson") + " (" + oc("Paul Samuelson") + ", <i>The Pure Theory of "
+            "Public Expenditure</i>, " + vd("1954") + "): o nível eficiente é aquele em que " + vd("ΣBMg = CMg")
+            + ". No gráfico: 3,50 + 2,00 = 5,50 = CMg em q* = 2.",
+            "O problema prático: como ninguém pode ser excluído, cada um tende a " + azb("subdeclarar") + " sua "
+            "disposição a pagar (carona). A soma verdadeira não aparece no mercado — por isso o financiamento "
+            "costuma ser por tributos.",
+        ],
+        "grafico_verso": "ECO-E3-L00266-1-V1",
+        "dissecando": (cz("[literalidade · detalhe]") + " O item reproduz Pindyck quase literalmente, mas usa "
+                       "“não-disputável” em vez de “não rival” e “valor” em vez de “benefício marginal social” "
+                       "— quem não reconhece os sinônimos desconfia. A armadilha clássica é trocar “somar os "
+                       "benefícios” por “somar as quantidades”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A curva de demanda de mercado de um bem público obtém-se pela soma horizontal das curvas "
+            "individuais.”</i> → ERRADO (troca de conceito: soma vertical)",
+            "<i>“Para bens privados, a eficiência exige que o benefício marginal de cada consumidor iguale o "
+            "custo marginal.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Não rivalidade: soma vertical dos benefícios marginais (regra de Samuelson); ΣBMg = "
+                            "CMg define o nível eficiente; bem privado soma horizontal; carona subdeclara.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 15", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida no 📖 (matriz rivalidade × exclusão)"}],
+        "alertas": ["nota_redacao: gráfico do verso compartilhado com ECO-E3-L00266-1 (mesmo mecanismo: soma "
+                    "vertical e condição de Samuelson)"],
+    },
+    # ------------------------------------------------------------------ E3-L00158
+    {
+        "id": "ECO-E3-L00158-1", "fonte_ref": "E3-L00158", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_ANTT_BATERIA,
+        "rotulo_item": "Item",
+        "assertiva": ("Não há externalidade causada pelo baterista, uma vez que a perda de utilidade pelo casal por "
+                      "causa do ruído dos ensaios é compensada pelo aumento da utilidade do baterista ao cumprir "
+                      "sua atividade."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (vm("Não há") + az(" externalidade causada pelo baterista, uma vez que a perda de utilidade pelo "
+                                      "casal por causa do ruído dos ensaios ")
+                    + vm("é compensada pelo aumento da utilidade do baterista") + az(" ao cumprir sua atividade.")),
+        "poucas": ("Há " + azb("externalidade negativa") + ": o ruído reduz o bem-estar do casal sem passar pelo "
+                   "mercado e sem pagamento. O ganho do próprio baterista não “compensa” nada — ele não paga ao "
+                   "vizinho."),
+        "destrinchando": [
+            "Definição: externalidade é o efeito da ação de um agente sobre o bem-estar de terceiros que não "
+            "participam da decisão, " + azb("sem mediação de preços e sem compensação") + ". O ruído do ensaio "
+            "que acorda o bebê se encaixa por inteiro.",
+            "A existência da externalidade não depende do saldo de utilidades. Mesmo que o ganho do baterista "
+            "superasse a perda do casal, o casal continua arcando com um custo que não escolheu e pelo qual não "
+            "recebe nada. Comparar ganhos e perdas serve para outra pergunta: qual é o nível <b>eficiente</b> de "
+            "ensaio — não se há externalidade.",
+            "Compensação, em economia, é transferência efetiva (o baterista paga ao casal, ou o casal paga ao "
+            "baterista para ensaiar em outro horário). Utilidade de uma pessoa não se transfere para outra.",
+            "Soluções: " + azb("barganha de Coase") + " (vizinhos combinam horários ou isolamento acústico — "
+            "poucas partes, custo de transação baixo); regra do condomínio ou lei do silêncio (regulação); "
+            "multa por barulho (lógica pigouviana).",
+            vm("Regra-âncora: efeito sobre terceiro + fora do preço + sem compensação = externalidade, qualquer "
+               "que seja o saldo de bem-estar."),
+        ],
+        "dissecando": (cz("[nexo indevido · troca de conceito]") + " O item troca o critério de existência da "
+                       "externalidade (efeito não compensado sobre terceiro) por um balanço de utilidades entre "
+                       "pessoas diferentes. “Compensada” é a palavra-gatilho: ninguém pagou ninguém."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se os custos de transação forem baixos, o casal e o baterista podem chegar, por negociação, a "
+            "uma solução eficiente para o ruído.”</i> → CERTO",
+            "<i>“O ruído dos ensaios constitui externalidade positiva, pois eleva a utilidade do "
+            "baterista.”</i> → ERRADO (troca de conceito: o efeito sobre terceiros é negativo)",
+        ])],
+        "reescrita": (hl("Há") + " externalidade " + hl("negativa") + " causada pelo baterista, uma vez que a perda "
+                      "de utilidade do casal por causa do ruído dos ensaios " + hl("não é compensada, ainda que") +
+                      " o baterista ganhe utilidade ao cumprir sua atividade."),
+        "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Ruído é externalidade negativa: afeta o casal sem mediação de preço nem compensação; "
+                            "o saldo de utilidades não é critério; soluções: regulação, Coase, multas.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00159
+    {
+        "id": "ECO-E3-L00159-1", "fonte_ref": "E3-L00159", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_ANTT_VIA,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma avenida, quando congestionada, deixa de ser um bem público, pois, nesse caso, passa a "
+                      "apresentar rivalidade no consumo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma avenida, quando <u>congestionada</u>, deixa de ser um bem público, pois, nesse caso, "
+                      "passa a apresentar <u>rivalidade no consumo</u>."),
+        "poucas": ("No congestionamento, cada carro a mais atrasa os outros: surge " + azb("rivalidade")
+                   + ". Sem pedágio, a via continua não excludente — vira " + azb("recurso comum") + ", não bem "
+                   "público."),
+        "destrinchando": [
+            "A classificação de uma via muda com duas variáveis, pedágio (exclusão) e congestionamento "
+            "(rivalidade):",
+            "Sem pedágio e sem congestionamento → não excludente e não rival → " + azb("bem público") + ".",
+            "Sem pedágio e congestionada → não excludente e rival → " + azb("recurso comum") + " (sofre a "
+            "tragédia dos comuns: todos entram, ninguém paga o atraso que impõe aos demais).",
+            "Com pedágio e sem congestionamento → excludente e não rival → " + azb("bem de clube") + ".",
+            "Com pedágio e congestionada → excludente e rival → " + azb("bem privado") + ". É a classificação "
+            "de " + oc("Mankiw") + ", que põe as estradas nos quatro quadrantes.",
+            "O congestionamento é uma " + azb("externalidade negativa") + " entre motoristas. Daí as propostas "
+            "de " + azb("pedágio urbano") + " (Londres, Singapura): cobrar no horário de pico internaliza o "
+            "custo do atraso e transforma o recurso comum em bem excludente.",
+            vm("Regra-âncora: rivalidade muda com a lotação; exclusão muda com a cobrança."),
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " A intuição jurídica diz que “a avenida é pública”; o item "
+                       "usa o conceito econômico, em que “público” depende das propriedades do bem, não do "
+                       "dono. O comando define bem público pelas duas características: perder uma basta para "
+                       "deixar de sê-lo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma avenida congestionada e sem pedágio é um recurso comum.”</i> → CERTO",
+            "<i>“Uma avenida congestionada passa a ser excludente, pois motoristas são impedidos de "
+            "utilizá-la.”</i> → ERRADO (troca de conceito: muda a rivalidade, não a exclusão)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Sem pedágio e sem congestionamento: bem público; sem pedágio e congestionada: bem "
+                            "comum; com pedágio e congestionada: bem privado. Diagrama decisório da via pública.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 169", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "texto (absorvido no 📖 como lista de casos)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00160
+    {
+        "id": "ECO-E3-L00160-1", "fonte_ref": "E3-L00160", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_ANTT_VIA,
+        "rotulo_item": "Item",
+        "assertiva": "Uma rua em um condomínio fechado não é um bem público, por ser exclusiva.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma rua em um condomínio fechado não é um bem público, por ser <u>exclusiva</u>."),
+        "poucas": ("A portaria do condomínio impede o acesso de quem não é morador: o bem é " + azb("excludente")
+                   + ". Faltando a não exclusão, não é bem público — sem congestionamento, é " + azb("bem de "
+                   "clube") + "."),
+        "destrinchando": [
+            "Bem público exige as duas propriedades ao mesmo tempo: " + azb("não exclusão") + " (não se consegue "
+            "impedir o uso por quem não paga) e " + azb("não rivalidade") + " (o uso de um não reduz o do "
+            "outro). Basta faltar uma para o bem sair do quadrante.",
+            "A rua do condomínio fechado tem controle de acesso: só moradores e autorizados entram, e o acesso "
+            "é custeado pela taxa condominial. Isso é exclusão.",
+            "Como a rua normalmente não está congestionada, segue não rival: o bem fica no quadrante "
+            + azb("excludente e não rival") + " — os " + azb("bens de clube") + " (ou bens artificialmente "
+            "escassos), como TV a cabo, academia, clube recreativo.",
+            "Atenção ao vocabulário: “público” em economia não significa “de propriedade do Estado”. Há bens "
+            "providos pelo Estado que são privados no sentido econômico (vaga em escola pública é rival e "
+            "excludente) e bens públicos providos por particulares.",
+            "Os clubes resolvem o carona pela exclusão: quem não paga a taxa não entra. Por isso podem ser "
+            "providos pelo mercado ou por arranjos coletivos privados, sem tributo.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Aplicação direta da definição dada no próprio comando. O risco "
+                       "é o candidato confundir “público” com “aberto ao público” ou com propriedade estatal, "
+                       "ou achar que a rua precisaria ser também rival para deixar de ser bem público."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma rua em condomínio fechado, sem congestionamento, é exemplo de bem de clube.”</i> → CERTO",
+            "<i>“Uma rua em condomínio fechado não é bem público porque é rival no consumo.”</i> → ERRADO "
+            "(troca de conceito: o que falta é a não exclusão)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Rua de condomínio fechado é exclusiva (acesso restrito), logo não é bem público; "
+                            "diagrama decisório da via pública.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 169", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "texto (absorvido no 📖)"}],
+        "alertas": [],
+    },
     # ---- fim
 ]

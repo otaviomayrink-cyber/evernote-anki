@@ -844,7 +844,7 @@ CARDS = [
             "P&amp;D.”</i> → CERTO",
         ])],
         "tipo_erro": ["MODULADOR_RELATIVO", "CONTRAINTUITIVO"], "moduladores": ["podem"], "dificuldade": 1,
-        "comentario_fonte": ("Hipótese schumpeteriana: lucros extraordinários financiam P&amp;D; inovações geram "
+        "comentario_fonte": ("Hipótese schumpeteriana: lucros extraordinários financiam P&D; inovações geram "
                              "spillovers para outros setores; quatro resoluções concordantes com exemplos de "
                              "tecnologia."),
         "qualidade_fonte": "bom",
@@ -902,6 +902,218 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 579-580", "tipo_fonte": "TEXTO/TABELA", "lado": "verso",
                            "acao": "absorvidas no 📖"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0232
+    {
+        "id": "ECO-E1-0232-1", "fonte_ref": "E1-0232", "destino": "11", "subtema": H2["nash"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2014, "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir, relativo à teoria dos jogos aplicada a mercados.",
+        "rotulo_item": "Item",
+        "assertiva": ("Mercados com poucos atores, em que a interdependência de ações é uma característica marcante, "
+                      "podem ser representados como um jogo, cujo resultado, associado a uma estratégia, é "
+                      "denominado playoff. Considera-se relativamente mais fácil utilizar a forma estratégica em "
+                      "situações em que um jogador (empresa) deva agir sem o conhecimento da ação de seu "
+                      "concorrente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Mercados com poucos atores, em que a interdependência de ações é uma característica "
+                       "marcante, podem ser representados como um jogo, cujo resultado, associado a uma estratégia, "
+                       "é denominado ") + vm("playoff") + az(". Considera-se relativamente mais fácil utilizar a "
+                       "forma estratégica em situações em que um jogador (empresa) deva agir sem o conhecimento da "
+                       "ação de seu concorrente.")),
+        "poucas": ("O ganho associado a cada combinação de estratégias chama-se " + azb("payoff") + " (não "
+                   "“playoff”, que é fase eliminatória de campeonato). A segunda frase é correta: a forma "
+                   "estratégica é a representação natural dos jogos <b>simultâneos</b>."),
+        "destrinchando": [
+            "Elementos de um jogo: " + azb("jogadores") + ", " + azb("estratégias") + " e " + azb("payoffs")
+            + " — o resultado (lucro, utilidade) de cada jogador para cada combinação de estratégias. Para "
+            "firmas, o payoff é o lucro (" + oc("Pindyck e Rubinfeld") + ").",
+            azb("Forma estratégica") + " (ou normal): matriz de payoffs, com as estratégias de cada jogador nas "
+            "linhas e colunas. Serve aos jogos em que cada um decide <b>sem observar</b> a escolha do outro — "
+            "jogos simultâneos, como o dilema dos prisioneiros ou o duopólio de Cournot.",
+            azb("Forma extensiva") + ": árvore de decisão, com a ordem dos lances e o que cada jogador sabe em "
+            "cada nó. É a adequada aos jogos " + azb("sequenciais") + " (Stackelberg, dissuasão de entrada), "
+            "resolvidos por indução retroativa.",
+            "Por isso a 2ª frase do item é verdadeira: quando a empresa age sem conhecer a ação da rival, a "
+            "matriz basta e é mais simples de usar. O erro do item está só no termo “playoff”.",
+            "Correção de leitura: uma resolução corrente deste item afirma que a 2ª frase também estaria errada "
+            "(“é mais difícil decidir sem conhecer a ação do rival”). Isso confunde a dificuldade de <b>decidir</b> "
+            "com a adequação da <b>representação</b>; não é o que o item diz.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Erro de vocabulário plantado num termo parecido (payoff × "
+                       "playoff). A 2ª frase, tecnicamente correta, funciona como distração: quem a julga pelo "
+                       "senso comum (“sem informação é mais difícil”) acerta o gabarito pelo motivo errado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Jogos sequenciais são mais bem representados na forma extensiva, por meio de uma árvore de "
+            "decisão.”</i> → CERTO",
+            "<i>“A forma estratégica é a representação adequada quando uma empresa observa a decisão da rival "
+            "antes de agir.”</i> → ERRADO (troca de conceito: isso pede a forma extensiva)",
+        ])],
+        "reescrita": ("Mercados com poucos atores, em que a interdependência de ações é uma característica marcante, "
+                      "podem ser representados como um jogo, cujo resultado, associado a uma estratégia, é "
+                      "denominado " + hl("payoff") + ". Considera-se relativamente mais fácil utilizar a forma "
+                      "estratégica em situações em que um jogador (empresa) deva agir sem o conhecimento da ação "
+                      "de seu concorrente."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["relativamente"], "dificuldade": 2,
+        "comentario_fonte": ("O termo correto é payoff (definição de Pindyck e Rubinfeld); a fonte também afirma "
+                             "que a 2ª frase estaria errada, porque seria mais difícil decidir sem conhecer a ação "
+                             "do concorrente, e menciona equilíbrio de Nash."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_E1_CACD,
+                    "qualidade_fonte: a fonte considera falsa também a 2ª frase; a forma estratégica (normal) é a "
+                    "representação própria de jogos simultâneos, de modo que só o termo “playoff” torna o item "
+                    "ERRADO — gabarito mantido, justificativa corrigida"],
+    },
+    # ------------------------------------------------------------------ E2-L01660
+    {
+        "id": "ECO-E2-L01660-1", "fonte_ref": "E2-L01660", "destino": "11", "subtema": H2["seq"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": "A respeito dos conceitos e teorias da microeconomia, julgue os itens a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considerando a teoria dos jogos na análise de um duopólio, uma vez no equilíbrio cooperativo "
+                      "com a formação de cartel, ambas as firmas têm incentivo a burlar e aumentar seus lucros, o "
+                      "que pode ser contornado se o jogo for repetido infinitamente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considerando a teoria dos jogos na análise de um duopólio, uma vez no equilíbrio cooperativo "
+                      "com a formação de cartel, <u>ambas as firmas têm incentivo a burlar</u> e aumentar seus "
+                      "lucros, o que <u>pode</u> ser contornado se o jogo for <u>repetido infinitamente</u>."),
+        "poucas": ("No cartel, trair é a melhor resposta de cada firma (" + azb("dilema dos prisioneiros")
+                   + "). Com repetição " + vd("infinita") + " (ou indefinida) e firmas pacientes, a ameaça de "
+                   "punição futura pode sustentar a cooperação."),
+        "destrinchando": [
+            "Jogo de uma rodada: se a rival cumpre a cota, produzir mais eleva o meu lucro; se a rival trai, "
+            "trair também me protege. Trair é " + azb("estratégia dominante") + " para as duas, e o equilíbrio "
+            "de Nash é o pior para o grupo.",
+            "Jogo " + azb("repetido infinitamente") + ": entram estratégias que condicionam o futuro ao "
+            "presente. " + azb("Gatilho") + " (<i>grim trigger</i>): coopero enquanto você cooperar; se trair, "
+            "volto à competição para sempre. " + azb("Olho por olho") + " (<i>tit-for-tat</i>): repito o seu "
+            "último lance — estratégia que venceu os torneios de " + oc("Axelrod") + ".",
+            "Condição: o ganho único de trair hoje tem de ser menor que o valor presente das perdas futuras. "
+            "Isso exige " + azb("fator de desconto") + " alto (firmas pacientes, juros baixos, interação "
+            "frequente). Resultado geral: " + azb("teorema folk") + ".",
+            "Repetição <b>finita</b> e conhecida não basta: na última rodada todos traem; antecipando isso, "
+            "traem na penúltima, e assim por diante (indução retroativa). Daí o item exigir repetição infinita "
+            "— ou com fim incerto.",
+            "Leitura prática: cartéis duram mais onde a interação é frequente, os preços são observáveis e a "
+            "punição é crível (poucas firmas, produto homogêneo).",
+        ],
+        "dissecando": (cz("[modulador relativo · literalidade]") + " Reproduz o roteiro de manual (incentivo a "
+                       "trair → repetição infinita) e se protege com “pode ser contornado”. Quem lembra só da "
+                       "instabilidade do cartel marca ERRADO; o detalhe da repetição infinita salva o item."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o jogo for repetido um número finito e conhecido de vezes, a cooperação é sustentável em "
+            "todas as rodadas.”</i> → ERRADO (indução retroativa: trai-se desde a 1ª rodada)",
+            "<i>“Em jogos repetidos indefinidamente, a cooperação é mais fácil de sustentar quanto mais as "
+            "firmas valorizam o futuro.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "LITERAL"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Cada firma tem incentivo a trapacear (dilema dos prisioneiros); repetição infinita "
+                             "permite estratégias de gatilho/tit-for-tat; teorema folk com taxa de desconto "
+                             "baixa."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01728
+    {
+        "id": "ECO-E2-L01728-1", "fonte_ref": "E2-L01728", "destino": "11", "subtema": H2["nash"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("O equilíbrio de Nash em um jogo de duopólio é um equilíbrio de estratégias dominantes, porém "
+                      "será um equilíbrio instável, caso o jogo não tenha repetição infinita."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O equilíbrio de Nash em um jogo de duopólio ") + vm("é um equilíbrio de estratégias "
+                    "dominantes") + az(", porém ") + vm("será um equilíbrio instável, caso o jogo não tenha "
+                                                       "repetição infinita") + az(".")),
+        "poucas": ("Dois erros: o " + azb("equilíbrio de Nash") + " não exige estratégias dominantes (todo "
+                   "equilíbrio em dominantes é Nash, não o contrário); e ele é estável por definição — ninguém "
+                   "ganha desviando sozinho —, com ou sem repetição."),
+        "destrinchando": [
+            azb("Equilíbrio de Nash") + " (" + oc("John Nash") + ", 1950): combinação de estratégias em que "
+            "cada jogador faz o melhor que pode <b>dado o que os outros fazem</b>. Nenhum tem incentivo a "
+            "mudar unilateralmente.",
+            azb("Equilíbrio em estratégias dominantes") + ": cada jogador tem uma estratégia que é a melhor "
+            "<b>qualquer que seja</b> a do outro. É mais exigente — e mais raro. Relação: " + vm("dominantes ⊂ "
+            "Nash") + ".",
+            "Exemplos: no dilema dos prisioneiros, o Nash é também em dominantes (trair). No duopólio de "
+            "Cournot, não: a melhor quantidade de cada firma depende da quantidade da rival (função de "
+            "reação), e o equilíbrio é Nash sem dominância. Na batalha dos sexos, há dois equilíbrios de Nash "
+            "e nenhuma estratégia dominante.",
+            "Estabilidade: o Nash é, por construção, autossustentável. A repetição infinita não “estabiliza” o "
+            "Nash do jogo de uma rodada; ela torna possíveis <b>outros</b> equilíbrios, como a cooperação do "
+            "cartel (teorema folk). O que é instável sem repetição é a cooperação, não o Nash.",
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " Funde dois conceitos vizinhos (Nash × "
+                       "dominantes) e transfere ao equilíbrio de Nash a instabilidade que pertence ao "
+                       "<b>cartel</b>. Pista: “equilíbrio instável” é quase uma contradição em termos para Nash."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Todo equilíbrio em estratégias dominantes é um equilíbrio de Nash, mas nem todo equilíbrio de "
+            "Nash envolve estratégias dominantes.”</i> → CERTO",
+            "<i>“O equilíbrio de Cournot é um equilíbrio de estratégias dominantes.”</i> → ERRADO (é Nash sem "
+            "dominância)",
+        ])],
+        "reescrita": ("O equilíbrio de Nash em um jogo de duopólio " + hl("não é necessariamente") + " um "
+                      "equilíbrio de estratégias dominantes" + hl(" e é estável por definição, mesmo que") + " o "
+                      "jogo não tenha repetição infinita."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Dois erros: Nash não é necessariamente em estratégias dominantes (Cournot é exemplo); "
+                             "Nash é estável por definição; repetição permite cooperação, mas não afeta a "
+                             "estabilidade do Nash do jogo estático."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00021
+    {
+        "id": "ECO-E3-L00021-1", "fonte_ref": "E3-L00021", "destino": "11", "subtema": H2["seq"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ-PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": CMD_TJPA_ESTR,
+        "rotulo_item": "Item",
+        "assertiva": ("Na análise da estratégia empresarial em jogos sequenciais, é mais vantajoso para uma empresa "
+                      "aguardar a decisão de sua concorrente para fins de maximizar seus lucros."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Na análise da estratégia empresarial em jogos sequenciais, ") + vm("é") + az(" mais "
+                       "vantajoso para uma empresa ") + vm("aguardar a decisão de sua concorrente") + az(" para fins de maximizar "
+                                                                                       "seus lucros.")),
+        "poucas": ("Em jogos sequenciais, a regra é a " + azb("vantagem do primeiro a jogar") + " (<i>first-mover "
+                   "advantage</i>): quem age antes cria um fato consumado e condiciona a resposta do rival. "
+                   "Esperar não é, em geral, melhor."),
+        "destrinchando": [
+            azb("Jogo sequencial") + ": os jogadores agem em ordem, e quem vem depois observa o lance anterior. "
+            "Representa-se na forma extensiva (árvore) e resolve-se por " + azb("indução retroativa") + ": "
+            "primeiro a melhor resposta do último, depois a escolha de quem antecipa essa resposta.",
+            "Caso-padrão: " + oc("Stackelberg") + ". A líder escolhe a quantidade sabendo como a seguidora "
+            "reagirá; ao produzir mais, força a rival a produzir menos. No caso linear, a líder produz o dobro "
+            "da seguidora e lucra mais que em Cournot.",
+            "O ingrediente é o " + azb("compromisso crível") + ": capacidade instalada, investimento "
+            "irreversível, anúncio público. Exemplo de " + oc("Pindyck e Rubinfeld") + ": a incumbente que "
+            "expande capacidade para dissuadir a entrada de um rival.",
+            "Há exceções — " + azb("vantagem do segundo a jogar") + ": competição em preços com produtos "
+            "diferenciados (quem anuncia o preço primeiro pode ser rebaixado), mercados com muita incerteza "
+            "(o seguidor aprende com os erros do pioneiro). Por isso o item erra ao transformar a exceção em "
+            "regra.",
+        ],
+        "dissecando": (cz("[inversão · modulador absoluto]") + " Inverte a vantagem típica (primeiro × segundo "
+                       "a jogar) e a enuncia sem ressalva (“é mais vantajoso”). Pista: em prova, jogo sequencial "
+                       "+ empresa remete a Stackelberg, cujo ponto é justamente a vantagem da líder."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em jogos sequenciais, a empresa que move primeiro pode obter vantagem ao assumir um "
+            "compromisso crível que condiciona a resposta da rival.”</i> → CERTO",
+            "<i>“Em jogos sequenciais, mover primeiro é sempre a melhor estratégia.”</i> → ERRADO (modulador "
+            "absoluto: há casos de vantagem do segundo a jogar)",
+        ])],
+        "reescrita": ("Na análise da estratégia empresarial em jogos sequenciais, " + hl("costuma ser") + " mais "
+                      "vantajoso para uma empresa " + hl("mover primeiro, antes de sua concorrente,") + " para fins "
+                      "de maximizar seus lucros."),
+        "tipo_erro": ["INVERSAO", "GENERALIZACAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Seis resoluções concordantes: vantagem do primeiro a mover (Stackelberg, compromisso "
+                             "crível); há casos de vantagem do segundo, mas não é a regra."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
         "alertas": [],
     },
 ]

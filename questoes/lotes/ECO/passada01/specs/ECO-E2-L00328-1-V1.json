@@ -1,0 +1,122 @@
+{
+ "id": "ECO-E2-L00328-1-V1",
+ "uso": "verso",
+ "legenda": "No longo prazo, a demanda da firma (inclinada) só toca o CMe no trecho descendente, em E: lucro zero, mas com q* à esquerda da quantidade de custo médio mínimo. A distância entre q* e q mín. é a capacidade ociosa; e, em q*, o preço fica acima do CMg.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 12,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "CMe",
+   "tipo": "funcao",
+   "expr": "16/x + 0.25*x",
+   "dominio": [
+    2.2,
+    11.5
+   ],
+   "familia": "terceira",
+   "rotulo": "CMe"
+  },
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "0.5*x",
+   "dominio": [
+    0.4,
+    11.5
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "8 - 0.75*x",
+   "dominio": [
+    0,
+    10.2
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 9.8,
+   "rotulo_desloc": [
+    4,
+    10
+   ]
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "8 - 1.5*x",
+   "dominio": [
+    0,
+    4.3
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg",
+   "rotulo_xy": [
+    2.3,
+    3.0
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "sobre": "D",
+   "x": 4,
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "q*",
+   "rotulo_y": "P = CMe",
+   "rotulo_desloc": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "M",
+   "intersecao": [
+    "CMg",
+    "CMe"
+   ],
+   "rotulo": "CMe mín.",
+   "projetar": "x",
+   "rotulo_x": "q mín.",
+   "rotulo_desloc": [
+    10,
+    -16
+   ]
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    4,
+    0.6
+   ],
+   "para": [
+    "M.x",
+    0.6
+   ],
+   "estilo": "<|-|>",
+   "rotulo": "capacidade ociosa",
+   "rotulo_desloc": [
+    -58,
+    8
+   ]
+  }
+ ],
+ "checar": [
+  "abs(D(4) - CMe(4)) < 0.01",
+  "abs(RMg(4) - CMg(4)) < 0.01",
+  "abs(M.x - 8) < 0.01",
+  "D(3) < CMe(3)",
+  "D(5) < CMe(5)",
+  "D(4) > CMg(4)",
+  "CMe(4) > CMe(M.x)"
+ ]
+}

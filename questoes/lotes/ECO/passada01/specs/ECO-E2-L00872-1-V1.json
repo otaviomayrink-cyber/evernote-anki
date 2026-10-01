@@ -16,7 +16,7 @@
   {"id": "Ps", "sobre": "CP", "x": "Es.x"}
  ],
  "setas": [
-  {"de": ["Es.x - 0.35", "CP(Es.x)"], "para": ["Es.x - 0.35", "Es.y"], "estilo": "<|-|>", "rotulo": "t"}
+  {"de": ["Es.x - 0.6", "CP(Es.x)"], "para": ["Es.x - 0.6", "Es.y"], "estilo": "<|-|>", "rotulo": "t"}
  ],
  "checar": ["abs(Et.x - Es.x) < 0.01", "abs((Es.y - CP(Es.x)) - 20/7) < 0.01", "CS(Em.x) - CP(Em.x) > 20/7", "Es.x < Em.x"]
 }

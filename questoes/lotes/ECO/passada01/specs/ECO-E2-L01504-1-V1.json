@@ -1,0 +1,32 @@
+{"id": "ECO-E2-L01504-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "No curto prazo, a firma escolhe q₁ (RMg = CMg) e cobra P₁ acima do CMe: há lucro. A entrada de concorrentes desloca a demanda de cada firma para a esquerda até ela tangenciar o CMe em q₂: lucro zero, com q₂ abaixo da escala de custo médio mínimo e P₂ acima do CMg.",
+ "paineis": [
+  {"titulo": "(a) Curto prazo: lucro",
+   "eixos": {"x": "q", "y": "p", "xmax": 12, "ymax": 11},
+   "curvas": [
+    {"id": "CMe", "tipo": "funcao", "expr": "16/x + 0.25*x", "dominio": [1.9, 11.5], "familia": "terceira", "rotulo": "CMe"},
+    {"id": "CMg", "tipo": "funcao", "expr": "0.5*x", "dominio": [0.4, 11.5], "familia": "oferta", "rotulo": "CMg"},
+    {"id": "D", "tipo": "funcao", "expr": "10 - 0.75*x", "dominio": [0, 12], "familia": "demanda", "rotulo": "D₁", "rotulo_em": 11.4, "rotulo_desloc": [2, 10]},
+    {"id": "RMg", "tipo": "funcao", "expr": "10 - 1.5*x", "dominio": [0, 6.5], "familia": "quarta", "rotulo": "RMg₁", "rotulo_em": 6.4, "rotulo_desloc": [6, 4]}
+   ],
+   "pontos": [
+    {"id": "P1", "sobre": "D", "x": 5, "rotulo": "", "projetar": true, "rotulo_x": "q₁", "rotulo_y": "P₁"}
+   ],
+   "areas": [
+    {"tipo": "poligono", "vertices": [[0, "CMe(5)"], [0, "P1.y"], "P1", [5, "CMe(5)"]], "papel": "ganho", "rotulo": "lucro", "rotulo_xy": [2.2, 5.35]}
+   ],
+   "checar": ["abs(RMg(5) - CMg(5)) < 0.01", "P1.y > CMe(5)"]},
+  {"titulo": "(b) Longo prazo: lucro zero",
+   "eixos": {"x": "q", "y": "p", "xmax": 12, "ymax": 11},
+   "curvas": [
+    {"id": "CMe", "tipo": "funcao", "expr": "16/x + 0.25*x", "dominio": [1.9, 11.5], "familia": "terceira", "rotulo": "CMe"},
+    {"id": "CMg", "tipo": "funcao", "expr": "0.5*x", "dominio": [0.4, 11.5], "familia": "oferta", "rotulo": "CMg"},
+    {"id": "D", "tipo": "funcao", "expr": "8 - 0.75*x", "dominio": [0, 10.2], "familia": "demanda", "rotulo": "D₂", "rotulo_em": 9.8, "rotulo_desloc": [4, 10]},
+    {"id": "RMg", "tipo": "funcao", "expr": "8 - 1.5*x", "dominio": [0, 5.2], "familia": "quarta", "rotulo": "RMg₂", "rotulo_em": 5.1, "rotulo_desloc": [6, 4]}
+   ],
+   "pontos": [
+    {"id": "E", "sobre": "D", "x": 4, "rotulo": "", "projetar": true, "rotulo_x": "q₂", "rotulo_y": "P₂"},
+    {"id": "M", "intersecao": ["CMg", "CMe"], "projetar": "x", "rotulo_x": "q mín.", "marcar": false}
+   ],
+   "checar": ["abs(D(4) - CMe(4)) < 0.01", "abs(RMg(4) - CMg(4)) < 0.01", "D(3) < CMe(3)", "D(5) < CMe(5)", "M.x > E.x"]}
+ ]}

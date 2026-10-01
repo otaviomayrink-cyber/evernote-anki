@@ -115,7 +115,8 @@ CARDS = [
                              "elétrico; café × açúcar; livro × sapato."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["fonte_data: frente marcada “(04/22)”, sem banca nem órgão; provável questionário próprio"],
+        "alertas": ["nota_redacao: frente marcada “(04/22)”, sem banca nem órgão; provável questionário próprio",
+                    "quase_duplicata: ECO-E1-0114-1 (mesma regra do sinal, outra redação e outra origem)"],
     },
     # ------------------------------------------------------------------ E1-0017
     {
@@ -660,7 +661,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "Untitled (17).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
                            "acao": "irrecuperavel (" + NAO_PRESERVADA + "; conteúdo coberto pelo 📖)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0107-1 (mesmo erro — zero × infinito —, redação mais precisa)"],
     },
     # ------------------------------------------------------------------ E1-0101
     {
@@ -960,7 +961,7 @@ CARDS = [
         "figuras_fonte": [{"ref": "Untitled (17).jpeg", "tipo_fonte": "GRÁFICO?", "lado": "verso",
                            "acao": "redesenhada (ECO-E1-0107-1-V1, conteúdo presumido; original "
                                    + NAO_PRESERVADA + ")"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0100-1 (mesmo erro — zero × infinito —, redação mais vaga)"],
     },
     # ------------------------------------------------------------------ E1-0108
     {
@@ -1284,7 +1285,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "Untitled (23).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
                            "acao": "irrecuperavel (" + NAO_PRESERVADA + "; conteúdo coberto pelo 📖)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0011-1 (mesma regra do sinal, outra redação e outra origem)"],
     },
     # ------------------------------------------------------------------ E1-0115
     {

@@ -965,4 +965,406 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L01021
+    {
+        "id": "ECO-E2-L01021-1", "fonte_ref": "E2-L01021", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_ESTR_SUBSEQ,
+        "rotulo_item": "Item",
+        "assertiva": ("Permitir que as empresas discriminem preços leva a ganhos de bem-estar dos consumidores e "
+                      "maiores lucros dos empresários."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Permitir que as empresas discriminem preços ") + vm("leva a ganhos de bem-estar dos "
+                                                                           "consumidores") + az(" e maiores lucros "
+                                                                                                "dos empresários."),
+        "poucas": ("O lucro tende a subir (a firma captura " + azb("excedente do consumidor") + "), mas o efeito "
+                   "sobre os consumidores é " + vd("ambíguo") + ": uns pagam menos, outros mais; no 1º grau, o "
+                   "excedente do consumidor chega a zero."),
+        "destrinchando": [
+            "Lucro: discriminar nunca reduz o lucro de quem pode fazê-lo, porque a firma sempre poderia voltar ao "
+            "preço único. A discriminação existe justamente para transformar " + azb("excedente do consumidor")
+            + " em receita.",
+            "Consumidores, por grau: " + vd("1º grau") + " — EC = 0 (todo o excedente vai para a firma); "
+            + vd("3º grau") + " — o grupo menos elástico paga mais e perde; o mais elástico paga menos e pode "
+            "ganhar; o saldo para os consumidores como um todo pode ser negativo.",
+            "Bem-estar total (EC + lucro): pode aumentar se a discriminação <b>expandir a quantidade</b> — por "
+            "exemplo, atendendo um grupo que o preço único excluía (meia-entrada que lota sessões vazias, "
+            "remédios mais baratos em países pobres). Se apenas redistribui a mesma quantidade, tende a reduzir.",
+            "Por isso o tratamento antitruste é caso a caso: a discriminação não é ilícita em si, mas pode ser "
+            "abusiva quando usada para excluir concorrentes.",
+            vm("Regra-âncora: discriminação → lucro ↑; consumidores → efeito ambíguo."),
+        ],
+        "dissecando": (cz("[meia-verdade · modulador absoluto]") + " A metade sobre o lucro é verdadeira; a "
+                       "metade sobre os consumidores generaliza um efeito que é, no máximo, possível. O verbo "
+                       "“leva a” afirma resultado certo, sem “pode”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A discriminação de preços pode elevar o excedente total, se permitir atender consumidores "
+            "excluídos pelo preço único.”</i> → CERTO",
+            "<i>“Na discriminação de preços de primeiro grau, o excedente do consumidor é máximo.”</i> → ERRADO "
+            "(inversão: é nulo)",
+        ])],
+        "reescrita": ("Permitir que as empresas discriminem preços leva a maiores lucros dos empresários, "
+                      + hl("mas tem efeito ambíguo sobre o bem-estar dos consumidores") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "GENERALIZACAO"], "moduladores": ["leva a"], "dificuldade": 1,
+        "comentario_fonte": ("Lucro maior em geral; efeito ambíguo sobre consumidores (mercados elásticos pagam "
+                             "menos, outros mais); bem-estar total só aumenta se a quantidade se expandir."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01192
+    {
+        "id": "ECO-E2-L01192-1", "fonte_ref": "E2-L01192", "destino": "08", "subtema": H2["mk"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_CP_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": "Uma empresa monopolista sempre atua na parte elástica da curva de demanda.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma empresa monopolista <u>sempre</u> atua na parte <u>elástica</u> da curva de demanda."),
+        "poucas": ("O ótimo exige " + vd("RMg = CMg > 0") + ", e a RMg só é positiva onde " + vd("|ε| > 1")
+                   + ". No trecho inelástico, RMg < 0: reduzir a produção elevaria a receita e o lucro."),
+        "destrinchando": [
+            "Fórmula de ligação: " + vd("RMg = P(1 − 1/|ε|)") + ". Trecho elástico → RMg > 0; elasticidade "
+            "unitária → RMg = 0; trecho inelástico → RMg < 0.",
+            "Prova por absurdo: suponha o monopolista no trecho inelástico. Se ele cortar a produção, o preço sobe "
+            "proporcionalmente mais do que a quantidade cai, a receita total sobe e o custo total cai. O lucro "
+            "aumenta — logo o ponto inicial não era ótimo.",
+            "Na demanda linear p = a − bq, a RMg = a − 2bq corta o eixo na metade da quantidade máxima, "
+            "exatamente onde |ε| = 1. O monopolista fica sempre à esquerda desse ponto.",
+            "Limite: com " + vd("CMg = 0") + " (custo marginal desprezível, como em bens digitais), o ótimo é "
+            "RMg = 0, no ponto de elasticidade unitária. Fora desse caso-limite, a regra é estrita.",
+        ],
+        "dissecando": (cz("[literalidade · modulador absoluto]") + " O “sempre” assusta, mas aqui é a regra de "
+                       "manual (o único caso-limite, CMg nulo, não é cobrado). 🔥 O tema volta em versões "
+                       "invertidas: ECO-E2-L00441-1 (“porção inelástica” → ERRADO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma empresa monopolista sempre atua na parte inelástica da curva de demanda, onde consegue "
+            "preços mais altos.”</i> → ERRADO (inversão: RMg < 0 no trecho inelástico)",
+            "<i>“Com custo marginal nulo, o monopolista maximiza lucro onde a elasticidade-preço da demanda é "
+            "unitária.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "GENERALIZACAO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": "Demanda inelástica → RMg negativa; o monopólio nunca produz na parte inelástica.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 202", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mecanismo redesenhado em ECO-E2-L00441-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01193
+    {
+        "id": "ECO-E2-L01193-1", "fonte_ref": "E2-L01193", "destino": "08", "subtema": H2["mk"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_CP_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("Quanto mais elástica a curva de demanda pelo produto de um monopolista, maior é o seu poder "
+                      "de monopólio."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quanto mais elástica a curva de demanda pelo produto de um monopolista, ") + vm("maior")
+                   + az(" é o seu poder de monopólio."),
+        "poucas": ("O " + azb("índice de Lerner") + " é " + vd("L = 1/|ε|") + ": demanda mais elástica → markup "
+                   "<b>menor</b> → menos poder de monopólio."),
+        "destrinchando": [
+            "Poder de monopólio = capacidade de fixar preço acima do custo marginal, medida por "
+            + vd("L = (P − CMg)/P") + " (entre 0 e 1). No ótimo, " + vd("L = −1/Ed") + ".",
+            "Se Ed é grande em módulo, o markup é pequeno: os consumidores trocam de produto ao menor aumento. "
+            "Se Ed é pequena, o markup é grande: os consumidores pouco reagem.",
+            "A elasticidade relevante é a da demanda da <b>empresa individual</b>, não a do mercado. A regra vale "
+            "para qualquer empresa com poder de mercado (monopólio, oligopólio, concorrência monopolística).",
+            "Determinantes da elasticidade da firma: elasticidade da demanda de mercado, número de concorrentes e "
+            "forma de interação entre eles (conluio reduz a elasticidade percebida; guerra de preços a aumenta).",
+            vm("Regra-âncora: mais elástica → menos poder; menos elástica → mais poder."),
+        ],
+        "dissecando": (cz("[inversão]") + " Inversão pura do sentido da relação. Par espelhado na mesma bateria "
+                       "de questões: ECO-E2-L01197-1 (“menos elástica… maior” → CERTO). Teste-limite: demanda "
+                       "infinitamente elástica = firma competitiva = poder nulo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a elasticidade da demanda da firma for −5, o índice de Lerner será 0,2.”</i> → CERTO",
+            "<i>“O poder de monopólio depende da elasticidade da demanda de mercado, e não da demanda da "
+            "empresa.”</i> → ERRADO (inversão: é a da empresa)",
+        ])],
+        "reescrita": ("Quanto mais elástica a curva de demanda pelo produto de um monopolista, " + hl("menor")
+                      + " é o seu poder de monopólio."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Lerner L = (P − CMg)/P = −1/Ed; Ed da empresa individual; Ed grande, markup pequeno; "
+                             "Ed pequena, markup grande."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01194
+    {
+        "id": "ECO-E2-L01194-1", "fonte_ref": "E2-L01194", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_CP_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma empresa em concorrência perfeita maximiza lucros quando iguala o preço de determinado "
+                      "produto ao seu custo marginal. Uma empresa monopolista maximiza lucros quando sua receita "
+                      "marginal é maior que o custo marginal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma empresa em concorrência perfeita maximiza lucros quando iguala o preço de determinado "
+                      "produto ao seu custo marginal. Uma empresa monopolista maximiza lucros quando sua receita "
+                      "marginal é ") + vm("maior que o") + az(" custo marginal."),
+        "poucas": ("Qualquer firma maximiza lucro onde " + vd("RMg = CMg") + ". Na concorrência perfeita, RMg = P, "
+                   "por isso a regra vira P = CMg; o monopolista também iguala RMg e CMg — só que com P acima "
+                   "deles."),
+        "destrinchando": [
+            "Lógica marginal: enquanto " + vd("RMg > CMg") + ", cada unidade extra acrescenta mais à receita do "
+            "que ao custo — o lucro ainda cresce e vale produzir mais. Se " + vd("RMg < CMg") + ", vale "
+            "produzir menos. O máximo está na igualdade.",
+            azb("Concorrência perfeita") + ": a firma é tomadora de preço; vender mais uma unidade rende "
+            "exatamente P. Logo RMg = P, e a condição é P = CMg (no trecho crescente do CMg).",
+            azb("Monopólio") + ": a demanda é negativamente inclinada; RMg < P. A condição continua RMg = CMg; o "
+            "preço é lido na demanda, acima do CMg (markup).",
+            "Condição de segunda ordem: o CMg deve cortar a RMg <b>de baixo para cima</b>. E condição de "
+            "operação no curto prazo: P ≥ CVMe (senão, fecha).",
+            vm("Regra-âncora: RMg = CMg é universal; P = CMg é o caso particular da concorrência."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A 1ª frase é verdadeira e cria a impressão de "
+                       "que cada estrutura tem uma regra própria. O erro está no “maior que”: RMg > CMg descreve "
+                       "um ponto em que ainda vale expandir, não o ótimo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Tanto a firma competitiva quanto o monopolista maximizam lucro igualando receita marginal e "
+            "custo marginal.”</i> → CERTO",
+            "<i>“No ótimo, o monopolista iguala o preço ao custo marginal.”</i> → ERRADO (troca de conceito: "
+            "iguala RMg a CMg, com P > CMg)",
+        ])],
+        "reescrita": ("Uma empresa em concorrência perfeita maximiza lucros quando iguala o preço de determinado "
+                      "produto ao seu custo marginal. Uma empresa monopolista maximiza lucros quando sua receita "
+                      "marginal é " + hl("igual ao") + " custo marginal."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Enquanto RMg > CMg o lucro aumenta; quando RMg < CMg, diminui; máximo em "
+                             "RMg = CMg para monopolista e firma competitiva."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01195
+    {
+        "id": "ECO-E2-L01195-1", "fonte_ref": "E2-L01195", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_CP_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("A fixação de um preço máximo para o produto de um monopolista deve necessariamente implicar a "
+                      "redução da quantidade produzida por esse monopolista e, portanto, um excesso de demanda no "
+                      "mercado desse produto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A fixação de um preço máximo para o produto de um monopolista ") + vm("deve necessariamente "
+                      "implicar a redução da quantidade produzida") + az(" por esse monopolista e, portanto, ")
+                   + vm("um excesso de demanda") + az(" no mercado desse produto."),
+        "poucas": ("O monopólio não tem curva de oferta. Um " + azb("teto") + " abaixo do preço de monopólio, mas "
+                   "acima do CMg, faz a firma vender <b>mais</b> (até a demanda), sem escassez."),
+        "destrinchando": [
+            "No mercado competitivo, o teto abaixo do equilíbrio reduz a quantidade ofertada (anda-se para baixo "
+            "na curva de oferta) e cria " + azb("excesso de demanda") + ". O item transporta esse raciocínio "
+            "para o monopólio.",
+            "O monopolista não tem curva de oferta: escolhe a quantidade em que RMg = CMg e lê o preço na "
+            "demanda. Com um teto p̄ < pm, cada unidade até a demanda é vendida a p̄; a " + azb("receita "
+            "marginal") + " passa a ser o próprio teto (horizontal) nesse trecho.",
+            "Se p̄ ≥ CMg, compensa vender tudo o que a demanda absorve a esse preço: a quantidade sobe de qm para "
+            "q(p̄), o preço cai e o " + azb("peso morto") + " encolhe. Não há fila: a firma atende toda a "
+            "demanda ao preço-teto.",
+            "Só um teto <b>abaixo</b> do ponto em que a demanda cruza o CMg reproduz o resultado competitivo: a "
+            "firma produz onde CMg = p̄, a quantidade cai e aparece escassez. Daí o erro do “necessariamente”.",
+            vm("Regra-âncora: no monopólio, teto bem calibrado aumenta a quantidade."),
+        ],
+        "grafico_verso": "ECO-E2-L01195-1-V1",
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " Aplica ao monopólio a análise de teto do "
+                       "mercado competitivo e a blinda com “necessariamente”. Pista: “quantidade produzida por esse "
+                       "monopolista” pressupõe uma curva de oferta que o monopólio não tem. Item vizinho, na versão "
+                       "certa: ECO-E2-L00534-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A fixação de um preço máximo entre o custo marginal e o preço de monopólio pode elevar a "
+            "quantidade produzida pelo monopolista.”</i> → CERTO",
+            "<i>“Em mercado competitivo, o preço máximo abaixo do equilíbrio gera excesso de oferta.”</i> → "
+            "ERRADO (gera excesso de demanda)",
+        ])],
+        "reescrita": ("A fixação de um preço máximo para o produto de um monopolista " + hl("pode implicar o "
+                      "aumento da quantidade produzida") + " por esse monopolista e, portanto, " + hl("a redução do "
+                      "peso morto, sem excesso de demanda,") + " no mercado desse produto" + hl(", se o teto ficar "
+                      "entre o custo marginal e o preço de monopólio") + "."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["necessariamente", "portanto"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Monopólio não tem curva de oferta; com preço máximo abaixo do preço de monopólio, a "
+                             "quantidade é determinada pela demanda e aumenta."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01196
+    {
+        "id": "ECO-E2-L01196-1", "fonte_ref": "E2-L01196", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_EMPRESAS_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("No monopólio natural, o preço socialmente ótimo (igual ao custo marginal) causaria prejuízo "
+                      "ao monopolista."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No monopólio natural, o preço socialmente ótimo (igual ao custo marginal) <u>causaria "
+                      "prejuízo</u> ao monopolista."),
+        "poucas": ("Com CMe decrescente, " + vd("CMg < CMe") + ". O preço eficiente (P = CMg) fica abaixo do custo "
+                   "médio: a receita não cobre os custos fixos — " + azb("prejuízo") + "."),
+        "destrinchando": [
+            azb("Monopólio natural") + ": " + azb("economias de escala") + " em toda a faixa relevante — uma "
+            "firma atende o mercado a custo menor que várias. Típico de redes: energia, água, gás, ferrovia.",
+            "Matemática da média: quando a média cai, a unidade marginal está abaixo dela. Logo, na interseção "
+            "demanda × CMg, o CMe ainda está acima: " + vd("prejuízo = (CMe − CMg) × q") + ".",
+            "Saídas: preço = CMe (" + azb("second best") + ", lucro zero), preço = CMg com subsídio, ou tarifa "
+            "em duas partes (assinatura cobre o custo fixo; preço unitário = CMg).",
+            "Sem regulação, o monopolista escolhe RMg = CMg: preço alto, quantidade baixa e peso morto — razão "
+            "da regulação tarifária desses setores.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Conclusão-padrão do gráfico de monopólio natural. Itens vizinhos "
+                       "cobram o mesmo ponto pelo lado errado: ECO-E2-L01019-1 (“boa forma de regular” → ERRADO) "
+                       "e ECO-E2-L00743-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, o preço igual ao custo médio gera lucro econômico positivo.”</i> → ERRADO "
+            "(gera lucro zero)",
+            "<i>“No monopólio natural, o preço socialmente ótimo exige subsídio para que a firma permaneça no "
+            "mercado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Preço igual ao CMg gera produção eficiente com preço abaixo do custo médio: "
+                             "prejuízo."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 203", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mecanismo redesenhado em ECO-E2-L00743-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01197
+    {
+        "id": "ECO-E2-L01197-1", "fonte_ref": "E2-L01197", "destino": "08", "subtema": H2["mk"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_EMPRESAS_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("Quanto menos elástica a curva de demanda pelo produto de um monopolista, maior é o seu poder "
+                      "de monopólio no mercado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quanto <u>menos elástica</u> a curva de demanda pelo produto de um monopolista, "
+                      "<u>maior</u> é o seu poder de monopólio no mercado."),
+        "poucas": ("Pela regra do markup, " + vd("(P − CMg)/P = 1/|ε|") + ": demanda menos elástica permite preço "
+                   "mais distante do custo marginal — mais " + azb("poder de monopólio") + "."),
+        "destrinchando": [
+            "O " + azb("índice de Lerner") + " L = (P − CMg)/P varia de 0 a 1; quanto maior, maior o poder de "
+            "monopólio. Expresso pela elasticidade: " + vd("L = −1/Ed") + ".",
+            "Se Ed for grande (em módulo), o markup será pequeno; se Ed for pequena, o markup será grande. Ex.: "
+            "|Ed| = 1,5 → L ≈ 0,67; |Ed| = 3 → L ≈ 0,33.",
+            "Fontes de demanda pouco elástica: ausência de substitutos próximos (patentes, marcas fortes), "
+            "custos de troca, essencialidade do bem, peso pequeno no orçamento.",
+            "Usos práticos: autoridades de concorrência (no " + rx("Brasil") + ", o CADE) olham elasticidades "
+            "para delimitar o mercado relevante e avaliar o poder de mercado em fusões.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Espelho de ECO-E2-L01193-1 (“mais elástica… maior” → ERRADO), "
+                       "na mesma bateria de questões. A banca alterna o par para testar se o candidato guardou o "
+                       "<b>sentido</b> da relação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto menos elástica a demanda, menor o markup do monopolista sobre o custo marginal.”</i> → "
+            "ERRADO (inversão)",
+            "<i>“O poder de monopólio pode ser medido pelo índice de Lerner, que é nulo em concorrência "
+            "perfeita.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Lerner L = (P − CMg)/P = −1/Ed; Ed da empresa individual; Ed pequena, markup "
+                             "grande."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01198
+    {
+        "id": "ECO-E2-L01198-1", "fonte_ref": "E2-L01198", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_EMPRESAS_MONOP,
+        "rotulo_item": "Item",
+        "assertiva": ("Um monopólio natural decorre da posse por parte de uma empresa da única fonte de um insumo "
+                      "natural que é necessário para a produção de determinado bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um monopólio natural decorre ") + vm("da posse por parte de uma empresa da única fonte de "
+                                                           "um insumo natural") + az(" que é necessário para a "
+                                                                                     "produção de determinado bem."),
+        "poucas": ("O " + azb("monopólio natural") + " decorre de " + vd("economias de escala") + " na faixa "
+                   "relevante (CMe decrescente), não da posse de um recurso. Controle de insumo único é outra "
+                   "barreira: o " + azb("monopólio de recurso") + "."),
+        "destrinchando": [
+            "Na tipologia de " + oc("Mankiw") + " (<i>Introdução à Economia</i>), os monopólios nascem de três "
+            "fontes: (1) " + azb("recurso-chave") + " controlado por uma só firma (o caso descrito no item; ex. "
+            "clássico, a De Beers nos diamantes); (2) " + azb("monopólio criado pelo governo") + " (patentes, "
+            "direitos autorais, concessões exclusivas); (3) " + azb("monopólio natural") + ", quando uma firma "
+            "atende o mercado inteiro a custo menor que duas ou mais.",
+            "No monopólio natural, a barreira é tecnológica: com custos fixos altos (redes de água, energia, "
+            "gás) e custo marginal baixo, o CMe cai ao longo de toda a demanda relevante. O incumbente tem custo "
+            "médio menor que qualquer entrante pequeno.",
+            "Formalmente, há " + azb("subaditividade de custos") + ": C(q) < C(q₁) + C(q₂) para q₁ + q₂ = q. "
+            "Economias de escala em toda a faixa são condição suficiente para isso.",
+            "O adjetivo “natural” confunde: não se refere a recursos naturais, mas ao fato de o monopólio surgir "
+            "“naturalmente” da estrutura de custos, sem proteção legal.",
+            vm("Regra-âncora: monopólio natural = custos (escala); monopólio de recurso = posse do insumo."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item explora a palavra “natural” para descrever o "
+                       "monopólio de recurso (“insumo natural”). Pista: a causa apontada é a posse, e não os "
+                       "custos — o critério que define o monopólio natural."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um monopólio natural surge quando uma única empresa pode abastecer todo o mercado a custo menor "
+            "do que duas ou mais empresas.”</i> → CERTO",
+            "<i>“O monopólio natural depende de proteção legal contra a entrada de concorrentes.”</i> → ERRADO "
+            "(a barreira é de custo, não legal)",
+        ])],
+        "reescrita": ("Um monopólio natural decorre " + hl("de economias de escala na faixa relevante de produção, "
+                      "que permitem a uma única empresa abastecer todo o mercado a custo menor do que duas ou "
+                      "mais") + "; a posse da única fonte de um insumo necessário caracteriza o " + hl("monopólio "
+                      "de recurso") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Monopólio natural: uma firma abastece o mercado a custo menor; retornos crescentes de "
+                             "escala; CTMe decrescente; barreira à entrada pelo custo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01404
+    {
+        "id": "ECO-E2-L01404-1", "fonte_ref": "E2-L01404", "destino": "08", "subtema": H2["mk"],
+        "tipo": "C/E", "banca": "FGV", "prova": "Senado Federal/Consultor Legislativo/2022", "ano": 2022,
+        "cacd": False, "errei": False,
+        "comando": ("Julgue o item a seguir, adaptado de questão da FGV, relativo ao mark-up do monopolista e à "
+                    "elasticidade-preço da demanda."),
+        "rotulo_item": "Item",
+        "assertiva": ("O mark-up do monopolista tende a ser menor quanto mais elástica for a demanda, sendo que se "
+                      "essa for perfeitamente elástica, o preço será igual à solução de concorrência perfeita."),
+        "gabarito": "CERTO", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": az("O mark-up do monopolista tende a ser <u>menor</u> quanto <u>mais elástica</u> for a demanda, "
+                      "sendo que se essa for <u>perfeitamente elástica</u>, o preço será igual à solução de "
+                      "concorrência perfeita."),
+        "poucas": ("Markup: " + vd("(P − CMg)/P = 1/|ε|") + ". Se |ε| cresce, o markup cai; com |ε| → ∞, "
+                   "1/|ε| = 0 e " + vd("P = CMg") + " — o preço de concorrência perfeita."),
+        "destrinchando": [
+            azb("Regra do markup") + ": do ótimo RMg = CMg e de RMg = P(1 − 1/|ε|), obtém-se "
+            + vd("P = CMg / (1 − 1/|ε|)") + " ou, no formato de Lerner, " + vd("(P − CMg)/P = 1/|ε|") + ".",
+            "Quanto mais elástica a demanda, menor a margem: |ε| = 2 → P = 2·CMg; |ε| = 5 → P = 1,25·CMg; "
+            "|ε| = 20 → P ≈ 1,05·CMg.",
+            "No limite da demanda " + azb("perfeitamente elástica") + " (horizontal, |ε| = ∞), qualquer aumento "
+            "de preço zera as vendas: a firma é tomadora de preço, RMg = P e o ótimo é " + vd("P = CMg")
+            + ". É a situação da firma em concorrência perfeita.",
+            "Lição: o “monopólio” sem demanda inclinada não tem poder de mercado. O poder vem da inclinação da "
+            "demanda que a firma enfrenta, não do número de vendedores em si.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Reproduz a regra do markup e o seu caso-limite. "
+                       "O “tende a” suaviza a primeira oração; a segunda é o teste de extremo que a FGV gosta de "
+                       "usar. Se a banca trocasse “perfeitamente elástica” por “perfeitamente inelástica”, o item "
+                       "viraria ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a demanda for perfeitamente inelástica, o mark-up do monopolista será nulo.”</i> → ERRADO "
+            "(inversão: o nulo é no perfeitamente elástico; no inelástico não há ótimo)",
+            "<i>“Com elasticidade-preço da demanda igual a −4, o preço do monopolista supera o custo marginal em "
+            "cerca de 33%.”</i> → CERTO (P = CMg × 4/3)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": ("Verso só com imagens: markup (P − CMg)/P cai com a elasticidade; com ε = ∞, 1/ε = 0, "
+                             "markup nulo e P = CMg (concorrência perfeita)."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 320", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (regra do markup no 📖)"},
+                          {"ref": "IMAGEM 321", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (caso ε = ∞ no 📖)"}],
+        "alertas": ["gabarito_resolvido: a fonte não traz gabarito explícito; as imagens do verso e o conteúdo "
+                    "indicam CERTO"],
+    },
 ]

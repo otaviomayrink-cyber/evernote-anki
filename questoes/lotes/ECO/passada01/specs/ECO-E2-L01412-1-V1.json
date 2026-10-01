@@ -1,5 +1,5 @@
 {"id": "ECO-E2-L01412-1-V1", "uso": "verso",
- "legenda": "Sem regulação, o monopolista natural fica em M (RMg = CMg): preço pm alto e quantidade qm baixa. Com o preço tabelado no CMg, o mercado vai a C: o consumidor paga menos e compra mais, e a área verde é o ganho de excedente do consumidor. O ponto C fica abaixo do CMe: é a firma, não o consumidor, que perde.",
+ "legenda": "Sem regulação, o monopolista natural fica em M (RMg = CMg): preço pm alto e quantidade qm baixa. Com o preço tabelado no CMg, o mercado vai a C: o consumidor paga menos e compra mais, e a área verde (+EC) é o ganho de excedente do consumidor. O ponto C fica abaixo do CMe: é a firma, não o consumidor, que perde.",
  "eixos": {"x": "q", "y": "p", "xmax": 105, "ymax": 11},
  "curvas": [
   {"id": "D", "tipo": "funcao", "expr": "10 - 0.1*x", "dominio": [0, 100], "familia": "demanda", "rotulo": "D", "rotulo_em": 95, "rotulo_desloc": [4, 10]},
@@ -13,6 +13,6 @@
   {"id": "C", "intersecao": ["D", "CMg"], "rotulo": "C", "projetar": "x", "rotulo_x": "qc", "rotulo_desloc": [6, 12]}
  ],
  "areas": [
-  {"tipo": "poligono", "vertices": [[0, "M.y"], "M", "C", [0, 2]], "papel": "ganho", "rotulo": "ganho do consumidor", "rotulo_xy": [12, 3.6]}
+  {"tipo": "poligono", "vertices": [[0, "M.y"], "M", "C", [0, 2]], "papel": "ganho", "rotulo": "+EC", "rotulo_xy": [15, 3.6]}
  ],
  "checar": ["abs(M.y - 6) < 0.01", "abs(C.x - 80) < 0.01", "C.x > M.x", "C.y < M.y", "CMe(C.x) > C.y"]}

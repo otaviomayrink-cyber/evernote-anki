@@ -1,0 +1,12 @@
+{"id": "ECO-E1-0332-1-V1", "uso": "verso",
+ "legenda": "Sem imposto, a firma produz onde a demanda (benefício marginal) corta o seu custo marginal privado: Qₘ, quantidade excessiva. O imposto pigouviano t, igual ao dano marginal, leva o custo privado até o custo social (CMgP + t = CMgS) e o novo equilíbrio cai no ótimo Q*, onde BMg = CMgS.",
+ "eixos": {"x": "Q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "9 - 8*x/9", "dominio": [0, 9.5], "familia": "demanda", "rotulo": "D = BMg"},
+  {"id": "CP", "tipo": "funcao", "expr": "1 + 0.6*x", "dominio": [0, 9.5], "familia": "oferta", "rotulo": "CMgP (oferta)", "estado": "inicial"},
+  {"id": "CS", "tipo": "funcao", "expr": "3 + 0.6*x", "dominio": [0, 9.5], "familia": "destaque", "rotulo": "CMgS = CMgP + t"}],
+ "deslocamentos": [{"de": "CP", "para": "CS", "sentido": "esquerda", "em_y": 6.2}],
+ "pontos": [
+  {"id": "Em", "intersecao": ["D", "CP"], "rotulo": "Eₘ", "projetar": "x", "rotulo_x": "Qₘ"},
+  {"id": "Es", "intersecao": ["D", "CS"], "rotulo": "E*", "projetar": "x", "rotulo_x": "Q*"}],
+ "checar": ["Es.x < Em.x", "Es.y > Em.y", "abs(CS(2) - CP(2) - 2) < 0.01"]}

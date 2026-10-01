@@ -1,0 +1,13 @@
+{"id": "ECO-E1-0339-1-V1", "uso": "verso",
+ "legenda": "Em concorrência perfeita, a oferta é o custo marginal PRIVADO; com externalidade negativa, o mercado para em Qₘ, além do ótimo social Q* (onde BMg = CMgS). Entre Q* e Qₘ, cada unidade custa à sociedade mais do que vale: o triângulo vermelho é o peso morto da externalidade.",
+ "eixos": {"x": "Q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "9 - 8*x/9", "dominio": [0, 9.5], "familia": "demanda", "rotulo": "D = BMg"},
+  {"id": "CP", "tipo": "funcao", "expr": "1 + 0.6*x", "dominio": [0, 9.5], "familia": "oferta", "rotulo": "O = CMgP"},
+  {"id": "CS", "tipo": "funcao", "expr": "3 + 0.6*x", "dominio": [0, 9.5], "familia": "terceira", "rotulo": "CMgS"}],
+ "pontos": [
+  {"id": "Em", "intersecao": ["D", "CP"], "rotulo": "Eₘ (mercado)", "projetar": "x", "rotulo_x": "Qₘ"},
+  {"id": "Es", "intersecao": ["D", "CS"], "rotulo": "E* (ótimo)", "rotulo_desloc": [-95, 12], "projetar": "x", "rotulo_x": "Q*"},
+  {"id": "Cm", "sobre": "CS", "x": "Em.x"}],
+ "areas": [{"tipo": "poligono", "vertices": ["Es", "Cm", "Em"], "papel": "peso_morto"}],
+ "checar": ["Em.x > Es.x", "Cm.y > Em.y", "abs(CS(2) - CP(2) - 2) < 0.01"]}

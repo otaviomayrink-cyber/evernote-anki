@@ -863,4 +863,246 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00390
+    {
+        "id": "ECO-E2-L00390-1", "fonte_ref": "E2-L00390", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": "Julgue o item a seguir, relativo aos efeitos de tributos sobre firmas competitivas.",
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição de um imposto de montante fixo (lump-sum tax) sobre todas as empresas de um "
+                      "mercado perfeitamente competitivo altera o custo marginal de produção de cada firma, "
+                      "deslocando a curva de oferta de curto prazo do mercado para a esquerda e elevando o preço "
+                      "de equilíbrio imediato."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A imposição de um imposto de montante fixo (lump-sum tax) sobre todas as empresas de um "
+                       "mercado perfeitamente competitivo ") + vm("altera o custo marginal de produção de cada "
+                       "firma, deslocando a curva de oferta de curto prazo do mercado para a esquerda e elevando "
+                       "o preço de equilíbrio imediato") + az(".")),
+        "poucas": ("Imposto de " + azb("montante fixo") + " é " + azb("custo fixo") + ": não depende de q, não "
+                   "mexe no " + azb("CMg") + " e, portanto, não desloca a oferta de curto prazo. Só reduz o "
+                   "lucro."),
+        "destrinchando": [
+            "A firma competitiva escolhe q onde " + vd("p = CMg") + ". O CMg é a derivada do custo total em "
+            "relação a q; uma parcela fixa T some na derivada. Mesma curva de CMg → mesma oferta individual → "
+            "mesma oferta de mercado no curto prazo.",
+            "A decisão de produzir ou fechar no curto prazo também não muda: compara-se o preço com o "
+            + azb("CVMe") + " mínimo, e o imposto fixo não entra no custo variável (é custo afundado no período).",
+            "O que muda é o " + azb("CMe") + " (sobe) e o lucro (cai T). No <b>longo prazo</b>, firmas com lucro "
+            "negativo saem; a oferta de mercado se contrai e o preço sobe até o novo mínimo do CMe — aí sim o "
+            "preço muda, por saída de firmas.",
+            "Contraste: um imposto <b>específico</b> (por unidade) soma-se ao CMg e desloca a oferta já no curto "
+            "prazo. É essa a diferença que o item apaga.",
+            vm("Regra-âncora: custo fixo afeta lucro e entrada/saída (longo prazo); custo marginal afeta "
+               "quantidade e preço (curto prazo)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Atribui a um custo fixo o efeito de um custo variável. A "
+                       "cadeia causal que segue (CMg ↑ → oferta ← → preço ↑) é coerente, o que engana; o elo "
+                       "falso é o primeiro. Pista: “montante fixo” e “custo marginal” na mesma frase."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto de montante fixo sobre as firmas competitivas reduz seus lucros sem alterar a "
+            "quantidade ofertada no curto prazo.”</i> → CERTO",
+            "<i>“Um imposto de montante fixo jamais afeta o preço de mercado.”</i> → ERRADO (modulador absoluto: "
+            "no longo prazo, via saída de firmas, afeta)",
+        ])],
+        "reescrita": ("A imposição de um imposto de montante fixo (lump-sum tax) sobre todas as empresas de um "
+                      "mercado perfeitamente competitivo " + hl("não altera o custo marginal de produção de cada "
+                      "firma nem desloca a curva de oferta de curto prazo do mercado, mantendo o preço de "
+                      "equilíbrio imediato") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Lump-sum é custo fixo; não altera o CMg; oferta de curto prazo não se desloca; "
+                            "efeito só no lucro e na saída de firmas no longo prazo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00391
+    {
+        "id": "ECO-E2-L00391-1", "fonte_ref": "E2-L00391", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": "Julgue o item a seguir, relativo ao excedente do produtor.",
+        "rotulo_item": "Item",
+        "assertiva": ("O excedente do produtor de uma firma individual em curto prazo é equivalente ao seu lucro "
+                      "econômico somado ao custo fixo total. Graficamente, pode ser mensurado pela área acima da "
+                      "curva de Custo Marginal e abaixo do preço de mercado, até o nível de produção escolhido."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O excedente do produtor de uma firma individual em curto prazo é equivalente ao seu lucro "
+                      "econômico <u>somado ao custo fixo total</u>. Graficamente, pode ser mensurado pela área "
+                      "acima da curva de Custo Marginal e abaixo do preço de mercado, até o nível de produção "
+                      "escolhido."),
+        "poucas": ("EP = RT − " + azb("CVT") + "; lucro = RT − CVT − CF. Logo " + vd("EP = lucro + CF") + ". E "
+                   "somar (p − CMg) unidade a unidade dá exatamente RT − CVT."),
+        "destrinchando": [
+            "Contas: " + vd("lucro = RT − CVT − CF") + " e " + vd("EP = RT − CVT") + " ⇒ EP = lucro + CF. O "
+            "excedente do produtor ignora o custo fixo porque, no curto prazo, ele é pago de qualquer jeito.",
+            "Por que a área sob o CMg é o CVT: o CMg é o acréscimo de custo de cada unidade; somando os "
+            "acréscimos de 0 a q* obtém-se o custo variável total (" + vd("∫CMg dq = CVT") + "). A área sob o "
+            "preço é RT = p × q*. A diferença é a área entre p e o CMg.",
+            "Forma equivalente: " + vd("EP = (p − CVMe) × q*") + " — retângulo entre o preço e o custo variável "
+            "médio. Mesmo valor, outro desenho.",
+            "Consequência: pode haver EP positivo com lucro negativo (se 0 < EP < CF). É o caso da firma que "
+            "opera com prejuízo no curto prazo porque p > CVMe: produzindo, perde menos que o CF.",
+            "No longo prazo não há custo fixo, e EP de longo prazo coincide com o lucro (mais as rendas de "
+            "fatores escassos, no mercado).",
+        ],
+        "grafico_verso": "ECO-E2-L00391-1-V1",
+        "dissecando": (cz("[detalhe · literalidade]") + " Item técnico em duas partes, ambas corretas. O "
+                       "tropeço comum é achar que EP = lucro (esquecendo o CF) ou que a área deveria ser entre o "
+                       "preço e o CMe. Note “curto prazo”: é ele que dá sentido ao custo fixo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O excedente do produtor de curto prazo equivale ao lucro econômico da firma.”</i> → ERRADO "
+            "(falta somar o custo fixo)",
+            "<i>“O excedente do produtor pode ser medido por (p − CVMe) × q*.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "LITERAL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Lucro = RT − (CV + CF); EP = RT − CVT; logo EP = lucro + CF; área entre preço e CMg.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00392
+    {
+        "id": "ECO-E2-L00392-1", "fonte_ref": "E2-L00392", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à incidência tributária.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se a elasticidade-preço da demanda de mercado for perfeitamente inelástica, a introdução de "
+                      "um imposto específico sobre a produção recairá integralmente sobre os consumidores, e não "
+                      "haverá peso morto (deadweight loss) associado a esse tributo, pois a quantidade transacionada "
+                      "no equilíbrio permanecerá inalterada."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se a elasticidade-preço da demanda de mercado for <u>perfeitamente inelástica</u>, a "
+                      "introdução de um imposto específico sobre a produção recairá integralmente sobre os "
+                      "consumidores, e não haverá peso morto (deadweight loss) associado a esse tributo, pois a "
+                      "<u>quantidade transacionada</u> no equilíbrio permanecerá inalterada."),
+        "poucas": ("Demanda vertical: o preço sobe o valor inteiro do imposto (" + vd("ônus 100% do "
+                   "consumidor") + ") e a quantidade não muda — sem queda de quantidade, " + vd("peso morto "
+                   "zero") + "."),
+        "destrinchando": [
+            "Imposto sobre a produção: a oferta sobe t. Com demanda vertical em q₀, o novo equilíbrio continua "
+            "em q₀, a um preço " + vd("p₀ + t") + ". O produtor segue recebendo p₀.",
+            "O " + azb("peso morto") + " mede as trocas mutuamente vantajosas que deixam de ocorrer: é o "
+            "triângulo entre qₜ e q₀. Se " + vd("qₜ = q₀") + ", o triângulo tem base zero.",
+            "Todo o excedente perdido pelo consumidor (t × q₀) vira receita do governo: é transferência pura, "
+            "não destruição de valor. É o fundamento da regra de " + oc("Ramsey") + ": tributar bases "
+            "inelásticas minimiza a ineficiência.",
+            "Pequena imprecisão de redação: quem é “perfeitamente inelástica” é a demanda, não a elasticidade "
+            "(que vale zero). A banca usa a forma coloquial; não muda o julgamento.",
+            "Simétrico: com <b>oferta</b> perfeitamente inelástica, também não há peso morto, mas o ônus é todo "
+            "do produtor.",
+        ],
+        "grafico_verso": "ECO-E2-L00392-1-V1",
+        "dissecando": (cz("[literalidade · detalhe]") + " Junta três conclusões corretas do mesmo caso-limite "
+                       "(repasse integral, quantidade constante, peso morto nulo) e liga-as pela causa certa. O "
+                       "“integralmente” assusta, mas é exato neste extremo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com demanda perfeitamente inelástica, o imposto não gera peso morto, mas é suportado "
+            "integralmente pelos produtores.”</i> → ERRADO (troca de ator: pelos consumidores)",
+            "<i>“Com demanda perfeitamente elástica, o imposto específico não gera peso morto.”</i> → ERRADO "
+            "(a quantidade cai: há peso morto)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["integralmente"], "dificuldade": 1,
+        "comentario_fonte": "Demanda vertical: preço sobe exatamente o imposto; quantidade não muda; peso morto "
+                            "zero (dQ = 0).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00421
+    {
+        "id": "ECO-E2-L00421-1", "fonte_ref": "E2-L00421", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à incidência tributária.",
+        "rotulo_item": "Item",
+        "assertiva": ("Com oferta muito elástica, qualquer imposto indireto necessariamente recai integralmente "
+                      "sobre consumidores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Com oferta muito elástica, ") + vm("qualquer") + az(" imposto indireto ")
+                    + vm("necessariamente recai integralmente") + az(" sobre consumidores.")),
+        "poucas": ("Oferta " + azb("muito") + " elástica faz o consumidor pagar " + vd("a maior parte") + ", "
+                   "não tudo. Repasse integral só com oferta " + azb("perfeitamente") + " elástica (εˢ = ∞)."),
+        "destrinchando": [
+            "Parcela do consumidor = " + vd("εˢ / (εˢ + |εᴰ|)") + ". Com εˢ grande, a fração se aproxima de 1, "
+            "mas só a atinge no limite εˢ → ∞ (oferta horizontal). Exemplo: εˢ = 9 e |εᴰ| = 1 → consumidor paga "
+            + vd("90%") + "; o produtor, 10%.",
+            "Além disso, a parcela depende também da demanda: se ela for igualmente muito elástica, a divisão "
+            "fica perto de metade. O item ignora a demanda por completo.",
+            "Diferença de vocabulário que a banca explora: “muito elástica” (elasticidade alta, curva achatada) "
+            "≠ “perfeitamente elástica” (curva horizontal, elasticidade infinita). O mesmo vale para “pouco” × "
+            "“perfeitamente inelástica”.",
+            "Caso real de repasse total: indústria competitiva de custos constantes no longo prazo, cuja oferta "
+            "é horizontal no CMe mínimo.",
+        ],
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " Três absolutos (“qualquer”, "
+                       "“necessariamente”, “integralmente”) apoiados num grau (“muito”) que não basta. Sempre "
+                       "que o item disser “muito/pouco” e concluir “integralmente”, desconfie."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com oferta perfeitamente elástica, um imposto específico recai integralmente sobre os "
+            "consumidores.”</i> → CERTO",
+            "<i>“Com oferta muito elástica, a maior parte do imposto tende a recair sobre os produtores.”</i> → "
+            "ERRADO (inversão: tende a recair sobre os consumidores)",
+        ])],
+        "reescrita": ("Com oferta muito elástica, " + hl("um") + " imposto indireto " + hl("tende a recair "
+                      "majoritariamente") + " sobre consumidores" + hl("; o repasse integral só ocorre com oferta "
+                      "perfeitamente elástica") + "."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"],
+        "moduladores": ["qualquer", "necessariamente", "integralmente", "muito"], "dificuldade": 1,
+        "comentario_fonte": "Incidência depende das elasticidades relativas; repasse total só no limite teórico "
+                            "da oferta horizontal.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00438
+    {
+        "id": "ECO-E2-L00438-1", "fonte_ref": "E2-L00438", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": True,
+        "comando": "A respeito dos conceitos e aplicações da elasticidade, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considerando um mercado de concorrência perfeita com uma curva de demanda decrescente, o "
+                      "produtor consegue repassar a totalidade de um tributo aos consumidores quando a "
+                      "elasticidade-preço da oferta do bem tributado é infinita."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considerando um mercado de concorrência perfeita com uma curva de demanda decrescente, o "
+                      "produtor consegue repassar a totalidade de um tributo aos consumidores quando a "
+                      "elasticidade-preço da <u>oferta</u> do bem tributado é <u>infinita</u>."),
+        "poucas": ("Oferta com " + azb("elasticidade infinita") + " é horizontal: o produtor não aceita receber "
+                   "um centavo a menos que p₀. Com demanda decrescente, o preço ao consumidor sobe " + vd("t "
+                   "inteiro") + "."),
+        "destrinchando": [
+            "Oferta horizontal em p₀ = custo marginal constante: a qualquer preço líquido abaixo de p₀ a "
+            "produção vai a zero. Com o imposto, a oferta passa a p₀ + t; o equilíbrio desliza pela demanda até "
+            + vd("pc = p₀ + t") + ", com " + vd("pv = p₀") + ".",
+            "Fórmula: parcela do consumidor = εˢ / (εˢ + |εᴰ|) → " + vd("1") + " quando εˢ → ∞, desde que |εᴰ| "
+            "seja finita — e a hipótese “demanda decrescente” garante isso.",
+            "O consumidor paga tudo, mas a quantidade cai (de q₀ para qₜ): há " + azb("peso morto") + ". Repasse "
+            "integral não significa ausência de distorção; isso só ocorre com curva vertical.",
+            "Quadro-resumo: oferta εˢ = ∞ → consumidor paga 100%; oferta εˢ = 0 → produtor paga 100%; nos casos "
+            "intermediários, a divisão depende <b>das duas</b> elasticidades (oferta com elasticidade unitária "
+            "não implica divisão meio a meio).",
+            "Exemplo: indústria competitiva de custos constantes no longo prazo.",
+        ],
+        "grafico_verso": "ECO-E2-L00438-1-V1",
+        "dissecando": (cz("[detalhe]") + " O item mexe com o reflexo condicionado “elasticidade infinita → "
+                       "quem é elástico não paga… mas o produtor perde tudo?”. Leia de quem é a elasticidade: é "
+                       "da <b>oferta</b>. Oferta infinitamente elástica protege o produtor."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…o produtor consegue repassar a totalidade do tributo quando a elasticidade-preço da demanda é "
+            "infinita.”</i> → ERRADO (troca de curva: aí o produtor paga tudo)",
+            "<i>“Com oferta infinitamente elástica, o tributo não gera peso morto.”</i> → ERRADO (a quantidade "
+            "cai)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Oferta perfeitamente elástica: imposto integralmente repassado; fórmula "
+                            "ΔPc/t = Es/(Es + |Ed|); paga mais o lado menos elástico; incidência legal irrelevante.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 068", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida (quadro-resumo no 📖)"}],
+        "alertas": ["qualidade_fonte: a tabela da fonte diz que oferta de elasticidade unitária implica ônus "
+                    "“dividido proporcionalmente”, como se bastasse a oferta; a divisão depende também da "
+                    "demanda — corrigido"],
+    },
 ]

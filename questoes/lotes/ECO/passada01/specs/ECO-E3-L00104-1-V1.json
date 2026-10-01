@@ -20,10 +20,9 @@
    ],
    "familia": "demanda",
    "rotulo": "D (mercado)",
-   "rotulo_em": 90,
-   "rotulo_desloc": [
-    8,
-    10
+   "rotulo_xy": [
+    114,
+    2.9
    ]
   },
   {
@@ -52,10 +51,9 @@
    ],
    "familia": "terceira",
    "rotulo": "D residual",
-   "rotulo_em": 72,
-   "rotulo_desloc": [
-    -20,
-    -30
+   "rotulo_xy": [
+    84,
+    1.1
    ]
   },
   {
@@ -120,8 +118,8 @@
    "x": 14,
    "rotulo": "franja",
    "rotulo_desloc": [
-    -20,
-    14
+    -66,
+    -22
    ],
    "projetar": "x",
    "rotulo_x": "14"

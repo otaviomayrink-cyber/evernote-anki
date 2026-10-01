@@ -340,7 +340,7 @@ CARDS = [
                       "ela sairá do mercado, já que existe livre entrada e saída."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("No curto prazo, se a firma se depara com uma receita total menor que seus custos totais, "
-                       "ela ") + vm("sairá do mercado") + az(", já que existe livre entrada e saída.")),
+                       "ela ") + vm("sairá do mercado, já que existe livre entrada e saída") + az(".")),
         "poucas": ("RT < CT é só prejuízo. No curto prazo a firma não sai: compara " + vd("RT com CV") + " e "
                    "continua produzindo se RT ≥ CV, ou " + azb("paralisa") + " se RT < CV — mas segue no "
                    "mercado pagando o custo fixo."),
@@ -368,8 +368,9 @@ CARDS = [
             "<i>“No longo prazo, se a receita total for menor que o custo total, a firma sairá do "
             "mercado.”</i> → CERTO",
         ])],
-        "reescrita": ("No " + hl("longo") + " prazo, se a firma se depara com uma receita total menor que seus "
-                      "custos totais, ela sairá do mercado, já que existe livre entrada e saída."),
+        "reescrita": ("No curto prazo, se a firma se depara com uma receita total menor que seus custos totais, "
+                      "ela " + hl("não sairá do mercado: continuará produzindo se a receita cobrir os custos "
+                      "variáveis, pois a saída só ocorre no longo prazo") + "."),
         "tipo_erro": ["TROCA_CONCEITO", "ANACRONISMO"], "moduladores": ["se"], "dificuldade": 1,
         "comentario_fonte": ("Sair do mercado é decisão de longo prazo; no curto prazo, a firma continua "
                              "produzindo com RT < CT desde que RT ≥ CVT (P ≥ CVMe) e paralisa se RT < CVT."),
@@ -434,9 +435,9 @@ CARDS = [
         "assertiva": ("No longo prazo, mesmo se o preço ficar abaixo do custo médio, pode ser vantajoso para a "
                       "firma manter a operação se a receita for suficiente para pagar os custos fixos."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("No longo prazo, mesmo se o preço ficar abaixo do custo médio, ") + vm("pode ser vantajoso "
-                    "para a firma manter a operação se a receita for suficiente para pagar os custos fixos")
-                    + az(".")),
+        "anotada": (vm("No longo prazo") + az(", mesmo se o preço ficar abaixo do custo médio, pode ser vantajoso "
+                    "para a firma manter a operação se a receita for suficiente para pagar os custos ")
+                    + vm("fixos") + az(".")),
         "poucas": ("No " + azb("longo prazo") + " não existem custos fixos: todos os fatores são ajustáveis. Com "
                    + vd("P < CTMe") + ", a firma tem prejuízo econômico e a decisão ótima é sair."),
         "destrinchando": [
@@ -722,10 +723,10 @@ CARDS = [
         "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
         "anotada": az("Em monopólio, a perda de bem-estar adicional do imposto <u>pode</u> ser menor do que na "
                       "concorrência perfeita, <u>porque o mercado já operava com preço acima do ótimo</u>."),
-        "poucas": ("A fonte dá CERTO, mas a justificativa está invertida: como o monopólio já opera com "
+        "poucas": ("O CERTO se apoia só no “pode”; a justificativa está invertida: como o monopólio já opera com "
                    + vd("P > CMg") + ", cada unidade que o imposto elimina custa à sociedade P − CMg > 0, o que "
                    "tende a tornar a perda adicional " + azb("maior") + ", não menor."),
-        "condicionais": [("⚠️ Gabarito contestável", "O gabarito da fonte é CERTO e foi mantido. O “pode” só se "
+        "condicionais": [("⚠️ Gabarito contestável", "O gabarito indicado é CERTO e foi mantido. O “pode” só se "
                           "sustenta para impostos muito altos: com demanda linear e CMg constante, a perda "
                           "adicional no monopólio é menor que a da concorrência apenas se t > 2/3 da distância "
                           "entre o intercepto da demanda e o custo. Para impostos usuais ela é maior, e a razão "

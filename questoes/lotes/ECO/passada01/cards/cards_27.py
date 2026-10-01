@@ -206,4 +206,61 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0503
+    {
+        "id": "ECO-E1-0503-1", "fonte_ref": "E1-0503", "destino": "16", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Clio", "prova": "04/2022", "ano": 2022, "cacd": False, "errei": False,
+        "comando": CMD_AGR,
+        "rotulo_item": "Item",
+        "assertiva": ("A elevação do Hiato do Produto significa que o PIB de uma economia está se distanciando de "
+                      "seu PIB de pleno emprego."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("A <u>elevação</u> do Hiato do Produto significa que o PIB de uma economia está se "
+                      "distanciando de seu PIB de pleno emprego."),
+        "poucas": ("O " + azb("hiato do produto") + " é a distância entre o PIB efetivo e o "
+                   + azb("PIB potencial") + " (o de pleno emprego dos fatores, sem pressão inflacionária). Hiato "
+                   "maior = PIB mais longe do potencial."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "O item é CERTO se “elevação” significar aumento do <b>tamanho</b> do hiato (em módulo). "
+                          "Com o hiato medido com sinal, (Y − Y*)/Y*, um hiato negativo que “se eleva” de −3% "
+                          "para −1% indica PIB se <b>aproximando</b> do potencial. A banca adotou a leitura em "
+                          "módulo; mantém-se o CERTO.")],
+        "destrinchando": [
+            "Definição usual: " + vd("hiato = (Y − Y*) / Y*") + ", em que Y é o PIB efetivo e Y* o "
+            + azb("PIB potencial") + " — o máximo que a economia produz de forma sustentada, com os fatores "
+            "plenamente empregados e sem acelerar a inflação.",
+            azb("Hiato negativo") + " (Y < Y*): ociosidade, desemprego acima do natural, pressão "
+            "desinflacionária — espaço para política expansionista. " + azb("Hiato positivo")
+            + " (Y > Y*): economia “superaquecida”, mercado de trabalho apertado, pressão inflacionária — "
+            "indicação de aperto monetário.",
+            "Por isso o hiato entra nas regras de política monetária: na " + azb("regra de Taylor") + " ("
+            + oc("John Taylor") + ", 1993), os juros sobem com a inflação acima da meta e com o hiato positivo. "
+            + rx("O Banco Central do Brasil") + " estima o hiato e o usa nas projeções do Copom.",
+            "O PIB potencial <b>não é observável</b>: é estimado por filtros estatísticos ou função de "
+            "produção, e as estimativas são revistas. Por isso o hiato é sempre uma medida incerta.",
+            "A relação entre hiato e desemprego é a " + azb("lei de Okun") + " (" + oc("Arthur Okun")
+            + "): o desemprego cai quando o produto cresce acima do potencial.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " A banca define o hiato pelo afastamento e usa "
+                       "“PIB de pleno emprego” como sinônimo de PIB potencial — aceitável em prova. O risco "
+                       "está no sinal: quem pensa no hiato negativo “subindo” rumo a zero marca ERRADO. Leia "
+                       "“elevação do hiato” como hiato maior em módulo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um hiato do produto positivo indica capacidade ociosa e pressão desinflacionária.”</i> → "
+            "ERRADO (inversão: isso descreve o hiato negativo)",
+            "<i>“O PIB potencial é diretamente observado nas contas nacionais trimestrais do IBGE.”</i> → "
+            "ERRADO (o potencial é estimado, não observado)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. Hiato do produto é a diferença entre o PIB corrente e o PIB potencial; pode "
+                             "ser positivo ou negativo e indica pressões inflacionárias. O item é correto desde "
+                             "que o hiato seja positivo; se negativo, há ociosidade."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: “elevação do hiato” só significa afastamento do potencial se o hiato for lido "
+                    "em módulo ou for positivo; com hiato negativo, elevação = aproximação. Gabarito da fonte "
+                    "(CERTO) mantido",
+                    "texto_corrigido: a frente vinha em forma de pergunta (“É correto afirmar que …?”); a "
+                    "assertiva foi extraída das aspas"],
+    },
 ]

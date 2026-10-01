@@ -1039,7 +1039,8 @@ CARDS = [
             azb("Segundo teorema") + ": qualquer alocação eficiente pode ser alcançada como equilíbrio "
             "competitivo, com redistribuição prévia da renda por transferências lump-sum (exige convexidade).",
         ],
-        "dissecando": (cz("[meia-verdade · modulador absoluto]") + " A primeira parte é o enunciado do teorema; "
+        "dissecando": (cz("[meia-verdade]") + " A primeira parte é o enunciado do teorema (o “sempre” vale dentro de suas "
+                       "hipóteses); "
                        "o erro foi enxertado na ressalva final, que anula uma de suas hipóteses. 🔥 Banca adora "
                        "o padrão “teorema + mesmo se houver [falha de mercado]”: externalidade, bem público, "
                        "poder de mercado, informação assimétrica."),
@@ -1049,9 +1050,9 @@ CARDS = [
             "<i>“O primeiro teorema do bem-estar garante que o equilíbrio competitivo é justo do ponto de vista "
             "distributivo.”</i> → ERRADO (eficiência não é equidade)",
         ])],
-        "reescrita": ("Segundo o primeiro teorema do bem-estar, o mercado " + hl("competitivo") + " leva a "
-                      "alocações eficientes de Pareto, " + hl("desde que não haja externalidades") + "."),
-        "tipo_erro": ["MEIA_VERDADE", "GENERALIZACAO"], "moduladores": ["sempre", "mesmo se"], "dificuldade": 1,
+        "reescrita": ("Segundo o primeiro teorema do bem-estar, o mercado sempre leva a alocações eficientes de "
+                      "Pareto, " + hl("desde que não haja externalidades") + "."),
+        "tipo_erro": ["MEIA_VERDADE"], "moduladores": ["sempre", "mesmo se"], "dificuldade": 1,
         "comentario_fonte": ("O erro está no final: externalidades são falha de mercado e rompem os pressupostos "
                              "da eficiência de Pareto."),
         "qualidade_fonte": "raso",
@@ -1161,8 +1162,9 @@ CARDS = [
         "destrinchando": [
             "Geometria: altura do triângulo = t (a cunha pc − pv); base = queda da quantidade, que, com curvas "
             "lineares, é proporcional a t. Área = ½ × base × altura ∝ " + vd("t²") + ".",
-            "Fórmula aproximada (" + oc("Harberger") + "): PM ≈ ½ · t² · " + "(dq/dp) — em proporção ao "
-            "mercado, cresce com o quadrado da alíquota e com as elasticidades de oferta e demanda.",
+            "Triângulo de " + oc("Harberger") + ": PM ≈ ½ · t · Δq; como Δq é proporcional a t, PM cresce com "
+            "t². Para a mesma alíquota, cresce também com as elasticidades de oferta e de demanda (quanto mais "
+            "as quantidades reagem, maior a base do triângulo).",
             "Receita, ao contrário, cresce <b>menos</b> que proporcionalmente (t sobe, mas a base qₜ encolhe) e, "
             "a partir de certo ponto, cai — é a lógica da " + azb("curva de Laffer") + ". Impostos altos "
             "arrecadam relativamente pouco e distorcem muito.",

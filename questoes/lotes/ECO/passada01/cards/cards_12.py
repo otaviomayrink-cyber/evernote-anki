@@ -137,8 +137,9 @@ CARDS += [
         ])],
         "reescrita": ("As preferências dos consumidores são representadas por curvas de indiferença, em que cada uma "
                       "contém as possíveis combinações de bens e serviços que trazem a mesma satisfação. "
-                      "Graficamente, as curvas de indiferença são " + hl("negativamente inclinadas, e as curvas "
-                      "mais afastadas da origem") + " proporcionam mais satisfação aos consumidores."),
+                      "Graficamente, as curvas de indiferença são " + hl("negativamente inclinadas, e")
+                      + " as combinações representadas mais à direita " + hl("(em curvas mais afastadas da origem)")
+                      + " proporcionam mais satisfação aos consumidores."),
         "tipo_erro": ["MEIA_VERDADE", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Curvas de indiferença são negativamente inclinadas (trade-off, TMS); curvas mais "
                              "afastadas da origem representam maior utilidade; a 1ª parte da assertiva está certa."),
@@ -203,8 +204,8 @@ CARDS += [
                       "consumidores para baixo, porém, não alteram a sua inclinação."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Os aumentos recentes do preço da energia elétrica ") + vm("deslocam") + az(" a restrição "
-                      "orçamentária dos consumidores ") + vm("para baixo, porém, não alteram a sua inclinação")
-                   + az("."),
+                      "orçamentária dos consumidores ") + vm("para baixo, porém, não alteram")
+                   + az(" a sua inclinação."),
         "poucas": ("Mudar o preço de <b>um</b> bem muda o " + azb("preço relativo") + " e, portanto, a inclinação "
                    "(−p<sub>E</sub>/p<sub>O</sub>): a reta " + azb("gira") + " para dentro em torno do intercepto "
                    "do outro bem. Deslocamento paralelo é efeito de renda ou de alta proporcional de todos os "
@@ -633,7 +634,7 @@ CARDS += [
             "ERRADO (B cai junto com A)",
         ])],
         "reescrita": ("Se dois bens A e B são complementares perfeitos, o aumento do preço de A com o preço de B "
-                      "constante fará o consumidor reduzir " + hl("o consumo de A e o de B na mesma proporção") + "."),
+                      "constante, fará o consumidor reduzir seu consumo " + hl("de A e de B na mesma proporção") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Complementares perfeitos consumidos em proporções fixas; aumento de pA reduz A e B na "
                              "mesma proporção; u = mín{αA, βB}."),
@@ -820,7 +821,7 @@ CARDS += [
         ])],
         "reescrita": ("Se um consumidor considera ordenar estas três cestas de bens A, B e C, de modo que, B seja mais "
                       "preferida do que A, C seja tão preferida quanto B e A seja tão preferida quanto C, podemos "
-                      "dizer que as preferências deste consumidor " + hl("violam o princípio da transitividade, e "
+                      "dizer que " + hl("as") + " preferências deste consumidor " + hl("violam o princípio da transitividade, e "
                       "nada se pode afirmar sobre a monotonicidade") + "."),
         "tipo_erro": ["CONTRADICAO", "EXTRAPOLACAO"], "moduladores": ["tanto… como"], "dificuldade": 2,
         "comentario_fonte": ("Viola a transitividade: A ~ C e C ~ B implicariam A ~ B, contra B ≻ A; monotonicidade "
@@ -862,8 +863,7 @@ CARDS += [
         ],
         "dissecando": (cz("[inversão · meia-verdade]") + " A frase pega a exceção (TMS constante) e a apresenta "
                        "como regra, ressalvando justamente o caso em que ela vale. O “bens substitutos” sem "
-                       "“perfeitos” é outro descuido proposital. O mesmo item caiu no Simulado Março/2025 "
-                       "(ECO-E3-L00236-1)."),
+                       "“perfeitos” é outro descuido proposital. O mesmo item caiu também no Simulado Março/2025."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Com exceção da relação entre bens substitutos perfeitos, a taxa marginal de substituição é "
             "geralmente decrescente ao longo da curva de indiferença.”</i> → CERTO",
@@ -912,8 +912,9 @@ CARDS += [
             vm("Regra-âncora: “é possível” pede um exemplo; “pode-se garantir” pede uma regra que valha sempre."),
         ],
         "dissecando": (cz("[modulador relativo · contraintuitivo]") + " O “é possível” salva o item: basta um caso "
-                       "(a > 10b). Contraintuitivo porque a cesta com mais unidades no total perde. Compare com o "
-                       "item irmão (ECO-E3-L00148-1), que usa “pode-se garantir” numa cesta que domina a outra."),
+                       "(a > 10b). Contraintuitivo porque a cesta com mais unidades no total perde. Compare com a "
+                       "versão que usa “pode-se garantir” numa cesta que domina a outra: aí a garantia vem da "
+                       "monotonicidade, e o item é CERTO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Se X e Y forem perfeitamente substitutos e as preferências estritamente monotônicas, pode-se "
             "garantir que u(19, 30) > u(20, 20).”</i> → ERRADO (depende de a e b: com a > 10b vale o contrário)",
@@ -1010,13 +1011,13 @@ CARDS += [
             azb("Monotonicidade fraca") + " exigiria mais de <b>todos</b> os bens para garantir preferência "
             "estrita; com mais de um só, garantiria apenas A ≿ B. É por isso que o item diz “estritamente”.",
             "Como a conclusão vem do axioma, ela não depende da forma de u (linear, Cobb-Douglas…): é uma "
-            "<b>garantia</b>. Contraste com ECO-E3-L00146-1, em que as cestas não se dominam — (19, 30) tem menos X "
+            "<b>garantia</b>. Contraste com a versão em que as cestas não se dominam — (19, 30) tem menos X "
             "— e o resultado depende dos pesos.",
             "Graficamente: (20, 30) está diretamente acima de (20, 25), numa curva de indiferença mais alta. "
             "Monotonicidade estrita também implica curvas negativamente inclinadas e sem “faixas grossas”.",
         ],
         "dissecando": (cz("[literalidade]") + " Aplicação direta da definição. O “pode-se garantir” assusta quem vem "
-                       "do item irmão (“é possível”); aqui a garantia existe porque uma cesta " + azb("domina") +
+                       "da versão com “é possível”; aqui a garantia existe porque uma cesta " + azb("domina") +
                        " a outra."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Se as preferências forem estritamente monotônicas, pode-se garantir que u(21, 24) > u(20, "
@@ -1069,7 +1070,7 @@ CARDS += [
         ],
         "dissecando": (cz("[inversão · meia-verdade]") + " O examinador mantém o vocabulário certo (TMS, curva de "
                        "indiferença, substitutos) e só inverte o papel de regra e exceção. Item idêntico ao do "
-                       "Simulado Julho/2025 (ECO-E3-L00078-1): a banca recicla a pegadinha."),
+                       "Simulado Julho/2025: a banca recicla a pegadinha."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Para preferências convexas, a TMS diminui à medida que o consumidor substitui y por x ao longo de "
             "uma curva de indiferença.”</i> → CERTO",
@@ -1337,8 +1338,7 @@ CARDS += [
         ],
         "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Define o ponto de saciedade sem usar a "
                        "palavra “máximo da UT”. O “quando existe” protege o item da objeção de que, com "
-                       "monotonicidade, não há saciedade. É o 3º item de um bloco sobre o tema (ver "
-                       "ECO-E3-L00374-1)."),
+                       "monotonicidade, não há saciedade. É o 3º item de um bloco sobre o tema."),
         "modulos": [("😈 Para dificultar", [
             "<i>“No ponto de saciedade, a utilidade marginal é máxima.”</i> → ERRADO (troca de conceito: a UT é "
             "máxima; a UMg é nula)",

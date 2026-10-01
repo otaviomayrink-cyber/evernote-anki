@@ -184,7 +184,7 @@ CARDS = [
                       "de produção, não poderá ter retornos crescentes de escala."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Uma firma que tenha função de produção com rendimentos decrescentes para cada um dos "
-                       "fatores de produção, ") + vm("não poderá ter") + az(" retornos crescentes de escala.")),
+                       "fatores de produção, ") + vm("não poderá") + az(" ter retornos crescentes de escala.")),
         "poucas": ("Rendimento " + azb("marginal") + " (um fator varia) e rendimento " + azb("de escala")
                    + " (todos variam juntos) são independentes: Q = K<sup>0,6</sup>·L<sup>0,6</sup> tem PMg "
                    "decrescente em cada fator e retornos crescentes (" + vd("0,6 + 0,6 = 1,2 > 1") + ")."),
@@ -1128,7 +1128,6 @@ CARDS = [
             + azb("monopolista") + " produz onde RMg = CMg, em geral fora do mínimo do CMe.",
             "Por isso o item é condicional: “<b>se</b> o CMg se iguala ao CMe, então…”. Não afirma que o "
             "monopolista opera no custo mínimo — afirma que, se a igualdade ocorrer, ali está o mínimo.",
-            "Item quase idêntico, de outro simulado da mesma origem: ECO-E2-L00865-1.",
         ],
         "dissecando": (cz("[contraintuitivo]") + " O preâmbulo sobre estruturas “opostas” sugere que a resposta "
                        "depende do mercado. Não depende: a relação marginal × média é propriedade dos custos. "
@@ -1216,7 +1215,6 @@ CARDS = [
             "do CMe; o " + azb("monopolista") + " produz onde RMg = CMg, em geral com P > CMg e fora do mínimo "
             "do CMe (ineficiência alocativa e, muitas vezes, produtiva).",
             "A mesma lógica liga PMg e PMe na produção: o PMg corta o PMe no máximo deste.",
-            "Item quase idêntico, de outro simulado da mesma origem: ECO-E2-L00535-1.",
         ],
         "dissecando": (cz("[contraintuitivo]") + " A menção ao monopólio induz a pensar que, com poder de mercado, "
                        "a regra mudaria. Não muda: o item fala de custos, e a relação marginal × média é "

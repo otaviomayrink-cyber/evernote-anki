@@ -386,8 +386,8 @@ CARDS = [
                       "custo de produção. Sua inclinação descendente pode ser explicada pela taxa marginal de "
                       "substituição técnica."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Uma isoquanta representa todas as possíveis combinações de insumos que resultam no mesmo ")
-                   + vm("custo de produção") + az(". Sua inclinação descendente pode ser explicada pela taxa "
+        "anotada": az("Uma isoquanta representa todas as possíveis combinações de insumos que resultam ")
+                   + vm("no mesmo custo de produção") + az(". Sua inclinação descendente pode ser explicada pela taxa "
                                                   "marginal de substituição técnica."),
         "poucas": ("Isoquanta = mesma <b>quantidade</b> produzida. A curva de mesmo <b>custo</b> é a "
                    + azb("isocusto") + ". A 2ª frase está certa."),
@@ -414,8 +414,8 @@ CARDS = [
             "<i>“No ponto ótimo, a TMST iguala a razão entre os produtos médios dos insumos.”</i> → ERRADO "
             "(é a razão entre os preços, w/r)",
         ])],
-        "reescrita": ("Uma isoquanta representa todas as possíveis combinações de insumos que resultam na "
-                      + hl("mesma quantidade produzida") + ". Sua inclinação descendente pode ser explicada pela "
+        "reescrita": ("Uma isoquanta representa todas as possíveis combinações de insumos que resultam "
+                      + hl("na mesma quantidade produzida") + ". Sua inclinação descendente pode ser explicada pela "
                       "taxa marginal de substituição técnica."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "A curva de combinações de mesmo custo é a isocusto. ISO = mesmo; QUANTA = quantidade.",
@@ -1070,7 +1070,7 @@ CARDS = [
             "<i>“A taxa marginal de substituição técnica é decrescente ao longo de cada isoquanta.”</i> → "
             "ERRADO (é constante: isoquanta reta)",
         ])],
-        "reescrita": ("A função de produção em questão " + hl("não") + " respeita a lei dos rendimentos "
+        "reescrita": ("A função de produção em questão " + hl("não respeita") + " a lei dos rendimentos "
                       "marginais decrescentes" + hl(": os produtos marginais de K e de L são constantes") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": ("Rendimentos marginais constantes: fixado o capital (ex.: K = 2), cada unidade "

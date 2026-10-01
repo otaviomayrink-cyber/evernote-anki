@@ -38,7 +38,7 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A incidência de um imposto sobre vendas em um mercado de concorrência perfeita é ")
                     + vm("integralmente suportada pelos consumidores, independentemente da elasticidade-preço da "
-                         "demanda do bem") + az(".")),
+                         "demanda") + az(" do bem.")),
         "poucas": ("A " + azb("incidência econômica") + " de um imposto se reparte entre compradores e vendedores "
                    "conforme as " + azb("elasticidades") + " da demanda e da oferta; o repasse integral ao "
                    "consumidor é caso-limite, não regra."),
@@ -387,7 +387,8 @@ CARDS = [
             "<i>“Só se a demanda for perfeitamente inelástica os vendedores transferirão todo o imposto.”</i> → "
             "ERRADO (restrição indevida: também com oferta perfeitamente elástica)",
         ])],
-        "reescrita": ("Vendedores irão transferir aos compradores " + hl("apenas parte do") + " novo imposto, "
+        "reescrita": ("Vendedores irão transferir aos compradores o valor relativo a " + hl("apenas parte da "
+                      "incidência") + " do novo imposto, "
                       "o que aumentará o preço do bem " + hl("em montante inferior ao do tributo") + "."),
         "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["toda"], "dificuldade": 1,
         "comentario_fonte": "Só ocorreria com demanda de elasticidade nula (vertical); nesse caso o consumidor "
@@ -1234,7 +1235,7 @@ CARDS = [
             "(modulador absoluto: depende de quanto a quantidade cai)",
         ])],
         "reescrita": ("No equilíbrio de mercado, o excedente " + hl("total (do consumidor e do produtor)") + " é "
-                      "maximizado, " + hl("quaisquer que sejam as elasticidades-preço da demanda e da oferta")
+                      "maximizado" + hl(", quaisquer que sejam as elasticidades-preço da demanda e da oferta")
                       + "."),
         "tipo_erro": ["TROCA_CONCEITO", "RESTRICAO"], "moduladores": ["apenas"], "dificuldade": 1,
         "comentario_fonte": "O excedente total é maximizado no equilíbrio competitivo; elasticidades definem o "
@@ -1389,7 +1390,7 @@ CARDS = [
                       "unidades."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Se o governo tabelar o preço do produto em R$ 6,00, haverá um excesso de ")
-                    + vm("oferta de 50") + az(" unidades.")),
+                    + vm("oferta") + az(" de ") + vm("50") + az(" unidades.")),
         "poucas": ("Teto abaixo do equilíbrio (6 < 7) gera " + azb("excesso de demanda") + ": Qᴰ = " + vd("120")
                    + " e Qˢ = " + vd("80") + " — faltam " + vd("40") + " unidades."),
         "destrinchando": [

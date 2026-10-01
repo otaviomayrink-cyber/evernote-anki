@@ -187,7 +187,7 @@ CARDS = [
         "assertiva": "Uma característica básica dos bens públicos é que as pessoas podem ser impedidas de consumi-los.",
         "gabarito": "ERRADO",
         "anotada": (az("Uma característica básica dos bens públicos é que as pessoas ")
-                    + vm("podem ser impedidas") + az(" de consumi-los.")),
+                    + vm("podem") + az(" ser impedidas de consumi-los.")),
         "poucas": ("Poder impedir o consumo é a " + azb("excludabilidade") + ", traço do bem privado e do bem de "
                    "clube. O bem público é " + vd("não excludente") + "."),
         "destrinchando": [

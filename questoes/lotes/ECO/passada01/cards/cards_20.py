@@ -114,7 +114,8 @@ CARDS = [
         ],
         "dissecando": (cz("[contraintuitivo]") + " Item verdadeiro que contraria a intuição de que o monopólio "
                        "“mais agressivo” seria também o mais ineficiente. O “portanto” liga corretamente "
-                       "P = CMg ao fim do peso morto. Item gêmeo, na versão errada: ECO-E2-L00290-1."),
+                       "P = CMg ao fim do peso morto. Na versão errada, a banca diz que a discriminação perfeita gera "
+                       "peso morto “maior” que o do monopólio simples."),
         "modulos": [("😈 Para dificultar", [
             "<i>“…resultando em uma quantidade produzida inferior à de concorrência perfeita…”</i> → ERRADO "
             "(é igual: P = CMg)",
@@ -126,7 +127,7 @@ CARDS = [
                              "excedente vira lucro, sem peso morto."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00290-1 (versão ERRADA: peso morto “maior”)"],
     },
     # ------------------------------------------------------------------ E2-L00441
     {
@@ -245,7 +246,8 @@ CARDS = [
         ],
         "dissecando": (cz("[contraintuitivo · modulador relativo]") + " Quem traz do mercado competitivo a ideia "
                        "de que teto sempre gera escassez e peso morto marca ERRADO. O “pode” salva o item: o "
-                       "ganho depende de onde o teto é fixado. Item vizinho, na versão errada: ECO-E2-L01195-1."),
+                       "ganho depende de onde o teto é fixado. Na versão errada, a banca diz que o teto “deve "
+                       "necessariamente” reduzir a quantidade e gerar excesso de demanda."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Em mercado competitivo, um teto abaixo do preço de equilíbrio aumenta o excedente total.”</i> → "
             "ERRADO (gera escassez e peso morto)",
@@ -258,7 +260,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 088", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (mecanismo descrito no 📖; gráfico do teto em ECO-E2-L01195-1-V1)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01195-1 (teto de preços no monopólio, versão ERRADA)"],
     },
     # ------------------------------------------------------------------ E2-L00619
     {
@@ -382,8 +384,8 @@ CARDS = [
             "quantidade em que a demanda corta o CMg da firma.",
         ],
         "dissecando": (cz("[contraintuitivo]") + " Verdadeiro, mas contraria a ideia de que monopólio sempre "
-                       "produz menos que a concorrência. 🔥 Itens gêmeos no mesmo lote: ECO-E2-L00332-1 (CERTO) e "
-                       "ECO-E2-L00290-1 (versão ERRADA, com peso morto “maior”)."),
+                       "produz menos que a concorrência. 🔥 Tema recorrente: a banca o cobra também pelo lado errado, "
+                       "dizendo que a discriminação perfeita gera peso morto “maior” que o monopólio simples (ERRADO)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“…resultando em quantidade socialmente eficiente, mas a um preço único superior ao de concorrência "
             "perfeita.”</i> → ERRADO (não há preço único: cada unidade tem o seu)",
@@ -395,7 +397,7 @@ CARDS = [
                              "quantidade da concorrência perfeita; excedente apropriado como lucro."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00332-1 (CERTO) e ECO-E2-L00290-1 (ERRADO) — discriminação perfeita"],
     },
     # ------------------------------------------------------------------ E2-L00677
     {
@@ -519,8 +521,8 @@ CARDS = [
         ],
         "dissecando": (cz("[literalidade · modulador absoluto]") + " O “nunca” costuma ser sinal de ERRADO, mas "
                        "aqui é exato: com CMg positivo não há exceção. 🔥 A banca repete o tema em várias "
-                       "roupagens: ECO-E2-L00441-1 (versão errada) e ECO-E2-L01192-1 (“sempre na parte "
-                       "elástica”)."),
+                       "roupagens: “sempre operará na porção inelástica” (ERRADO) e “sempre atua na parte "
+                       "elástica” (CERTO)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“O monopolista maximiza lucro no ponto de elasticidade unitária da demanda.”</i> → ERRADO (isso "
             "só ocorre com CMg nulo; em regra, |ε| > 1)",
@@ -532,7 +534,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 106", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (mecanismo redesenhado em ECO-E2-L00441-1-V1)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00441-1 (ERRADO) e ECO-E2-L01192-1 (CERTO) — parte elástica da demanda"],
     },
     # ------------------------------------------------------------------ E2-L00743
     {
@@ -572,8 +574,9 @@ CARDS = [
         "grafico_verso": "ECO-E2-L00743-1-V1",
         "dissecando": (cz("[troca de conceito]") + " O item aplica ao monopólio natural a regra de eficiência do "
                        "mercado competitivo sem considerar o custo fixo. O “pode” deixa a porta aberta — por isso o "
-                       "gabarito é discutível. Itens vizinhos: ECO-E2-L01019-1 (ERRADO) e ECO-E2-L01196-1 "
-                       "(CERTO)."),
+                       "gabarito é discutível. A banca cobra o mesmo ponto como “uma boa forma de regular é fixar o "
+                       "preço no custo marginal” (ERRADO) e como “o preço igual ao custo marginal causaria prejuízo "
+                       "ao monopolista” (CERTO)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“No monopólio natural, o preço igual ao custo marginal causaria prejuízo à empresa.”</i> → CERTO",
             "<i>“A regulação pelo custo médio elimina o peso morto do monopólio natural.”</i> → ERRADO (reduz, "
@@ -592,7 +595,7 @@ CARDS = [
                            "acao": "redesenhada (ECO-E2-L00743-1-V1)"},
                           {"ref": "IMAGEM 129 (linha duplicada E2-L00850)", "tipo_fonte": "GRÁFICO",
                            "lado": "verso", "acao": "cortada (igual à IMAGEM 107)"}],
-        "alertas": ["contestavel: P = CMg é a condição de eficiência alocativa; o item seria CERTO se admitido "
+        "alertas": ["quase_duplicata: ECO-E2-L01019-1 (ERRADO) e ECO-E2-L01196-1 (CERTO) — P = CMg no monopólio natural", "contestavel: P = CMg é a condição de eficiência alocativa; o item seria CERTO se admitido "
                     "subsídio ou tarifa em duas partes — gabarito ERRADO mantido"],
     },
     # ------------------------------------------------------------------ E2-L00811
@@ -607,7 +610,7 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Para empresas monopolistas, ocorrerá um ótimo de produção sempre que suas receitas "
                       "marginais forem iguais aos seus custos marginais, ") + vm("pois, nesse ponto, os excedentes "
-                      "serão máximos e, portanto, não haverá peso morto nesse mercado") + az("."),
+                      "serão máximos e, portanto, não haverá peso morto") + az(" nesse mercado."),
         "poucas": ("RMg = CMg maximiza o <b>lucro</b>, não o excedente total. Como " + vd("P > RMg = CMg")
                    + ", o monopolista produz menos que o eficiente e gera " + azb("peso morto") + "."),
         "destrinchando": [
@@ -627,8 +630,8 @@ CARDS = [
         ],
         "grafico_verso": "ECO-E2-L00811-1-V1",
         "dissecando": (cz("[nexo indevido · meia-verdade]") + " A 1ª parte (RMg = CMg) é verdadeira; o erro foi "
-                       "colado no “pois”, que atribui ao ótimo privado uma propriedade do ótimo social. Item gêmeo "
-                       "com o mesmo texto: ECO-E2-L01020-1 (Pré-TPS/2023)."),
+                       "colado no “pois”, que atribui ao ótimo privado uma propriedade do ótimo social. 🔥 O mesmo "
+                       "texto foi cobrado de novo no Pré-TPS/2023."),
         "modulos": [("😈 Para dificultar", [
             "<i>“No ótimo do monopolista, o preço supera o custo marginal, o que gera perda de peso morto.”</i> → "
             "CERTO",
@@ -715,8 +718,8 @@ CARDS = [
             vm("Regra-âncora: Lerner = 1/|ε| — menos elástica, mais poder."),
         ],
         "dissecando": (cz("[literalidade]") + " Aplicação direta da fórmula. A armadilha é de sinal: a banca "
-                       "escreve “menor elasticidade” sem dizer “em módulo”. Item idêntico em outra prova: "
-                       "ECO-E2-L01018-1 (Pré-TPS/2023)."),
+                       "escreve “menor elasticidade” sem dizer “em módulo”. 🔥 O mesmo item foi cobrado "
+                       "de novo no Pré-TPS/2023."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Quanto maior a elasticidade-preço da demanda, em valor absoluto, maior o índice de Lerner.”</i> "
             "→ ERRADO (inversão)",
@@ -854,7 +857,7 @@ CARDS = [
             "Limites: firma competitiva (|ε| infinito) → L = 0; monopolista sempre com |ε| > 1 → L < 1. Lerner "
             "mede a margem, não o lucro (custos fixos podem anulá-lo).",
         ],
-        "dissecando": (cz("[literalidade]") + " Item idêntico a ECO-E2-L00867-1, de outra prova: sinal de tema "
+        "dissecando": (cz("[literalidade]") + " O mesmo item aparece, idêntico, em outra prova: sinal de tema "
                        "recorrente 🔥. A única forma de errar é ler “menor elasticidade” com sinal (−4 < −2) em vez "
                        "de módulo."),
         "modulos": [("😈 Para dificultar", [
@@ -899,7 +902,8 @@ CARDS = [
         ],
         "dissecando": (cz("[troca de conceito]") + " Transporta a regra de eficiência do mercado competitivo "
                        "para um setor com custos médios decrescentes. A expressão “boa forma de regular” exige "
-                       "viabilidade, que P = CMg não oferece. Item vizinho: ECO-E2-L01196-1 (CERTO)."),
+                       "viabilidade, que P = CMg não oferece. A versão certa do mesmo ponto: “no monopólio natural, o "
+                       "preço igual ao custo marginal causaria prejuízo ao monopolista”."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Uma forma de regular um monopolista natural é fixar o preço no custo médio, o que lhe garante "
             "lucro econômico nulo.”</i> → CERTO",
@@ -914,7 +918,7 @@ CARDS = [
                              "comum é P = CMe."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01196-1 (versão CERTA: P = CMg causa prejuízo)"],
     },
     # ------------------------------------------------------------------ E2-L01020
     {
@@ -928,7 +932,7 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Para empresas monopolistas, ocorrerá um ótimo de produção sempre que suas receitas "
                       "marginais forem iguais aos seus custos marginais, ") + vm("pois, nesse ponto, os excedentes "
-                      "serão máximos e, portanto, não haverá peso morto nesse mercado") + az("."),
+                      "serão máximos e, portanto, não haverá peso morto") + az(" nesse mercado."),
         "poucas": ("Como a RMg fica abaixo da demanda, no ótimo " + vd("RMg = CMg < P") + ": a firma maximiza o "
                    "lucro, mas produz menos que o eficiente — há " + azb("peso morto") + "."),
         "destrinchando": [
@@ -945,7 +949,7 @@ CARDS = [
             "concorrência") + " (no " + rx("Brasil") + ", o CADE, Lei 12.529/2011) e a regulação de preços nos "
             "monopólios naturais.",
         ],
-        "dissecando": (cz("[nexo indevido]") + " Mesma assertiva de ECO-E2-L00811-1 (Nabuco, sem ano), cobrada de "
+        "dissecando": (cz("[nexo indevido]") + " Mesma assertiva de uma prova anterior (Nabuco, sem ano), cobrada de "
                        "novo no Pré-TPS/2023 🔥. O conector “pois” liga a regra de lucro máximo a uma conclusão de "
                        "bem-estar que ela não sustenta; desconfie de “portanto, não haverá peso morto” em "
                        "monopólio de preço único."),
@@ -974,9 +978,8 @@ CARDS = [
         "assertiva": ("Permitir que as empresas discriminem preços leva a ganhos de bem-estar dos consumidores e "
                       "maiores lucros dos empresários."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Permitir que as empresas discriminem preços ") + vm("leva a ganhos de bem-estar dos "
-                                                                           "consumidores") + az(" e maiores lucros "
-                                                                                                "dos empresários."),
+        "anotada": az("Permitir que as empresas discriminem preços leva a ") + vm("ganhos de bem-estar") + az(" dos "
+                      "consumidores e maiores lucros dos empresários."),
         "poucas": ("O lucro tende a subir (a firma captura " + azb("excedente do consumidor") + "), mas o efeito "
                    "sobre os consumidores é " + vd("ambíguo") + ": uns pagam menos, outros mais; no 1º grau, o "
                    "excedente do consumidor chega a zero."),
@@ -1003,8 +1006,8 @@ CARDS = [
             "<i>“Na discriminação de preços de primeiro grau, o excedente do consumidor é máximo.”</i> → ERRADO "
             "(inversão: é nulo)",
         ])],
-        "reescrita": ("Permitir que as empresas discriminem preços leva a maiores lucros dos empresários, "
-                      + hl("mas tem efeito ambíguo sobre o bem-estar dos consumidores") + "."),
+        "reescrita": ("Permitir que as empresas discriminem preços leva a " + hl("efeito ambíguo sobre o bem-estar")
+                      + " dos consumidores e maiores lucros dos empresários."),
         "tipo_erro": ["MEIA_VERDADE", "GENERALIZACAO"], "moduladores": ["leva a"], "dificuldade": 1,
         "comentario_fonte": ("Lucro maior em geral; efeito ambíguo sobre consumidores (mercados elásticos pagam "
                              "menos, outros mais); bem-estar total só aumenta se a quantidade se expandir."),
@@ -1039,7 +1042,7 @@ CARDS = [
         ],
         "dissecando": (cz("[literalidade · modulador absoluto]") + " O “sempre” assusta, mas aqui é a regra de "
                        "manual (o único caso-limite, CMg nulo, não é cobrado). 🔥 O tema volta em versões "
-                       "invertidas: ECO-E2-L00441-1 (“porção inelástica” → ERRADO)."),
+                       "invertidas: “sempre operará na porção inelástica” → ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Uma empresa monopolista sempre atua na parte inelástica da curva de demanda, onde consegue "
             "preços mais altos.”</i> → ERRADO (inversão: RMg < 0 no trecho inelástico)",
@@ -1051,7 +1054,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 202", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (mecanismo redesenhado em ECO-E2-L00441-1-V1)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00441-1 (versão ERRADA: “porção inelástica”)"],
     },
     # ------------------------------------------------------------------ E2-L01193
     {
@@ -1078,7 +1081,7 @@ CARDS = [
             vm("Regra-âncora: mais elástica → menos poder; menos elástica → mais poder."),
         ],
         "dissecando": (cz("[inversão]") + " Inversão pura do sentido da relação. Par espelhado na mesma bateria "
-                       "de questões: ECO-E2-L01197-1 (“menos elástica… maior” → CERTO). Teste-limite: demanda "
+                       "de questões: “menos elástica… maior” → CERTO. Teste-limite: demanda "
                        "infinitamente elástica = firma competitiva = poder nulo."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Se a elasticidade da demanda da firma for −5, o índice de Lerner será 0,2.”</i> → CERTO",
@@ -1092,7 +1095,7 @@ CARDS = [
                              "Ed pequena, markup grande."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01197-1 (par espelhado, CERTO)"],
     },
     # ------------------------------------------------------------------ E2-L01194
     {
@@ -1173,8 +1176,8 @@ CARDS = [
         "grafico_verso": "ECO-E2-L01195-1-V1",
         "dissecando": (cz("[modulador absoluto · troca de conceito]") + " Aplica ao monopólio a análise de teto do "
                        "mercado competitivo e a blinda com “necessariamente”. Pista: “quantidade produzida por esse "
-                       "monopolista” pressupõe uma curva de oferta que o monopólio não tem. Item vizinho, na versão "
-                       "certa: ECO-E2-L00534-1."),
+                       "monopolista” pressupõe uma curva de oferta que o monopólio não tem. Na versão certa, "
+                       "a banca diz que um teto de preços “pode aumentar o bem-estar” num monopólio."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A fixação de um preço máximo entre o custo marginal e o preço de monopólio pode elevar a "
             "quantidade produzida pelo monopolista.”</i> → CERTO",
@@ -1191,7 +1194,7 @@ CARDS = [
                              "quantidade é determinada pela demanda e aumenta."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00534-1 (versão CERTA: teto pode aumentar o bem-estar)"],
     },
     # ------------------------------------------------------------------ E2-L01196
     {
@@ -1217,8 +1220,8 @@ CARDS = [
             "da regulação tarifária desses setores.",
         ],
         "dissecando": (cz("[literalidade]") + " Conclusão-padrão do gráfico de monopólio natural. Itens vizinhos "
-                       "cobram o mesmo ponto pelo lado errado: ECO-E2-L01019-1 (“boa forma de regular” → ERRADO) "
-                       "e ECO-E2-L00743-1."),
+                       "cobram o mesmo ponto pelo lado errado (ERRADO): “uma boa forma de regular é fixar o preço no "
+                       "custo marginal” e “a eficiência pode ser obtida com preço igual ao custo marginal”."),
         "modulos": [("😈 Para dificultar", [
             "<i>“No monopólio natural, o preço igual ao custo médio gera lucro econômico positivo.”</i> → ERRADO "
             "(gera lucro zero)",
@@ -1231,7 +1234,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 203", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (mecanismo redesenhado em ECO-E2-L00743-1-V1)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01019-1 e ECO-E2-L00743-1 (versões ERRADAS: P = CMg)"],
     },
     # ------------------------------------------------------------------ E2-L01197
     {
@@ -1256,7 +1259,7 @@ CARDS = [
             "Usos práticos: autoridades de concorrência (no " + rx("Brasil") + ", o CADE) olham elasticidades "
             "para delimitar o mercado relevante e avaliar o poder de mercado em fusões.",
         ],
-        "dissecando": (cz("[literalidade]") + " Espelho de ECO-E2-L01193-1 (“mais elástica… maior” → ERRADO), "
+        "dissecando": (cz("[literalidade]") + " Espelho de “mais elástica… maior” (ERRADO), "
                        "na mesma bateria de questões. A banca alterna o par para testar se o candidato guardou o "
                        "<b>sentido</b> da relação."),
         "modulos": [("😈 Para dificultar", [
@@ -1270,7 +1273,7 @@ CARDS = [
                              "grande."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01193-1 (par espelhado, ERRADO)"],
     },
     # ------------------------------------------------------------------ E2-L01198
     {
@@ -1282,8 +1285,8 @@ CARDS = [
                       "natural que é necessário para a produção de determinado bem."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Um monopólio natural decorre ") + vm("da posse por parte de uma empresa da única fonte de "
-                                                           "um insumo natural") + az(" que é necessário para a "
-                                                                                     "produção de determinado bem."),
+                                                           "um insumo natural que é necessário para a "
+                                                           "produção de determinado bem") + az("."),
         "poucas": ("O " + azb("monopólio natural") + " decorre de " + vd("economias de escala") + " na faixa "
                    "relevante (CMe decrescente), não da posse de um recurso. Controle de insumo único é outra "
                    "barreira: o " + azb("monopólio de recurso") + "."),
@@ -1313,8 +1316,7 @@ CARDS = [
         ])],
         "reescrita": ("Um monopólio natural decorre " + hl("de economias de escala na faixa relevante de produção, "
                       "que permitem a uma única empresa abastecer todo o mercado a custo menor do que duas ou "
-                      "mais") + "; a posse da única fonte de um insumo necessário caracteriza o " + hl("monopólio "
-                      "de recurso") + "."),
+                      "mais; a posse da única fonte de um insumo necessário caracteriza o monopólio de recurso") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Monopólio natural: uma firma abastece o mercado a custo menor; retornos crescentes de "
                              "escala; CTMe decrescente; barreira à entrada pelo custo."),

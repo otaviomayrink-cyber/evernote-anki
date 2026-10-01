@@ -33,8 +33,8 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Suponha que o aumento substancial dos preços cobrados para o estacionamento de veículos "
                        "nas grandes cidades eleve a quantidade demandada de corridas de táxi nesses locais. Dessa "
-                       "forma, conclui-se que esse aumento de preços provoca um ")
-                    + vm("deslocamento ao longo da curva") + az(" de demanda por serviços de táxi.")),
+                       "forma, conclui-se que esse aumento de preços provoca um deslocamento ")
+                    + vm("ao longo") + az(" da curva de demanda por serviços de táxi.")),
         "poucas": ("O preço do estacionamento não está nos eixos do gráfico do táxi: é um " + azb("determinante "
                    "externo") + " da demanda. Quando ele muda, a <b>curva inteira</b> de demanda por táxi se "
                    "desloca para a direita; não há movimento ao longo dela."),
@@ -67,8 +67,8 @@ CARDS = [
         ])],
         "reescrita": ("Suponha que o aumento substancial dos preços cobrados para o estacionamento de veículos nas "
                       "grandes cidades eleve a quantidade demandada de corridas de táxi nesses locais. Dessa forma, "
-                      "conclui-se que esse aumento de preços provoca um deslocamento " + hl("da curva de demanda "
-                      "por serviços de táxi para a direita") + "."),
+                      "conclui-se que esse aumento de preços provoca um deslocamento " + hl("<s>ao longo</s>") + " da "
+                      "curva de demanda por serviços de táxi " + hl("para a direita") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Estacionamento e táxi são substitutos; o aumento do preço do estacionamento é "
                              "variável externa ao mercado de táxi e desloca a curva de demanda para a direita, e "
@@ -292,9 +292,8 @@ CARDS = [
             "ERRADO (nexo indevido: só muda o ponto)",
         ])],
         "reescrita": ("A recente retomada econômica nos Estados Unidos da América (EUA) contribuiu para reduzir os "
-                      "níveis de desemprego naquele país. Como consequência, a " + hl("economia americana "
-                      "aproximou-se de sua curva de possibilidades de produção, sem que esta se deslocasse")
-                      + "."),
+                      "níveis de desemprego naquele país. Como consequência, a curva de possibilidades de produção da "
+                      "economia americana " + hl("não foi deslocada: a economia aproximou-se dela") + "."),
         "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("A economia passou a usar fatores que estavam desempregados: saiu de um ponto interior "
                              "rumo à curva; a CPP só se desloca com aumento de fatores ou de tecnologia."),
@@ -630,7 +629,7 @@ CARDS = [
         "assertiva": "A escassez de recursos não afetará uma sociedade se ela imprimir a sua própria moeda.",
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A escassez de recursos ") + vm("não afetará") + az(" uma sociedade ")
-                    + vm("se ela imprimir a sua própria moeda") + az(".")),
+                    + vm("se") + az(" ela ") + vm("imprimir") + az(" a sua própria moeda.")),
         "poucas": ("Escassez é limite <b>físico</b> (terra, trabalho, capital, tecnologia). Moeda é só meio de "
                    "troca: imprimi-la não cria um grão de " + azb("recurso real") + "; com a produção dada, "
                    "gera " + azb("inflação") + "."),
@@ -659,7 +658,7 @@ CARDS = [
             "CERTO",
         ])],
         "reescrita": ("A escassez de recursos " + hl("afetará") + " uma sociedade " + hl("ainda que") + " ela "
-                      "imprima a sua própria moeda."),
+                      + hl("imprima") + " a sua própria moeda."),
         "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["se"], "dificuldade": 1,
         "comentario_fonte": "Escassez está ligada à limitação física dos recursos, não à quantidade de moeda.",
         "qualidade_fonte": "raso",
@@ -893,7 +892,7 @@ CARDS = [
         "rotulo_item": "Item",
         "assertiva": "Os bens econômicos são de livre acesso a todos os agentes econômicos.",
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Os bens econômicos ") + vm("são de livre acesso a todos os agentes econômicos") + az(".")),
+        "anotada": (az("Os bens econômicos ") + vm("são de livre acesso") + az(" a todos os agentes econômicos.")),
         "poucas": ("Livre acesso é característica dos " + azb("bens livres") + " (abundantes, sem preço). "
                    + azb("Bens econômicos") + " são escassos, têm preço e exigem esforço ou pagamento para "
                    "serem obtidos."),
@@ -917,7 +916,7 @@ CARDS = [
             "<i>“Bens públicos não são bens econômicos, pois ninguém pode ser excluído de seu consumo.”</i> → "
             "ERRADO (troca de conceito: não exclusão ≠ abundância)",
         ])],
-        "reescrita": ("Os bens econômicos " + hl("são escassos e não são") + " de livre acesso a todos os "
+        "reescrita": ("Os bens econômicos " + hl("são escassos e não são de livre acesso") + " a todos os "
                       "agentes econômicos" + hl("; livre acesso caracteriza os bens livres") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["todos"], "dificuldade": 1,
         "comentario_fonte": "Bens econômicos são escassos, não de livre acesso.",
@@ -935,9 +934,8 @@ CARDS = [
         "assertiva": ("Os bens econômicos são destituídos de atribuição de valor por parte dos agentes "
                       "econômicos."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Os bens econômicos ") + vm("são destituídos de atribuição de valor") + az(" por parte "
-                                                                                                 "dos agentes "
-                                                                                                 "econômicos.")),
+        "anotada": (az("Os bens econômicos ") + vm("são destituídos de") + az(" atribuição de valor por parte dos "
+                                                                     "agentes econômicos.")),
         "poucas": ("É o contrário: bens econômicos são " + azb("úteis e escassos") + ", e é justamente essa "
                    "combinação que faz os agentes lhes atribuírem " + azb("valor") + " — expresso no preço."),
         "destrinchando": [

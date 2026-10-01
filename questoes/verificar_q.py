@@ -191,6 +191,8 @@ def conferir_card(titulo, n, f, v, ws, err):
     for x in PROIBIDOS:
         if x in f or x in v:
             err(f"{tag}: expressão proibida '{x}'")
+    if re.search(r"ECO-E\d|[A-Z]{2,6}-E\d-L?\d{4}", re.sub(r"<en-media[^>]*>|<img[^>]*>", "", f + v)):
+        err(f"{tag}: o texto cita outro card pelo id (o card é lido sozinho; ligação vai no alerta quase_duplicata)")
     for m in re.finditer(r"⏳([^<]{0,25})", f + v):
         if not re.search(r"\((jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)/\d{4}\)", m.group(1)):
             err(f"{tag}: ⏳ sem data entre parênteses")

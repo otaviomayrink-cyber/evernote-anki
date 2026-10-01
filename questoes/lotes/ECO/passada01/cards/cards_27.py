@@ -362,7 +362,7 @@ CARDS = [
             ]),
         ],
         "reescrita": ("Ao avaliarmos a equação do PIB de uma economia com governo e comércio internacional, "
-                      "Y = C + I + G + (X - M), o principal efeito das variações da taxa de câmbio é sentido "
+                      "Y = C + I + G + (X - M), o principal efeito das variações taxa de câmbio é sentido "
                       + hl("nas exportações líquidas (X − M)") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["principal"], "dificuldade": 1,
         "comentario_fonte": ("ERRADO. Quatro respostas de IA concordantes: o câmbio altera preços relativos e "

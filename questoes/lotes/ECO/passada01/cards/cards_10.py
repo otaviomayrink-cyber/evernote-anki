@@ -298,8 +298,8 @@ CARDS = [
         ],
         "dissecando": (cz("[dado alterado · troca de conceito]") + " O item troca o sinal da condição "
                        "(igual → “estritamente superior”). O advérbio “estritamente” é o gatilho: exclui a "
-                       "igualdade, que é justamente a resposta. Itens irmãos: ECO-E1-0432-1 e ECO-E1-0687-1 "
-                       "(“inferior”)."),
+                       "igualdade, que é justamente a resposta. A banca também cobra a versão com “inferior” "
+                       "no lugar de “igual”, igualmente ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Em uma solução interior, o ótimo do consumidor iguala a razão das utilidades marginais à razão "
             "dos preços.”</i> → CERTO",
@@ -548,7 +548,8 @@ CARDS = [
         ],
         "dissecando": (cz("[paráfrase fiel]") + " Redação truncada (“ponderações nas diferenças absolutas”), "
                        "mas fiel à definição. O “apenas” não torna o item absoluto indevido — ordenar é, de fato, "
-                       "tudo o que a ordinal permite. Item espelho: ECO-E1-0202-1 (“medida objetiva”)."),
+                       "tudo o que a ordinal permite. A banca também cobra a utilidade como “medida objetiva”, que "
+                       "é ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Na abordagem ordinal, se U(A) = 20 e U(B) = 10, pode-se afirmar que a cesta A proporciona o "
             "dobro da satisfação de B.”</i> → ERRADO (isso é leitura cardinal)",
@@ -596,7 +597,8 @@ CARDS = [
         ],
         "dissecando": (cz("[meia-verdade · troca de conceito]") + " Duas frases corretas de abertura e o erro "
                        "enxertado no adjetivo final (“objetiva”). Pista: “que os consumidores <b>atribuem</b>” "
-                       "já denuncia a subjetividade. Item espelho: ECO-E1-0201-1."),
+                       "já denuncia a subjetividade. A versão que diz que a utilidade ordinal só permite comparações "
+                       "relativas, sem ponderar diferenças absolutas, é CERTO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A utilidade é uma medida subjetiva e, na abordagem ordinal, serve apenas para ordenar as cestas "
             "de bens.”</i> → CERTO",
@@ -686,8 +688,7 @@ CARDS = [
             "positiva, mas curvas de indiferença convexas — só os <b>perfeitos</b> geram retas.",
         ],
         "dissecando": (cz("[literalidade]") + " Definição de manual, sem armadilha. A banca costuma trocar o "
-                       "par: “complementares perfeitos → reta” (ERRADO) ou “substitutos perfeitos → L” (ERRADO). "
-                       "Ver ECO-E1-0209-1."),
+                       "par: “complementares perfeitos → reta” (ERRADO) ou “substitutos perfeitos → L” (ERRADO)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A curva de indiferença de dois bens complementares perfeitos é uma reta negativamente "
             "inclinada.”</i> → ERRADO (troca de conceito: é um L)",
@@ -781,8 +782,7 @@ CARDS = [
         "grafico_verso": "ECO-E1-0209-1-V1",
         "dissecando": (cz("[troca de conceito]") + " O enunciado descreve corretamente o caso de complementares "
                        "perfeitos (“sempre … com uma colher”) e cola o formato de substitutos perfeitos. Pista: "
-                       "“sempre” + proporção fixa = L. 🔥 CEBRASPE repete o par reta × L com frequência "
-                       "(ver ECO-E1-0207-1)."),
+                       "“sempre” + proporção fixa = L. 🔥 CEBRASPE repete o par reta × L com frequência."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Se o consumidor sempre tomar uma xícara de café com uma colher de açúcar, suas curvas de "
             "indiferença terão formato de L, com vértices sobre a reta x₂ = x₁.”</i> → CERTO",
@@ -921,9 +921,9 @@ CARDS = [
             "canto, em que a desigualdade pode subsistir.",
         ],
         "dissecando": (cz("[dado alterado]") + " Troca “igual” por “inferior”. A menção à convexidade é isca "
-                       "de sofisticação: ela reforça que a solução é de tangência, ou seja, de igualdade. Itens "
-                       "irmãos: ECO-E1-0687-1 (mesma construção, outro simulado) e ECO-E1-0191-1 "
-                       "(“superior”)."),
+                       "de sofisticação: ela reforça que a solução é de tangência, ou seja, de igualdade. A banca "
+                       "recicla a construção em outros simulados, inclusive com “estritamente superior” no lugar "
+                       "de “igual” — sempre ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Com preferências convexas e solução interior, no ótimo a TMS iguala a razão entre os preços dos "
             "bens.”</i> → CERTO",
@@ -965,8 +965,7 @@ CARDS = [
             "Variação de um preço: a reta " + azb("gira") + " em torno do intercepto do outro bem. Se p₁ cai, o "
             "intercepto m/p₁ se afasta e a reta fica menos inclinada.",
             "Variação proporcional de todos os preços: equivale a uma variação da renda real — p e m "
-            "multiplicados pelo mesmo fator deixam a reta intacta (homogeneidade de grau zero). Ver "
-            "ECO-E1-0808-1.",
+            "multiplicados pelo mesmo fator deixam a reta intacta (homogeneidade de grau zero).",
             "Outras mudanças: impostos e subsídios específicos alteram o preço efetivo (giro); "
             "racionamento ou impostos sobre quantidades acima de um limite criam “quebras” na reta.",
         ],
@@ -1019,8 +1018,8 @@ CARDS = [
             "economia comportamental — mas, na teoria, a transitividade é axioma.",
         ],
         "dissecando": (cz("[literalidade]") + " Definição pura. A banca costuma trocar o nome do axioma "
-                       "(atribuir “mais é melhor” à transitividade — ver ECO-E1-0632-1) ou inverter a "
-                       "conclusão (“C preferida a A”). Item irmão: ECO-E1-0688-1."),
+                       "(atribuir “mais é melhor” à transitividade, que é ERRADO) ou inverter a "
+                       "conclusão (“C preferida a A”)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“O axioma da completude garante que, se A é preferida a B e B a C, então A é preferida a C.”</i> "
             "→ ERRADO (troca de conceito: isso é transitividade)",
@@ -1158,8 +1157,8 @@ CARDS = [
             "há cestas acessíveis em curvas mais altas. Só na tangência não há.",
             vm("Regra-âncora: ótimo interior ⇔ TMS = p₁/p₂ ⇔ UMg₁/p₁ = UMg₂/p₂."),
         ],
-        "dissecando": (cz("[dado alterado · meia-verdade]") + " Mesma construção de ECO-E1-0432-1 (Clipping, "
-                       "2025): troca “igual” por “inferior” e cola uma justificativa verdadeira para dar "
+        "dissecando": (cz("[dado alterado · meia-verdade]") + " Construção recorrente nos simulados Clipping: "
+                       "troca “igual” por “inferior” e cola uma justificativa verdadeira para dar "
                        "credibilidade. Pista: “esgotado todas as possibilidades” só combina com igualdade."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A condição de equilíbrio do consumidor exige que a TMS seja igual ao preço relativo, pois apenas "
@@ -1210,7 +1209,7 @@ CARDS = [
         ],
         "dissecando": (cz("[literalidade · contraintuitivo]") + " Quem decorou que “necessariamente” é sinal de "
                        "ERRADO cai. Aqui o advérbio só explicita que a conclusão é lógica, dada a premissa do "
-                       "axioma. Item irmão: ECO-E1-0434-1."),
+                       "axioma."),
         "modulos": [("😈 Para dificultar", [
             "<i>“O axioma da transitividade assegura que o consumidor sempre prefere mais a menos.”</i> → ERRADO "
             "(troca de conceito: monotonicidade)",
@@ -1289,8 +1288,7 @@ CARDS = [
             "Propriedades no consumo: curvas de indiferença " + azb("convexas") + " e assintóticas aos eixos "
             "(nunca há solução de canto com preços positivos); " + vd("TMS₁₂ = (α/β)·(x₂/x₁)") + ", decrescente.",
             "Demandas: o consumidor gasta frações fixas da renda — " + vd("x₁ = [α/(α+β)]·r/p₁") + " e "
-            + vd("x₂ = [β/(α+β)]·r/p₂") + ". Aqui, metade da renda em cada bem: x₁ = 40/10 = 4 e x₂ = 40/4 = 10 "
-            "(ver ECO-E1-0809-1).",
+            + vd("x₂ = [β/(α+β)]·r/p₂") + ". Aqui, metade da renda em cada bem: x₁ = 40/10 = 4 e x₂ = 40/4 = 10.",
             "Consequências: elasticidade-preço própria = −1 (gasto constante com o bem), elasticidade-renda = 1 "
             "(bens normais) e elasticidade cruzada = 0 (bens independentes).",
             "A soma α + β = 2 não importa no consumo: como a utilidade é ordinal, U = x₁x₂ e √(x₁x₂) "

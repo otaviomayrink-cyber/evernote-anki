@@ -463,7 +463,7 @@ CARDS = [
                       "produzir uma quantidade tal que o custo marginal seja igual ao preço de venda."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Um monopolista vende um produto visando maximizar seu lucro. Com esse objetivo, ele deve "
-                      "produzir uma quantidade tal que o custo marginal seja igual ao ") + vm("preço de venda")
+                      "produzir uma quantidade tal que o custo marginal seja igual ") + vm("ao preço de venda")
                    + az("."),
         "poucas": (vd("CMg = P") + " é a regra da " + azb("concorrência perfeita") + ". O monopolista iguala "
                    "o CMg à " + azb("receita marginal") + ", que fica abaixo do preço; resultado: P > CMg."),
@@ -487,7 +487,7 @@ CARDS = [
             "a condição de lucro econômico nulo)",
         ])],
         "reescrita": ("Um monopolista vende um produto visando maximizar seu lucro. Com esse objetivo, ele deve "
-                      "produzir uma quantidade tal que o custo marginal seja igual à " + hl("receita marginal")
+                      "produzir uma quantidade tal que o custo marginal seja igual " + hl("à receita marginal")
                       + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["deve"], "dificuldade": 1,
         "comentario_fonte": "No monopólio, preço > receita marginal; CMg = preço é regra da concorrência perfeita.",
@@ -893,7 +893,7 @@ CARDS = [
         "assertiva": ("Um monopólio irá sempre produzir um nível de produto que é igual ao nível socialmente "
                       "eficiente."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Um monopólio irá ") + vm("sempre produzir um nível de produto que é igual ao")
+        "anotada": az("Um monopólio ") + vm("irá sempre") + az(" produzir um nível de produto ") + vm("que é igual ao")
                    + az(" nível socialmente eficiente."),
         "poucas": ("O monopolista produz onde " + vd("RMg = CMg") + ", com P > CMg: a quantidade fica "
                    + azb("abaixo") + " da eficiente (P = CMg), e surge peso morto."),
@@ -1033,7 +1033,7 @@ CARDS = [
                       "múltiplas empresas para promover concorrência e eficiência alocativa no mercado."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Um monopólio natural, caracterizado por ") + vm("custos marginais crescentes")
-                   + az(", ") + vm("justifica a entrada de múltiplas empresas") + az(" para promover "
+                   + az(", ") + vm("justifica") + az(" a entrada de múltiplas empresas para promover "
                                                                                        "concorrência e "
                                                                                        "eficiência alocativa "
                                                                                        "no mercado."),
@@ -1133,7 +1133,7 @@ CARDS = [
                       "seu poder de discriminação de preços sobre os consumidores."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Em um monopólio, a receita marginal é sempre ") + vm("superior") + az(" à curva de "
-                      "demanda do mercado, ") + vm("o que significa que o monopólio consegue reservar uma parte "
+                      "demanda do mercado, o que significa que ") + vm("o monopólio consegue reservar uma parte "
                       "maior da demanda, aumentando assim seu poder de discriminação de preços sobre os "
                       "consumidores") + az("."),
         "poucas": ("A receita marginal do monopolista fica " + vd("abaixo") + " da demanda (RMg < P), porque "
@@ -1238,8 +1238,8 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Embora o monopólio possa obter um lucro exorbitante no curto prazo, ")
                    + vm("a entrada de novos concorrentes devido à ausência de barreiras à entrada reduzirá "
-                        "gradualmente esse lucro, similar ao que ocorre em um mercado de concorrência perfeita")
-                   + az("."),
+                        "gradualmente esse lucro, similar ao")
+                   + az(" que ocorre em um mercado de concorrência perfeita."),
         "poucas": ("O monopólio se define por " + azb("barreiras à entrada") + ": sem entrada, o "
                    + vd("lucro extraordinário persiste no longo prazo") + ", ao contrário da concorrência perfeita."),
         "destrinchando": [
@@ -1330,7 +1330,7 @@ CARDS = [
                       "do setor."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("A fixação do preço igual ao custo marginal por parte de um regulador governamental em um "
-                      "monopólio natural gera alocação eficiente de recursos e ") + vm("não compromete") + az(" a "
+                      "monopólio natural gera alocação eficiente de recursos ") + vm("e não compromete") + az(" a "
                       "sustentabilidade financeira da empresa, ") + vm("dado que o custo marginal reflete o custo "
                       "total médio decrescente do setor") + az("."),
         "poucas": ("Com " + azb("CMe decrescente") + ", o " + vd("CMg fica abaixo do CMe") + ". Preço = CMg é "
@@ -1360,7 +1360,7 @@ CARDS = [
             "ERRADO (P = CMg < CMe gera prejuízo)",
         ])],
         "reescrita": ("A fixação do preço igual ao custo marginal por parte de um regulador governamental em um "
-                      "monopólio natural gera alocação eficiente de recursos, " + hl("mas compromete") + " a "
+                      "monopólio natural gera alocação eficiente de recursos" + hl(", mas compromete") + " a "
                       "sustentabilidade financeira da empresa, " + hl("dado que, com custo total médio "
                       "decrescente, o custo marginal fica abaixo do custo médio") + "."),
         "tipo_erro": ["MEIA_VERDADE", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,

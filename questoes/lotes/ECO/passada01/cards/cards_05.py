@@ -515,9 +515,10 @@ CARDS = [
             "<i>“A soma simples das elasticidades-renda de todos os bens consumidos é igual a 1.”</i> → ERRADO "
             "(falta a ponderação pela parcela da renda)",
         ])],
-        "reescrita": ("Se um consumidor gasta toda a sua renda em apenas dois bens, " + hl("não") + " é possível "
-                      "que ambos sejam bens de luxo, " + hl("pois a média das elasticidades-renda, ponderada "
-                                                           "pelas parcelas da renda, é igual a um") + "."),
+        "reescrita": ("Se um consumidor gasta toda a sua renda em apenas dois bens, " + hl("não é possível")
+                      + " que ambos sejam bens de luxo, isto é, que ambos tenham elasticidade-renda da demanda "
+                      "maior que um" + hl(", pois a média das elasticidades-renda, ponderada pelas parcelas da "
+                                          "renda, é igual a um") + "."),
         "tipo_erro": ["OUTRO", "GENERALIZACAO"], "moduladores": ["ambos", "é possível"], "dificuldade": 2,
         "comentario_fonte": "A soma das elasticidades-renda ponderadas pela participação dos gastos na renda é "
                             "1; não seria possível ter dois bens de luxo.",
@@ -991,8 +992,8 @@ CARDS = [
         "assertiva": ("A elasticidade-preço cruzada dispensa avaliar delimitação de mercado: positiva indica bens "
                       "substitutos; negativa indica bens complementares, sem ressalvas."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("A elasticidade-preço cruzada ") + vm("dispensa avaliar delimitação de mercado")
-                    + az(": positiva indica bens substitutos; negativa indica bens complementares, ")
+        "anotada": (az("A elasticidade-preço cruzada ") + vm("dispensa")
+                    + az(" avaliar delimitação de mercado: positiva indica bens substitutos; negativa indica bens complementares, ")
                     + vm("sem ressalvas") + az(".")),
         "poucas": ("O " + azb("sinal") + " está certo (positiva → substitutos; negativa → complementares), mas a "
                    "interpretação depende do " + azb("mercado relevante") + " e do contexto da medida: não se "
@@ -1020,7 +1021,7 @@ CARDS = [
             "<i>“Elasticidade-preço cruzada negativa indica que os bens são substitutos.”</i> → ERRADO "
             "(inversão)",
         ])],
-        "reescrita": ("A elasticidade-preço cruzada " + hl("não") + " dispensa avaliar delimitação de mercado: "
+        "reescrita": ("A elasticidade-preço cruzada " + hl("não dispensa") + " avaliar delimitação de mercado: "
                       "positiva indica bens substitutos; negativa indica bens complementares, " + hl("mas a "
                       "interpretação depende do escopo do mercado relevante") + "."),
         "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["dispensa", "sem ressalvas"],

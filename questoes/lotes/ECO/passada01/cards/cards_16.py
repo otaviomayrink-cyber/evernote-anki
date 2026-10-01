@@ -337,7 +337,7 @@ CARDS = [
             "são fixadoras)",
         ])],
         "reescrita": ("O conceito de mercados não competitivos sugere que " + hl("o preço de mercado não é o "
-                      "único atributo") + " para a determinação da quantidade demandada e da quantidade ofertada "
+                      "único atributo") + " para a determinação da quantidade demandada e quantidade ofertada "
                       "de um bem" + hl(", que depende também de poder de mercado, diferenciação e barreiras à "
                       "entrada") + "."),
         "tipo_erro": ["TROCA_CONCEITO", "RESTRICAO"], "moduladores": ["único"], "dificuldade": 1,
@@ -383,8 +383,8 @@ CARDS = [
             "Contraste: em " + azb("concorrência perfeita") + " o produto é homogêneo — não há diferenciação "
             "possível, e a entrada é livre. Em " + azb("concorrência monopolística") + " há diferenciação, mas "
             "a entrada continua livre: a diferenciação dá algum poder de mercado, sem bloquear rivais.",
-            "Item quase idêntico, com “na presença de poder de mercado” no lugar de “mercado monopolista”: "
-            "ECO-E1-0305-1 (Simulado Nidi, 2023), também CERTO.",
+            "A banca também cobra a versão com “na presença de poder de mercado” no lugar de “mercado "
+            "monopolista”, também CERTO.",
         ],
         "dissecando": (cz("[literalidade · detalhe]") + " Redação de manual; o “inversamente” e a menção a "
                        "inovação parecem contraditórios com “impedir a entrada” e induzem o ERRADO. Quem "
@@ -438,8 +438,8 @@ CARDS = [
             "As duas estratégias citadas são opostas apenas na aparência: tradição e estabilidade (marcas "
             "centenárias de cerveja, bancos) e renovação e inovação (eletrônicos, moda) servem ao mesmo fim — "
             "criar uma identidade de marca difícil de copiar.",
-            "Item gêmeo, com “mercado monopolista” no lugar de “na presença de poder de mercado”: "
-            "ECO-E1-0231-1 (2014), também CERTO. A versão do simulado é mais ampla e cobre oligopólio e "
+            "A banca também cobra a versão com “mercado monopolista” no lugar de “na presença de poder de "
+            "mercado” (prova de 2014), também CERTO. A versão do simulado é mais ampla e cobre oligopólio e "
             "concorrência monopolística.",
         ],
         "dissecando": (cz("[literalidade · paráfrase fiel]") + " Releitura de item de prova antiga, com o "
@@ -1413,7 +1413,7 @@ CARDS = [
             "prazo; no curto, produz onde P = CMg)",
         ])],
         "reescrita": ("Em um mercado de concorrência perfeita, a maximização do lucro de uma dada empresa ocorre "
-                      "sob a condição de igualdade entre o custo marginal e " + hl("a receita marginal (o "
+                      "sob a mesma condição de igualdade entre o custo marginal e " + hl("a receita marginal (o "
                       "preço)") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "Lucro máximo em RMg = CMg; CMg = CMe indica o mínimo do custo médio.",

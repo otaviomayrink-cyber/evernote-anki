@@ -102,8 +102,7 @@ CARDS = [
             "pesa diferente para cada bem). Em prova, basta o sinal.",
         ],
         "dissecando": (cz("[literalidade]") + " Definição de manual, com a redação truncada típica de questionário "
-                       "(“em termos de preço cruzado”). O risco é inverter os sinais. Item-irmão, quase idêntico: "
-                       "ECO-E1-0114-1."),
+                       "(“em termos de preço cruzado”). O risco é inverter os sinais."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Se a elasticidade-preço cruzada entre A e B for negativa, A e B serão substitutos.”</i> → ERRADO "
             "(sinal trocado: negativa indica complementares)",
@@ -445,8 +444,8 @@ CARDS = [
                       "do consumidor não produzirá efeito na receita total auferida pelo vendedor."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Um produto ter elasticidade-renda unitária significa que um aumento de percentual na renda "
-                      "do consumidor ") + vm("não produzirá efeito na receita total auferida pelo vendedor")
-                   + az("."),
+                      "do consumidor ") + vm("não produzirá efeito na receita total")
+                   + az(" auferida pelo vendedor."),
         "poucas": ("Elasticidade-renda " + vd("unitária") + ": renda +10% → quantidade demandada +10%. A preço "
                    "constante, a receita do vendedor também sobe " + vd("10%") + ". Quem deixa a receita intacta "
                    "é a elasticidade-<b>preço</b> unitária."),
@@ -644,7 +643,8 @@ CARDS = [
         ],
         "dissecando": (cz("[inversão]") + " O item troca os extremos da escala. Redação curta e vaga "
                        "(“a elasticidade será perfeita”), típica de questionário; a resposta sai da tabela dos "
-                       "cinco casos. Item-irmão, com redação mais precisa: ECO-E1-0107-1."),
+                       "cinco casos. A banca também cobra a versão mais precisa (“…perfeitamente elástica se sua "
+                       "elasticidade-preço for igual a zero”), igualmente ERRADO."),
         "modulos": [("🧠 Mnemônico", [
             "Perfeitamente <b>I</b>nelástica tem a forma de um <b>I</b> (vertical, ε = 0); perfeitamente "
             "<b>E</b>lástica é um horizonte que se <b>E</b>stende ao infinito (horizontal, ε = ∞)."]),
@@ -690,8 +690,7 @@ CARDS = [
             + ").",
         ],
         "dissecando": (cz("[paráfrase fiel]") + " Regra direta, em forma comparativa (“mais inelástica”), o que "
-                       "a torna segura. A versão ERRADA do mesmo par troca “inelástica” por “elástica”: "
-                       "ECO-E1-0110-1."),
+                       "a torna segura. A banca também cobra a versão com “mais elástica”, que é ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A demanda de um produto será mais elástica se não houver produtos substitutos no "
             "mercado.”</i> → ERRADO (inversão)",
@@ -702,7 +701,7 @@ CARDS = [
         "comentario_fonte": "A ausência de substitutos torna a demanda mais inelástica.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0110-1 (versão ERRADA do par, com “mais elástica”)"],
     },
     # ------------------------------------------------------------------ E1-0102
     {
@@ -905,7 +904,7 @@ CARDS = [
         ],
         "dissecando": (cz("[modulador relativo]") + " Afirmação de alcance mínimo (“pode exercer influência”): "
                        "não diz em que sentido nem quanto. Itens assim quase sempre são CERTO; o risco é o "
-                       "candidato desconfiar da obviedade. Itens-irmãos: ECO-E1-0101-1, ECO-E1-0104-1."),
+                       "candidato desconfiar da obviedade."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A existência de bens substitutos não influencia a elasticidade-preço da demanda, que depende "
             "apenas da essencialidade do bem.”</i> → ERRADO (restrição indevida)",
@@ -917,7 +916,7 @@ CARDS = [
                             "outros bens.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0101-1, ECO-E1-0104-1 (mesmo tema: substitutos × elasticidade-preço)"],
     },
     # ------------------------------------------------------------------ E1-0107
     {
@@ -944,8 +943,9 @@ CARDS = [
             "sobre o produtor.",
         ],
         "grafico_verso": "ECO-E1-0107-1-V1",
-        "dissecando": (cz("[inversão]") + " Troca os extremos: atribui ao zero o rótulo do infinito. Item-irmão, "
-                       "de redação mais vaga: ECO-E1-0100-1."),
+        "dissecando": (cz("[inversão]") + " Troca os extremos: atribui ao zero o rótulo do infinito. A banca também "
+                       "cobra a versão vaga (“A elasticidade será perfeita quando for igual a zero”), igualmente "
+                       "ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A demanda de um produto será perfeitamente inelástica se sua elasticidade-preço for igual a "
             "zero.”</i> → CERTO",
@@ -998,7 +998,8 @@ CARDS = [
         "grafico_verso": "ECO-E1-0108-1-V1",
         "dissecando": (cz("[paráfrase fiel · detalhe]") + " Regra geral apresentada sem modulador (“será”). O "
                        "gabarito oficial a aceita; o detalhe que a tornaria ERRADA é a exceção dos duráveis. "
-                       "Compare com ECO-E1-0102-1, que usa “pode diferir” e não tem esse risco."),
+                       "Compare com a versão modalizada (“a elasticidade no longo prazo pode diferir daquela vigente no "
+                       "curto prazo”), que não tem esse risco."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A demanda por automóveis tende a ser mais elástica no longo prazo do que no curto prazo.”</i> → "
             "ERRADO (duráveis: mais elástica no curto prazo)",
@@ -1011,7 +1012,8 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
         "alertas": ["contestavel: assertiva sem modulador; a demanda de bens duráveis é mais elástica no curto "
-                    "prazo (Pindyck e Rubinfeld) — gabarito CERTO mantido como regra geral"],
+                    "prazo (Pindyck e Rubinfeld) — gabarito CERTO mantido como regra geral",
+                    "quase_duplicata: ECO-E1-0102-1 (mesmo tema, com o modalizador “pode diferir”)"],
     },
     # ------------------------------------------------------------------ E1-0109
     {
@@ -1039,7 +1041,8 @@ CARDS = [
         ],
         "dissecando": (cz("[inversão]") + " Troca o sentido da relação essencialidade × elasticidade. O "
                        "“extremamente” reforça a pista: quanto mais essencial, mais perto de elasticidade "
-                       "zero. Versão CERTO do mesmo tema: ECO-E1-0088-1."),
+                       "zero. Versão CERTO do mesmo tema: “bens de consumo essencial tendem a ter elasticidade-preço "
+                       "da demanda menor do que bens de consumo supérfluo”."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A demanda de um produto tende a ser mais inelástica se ele for extremamente essencial ao "
             "consumidor.”</i> → CERTO",
@@ -1054,7 +1057,8 @@ CARDS = [
         "qualidade_fonte": "com_erro",
         "figuras_fonte": [],
         "alertas": ["qualidade_fonte: o exemplo de origem (renda maior não aumenta o consumo de arroz) ilustra "
-                    "elasticidade-renda, não elasticidade-preço — corrigido no 📖"],
+                    "elasticidade-renda, não elasticidade-preço — corrigido no 📖",
+                    "quase_duplicata: ECO-E1-0088-1 (versão CERTO do mesmo tema)"],
     },
     # ------------------------------------------------------------------ E1-0110
     {
@@ -1081,8 +1085,8 @@ CARDS = [
             "substitutos é critério central na análise de poder de mercado.",
             vm("Regra-âncora: mais substitutos → mais elástica; menos substitutos → mais inelástica."),
         ],
-        "dissecando": (cz("[inversão]") + " Inverte o sentido da regra. É a versão ERRADA de um par: "
-                       "ECO-E1-0101-1 traz a mesma frase com “mais inelástica” (CERTO). Em pares assim, decore a "
+        "dissecando": (cz("[inversão]") + " Inverte o sentido da regra. É a versão ERRADA de um par: a "
+                       "banca também cobra a mesma frase com “mais inelástica” (CERTO). Em pares assim, decore a "
                        "regra, não a frase."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A demanda de um bem será mais inelástica se não houver substitutos no mercado.”</i> → CERTO",
@@ -1095,7 +1099,7 @@ CARDS = [
         "comentario_fonte": "A ausência de substitutos torna a demanda mais inelástica.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0101-1 (versão CERTO do par, com “mais inelástica”)"],
     },
     # ------------------------------------------------------------------ E1-0111
     {
@@ -1272,8 +1276,8 @@ CARDS = [
             "Rigor de manual: o critério de sinal identifica substitutos “brutos” (efeito total, com efeito "
             "renda). Em prova objetiva, a regra do sinal basta.",
         ],
-        "dissecando": (cz("[literalidade]") + " Regra do sinal, sem armadilha. Item-irmão quase idêntico: "
-                       "ECO-E1-0011-1; espelho com sinal negativo: ECO-E1-0115-1."),
+        "dissecando": (cz("[literalidade]") + " Regra do sinal, sem armadilha. A banca também cobra o espelho com "
+                       "sinal negativo (“…é negativa, então tais bens são complementares”), igualmente CERTO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Se a elasticidade-preço cruzada entre A e B é positiva, A e B são complementares.”</i> → ERRADO "
             "(sinal trocado)",
@@ -1285,7 +1289,8 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "Untitled (23).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
                            "acao": "irrecuperavel (" + NAO_PRESERVADA + "; conteúdo coberto pelo 📖)"}],
-        "alertas": ["quase_duplicata: ECO-E1-0011-1 (mesma regra do sinal, outra redação e outra origem)"],
+        "alertas": ["quase_duplicata: ECO-E1-0011-1 (mesma regra do sinal, outra redação e outra origem)",
+                    "quase_duplicata: ECO-E1-0115-1 (espelho com sinal negativo)"],
     },
     # ------------------------------------------------------------------ E1-0115
     {
@@ -1310,7 +1315,8 @@ CARDS = [
             "Estratégia empresarial ligada ao tema: vender o bem principal barato e lucrar no complementar "
             "(lâminas de barbear, cartuchos, consoles e jogos).",
         ],
-        "dissecando": (cz("[literalidade]") + " Espelho de ECO-E1-0114-1 (sinal positivo → substitutos). A banca "
+        "dissecando": (cz("[literalidade]") + " Espelho do item com sinal positivo (positiva → substitutos, também "
+                       "CERTO). A banca "
                        "costuma testar o par na mesma prova, trocando o sinal ou o rótulo."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Se a elasticidade-preço cruzada entre A e B é negativa, A e B são substitutos.”</i> → ERRADO "
@@ -1322,7 +1328,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "Untitled (18).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
                            "acao": "irrecuperavel (" + NAO_PRESERVADA + "; conteúdo coberto pelo 📖)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0114-1 (espelho com sinal positivo)"],
     },
     # ------------------------------------------------------------------ E1-0116
     {

@@ -320,7 +320,7 @@ CARDS = [
                    "ocasionando a elevação do preço de equilíbrio e da quantidade de equilíbrio."),
         gabarito="ERRADO",
         anotada=az("Um acontecimento que reduza a quantidade ofertada desloca a curva de oferta para a esquerda, "
-                   "ocasionando a elevação do preço de equilíbrio ") + vm("e da quantidade de equilíbrio")
+                   "ocasionando a elevação do preço de equilíbrio e ") + vm("da quantidade de equilíbrio")
                 + az("."),
         poucas=("Oferta para a esquerda com demanda constante: o preço " + vd("sobe") + ", mas a quantidade de "
                 "equilíbrio " + vd("cai") + ". Preço e quantidade andam em sentidos opostos nos choques de "
@@ -350,8 +350,8 @@ CARDS = [
             "ERRADO (sentido trocado: oferta menor vai para a esquerda)",
         ])],
         reescrita=("Um acontecimento que reduza a quantidade ofertada desloca a curva de oferta para a esquerda, "
-                   "ocasionando a elevação do preço de equilíbrio e " + hl("a redução") + " da quantidade de "
-                   "equilíbrio."),
+                   "ocasionando a elevação do preço de equilíbrio e " + hl("a redução da quantidade de "
+                   "equilíbrio") + "."),
         tipo_erro=["MEIA_VERDADE"], moduladores=[], dificuldade=1,
         comentario_fonte="ERRADO. A oferta menor desloca a curva de oferta para a esquerda, eleva o preço de "
                          "equilíbrio, mas reduz a quantidade de equilíbrio.",
@@ -646,7 +646,7 @@ CARDS = [
                    "ele vai necessariamente adquirir/consumir."),
         gabarito="ERRADO",
         anotada=az("A demanda (ou procura) representa aquilo que o consumidor deseja adquirir, ")
-                + vm("o que significa que ele vai necessariamente adquirir/consumir") + az("."),
+                + az("o que ") + vm("significa que ele vai necessariamente") + az(" adquirir/consumir."),
         poucas=("Demanda é um " + azb("desejo ou plano de compra") + " a cada preço, não a compra realizada. "
                 "Desejar não garante adquirir — o “necessariamente” derruba o item."),
         destrinchando=[
@@ -672,7 +672,7 @@ CARDS = [
             "nesse mercado.”</i> → ERRADO (modulador absoluto; fora do equilíbrio elas diferem)",
         ])],
         reescrita=("A demanda (ou procura) representa aquilo que o consumidor deseja adquirir, o que "
-                   + hl("não significa que ele vá") + " necessariamente adquirir/consumir."),
+                   + hl("não significa que ele vá necessariamente") + " adquirir/consumir."),
         tipo_erro=["GENERALIZACAO", "MEIA_VERDADE"], moduladores=["necessariamente"], dificuldade=1,
         comentario_fonte="ERRADO. A demanda é a intenção de compra, condicionada ao preço, à renda e às "
                          "preferências; não garante a compra. A fonte chama de “demanda efetiva” o que o "
@@ -1076,7 +1076,7 @@ CARDS = [
                    "resultante de uma redução na renda."),
         gabarito="ERRADO",
         anotada=az("Tudo o mais permanecendo constante, o deslocamento de uma curva de demanda para a direita é "
-                   "resultante de uma ") + vm("redução") + az(" na renda."),
+                   "resultante de ") + vm("uma redução") + az(" na renda."),
         poucas=("Para o caso geral (" + azb("bem normal") + "), redução de renda desloca a demanda para a "
                 "<b>esquerda</b>. Para a direita, seria preciso um " + vd("aumento") + " de renda."),
         destrinchando=[
@@ -1102,7 +1102,7 @@ CARDS = [
             "curva)",
         ])],
         reescrita=("Tudo o mais permanecendo constante, o deslocamento de uma curva de demanda para a direita é "
-                   "resultante de um " + hl("aumento") + " na renda."),
+                   "resultante de " + hl("um aumento") + " na renda."),
         tipo_erro=["INVERSAO"], moduladores=["tudo o mais permanecendo constante"], dificuldade=1,
         comentario_fonte="ERRADO. A redução na renda geralmente desloca a curva de demanda para a esquerda, "
                          "exceto no caso de bens inferiores.",

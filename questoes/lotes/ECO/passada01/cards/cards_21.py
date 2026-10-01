@@ -398,9 +398,9 @@ CARDS = [
                       "sociedade, pois os ganhos do avanço científico certamente não compensam as perdas para os "
                       "consumidores, que pagarão preços acima do custo marginal de produção, gerando peso morto."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Uma patente de medicamentos introduz um monopólio que ") + vm("sempre trará uma perda líquida")
-                   + az(" para a sociedade, pois os ganhos do avanço científico ") + vm("certamente não compensam")
-                   + az(" as perdas para os consumidores, que pagarão preços acima do custo marginal de produção, "
+        "anotada": az("Uma patente de medicamentos introduz um monopólio que ") + vm("sempre trará")
+                   + az(" uma perda líquida para a sociedade, pois os ganhos do avanço científico ") + vm("certamente não")
+                   + az(" compensam as perdas para os consumidores, que pagarão preços acima do custo marginal de produção, "
                         "gerando peso morto."),
         "poucas": ("O peso morto da patente é real, mas o saldo social é um " + azb("trade-off") + ": sem a "
                    "proteção, muitos medicamentos nem existiriam. “Sempre” e “certamente” transformam uma questão "
@@ -433,8 +433,8 @@ CARDS = [
             "marginal.”</i> → ERRADO (a ineficiência estática é justamente P > CMg)",
         ])],
         "reescrita": ("Uma patente de medicamentos introduz um monopólio que " + hl("pode trazer") + " uma perda "
-                      "líquida para a sociedade " + hl("se") + " os ganhos do avanço científico não "
-                      + hl("compensarem") + " as perdas para os consumidores, que pagarão preços acima do custo "
+                      "líquida para a sociedade, pois os ganhos do avanço científico " + hl("nem sempre")
+                      + " compensam as perdas para os consumidores, que pagarão preços acima do custo "
                       "marginal de produção, gerando peso morto."),
         "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["sempre", "certamente"], "dificuldade": 1,
         "comentario_fonte": "Duas respostas convergentes: o erro está em “sempre” e “certamente”; patentes "
@@ -535,7 +535,7 @@ CARDS = [
             "efetivos.”</i> → CERTO",
         ])],
         "reescrita": ("A administração de uma rodovia federal sob concessão é um monopólio, pois tem apenas um "
-                      "provedor do serviço" + hl(" e não há livre") + " entrada de concorrentes."),
+                      "provedor do serviço, " + hl("e não há livre entrada de concorrentes") + "."),
         "tipo_erro": ["CONTRADICAO", "MEIA_VERDADE"], "moduladores": ["apesar de"], "dificuldade": 1,
         "comentario_fonte": "Monopólio puro sem possibilidade de entrada; a concessão é barreira legal e duplicar "
                             "a infraestrutura é inviável. Uma das respostas fala em “ferrovia” e chama a concessão de "
@@ -832,7 +832,7 @@ CARDS = [
         ])],
         "reescrita": ("Quando o monopolista faz discriminação de preços de primeiro grau, a alocação final de mercado "
                       + hl("é") + " uma solução ótima no sentido de Pareto, " + hl("embora") + " os consumidores "
-                      "percam todo seu excedente."),
+                      + hl("percam") + " todo seu excedente."),
         "tipo_erro": ["NEXO_INDEVIDO", "INVERSAO"], "moduladores": ["pois"], "dificuldade": 2,
         "comentario_fonte": "Mini-aula: eficiência de Pareto não se confunde com equidade; na discriminação perfeita "
                             "cada unidade é vendida ao preço de reserva, q vai até CMg = demanda, sem peso morto; "
@@ -1063,7 +1063,7 @@ CARDS = [
             "(P > CMg: mantém markup)",
         ])],
         "reescrita": ("Em um mercado de concorrência monopolística " + hl("ocorre ineficiência") + " no cenário de "
-                      "longo prazo, " + hl("embora") + " o preço se iguale ao custo médio" + hl(": essa igualdade "
+                      "longo prazo, " + hl("embora") + " o preço " + hl("se iguale") + " ao custo médio" + hl(": essa igualdade "
                       "ocorre acima do custo médio mínimo, e") + " as empresas " + hl("operam") + " com excesso de "
                       "capacidade ociosa."),
         "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": ["portanto"], "dificuldade": 2,
@@ -1349,7 +1349,7 @@ CARDS = [
         "anotada": az("No longo prazo, empresas em concorrência monopolística operam com ")
                    + vm("capacidade plenamente utilizada") + az(", de forma que o preço se iguala ")
                    + vm("tanto ao custo marginal quanto") + az(" ao custo total médio, ")
-                   + vm("como na concorrência perfeita") + az("."),
+                   + vm("como") + az(" na concorrência perfeita."),
         "poucas": ("No longo prazo, " + vd("P = CTMe") + " (lucro zero), mas " + vd("P > CMg") + " e a produção "
                    "fica abaixo da escala que minimiza o CTMe: há " + azb("capacidade ociosa") + "."),
         "destrinchando": [
@@ -1448,7 +1448,7 @@ CARDS = [
                       "preço a se igualar ao custo médio em seu ponto de mínimo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("No modelo de concorrência monopolística, o equilíbrio de longo prazo caracteriza-se pelo lucro "
-                      "econômico nulo e ") + vm("pela eficiência produtiva") + az(", uma vez que a livre entrada de "
+                      "econômico nulo e pela ") + vm("eficiência produtiva") + az(", uma vez que a livre entrada de "
                       "firmas força o preço a se igualar ao custo médio ") + vm("em seu ponto de mínimo") + az("."),
         "poucas": ("Lucro nulo, sim; " + azb("eficiência produtiva") + ", não. A livre entrada leva P ao CMe, mas no "
                    "ponto de " + azb("tangência") + " com a demanda inclinada — no trecho descendente do CMe, acima "

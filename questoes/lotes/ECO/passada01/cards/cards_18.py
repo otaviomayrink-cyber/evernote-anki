@@ -42,8 +42,8 @@ CARDS = [
                       "esse bem."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Quando o preço de mercado de um bem é inferior ao seu custo variável médio, o nível de "
-                       "produção que minimiza as perdas é ") + vm("positivo") + az(" e, portanto, a empresa ")
-                    + vm("deve continuar a fabricar") + az(" esse bem.")),
+                       "produção que minimiza as perdas é ") + vm("positivo") + az(" e, portanto, a empresa deve ")
+                    + vm("continuar a fabricar") + az(" esse bem.")),
         "poucas": ("Com " + vd("P < CVMe") + ", cada unidade produzida não paga nem o próprio custo variável: a "
                    "perda mínima está em " + azb("produção zero") + " (paralisação), que limita o prejuízo ao "
                    "custo fixo."),
@@ -72,7 +72,7 @@ CARDS = [
         ])],
         "reescrita": ("Quando o preço de mercado de um bem é inferior ao seu custo variável médio, o nível de "
                       "produção que minimiza as perdas é " + hl("zero") + " e, portanto, a empresa deve "
-                      + hl("suspender a fabricação") + " desse bem."),
+                      + hl("deixar de fabricar") + " esse bem."),
         "tipo_erro": ["INVERSAO"], "moduladores": ["portanto"], "dificuldade": 1,
         "comentario_fonte": ("P < CVMe: a firma deve parar de produzir no curto prazo (produção zero), perdendo "
                              "apenas os custos fixos; se P ≥ CVMe, produz onde RMg = CMg."),
@@ -143,7 +143,7 @@ CARDS = [
                       "iguala ao custo marginal, condição que garante lucro zero mesmo no curto prazo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Nos mercados perfeitamente competitivos, o equilíbrio da firma é obtido quando o preço se "
-                       "iguala ao custo marginal, ") + vm("condição que garante lucro zero mesmo no curto prazo")
+                       "iguala ao custo marginal, condição que ") + vm("garante lucro zero mesmo no curto prazo")
                     + az(".")),
         "poucas": (vd("P = CMg") + " escolhe a quantidade que maximiza o lucro, mas não diz quanto ele é. O "
                    "lucro depende de P × " + azb("CTMe") + ": no curto prazo pode ser positivo, nulo ou "
@@ -435,7 +435,7 @@ CARDS = [
         "assertiva": ("No longo prazo, mesmo se o preço ficar abaixo do custo médio, pode ser vantajoso para a "
                       "firma manter a operação se a receita for suficiente para pagar os custos fixos."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (vm("No longo prazo") + az(", mesmo se o preço ficar abaixo do custo médio, pode ser vantajoso "
+        "anotada": (az("No ") + vm("longo") + az(" prazo, mesmo se o preço ficar abaixo do custo médio, pode ser vantajoso "
                     "para a firma manter a operação se a receita for suficiente para pagar os custos ")
                     + vm("fixos") + az(".")),
         "poucas": ("No " + azb("longo prazo") + " não existem custos fixos: todos os fatores são ajustáveis. Com "
@@ -915,7 +915,7 @@ CARDS = [
         ])],
         "reescrita": ("O serviço de fornecimento de água e saneamento em uma cidade " + hl("constitui") + " "
                       "monopólio natural, " + hl("em razão de sua estrutura de custos, ainda que") + " a atuação "
-                      "exclusiva da empresa em sua área seja definida por lei ou contrato de concessão."),
+                      "exclusiva da empresa em sua área " + hl("seja") + " definida por lei ou contrato de concessão."),
         "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": ["uma vez que"], "dificuldade": 1,
         "comentario_fonte": ("Saneamento é monopólio natural pela estrutura física não compartilhável da rede; a "
                              "definição legal apenas reconhece e permite regular a concessionária."),

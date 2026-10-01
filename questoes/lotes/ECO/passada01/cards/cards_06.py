@@ -524,9 +524,11 @@ CARDS = [
                       "também aproveita outra parte dela para comprar outros bens para sua cesta básica de "
                       "alimentação, então, para esse consumidor, a demanda por arroz é preço-elástica."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Ao se deparar com a redução de preço do quilo de arroz, […] Se esse consumidor decide usar "
-                      "parte dessa economia para comprar mais unidades desse bem, mas também aproveita outra parte "
-                      "dela para comprar outros bens […], então, para esse consumidor, a demanda por arroz é ")
+        "anotada": az("Ao se deparar com a redução de preço do quilo de arroz, o consumidor percebe que realiza "
+                      "uma economia de gastos em relação à quantidade que usualmente comprava ao preço inicial. Se "
+                      "esse consumidor decide usar parte dessa economia para comprar mais unidades desse bem, mas "
+                      "também aproveita outra parte dela para comprar outros bens para sua cesta básica de "
+                      "alimentação, então, para esse consumidor, a demanda por arroz é ")
                    + vm("preço-elástica") + az("."),
         "poucas": ("Se só <b>parte</b> da economia volta para o arroz, o " + azb("gasto com arroz cai") + " "
                    "quando o preço cai. Gasto e preço no mesmo sentido = demanda " + vd("inelástica") + "."),
@@ -555,8 +557,12 @@ CARDS = [
             "<i>“…se o consumidor gastasse exatamente toda a economia em arroz, a demanda seria "
             "preço-inelástica.”</i> → ERRADO (gasto constante: elasticidade unitária)",
         ])],
-        "reescrita": ("Ao se deparar com a redução de preço do quilo de arroz, […] então, para esse consumidor, a "
-                      "demanda por arroz é " + hl("preço-inelástica") + "."),
+        "reescrita": ("Ao se deparar com a redução de preço do quilo de arroz, o consumidor percebe que realiza "
+                      "uma economia de gastos em relação à quantidade que usualmente comprava ao preço inicial. Se "
+                      "esse consumidor decide usar parte dessa economia para comprar mais unidades desse bem, mas "
+                      "também aproveita outra parte dela para comprar outros bens para sua cesta básica de "
+                      "alimentação, então, para esse consumidor, a demanda por arroz é " + hl("preço-inelástica")
+                      + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["parte"], "dificuldade": 3,
         "comentario_fonte": ("Professora: é preço-inelástica — a economia é usada só em parte para mais arroz, "
                              "aumento do consumo menos que proporcional à queda do preço (exemplo 20 + 80 = 100 → "
@@ -1277,8 +1283,8 @@ CARDS = [
             "<i>“Se o preço máximo fosse fixado acima do preço de equilíbrio, haveria excedente de "
             "produção.”</i> → ERRADO (teto acima do equilíbrio é inócuo)",
         ])],
-        "reescrita": ("O governo decide impor um preço máximo para certo medicamento, […]. Isto terá como "
-                      "resultado " + hl("uma escassez (excesso de demanda)") + " deste medicamento no mercado."),
+        "reescrita": ("O governo decide impor um preço máximo para certo medicamento, por julgar que o preço ao "
+                      "qual era vendido no equilíbrio de livre mercado era muito alto. Isto terá como resultado " + hl("uma escassez (excesso de demanda)") + " deste medicamento no mercado."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Ver se o teto está acima ou abaixo do equilíbrio; pela redação, abaixo; há excesso "
                              "de demanda e redução da oferta: escassez, não excedente."),
@@ -1444,8 +1450,8 @@ CARDS = [
         "rotulo_item": "Item",
         "assertiva": "Peso morto é um fenômeno exclusivo dos mercados em concorrência perfeita.",
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Peso morto é um fenômeno ") + vm("exclusivo dos mercados em concorrência perfeita")
-                   + az("."),
+        "anotada": az("Peso morto ") + vm("é um fenômeno exclusivo")
+                   + az(" dos mercados em concorrência perfeita."),
         "poucas": ("É quase o contrário: a " + azb("concorrência perfeita") + " sem intervenção não gera peso "
                    "morto (maximiza o excedente total). Peso morto é típico de " + vd("monopólio")
                    + ", tributos, controles de preços e externalidades."),
@@ -1473,7 +1479,7 @@ CARDS = [
             "<i>“Em concorrência perfeita, um imposto sobre o produto não gera peso morto.”</i> → ERRADO (só "
             "não gera com oferta ou demanda perfeitamente inelástica)",
         ])],
-        "reescrita": ("Peso morto " + hl("não") + " é um fenômeno exclusivo dos mercados em concorrência perfeita"
+        "reescrita": ("Peso morto " + hl("não é um fenômeno exclusivo") + " dos mercados em concorrência perfeita"
                       + hl(": surge no monopólio e em mercados competitivos distorcidos por tributos, controles "
                       "de preços ou externalidades") + "."),
         "tipo_erro": ["RESTRICAO", "INVERSAO"], "moduladores": ["exclusivo"], "dificuldade": 1,

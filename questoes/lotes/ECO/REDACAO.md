@@ -47,7 +47,9 @@ CEBRASPE). Recebe um lote de itens já classificados e escreve os cards completo
 - Cores no comentário: `azb` conceitos, `vd` dados/datas/números, `oc` autores, `rx` Brasil, `vm` regra-âncora.
 - Dados perecíveis: `⏳ (out/2026)`. Autores e obras: só com segurança; nunca invente citação.
 - Aspas dentro do texto: use “ ” (tipográficas), nunca `"` — evita quebrar as strings do Python.
-- Não escreva "o texto acima", "questão anterior", "na conversão", "caderno-fonte".
+- Não escreva "o texto acima", "questão anterior", "na conversão", "caderno-fonte", nem cite outro card pelo id
+  ("item irmão: ECO-…", "ver ECO-…"): o card é lido sozinho. Descreva o contraste no próprio card ("a banca também
+  cobra a versão com ‘elástica’, que é ERRADO") e registre a ligação só em `alertas` (`quase_duplicata: ECO-…`).
 
 ## Imagens
 - Caderno **E1**: as imagens não vieram. Frente só com imagem (`figura_frente: ausente_deduzivel`): reconstrua a

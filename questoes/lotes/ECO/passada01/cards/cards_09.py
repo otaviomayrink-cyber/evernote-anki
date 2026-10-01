@@ -477,7 +477,7 @@ CARDS = [
                       "demanda, eliminando o excesso de oferta."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("A política de preços mínimos compulsórios tem por objetivo ") + vm("ajustar a relação de "
-                      "oferta e demanda, eliminando o excesso de oferta") + az("."),
+                      "oferta e demanda, eliminando o") + az(" excesso de oferta."),
         "poucas": ("O preço mínimo visa " + azb("garantir renda ao produtor") + ", com preço acima do "
                    "equilíbrio — e, por isso mesmo, " + vd("cria") + " excesso de oferta, em vez de eliminá-lo."),
         "destrinchando": [
@@ -677,8 +677,8 @@ CARDS = [
         "assertiva": ("A intervenção governamental por meio de controle de preços corrige falhas de mercado e tem "
                       "impacto positivo no bem-estar de consumidores e produtores."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("A intervenção governamental por meio de controle de preços ") + vm("corrige falhas de "
-                      "mercado") + az(" e ") + vm("tem impacto positivo no bem-estar de consumidores e produtores")
+        "anotada": az("A intervenção governamental por meio de controle de preços ") + vm("corrige") + az(" falhas de "
+                      "mercado e ") + vm("tem impacto positivo no bem-estar de consumidores e produtores")
                    + az("."),
         "poucas": ("Controle de preços, em regra, " + azb("cria distorções") + " em vez de corrigir falhas: teto "
                    "gera escassez, piso gera excedente, e o bem-estar total cai — no máximo, um lado ganha à "
@@ -731,7 +731,7 @@ CARDS = [
                       "pressupõe a equidade na distribuição dos bens produzidos."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("O resultado do equilíbrio competitivo resulta em uma alocação pareto-eficiente, que ")
-                   + vm("pressupõe a equidade") + az(" na distribuição dos bens produzidos."),
+                   + vm("pressupõe") + az(" a equidade na distribuição dos bens produzidos."),
         "poucas": ("O equilíbrio competitivo é " + azb("Pareto-eficiente") + " (1º teorema do bem-estar), mas "
                    "eficiência " + vd("não implica equidade") + ": uma alocação pode ser eficiente e muito "
                    "desigual."),

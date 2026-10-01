@@ -89,7 +89,7 @@ CARDS = [
             "<i>“A estabilidade de um cartel é favorecida por demanda muito elástica.”</i> → ERRADO (inversão: "
             "favorece-a a demanda inelástica)",
         ])],
-        "reescrita": (hl("Um cartel tende a ser instável") + " a longo prazo, " + hl("apesar") + " dos ganhos "
+        "reescrita": (hl("Um cartel tende a ser instável") + " a longo prazo, " + hl("apesar dos") + " ganhos "
                       "superiores de todas as empresas que dele fazem parte" + hl(", porque cada uma ganha ainda "
                       "mais traindo o acordo") + "."),
         "tipo_erro": ["GENERALIZACAO", "NEXO_INDEVIDO"], "moduladores": ["todo"], "dificuldade": 1,
@@ -141,7 +141,7 @@ CARDS = [
             "<i>“A contestabilidade de um mercado aumenta com os custos irrecuperáveis exigidos dos "
             "entrantes.”</i> → ERRADO (inversão: custos afundados reduzem a contestabilidade)",
         ])],
-        "reescrita": ("A promoção da concorrência por meio da regulação " + hl("não") + " se justifica em mercados "
+        "reescrita": ("A promoção da concorrência por meio da regulação " + hl("não se justifica") + " em mercados "
                       "contestáveis, em que a probabilidade de entrada de novas empresas que possam competir em "
                       "igualdade de condições é " + hl("elevada") + "."),
         "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 2,
@@ -233,7 +233,7 @@ CARDS = [
             "<i>“Se a oferta dos produtores de fora do cartel for muito elástica, o cartel terá maior poder "
             "de mercado.”</i> → ERRADO (inversão: oferta externa elástica corrói o poder do cartel)",
         ])],
-        "reescrita": ("Um cartel tende a " + hl("não") + " ser duradouro se a demanda pelo seu produto for expressa "
+        "reescrita": ("Um cartel tende a " + hl("não ser duradouro") + " se a demanda pelo seu produto for expressa "
                       "por uma curva horizontal."),
         "tipo_erro": ["INVERSAO"], "moduladores": ["tende a"], "dificuldade": 1,
         "comentario_fonte": ("Demanda horizontal = infinitamente elástica; isso dificulta o cartel, que não tende "
@@ -865,7 +865,7 @@ CARDS = [
                       "competição que os caracteriza dificulta a geração de externalidades positivas, uma vez que "
                       "um acordo de competição sustentável entre as empresas é altamente instável."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Os oligopólios ") + vm("são, em geral, prejudiciais") + az(" ao bem-estar social, pois a ")
+        "anotada": (az("Os oligopólios ") + vm("são, em geral,") + az(" prejudiciais ao bem-estar social, pois a ")
                     + vm("ausência de competição que os caracteriza dificulta a geração de externalidades "
                          "positivas") + az(", uma vez que um acordo de competição sustentável entre as empresas é "
                                            "altamente instável.")),
@@ -1029,8 +1029,8 @@ CARDS = [
         "assertiva": ("O equilíbrio de Nash em um jogo de duopólio é um equilíbrio de estratégias dominantes, porém "
                       "será um equilíbrio instável, caso o jogo não tenha repetição infinita."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("O equilíbrio de Nash em um jogo de duopólio ") + vm("é um equilíbrio de estratégias "
-                    "dominantes") + az(", ") + vm("porém será um equilíbrio instável, caso") + az(" o jogo não "
+        "anotada": (az("O equilíbrio de Nash em um jogo de duopólio ") + vm("é") + az(" um equilíbrio de estratégias "
+                    "dominantes, ") + vm("porém será um equilíbrio instável, caso") + az(" o jogo não "
                                                                                           "tenha repetição "
                                                                                           "infinita.")),
         "poucas": ("Dois erros: o " + azb("equilíbrio de Nash") + " não exige estratégias dominantes (todo "

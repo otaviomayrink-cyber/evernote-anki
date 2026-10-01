@@ -142,7 +142,7 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("O nível ótimo (minimização) de danos ambientais, tais como ameaças à fauna e à flora do "
                        "país, bem como os decorrentes de poluição sonora e atmosférica, ")
-                    + vm("pode ser determinado no âmbito do teorema de Coase") + az(".")),
+                    + vm("pode ser determinado") + az(" no âmbito do teorema de Coase.")),
         "poucas": ("Danos ambientais difusos envolvem " + azb("milhões de partes") + ", custos de transação "
                    "altíssimos, carona e direitos mal definidos: é justamente o caso em que a barganha de Coase "
                    "não funciona."),
@@ -507,7 +507,7 @@ CARDS = [
         "anotada": (az("Quando o Brasil emprega uma política de restrição à exportação de carne bovina para a Europa "
                        "e, consequentemente, isso provoca um aumento no preço dos bens substitutos, como da carne "
                        "de porco ou frango, nos países europeus, isso ")
-                    + vm("pode ser caracterizado como uma externalidade negativa") + az(" da política de "
+                    + vm("pode") + az(" ser caracterizado como uma externalidade negativa da política de "
                                                                                        "restrição brasileira.")),
         "poucas": ("Efeito transmitido <b>pelos preços</b> não é externalidade (falha de mercado): é o mercado "
                    "funcionando. Externalidade é efeito sobre terceiros " + azb("por fora do sistema de preços")
@@ -541,7 +541,7 @@ CARDS = [
         ])],
         "reescrita": ("Quando o Brasil emprega uma política de restrição à exportação de carne bovina para a Europa e, "
                       "consequentemente, isso provoca um aumento no preço dos bens substitutos, como da carne de "
-                      "porco ou frango, nos países europeus, isso " + hl("não") + " pode ser caracterizado como "
+                      "porco ou frango, nos países europeus, isso " + hl("não pode") + " ser caracterizado como "
                       "uma externalidade negativa da política de restrição brasileira" + hl(", mas como ajuste "
                       "normal de mercado, transmitido pelos preços") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 2,
@@ -759,8 +759,8 @@ CARDS = [
             "baterista.”</i> → ERRADO (troca de conceito: o efeito sobre terceiros é negativo)",
         ])],
         "reescrita": (hl("Há") + " externalidade " + hl("negativa") + " causada pelo baterista, uma vez que a perda "
-                      "de utilidade pelo casal por causa do ruído dos ensaios " + hl("não é compensada, ainda que") +
-                      " o baterista ganhe utilidade ao cumprir sua atividade."),
+                      "de utilidade pelo casal por causa do ruído dos ensaios " + hl("não é compensada, ainda que o baterista "
+                      "ganhe utilidade") + " ao cumprir sua atividade."),
         "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "Ruído é externalidade negativa: afeta o casal sem mediação de preço nem compensação; "
                             "o saldo de utilidades não é critério; soluções: regulação, Coase, multas.",

@@ -46,7 +46,7 @@ CARDS = [
         "assertiva": ("No ponto ótimo, o gasto com o bem 1 é maior do que o gasto com o bem 2, pois o bem 1 é mais caro "
                       "e o consumidor maximiza a utilidade concentrando a renda no bem de maior preço."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("No ponto ótimo, o gasto com o bem 1 ") + vm("é maior do que o") + az(" gasto com o bem 2, ")
+        "anotada": (az("No ponto ótimo, o gasto com o bem 1 é ") + vm("maior do que o") + az(" gasto com o bem 2, ")
                     + vm("pois o bem 1 é mais caro e o consumidor maximiza a utilidade concentrando a renda no bem de "
                          "maior preço") + az(".")),
         "poucas": ("Na " + azb("Cobb-Douglas") + " U = x₁x₂ (expoentes iguais), o consumidor gasta " + vd("metade da renda")
@@ -120,7 +120,7 @@ CARDS = [
             "<i>“Para complementares perfeitos, a TMS é constante e igual a zero ao longo de toda a curva.”</i> → "
             "ERRADO (é infinita no trecho vertical, nula no horizontal e indefinida no vértice)",
         ])],
-        "reescrita": ("Com exceção da relação entre bens substitutos " + hl("perfeitos") + ", a taxa marginal de "
+        "reescrita": ("Com exceção da relação entre bens " + hl("substitutos perfeitos") + ", a taxa marginal de "
                       "substituição entre dois bens é geralmente expressa por uma taxa " + hl("decrescente (em módulo)")
                       + " ao longo da curva de indiferença."),
         "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": ["geralmente"], "dificuldade": 1,
@@ -190,8 +190,8 @@ CARDS = [
                       "um aumento do nível de utilidade de um indivíduo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Por causa do axioma da não-saciedade, que estabelece que os consumidores sempre desejam cestas "
-                       "com uma maior quantidade de bens, ") + vm("sabemos que o aumento no consumo de um bem sempre "
-                       "provocará") + az(" um aumento do nível de utilidade de um indivíduo.")),
+                       "com uma maior quantidade de bens, ") + vm("sabemos") + az(" que o aumento no consumo de ") + vm("um bem")
+                    + az(" sempre ") + vm("provocará") + az(" um aumento do nível de utilidade de um indivíduo.")),
         "poucas": ("Não saciedade (ou monotonicidade fraca) não garante que " + azb("mais de um único bem") + " eleve "
                    "a utilidade: com " + vd("complementares perfeitos") + ", mais sapatos esquerdos sem direitos não "
                    "acrescentam nada."),
@@ -478,8 +478,8 @@ CARDS = [
                       "contrariaria o princípio de monotonicidade de preferências mais a mais."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A curva de indiferença é convexa à origem, pois reflete o desejo do consumidor de diversificar "
-                       "seu consumo. No entanto, ") + vm("não é possível que uma curva de indiferença seja côncava, "
-                       "pois isso contrariaria o princípio de monotonicidade") + az(" de preferências mais a mais.")),
+                       "seu consumo. No entanto, ") + vm("não é possível") + az(" que uma curva de indiferença seja côncava")
+                    + vm(", pois isso contrariaria") + az(" o princípio de monotonicidade de preferências mais a mais.")),
         "poucas": ("Curvas " + azb("côncavas") + " são possíveis: violam a " + azb("convexidade") + " (o consumidor "
                    "prefere especializar-se), não a " + azb("monotonicidade") + ", que só exige inclinação negativa."),
         "destrinchando": [
@@ -891,7 +891,7 @@ CARDS = [
             "fraca, TMS constante; em preferências " + azb("côncavas") + ", o consumidor prefere extremos e "
             "especializa-se.",
             "Rigor: convexidade com curvas suaves equivale a TMS <b>não crescente</b>; por isso um item que diga "
-            "“equivale” a TMS decrescente pode ser dado como ERRADO (ver ECO-E1-0841-1). O verbo “reflete” é seguro.",
+            "“equivale” a TMS decrescente pode ser dado como ERRADO. O verbo “reflete” é seguro.",
         ],
         "dissecando": (cz("[paráfrase fiel]") + " Junta as duas leituras clássicas da convexidade (TMS decrescente "
                        "e preferência por diversificação). A armadilha seria estranhar o verbo “reflete” ou achar "

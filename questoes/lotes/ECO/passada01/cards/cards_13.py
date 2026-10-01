@@ -580,8 +580,7 @@ CARDS = [
         ],
         "dissecando": (cz("[modulador relativo · contraintuitivo]") + " “Dependendo do formato” e “poderá” "
                        "salvam o item: basta um caso possível (bem inferior). A intuição “mais renda = mais de "
-                       "tudo” leva ao ERRADO. 🔥 O mesmo item foi reaproveitado pelo simulado Nidi/2026 (ver "
-                       "ECO-E1-0836-1)."),
+                       "tudo” leva ao ERRADO. 🔥 O mesmo item foi reaproveitado pelo simulado Nidi/2026."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Um deslocamento paralelo da restrição para cima e para a direita sempre provoca aumento no "
             "consumo de ambos os bens.”</i> → ERRADO (modulador absoluto: há bens inferiores)",
@@ -635,7 +634,7 @@ CARDS = [
             "Engel") + " dele é decrescente.",
             "Limite lógico: com dois bens e renda toda gasta, não podem cair os dois ao mesmo tempo.",
         ],
-        "dissecando": (cz("[modulador relativo]") + " Mesmo item de prova de 2018 (ver ECO-E1-0188-1), "
+        "dissecando": (cz("[modulador relativo]") + " Mesmo item de prova de 2018, "
                        "reaproveitado pelo simulado. “Dependendo” e “poderá” pedem apenas um caso possível — o "
                        "bem inferior. O preâmbulo sobre informação completa é neutro para o julgamento."),
         "modulos": [("😈 Para dificultar", [
@@ -826,8 +825,8 @@ CARDS = [
                       "substituição."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Dado o aumento no preço do bem A, a redução na demanda por esse bem é resultado dos efeitos "
-                      "renda e efeito substituição, ") + vm("onde o efeito renda sempre será superior ao efeito "
-                                                            "substituição") + az("."),
+                      "renda e efeito substituição, ") + vm("onde o efeito renda sempre será superior")
+                   + az(" ao efeito substituição."),
         "poucas": ("A decomposição em " + azb("efeito substituição") + " + " + azb("efeito renda") + " está certa; "
                    "não existe regra de que o renda " + vd("sempre") + " supere o substituição — isso só ocorre "
                    "em casos particulares."),

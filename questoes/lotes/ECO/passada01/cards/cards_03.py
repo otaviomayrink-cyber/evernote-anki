@@ -134,7 +134,7 @@ CARDS = [
                       "elevando, assim, o preço da produção industrial naquele país."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("A recente crise de energia na Argentina, por aumentar o preço de insumos básicos para a "
-                      "indústria, gera ") + vm("um deslocamento ao longo da curva de oferta")
+                      "indústria, gera um ") + vm("deslocamento ao longo da curva de oferta")
                    + az(" do setor manufatureiro, elevando, assim, o preço da produção industrial naquele país."),
         "poucas": ("Insumo mais caro é determinante da oferta: a " + azb("curva de oferta inteira se desloca") +
                    " para a esquerda. Movimento ao longo da oferta só ocorre quando muda o preço do próprio bem."),
@@ -419,8 +419,8 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Um mês depois da data do texto, uma epidemia assolou o país e reduziu a população em 40%. "
                       "Para evitar uma crise no setor de maçãs, o governo fixou o preço das maçãs em $ 5 por "
-                      "quilo. Com isso, conclui-se que a quantidade semanal vendida de maçãs ")
-                   + vm("será a mesma de antes da epidemia") + az("."),
+                      "quilo. Com isso, conclui-se que a quantidade semanal vendida de maçãs será ")
+                   + vm("a mesma") + az(" de antes da epidemia."),
         "poucas": ("Com 40% menos consumidores, a demanda cai e o equilíbrio iria abaixo de $ 5. Fixado em $ 5, "
                    "o preço vira " + azb("preço mínimo") + " efetivo: vende-se só o que os consumidores "
                    "restantes compram — " + vd("menos") + " que antes — e sobra maçã."),
@@ -580,8 +580,9 @@ CARDS = [
                       "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por uma redução do preço do bem x."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Com base no gráfico 1, […] é correto afirmar que o deslocamento da curva de demanda em "
-                      "questão pode ser explicado por ") + vm("uma redução do preço do bem x") + az("."),
+        "anotada": az("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão ")
+                   + vm("pode ser explicado") + az(" por uma redução do preço do bem x."),
         "poucas": ("Variação no preço do <b>próprio</b> bem não desloca a curva de demanda: provoca "
                    + azb("movimento ao longo") + " dela. A curva só se desloca quando muda outro determinante."),
         "destrinchando": [
@@ -607,9 +608,10 @@ CARDS = [
             "(sentido trocado: deslocaria para a esquerda)",
             "<i>“…pode ser explicado por uma redução do preço de um bem complementar de x…”</i> → CERTO",
         ])],
-        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão " + hl("não")
-                      + " pode ser explicado por uma redução do preço do bem x, " + hl("que provocaria apenas "
-                      "movimento ao longo de D1") + "."),
+        "reescrita": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão "
+                      + hl("não pode ser explicado") + " por uma redução do preço do bem x" + hl(", que "
+                      "provocaria apenas movimento ao longo de D1") + "."),
         "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": ["pode"], "dificuldade": 1,
         "comentario_fonte": "O deslocamento para a direita significa aumento da quantidade demandada a cada "
                             "preço, causado por fatores que não o próprio preço (renda, preços de bens "
@@ -631,7 +633,8 @@ CARDS = [
                       "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por um aumento no preço do bem y, se este for complementar do bem x."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+        "anotada": az("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por um aumento no preço do bem y, se este for ") + vm("complementar")
                    + az(" do bem x."),
         "poucas": ("Se y é " + azb("complementar") + " de x, encarecer y <b>reduz</b> a demanda por x (curva "
@@ -655,7 +658,8 @@ CARDS = [
                        "↓D<sub>x</sub>."),
         "modulos": [("🧠 Mnemônico", ["<b>C</b>omplementar <b>C</b>ai junto; <b>S</b>ubstituto <b>S</b>obe o "
                                       "outro."])],
-        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+        "reescrita": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por um aumento no preço do bem y, se este for " + hl("substituto") + " do bem x."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode", "se"], "dificuldade": 1,
         "comentario_fonte": "Complementares: ao aumentar o preço de um, a demanda pelo outro diminui; "
@@ -677,7 +681,8 @@ CARDS = [
                       "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por um aumento na renda, se x for um bem inferior."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+        "anotada": az("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por um aumento na renda, se x for um bem ") + vm("inferior") + az("."),
         "poucas": ("Para bem " + azb("inferior") + ", renda maior <b>reduz</b> a demanda (curva para a "
                    "esquerda). D1 → D2 com aumento de renda exige bem " + azb("normal") + "."),
@@ -702,7 +707,8 @@ CARDS = [
             "<i>“…pode ser explicado por um aumento na renda, se x for um bem de Giffen.”</i> → ERRADO (Giffen "
             "é inferior: a demanda cairia)",
         ])],
-        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+        "reescrita": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por um aumento na renda, se x for um bem " + hl("normal") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode", "se"], "dificuldade": 1,
         "comentario_fonte": "Bem inferior: aumento de renda reduz a demanda; bem normal: aumenta. O deslocamento "
@@ -723,7 +729,8 @@ CARDS = [
                       "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por uma redução dos preços dos insumos utilizados na produção do bem x."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+        "anotada": az("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por ") + vm("uma redução dos preços dos insumos utilizados na produção do bem x")
                    + az("."),
         "poucas": ("Preço de insumo é determinante da " + azb("oferta") + ", não da demanda: insumo mais barato "
@@ -749,7 +756,8 @@ CARDS = [
             "<i>“…pode ser explicado por uma redução da renda dos consumidores, se x for um bem normal.”</i> → "
             "ERRADO (sentido trocado: deslocaria para a esquerda)",
         ])],
-        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+        "reescrita": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
                       "explicado por " + hl("um aumento do número de consumidores do bem x; a redução dos preços "
                       "dos insumos deslocaria a curva de oferta") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 1,
@@ -1284,9 +1292,9 @@ CARDS = [
                       "consumidor avalia cada um deles de forma isolada."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Considerando que os agentes microeconômicos são racionais e ") + vm("tomam suas decisões "
-                      "considerando o princípio conhecido como <i>coeteris paribus</i>") + az(", mudanças no "
+                      "considerando o princípio conhecido como") + az(" <i>coeteris paribus</i>, mudanças no "
                       "preço de um bem ") + vm("não afetam") + az(" a posição da curva de demanda dos bens que "
-                      "são substitutos, ") + vm("uma vez que o consumidor avalia cada um deles de forma isolada")
+                      "são substitutos, uma vez que o consumidor ") + vm("avalia cada um deles de forma isolada")
                    + az("."),
         "poucas": ("O preço de um " + azb("substituto") + " é justamente um deslocador da demanda: se a manteiga "
                    "encarece, a curva de demanda da margarina vai para a direita. " + azb("Coeteris paribus") +

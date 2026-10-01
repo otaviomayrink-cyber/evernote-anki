@@ -432,7 +432,7 @@ CARDS = [
             "<i>“A condição de primeira ordem RMg = CMg aplica-se apenas à concorrência perfeita.”</i> → ERRADO "
             "(restrição indevida: vale para toda firma maximizadora)",
         ])],
-        "reescrita": ("Para qualquer firma (competitiva ou não), a receita média é sempre igual ao preço, mas a "
+        "reescrita": ("Para qualquer firma (competitiva ou não), a receita média é sempre igual ao preço, e a "
                       "receita marginal " + hl("só é igual ao preço para a firma tomadora de preço") + "; logo, a "
                       "condição de primeira ordem para maximização de lucro " + hl("é RMg = CMg, que só se reduz "
                       "a P = CMg na concorrência perfeita") + "."),
@@ -580,8 +580,8 @@ CARDS = [
             "igual ao custo fixo)",
         ])],
         "reescrita": ("Os custos fixos de empresas que operam em concorrência perfeita no curto prazo são "
-                      "irrelevantes para a decisão de continuarem produzindo, pois " + hl("produz-se sempre que "
-                      "o preço é igual ou superior ao custo variável médio") + "."),
+                      "irrelevantes para a decisão de continuarem produzindo, pois só se produz quando o preço é superior ao custo "
+                      + hl("variável médio") + "."),
         "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": ["só"], "dificuldade": 2,
         "comentario_fonte": "Premissa correta, justificativa errada; produz se P ≥ CVMe, mesmo com P < CTMe; "
                             "P = CVMe indiferente (prejuízo = CF).",
@@ -626,7 +626,7 @@ CARDS = [
             "<i>“No curto prazo, o prejuízo de uma firma que continua produzindo pode superar o seu custo "
             "fixo.”</i> → ERRADO (se superasse, ela pararia: prejuízo máximo = CF)",
         ])],
-        "reescrita": ("Em um mercado de concorrência perfeita, " + hl("embora") + " existam livre entrada e "
+        "reescrita": ("Em um mercado de concorrência perfeita, " + hl("embora existam") + " livre entrada e "
                       "livre saída de empresas no mercado, o lucro de curto prazo de uma empresa "
                       + hl("pode ser negativo; só no longo prazo ele tende a zero") + "."),
         "tipo_erro": ["ANACRONISMO", "GENERALIZACAO"], "moduladores": ["nunca"], "dificuldade": 1,
@@ -670,8 +670,8 @@ CARDS = [
             "<i>“Na concorrência monopolística, a demanda da firma é horizontal.”</i> → ERRADO (troca de "
             "conceito: a diferenciação dá à firma demanda inclinada)",
         ])],
-        "reescrita": ("Na concorrência perfeita, a demanda da empresa individual pode ser representada por uma "
-                      + hl("reta horizontal (perfeitamente elástica) ao nível do preço de mercado") + "."),
+        "reescrita": ("Na concorrência perfeita, a demanda da empresa individual pode ser representada por uma curva "
+                      + hl("perfeitamente elástica (horizontal)") + " com relação aos preços."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 1,
         "comentario_fonte": "Demanda de mercado negativamente inclinada; demanda da firma perfeitamente elástica "
                             "(horizontal) ao preço de mercado; firma price taker.",
@@ -873,8 +873,8 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Para produzir uma quantidade q de seu produto, uma firma em concorrência perfeita tem um "
                        "custo total C dado por C = 1.200 + 30q + 3q<sup>2</sup>. A respeito dessa situação "
-                       "hipotética, para obter a curva de oferta da firma, basta ") + vm("dividir por q a "
-                       "expressão dada para C") + az(" e igualar o resultado obtido ao preço.")),
+                       "hipotética, para obter a curva de oferta da firma, basta ") + vm("dividir por q") + az(" a "
+                       "expressão dada para C e igualar o resultado obtido ao preço.")),
         "poucas": ("Dividir C por q dá o " + azb("custo médio") + ". A oferta vem de " + vd("P = CMg")
                    + ": P = 30 + 6q (acima do mínimo do CVMe), isto é, q = (P − 30)/6."),
         "destrinchando": [
@@ -922,7 +922,7 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A curva de oferta a curto prazo de uma firma em concorrência perfeita é igual à curva de "
                        "custo marginal para todos os níveis de produção iguais ou maiores do que o nível de "
-                       "produção associado ao custo ") + vm("total médio") + az(" mínimo.")),
+                       "produção associado ao custo ") + vm("total") + az(" médio mínimo.")),
         "poucas": ("No curto prazo a firma produz enquanto P ≥ " + azb("CVMe") + ". A oferta é o CMg a partir "
                    "do " + vd("mínimo do CVMe") + " (fechamento), não do mínimo do CTMe (nivelamento)."),
         "destrinchando": [
@@ -995,7 +995,7 @@ CARDS = [
             "<i>“A firma que paralisa as atividades no curto prazo deixa de arcar com os custos fixos.”</i> → "
             "ERRADO (confunde paralisar com sair do mercado)",
         ])],
-        "reescrita": ("Em um mercado de concorrência perfeita, " + hl("embora") + " existam livre entrada e "
+        "reescrita": ("Em um mercado de concorrência perfeita, " + hl("embora existam") + " livre entrada e "
                       "livre saída de empresas no mercado, o lucro de curto prazo de uma empresa "
                       + hl("pode ser negativo, desde que o preço cubra o custo variável médio") + "."),
         "tipo_erro": ["ANACRONISMO", "GENERALIZACAO"], "moduladores": ["nunca"], "dificuldade": 1,
@@ -1042,9 +1042,8 @@ CARDS = [
             "<i>“Se o produtor competitivo reduzir o preço abaixo do de mercado, aumentará sua receita "
             "total.”</i> → ERRADO (já vende tudo o que quiser a P: só perderia receita)",
         ])],
-        "reescrita": ("Na concorrência perfeita, a demanda da empresa individual " + hl("é representada por uma "
-                      "reta horizontal ao nível do preço de mercado") + " " + hl("(perfeitamente elástica)")
-                      + "."),
+        "reescrita": ("Na concorrência perfeita, a demanda da empresa individual pode ser representada por uma curva "
+                      + hl("perfeitamente elástica (horizontal)") + " com relação aos preços."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 1,
         "comentario_fonte": "Produtor vende todas as unidades ao preço P, independente da produção; preço acima "
                             "de P derruba as vendas a zero; gráfico firma (horizontal em $4) × indústria (D "
@@ -1180,7 +1179,7 @@ CARDS = [
             "ERRADO (no longo prazo P < CTMe leva à saída)",
         ])],
         "reescrita": ("Uma firma " + hl("não") + " deve operar " + hl("no curto prazo") + " caso o preço de seu "
-                      "produto seja inferior ao seu custo " + hl("variável") + " médio de produção."),
+                      "produto seja inferior ao seu custo " + hl("variável médio") + " de produção."),
         "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["nunca"], "dificuldade": 1,
         "comentario_fonte": "A firma não deve operar caso o preço seja inferior ao custo variável médio.",
         "qualidade_fonte": "raso",
@@ -1330,7 +1329,7 @@ CARDS = [
                       "variável médio, este restaurante vai seguir operando, ainda que com prejuízo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Se durante a pandemia a queda das vendas fez a receita de um restaurante cair abaixo do "
-                       "custo variável médio, este restaurante ") + vm("vai seguir operando") + az(", ainda que "
+                       "custo variável médio, este restaurante vai ") + vm("seguir operando") + az(", ainda que "
                        "com prejuízo.")),
         "poucas": ("Receita abaixo do custo variável (" + vd("P < CVMe ⇔ RT < CV") + ") manda "
                    + azb("paralisar") + ": operando, perderia o custo fixo <b>mais</b> a parte do variável não "
@@ -1361,7 +1360,7 @@ CARDS = [
         ])],
         "reescrita": ("Se durante a pandemia a queda das vendas fez a receita de um restaurante cair abaixo do "
                       "custo variável médio, este restaurante vai " + hl("paralisar as atividades no curto "
-                      "prazo, limitando o prejuízo ao custo fixo") + "."),
+                      "prazo") + ", ainda que com prejuízo" + hl(" (limitado ao custo fixo)") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "Receita abaixo do CVMe: firma fecha no curto prazo; opera com prejuízo só se RT ≥ CV "
                             "(P ≥ CVM); operando, perderia mais que o custo fixo. Trecho errado: “vai seguir "

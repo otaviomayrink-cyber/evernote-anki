@@ -342,8 +342,8 @@ CARDS = [
         ],
         "dissecando": (cz("[literalidade · detalhe]") + " Versão completa do teorema, com o adendo "
                        "distributivo. O “embora … possa ser afetada” é o detalhe que derruba quem acha que "
-                       "Coase torna a atribuição de direitos irrelevante em tudo. Ver também ECO-E2-L00517-1 e "
-                       "ECO-E2-L00680-1."),
+                       "Coase torna a atribuição de direitos irrelevante em tudo. As versões sem o adendo (“independentemente "
+                       "de a quem o direito foi alocado”) também são CERTO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Pelo teorema de Coase, a atribuição inicial dos direitos de propriedade é irrelevante tanto "
             "para a eficiência quanto para a distribuição de renda.”</i> → ERRADO (a distribuição muda)",
@@ -497,8 +497,7 @@ CARDS = [
         ],
         "dissecando": (cz("[literalidade]") + " Enunciado completo, sem enxerto. As versões erradas costumam "
                        "tirar uma das condições, trocar “independentemente” por “desde que o direito seja de "
-                       "X” (ECO-E2-L00852-1) ou fazer a eficiência “depender apenas” da distribuição "
-                       "(ECO-E2-L01179-1)."),
+                       "X” ou fazer a eficiência “depender apenas” da distribuição."),
         "modulos": [("😈 Para dificultar", [
             "<i>“…as partes podem negociar e alcançar uma solução eficiente, desde que o direito de "
             "propriedade seja atribuído a quem sofre a externalidade.”</i> → ERRADO (restrição indevida)",
@@ -510,7 +509,7 @@ CARDS = [
                              "privada alcança a alocação eficiente, independentemente do titular inicial."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["quase_duplicata: ECO-E2-L00680-1 (mesmo curso, outra lista) e ECO-E2-L00333-1 cobram o "
+        "alertas": ["quase_duplicata: ECO-E2-L00852-1 e ECO-E2-L01179-1 (versões ERRADAS do teorema de Coase)", "quase_duplicata: ECO-E2-L00680-1 (mesmo curso, outra lista) e ECO-E2-L00333-1 cobram o "
                     "mesmo enunciado com outra redação"],
     },
     # ------------------------------------------------------------------ E2-L00518
@@ -590,8 +589,8 @@ CARDS = [
         ],
         "grafico_verso": "ECO-E2-L00679-1-V1",
         "dissecando": (cz("[paráfrase fiel]") + " Os dois “superior” estão no lugar certo. A banca fabrica o "
-                       "ERRADO invertendo um deles: CMgS “inferior” ao privado (ECO-E2-L00971-1) ou curva "
-                       "social “abaixo” (ECO-E2-L00871-1), ou ainda quantidade de mercado “inferior”."),
+                       "ERRADO invertendo um deles: CMgS “inferior” ao privado ou curva "
+                       "social “abaixo” da privada, ou ainda quantidade de mercado “inferior”."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Com externalidade negativa na produção, o preço de mercado fica acima do socialmente "
             "ótimo.”</i> → ERRADO (inversão: fica abaixo)",
@@ -603,7 +602,7 @@ CARDS = [
                              "quantidade maior que o ótimo social (superprodução)."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00971-1 e ECO-E2-L00871-1 (versões ERRADAS: CMgS inferior / curva abaixo)"],
     },
     # ------------------------------------------------------------------ E2-L00680
     {
@@ -638,7 +637,7 @@ CARDS = [
             "informação assimétrica e comportamento estratégico. Quando eles pesam, voltam à mesa as soluções "
             "de " + oc("Pigou") + " (imposto) e a regulação.",
         ],
-        "dissecando": (cz("[literalidade]") + " Mesmo enunciado de ECO-E2-L00517-1, com “levará” em vez de "
+        "dissecando": (cz("[literalidade]") + " Mesmo enunciado de outra versão do item, com “levará” em vez de "
                        "“podem negociar”. O futuro categórico é seguro aqui porque as condições do teorema "
                        "foram dadas. As versões erradas mexem na atribuição do direito ou retiram uma das "
                        "condições."),
@@ -731,7 +730,7 @@ CARDS = [
             + vd("1968") + "), retomando a parábola das pastagens comuns.",
         ],
         "dissecando": (cz("[literalidade]") + " Definição completa e com a causa certa (externalidade "
-                       "ignorada). Mesmo tema de ECO-E2-L00518-1. A banca erra o item trocando “rivais” por "
+                       "ignorada). A banca erra o item trocando “rivais” por "
                        "“não rivais” ou atribuindo a tragédia aos bens públicos."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A tragédia dos comuns afeta os bens públicos puros, cujo uso por um indivíduo reduz a "
@@ -1085,7 +1084,8 @@ CARDS = [
         "grafico_verso": "ECO-E2-L00871-1-V1",
         "dissecando": (cz("[inversão · contradição]") + " O item enuncia a premissa certa (custo social > "
                        "privado) e inverte a tradução gráfica. Itens de “representação gráfica” costumam "
-                       "apostar na confusão entre “acima” e “à direita”. Ver também ECO-E2-L00971-1."),
+                       "apostar na confusão entre “acima” e “à direita”. A mesma inversão aparece sem gráfico: “CMgS menor "
+                       "que o CMgP” → ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Com externalidade negativa na produção, a curva de custo marginal social situa-se à esquerda "
             "da curva de custo marginal privado.”</i> → CERTO (acima e à esquerda descrevem o mesmo "
@@ -1182,8 +1182,8 @@ CARDS = [
             "Quadro de sinais: negativa → CMgS > CMgP (ou BMgS < BMgP, no consumo) → sobreprodução → imposto. "
             "Positiva → CMgS < CMgP (ou BMgS > BMgP) → subprodução → subsídio.",
         ],
-        "dissecando": (cz("[inversão]") + " Inversão de sinal pura, sem enxerto. Mesma relação de "
-                       "ECO-E2-L00871-1 e ECO-E2-L00679-1. Pista: “negativa” para a sociedade significa custo "
+        "dissecando": (cz("[inversão]") + " Inversão de sinal pura, sem enxerto. A mesma relação volta "
+                       "na forma gráfica (curva social acima da privada) e na quantidade (mercado acima do ótimo). Pista: “negativa” para a sociedade significa custo "
                        "<b>a mais</b>, nunca a menos."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A externalidade positiva na produção implica que o custo marginal social é menor que o custo "
@@ -1197,7 +1197,7 @@ CARDS = [
         "comentario_fonte": "Custo externo torna o CMg social maior que o privado: CMgS = CMgP + CE.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": ["quase_duplicata: ECO-E2-L00871-1 cobra a mesma relação CMgS × CMgP com outra redação "
+        "alertas": ["quase_duplicata: ECO-E2-L00679-1 (versão CERTA: CMgS superior ao CMgP)", "quase_duplicata: ECO-E2-L00871-1 cobra a mesma relação CMgS × CMgP com outra redação "
                     "(mesmo curso, outra lista)"],
     },
     # ------------------------------------------------------------------ E2-L01009
@@ -1285,7 +1285,7 @@ CARDS = [
         ],
         "dissecando": (cz("[paráfrase fiel]") + " O item liga dois capítulos do manual (recursos comuns e "
                        "externalidades). Quem os estuda separados hesita; a ligação é exatamente a que "
-                       + oc("Mankiw") + " faz. Mesmo tema de ECO-E2-L01175-1."),
+                       + oc("Mankiw") + " faz."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Na tragédia dos comuns, o custo marginal privado de explorar o recurso supera o custo marginal "
             "social.”</i> → ERRADO (inversão: o privado é menor)",
@@ -1330,7 +1330,7 @@ CARDS = [
             "locais, que muitas vezes evita a tragédia.",
         ],
         "dissecando": (cz("[paráfrase fiel]") + " A definição é ampla (“recurso de produção”), mas correta. "
-                       "Igual a ECO-E2-L01011-1 em conteúdo. A variante errada típica diria que o recurso "
+                       "A variante errada típica diria que o recurso "
                        "“pertence a um particular” ou que a tragédia é falha de governo, e não de mercado."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A atribuição de direitos de propriedade sobre o recurso comum tende a reduzir sua "
@@ -1515,7 +1515,7 @@ CARDS = [
         ],
         "dissecando": (cz("[inversão · restrição indevida]") + " Inverte a relação central do teorema "
                        "(independência → dependência) e acrescenta um “apenas” que apaga a outra condição. "
-                       "Mesma família de ECO-E2-L00852-1."),
+                       "Mesma família do item que exige o direito “em favor do agente que sofre” a externalidade (ERRADO)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Pelo teorema de Coase, na ausência de custos de transação, a solução privada é eficiente "
             "qualquer que seja a distribuição inicial dos direitos de propriedade.”</i> → CERTO",
@@ -1532,6 +1532,6 @@ CARDS = [
                              "independe da distribuição inicial (Coase, 1960)."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00852-1 (Coase, versão ERRADA)"],
     },
 ]

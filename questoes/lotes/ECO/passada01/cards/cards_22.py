@@ -513,8 +513,8 @@ CARDS = [
         ],
         "dissecando": (cz("[meia-verdade · inversão]") + " A 1ª condição (firmas do mesmo tamanho) é verdadeira; "
                        "o erro está numa palavra: “elásticas” no lugar de “inelásticas”. Itens de cartel quase sempre "
-                       "testam o sentido da elasticidade. Mesmo item, com a forma correta, aparece em "
-                       "ECO-E1-0303-1; com variação, em ECO-E1-0247-1."),
+                       "testam o sentido da elasticidade. A banca também cobra a versão longa (“o êxito de um cartel "
+                       "depende… da demanda, a qual deve ser inelástica”), CERTA com “inelástica” e ERRADA com “elástica”."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A cartelização é facilitada quando as firmas têm custos semelhantes e enfrentam demanda pouco "
             "elástica.”</i> → CERTO",
@@ -542,9 +542,9 @@ CARDS = [
                       "produtos a preços abaixo do custo de produção sob um mercado oligopolista, pois isso favorece "
                       "os consumidores e a competição entre as empresas do setor."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Órgãos de defesa da concorrência ") + vm("veem de forma positiva") + az(" a prática "
+        "anotada": az("Órgãos de defesa da concorrência veem ") + vm("de forma positiva") + az(" a prática "
                       "costumeira de venda de produtos a preços abaixo do custo de produção sob um mercado "
-                      "oligopolista, ") + vm("pois isso favorece os consumidores e a competição entre as empresas do "
+                      "oligopolista, pois ") + vm("isso favorece os consumidores e a competição entre as empresas do "
                                              "setor") + az("."),
         "poucas": ("Vender sistematicamente abaixo do custo é o padrão do " + azb("preço predatório") + ": sacrifica "
                    "lucro hoje para eliminar rivais e cobrar caro depois. As autoridades antitruste o reprimem."),
@@ -628,8 +628,9 @@ CARDS = [
         ],
         "dissecando": (cz("[contraintuitivo]") + " O item aposta no reflexo “duopólio = poder de mercado” e reforça "
                        "com “pequeno número e grande tamanho”. A palavra-chave é “contestável”: com ela, a estrutura "
-                       "deixa de determinar o resultado. Variantes do mesmo tema em ECO-E1-0256-1, ECO-E2-L00291-1 e "
-                       "ECO-E2-L00533-1."),
+                       "deixa de determinar o resultado. Variantes do mesmo tema (CERTO): a definição de mercado "
+                       "perfeitamente contestável (entrada e saída livres e sem custos), os preços próximos aos de "
+                       "concorrência perfeita pela ameaça de entrada e a compatibilidade com retornos crescentes de escala."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Um mercado contestável exige a presença de grande número de firmas para alcançar o resultado "
             "competitivo.”</i> → ERRADO (o número de firmas é irrelevante; importa a ameaça de entrada)",
@@ -642,7 +643,7 @@ CARDS = [
                              "que tende ao preço e custo de equilíbrio competitivo por ameaça externa."),
         "qualidade_fonte": "com_erro",
         "figuras_fonte": [],
-        "alertas": ["qualidade_fonte: a fonte diz que tais mercados podem ser desregulamentados “na medida em que a "
+        "alertas": ["quase_duplicata: ECO-E1-0256-1, ECO-E2-L00291-1 e ECO-E2-L00533-1 (mercados contestáveis)", "qualidade_fonte: a fonte diz que tais mercados podem ser desregulamentados “na medida em que a "
                     "entrada envolver elevados custos perdidos”; é o contrário — a contestabilidade exige ausência "
                     "de custos irrecuperáveis",
                     "banca_provavel: CEBRASPE (estilo do item; a fonte traz só o ano, 2018, sem órgão)",
@@ -680,7 +681,8 @@ CARDS = [
         ],
         "dissecando": (cz("[inversão]") + " Troca de uma palavra (“elástica” por “inelástica”) num período longo "
                        "e correto no resto — pegadinha clássica de releitura. A mesma frase, com “inelástica”, é "
-                       "CERTO em ECO-E1-0303-1; a mesma ideia, mais curta, aparece em ECO-E1-0236-1."),
+                       "CERTO; a mesma ideia, mais curta, aparece como “a cartelização é facilitada quando as firmas… "
+                       "se confrontam com demandas elásticas” (ERRADO)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“…a demanda do mercado em que o cartel opera, a qual deve ser inelástica em relação ao preço.”</i> → "
             "CERTO",
@@ -733,7 +735,8 @@ CARDS = [
         ],
         "dissecando": (cz("[literalidade]") + " Item-definição. A banca costuma errar a definição trocando "
                        "“sem custos irrecuperáveis” por “com muitas firmas” ou exigindo produto homogêneo e "
-                       "atomização. Ver também ECO-E1-0244-1 (duopólio contestável)."),
+                       "atomização. A banca também aplica o conceito a um duopólio contestável, com resultado de "
+                       "concorrência perfeita (CERTO)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Um mercado perfeitamente contestável requer grande número de firmas atuando.”</i> → ERRADO "
             "(o número de firmas é irrelevante)",
@@ -745,7 +748,7 @@ CARDS = [
                              "as estabelecidas, mesmo com poucas firmas."),
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0244-1 (duopólio contestável)"],
     },
     # ------------------------------------------------------------------ E1-0303
     {
@@ -779,7 +782,7 @@ CARDS = [
             vm("Regra-âncora: firmas semelhantes + demanda inelástica = terreno fértil para cartel."),
         ],
         "dissecando": (cz("[literalidade · detalhe]") + " Período longo com uma palavra decisiva no fim "
-                       "(“inelástica”). A mesma frase, com “elástica”, é ERRADO em ECO-E1-0247-1 — o simulado "
+                       "(“inelástica”). A mesma frase, com “elástica”, é ERRADO — o simulado "
                        "inverteu o item para testar a releitura."),
         "modulos": [("😈 Para dificultar", [
             "<i>“…a demanda do mercado em que o cartel opera, a qual deve ser elástica em relação ao preço.”</i> → "
@@ -810,7 +813,7 @@ CARDS = [
         "anotada": az("A estratégia oligopolista associada ao equilíbrio de Stackelberg utiliza, no processo de "
                       "decisão, curvas de reação dadas pela quantidade de produção que maximiza os lucros da empresa "
                       "em relação às quantidades que ela imagina que seus concorrentes produzirão, sendo as decisões ")
-                   + vm("divulgadas simultaneamente por todas as empresas") + az(" participantes do mercado."),
+                   + vm("divulgadas simultaneamente por todas as empresas participantes do mercado") + az("."),
         "poucas": ("Stackelberg é um jogo " + azb("sequencial") + ": a líder decide primeiro e a seguidora reage. "
                    "Decisões simultâneas em quantidade são o modelo de " + azb("Cournot") + "."),
         "destrinchando": [
@@ -1041,7 +1044,8 @@ CARDS = [
         ],
         "dissecando": (cz("[paráfrase fiel]") + " Item com quatro comparações (q da líder, q da seguidora, lucro "
                        "da líder, mecanismo) e todas no sentido certo. A banca costuma inverter uma delas — "
-                       "geralmente o lucro da seguidora ou o da líder. Ver ECO-E2-L00240-1 e ECO-E2-L00678-1."),
+                       "geralmente o lucro da seguidora (“maior do que em Cournot”) ou o da líder (“menor do que em "
+                       "Cournot”), ambos ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“…resultando em lucro maior também para a seguidora.”</i> → ERRADO (a seguidora lucra menos que "
             "em Cournot)",
@@ -1053,7 +1057,7 @@ CARDS = [
                              "o ponto da curva de reação da seguidora que maximiza seu lucro."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00240-1 e ECO-E2-L00678-1 (Stackelberg, versões ERRADAS)"],
     },
     # ------------------------------------------------------------------ E2-L00291
     {
@@ -1187,7 +1191,7 @@ CARDS = [
         ])],
         "reescrita": ("No modelo de Cournot, as empresas competem escolhendo simultaneamente os níveis de "
                       + hl("produção") + ", e o equilíbrio ocorre quando nenhuma empresa tem incentivo para alterar "
-                      "sua " + hl("quantidade") + ", dada a decisão da outra."),
+                      + hl("sua quantidade") + ", dada a decisão da outra."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["simultaneamente"], "dificuldade": 1,
         "comentario_fonte": ("Cournot escolhe níveis de produção, não preços; quadro dos cinco modelos (Stackelberg, "
                              "liderança de preço, Cournot, Bertrand, cartel); gráfico comparando p e Q de cada "
@@ -1540,8 +1544,8 @@ CARDS = [
             vm("Regra-âncora: quanto mais inelástica a demanda, mais o cartel lucra — e mais tende a durar."),
         ],
         "dissecando": (cz("[inversão]") + " O item disfarça “elasticidade” de forma gráfica: “curva horizontal” = "
-                       "perfeitamente elástica, o pior caso para o cartel. Mesma ideia, em palavras, em "
-                       "ECO-E1-0236-1 e ECO-E1-0247-1."),
+                       "perfeitamente elástica, o pior caso para o cartel. Mesma ideia, em palavras: cartel "
+                       "com demanda “elástica” → ERRADO; com demanda “inelástica” → CERTO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Um cartel tende a ser mais estável quando a demanda pelo seu produto é pouco elástica.”</i> → "
             "CERTO",
@@ -1556,6 +1560,6 @@ CARDS = [
                              "mais estáveis com demanda inelástica."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: ECO-E1-0236-1 e ECO-E1-0247-1 (cartel e elasticidade da demanda)"],
     },
 ]

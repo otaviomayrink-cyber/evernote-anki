@@ -822,8 +822,8 @@ CARDS = [
         "E1-0153", "efi", COM_PARETO,
         assertiva="A alocação eficiente dos recursos produtivos garante maior equidade social.",
         gabarito="ERRADO",
-        anotada=(az("A alocação eficiente dos recursos produtivos ") + vm("garante maior equidade social")
-                 + az(".")),
+        anotada=(az("A alocação eficiente dos recursos produtivos ") + vm("garante")
+                 + az(" maior equidade social.")),
         poucas=(azb("Eficiência") + " e " + azb("equidade") + " são critérios independentes: uma alocação "
                 "pode ser Pareto-eficiente e " + vd("extremamente desigual") + ". Eficiência não garante "
                 "justiça distributiva."),
@@ -1216,7 +1216,7 @@ CARDS = [
             "ERRADO (nexo indevido: produzir além do ótimo destrói valor)",
         ])],
         reescrita=("Um imposto constitui um peso-morto porque afeta as decisões de compradores e vendedores. Em "
-                   "vista disso, conclui-se que subsídios, " + hl("que também afetam essas decisões, também "
+                   "vista disso, conclui-se que subsídios" + hl(", que também afetam essas decisões, também "
                    "geram") + " peso-morto."),
         tipo_erro=["NEXO_INDEVIDO"], dificuldade=1,
         comentario_fonte=("ERRADO. Subsídios também geram peso-morto, pois distorcem os incentivos de mercado e "

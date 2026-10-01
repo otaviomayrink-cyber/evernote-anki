@@ -1,0 +1,14 @@
+{"id": "ECO-E2-L01214-1-V1", "uso": "verso",
+ "legenda": "Com o teto abaixo do equilíbrio, os produtores só oferecem qˢ e os consumidores querem qᴰ: a quantidade efetivamente transacionada cai de q₀ para qˢ (o lado curto do mercado manda), e surge escassez de qᴰ − qˢ.",
+ "eixos": {"x": "q", "y": "p"},
+ "curvas": [
+   {"id": "D", "tipo": "reta", "p1": [0.5, 9.5], "p2": [9.5, 0.5], "familia": "demanda", "rotulo": "D"},
+   {"id": "S", "tipo": "reta", "p1": [0.5, 0.5], "p2": [9.5, 9.5], "familia": "oferta", "rotulo": "O"},
+   {"id": "Pmax", "tipo": "horizontal", "y": 3, "x": [0, 9.6], "familia": "destaque", "rotulo": "Pmáx", "tracejada": true}],
+ "pontos": [
+   {"id": "E0", "intersecao": ["D", "S"], "rotulo": "E₀", "projetar": true, "rotulo_x": "q₀", "rotulo_y": "p₀", "rotulo_desloc": [10, -4]},
+   {"id": "Qs", "intersecao": ["S", "Pmax"], "projetar": "x", "rotulo_x": "qˢ"},
+   {"id": "Qd", "intersecao": ["D", "Pmax"], "projetar": "x", "rotulo_x": "qᴰ"}],
+ "areas": [{"tipo": "poligono", "vertices": [["Qs.x", "D(Qs.x)"], "E0", "Qs"], "papel": "peso_morto"}],
+ "setas": [{"de": ["Qs.x", 1.6], "para": ["Qd.x", 1.6], "cor": "vermelho", "estilo": "<|-|>", "rotulo": "escassez", "rotulo_desloc": [-30, 8]}],
+ "checar": ["Qs.x < E0.x", "Qd.x > E0.x", "abs(Qd.x - Qs.x - 4) < 0.01"]}

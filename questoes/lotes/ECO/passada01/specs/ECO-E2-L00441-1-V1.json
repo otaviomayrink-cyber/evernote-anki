@@ -1,0 +1,113 @@
+{
+ "id": "ECO-E2-L00441-1-V1",
+ "uso": "verso",
+ "legenda": "Na demanda linear, a RMg zera no ponto médio, onde |ε| = 1. Abaixo dele (trecho inelástico) a RMg é negativa e não pode igualar um CMg positivo: o ótimo do monopolista (RMg = CMg) cai sempre no trecho elástico.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 10.5,
+  "ymax": 11
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - x",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 9.3,
+   "rotulo_desloc": [
+    6,
+    8
+   ]
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "10 - 2*x",
+   "dominio": [
+    0,
+    5
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg",
+   "rotulo_em": 3.0,
+   "rotulo_desloc": [
+    -50,
+    -4
+   ]
+  },
+  {
+   "id": "CMg",
+   "tipo": "horizontal",
+   "y": 2,
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Q",
+   "intersecao": [
+    "RMg",
+    "CMg"
+   ],
+   "projetar": "x",
+   "rotulo_x": "qm",
+   "marcar": false
+  },
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": "Q.x",
+   "rotulo": "M",
+   "projetar": "y",
+   "rotulo_y": "pm"
+  },
+  {
+   "id": "U",
+   "xy": [
+    5,
+    5
+   ],
+   "rotulo": "|ε| = 1",
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    1.2,
+    9.9
+   ],
+   "texto": "trecho elástico: |ε| > 1, RMg > 0",
+   "cor": "cinza",
+   "tamanho": 11
+  },
+  {
+   "xy": [
+    6.3,
+    6.6
+   ],
+   "texto": "trecho inelástico: |ε| < 1, RMg < 0",
+   "cor": "cinza",
+   "tamanho": 11
+  }
+ ],
+ "checar": [
+  "Q.x < 5",
+  "M.y > 5",
+  "abs(Q.x - 4) < 0.01"
+ ]
+}

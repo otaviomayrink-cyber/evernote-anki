@@ -1,0 +1,174 @@
+{
+ "id": "ECO-E2-L01010-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Retas paralelas = substitutos perfeitos (troca a taxa constante, TMS = −1); curvas em L = complementares perfeitos (proporção fixa, como sapato esquerdo e direito). O formato em L pertence aos complementares.",
+ "paineis": [
+  {
+   "titulo": "Substitutos perfeitos",
+   "eixos": {
+    "x": "x₁",
+    "y": "x₂",
+    "xmax": 6,
+    "ymax": 6
+   },
+   "curvas": [
+    {
+     "id": "U1",
+     "tipo": "reta",
+     "p1": [
+      0,
+      2
+     ],
+     "p2": [
+      2,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₁",
+     "rotulo_em": 1,
+     "rotulo_desloc": [
+      6,
+      8
+     ]
+    },
+    {
+     "id": "U2",
+     "tipo": "reta",
+     "p1": [
+      0,
+      3.5
+     ],
+     "p2": [
+      3.5,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₂",
+     "rotulo_em": 1.75,
+     "rotulo_desloc": [
+      6,
+      8
+     ]
+    },
+    {
+     "id": "U3",
+     "tipo": "reta",
+     "p1": [
+      0,
+      5
+     ],
+     "p2": [
+      5,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₃",
+     "rotulo_em": 2.5,
+     "rotulo_desloc": [
+      6,
+      8
+     ]
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      3.0,
+      5.4
+     ],
+     "texto": "TMS = −1",
+     "cor": "cinza"
+    }
+   ],
+   "checar": [
+    "abs(U1(1) - 1) < 0.01",
+    "abs(U3(1) - 4) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Complementares perfeitos",
+   "eixos": {
+    "x": "x₁",
+    "y": "x₂",
+    "xmax": 6,
+    "ymax": 6
+   },
+   "curvas": [
+    {
+     "id": "V1",
+     "tipo": "pontos",
+     "pontos": [
+      [
+       1,
+       5.6
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5.6,
+       1
+      ]
+     ],
+     "suave": false,
+     "familia": "demanda",
+     "rotulo": "U₁"
+    },
+    {
+     "id": "V2",
+     "tipo": "pontos",
+     "pontos": [
+      [
+       2,
+       5.6
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       5.6,
+       2
+      ]
+     ],
+     "suave": false,
+     "familia": "demanda",
+     "rotulo": "U₂"
+    },
+    {
+     "id": "V3",
+     "tipo": "pontos",
+     "pontos": [
+      [
+       3,
+       5.6
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       5.6,
+       3
+      ]
+     ],
+     "suave": false,
+     "familia": "demanda",
+     "rotulo": "U₃"
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      3.4,
+      5.4
+     ],
+     "texto": "formato de L",
+     "cor": "cinza"
+    }
+   ]
+  }
+ ]
+}

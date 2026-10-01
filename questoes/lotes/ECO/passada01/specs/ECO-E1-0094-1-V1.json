@@ -1,0 +1,16 @@
+{"id": "ECO-E1-0094-1-V1", "uso": "verso",
+ "legenda": "Com demanda horizontal (perfeitamente elástica), o preço ao consumidor não sai de p₀: o imposto t aparece inteiro como queda do preço recebido pelo vendedor (p₀ → pv). A receita (verde) e o peso morto (vermelho) saem do excedente do produtor.",
+ "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "D", "tipo": "horizontal", "y": 6, "x": [0, 9.5], "familia": "demanda", "rotulo": "D (perfeitamente elástica)"},
+  {"id": "S", "tipo": "reta", "p1": [3, 0.5], "p2": [5.5, 8], "familia": "oferta", "rotulo": "O", "estado": "inicial"},
+  {"id": "St", "tipo": "reta", "p1": [3, 2.5], "p2": [5.5, 10], "familia": "oferta", "rotulo": "O + t"}],
+ "pontos": [
+  {"id": "E0", "intersecao": ["D", "S"], "rotulo": "E₀", "projetar": "x", "rotulo_x": "q₀", "rotulo_desloc": [10, 10]},
+  {"id": "Ec", "intersecao": ["D", "St"], "projetar": true, "rotulo_x": "qₜ", "rotulo_y": "p₀ = pc"},
+  {"id": "Ev", "sobre": "S", "x": "Ec.x", "projetar": "y", "rotulo_y": "pv"}],
+ "areas": [
+  {"tipo": "poligono", "vertices": [[0, "Ec.y"], "Ec", "Ev", [0, "Ev.y"]], "papel": "receita_tributaria", "rotulo": "Receita", "rotulo_xy": ["Ec.x*0.35", "(Ec.y+Ev.y)/2"]},
+  {"tipo": "poligono", "vertices": ["Ec", "E0", "Ev"], "papel": "peso_morto"}],
+ "setas": [{"de": ["Ec.x-0.15", "Ev.y"], "para": ["Ec.x-0.15", "Ec.y"], "cor": "vermelho", "estilo": "<|-|>", "rotulo": "t", "rotulo_desloc": [-20, -8]}],
+ "checar": ["abs(Ec.y - E0.y) < 0.01", "abs((E0.y - Ev.y) - 2) < 0.05", "Ec.x < E0.x"]}

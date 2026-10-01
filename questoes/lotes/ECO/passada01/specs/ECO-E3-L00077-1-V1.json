@@ -1,0 +1,127 @@
+{
+ "id": "ECO-E3-L00077-1-V1",
+ "uso": "verso",
+ "legenda": "A renda sobe e a restrição orçamentária se desloca paralelamente (R₀ → R₁). Com curvas de indiferença convexas, mas com este formato, a nova tangência E₁ tem MAIS do bem normal e MENOS do bem x (x₁ < x₀): x é inferior.",
+ "eixos": {
+  "x": "x",
+  "y": "y",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "R0",
+   "tipo": "reta",
+   "p1": [
+    0,
+    6
+   ],
+   "p2": [
+    6,
+    0
+   ],
+   "familia": "terceira",
+   "rotulo": "R₀",
+   "estado": "inicial",
+   "rotulo_em": 0.5,
+   "rotulo_desloc": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "R1",
+   "tipo": "reta",
+   "p1": [
+    0,
+    9
+   ],
+   "p2": [
+    9,
+    0
+   ],
+   "familia": "terceira",
+   "rotulo": "R₁",
+   "rotulo_em": 7.6,
+   "rotulo_desloc": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "U0",
+   "tipo": "funcao",
+   "expr": "9/(x-1) - 1",
+   "dominio": [
+    2.0,
+    8.8
+   ],
+   "familia": "demanda",
+   "rotulo": "U₀",
+   "estado": "inicial",
+   "rotulo_xy": [
+    9.0,
+    1.0
+   ]
+  },
+  {
+   "id": "U1",
+   "tipo": "funcao",
+   "expr": "2.25/(x-1.5) + 4.5",
+   "dominio": [
+    1.97,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₁"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "sobre": "U0",
+   "x": 4,
+   "rotulo": "E₀",
+   "projetar": "x",
+   "rotulo_x": "x₀"
+  },
+  {
+   "id": "E1",
+   "sobre": "U1",
+   "x": 3,
+   "rotulo": "E₁",
+   "projetar": "x",
+   "rotulo_x": "x₁",
+   "rotulo_desloc": [
+    10,
+    16
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "R0",
+   "para": "R1",
+   "sentido": "direita",
+   "em_y": 1.0
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    5.4,
+    9.3
+   ],
+   "texto": "y = bem normal; x = bem inferior",
+   "cor": "cinza",
+   "tamanho": 11.5
+  }
+ ],
+ "checar": [
+  "abs(R0(4) - E0.y) < 0.02",
+  "abs(R1(3) - E1.y) < 0.02",
+  "E1.x < E0.x",
+  "E1.y > E0.y",
+  "U1(4) > U0(4)"
+ ]
+}

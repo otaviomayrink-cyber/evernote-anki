@@ -1,0 +1,138 @@
+{
+ "id": "ECO-E2-L00438-1-V1",
+ "uso": "verso",
+ "legenda": "Com oferta horizontal (ε = ∞), o imposto t eleva a oferta de O para O + t: o preço ao consumidor sobe exatamente t e o produtor continua recebendo p₀. Todo o ônus fica com o consumidor; a quantidade cai de q₀ para qₜ, com peso morto.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    9.5
+   ],
+   "p2": [
+    9.5,
+    0.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "S",
+   "tipo": "horizontal",
+   "y": 3.5,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O (ε = ∞)",
+   "estado": "inicial",
+   "rotulo_desloc": [
+    -70,
+    -16
+   ]
+  },
+  {
+   "id": "St",
+   "tipo": "horizontal",
+   "y": 5.5,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O + t",
+   "rotulo_desloc": [
+    -45,
+    14
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "S",
+   "para": "St",
+   "sentido": "cima",
+   "em_x": 8.6
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E₀",
+   "projetar": true,
+   "rotulo_x": "q₀",
+   "rotulo_y": "p₀ = pv",
+   "rotulo_desloc": [
+    10,
+    -14
+   ]
+  },
+  {
+   "id": "Et",
+   "intersecao": [
+    "D",
+    "St"
+   ],
+   "rotulo": "Eₜ",
+   "projetar": true,
+   "rotulo_x": "qₜ",
+   "rotulo_y": "pc = p₀ + t",
+   "rotulo_desloc": [
+    10,
+    12
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "Et.y"
+    ],
+    "Et",
+    [
+     "Et.x",
+     "E0.y"
+    ],
+    [
+     0,
+     "E0.y"
+    ]
+   ],
+   "papel": "receita_tributaria",
+   "rotulo": "Receita",
+   "rotulo_xy": [
+    "Et.x*0.5",
+    4.5
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "Et",
+    "E0",
+    [
+     "Et.x",
+     "E0.y"
+    ]
+   ],
+   "papel": "peso_morto"
+  }
+ ],
+ "checar": [
+  "abs((Et.y - E0.y) - 2) < 0.01",
+  "Et.x < E0.x"
+ ]
+}

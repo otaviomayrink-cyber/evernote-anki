@@ -1,0 +1,127 @@
+{
+ "id": "ECO-E1-0957-1-V1",
+ "uso": "verso",
+ "legenda": "O excedente do consumidor é a área entre a demanda e a linha do preço — não toda a área sob a demanda. Quando o preço sobe de p₁ para p₂, o EC encolhe para o triângulo de cima; a faixa vermelha é o que os consumidores perdem.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    0,
+    9.5
+   ],
+   "p2": [
+    9.5,
+    0
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "P1",
+   "tipo": "horizontal",
+   "y": 3,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "referencia",
+   "rotulo": "p₁",
+   "sem_rotulo": true
+  },
+  {
+   "id": "P2",
+   "tipo": "horizontal",
+   "y": 5.5,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "referencia",
+   "rotulo": "p₂",
+   "sem_rotulo": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "D",
+    "P1"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q₁",
+   "rotulo": "A",
+   "rotulo_desloc": [
+    8,
+    14
+   ]
+  },
+  {
+   "id": "B",
+   "intersecao": [
+    "D",
+    "P2"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q₂",
+   "rotulo": "B",
+   "rotulo_desloc": [
+    8,
+    14
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     9.5
+    ],
+    [
+     0,
+     5.5
+    ],
+    "B"
+   ],
+   "papel": "excedente_consumidor",
+   "rotulo": "EC após a alta",
+   "rotulo_xy": [
+    1.6,
+    6.6
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     5.5
+    ],
+    "B",
+    "A",
+    [
+     0,
+     3
+    ]
+   ],
+   "papel": "perda",
+   "rotulo": "perda de EC",
+   "rotulo_xy": [
+    2.6,
+    4.25
+   ]
+  }
+ ],
+ "checar": [
+  "B.x < A.x",
+  "B.y > A.y",
+  "(9.5 - B.y) * B.x / 2 < (9.5 - A.y) * A.x / 2"
+ ]
+}

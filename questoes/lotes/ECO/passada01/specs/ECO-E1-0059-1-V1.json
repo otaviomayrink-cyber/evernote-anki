@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E1-0059-1-V1",
+ "uso": "verso",
+ "legenda": "A oferta se desloca para a esquerda (O₁ → O₂) e o equilíbrio sobe ao longo da demanda: de E₁ para E₂ o preço aumenta (p₂ > p₁), mas a quantidade de equilíbrio diminui (q₂ < q₁).",
+ "modelo": "oferta_demanda",
+ "params": {
+  "deslocar": {
+   "S": "esquerda"
+  }
+ },
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x < E1.x"
+ ],
+ "substituir": {
+  "D1": {
+   "rotulo": "D"
+  }
+ }
+}

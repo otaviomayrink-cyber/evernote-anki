@@ -1,0 +1,18 @@
+{"id": "ECO-E1-0119-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "À esquerda, demanda horizontal (perfeitamente elástica): ao preço p* compra-se qualquer quantidade; um centavo acima, nada. À direita, demanda vertical (perfeitamente inelástica): a quantidade q* não muda, seja qual for o preço.",
+ "paineis": [
+  {"titulo": "Perfeitamente elástica (|ε| = ∞)",
+   "eixos": {"x": "q", "y": "p"},
+   "curvas": [{"id": "D", "tipo": "horizontal", "y": 5, "x": [0, 9], "familia": "demanda", "rotulo": "D"}],
+   "pontos": [{"id": "P", "xy": [0, 5], "marcar": false, "rotulo_y": "p*"}],
+   "textos": [{"xy": [1.2, 7.2], "texto": "acima de p*: q = 0", "cor": "vermelho", "negrito": true},
+              {"xy": [1.2, 3.4], "texto": "em p*: qualquer q", "cor": "cinza"}]},
+  {"titulo": "Perfeitamente inelástica (ε = 0)",
+   "eixos": {"x": "q", "y": "p"},
+   "curvas": [{"id": "D", "tipo": "vertical", "x": 5, "y": [0, 9], "familia": "demanda", "rotulo": "D"}],
+   "pontos": [{"id": "Q", "xy": [5, 0], "marcar": false, "rotulo_x": "q*"},
+              {"id": "A", "xy": [5, 3], "rotulo": "p₁", "rotulo_desloc": [-34, 0]},
+              {"id": "B", "xy": [5, 7], "rotulo": "p₂", "rotulo_desloc": [-34, 0]}],
+   "setas": [{"de": [5.5, 3.2], "para": [5.5, 6.8], "cor": "vermelho", "rotulo": "p sobe, q fica", "rotulo_desloc": [6, -4]}],
+   "checar": ["abs(A.x - B.x) < 0.01"]}
+ ]}

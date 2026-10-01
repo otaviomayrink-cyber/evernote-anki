@@ -1,0 +1,208 @@
+{
+ "id": "ECO-E2-L01213-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "À esquerda, política de COMPRA: o preço fica em Pmín, os consumidores levam Qd, e o governo compra o excedente (Qs − Qd) pagando Pmín por unidade (área amarela). À direita, pagamento da DIFERENÇA (subsídio): toda a produção Qs é vendida no mercado ao preço p, e o governo paga Pmín − p por unidade — é o que o item descreve.",
+ "paineis": [
+  {
+   "titulo": "Compra pelo governo",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      9.5
+     ],
+     "p2": [
+      9.5,
+      0.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      0.5
+     ],
+     "p2": [
+      9.5,
+      9.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O"
+    },
+    {
+     "id": "Pm",
+     "tipo": "horizontal",
+     "y": 7,
+     "x": [
+      0,
+      9.6
+     ],
+     "familia": "destaque",
+     "rotulo": "Pmín",
+     "tracejada": true
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "rotulo": "E₀",
+     "rotulo_desloc": [
+      10,
+      -4
+     ]
+    },
+    {
+     "id": "A",
+     "intersecao": [
+      "D",
+      "Pm"
+     ],
+     "projetar": "x",
+     "rotulo_x": "Qd"
+    },
+    {
+     "id": "B",
+     "intersecao": [
+      "S",
+      "Pm"
+     ],
+     "projetar": "x",
+     "rotulo_x": "Qs"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       "A.x",
+       0
+      ],
+      "A",
+      "B",
+      [
+       "B.x",
+       0
+      ]
+     ],
+     "papel": "gasto",
+     "rotulo": "governo\ncompra",
+     "rotulo_xy": [
+      "(A.x+B.x)/2",
+      2.2
+     ]
+    }
+   ],
+   "checar": [
+    "abs(B.x - A.x - 4) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Pagamento da diferença",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      9.5
+     ],
+     "p2": [
+      9.5,
+      0.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      0.5
+     ],
+     "p2": [
+      9.5,
+      9.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O"
+    },
+    {
+     "id": "Pm",
+     "tipo": "horizontal",
+     "y": 7,
+     "x": [
+      0,
+      9.6
+     ],
+     "familia": "destaque",
+     "rotulo": "Pmín",
+     "tracejada": true
+    }
+   ],
+   "pontos": [
+    {
+     "id": "B",
+     "intersecao": [
+      "S",
+      "Pm"
+     ],
+     "projetar": "x",
+     "rotulo_x": "Qs"
+    },
+    {
+     "id": "C",
+     "sobre": "D",
+     "x": "B.x",
+     "projetar": "y",
+     "rotulo_y": "p"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       "C.y"
+      ],
+      [
+       0,
+       7
+      ],
+      "B",
+      "C"
+     ],
+     "papel": "gasto",
+     "rotulo": "governo paga\na diferença",
+     "rotulo_xy": [
+      1.9,
+      5.2
+     ]
+    }
+   ],
+   "checar": [
+    "abs(C.y - 3) < 0.01"
+   ]
+  }
+ ]
+}

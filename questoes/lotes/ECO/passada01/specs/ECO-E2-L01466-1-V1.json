@@ -1,0 +1,126 @@
+{
+ "id": "ECO-E2-L01466-1-V1",
+ "uso": "verso",
+ "legenda": "Indústria de custos decrescentes: a demanda sobe (D1 → D2) e o preço sobe no curto prazo (E2); a entrada de firmas e as economias externas baixam os custos e levam a oferta para S2. O novo equilíbrio de longo prazo (E3) tem preço menor que E1, e a oferta de longo prazo (OLP) que liga E1 a E3 é negativamente inclinada.",
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 13,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "D1",
+   "tipo": "funcao",
+   "expr": "10 - x",
+   "dominio": [
+    1,
+    9.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "D2",
+   "tipo": "funcao",
+   "expr": "13 - x",
+   "dominio": [
+    3.5,
+    12
+   ],
+   "familia": "demanda",
+   "rotulo": "D₂"
+  },
+  {
+   "id": "S1",
+   "tipo": "funcao",
+   "expr": "2 + 0.5*x",
+   "dominio": [
+    0,
+    11
+   ],
+   "familia": "oferta",
+   "rotulo": "S₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "S2",
+   "tipo": "funcao",
+   "expr": "0.5*x - 0.8",
+   "dominio": [
+    2,
+    12.5
+   ],
+   "familia": "oferta",
+   "rotulo": "S₂"
+  },
+  {
+   "id": "OLP",
+   "tipo": "reta",
+   "p1": "E1",
+   "p2": "E3",
+   "estender": true,
+   "familia": "destaque",
+   "rotulo": "OLP"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "D1",
+    "S1"
+   ],
+   "rotulo": "E₁",
+   "rotulo_desloc": [
+    -12,
+    -24
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "D2",
+    "S1"
+   ],
+   "rotulo": "E₂",
+   "rotulo_desloc": [
+    4,
+    16
+   ]
+  },
+  {
+   "id": "E3",
+   "intersecao": [
+    "D2",
+    "S2"
+   ],
+   "rotulo": "E₃",
+   "rotulo_desloc": [
+    6,
+    16
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D1",
+   "para": "D2",
+   "sentido": "direita",
+   "em_y": 8
+  },
+  {
+   "de": "S1",
+   "para": "S2",
+   "sentido": "direita",
+   "em_y": 2.6
+  }
+ ],
+ "setas": [],
+ "checar": [
+  "E2.y > E1.y",
+  "E3.y < E1.y",
+  "E3.x > E1.x"
+ ]
+}

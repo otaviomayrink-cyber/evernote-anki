@@ -46,7 +46,7 @@
 | `comentario_fonte` | texto | Resumo fiel do comentário original (vazio se não havia) |
 | `qualidade_fonte` | texto | `bom` · `raso` · `com_erro` · `ausente` |
 | `verso_html` | HTML | Verso completo, como renderizado |
-| `alertas` | lista | `contestavel: …` · `texto_parcial: …` · `texto_irrecuperavel: …` · `texto_reconstruido: …` · `banca_confirmada: …` · `banca_provavel: …` · `destino_sugerido: …` · `redirecionado: …` · `duplicata: …` · `figura_conjectural: …` · `figura_irrecuperavel: …` · `transcricao_incoerente: …` · `teste_importacao: …` · `qualidade_fonte: …` (erro do comentário de origem que vale registrar) |
+| `alertas` | lista | `contestavel: …` · `texto_parcial: …` · `texto_irrecuperavel: …` · `texto_reconstruido: …` · `banca_confirmada: …` · `banca_provavel: …` · `destino_sugerido: …` · `redirecionado: …` · `duplicata: …` · `figura_conjectural: …` · `figura_irrecuperavel: …` · `transcricao_incoerente: …` · `teste_importacao: …` · `qualidade_fonte: …` (erro do comentário de origem que vale registrar) · `quase_duplicata: …` (item irmão de outra prova/redação, com o id) · `texto_corrigido: …` (erro evidente de digitação corrigido na assertiva) · `dado_aproximado: …` (regra de bolso ou número sem fonte oficial) |
 | `figuras` | lista | Figuras **do card** (§2.1) |
 | `figuras_fonte` | lista | Imagens **da fonte** e o destino de cada uma (§2.1) |
 

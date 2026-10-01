@@ -1,0 +1,99 @@
+{
+ "id": "ECO-E2-L00992-1-V1",
+ "uso": "verso",
+ "legenda": "Ao longo da curva de indiferença bem comportada, a inclinação cai em módulo: em A (pouco x₁, muito x₂) a |TMS| é 4; em B (muito x₁, pouco x₂), só 1/4. É a TMS decrescente que dá a forma convexa.",
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "U",
+   "tipo": "funcao",
+   "expr": "16/x",
+   "dominio": [
+    1.65,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₀"
+  },
+  {
+   "id": "TA",
+   "tipo": "reta",
+   "p1": [
+    1.5,
+    10
+   ],
+   "p2": [
+    3.2,
+    3.2
+   ],
+   "familia": "referencia"
+  },
+  {
+   "id": "TB",
+   "tipo": "reta",
+   "p1": [
+    6,
+    2.5
+   ],
+   "p2": [
+    9,
+    1.75
+   ],
+   "familia": "referencia"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "sobre": "U",
+   "x": 2,
+   "rotulo": "A",
+   "rotulo_desloc": [
+    10,
+    4
+   ]
+  },
+  {
+   "id": "B",
+   "sobre": "U",
+   "x": 8,
+   "rotulo": "B",
+   "rotulo_desloc": [
+    -4,
+    -18
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    3.0,
+    7.2
+   ],
+   "texto": "|TMS| = 4",
+   "cor": "vermelho",
+   "negrito": true
+  },
+  {
+   "xy": [
+    6.8,
+    3.1
+   ],
+   "texto": "|TMS| = 1/4",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs(A.y - 8) < 0.01",
+  "abs(B.y - 2) < 0.01",
+  "abs(TA(2) - 8) < 0.05",
+  "abs(TB(8) - 2) < 0.05",
+  "(U(1.9) - U(2.1)) > (U(7.9) - U(8.1))"
+ ]
+}

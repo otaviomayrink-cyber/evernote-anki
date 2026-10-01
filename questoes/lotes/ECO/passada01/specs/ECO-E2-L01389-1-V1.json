@@ -1,0 +1,7 @@
+{"id": "ECO-E2-L01389-1-V1", "uso": "verso",
+ "legenda": "O imposto t abre uma cunha entre o preço pago pelo comprador (pc) e o recebido pelo vendedor (pv). EC (azul) e EP (ocre) são os excedentes que sobram; o retângulo verde é a receita do governo (t × qₜ); o triângulo vermelho (PM) é o peso morto — trocas que deixam de ocorrer entre qₜ e q₀.",
+ "modelo": "tributo",
+ "params": {"t": 2, "D": [[0, 9.5], [9, 0.5]], "S": [[0, 0.5], [9, 9.5]]},
+ "areas": [
+   {"tipo": "poligono", "vertices": [[0, 9.5], [0, "Ec.y"], "Ec"], "papel": "excedente_consumidor", "rotulo": "EC", "rotulo_xy": [0.9, 7.2]},
+   {"tipo": "poligono", "vertices": [[0, "Ev.y"], "Ev", [0, 0.5]], "papel": "excedente_produtor", "rotulo": "EP", "rotulo_xy": [0.9, 2.9]}]}

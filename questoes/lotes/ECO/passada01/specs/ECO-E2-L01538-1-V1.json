@@ -1,0 +1,129 @@
+{
+ "id": "ECO-E2-L01538-1-V1",
+ "uso": "verso",
+ "legenda": "Com o preço P entre o mínimo do CVMe e o mínimo do CTMe, a firma produz onde P = CMg e tem prejuízo (retângulo vermelho), mas a receita cobre todo o custo variável e parte do custo fixo (retângulo verde). Parada, perderia o custo fixo inteiro (vermelho + verde).",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 11,
+  "ymax": 7
+ },
+ "curvas": [
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "0.3*x**2 - 2.4*x + 6",
+   "dominio": [
+    2,
+    9.4
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "CTMe",
+   "tipo": "funcao",
+   "expr": "0.1*x**2 - 1.2*x + 6 + 12/x",
+   "dominio": [
+    2.3,
+    9.8
+   ],
+   "familia": "terceira",
+   "rotulo": "CTMe"
+  },
+  {
+   "id": "CVMe",
+   "tipo": "funcao",
+   "expr": "0.1*x**2 - 1.2*x + 6",
+   "dominio": [
+    3.3,
+    9.8
+   ],
+   "familia": "quarta",
+   "rotulo": "CVMe"
+  },
+  {
+   "id": "P",
+   "tipo": "horizontal",
+   "y": 3.4,
+   "x": [
+    0,
+    9.8
+   ],
+   "familia": "demanda",
+   "rotulo": "P = RMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Q",
+   "intersecao": [
+    "CMg",
+    "P"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q*"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     3.4
+    ],
+    [
+     "Q.x",
+     3.4
+    ],
+    [
+     "Q.x",
+     "CTMe(Q.x)"
+    ],
+    [
+     0,
+     "CTMe(Q.x)"
+    ]
+   ],
+   "papel": "perda",
+   "rotulo": "prejuízo",
+   "rotulo_xy": [
+    1.6,
+    "(3.4 + CTMe(Q.x))/2"
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "CVMe(Q.x)"
+    ],
+    [
+     "Q.x",
+     "CVMe(Q.x)"
+    ],
+    [
+     "Q.x",
+     3.4
+    ],
+    [
+     0,
+     3.4
+    ]
+   ],
+   "papel": "ganho",
+   "rotulo": "parte do CF coberta",
+   "rotulo_xy": [
+    1.6,
+    "(3.4 + CVMe(Q.x))/2"
+   ]
+  }
+ ],
+ "checar": [
+  "Q.y > CVMe(Q.x)",
+  "Q.y < CTMe(Q.x)",
+  "abs((CTMe(Q.x) - CVMe(Q.x))*Q.x - 12) < 0.01"
+ ]
+}

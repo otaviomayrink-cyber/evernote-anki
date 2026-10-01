@@ -1,0 +1,17 @@
+{"id": "ECO-E1-0222-1-V1", "uso": "verso",
+ "legenda": "À esquerda de E, CMg < CTMe e a média cai; à direita, CMg > CTMe e a média sobe. O CMg corta o CVMe e o CTMe em seus pontos mínimos.",
+ "eixos": {"x": "q", "y": "R$", "xmax": 11, "ymax": 22},
+ "curvas": [
+  {"id": "CMg", "tipo": "funcao", "expr": "10 - 4*x + 0.6*x**2", "dominio": [0.5, 9.2], "familia": "oferta", "rotulo": "CMg"},
+  {"id": "CTMe", "tipo": "funcao", "expr": "40/x + 10 - 2*x + 0.2*x**2", "dominio": [2.6, 11], "familia": "terceira", "rotulo": "CTMe"},
+  {"id": "CVMe", "tipo": "funcao", "expr": "10 - 2*x + 0.2*x**2", "dominio": [0.3, 11], "familia": "quarta", "rotulo": "CVMe"}
+ ],
+ "pontos": [
+  {"id": "E", "intersecao": ["CMg", "CTMe"], "rotulo": "E", "rotulo_desloc": [-24, 6], "projetar": "x", "rotulo_x": "q mín"},
+  {"id": "V", "intersecao": ["CMg", "CVMe"], "indice": 0, "rotulo": "", "marcar": true}
+ ],
+ "textos": [
+  {"xy": [3.4, 17], "texto": "CMg < CTMe → CTMe cai", "cor": "vermelho", "ha": "left"},
+  {"xy": [7.6, 5.0], "texto": "CMg > CTMe → CTMe sobe", "cor": "vermelho", "ha": "left"}
+ ],
+ "checar": ["abs(CMg(E.x) - CTMe(E.x)) < 0.05", "CTMe(E.x + 1) > CTMe(E.x)", "CTMe(E.x - 1) > CTMe(E.x)", "CMg(E.x + 1) > CTMe(E.x + 1)", "CMg(E.x - 1) < CTMe(E.x - 1)", "abs(V.x - 5) < 0.05"]}

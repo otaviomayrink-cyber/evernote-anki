@@ -1,0 +1,4 @@
+{"id": "ECO-E1-0285-1-V1", "uso": "verso",
+ "legenda": "O monopolista produz qm, onde RMg = CMg, e cobra pm na demanda (ponto M). Entre qm e qc, cada unidade vale para o consumidor mais do que custa (D acima do CMg), mas não é produzida: o triângulo PM é o peso morto.",
+ "modelo": "monopolio", "params": {"a": 9, "b": 1, "c": 3},
+ "checar": ["M.y > Q.y", "abs(C.x - 2*Q.x) < 0.01"]}

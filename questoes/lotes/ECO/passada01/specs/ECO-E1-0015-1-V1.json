@@ -1,0 +1,14 @@
+{"id": "ECO-E1-0015-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "À esquerda, a retomada leva a economia de um ponto interior (A, com desemprego) para a fronteira (B): a FPP não se move. À direita, só mais fatores ou melhor tecnologia deslocam a própria fronteira (FPP₁ → FPP₂).",
+ "paineis": [
+  {"titulo": "Retomada: menos desemprego",
+   "eixos": {"x": "X", "y": "Y", "xmax": 10, "ymax": 10},
+   "curvas": [{"id": "F", "tipo": "funcao", "expr": "sqrt(maximum(0, 64 - x**2))", "dominio": [0, 8], "familia": "demanda", "rotulo": "FPP", "rotulo_em": 5.6, "rotulo_desloc": [6, 6]}],
+   "pontos": [
+     {"id": "A", "xy": [3.2, 3.6], "rotulo": "A"},
+     {"id": "B", "sobre": "F", "x": 4.9, "rotulo": "B"}],
+   "setas": [{"de": ["A.x+0.25", "A.y+0.25"], "para": ["B.x-0.2", "B.y-0.25"], "cor": "vermelho"}],
+   "checar": ["A.x**2 + A.y**2 < 64", "abs(B.x**2 + B.y**2 - 64) < 0.01"]},
+  {"titulo": "Crescimento: fatores, tecnologia",
+   "eixos": {"x": "X", "y": "Y", "xmax": 10, "ymax": 10}, "modelo": "fpp", "params": {"expandir": true}}
+ ]}

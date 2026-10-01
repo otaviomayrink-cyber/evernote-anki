@@ -1,0 +1,127 @@
+{
+ "id": "ECO-E2-L00884-1-V1",
+ "uso": "verso",
+ "legenda": "Complementos perfeitos (proporção fixa 1:1): curvas em L com vértices sobre o raio x₂ = x₁. A TMS é infinita no trecho vertical, nula no horizontal e indefinida no vértice — nunca “crescente”.",
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 5,
+  "ymax": 5
+ },
+ "curvas": [
+  {
+   "id": "R",
+   "tipo": "reta",
+   "p1": [
+    0,
+    0
+   ],
+   "p2": [
+    4.6,
+    4.6
+   ],
+   "familia": "referencia",
+   "rotulo": "x₂ = x₁"
+  },
+  {
+   "id": "U1",
+   "tipo": "pontos",
+   "pontos": [
+    [
+     1,
+     4.8
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     4.8,
+     1
+    ]
+   ],
+   "suave": false,
+   "familia": "demanda",
+   "rotulo": "U₁"
+  },
+  {
+   "id": "U2",
+   "tipo": "pontos",
+   "pontos": [
+    [
+     2,
+     4.8
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     4.8,
+     2
+    ]
+   ],
+   "suave": false,
+   "familia": "demanda",
+   "rotulo": "U₂"
+  },
+  {
+   "id": "U3",
+   "tipo": "pontos",
+   "pontos": [
+    [
+     3,
+     4.8
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4.8,
+     3
+    ]
+   ],
+   "suave": false,
+   "familia": "demanda",
+   "rotulo": "U₃"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "V2",
+   "xy": [
+    2,
+    2
+   ],
+   "rotulo": "vértice: TMS indefinida",
+   "rotulo_desloc": [
+    10,
+    -24
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    2.08,
+    3.7
+   ],
+   "texto": "TMS = ∞",
+   "cor": "vermelho",
+   "negrito": true
+  },
+  {
+   "xy": [
+    3.3,
+    2.18
+   ],
+   "texto": "TMS = 0",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs(V2.x - V2.y) < 0.01"
+ ]
+}

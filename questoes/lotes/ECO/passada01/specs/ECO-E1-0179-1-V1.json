@@ -1,0 +1,9 @@
+{
+ "id": "ECO-E1-0179-1-V1",
+ "uso": "verso",
+ "legenda": "O imposto t desloca a oferta para cima (O → O + t): a quantidade cai de q₀ para qₜ, o comprador paga pc > p₀ e o vendedor recebe pv < p₀. Parte do excedente vira receita (retângulo); o triângulo é o peso morto das trocas que deixaram de ocorrer.",
+ "modelo": "tributo",
+ "params": {
+  "t": 2
+ }
+}

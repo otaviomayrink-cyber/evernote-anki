@@ -1,0 +1,242 @@
+{
+ "id": "ECO-E2-L00878-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "A cunha t se reparte conforme as elasticidades. À esquerda (oferta elástica, demanda inelástica), pc sobe quase t inteiro: o consumidor arca com a maior parte. À direita (oferta inelástica, demanda elástica), pv cai quase t inteiro: o produtor arca com a maior parte.",
+ "paineis": [
+  {
+   "titulo": "Consumidor arca mais",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      3,
+      9.5
+     ],
+     "p2": [
+      5.5,
+      0.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      1.5
+     ],
+     "p2": [
+      9.5,
+      4.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial"
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      4.5
+     ],
+     "p2": [
+      9.5,
+      7.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O + t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "projetar": true,
+     "rotulo_x": "q₀"
+    },
+    {
+     "id": "Ec",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "projetar": true,
+     "rotulo_x": "qₜ",
+     "rotulo_y": "pc"
+    },
+    {
+     "id": "Ev",
+     "sobre": "S",
+     "x": "Ec.x",
+     "projetar": "y",
+     "rotulo_y": "pv"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       "Ec.y"
+      ],
+      "Ec",
+      "Ev",
+      [
+       0,
+       "Ev.y"
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "Receita",
+     "rotulo_xy": [
+      "Ec.x*0.4",
+      "Ev.y+0.3*(Ec.y-Ev.y)"
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      "Ec",
+      "E0",
+      "Ev"
+     ],
+     "papel": "peso_morto"
+    }
+   ],
+   "checar": [
+    "abs((Ec.y - Ev.y) - 3) < 0.01",
+    "Ec.x < E0.x",
+    "(Ec.y - E0.y) > (E0.y - Ev.y)"
+   ]
+  },
+  {
+   "titulo": "Produtor arca mais",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      7.5
+     ],
+     "p2": [
+      9.5,
+      4.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      3.5,
+      0.5
+     ],
+     "p2": [
+      6,
+      9.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial"
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      3.5,
+      3.5
+     ],
+     "p2": [
+      6,
+      12.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O + t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "projetar": true,
+     "rotulo_x": "q₀"
+    },
+    {
+     "id": "Ec",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "projetar": true,
+     "rotulo_x": "qₜ",
+     "rotulo_y": "pc"
+    },
+    {
+     "id": "Ev",
+     "sobre": "S",
+     "x": "Ec.x",
+     "projetar": "y",
+     "rotulo_y": "pv"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       "Ec.y"
+      ],
+      "Ec",
+      "Ev",
+      [
+       0,
+       "Ev.y"
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "Receita",
+     "rotulo_xy": [
+      "Ec.x*0.4",
+      "(Ec.y+Ev.y)/2"
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      "Ec",
+      "E0",
+      "Ev"
+     ],
+     "papel": "peso_morto"
+    }
+   ],
+   "checar": [
+    "abs((Ec.y - Ev.y) - 3) < 0.01",
+    "Ec.x < E0.x",
+    "(E0.y - Ev.y) > (Ec.y - E0.y)"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "id": "ECO-E2-L01371-1-F1",
+ "uso": "frente",
+ "fidelidade": "conjectural",
+ "legenda": "Funções de produção y* e y** (insumo x no eixo horizontal; produto y no vertical). (figura redesenhada; traçado aproximado)",
+ "eixos": {
+  "x": "x",
+  "y": "y"
+ },
+ "curvas": [
+  {
+   "id": "Y1",
+   "tipo": "funcao",
+   "expr": "2.2*x**0.5",
+   "dominio": [
+    0,
+    9.4
+   ],
+   "familia": "demanda",
+   "rotulo": "y*"
+  },
+  {
+   "id": "Y2",
+   "tipo": "funcao",
+   "expr": "3.0*x**0.5",
+   "dominio": [
+    0,
+    9.4
+   ],
+   "familia": "oferta",
+   "rotulo": "y**"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "xy": [
+    3,
+    7.6
+   ],
+   "rotulo": "A"
+  },
+  {
+   "id": "B",
+   "sobre": "Y2",
+   "x": 3,
+   "rotulo": "B",
+   "projetar": "x",
+   "rotulo_x": "x1",
+   "rotulo_desloc": [
+    -26,
+    12
+   ]
+  },
+  {
+   "id": "C",
+   "sobre": "Y1",
+   "x": 3,
+   "rotulo": "C",
+   "rotulo_desloc": [
+    10,
+    -18
+   ]
+  },
+  {
+   "id": "D",
+   "sobre": "Y1",
+   "x": 7,
+   "rotulo": "D",
+   "rotulo_desloc": [
+    10,
+    -18
+   ]
+  },
+  {
+   "id": "E",
+   "sobre": "Y2",
+   "x": 7,
+   "rotulo": "E",
+   "projetar": "x",
+   "rotulo_x": "x2",
+   "rotulo_desloc": [
+    -26,
+    12
+   ]
+  }
+ ]
+}

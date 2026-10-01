@@ -1,0 +1,66 @@
+{
+ "id": "ECO-E2-L00391-1-V1",
+ "uso": "verso",
+ "legenda": "Ao preço p, a firma produz q* (p = CMg). Somando, unidade a unidade, a diferença entre o preço e o custo marginal obtém-se RT − CVT: é o excedente do produtor, igual a lucro + custo fixo. O custo fixo não aparece no gráfico porque não mexe no CMg.",
+ "eixos": {
+  "x": "q",
+  "y": "R$"
+ },
+ "curvas": [
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "2 + 0.25*(x-3)**2",
+   "dominio": [
+    0,
+    8.2
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "P",
+   "tipo": "horizontal",
+   "y": 6,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "demanda",
+   "rotulo": "p = RMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Q",
+   "intersecao": [
+    "CMg",
+    "P"
+   ],
+   "indice": 0,
+   "projetar": "x",
+   "rotulo_x": "q*"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "entre",
+   "sup": "P",
+   "inf": "CMg",
+   "x": [
+    0,
+    "Q.x"
+   ],
+   "papel": "excedente_produtor",
+   "rotulo": "EP = RT − CVT",
+   "rotulo_xy": [
+    3,
+    4.4
+   ]
+  }
+ ],
+ "checar": [
+  "abs(Q.x - 7) < 0.01",
+  "abs(Q.y - 6) < 0.01"
+ ]
+}

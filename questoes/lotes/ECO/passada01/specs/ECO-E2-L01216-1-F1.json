@@ -1,0 +1,8 @@
+{"id": "ECO-E2-L01216-1-F1", "uso": "frente", "fidelidade": "conjectural",
+ "legenda": "Isoquantas (Q) da função de produção com capital (K) e trabalho (L). (figura redesenhada; traçado aproximado)",
+ "eixos": {"x": "K", "y": "L"},
+ "curvas": [
+   {"id": "Q1", "tipo": "reta", "p1": [0, 2.5], "p2": [3, 0], "familia": "demanda", "rotulo": "Q1", "rotulo_em": 1.5, "rotulo_desloc": [6, 8]},
+   {"id": "Q2", "tipo": "reta", "p1": [0, 5], "p2": [6, 0], "familia": "demanda", "rotulo": "Q2", "rotulo_em": 3, "rotulo_desloc": [6, 8]},
+   {"id": "Q3", "tipo": "reta", "p1": [0, 7.5], "p2": [9, 0], "familia": "demanda", "rotulo": "Q3", "rotulo_em": 4.5, "rotulo_desloc": [6, 8]}]
+}

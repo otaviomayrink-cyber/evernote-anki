@@ -1,0 +1,196 @@
+{
+ "id": "ECO-E2-L01211-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Mesma oferta, mesmo imposto t, mesmo equilíbrio inicial E₀. Com demanda inelástica (à esquerda), a quantidade quase não cai; com demanda elástica (à direita), cai muito (q₀ → q₁). Quanto mais elástica a demanda, menor a quantidade transacionada após o imposto.",
+ "paineis": [
+  {
+   "titulo": "Demanda inelástica",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      3.85,
+      9.6
+     ],
+     "p2": [
+      6.15,
+      0.4
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      1,
+      1
+     ],
+     "p2": [
+      9.4,
+      9.4
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial"
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      1,
+      4
+     ],
+     "p2": [
+      6.6,
+      9.6
+     ],
+     "familia": "oferta",
+     "rotulo": "O + t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "rotulo": "E₀",
+     "projetar": "x",
+     "rotulo_x": "q₀",
+     "rotulo_desloc": [
+      10,
+      -6
+     ]
+    },
+    {
+     "id": "E1",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "rotulo": "E₁",
+     "projetar": "x",
+     "rotulo_x": "q₁",
+     "rotulo_desloc": [
+      -30,
+      4
+     ]
+    }
+   ],
+   "checar": [
+    "E0.x - E1.x < 0.7"
+   ]
+  },
+  {
+   "titulo": "Demanda elástica",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      0.3,
+      6.88
+     ],
+     "p2": [
+      9.7,
+      3.12
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      1,
+      1
+     ],
+     "p2": [
+      9.4,
+      9.4
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial"
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      1,
+      4
+     ],
+     "p2": [
+      6.6,
+      9.6
+     ],
+     "familia": "oferta",
+     "rotulo": "O + t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "rotulo": "E₀",
+     "projetar": "x",
+     "rotulo_x": "q₀",
+     "rotulo_desloc": [
+      10,
+      -12
+     ]
+    },
+    {
+     "id": "E1",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "rotulo": "E₁",
+     "projetar": "x",
+     "rotulo_x": "q₁",
+     "rotulo_desloc": [
+      -30,
+      8
+     ]
+    }
+   ],
+   "setas": [
+    {
+     "de": [
+      "E0.x",
+      0.6
+     ],
+     "para": [
+      "E1.x",
+      0.6
+     ],
+     "cor": "vermelho",
+     "rotulo": "queda grande de q",
+     "rotulo_desloc": [
+      -40,
+      8
+     ]
+    }
+   ],
+   "checar": [
+    "E0.x - E1.x > 1.5"
+   ]
+  }
+ ]
+}

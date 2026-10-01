@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E1-0063-1-V1",
+ "uso": "verso",
+ "legenda": "Com a oferta constante, a demanda se desloca para a esquerda (D₁ → D₂) e o equilíbrio desce ao longo da oferta: de E₁ para E₂ caem juntos o preço (p₂ < p₁) e a quantidade (q₂ < q₁).",
+ "modelo": "oferta_demanda",
+ "params": {
+  "deslocar": {
+   "D": "esquerda"
+  }
+ },
+ "checar": [
+  "E2.y < E1.y",
+  "E2.x < E1.x"
+ ],
+ "substituir": {
+  "S1": {
+   "rotulo": "O"
+  }
+ }
+}

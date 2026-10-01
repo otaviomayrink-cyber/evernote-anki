@@ -1,0 +1,96 @@
+{
+ "id": "ECO-E2-L01724-1-V1",
+ "uso": "verso",
+ "legenda": "Com o capital travado em K̄, a firma só pode ficar em A, onde a reta K = K̄ corta a isocusto: alcança apenas q₁. No longo prazo, gastando o mesmo, desloca-se para B, tangência entre isocusto e isoquanta, e alcança q₂ > q₁.",
+ "eixos": {
+  "x": "L",
+  "y": "K",
+  "xmax": 11,
+  "ymax": 11
+ },
+ "curvas": [
+  {
+   "id": "C",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    10,
+    0
+   ],
+   "familia": "quarta",
+   "rotulo": "isocusto",
+   "rotulo_xy": [
+    0.3,
+    10.6
+   ]
+  },
+  {
+   "id": "Q1",
+   "tipo": "funcao",
+   "expr": "16/x",
+   "dominio": [
+    1.6,
+    10.5
+   ],
+   "familia": "demanda",
+   "estado": "inicial",
+   "rotulo": "q₁"
+  },
+  {
+   "id": "Q2",
+   "tipo": "funcao",
+   "expr": "25/x",
+   "dominio": [
+    2.4,
+    10.5
+   ],
+   "familia": "demanda",
+   "rotulo": "q₂"
+  },
+  {
+   "id": "Kf",
+   "tipo": "horizontal",
+   "y": 8,
+   "x": [
+    0,
+    9
+   ],
+   "familia": "referencia",
+   "rotulo": "K̄ (curto prazo)"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "Kf",
+    "C"
+   ],
+   "rotulo": "A",
+   "rotulo_desloc": [
+    0,
+    16
+   ]
+  },
+  {
+   "id": "B",
+   "xy": [
+    5,
+    5
+   ],
+   "rotulo": "B",
+   "projetar": true,
+   "rotulo_x": "L*",
+   "rotulo_y": "K*"
+  }
+ ],
+ "checar": [
+  "abs(A.x + A.y - 10) < 0.01",
+  "abs(A.x*A.y - 16) < 0.01",
+  "abs(B.x + B.y - 10) < 0.01",
+  "B.x*B.y > A.x*A.y"
+ ]
+}

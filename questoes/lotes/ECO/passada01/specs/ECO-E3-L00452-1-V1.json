@@ -1,0 +1,12 @@
+{"id": "ECO-E3-L00452-1-V1", "uso": "verso",
+ "legenda": "Com oferta vertical (elasticidade zero), a quantidade fica travada em q*: quando a demanda se desloca (D₁ → D₂), só o preço muda (p₁ → p₂). A posição da demanda decide o preço; a oferta decide a quantidade.",
+ "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "S", "tipo": "vertical", "x": 5, "y": [0.3, 9.5], "familia": "oferta", "rotulo": "O (ε = 0)"},
+  {"id": "D1", "tipo": "reta", "p1": [1, 8.5], "p2": [8, 1.5], "familia": "demanda", "rotulo": "D₁", "estado": "inicial"},
+  {"id": "D2", "tipo": "reta", "p1": [3, 8.5], "p2": [9.6, 1.9], "familia": "demanda", "rotulo": "D₂"}],
+ "deslocamentos": [{"de": "D1", "para": "D2", "sentido": "direita", "em_y": 2.6}],
+ "pontos": [
+  {"id": "E1", "intersecao": ["D1", "S"], "rotulo": "E₁", "projetar": "y", "rotulo_y": "p₁", "rotulo_desloc": [-26, -4]},
+  {"id": "E2", "intersecao": ["D2", "S"], "rotulo": "E₂", "projetar": true, "rotulo_x": "q*", "rotulo_y": "p₂"}],
+ "checar": ["E2.y > E1.y", "abs(E2.x - E1.x) < 0.01"]}

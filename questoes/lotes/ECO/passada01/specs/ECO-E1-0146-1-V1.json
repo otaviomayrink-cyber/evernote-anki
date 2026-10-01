@@ -1,0 +1,192 @@
+{
+ "id": "ECO-E1-0146-1-V1",
+ "uso": "verso",
+ "legenda": "A curva de contrato liga todos os pontos em que uma curva de indiferença de A tangencia uma de B (T₁, T₂, T₃). Em cada um, melhorar A exige piorar B: todos são Pareto-eficientes. A dotação inicial só decide em qual ponto da curva as trocas terminam.",
+ "eixos": {
+  "x": "X",
+  "y": "Y",
+  "xmax": 10.6,
+  "ymax": 8.6
+ },
+ "curvas": [
+  {
+   "id": "topo",
+   "tipo": "horizontal",
+   "y": 8,
+   "x": [
+    0,
+    10
+   ],
+   "familia": "referencia"
+  },
+  {
+   "id": "dir",
+   "tipo": "vertical",
+   "x": 10,
+   "y": [
+    0,
+    8
+   ],
+   "familia": "referencia"
+  },
+  {
+   "id": "CC",
+   "tipo": "reta",
+   "p1": [
+    0,
+    0
+   ],
+   "p2": [
+    10,
+    8
+   ],
+   "familia": "destaque",
+   "rotulo": "curva de contrato",
+   "rotulo_xy": [
+    7.4,
+    8.35
+   ]
+  },
+  {
+   "id": "A1",
+   "tipo": "funcao",
+   "expr": "7.200000000000001/x",
+   "dominio": [
+    0.9000000000000001,
+    10
+   ],
+   "familia": "demanda",
+   "sem_rotulo": true
+  },
+  {
+   "id": "B1",
+   "tipo": "funcao",
+   "expr": "8 - 39.2/(10-x)",
+   "dominio": [
+    0,
+    5.1
+   ],
+   "familia": "oferta",
+   "rotulo": "Uᴮ₁",
+   "sem_rotulo": false,
+   "rotulo_em": 0.25,
+   "rotulo_desloc": [
+    0,
+    -14
+   ]
+  },
+  {
+   "id": "A2",
+   "tipo": "funcao",
+   "expr": "20.0/x",
+   "dominio": [
+    2.5,
+    10
+   ],
+   "familia": "demanda",
+   "sem_rotulo": true
+  },
+  {
+   "id": "B2",
+   "tipo": "funcao",
+   "expr": "8 - 20.0/(10-x)",
+   "dominio": [
+    0,
+    7.5
+   ],
+   "familia": "oferta",
+   "sem_rotulo": true
+  },
+  {
+   "id": "A3",
+   "tipo": "funcao",
+   "expr": "39.2/x",
+   "dominio": [
+    4.9,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "Uᴬ₃",
+   "sem_rotulo": false,
+   "rotulo_em": 9.0,
+   "rotulo_desloc": [
+    0,
+    16
+   ]
+  },
+  {
+   "id": "B3",
+   "tipo": "funcao",
+   "expr": "8 - 7.2/(10-x)",
+   "dominio": [
+    0,
+    9.1
+   ],
+   "familia": "oferta",
+   "sem_rotulo": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "T1",
+   "xy": [
+    3,
+    2.4
+   ],
+   "rotulo": "T₁",
+   "rotulo_desloc": [
+    26,
+    -2
+   ]
+  },
+  {
+   "id": "T2",
+   "xy": [
+    5,
+    4
+   ],
+   "rotulo": "T₂",
+   "rotulo_desloc": [
+    26,
+    -2
+   ]
+  },
+  {
+   "id": "T3",
+   "xy": [
+    7,
+    5.6
+   ],
+   "rotulo": "T₃",
+   "rotulo_desloc": [
+    26,
+    -2
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.6,
+    0.15
+   ],
+   "texto": "0ᴬ",
+   "negrito": true
+  },
+  {
+   "xy": [
+    10.1,
+    8.3
+   ],
+   "texto": "0ᴮ",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs(A1(3) - B1(3)) < 0.02",
+  "abs(A2(5) - B2(5)) < 0.02",
+  "abs(A3(7) - B3(7)) < 0.02",
+  "abs(CC(3) - 2.4) < 0.01",
+  "abs((A2(5.01)-A2(4.99)) - (B2(5.01)-B2(4.99))) < 0.002"
+ ]
+}

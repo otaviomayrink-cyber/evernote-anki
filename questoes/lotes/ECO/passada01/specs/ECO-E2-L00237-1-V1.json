@@ -1,0 +1,120 @@
+{
+ "id": "ECO-E2-L00237-1-V1",
+ "uso": "verso",
+ "legenda": "No monopólio natural, o CMe cai em toda a faixa da demanda e o CMg fica abaixo dele. Com preço = CMg (ponto R), a firma vende 100 a 2, mas seu custo médio é 4: o retângulo destacado é o prejuízo (2 × 100 = 200). Com preço = CMe (ponto A), ela empata, porém produz menos.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 135,
+  "ymax": 13,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "12 - x/10",
+   "dominio": [
+    0,
+    120
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 115
+  },
+  {
+   "id": "CMe",
+   "tipo": "funcao",
+   "expr": "2 + 200/x",
+   "dominio": [
+    20,
+    132
+   ],
+   "familia": "terceira",
+   "rotulo": "CMe",
+   "rotulo_em": 128,
+   "rotulo_desloc": [
+    -4,
+    12
+   ]
+  },
+  {
+   "id": "CMg",
+   "tipo": "horizontal",
+   "y": 2,
+   "x": [
+    0,
+    132
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "R",
+   "intersecao": [
+    "D",
+    "CMg"
+   ],
+   "rotulo": "R",
+   "projetar": "x",
+   "rotulo_desloc": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "K",
+   "sobre": "CMe",
+   "x": "R.x",
+   "projetar": "y",
+   "marcar": false
+  },
+  {
+   "id": "A",
+   "intersecao": [
+    "D",
+    "CMe"
+   ],
+   "indice": 1,
+   "rotulo": "A",
+   "projetar": true,
+   "rotulo_desloc": [
+    6,
+    10
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     "K.y"
+    ],
+    "K",
+    "R"
+   ],
+   "papel": "perda",
+   "rotulo": "prejuízo",
+   "rotulo_xy": [
+    35,
+    3
+   ]
+  }
+ ],
+ "checar": [
+  "abs(R.x - 100) < 0.01",
+  "abs(K.y - 4) < 0.01",
+  "CMe(R.x) > R.y",
+  "abs((K.y - R.y) * R.x - 200) < 0.01",
+  "A.x < R.x",
+  "A.y > R.y"
+ ]
+}

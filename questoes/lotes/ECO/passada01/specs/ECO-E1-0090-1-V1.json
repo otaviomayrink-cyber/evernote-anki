@@ -1,0 +1,32 @@
+{
+ "id": "ECO-E1-0090-1-V1",
+ "uso": "verso",
+ "legenda": "Demanda muito inelástica (quase vertical): o imposto t eleva o preço pago pelo consumidor (p₀ → pc) quase no valor inteiro de t, enquanto o preço recebido pelo vendedor quase não cai (p₀ → pv). O ônus fica com quem não consegue fugir do consumo.",
+ "modelo": "tributo",
+ "params": {
+  "t": 3,
+  "D": [
+   [
+    4,
+    9.5
+   ],
+   [
+    6,
+    0.5
+   ]
+  ],
+  "S": [
+   [
+    1,
+    1
+   ],
+   [
+    9,
+    9
+   ]
+  ]
+ },
+ "checar": [
+  "(Ec.y - E0.y) > 3*(E0.y - Ev.y)"
+ ]
+}

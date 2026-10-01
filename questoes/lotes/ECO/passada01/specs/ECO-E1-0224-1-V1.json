@@ -1,0 +1,105 @@
+{
+ "id": "ECO-E1-0224-1-V1",
+ "uso": "verso",
+ "legenda": "Com w = r, a isocusto C₁ tangencia a isoquanta em A (K/L = 1). Se r quadruplica, a isocusto fica mais plana (inclinação w/r = 1/4) e a nova tangência B usa mais trabalho e menos capital (K/L = 1/4).",
+ "eixos": {
+  "x": "L",
+  "y": "K",
+  "xmax": 17,
+  "ymax": 10,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "Q",
+   "tipo": "funcao",
+   "expr": "16/x",
+   "dominio": [
+    1.65,
+    16
+   ],
+   "familia": "demanda",
+   "rotulo": "Q₀",
+   "rotulo_desloc": [
+    6,
+    8
+   ]
+  },
+  {
+   "id": "C1",
+   "tipo": "reta",
+   "p1": [
+    0,
+    8
+   ],
+   "p2": [
+    8,
+    0
+   ],
+   "familia": "quarta",
+   "estado": "inicial",
+   "rotulo": "C₁",
+   "rotulo_xy": [
+    0.7,
+    8.5
+   ]
+  },
+  {
+   "id": "C2",
+   "tipo": "reta",
+   "p1": [
+    0,
+    4
+   ],
+   "p2": [
+    16,
+    0
+   ],
+   "familia": "quarta",
+   "rotulo": "C₂ (r = 4w)",
+   "rotulo_xy": [
+    10.2,
+    0.35
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "xy": [
+    4,
+    4
+   ],
+   "rotulo": "A",
+   "rotulo_desloc": [
+    10,
+    8
+   ],
+   "projetar": true
+  },
+  {
+   "id": "B",
+   "xy": [
+    8,
+    2
+   ],
+   "rotulo": "B",
+   "rotulo_desloc": [
+    6,
+    12
+   ],
+   "projetar": true
+  }
+ ],
+ "checar": [
+  "abs(Q(4) - 4) < 0.02",
+  "abs(Q(8) - 2) < 0.02",
+  "abs(C1(4) - 4) < 0.02",
+  "abs(C2(8) - 2) < 0.02",
+  "B.y / B.x < A.y / A.x",
+  "C2(7) < Q(7)",
+  "C2(9) < Q(9)",
+  "C1(3) < Q(3)",
+  "C1(5) < Q(5)"
+ ]
+}

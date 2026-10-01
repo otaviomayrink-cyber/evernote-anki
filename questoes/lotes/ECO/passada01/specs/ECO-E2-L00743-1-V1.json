@@ -1,0 +1,155 @@
+{
+ "id": "ECO-E2-L00743-1-V1",
+ "uso": "verso",
+ "legenda": "No monopólio natural o CMe cai em toda a faixa relevante e fica acima do CMg. Com preço = CMg (ponto C), a produção é eficiente, mas o preço não cobre o custo médio: o retângulo sombreado entre o CMe e o CMg é o prejuízo. Com preço = CMe (ponto R), o lucro é zero e a operação se sustenta.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 105,
+  "ymax": 11
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - 0.1*x",
+   "dominio": [
+    0,
+    100
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 95,
+   "rotulo_desloc": [
+    4,
+    10
+   ]
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "10 - 0.2*x",
+   "dominio": [
+    0,
+    50
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg",
+   "rotulo_em": 47,
+   "rotulo_desloc": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "CMe",
+   "tipo": "funcao",
+   "expr": "2 + 100/x",
+   "dominio": [
+    14,
+    100
+   ],
+   "familia": "terceira",
+   "rotulo": "CMe",
+   "rotulo_em": 100,
+   "rotulo_desloc": [
+    4,
+    8
+   ]
+  },
+  {
+   "id": "CMg",
+   "tipo": "horizontal",
+   "y": 2,
+   "x": [
+    0,
+    100
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Q",
+   "intersecao": [
+    "RMg",
+    "CMg"
+   ],
+   "projetar": "x",
+   "rotulo_x": "qm",
+   "marcar": false
+  },
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": "Q.x",
+   "rotulo": "M",
+   "projetar": "y",
+   "rotulo_y": "pm"
+  },
+  {
+   "id": "R",
+   "intersecao": [
+    "D",
+    "CMe"
+   ],
+   "indice": 1,
+   "rotulo": "R",
+   "projetar": true,
+   "rotulo_x": "qr",
+   "rotulo_y": "pr",
+   "rotulo_desloc": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "C",
+   "intersecao": [
+    "D",
+    "CMg"
+   ],
+   "rotulo": "C",
+   "projetar": "x",
+   "rotulo_x": "qc",
+   "rotulo_desloc": [
+    6,
+    12
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     "CMe(C.x)"
+    ],
+    [
+     "C.x",
+     "CMe(C.x)"
+    ],
+    "C"
+   ],
+   "papel": "perda",
+   "rotulo": "prejuízo",
+   "rotulo_xy": [
+    18,
+    2.6
+   ]
+  }
+ ],
+ "checar": [
+  "CMe(C.x) > C.y",
+  "abs(R.y - CMe(R.x)) < 0.01",
+  "R.x > Q.x",
+  "C.x > R.x",
+  "M.y > R.y"
+ ]
+}

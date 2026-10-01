@@ -1,0 +1,131 @@
+{
+ "id": "ECO-E1-0005-1-V1",
+ "uso": "verso",
+ "legenda": "Com o preço mínimo em 7 (acima do equilíbrio E, em 5), a demanda cai para 4. A oferta mais elástica (O₁) responde com 10 — excedente de 6; a menos elástica (O₂), com 8 — excedente de 4.",
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 12,
+  "ymax": 11,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "11 - x",
+   "dominio": [
+    1,
+    10.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "O1",
+   "tipo": "funcao",
+   "expr": "5 + 0.5*(x - 6)",
+   "dominio": [
+    0.5,
+    11.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O₁ (mais elástica)"
+  },
+  {
+   "id": "O2",
+   "tipo": "funcao",
+   "expr": "x - 1",
+   "dominio": [
+    1.5,
+    10
+   ],
+   "familia": "terceira",
+   "rotulo": "O₂ (menos elástica)"
+  },
+  {
+   "id": "Pmin",
+   "tipo": "horizontal",
+   "y": 7,
+   "x": [
+    0,
+    11.5
+   ],
+   "familia": "destaque",
+   "rotulo": "preço mínimo = 7",
+   "tracejada": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "O1"
+   ],
+   "rotulo": "E",
+   "rotulo_desloc": [
+    -5,
+    -24
+   ]
+  },
+  {
+   "id": "Qd",
+   "intersecao": [
+    "D",
+    "Pmin"
+   ],
+   "projetar": "x"
+  },
+  {
+   "id": "Q2",
+   "intersecao": [
+    "O2",
+    "Pmin"
+   ],
+   "projetar": "x"
+  },
+  {
+   "id": "Q1",
+   "intersecao": [
+    "O1",
+    "Pmin"
+   ],
+   "projetar": "x"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Qd.x",
+    9.6
+   ],
+   "para": [
+    "Q1.x",
+    9.6
+   ],
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "excedente com O₁ = 6"
+  },
+  {
+   "de": [
+    "Qd.x",
+    8.4
+   ],
+   "para": [
+    "Q2.x",
+    8.4
+   ],
+   "cor": "roxo",
+   "estilo": "<|-|>",
+   "rotulo": "com O₂ = 4"
+  }
+ ],
+ "checar": [
+  "abs(Q1.x - Qd.x - 6) < 0.01",
+  "abs(Q2.x - Qd.x - 4) < 0.01",
+  "Q1.x > Q2.x",
+  "Qd.y > E.y"
+ ]
+}

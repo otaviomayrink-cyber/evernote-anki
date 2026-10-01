@@ -1,0 +1,125 @@
+{
+ "id": "ECO-E1-0235-1-V1",
+ "uso": "verso",
+ "legenda": "Com demanda horizontal, o preço ao consumidor não pode subir: o imposto t desloca a oferta para cima, a quantidade cai de q₀ para qₜ e o preço recebido pelo vendedor cai exatamente t. O vendedor arca com todo o imposto, mas o mercado continua existindo.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "horizontal",
+   "y": 6,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D (ε = ∞)",
+   "rotulo_em": 0.4,
+   "rotulo_desloc": [
+    0,
+    14
+   ]
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    1
+   ],
+   "p2": [
+    9,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O",
+   "estado": "inicial"
+  },
+  {
+   "id": "St",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    3
+   ],
+   "p2": [
+    7,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O + t"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "S",
+   "para": "St",
+   "sentido": "cima",
+   "em_x": 6.3
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E₀",
+   "projetar": "x",
+   "rotulo_x": "q₀",
+   "rotulo_y": "p₀ = pc",
+   "rotulo_desloc": [
+    10,
+    -14
+   ]
+  },
+  {
+   "id": "Et",
+   "intersecao": [
+    "D",
+    "St"
+   ],
+   "rotulo": "Eₜ",
+   "projetar": "x",
+   "rotulo_x": "qₜ",
+   "rotulo_desloc": [
+    -30,
+    14
+   ]
+  },
+  {
+   "id": "Ev",
+   "sobre": "S",
+   "x": "Et.x",
+   "projetar": "y",
+   "rotulo_y": "pv = pc − t"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "Et.y"
+    ],
+    "Et",
+    "Ev",
+    [
+     0,
+     "Ev.y"
+    ]
+   ],
+   "papel": "receita_tributaria"
+  }
+ ],
+ "checar": [
+  "abs(Et.y - E0.y) < 1e-6",
+  "Et.x < E0.x",
+  "abs((Et.y - Ev.y) - 2) < 0.01"
+ ]
+}

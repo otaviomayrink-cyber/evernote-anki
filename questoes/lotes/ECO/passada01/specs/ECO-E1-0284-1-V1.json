@@ -1,0 +1,118 @@
+{
+ "id": "ECO-E1-0284-1-V1",
+ "uso": "verso",
+ "legenda": "Com P = 300 − Q, RMg = 300 − 2Q e CMg = 2Q, o monopolista produz 75 (RMg = CMg = 150) e cobra 225 na demanda. Com preço igual ao CMg, produz-se 100 a 200; o triângulo entre 75 e 100 é o peso morto de 937,5.",
+ "eixos": {
+  "x": "Q",
+  "y": "P",
+  "xmax": 175,
+  "ymax": 320,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "300 - x",
+   "dominio": [
+    0,
+    165
+   ],
+   "familia": "demanda",
+   "rotulo": "D: P = 300 − Q",
+   "rotulo_em": 150,
+   "rotulo_desloc": [
+    -30,
+    14
+   ]
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "300 - 2*x",
+   "dominio": [
+    0,
+    140
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg",
+   "rotulo_em": 130
+  },
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "2*x",
+   "dominio": [
+    0,
+    155
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg = 2Q",
+   "rotulo_em": 150
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Qm",
+   "intersecao": [
+    "RMg",
+    "CMg"
+   ],
+   "projetar": true,
+   "rotulo_x": "75",
+   "rotulo_y": "150",
+   "marcar": true
+  },
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": "Qm.x",
+   "rotulo": "M",
+   "projetar": "y",
+   "rotulo_y": "225",
+   "rotulo_desloc": [
+    -24,
+    10
+   ]
+  },
+  {
+   "id": "C",
+   "intersecao": [
+    "D",
+    "CMg"
+   ],
+   "rotulo": "C",
+   "projetar": true,
+   "rotulo_x": "100",
+   "rotulo_y": "200",
+   "rotulo_desloc": [
+    10,
+    -22
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "M",
+    "Qm",
+    "C"
+   ],
+   "papel": "peso_morto",
+   "rotulo": "PM",
+   "rotulo_xy": [
+    "(M.x+Qm.x+C.x)/3 + 2",
+    "(M.y+Qm.y+C.y)/3"
+   ]
+  }
+ ],
+ "checar": [
+  "abs(Qm.x - 75) < 0.01",
+  "abs(Qm.y - 150) < 0.01",
+  "abs(M.y - 225) < 0.01",
+  "abs(C.x - 100) < 0.01",
+  "abs(C.y - 200) < 0.01",
+  "abs((M.y - Qm.y) * (C.x - Qm.x) / 2 - 937.5) < 0.01"
+ ]
+}

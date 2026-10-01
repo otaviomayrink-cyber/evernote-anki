@@ -1,0 +1,129 @@
+{
+ "id": "ECO-E2-L01038-1-V1",
+ "uso": "verso",
+ "legenda": "O imposto de R$ 1 eleva a oferta em 1 (O → O + 1). O equilíbrio sai de (90; 7) para Q = 82,5: o consumidor paga 7,25 (+0,25) e o produtor recebe 6,25 (−0,75). A demanda, mais elástica, empurra a maior parte do imposto para o produtor.",
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 150,
+  "ymax": 11
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - x/30",
+   "dominio": [
+    0,
+    150
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 20,
+   "rotulo_desloc": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "(x - 20)/10",
+   "dominio": [
+    20,
+    115
+   ],
+   "familia": "oferta",
+   "rotulo": "O",
+   "estado": "inicial",
+   "rotulo_em": 112,
+   "rotulo_desloc": [
+    8,
+    -12
+   ]
+  },
+  {
+   "id": "St",
+   "tipo": "funcao",
+   "expr": "(x - 20)/10 + 1",
+   "dominio": [
+    10,
+    105
+   ],
+   "familia": "oferta",
+   "rotulo": "O + 1",
+   "rotulo_em": 100,
+   "rotulo_desloc": [
+    -58,
+    6
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "(90; 7)",
+   "rotulo_desloc": [
+    4,
+    -30
+   ],
+   "marcar": true
+  },
+  {
+   "id": "Ec",
+   "intersecao": [
+    "D",
+    "St"
+   ],
+   "projetar": true,
+   "rotulo_y": "pc = 7,25",
+   "rotulo_x": "82,5",
+   "marcar": true
+  },
+  {
+   "id": "Ev",
+   "sobre": "S",
+   "x": "Ec.x",
+   "projetar": "y",
+   "rotulo_y": "pv = 6,25"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "Ec.y"
+    ],
+    "Ec",
+    "Ev",
+    [
+     0,
+     "Ev.y"
+    ]
+   ],
+   "papel": "receita_tributaria"
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "Ec",
+    "E0",
+    "Ev"
+   ],
+   "papel": "peso_morto"
+  }
+ ],
+ "checar": [
+  "abs(Ec.x - 82.5) < 0.01",
+  "abs(Ec.y - 7.25) < 0.01",
+  "abs(Ev.y - 6.25) < 0.01",
+  "abs(E0.y - 7) < 0.01",
+  "abs(E0.x - 90) < 0.01"
+ ]
+}

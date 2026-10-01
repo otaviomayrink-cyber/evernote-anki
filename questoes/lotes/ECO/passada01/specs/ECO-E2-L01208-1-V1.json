@@ -1,0 +1,5 @@
+{"id": "ECO-E2-L01208-1-V1", "uso": "verso",
+ "legenda": "Oferta íngreme (pouco elástica) e demanda mais plana (mais elástica): o imposto t eleva pouco o preço pago pelo consumidor (p₀ → pc) e derruba muito o preço líquido recebido pelo produtor (p₀ → pv). Quem tem a curva mais inelástica arca com a maior parte do imposto.",
+ "modelo": "tributo",
+ "params": {"t": 3, "D": [[0.3, 7.85], [9.7, 3.15]], "S": [[2, 0], [6.5, 9]]},
+ "checar": ["(Ec.y - E0.y) < (E0.y - Ev.y)", "abs(Ec.y - Ev.y - 3) < 0.05"]}

@@ -1,0 +1,91 @@
+{
+ "id": "ECO-E3-L00342-1-V1",
+ "uso": "verso",
+ "legenda": "Enquanto o CMg cai, ele está abaixo do CMe e puxa a média para baixo. Depois do seu mínimo, o CMg já sobe, mas, enquanto continua abaixo do CMe, a média ainda cai; só no cruzamento (mínimo do CMe) a média para de cair e passa a subir.",
+ "eixos": {
+  "x": "q",
+  "y": "custo",
+  "xmax": 11.5,
+  "ymax": 13
+ },
+ "curvas": [
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "6 - 2.4*x + 0.3*x**2",
+   "dominio": [
+    0.4,
+    10
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "CMe",
+   "tipo": "funcao",
+   "expr": "20/x + 6 - 1.2*x + 0.1*x**2",
+   "dominio": [
+    2.2,
+    11
+   ],
+   "familia": "terceira",
+   "rotulo": "CMe"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "G",
+   "xy": [
+    4,
+    1.2
+   ],
+   "rotulo": "mín. CMg",
+   "rotulo_desloc": [
+    0,
+    -18
+   ]
+  },
+  {
+   "id": "M",
+   "intersecao": [
+    "CMg",
+    "CMe"
+   ],
+   "rotulo": "mín. CMe",
+   "projetar": "x",
+   "rotulo_x": "qₘ",
+   "rotulo_desloc": [
+    12,
+    -22
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    2.5,
+    4.4
+   ],
+   "texto": "CMg < CMe: CMe cai",
+   "cor": "verde",
+   "negrito": true
+  },
+  {
+   "xy": [
+    8.6,
+    2.0
+   ],
+   "texto": "CMg > CMe: CMe sobe",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "CMg(3) < CMe(3)",
+  "CMe(3) > CMe(5)",
+  "CMg(6) > CMg(5)",
+  "CMe(6) < CMe(5)",
+  "CMe(9.5) > CMe(M.x)",
+  "abs(M.x - 7.69) < 0.05"
+ ]
+}

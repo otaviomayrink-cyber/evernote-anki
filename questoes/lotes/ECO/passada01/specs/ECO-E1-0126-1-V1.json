@@ -1,0 +1,4 @@
+{"id": "ECO-E1-0126-1-V1", "uso": "verso",
+ "legenda": "Consumidores e produtores perdem toda a faixa entre pc e pv até q₀; o governo recupera só o retângulo verde (receita). O triângulo vermelho — o peso morto — é a perda que ninguém recebe, e por isso a receita fica abaixo da perda de excedentes.",
+ "modelo": "tributo",
+ "params": {"t": 2}}

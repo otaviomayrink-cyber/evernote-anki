@@ -1,0 +1,126 @@
+{
+ "id": "ECO-E2-L00673-1-V1",
+ "uso": "verso",
+ "legenda": "Com oferta vertical, a quantidade é fixa. Visto pelo vendedor, o imposto desloca a demanda para baixo em t (D → D − t): o consumidor continua pagando p₀ e o produtor passa a receber p₀ − t. Ônus integral do produtor, quantidade intacta, nenhum peso morto.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "S",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0.3,
+    9.6
+   ],
+   "familia": "oferta",
+   "rotulo": "O (ε = 0)",
+   "rotulo_xy": [
+    5.9,
+    9.3
+   ]
+  },
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    9.5
+   ],
+   "p2": [
+    9.5,
+    3.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "estado": "inicial"
+  },
+  {
+   "id": "Dt",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    7
+   ],
+   "p2": [
+    9.5,
+    1
+   ],
+   "familia": "demanda",
+   "rotulo": "D − t"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D",
+   "para": "Dt",
+   "sentido": "baixo",
+   "em_x": 8.2
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E₀",
+   "projetar": "y",
+   "rotulo_y": "p₀ = pc",
+   "rotulo_desloc": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "Ev",
+   "intersecao": [
+    "Dt",
+    "S"
+   ],
+   "projetar": "y",
+   "rotulo_y": "pv = p₀ − t",
+   "rotulo": "",
+   "marcar": true
+  },
+  {
+   "id": "Q0",
+   "xy": [
+    5,
+    0
+   ],
+   "marcar": false,
+   "rotulo_x": "q₀ = qₜ"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "E0.y"
+    ],
+    "E0",
+    "Ev",
+    [
+     0,
+     "Ev.y"
+    ]
+   ],
+   "papel": "receita_tributaria",
+   "rotulo": "Receita",
+   "rotulo_xy": [
+    2.0,
+    "Ev.y+0.4"
+   ]
+  }
+ ],
+ "checar": [
+  "abs(E0.x - Ev.x) < 1e-6",
+  "abs((E0.y - Ev.y) - 2.5) < 0.01"
+ ]
+}

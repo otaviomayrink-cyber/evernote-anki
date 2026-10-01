@@ -1,0 +1,77 @@
+{
+ "id": "ECO-E2-L01386-1-V1",
+ "uso": "verso",
+ "legenda": "Enquanto o PMg está acima do PMe, cada trabalhador extra puxa a média para cima; quando o PMg cai abaixo, puxa para baixo. Por isso o PMg corta o PMe exatamente no máximo do PMe (L = 6).",
+ "eixos": {
+  "x": "L",
+  "y": "Q/L",
+  "xmax": 10,
+  "ymax": 27,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "PMg",
+   "tipo": "funcao",
+   "expr": "12*x - 1.5*x**2",
+   "dominio": [
+    0,
+    8.2
+   ],
+   "familia": "oferta",
+   "rotulo": "PMg",
+   "rotulo_em": 2.2,
+   "rotulo_desloc": [
+    -44,
+    4
+   ]
+  },
+  {
+   "id": "PMe",
+   "tipo": "funcao",
+   "expr": "6*x - 0.5*x**2",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "PMe",
+   "rotulo_em": 9.4,
+   "rotulo_desloc": [
+    6,
+    8
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "sobre": "PMe",
+   "x": 6,
+   "rotulo": "PMg = PMe (máx. do PMe)",
+   "rotulo_desloc": [
+    10,
+    12
+   ],
+   "projetar": "x"
+  },
+  {
+   "id": "M",
+   "sobre": "PMg",
+   "x": 4,
+   "rotulo": "máx. do PMg",
+   "rotulo_desloc": [
+    -30,
+    12
+   ]
+  }
+ ],
+ "checar": [
+  "abs(PMg(6) - PMe(6)) < 0.05",
+  "PMe(6) > PMe(5)",
+  "PMe(6) > PMe(7)",
+  "PMg(5) > PMe(5)",
+  "PMg(7) < PMe(7)",
+  "M.y > E.y"
+ ]
+}

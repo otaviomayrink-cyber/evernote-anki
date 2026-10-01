@@ -27,7 +27,8 @@ BANDEIRA = re.compile("[\U0001F1E6-\U0001F1FF]{2}")
 PROIBIDOS = ["o texto acima", "questão anterior", "[[IMAGEM", "[Imagem não", "caderno-fonte", "na conversão"]
 ALERTAS = ("contestavel", "texto_parcial", "texto_irrecuperavel", "texto_reconstruido", "banca_confirmada",
            "banca_provavel", "destino_sugerido", "redirecionado", "duplicata", "figura_conjectural",
-           "figura_irrecuperavel", "transcricao_incoerente", "teste_importacao", "qualidade_fonte")
+           "figura_irrecuperavel", "transcricao_incoerente", "teste_importacao", "qualidade_fonte",
+           "quase_duplicata", "texto_corrigido", "dado_aproximado")
 
 
 def serial(el):

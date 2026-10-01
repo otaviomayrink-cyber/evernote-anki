@@ -1,0 +1,67 @@
+{
+ "id": "ECO-E2-L00811-1-V1",
+ "uso": "verso",
+ "legenda": "O monopolista produz qm (RMg = CMg) e cobra pm, acima do CMg. Entre qm e qc há consumidores que pagariam mais que o custo de produzir e não compram: esse triângulo (PM) é o peso morto. O lucro é máximo, mas o excedente total não.",
+ "modelo": "monopolio",
+ "params": {
+  "a": 9,
+  "b": 1,
+  "c": 3
+ },
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "ymax": 10
+ },
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     9
+    ],
+    [
+     0,
+     "M.y"
+    ],
+    "M"
+   ],
+   "papel": "excedente_consumidor",
+   "rotulo": "EC",
+   "rotulo_xy": [
+    0.32,
+    6.35
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     "M.y"
+    ],
+    "M",
+    [
+     "Q.x",
+     3
+    ]
+   ],
+   "papel": "excedente_produtor",
+   "rotulo": "lucro",
+   "rotulo_xy": [
+    1.5,
+    4.5
+   ]
+  }
+ ],
+ "checar": [
+  "M.y > 3",
+  "Q.x < C.x",
+  "abs((M.y - 3) * (C.x - Q.x) / 2 - 4.5) < 0.01"
+ ]
+}

@@ -1,0 +1,105 @@
+{
+ "id": "ECO-E2-L01501-1-V1",
+ "uso": "verso",
+ "legenda": "No curto prazo, P = CMg só define a quantidade (q*). Se nesse ponto o preço supera o CTMe, há lucro econômico positivo (retângulo verde); é a entrada de novas firmas, no longo prazo, que empurra o preço até o mínimo do CTMe e zera o lucro.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 11,
+  "ymax": 8
+ },
+ "curvas": [
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "0.3*x**2 - 2.4*x + 6",
+   "dominio": [
+    2,
+    9.4
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "CTMe",
+   "tipo": "funcao",
+   "expr": "0.1*x**2 - 1.2*x + 6 + 12/x",
+   "dominio": [
+    2.3,
+    9.8
+   ],
+   "familia": "terceira",
+   "rotulo": "CTMe"
+  },
+  {
+   "id": "P",
+   "tipo": "horizontal",
+   "y": 6,
+   "x": [
+    0,
+    9.8
+   ],
+   "familia": "demanda",
+   "rotulo": "P = RMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Q",
+   "intersecao": [
+    "CMg",
+    "P"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q*"
+  },
+  {
+   "id": "N",
+   "intersecao": [
+    "CMg",
+    "CTMe"
+   ],
+   "projetar": "y",
+   "rotulo_y": "P de LP",
+   "rotulo": "N",
+   "rotulo_desloc": [
+    10,
+    -12
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "CTMe(Q.x)"
+    ],
+    [
+     "Q.x",
+     "CTMe(Q.x)"
+    ],
+    [
+     "Q.x",
+     6
+    ],
+    [
+     0,
+     6
+    ]
+   ],
+   "papel": "ganho",
+   "rotulo": "lucro > 0",
+   "rotulo_xy": [
+    1.6,
+    "(6 + CTMe(Q.x))/2"
+   ]
+  }
+ ],
+ "checar": [
+  "abs(Q.x - 8) < 0.01",
+  "Q.y > CTMe(Q.x)",
+  "N.y < Q.y"
+ ]
+}

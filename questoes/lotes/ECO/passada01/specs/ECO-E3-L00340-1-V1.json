@@ -1,0 +1,19 @@
+{"id": "ECO-E3-L00340-1-V1", "uso": "verso",
+ "legenda": "Na mesma isoquanta, de A para B uma unidade de L substitui 3 de K (TMST = 3); de C para D, só 0,5 de K (TMST = 0,5). Quanto mais abundante o trabalho, menos capital ele consegue substituir: TMST decrescente = isoquanta convexa.",
+ "eixos": {"x": "L", "y": "K", "xmax": 11, "ymax": 14, "numeros": true},
+ "curvas": [
+  {"id": "Q", "tipo": "funcao", "expr": "36/x", "dominio": [2.6, 10.5], "familia": "demanda", "rotulo": "Q₀", "rotulo_desloc": [8, 6]}
+ ],
+ "pontos": [
+  {"id": "A", "sobre": "Q", "x": 3, "rotulo": "A", "rotulo_desloc": [-20, 4]},
+  {"id": "B", "sobre": "Q", "x": 4, "rotulo": "B", "rotulo_desloc": [8, 12]},
+  {"id": "C", "sobre": "Q", "x": 8, "rotulo": "C", "rotulo_desloc": [-6, 16]},
+  {"id": "D", "sobre": "Q", "x": 9, "rotulo": "D", "rotulo_desloc": [6, 14]}
+ ],
+ "setas": [
+  {"de": ["A.x", "A.y"], "para": ["A.x", "B.y"], "cor": "vermelho", "rotulo": "ΔK = −3", "rotulo_desloc": [-78, 10]},
+  {"de": ["A.x", "B.y"], "para": ["B.x", "B.y"], "cor": "vermelho", "rotulo": "ΔL = 1", "rotulo_desloc": [-6, -24]},
+  {"de": ["C.x", "C.y"], "para": ["C.x", "D.y"], "cor": "vermelho", "rotulo": "ΔK = −0,5", "rotulo_desloc": [-96, -6]},
+  {"de": ["C.x", "D.y"], "para": ["D.x", "D.y"], "cor": "vermelho", "rotulo": "ΔL = 1", "rotulo_desloc": [-6, -24]}
+ ],
+ "checar": ["abs((A.y - B.y) - 3) < 0.02", "abs((C.y - D.y) - 0.5) < 0.02", "(A.y - B.y) > (C.y - D.y)"]}

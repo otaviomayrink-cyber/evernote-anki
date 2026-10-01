@@ -1,0 +1,129 @@
+{
+ "id": "ECO-E2-L00392-1-V1",
+ "uso": "verso",
+ "legenda": "Com demanda vertical, a oferta sobe t (O → O + t) e o preço ao consumidor sobe exatamente t; o vendedor continua recebendo p₀. A quantidade não muda (q₀): o imposto é pura transferência (retângulo) e não há triângulo de peso morto.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0.3,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "D (ε = 0)",
+   "rotulo_xy": [
+    5.9,
+    9.3
+   ]
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    0.5
+   ],
+   "p2": [
+    9.5,
+    6.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O",
+   "estado": "inicial"
+  },
+  {
+   "id": "St",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    3
+   ],
+   "p2": [
+    9.5,
+    9
+   ],
+   "familia": "oferta",
+   "rotulo": "O + t"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "S",
+   "para": "St",
+   "sentido": "cima",
+   "em_x": 8.3
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E₀",
+   "projetar": "y",
+   "rotulo_y": "p₀ = pv",
+   "rotulo_desloc": [
+    10,
+    -12
+   ]
+  },
+  {
+   "id": "Et",
+   "intersecao": [
+    "D",
+    "St"
+   ],
+   "rotulo": "Eₜ",
+   "projetar": "y",
+   "rotulo_y": "pc = p₀ + t",
+   "rotulo_desloc": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "Q0",
+   "xy": [
+    5,
+    0
+   ],
+   "marcar": false,
+   "rotulo_x": "q₀ = qₜ"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "Et.y"
+    ],
+    "Et",
+    "E0",
+    [
+     0,
+     "E0.y"
+    ]
+   ],
+   "papel": "receita_tributaria",
+   "rotulo": "Receita",
+   "rotulo_xy": [
+    3.8,
+    "E0.y+0.6"
+   ]
+  }
+ ],
+ "checar": [
+  "abs(Et.x - E0.x) < 1e-6",
+  "abs((Et.y - E0.y) - 2.5) < 0.01"
+ ]
+}

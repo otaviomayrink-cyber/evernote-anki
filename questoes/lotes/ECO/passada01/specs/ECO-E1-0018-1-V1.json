@@ -1,0 +1,4 @@
+{"id": "ECO-E1-0018-1-V1", "uso": "verso",
+ "legenda": "O crédito ao consumidor desloca só a demanda (D₁ → D₂); a oferta (O), que depende de custos e tecnologia, fica onde está, e o mercado anda AO LONGO dela: preço e quantidade sobem (E₁ → E₂).",
+ "modelo": "oferta_demanda", "params": {"deslocar": {"D": "direita"}}, "substituir": {"S1": {"rotulo": "O"}},
+ "checar": ["E2.y > E1.y", "E2.x > E1.x"]}

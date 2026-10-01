@@ -1,0 +1,764 @@
+"""Cards da passada 01 de ECO — lote de redação 03."""
+from marcacao import az, vm, azb, vd, oc, rx, cz, hl  # noqa: F401
+
+H2 = {
+    "fund": "🧭 Fundamentos e escassez",
+    "fpp": "📐 Curva de possibilidades de produção",
+    "dem": "📈 Demanda: determinantes e deslocamentos",
+    "of": "🏭 Oferta: determinantes e deslocamentos",
+    "bens": "🏷️ Classificação dos bens",
+    "eq": "⚖️ Equilíbrio e estática comparativa",
+    "cp": "📐 Hipóteses e maximização de lucro",
+    "pmin": "🚧 Preços máximos e mínimos",
+}
+
+COMANDO_NABUCO_3 = ("Em relação à oferta e demanda e à classificação dos bens, julgue o item, considerando o "
+                    "Gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo de D1 para D2.")
+
+COMANDO_MACAS = "Considere a situação hipotética a seguir e julgue o item."
+EXCERTO_MACAS = ("<p><i>Em um pequeno país, o mercado de maçãs funciona em equilíbrio sob concorrência perfeita. "
+                 "Em determinada data, o quilo da maçã é vendido, em todo o país, por $ 5. Considere nulos os custos "
+                 "de transação e os custos de menu.</i></p>")
+
+COMANDO_NIDI = ("A teoria da demanda aborda como os consumidores tomam decisões sobre a quantidade de bens que "
+                "adquirem com base em fatores como preços, preferências, restrições orçamentárias e a relação entre "
+                "os tipos de bens. Considerando a Teoria do Consumidor e os fatores que contribuem para formação da "
+                "Curva de Demanda, avalie como certo ou errado (C ou E) o item a seguir.")
+
+COMANDO_EQ = ("Em um mercado competitivo, as curvas de demanda e de oferta de um produto são Qᴰ = 300 − 30p e "
+              "Qˢ = 10p + 20, em que p é o preço do produto, em reais. Julgue o item.")
+
+CARDS = [
+    # ------------------------------------------------------------------ E1-0083
+    {
+        "id": "ECO-E1-0083-1", "fonte_ref": "E1-0083", "destino": "01", "subtema": H2["of"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos determinantes da oferta.",
+        "rotulo_item": "Item",
+        "assertiva": ("O deslocamento para a esquerda da curva de oferta de um bem pode ser ocasionado por um "
+                      "aumento da tributação indireta."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O deslocamento para a esquerda da curva de oferta de um bem <u>pode</u> ser ocasionado por "
+                      "um aumento da <u>tributação indireta</u>."),
+        "poucas": ("Tributo indireto funciona como " + azb("custo adicional por unidade") + " para o vendedor: a "
+                   "cada preço ele oferta menos, e a curva de oferta sobe (= vai para a esquerda)."),
+        "destrinchando": [
+            azb("Tributos indiretos") + " (ICMS, IPI, ISS, imposto específico) incidem sobre a venda do bem. "
+            "Para continuar ofertando a mesma quantidade, o produtor precisa receber o preço anterior "
+            "<b>mais</b> o tributo: a oferta, vista pelo comprador, desloca-se verticalmente para cima no valor "
+            "do imposto — o que, numa curva crescente, é o mesmo que deslocar-se para a esquerda.",
+            "Determinantes que deslocam a oferta: preço dos insumos, tecnologia, tributos e subsídios, número "
+            "de vendedores, expectativas e preços de outros bens que a firma poderia produzir. O "
+            "<b>preço do próprio bem</b> não desloca: faz andar ao longo da curva.",
+            "Efeito no equilíbrio: preço pago pelo consumidor sobe, quantidade cai. Quanto do imposto cada "
+            "lado arca depende das " + azb("elasticidades") + " (o lado menos elástico paga mais), e não de "
+            "quem recolhe o tributo ao fisco.",
+            "Espelho: um " + azb("subsídio") + " por unidade reduz o custo efetivo e desloca a oferta para a "
+            "direita.",
+            vm("Regra-âncora: tudo o que encarece produzir (insumo, tributo) tira oferta; tudo o que barateia "
+               "(tecnologia, subsídio) põe oferta."),
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Item de manual, protegido pelo “pode”: "
+                       "basta que a tributação indireta seja <b>uma</b> causa possível de contração da oferta. "
+                       "O risco é confundir com o imposto cobrado do comprador, que se costuma desenhar como "
+                       "deslocamento da demanda — e que tem o mesmo efeito econômico."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O aumento da tributação indireta provoca movimento ao longo da curva de oferta do bem.”</i> → "
+            "ERRADO (troca de conceito: é deslocamento)",
+            "<i>“A concessão de subsídio por unidade produzida desloca a curva de oferta para a direita.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "CERTO. O aumento de tributos indiretos eleva o custo de produção, reduzindo a oferta "
+                            "— deslocamento da curva para a esquerda.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (13).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada; o texto basta)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0204
+    {
+        "id": "ECO-E1-0204-1", "fonte_ref": "E1-0204", "destino": "01", "subtema": H2["of"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "MPE/TO/Analista Ministerial/2006", "ano": 2006,
+        "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo à curva de oferta.",
+        "rotulo_item": "Item",
+        "assertiva": ("Na curva de oferta, a relação positiva entre a quantidade ofertada e o preço é consistente "
+                      "com a lei do custo de oportunidade crescente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na curva de oferta, a relação positiva entre a quantidade ofertada e o preço é "
+                      "<u>consistente</u> com a lei do custo de oportunidade crescente."),
+        "poucas": ("Se cada unidade adicional custa mais (em recursos desviados de outros usos), o produtor só a "
+                   "oferta com " + azb("preço maior") + ": a oferta crescente espelha o " + azb("custo de "
+                   "oportunidade crescente") + "."),
+        "destrinchando": [
+            "A " + azb("lei do custo de oportunidade crescente") + " diz que, para produzir mais de um bem, a "
+            "economia (ou a firma) precisa sacrificar quantidades cada vez maiores de outros bens, porque os "
+            "recursos deslocados são progressivamente menos adequados à nova atividade. É ela que dá à "
+            + azb("FPP") + " o formato côncavo.",
+            "Na firma, a mesma ideia aparece como " + azb("custo marginal crescente") + " (rendimentos "
+            "marginais decrescentes de algum fator). Em concorrência perfeita, a oferta da firma é o trecho "
+            "do CMg acima do CVMe mínimo: se o CMg sobe, a quantidade ofertada só aumenta se o preço aumentar "
+            "— daí a " + vd("inclinação positiva") + ".",
+            "Ou seja: o preço tem de cobrir o custo da última unidade, e esse custo é, no fundo, o valor do que "
+            "se deixou de produzir com os mesmos recursos.",
+            "Contraponto útil: com custo de oportunidade <b>constante</b> (FPP reta, CMg constante), a oferta "
+            "de longo prazo seria horizontal (perfeitamente elástica), e não crescente.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item liga dois capítulos (FPP e oferta) com a palavra "
+                       "“consistente”, que é fraca: não afirma causalidade única, só compatibilidade. Quem não "
+                       "reconhece o CMg como custo de oportunidade tende a achar que se misturaram temas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A inclinação positiva da curva de oferta é consistente com custos de oportunidade "
+            "decrescentes.”</i> → ERRADO (inversão: crescentes)",
+            "<i>“Com custo marginal constante, a curva de oferta de longo prazo de uma indústria competitiva é "
+            "horizontal.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "CORRETO. O custo de oportunidade também é crescente.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (52).png", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0205
+    {
+        "id": "ECO-E1-0205-1", "fonte_ref": "E1-0205", "destino": "01", "subtema": H2["of"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "Prefeitura de Rio Branco/2007", "ano": 2007,
+        "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos determinantes da oferta e ao equilíbrio de mercado.",
+        "rotulo_item": "Item",
+        "assertiva": ("A recente crise de energia na Argentina, por aumentar o preço de insumos básicos para a "
+                      "indústria, gera um deslocamento ao longo da curva de oferta do setor manufatureiro, "
+                      "elevando, assim, o preço da produção industrial naquele país."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A recente crise de energia na Argentina, por aumentar o preço de insumos básicos para a "
+                      "indústria, gera ") + vm("um deslocamento ao longo da curva de oferta")
+                   + az(" do setor manufatureiro, elevando, assim, o preço da produção industrial naquele país."),
+        "poucas": ("Insumo mais caro é determinante da oferta: a " + azb("curva de oferta inteira se desloca") +
+                   " para a esquerda. Movimento ao longo da oferta só ocorre quando muda o preço do próprio bem."),
+        "destrinchando": [
+            "Energia é insumo: se encarece, o " + azb("custo marginal") + " de cada unidade produzida sobe, e a "
+            "indústria passa a ofertar menos a cada preço — " + azb("contração da oferta") + " (O₁ → O₂, para "
+            "a esquerda/para cima).",
+            "A consequência descrita no fim do item está certa: o novo equilíbrio tem " + vd("preço maior") +
+            " e " + vd("quantidade menor") + ". O erro está só no mecanismo.",
+            "Detalhe que derruba muita gente: depois do choque, há sim um movimento ao longo de uma curva — "
+            "mas é ao longo da curva de <b>demanda</b> (de E₁ para E₂), porque os consumidores reagem ao novo "
+            "preço. A curva de oferta, essa, mudou de lugar.",
+            "Vocabulário: " + azb("variação da oferta") + " (deslocamento) × " + azb("variação da quantidade "
+            "ofertada") + " (movimento ao longo, causado pelo preço do próprio bem).",
+            vm("Regra-âncora: choque de custo → a oferta se desloca; o mercado então anda ao longo da "
+               "demanda."),
+        ],
+        "grafico_verso": "ECO-E1-0205-1-V1",
+        "dissecando": (cz("[troca de conceito · meia-verdade]") + " A causa (insumos mais caros) e o efeito "
+                       "(preço maior) estão corretos; a banca trocou só o rótulo do mecanismo, “deslocamento "
+                       "ao longo” no lugar de “deslocamento da curva”. 🔥 Expressão híbrida típica da "
+                       "CEBRASPE: “deslocamento ao longo” é o sinal para checar qual curva se moveu."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…gera um deslocamento da curva de oferta do setor manufatureiro para a direita…”</i> → ERRADO "
+            "(sentido trocado: custo maior desloca para a esquerda)",
+            "<i>“…gera movimento ao longo da curva de demanda por bens industriais, com queda da quantidade "
+            "demandada.”</i> → CERTO",
+        ])],
+        "reescrita": ("A recente crise de energia na Argentina, por aumentar o preço de insumos básicos para a "
+                      "indústria, gera um " + hl("deslocamento para a esquerda da curva de oferta") + " do setor "
+                      "manufatureiro, elevando, assim, o preço da produção industrial naquele país."),
+        "tipo_erro": ["TROCA_CONCEITO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. Deslocamento ao longo da curva só quando há alteração no preço.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (54).png", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada; mecanismo redesenhado em "
+                                   "ECO-E1-0205-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0210
+    {
+        "id": "ECO-E1-0210-1", "fonte_ref": "E1-0210", "destino": "01", "subtema": H2["fpp"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "MEC/Analista Administrativo – Economia/2018",
+        "ano": 2018, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos conceitos fundamentais de economia.",
+        "rotulo_item": "Item",
+        "assertiva": ("Fronteira de possibilidades de produção consiste de uma construção gráfica que mostra a "
+                      "limitação do potencial produtivo de um país na produção de um par de bens ou serviços."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Fronteira de possibilidades de produção consiste de uma construção gráfica que mostra a "
+                      "<u>limitação do potencial produtivo</u> de um país na produção de um par de bens ou "
+                      "serviços."),
+        "poucas": ("A " + azb("FPP") + " é o gráfico das combinações <b>máximas</b> de dois bens que a economia "
+                   "consegue produzir com os recursos e a tecnologia dados: é a escassez desenhada."),
+        "destrinchando": [
+            "Hipóteses: dois bens, recursos (terra, trabalho, capital) e tecnologia <b>fixos</b>, uso pleno e "
+            "eficiente dos fatores. Cada ponto da curva é uma alocação eficiente.",
+            "Leitura das regiões: ponto <b>sobre</b> a curva → eficiente; <b>dentro</b> → ineficiente "
+            "(desemprego, ociosidade); <b>fora</b> → inatingível com os recursos atuais.",
+            "A FPP ilustra três ideias de uma vez: " + azb("escassez") + " (há limite), " + azb("escolha") +
+            " (é preciso decidir o ponto) e " + azb("custo de oportunidade") + " (inclinação: quanto de um "
+            "bem se sacrifica por unidade adicional do outro). Côncava → custo de oportunidade crescente; "
+            "reta → constante.",
+            "Desloca-se para fora com crescimento: mais fatores, progresso técnico, capital humano. Uma "
+            "recessão <b>não</b> desloca a FPP; leva a economia para dentro dela.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual, com sinônimos (“limitação do potencial "
+                       "produtivo” = escassez de recursos). A banca às vezes troca o par de bens por “todos os "
+                       "bens” ou diz que pontos internos são inatingíveis — aí sim o item cai."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os pontos situados abaixo da fronteira de possibilidades de produção são inatingíveis com os "
+            "recursos disponíveis.”</i> → ERRADO (troca de conceito: são atingíveis, mas ineficientes)",
+            "<i>“Uma recessão desloca a fronteira de possibilidades de produção para dentro.”</i> → ERRADO "
+            "(troca de conceito: a economia passa a operar dentro da FPP)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CORRETO (verso sem texto além do gabarito).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (60).png", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0211
+    {
+        "id": "ECO-E1-0211-1", "fonte_ref": "E1-0211", "destino": "01", "subtema": H2["fpp"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "EBC/2011", "ano": 2011, "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir, relativo à fronteira de possibilidades de produção.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se um avanço tecnológico no setor de informática implicar deslocamento da fronteira de "
+                      "possibilidades de produção de automóveis e computadores de um país, mais computadores e "
+                      "automóveis serão produzidos nessa economia."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se um avanço tecnológico no setor de informática implicar deslocamento da fronteira de "
+                      "possibilidades de produção de automóveis e computadores de um país, mais computadores "
+                      "<u>e automóveis</u> serão produzidos nessa economia."),
+        "poucas": ("Mesmo um progresso técnico só na informática expande a FPP: produzir os mesmos computadores "
+                   "exige menos recursos, e o que sobra pode ir para automóveis. " + azb("Mais dos dois") +
+                   " passa a ser possível."),
+        "destrinchando": [
+            "Progresso técnico " + azb("viesado") + " (só em um setor) não desloca a FPP em paralelo: ela "
+            "<b>gira</b> para fora, ancorada no intercepto do bem que não mudou. O máximo de automóveis (todos "
+            "os recursos em carros) continua igual; o máximo de computadores aumenta.",
+            "Mas, em qualquer ponto interior da fronteira, a nova FPP fica <b>acima</b> da antiga: com a "
+            "tecnologia melhor, a quantidade anterior de computadores é feita com menos trabalho e capital, "
+            "e os fatores liberados podem produzir automóveis. Por isso é possível ter " + vd("mais "
+            "computadores e mais automóveis") + " ao mesmo tempo (ponto A → ponto B no gráfico).",
+            "É a lógica do crescimento: mais fatores ou melhor tecnologia ampliam o conjunto de escolhas "
+            "da sociedade, mesmo quando o ganho nasce num só setor.",
+            "Nuance de redação: a FPP mostra o que <b>pode</b> ser produzido; se a economia de fato produzirá "
+            "mais dos dois depende da escolha do novo ponto (e do pleno emprego). A banca leu o “serão "
+            "produzidos” como “podem ser produzidos” e manteve CERTO.",
+        ],
+        "grafico_verso": "ECO-E1-0211-1-V1",
+        "dissecando": (cz("[contraintuitivo]") + " A armadilha é achar que um avanço “no setor de informática” "
+                       "só beneficia computadores. O item é verdadeiro porque a nova fronteira domina a antiga "
+                       "em todo o interior. O “serão produzidos” (em vez de “poderão”) é o que tornava o item "
+                       "arriscado — e o motivo provável do ❌."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um avanço tecnológico restrito ao setor de informática desloca paralelamente a FPP, elevando "
+            "na mesma proporção a produção máxima de automóveis e de computadores.”</i> → ERRADO (a FPP gira; "
+            "o máximo de automóveis não muda)",
+            "<i>“Um avanço tecnológico restrito ao setor de informática não altera a produção máxima possível "
+            "de automóveis, se todos os recursos forem alocados nesse setor.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["serão"], "dificuldade": 2,
+        "comentario_fonte": "CERTO. Exatamente. A fronteira foi deslocada, agora eu posso produzir mais.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (59).png", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada; mecanismo redesenhado em "
+                                   "ECO-E1-0211-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0234 (1)
+    {
+        "id": "ECO-E1-0234-1", "fonte_ref": "E1-0234", "destino": "07-A", "subtema": H2["cp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2020", "ano": 2020, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_MACAS, "excerto": EXCERTO_MACAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Se um novo morador migrar para o país e não houver choques exógenos de oferta e de "
+                      "demanda, pagará o preço de $ 5 por quilo de maçã que adquirir."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se um novo morador migrar para o país e <u>não houver choques exógenos</u> de oferta e de "
+                      "demanda, pagará o preço de $ 5 por quilo de maçã que adquirir."),
+        "poucas": ("Em concorrência perfeita, cada agente é " + azb("tomador de preço") + ": um consumidor a mais "
+                   "é desprezível diante do mercado e não move a demanda. Sem choques, o preço segue " +
+                   vd("$ 5") + "."),
+        "destrinchando": [
+            "Hipóteses da " + azb("concorrência perfeita") + ": " + azb("atomicidade") + " (muitos compradores "
+            "e vendedores, cada um pequeno demais para influir no preço), produto homogêneo, informação "
+            "perfeita, livre entrada e saída. Daí a " + azb("lei do preço único") + ": todos pagam o mesmo "
+            "preço.",
+            "Um morador novo acrescenta uma parcela infinitesimal à demanda de mercado; o deslocamento é "
+            "desprezível e o equilíbrio (p = 5) não se altera. Para o indivíduo, a oferta que ele enfrenta é, "
+            "na prática, horizontal ao preço de mercado.",
+            "Custos de transação e de menu nulos eliminam diferenças de preço entre lojas e atrasos de "
+            "reajuste: não há por que alguém pagar mais (ou menos) que $ 5.",
+            "Contraste: num mercado com poucos vendedores ou num bem diferenciado, preços distintos podem "
+            "coexistir e um comprador grande (monopsônio) pode influir no preço.",
+        ],
+        "dissecando": (cz("[detalhe]") + " A ressalva “não houver choques exógenos” blinda o item; o que se "
+                       "testa é a atomicidade. Quem imagina que “mais demanda → mais preço” sem pesar o tamanho "
+                       "do choque marca ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A chegada de milhares de novos moradores com renda elevada, sem alteração da oferta, manteria "
+            "o preço em $ 5.”</i> → ERRADO (choque de demanda relevante eleva o preço)",
+            "<i>“Em concorrência perfeita, nenhum consumidor isolado consegue alterar o preço de "
+            "mercado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Correto. Pela condição de concorrência perfeita, a adição de um único consumidor a "
+                            "uma base muito numerosa não gera efeito sobre a demanda de mercado, deixando o preço "
+                            "inalterado.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: a fonte só traz o ano (2020); possivelmente CEBRASPE, não confirmado"],
+    },
+    # ------------------------------------------------------------------ E1-0234 (2)
+    {
+        "id": "ECO-E1-0234-2", "fonte_ref": "E1-0234", "destino": "07-A", "subtema": H2["cp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2020", "ano": 2020, "cacd": False,
+        "errei": True,
+        "comando": COMANDO_MACAS, "excerto": EXCERTO_MACAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma nova mercearia que venda maçãs no pequeno país não terá incentivos para vender as "
+                      "frutas por menos que $ 5 por quilo, pois obterá lucros menores do que conseguiria caso "
+                      "mantivesse o preço no nível de equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma nova mercearia que venda maçãs no pequeno país não terá incentivos para vender as "
+                      "frutas por menos que $ 5 por quilo, pois obterá <u>lucros menores</u> do que conseguiria "
+                      "caso mantivesse o preço no nível de equilíbrio."),
+        "poucas": ("A firma competitiva enfrenta " + azb("demanda horizontal") + " ao preço de mercado: vende "
+                   "tudo o que quiser a $ 5. Baixar o preço não lhe traz um cliente a mais que já não teria — "
+                   "só reduz a receita e o lucro."),
+        "destrinchando": [
+            "Para a firma em concorrência perfeita, a demanda é perfeitamente elástica ao preço de mercado: "
+            + vd("p = RMe = RMg = 5") + ". Ela maximiza o lucro produzindo onde " + azb("p = CMg") + ".",
+            "Vender abaixo de $ 5 é dinheiro deixado na mesa: a mesma quantidade poderia ser vendida a $ 5. "
+            "Vender acima é perder todos os clientes, que compram dos concorrentes ao preço de mercado "
+            "(produto homogêneo, informação perfeita).",
+            "Por isso a firma competitiva é " + azb("tomadora de preço") + ": não há guerra de preços nem "
+            "estratégia de preço em concorrência perfeita; a única decisão é <b>quanto</b> produzir.",
+            "Cuidado com a justificativa que às vezes acompanha o item (“venderia abaixo do custo "
+            "marginal”): o ponto central é a receita perdida. Abaixo de $ 5, na quantidade ótima anterior, o "
+            "preço passaria a ficar abaixo do CMg, e o lucro cai por qualquer ângulo.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " O senso comum diz que “preço menor atrai "
+                       "clientes”; em concorrência perfeita, isso não vale, porque a firma já vende quanto "
+                       "quiser ao preço vigente. A palavra “nova” tenta sugerir estratégia de entrada com "
+                       "preço baixo — irrelevante aqui."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma nova mercearia poderá ampliar seu lucro vendendo a $ 4,90, pois atrairá todos os "
+            "consumidores do país.”</i> → ERRADO (a firma competitiva já vende tudo a $ 5)",
+            "<i>“Se a nova mercearia cobrar $ 5,10, perderá toda a sua clientela.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Correto. Se a mercearia assim o fizer, estará vendendo a maçã por um preço abaixo do "
+                            "seu custo marginal de produção (P = CMg), tornando inviável tal estratégia.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["errei: na fonte, a marca ❌ está só no item 2 da questão",
+                    "banca_provavel: a fonte só traz o ano (2020); possivelmente CEBRASPE, não confirmado"],
+    },
+    # ------------------------------------------------------------------ E1-0234 (3)
+    {
+        "id": "ECO-E1-0234-3", "fonte_ref": "E1-0234", "destino": "01", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2020", "ano": 2020, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_MACAS, "excerto": EXCERTO_MACAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Suponha que, no final do ano, haverá a festa nacional das tortas de maçã não prevista no "
+                      "pequeno país; isso causará uma elevação no preço e um aumento nas quantidades vendidas de "
+                      "maçãs."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Suponha que, no final do ano, haverá a festa nacional das tortas de maçã <u>não "
+                      "prevista</u> no pequeno país; isso causará uma elevação no preço e um aumento nas "
+                      "quantidades vendidas de maçãs."),
+        "poucas": ("A festa é um " + azb("choque positivo de demanda") + ": a curva de demanda vai para a "
+                   "direita e, com oferta crescente, o novo equilíbrio tem " + vd("preço e quantidade "
+                   "maiores") + "."),
+        "destrinchando": [
+            "A festa muda um determinante da demanda que não é o preço (gostos/ocasião de consumo): D₁ → D₂. "
+            "Ao preço antigo surge excesso de demanda, o preço sobe e os produtores respondem andando "
+            "<b>ao longo</b> da curva de oferta — mais quantidade.",
+            "Tabela dos quatro choques simples: ↑D → p↑ q↑; ↓D → p↓ q↓; ↑O → p↓ q↑; ↓O → p↑ q↓. "
+            "Com dois choques simultâneos, uma das variáveis fica indeterminada.",
+            "Por que “não prevista” importa: se a festa fosse antecipada, ofertantes poderiam ter planejado "
+            "estoques ou plantio, deslocando também a oferta e amortecendo a alta do preço. Como surpresa, só "
+            "a demanda se move no curto prazo.",
+            "Exceção a lembrar: oferta perfeitamente inelástica (vertical) → só o preço sobe; perfeitamente "
+            "elástica (horizontal) → só a quantidade sobe.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Estática comparativa de manual: um choque, uma curva, efeitos "
+                       "na mesma direção. O “não prevista” serve para isolar o choque de demanda; a banca "
+                       "testaria o erro trocando o sentido de uma das variáveis."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…isso causará uma elevação no preço e uma redução nas quantidades vendidas de maçãs.”</i> → "
+            "ERRADO (esse par é de choque negativo de oferta)",
+            "<i>“Se, além da festa, uma praga reduzisse a colheita, o preço subiria, mas o efeito sobre a "
+            "quantidade seria indeterminado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Correto. Em concorrência perfeita, a informação é livremente disponível; só uma "
+                            "surpresa desloca o equilíbrio. Trata-se de elevação inesperada da demanda: preço "
+                            "sobe e produtores respondem com maior produção.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["gabarito: classificação sem gabarito; adotado o da fonte (Correto)",
+                    "banca_provavel: a fonte só traz o ano (2020); possivelmente CEBRASPE, não confirmado"],
+    },
+    # ------------------------------------------------------------------ E1-0234 (4)
+    {
+        "id": "ECO-E1-0234-4", "fonte_ref": "E1-0234", "destino": "03", "subtema": H2["pmin"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2020", "ano": 2020, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_MACAS, "excerto": EXCERTO_MACAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Um mês depois da data do texto, uma epidemia assolou o país e reduziu a população em 40%. "
+                      "Para evitar uma crise no setor de maçãs, o governo fixou o preço das maçãs em $ 5 por "
+                      "quilo. Com isso, conclui-se que a quantidade semanal vendida de maçãs será a mesma de antes "
+                      "da epidemia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um mês depois da data do texto, uma epidemia assolou o país e reduziu a população em 40%. "
+                      "Para evitar uma crise no setor de maçãs, o governo fixou o preço das maçãs em $ 5 por "
+                      "quilo. Com isso, conclui-se que a quantidade semanal vendida de maçãs ")
+                   + vm("será a mesma de antes da epidemia") + az("."),
+        "poucas": ("Com 40% menos consumidores, a demanda cai e o equilíbrio iria abaixo de $ 5. Fixado em $ 5, "
+                   "o preço vira " + azb("preço mínimo") + " efetivo: vende-se só o que os consumidores "
+                   "restantes compram — " + vd("menos") + " que antes — e sobra maçã."),
+        "destrinchando": [
+            "Queda da população = menos compradores → " + azb("demanda desloca-se para a esquerda") + " (D₁ → "
+            "D₂). Livre, o mercado iria a um novo equilíbrio com preço e quantidade menores.",
+            "Fixar o preço no nível antigo ($ 5) transforma-o num " + azb("piso acima do equilíbrio") + ". "
+            "Nesse preço, os produtores continuam querendo vender o mesmo (a oferta não mudou), mas os "
+            "consumidores compram menos: " + vd("excesso de oferta") + ".",
+            "Quem limita a quantidade transacionada num piso é a <b>demanda</b> (ninguém é obrigado a "
+            "comprar). No exemplo do gráfico: antes, 10 unidades a $ 5; depois da epidemia, ao mesmo $ 5, "
+            "demandam-se só " + vd("6") + " — e os produtores ofertam 10.",
+            "Para sustentar o piso sem estoques apodrecendo, o governo teria de comprar o excedente (como na "
+            "política de preços mínimos agrícolas) ou restringir a produção. Peso morto e transferências "
+            "aparecem em qualquer caso.",
+            vm("Regra-âncora: num preço mínimo efetivo, vende-se a quantidade demandada; num preço máximo "
+               "efetivo, a quantidade ofertada — sempre o lado curto do mercado."),
+        ],
+        "grafico_verso": "ECO-E1-0234-4-V1",
+        "dissecando": (cz("[nexo indevido]") + " O item supõe que manter o preço mantém a quantidade, como se "
+                       "o preço fosse a única variável do mercado. Esquece que a curva de demanda mudou de "
+                       "lugar. 🔥 Preço fixado “para evitar crise” após choque é a deixa clássica para "
+                       "excesso de oferta (piso) ou escassez (teto)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…conclui-se que haverá excesso de oferta de maçãs ao preço fixado.”</i> → CERTO",
+            "<i>“…conclui-se que a quantidade vendida será limitada pela oferta, gerando escassez.”</i> → "
+            "ERRADO (troca de conceito: é piso, logo excesso de oferta)",
+        ])],
+        "reescrita": ("Um mês depois da data do texto, uma epidemia assolou o país e reduziu a população em 40%. "
+                      "Para evitar uma crise no setor de maçãs, o governo fixou o preço das maçãs em $ 5 por "
+                      "quilo. Com isso, conclui-se que a quantidade semanal vendida de maçãs será "
+                      + hl("menor que a") + " de antes da epidemia" + hl(", com excesso de oferta") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Errado. A queda da população reduz a demanda; espera-se queda do preço de "
+                            "equilíbrio. Mantido o preço mínimo no nível anterior, o efeito é excesso de oferta e "
+                            "menor quantidade demandada.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["gabarito: classificação sem gabarito; adotado o da fonte (errado)",
+                    "banca_provavel: a fonte só traz o ano (2020); possivelmente CEBRASPE, não confirmado"],
+    },
+    # ------------------------------------------------------------------ E2-L00336
+    {
+        "id": "ECO-E2-L00336-1", "fonte_ref": "E2-L00336", "destino": "01", "subtema": H2["fpp"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": "Julgue o item a seguir, relativo à fronteira de possibilidades de produção.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considere uma economia com dois setores que produzem bens utilizando capital e trabalho. "
+                      "Mesmo que ambos os setores apresentem retornos constantes de escala individualmente, a "
+                      "Fronteira de Possibilidades de Produção (FPP) dessa economia será côncava em relação à "
+                      "origem se as intensidades de uso dos fatores (razão capital/trabalho) forem diferentes "
+                      "entre os setores."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considere uma economia com dois setores que produzem bens utilizando capital e trabalho. "
+                      "<u>Mesmo que</u> ambos os setores apresentem retornos constantes de escala "
+                      "individualmente, a Fronteira de Possibilidades de Produção (FPP) dessa economia será "
+                      "côncava em relação à origem <u>se as intensidades de uso dos fatores</u> (razão "
+                      "capital/trabalho) <u>forem diferentes</u> entre os setores."),
+        "poucas": ("Com intensidades fatoriais distintas, os fatores liberados por um setor não vêm na proporção "
+                   "que o outro deseja: a realocação enfrenta " + azb("produtividade marginal decrescente") +
+                   " e o " + azb("custo de oportunidade cresce") + " — FPP côncava, mesmo com retornos "
+                   "constantes de escala."),
+        "destrinchando": [
+            "Suponha que alimentos sejam intensivos em trabalho e aço, em capital. Para produzir mais aço, a "
+            "economia tira recursos dos alimentos — que liberam muito trabalho e pouco capital. O setor de aço "
+            "precisa absorver esse trabalho com capital relativamente escasso: a razão K/L cai nos dois "
+            "setores, e o " + azb("produto marginal") + " dos fatores no aço diminui a cada transferência.",
+            "Resultado: cada tonelada adicional de aço custa mais alimentos que a anterior — "
+            + azb("custo de oportunidade crescente") + ", isto é, " + vd("FPP côncava") + ". Em equilíbrio "
+            "competitivo, isso aparece como mudança dos preços relativos dos fatores (" + oc("Stolper-"
+            "Samuelson") + ").",
+            "Caso-limite: se os dois setores usassem capital e trabalho <b>na mesma proporção</b> (e retornos "
+            "constantes), os recursos poderiam ser transferidos “em bloco”, sem perda: a FPP seria uma "
+            "<b>reta</b> (custo de oportunidade constante, como no modelo ricardiano de um fator).",
+            "É a base do modelo de " + oc("Heckscher-Ohlin") + ": dois fatores, intensidades distintas, FPP "
+            "côncava e especialização incompleta com o comércio.",
+            vm("Regra-âncora: retornos constantes de escala não garantem FPP reta; o que encurva a FPP é a "
+               "diferença de intensidade fatorial (ou a imperfeita adaptabilidade dos recursos)."),
+        ],
+        "dissecando": (cz("[contraintuitivo · detalhe]") + " O “mesmo que” provoca: quem associa concavidade só a "
+                       "rendimentos <b>de escala</b> decrescentes marca ERRADO. Os rendimentos que importam "
+                       "aqui são os <b>marginais</b> de cada fator, que caem quando a razão K/L muda. Ver também "
+                       "o item CEBRASPE (TJ/PA 2025) que liga concavidade a rendimentos marginais "
+                       "decrescentes."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se ambos os setores tiverem retornos constantes de escala e a mesma razão capital/trabalho, a "
+            "FPP será linear.”</i> → CERTO",
+            "<i>“Retornos constantes de escala nos dois setores implicam, necessariamente, FPP linear.”</i> → "
+            "ERRADO (modulador absoluto: depende das intensidades fatoriais)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "DETALHE"], "moduladores": ["mesmo que", "se"], "dificuldade": 3,
+        "comentario_fonte": "CERTO. Resultado da teoria de comércio (Heckscher-Ohlin) e equilíbrio geral: com "
+                            "intensidades fatoriais diferentes, a realocação enfrenta rendimentos decrescentes, "
+                            "custo de oportunidade crescente e FPP côncava; seria linear com intensidades "
+                            "idênticas.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00481
+    {
+        "id": "ECO-E2-L00481-1", "fonte_ref": "E2-L00481", "destino": "01", "subtema": H2["of"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à teoria microeconômica, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considerada a expectativa de que o preço da soja aumente daqui a 6 meses, é correto "
+                      "afirmar que, na visão do produtor, no mercado da soja, hoje, haverá um deslocamento da "
+                      "curva de oferta para esquerda, definindo-se um novo ponto de equilíbrio com preços mais "
+                      "elevados."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considerada a expectativa de que o preço da soja aumente daqui a 6 meses, é correto "
+                      "afirmar que, <u>na visão do produtor</u>, no mercado da soja, hoje, haverá um deslocamento "
+                      "da curva de oferta para esquerda, definindo-se um novo ponto de equilíbrio com preços mais "
+                      "elevados."),
+        "poucas": ("Soja é estocável: se o preço vai subir, o produtor " + azb("retém parte da safra") + " para "
+                   "vender depois. A oferta de hoje cai (curva para a esquerda) e o preço presente sobe."),
+        "destrinchando": [
+            azb("Expectativas") + " são determinante da oferta (e da demanda). Com bem estocável, vender hoje "
+            "ou daqui a seis meses é uma escolha intertemporal: a expectativa de preço futuro maior eleva o "
+            "custo de oportunidade de vender agora.",
+            "Efeito no mercado presente: O₁ → O₂ (esquerda), " + vd("preço ↑") + " e " + vd("quantidade ↓") +
+            " hoje. Esse mecanismo aproxima os preços presente e futuro: as expectativas tendem a se "
+            "realizar em parte já no presente.",
+            "O recorte “na visão do produtor” é deliberado. Do lado dos compradores (tradings, esmagadoras), a "
+            "mesma expectativa leva a antecipar compras: a <b>demanda</b> de hoje também sobe, reforçando a "
+            "alta do preço (e deixando a quantidade indeterminada).",
+            "A lógica vale para bens armazenáveis (grãos, petróleo, minérios). Para perecíveis, reter "
+            "produção não é opção, e o efeito sobre a oferta presente é fraco.",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " Intuição apressada: “preço vai subir → produtor "
+                       "quer produzir mais → oferta para a direita”. O item cobra o horizonte: hoje, a oferta "
+                       "cai; o aumento de plantio é decisão para a safra futura. A expressão “na visão do "
+                       "produtor” isola um só lado do mercado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A expectativa de alta futura do preço da soja desloca hoje a curva de oferta para a direita, "
+            "pois estimula a produção.”</i> → ERRADO (inversão: no presente o produtor retém estoques)",
+            "<i>“Na visão dos compradores, a expectativa de alta futura do preço tende a elevar a demanda "
+            "presente por soja.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "CERTO. Expectativa de preços futuros é determinante da oferta; com bem estocável, "
+                            "produtores retêm parte da produção atual; contração da oferta presente, deslocamento "
+                            "para a esquerda e preços mais altos hoje.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00746
+    {
+        "id": "ECO-E2-L00746-1", "fonte_ref": "E2-L00746", "destino": "01", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COMANDO_NABUCO_3,
+        "frente_figuras": ["ECO-E2-L00746-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por uma redução do preço do bem x."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com base no gráfico 1, […] é correto afirmar que o deslocamento da curva de demanda em "
+                      "questão pode ser explicado por ") + vm("uma redução do preço do bem x") + az("."),
+        "poucas": ("Variação no preço do <b>próprio</b> bem não desloca a curva de demanda: provoca "
+                   + azb("movimento ao longo") + " dela. A curva só se desloca quando muda outro determinante."),
+        "destrinchando": [
+            "A curva de demanda é o gráfico de q<sub>d</sub> = f(p) <i>mantido o resto constante</i> (renda, "
+            "preços de outros bens, gostos, expectativas, número de consumidores). O próprio preço já está "
+            "<b>nos eixos</b>: quando ele muda, o consumidor apenas escolhe outro ponto da mesma curva.",
+            "Vocabulário que a banca cobra: " + azb("variação da quantidade demandada") + " (movimento ao "
+            "longo, causado pelo preço do próprio bem) × " + azb("variação da demanda") + " (deslocamento da "
+            "curva, causado por qualquer outro determinante).",
+            "Para ir de D1 a D2 (mais quantidade a cada preço) servem: aumento de renda se x for normal; "
+            "queda de renda se x for inferior; alta do preço de um substituto; queda do preço de um "
+            "complementar; mudança de gostos a favor de x; mais consumidores; expectativa de alta futura do "
+            "preço de x.",
+            vm("Regra-âncora: preço do próprio bem → anda na curva; qualquer outra causa → a curva anda."),
+        ],
+        "grafico_verso": "ECO-E2-L00746-1-V1",
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " O item troca “variação da demanda” por "
+                       "“variação da quantidade demandada”: atribui o deslocamento à única variável que, por "
+                       "construção, não pode deslocá-la. Pista: o enunciado fala em curva que <b>se desloca</b> "
+                       "e oferece como causa o preço do próprio bem."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…pode ser explicado por uma redução do preço de um bem substituto de x…”</i> → ERRADO "
+            "(sentido trocado: deslocaria para a esquerda)",
+            "<i>“…pode ser explicado por uma redução do preço de um bem complementar de x…”</i> → CERTO",
+        ])],
+        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão " + hl("não")
+                      + " pode ser explicado por uma redução do preço do bem x, " + hl("que provocaria apenas "
+                      "movimento ao longo de D1") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "O deslocamento para a direita significa aumento da quantidade demandada a cada "
+                            "preço, causado por fatores que não o próprio preço (renda, preços de bens "
+                            "relacionados). Mudanças no preço do próprio bem provocam movimento ao longo da curva.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 109", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada"}],
+        "alertas": ["figura_conjectural: ECO-E2-L00746-1-F1 redesenhada a partir da descrição (D1 e D2 "
+                    "paralelas e decrescentes, seta para a direita); posição exata das retas não preservada"],
+    },
+    # ------------------------------------------------------------------ E2-L00747
+    {
+        "id": "ECO-E2-L00747-1", "fonte_ref": "E2-L00747", "destino": "01", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COMANDO_NABUCO_3,
+        "frente_figuras": ["ECO-E2-L00746-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por um aumento no preço do bem y, se este for complementar do bem x."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por um aumento no preço do bem y, se este for ") + vm("complementar")
+                   + az(" do bem x."),
+        "poucas": ("Se y é " + azb("complementar") + " de x, encarecer y <b>reduz</b> a demanda por x (curva "
+                   "para a esquerda). O deslocamento para a direita exigiria y " + azb("substituto") + "."),
+        "destrinchando": [
+            "Bens relacionados se classificam pela " + azb("elasticidade-preço cruzada") + " ε<sub>xy</sub> = "
+            "%Δq<sub>x</sub> / %Δp<sub>y</sub>: " + vd("ε > 0") + " → substitutos (café × chá); "
+            + vd("ε < 0") + " → complementares (carro × gasolina); ε = 0 → independentes.",
+            "Complementares são consumidos juntos: se y encarece, o “pacote” x + y fica mais caro e o "
+            "consumidor compra menos dos dois. A demanda de x cai a cada preço de x — deslocamento para a "
+            "<b>esquerda</b>.",
+            "Substitutos competem pela mesma necessidade: se y encarece, parte do consumo migra para x, e a "
+            "demanda de x sobe — deslocamento para a <b>direita</b>, como no Gráfico 1.",
+            "Atenção ao objeto: o preço de y aparece no gráfico de x como <b>deslocador</b>; no gráfico de y, "
+            "o mesmo aumento seria movimento ao longo da curva de y.",
+        ],
+        "grafico_verso": "ECO-E2-L00747-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " O mecanismo (preço de outro bem desloca a curva) está "
+                       "certo; o erro está só no rótulo da relação: “complementar” no lugar de “substituto”. "
+                       "Itens desse tipo se resolvem pelo sinal: ↑p<sub>y</sub> + complementar = "
+                       "↓D<sub>x</sub>."),
+        "modulos": [("🧠 Mnemônico", ["<b>C</b>omplementar <b>C</b>ai junto; <b>S</b>ubstituto <b>S</b>obe o "
+                                      "outro."])],
+        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por um aumento no preço do bem y, se este for " + hl("substituto") + " do bem x."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode", "se"], "dificuldade": 1,
+        "comentario_fonte": "Complementares: ao aumentar o preço de um, a demanda pelo outro diminui; "
+                            "substitutos: aumenta. O deslocamento seria explicado se y fosse substituto, não "
+                            "complementar.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 109", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (figura compartilhada ECO-E2-L00746-1-F1)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L00746-1-F1 (mesma figura do item 1)"],
+    },
+    # ------------------------------------------------------------------ E2-L00748
+    {
+        "id": "ECO-E2-L00748-1", "fonte_ref": "E2-L00748", "destino": "01", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COMANDO_NABUCO_3,
+        "frente_figuras": ["ECO-E2-L00746-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por um aumento na renda, se x for um bem inferior."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por um aumento na renda, se x for um bem ") + vm("inferior") + az("."),
+        "poucas": ("Para bem " + azb("inferior") + ", renda maior <b>reduz</b> a demanda (curva para a "
+                   "esquerda). D1 → D2 com aumento de renda exige bem " + azb("normal") + "."),
+        "destrinchando": [
+            "A classificação pela renda usa a " + azb("elasticidade-renda") + " η = %Δq / %Δm: " + vd("η > 0") +
+            " → bem normal (η > 1: superior ou de luxo; 0 < η < 1: necessário); " + vd("η < 0") + " → bem "
+            "inferior.",
+            "Bem inferior é aquele trocado por versões melhores quando a renda permite: transporte coletivo "
+            "lotado, carne de segunda, produtos de marca genérica. Com mais renda, compra-se menos dele a cada "
+            "preço.",
+            "Combinações que levam a D1 → D2 (direita): ↑renda e bem normal; <b>↓renda e bem inferior</b>. "
+            "Combinações que levariam para a esquerda: ↑renda e bem inferior (o caso do item); ↓renda e bem "
+            "normal.",
+            "Não confundir inferior com " + azb("bem de Giffen") + ": todo Giffen é inferior, mas quase nenhum "
+            "inferior é Giffen. A inferioridade diz respeito à renda (deslocamento da curva); o Giffen, à "
+            "inclinação positiva da própria curva.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Mesma estrutura dos itens irmãos: o deslocador (renda) é "
+                       "legítimo, a classificação do bem é a errada. Resolva pelo sinal: ↑m × (η < 0) = ↓D."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…pode ser explicado por uma redução na renda, se x for um bem inferior.”</i> → CERTO",
+            "<i>“…pode ser explicado por um aumento na renda, se x for um bem de Giffen.”</i> → ERRADO (Giffen "
+            "é inferior: a demanda cairia)",
+        ])],
+        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por um aumento na renda, se x for um bem " + hl("normal") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode", "se"], "dificuldade": 1,
+        "comentario_fonte": "Bem inferior: aumento de renda reduz a demanda; bem normal: aumenta. O deslocamento "
+                            "para a direita seria explicado por aumento de renda se x fosse normal, não inferior.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 109", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (figura compartilhada ECO-E2-L00746-1-F1)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L00746-1-F1 (mesma figura do item 1)"],
+    },
+    # ------------------------------------------------------------------ E2-L00749
+    {
+        "id": "ECO-E2-L00749-1", "fonte_ref": "E2-L00749", "destino": "01", "subtema": H2["of"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COMANDO_NABUCO_3,
+        "frente_figuras": ["ECO-E2-L00746-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Com base no gráfico 1, que representa a curva de demanda do bem x, que se desloca no tempo "
+                      "de D1 para D2, é correto afirmar que o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por uma redução dos preços dos insumos utilizados na produção do bem x."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por ") + vm("uma redução dos preços dos insumos utilizados na produção do bem x")
+                   + az("."),
+        "poucas": ("Preço de insumo é determinante da " + azb("oferta") + ", não da demanda: insumo mais barato "
+                   "desloca a curva de oferta de x para a direita e deixa a curva de demanda onde está."),
+        "destrinchando": [
+            "Cada curva tem seus deslocadores. " + azb("Demanda") + ": renda, preços de bens relacionados, "
+            "gostos, expectativas dos compradores, número de consumidores. " + azb("Oferta") + ": preço dos "
+            "insumos, tecnologia, tributos e subsídios, expectativas dos vendedores, número de produtores.",
+            "Insumo mais barato reduz o custo marginal: a oferta vai para a direita, o preço de x cai e a "
+            "quantidade sobe. Do ponto de vista da demanda, o que houve foi <b>movimento ao longo</b> de D1 "
+            "(mais quantidade demandada porque o preço caiu) — nunca o salto de D1 para D2.",
+            "É o mesmo erro do item 1 desta questão por outro caminho: o efeito final (preço menor de x) "
+            "provoca movimento, não deslocamento da demanda.",
+            vm("Regra-âncora: custo de produção mexe na oferta; o bolso e o gosto do consumidor mexem na "
+               "demanda."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item troca a curva: oferece um deslocador de oferta para "
+                       "explicar um deslocamento de demanda. A frase soa plausível porque “insumo barato → bem "
+                       "barato → mais consumo” é verdadeiro, só que como movimento ao longo de D1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A redução dos preços dos insumos utilizados na produção de x desloca a curva de oferta de x "
+            "para a direita.”</i> → CERTO",
+            "<i>“…pode ser explicado por uma redução da renda dos consumidores, se x for um bem normal.”</i> → "
+            "ERRADO (sentido trocado: deslocaria para a esquerda)",
+        ])],
+        "reescrita": ("Com base no gráfico 1, […] o deslocamento da curva de demanda em questão pode ser "
+                      "explicado por " + hl("um aumento do número de consumidores do bem x; a redução dos preços "
+                      "dos insumos deslocaria a curva de oferta") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "Preço dos insumos é determinante da oferta e não da demanda; sua redução desloca a "
+                            "curva de oferta do bem x, e não a de demanda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 109", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (figura compartilhada ECO-E2-L00746-1-F1)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L00746-1-F1 (mesma figura do item 1)"],
+    },
+    # ---- FIM
+]

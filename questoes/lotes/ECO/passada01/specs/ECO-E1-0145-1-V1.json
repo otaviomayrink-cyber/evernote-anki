@@ -1,0 +1,171 @@
+{
+ "id": "ECO-E1-0145-1-V1",
+ "uso": "verso",
+ "legenda": "Na caixa de Edgeworth, a dotação inicial ω fica fora da curva de contrato: as curvas de indiferença de A e B se cruzam ali e formam uma lente (área sombreada) de trocas que melhoram os dois. Um ponto como P, sobre a curva de contrato e dentro da lente, deixa ambos melhor que em ω; ali as curvas são tangentes, a lente desaparece e a alocação é Pareto-eficiente.",
+ "eixos": {
+  "x": "X",
+  "y": "Y",
+  "xmax": 10.6,
+  "ymax": 8.6
+ },
+ "curvas": [
+  {
+   "id": "topo",
+   "tipo": "horizontal",
+   "y": 8,
+   "x": [
+    0,
+    10
+   ],
+   "familia": "referencia"
+  },
+  {
+   "id": "dir",
+   "tipo": "vertical",
+   "x": 10,
+   "y": [
+    0,
+    8
+   ],
+   "familia": "referencia"
+  },
+  {
+   "id": "CC",
+   "tipo": "reta",
+   "p1": [
+    0,
+    0
+   ],
+   "p2": [
+    10,
+    8
+   ],
+   "familia": "destaque",
+   "rotulo": "curva de contrato",
+   "rotulo_xy": [
+    7.4,
+    8.35
+   ]
+  },
+  {
+   "id": "UA",
+   "tipo": "funcao",
+   "expr": "15/x",
+   "dominio": [
+    1.9,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "Uᴬ",
+   "rotulo_em": 9.0,
+   "rotulo_desloc": [
+    0,
+    16
+   ]
+  },
+  {
+   "id": "UB",
+   "tipo": "funcao",
+   "expr": "8 - 15/(10-x)",
+   "dominio": [
+    0,
+    8.1
+   ],
+   "familia": "oferta",
+   "rotulo": "Uᴮ",
+   "rotulo_em": 0.4,
+   "rotulo_desloc": [
+    0,
+    -16
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "W",
+   "xy": [
+    7.5,
+    2
+   ],
+   "rotulo": "ω",
+   "rotulo_desloc": [
+    -26,
+    -18
+   ]
+  },
+  {
+   "id": "P",
+   "xy": [
+    5,
+    4
+   ],
+   "rotulo": "P",
+   "rotulo_desloc": [
+    -22,
+    6
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "entre",
+   "x": [
+    2.5,
+    7.5
+   ],
+   "sup": "UB",
+   "inf": "UA",
+   "papel": "ganho"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    4.6,
+    7.0
+   ],
+   "para": [
+    4.3,
+    4.6
+   ],
+   "cor": "texto",
+   "espessura": 1.2
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    3.9,
+    7.25
+   ],
+   "texto": "trocas mutuamente vantajosas",
+   "negrito": true
+  },
+  {
+   "xy": [
+    0.6,
+    0.15
+   ],
+   "texto": "0ᴬ",
+   "negrito": true
+  },
+  {
+   "xy": [
+    10.1,
+    8.3
+   ],
+   "texto": "0ᴮ",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs(UA(7.5) - 2) < 0.01",
+  "abs(UB(7.5) - 2) < 0.01",
+  "UB(5) > UA(5)",
+  "abs(CC(5) - 4) < 0.01",
+  "UA(5) < CC(5) < UB(5)",
+  "P.x*P.y > 15",
+  "(10-P.x)*(8-P.y) > 15",
+  "abs(CC(P.x) - P.y) < 0.01"
+ ]
+}

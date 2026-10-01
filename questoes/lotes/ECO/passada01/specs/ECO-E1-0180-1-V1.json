@@ -1,0 +1,153 @@
+{
+ "id": "ECO-E1-0180-1-V1",
+ "uso": "verso",
+ "legenda": "Cobrado do comprador, o imposto desloca a demanda para baixo em t (D → D − t): o vendedor passa a receber pv e o comprador paga pc = pv + t. Mesma cunha, mesma quantidade qₜ e mesmo peso morto do imposto cobrado do vendedor.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    1,
+    9
+   ],
+   "p2": [
+    9,
+    1
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "estado": "inicial"
+  },
+  {
+   "id": "Dt",
+   "tipo": "reta",
+   "p1": [
+    1,
+    7
+   ],
+   "p2": [
+    7,
+    1
+   ],
+   "familia": "demanda",
+   "rotulo": "D − t"
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    1,
+    1
+   ],
+   "p2": [
+    9,
+    9
+   ],
+   "familia": "oferta",
+   "rotulo": "O"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D",
+   "para": "Dt",
+   "sentido": "baixo",
+   "em_x": 2.2
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E₀",
+   "projetar": true,
+   "rotulo_x": "q₀",
+   "rotulo_y": "p₀",
+   "rotulo_desloc": [
+    10,
+    4
+   ]
+  },
+  {
+   "id": "Ev",
+   "intersecao": [
+    "Dt",
+    "S"
+   ],
+   "projetar": true,
+   "rotulo_x": "qₜ",
+   "rotulo_y": "pv"
+  },
+  {
+   "id": "Ec",
+   "sobre": "D",
+   "x": "Ev.x",
+   "projetar": "y",
+   "rotulo_y": "pc"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "Ec.y"
+    ],
+    "Ec",
+    "Ev",
+    [
+     0,
+     "Ev.y"
+    ]
+   ],
+   "papel": "receita_tributaria",
+   "rotulo": "Receita",
+   "rotulo_xy": [
+    "Ec.x*0.35",
+    "(Ec.y+Ev.y)/2"
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "Ec",
+    "E0",
+    "Ev"
+   ],
+   "papel": "peso_morto"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Ec.x+0.15",
+    "Ev.y"
+   ],
+   "para": [
+    "Ec.x+0.15",
+    "Ec.y"
+   ],
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "t",
+   "rotulo_desloc": [
+    -22,
+    -6
+   ]
+  }
+ ],
+ "checar": [
+  "Ev.x < E0.x",
+  "Ec.y > E0.y",
+  "Ev.y < E0.y",
+  "abs((Ec.y - Ev.y) - 2) < 0.01"
+ ]
+}

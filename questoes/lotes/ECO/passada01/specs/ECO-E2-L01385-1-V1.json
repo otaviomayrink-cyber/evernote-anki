@@ -1,0 +1,93 @@
+{
+ "id": "ECO-E2-L01385-1-V1",
+ "uso": "verso",
+ "legenda": "Isoquanta reta (substitutos perfeitos, TMST = 2) mais inclinada que a isocusto (w/r = 1): o menor custo é o canto E, só com trabalho. Uma combinação com os dois insumos, como M, exige isocusto mais alta (C₂).",
+ "eixos": {
+  "x": "L",
+  "y": "K",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "Q",
+   "tipo": "reta",
+   "p1": [
+    0,
+    8
+   ],
+   "p2": [
+    4,
+    0
+   ],
+   "familia": "demanda",
+   "rotulo": "isoquanta q",
+   "rotulo_em": 1.0,
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  },
+  {
+   "id": "C1",
+   "tipo": "reta",
+   "p1": [
+    0,
+    4
+   ],
+   "p2": [
+    4,
+    0
+   ],
+   "familia": "quarta",
+   "rotulo": "C₁ (mínimo)",
+   "rotulo_xy": [
+    1.4,
+    0.6
+   ]
+  },
+  {
+   "id": "C2",
+   "tipo": "reta",
+   "p1": [
+    0,
+    6
+   ],
+   "p2": [
+    6,
+    0
+   ],
+   "familia": "quarta",
+   "rotulo": "C₂",
+   "tracejada": true,
+   "estado": "inicial"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "xy": [
+    4,
+    0
+   ],
+   "rotulo": "E",
+   "rotulo_desloc": [
+    6,
+    12
+   ]
+  },
+  {
+   "id": "M",
+   "sobre": "Q",
+   "x": 2,
+   "rotulo": "M"
+  }
+ ],
+ "checar": [
+  "abs(Q(4)) < 1e-9",
+  "abs(C1(4)) < 1e-9",
+  "abs(C2(M.x) - M.y) < 1e-9",
+  "C1(0) < C2(0)",
+  "Q(0) - Q(1) > C1(0) - C1(1)"
+ ]
+}

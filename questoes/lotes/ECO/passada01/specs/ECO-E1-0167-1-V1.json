@@ -1,0 +1,77 @@
+{
+ "id": "ECO-E1-0167-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Mesmo imposto t nos dois painéis. À esquerda (demanda inelástica, oferta elástica), quase toda a cunha aparece como alta de pc: o consumidor paga. À direita (demanda elástica, oferta inelástica), a cunha aparece como queda de pv: o produtor paga.",
+ "paineis": [
+  {
+   "modelo": "tributo",
+   "params": {
+    "t": 3,
+    "D": [
+     [
+      3.5,
+      9.5
+     ],
+     [
+      6.5,
+      0.5
+     ]
+    ],
+    "S": [
+     [
+      0.5,
+      1.4
+     ],
+     [
+      9.5,
+      6.8
+     ]
+    ]
+   },
+   "titulo": "Demanda inelástica",
+   "checar": [
+    "(Ec.y - E0.y) > 2*(E0.y - Ev.y)"
+   ]
+  },
+  {
+   "modelo": "tributo",
+   "params": {
+    "t": 3,
+    "D": [
+     [
+      0.5,
+      7.7
+     ],
+     [
+      9.5,
+      2.3
+     ]
+    ],
+    "S": [
+     [
+      3.5,
+      0.5
+     ],
+     [
+      6.5,
+      9.5
+     ]
+    ]
+   },
+   "substituir": {
+    "S": {
+     "rotulo_em": 3.75,
+     "rotulo_desloc": [
+      10,
+      0
+     ]
+    }
+   },
+   "titulo": "Demanda elástica",
+   "checar": [
+    "(E0.y - Ev.y) > 2*(Ec.y - E0.y)"
+   ]
+  }
+ ]
+}

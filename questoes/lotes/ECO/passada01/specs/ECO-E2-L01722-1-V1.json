@@ -1,0 +1,206 @@
+{
+ "id": "ECO-E2-L01722-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Ao longo de um mesmo raio (K/L fixo), cada +100 unidades de produto exige um acréscimo de insumos. Com rendimentos constantes, os saltos são iguais; com rendimentos crescentes, cada vez menores — as isoquantas se APROXIMAM.",
+ "paineis": [
+  {
+   "titulo": "Rendimentos constantes de escala",
+   "eixos": {
+    "x": "L",
+    "y": "K",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "R",
+     "tipo": "reta",
+     "p1": [
+      0,
+      0
+     ],
+     "p2": [
+      9,
+      9
+     ],
+     "familia": "referencia",
+     "rotulo": ""
+    },
+    {
+     "id": "Q1",
+     "tipo": "funcao",
+     "expr": "4/x",
+     "dominio": [
+      0.42,
+      7.5
+     ],
+     "familia": "demanda",
+     "rotulo": "Q = 100"
+    },
+    {
+     "id": "Q2",
+     "tipo": "funcao",
+     "expr": "16/x",
+     "dominio": [
+      1.65,
+      7.5
+     ],
+     "familia": "demanda",
+     "rotulo": "Q = 200"
+    },
+    {
+     "id": "Q3",
+     "tipo": "funcao",
+     "expr": "36/x",
+     "dominio": [
+      3.7,
+      7.5
+     ],
+     "familia": "demanda",
+     "rotulo": "Q = 300"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "intersecao": [
+      "R",
+      "Q1"
+     ],
+     "rotulo": "A",
+     "rotulo_desloc": [
+      -20,
+      -12
+     ]
+    },
+    {
+     "id": "B",
+     "intersecao": [
+      "R",
+      "Q2"
+     ],
+     "rotulo": "B",
+     "rotulo_desloc": [
+      -20,
+      -12
+     ]
+    },
+    {
+     "id": "C",
+     "intersecao": [
+      "R",
+      "Q3"
+     ],
+     "rotulo": "C",
+     "rotulo_desloc": [
+      -20,
+      -12
+     ]
+    }
+   ],
+   "checar": [
+    "abs((B.x - A.x) - (C.x - B.x)) < 0.05"
+   ]
+  },
+  {
+   "titulo": "Rendimentos crescentes de escala",
+   "eixos": {
+    "x": "L",
+    "y": "K",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "R",
+     "tipo": "reta",
+     "p1": [
+      0,
+      0
+     ],
+     "p2": [
+      9,
+      9
+     ],
+     "familia": "referencia",
+     "rotulo": ""
+    },
+    {
+     "id": "Q1",
+     "tipo": "funcao",
+     "expr": "4/x",
+     "dominio": [
+      0.42,
+      7.5
+     ],
+     "familia": "demanda",
+     "rotulo": "Q = 100"
+    },
+    {
+     "id": "Q2",
+     "tipo": "funcao",
+     "expr": "8/x",
+     "dominio": [
+      0.83,
+      7.5
+     ],
+     "familia": "demanda",
+     "rotulo": "Q = 200"
+    },
+    {
+     "id": "Q3",
+     "tipo": "funcao",
+     "expr": "12/x",
+     "dominio": [
+      1.25,
+      7.5
+     ],
+     "familia": "demanda",
+     "rotulo": "Q = 300"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "intersecao": [
+      "R",
+      "Q1"
+     ],
+     "rotulo": "A",
+     "rotulo_desloc": [
+      -30,
+      2
+     ]
+    },
+    {
+     "id": "B",
+     "intersecao": [
+      "R",
+      "Q2"
+     ],
+     "rotulo": "B",
+     "rotulo_desloc": [
+      -30,
+      2
+     ]
+    },
+    {
+     "id": "C",
+     "intersecao": [
+      "R",
+      "Q3"
+     ],
+     "rotulo": "C",
+     "rotulo_desloc": [
+      -30,
+      2
+     ]
+    }
+   ],
+   "checar": [
+    "(B.x - A.x) > (C.x - B.x) + 0.1"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "id": "ECO-E1-0165-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Com as mesmas curvas, dobrar a alíquota (t → 2t) dobra a base e a altura do triângulo do peso morto (PM): a perda de eficiência quadruplica, e a fatia que cabe ao produtor cresce junto.",
+ "paineis": [
+  {
+   "modelo": "tributo",
+   "params": {
+    "t": 2,
+    "D": [
+     [
+      1,
+      9
+     ],
+     [
+      9,
+      1
+     ]
+    ],
+    "S": [
+     [
+      1,
+      1
+     ],
+     [
+      9,
+      9
+     ]
+    ]
+   },
+   "titulo": "Alíquota t",
+   "checar": [
+    "abs((Ec.y - Ev.y)*(E0.x - Ec.x)/2 - 1) < 0.02"
+   ]
+  },
+  {
+   "modelo": "tributo",
+   "params": {
+    "t": 4,
+    "D": [
+     [
+      1,
+      9
+     ],
+     [
+      9,
+      1
+     ]
+    ],
+    "S": [
+     [
+      1,
+      1
+     ],
+     [
+      9,
+      9
+     ]
+    ]
+   },
+   "titulo": "Alíquota 2t",
+   "checar": [
+    "abs((Ec.y - Ev.y)*(E0.x - Ec.x)/2 - 4) < 0.02"
+   ]
+  }
+ ]
+}

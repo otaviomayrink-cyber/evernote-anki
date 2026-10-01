@@ -1,0 +1,203 @@
+{
+ "id": "ECO-E1-0131-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "O mesmo teto (abaixo do equilíbrio E) gera escassez pequena no curto prazo, quando oferta e demanda são inelásticas (falta 2), e grande no longo prazo, quando ambas ficam elásticas (falta 8).",
+ "paineis": [
+  {
+   "titulo": "Curto prazo (curvas inelásticas)",
+   "eixos": {
+    "x": "q",
+    "y": "p",
+    "xmax": 10,
+    "ymax": 10,
+    "numeros": true
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "funcao",
+     "expr": "16 - 2*x",
+     "dominio": [
+      3.4,
+      7.6
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "funcao",
+     "expr": "2*x - 4",
+     "dominio": [
+      2.6,
+      6.8
+     ],
+     "familia": "oferta",
+     "rotulo": "O"
+    },
+    {
+     "id": "T",
+     "tipo": "horizontal",
+     "y": 4,
+     "x": [
+      0,
+      9
+     ],
+     "familia": "destaque",
+     "rotulo": "teto",
+     "tracejada": true
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "rotulo": "E",
+     "rotulo_desloc": [
+      10,
+      4
+     ]
+    },
+    {
+     "id": "Qs",
+     "intersecao": [
+      "S",
+      "T"
+     ],
+     "projetar": "x"
+    },
+    {
+     "id": "Qd",
+     "intersecao": [
+      "D",
+      "T"
+     ],
+     "projetar": "x"
+    }
+   ],
+   "setas": [
+    {
+     "de": [
+      "Qs.x",
+      1.0
+     ],
+     "para": [
+      "Qd.x",
+      1.0
+     ],
+     "cor": "vermelho",
+     "estilo": "<|-|>",
+     "rotulo": "falta 2"
+    }
+   ],
+   "checar": [
+    "abs(Qd.x - Qs.x - 2) < 0.01",
+    "Qd.y < E.y"
+   ]
+  },
+  {
+   "titulo": "Longo prazo (curvas elásticas)",
+   "eixos": {
+    "x": "q",
+    "y": "p",
+    "xmax": 10,
+    "ymax": 10,
+    "numeros": true
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "funcao",
+     "expr": "8.5 - 0.5*x",
+     "dominio": [
+      0.5,
+      9.8
+     ],
+     "familia": "demanda",
+     "rotulo": "D",
+     "rotulo_em": 1.5,
+     "rotulo_desloc": [
+      4,
+      8
+     ]
+    },
+    {
+     "id": "S",
+     "tipo": "funcao",
+     "expr": "3.5 + 0.5*x",
+     "dominio": [
+      0,
+      9.8
+     ],
+     "familia": "oferta",
+     "rotulo": "O"
+    },
+    {
+     "id": "T",
+     "tipo": "horizontal",
+     "y": 4,
+     "x": [
+      0,
+      9.8
+     ],
+     "familia": "destaque",
+     "rotulo": "teto",
+     "tracejada": true
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "rotulo": "E",
+     "rotulo_desloc": [
+      -6,
+      12
+     ]
+    },
+    {
+     "id": "Qs",
+     "intersecao": [
+      "S",
+      "T"
+     ],
+     "projetar": "x"
+    },
+    {
+     "id": "Qd",
+     "intersecao": [
+      "D",
+      "T"
+     ],
+     "projetar": "x"
+    }
+   ],
+   "setas": [
+    {
+     "de": [
+      "Qs.x",
+      1.0
+     ],
+     "para": [
+      "Qd.x",
+      1.0
+     ],
+     "cor": "vermelho",
+     "estilo": "<|-|>",
+     "rotulo": "falta 8"
+    }
+   ],
+   "checar": [
+    "abs(Qd.x - Qs.x - 8) < 0.01",
+    "Qd.y < E.y"
+   ]
+  }
+ ]
+}

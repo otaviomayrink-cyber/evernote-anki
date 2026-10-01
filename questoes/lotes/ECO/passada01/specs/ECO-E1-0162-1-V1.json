@@ -1,0 +1,32 @@
+{
+ "id": "ECO-E1-0162-1-V1",
+ "uso": "verso",
+ "legenda": "Demanda inelástica (íngreme) e oferta elástica (plana): o imposto t eleva muito o preço pago pelo comprador (p₀ → pc) e reduz pouco o recebido pelo vendedor (p₀ → pv). A maior parte da cunha fica com o comprador.",
+ "modelo": "tributo",
+ "params": {
+  "t": 3,
+  "D": [
+   [
+    3.5,
+    9.5
+   ],
+   [
+    6.5,
+    0.5
+   ]
+  ],
+  "S": [
+   [
+    0.5,
+    1.4
+   ],
+   [
+    9.5,
+    6.8
+   ]
+  ]
+ },
+ "checar": [
+  "(Ec.y - E0.y) > 2*(E0.y - Ev.y)"
+ ]
+}

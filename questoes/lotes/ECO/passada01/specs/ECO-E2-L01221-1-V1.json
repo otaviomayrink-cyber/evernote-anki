@@ -1,0 +1,14 @@
+{"id": "ECO-E2-L01221-1-V1", "uso": "verso",
+ "legenda": "Com o capital fixo, PMg e PMe do trabalho sobem e depois caem. Enquanto PMg > PMe, cada trabalhador novo puxa a média para cima; quando PMg < PMe, puxa para baixo. Por isso PMg corta PMe exatamente no máximo de PMe (ponto M).",
+ "eixos": {"x": "L", "y": "q/L", "xmax": 10, "ymax": 28},
+ "curvas": [
+   {"id": "PMg", "tipo": "funcao", "expr": "12*x - 1.5*x**2", "dominio": [0, 8], "familia": "oferta", "rotulo": "PMg"},
+   {"id": "PMe", "tipo": "funcao", "expr": "6*x - 0.5*x**2", "dominio": [0, 9.6], "familia": "demanda", "rotulo": "PMe"}],
+ "pontos": [
+   {"id": "M", "sobre": "PMe", "x": 6, "rotulo": "M", "projetar": "x", "rotulo_x": "L*", "rotulo_desloc": [4, 14]},
+   {"id": "G", "sobre": "PMg", "x": 4, "rotulo": "máx. PMg", "marcar": true, "rotulo_desloc": [-30, 12]}],
+ "textos": [
+   {"xy": [0.4, 27], "texto": "PMg > PMe → PMe sobe", "cor": "cinza", "tamanho": 11.5},
+   {"xy": [6.6, 27], "texto": "PMg < PMe → PMe cai", "cor": "cinza", "tamanho": 11.5}],
+ "checar": ["abs(PMg(6) - PMe(6)) < 0.02", "PMg(4) > PMe(4)", "PMg(7) < PMe(7)", "PMe(6) > PMe(5.9)", "PMe(6) > PMe(6.1)", "PMg(4) > PMg(3.9)", "PMg(4) > PMg(4.1)"]
+}

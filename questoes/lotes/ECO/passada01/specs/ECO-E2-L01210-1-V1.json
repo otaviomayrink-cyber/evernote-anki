@@ -1,0 +1,17 @@
+{"id": "ECO-E2-L01210-1-V1", "uso": "verso",
+ "legenda": "Com oferta horizontal (infinitamente elástica), o imposto desloca a oferta para cima no valor de t: o preço ao consumidor sobe o imposto inteiro (p₀ → pc) e a quantidade cai (q₀ → q₁). Preço e quantidade mudam — só o preço líquido do vendedor fica igual.",
+ "eixos": {"x": "q", "y": "p"},
+ "curvas": [
+   {"id": "D", "tipo": "reta", "p1": [0.5, 9.5], "p2": [9.5, 0.5], "familia": "demanda", "rotulo": "D"},
+   {"id": "S", "tipo": "horizontal", "y": 3, "x": [0, 9.6], "familia": "oferta", "rotulo": "O", "estado": "inicial"},
+   {"id": "St", "tipo": "horizontal", "y": 5, "x": [0, 9.6], "familia": "oferta", "rotulo": "O + t"}],
+ "deslocamentos": [{"de": "S", "para": "St", "sentido": "cima", "em_x": 8.6}],
+ "pontos": [
+   {"id": "E0", "intersecao": ["D", "S"], "rotulo": "E₀", "projetar": "x", "rotulo_x": "q₀", "rotulo_desloc": [8, 10]},
+   {"id": "E1", "intersecao": ["D", "St"], "rotulo": "E₁", "projetar": "x", "rotulo_x": "q₁", "rotulo_desloc": [8, 10]}],
+ "areas": [
+   {"tipo": "poligono", "vertices": [[0, 3], [0, 5], "E1", ["E1.x", 3]], "papel": "receita_tributaria", "rotulo": "Receita"},
+   {"tipo": "poligono", "vertices": ["E1", "E0", ["E1.x", 3]], "papel": "peso_morto"}],
+ "textos": [{"xy": [0.15, 5.4], "texto": "pc", "cor": "azul", "negrito": true},
+            {"xy": [0.15, 2.6], "texto": "p₀ = pv", "cor": "ocre", "negrito": true}],
+ "checar": ["abs(E1.y - E0.y - 2) < 0.01", "E1.x < E0.x"]}

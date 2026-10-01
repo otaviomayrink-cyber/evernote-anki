@@ -1,0 +1,12 @@
+{"id": "ECO-E1-0194-1-V1", "uso": "verso",
+ "legenda": "A oferta de curto prazo (trecho vermelho) começa no ponto de fechamento F, mínimo do CVMe, e não em N, mínimo do CMe. Com preço entre F e N, a firma produz com prejuízo, porque a receita ainda cobre o custo variável e parte do fixo.",
+ "eixos": {"x": "q", "y": "custo", "xmax": 11.5, "ymax": 13},
+ "curvas": [
+   {"id": "CMg", "tipo": "funcao", "expr": "6 - 2.4*x + 0.3*x**2", "dominio": [0.4, 6], "familia": "oferta", "rotulo": "CMg", "rotulo_xy": [0.5, 6.6]},
+   {"id": "OF", "tipo": "funcao", "expr": "6 - 2.4*x + 0.3*x**2", "dominio": [6, 10], "familia": "destaque", "rotulo": "oferta de CP = CMg"},
+   {"id": "CMe", "tipo": "funcao", "expr": "20/x + 6 - 1.2*x + 0.1*x**2", "dominio": [2.2, 11], "familia": "terceira", "rotulo": "CMe"},
+   {"id": "CVMe", "tipo": "funcao", "expr": "6 - 1.2*x + 0.1*x**2", "dominio": [0.5, 11], "familia": "quarta", "rotulo": "CVMe"}],
+ "pontos": [
+   {"id": "F", "intersecao": ["OF", "CVMe"], "rotulo": "F (fechamento)", "rotulo_desloc": [12, -22], "projetar": "y", "rotulo_y": "P mín."},
+   {"id": "N", "intersecao": ["OF", "CMe"], "rotulo": "N (lucro zero)", "rotulo_desloc": [14, -6]}],
+ "checar": ["abs(F.x - 6) < 0.05", "abs(F.y - 2.4) < 0.05", "N.y > F.y", "N.x > F.x", "CMg(5) < CVMe(5)"]}

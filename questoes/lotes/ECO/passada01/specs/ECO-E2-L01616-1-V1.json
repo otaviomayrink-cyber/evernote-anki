@@ -1,0 +1,122 @@
+{
+ "id": "ECO-E2-L01616-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "A utilidade total sobe enquanto a UMg é positiva, atinge o máximo (150) no ponto de saciedade, onde UMg = 0 (Q = 6), e cai daí em diante: além de 6, cada unidade tem utilidade marginal negativa.",
+ "paineis": [
+  {
+   "titulo": "Utilidade total",
+   "eixos": {
+    "x": "Q",
+    "y": "UT",
+    "xmax": 10,
+    "ymax": 170
+   },
+   "curvas": [
+    {
+     "id": "UT",
+     "tipo": "funcao",
+     "expr": "50*x - 25*x**2/6",
+     "dominio": [
+      0,
+      9.5
+     ],
+     "familia": "demanda",
+     "rotulo": "UT",
+     "rotulo_desloc": [
+      8,
+      0
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "S",
+     "sobre": "UT",
+     "x": 6,
+     "rotulo": "saciedade",
+     "projetar": true,
+     "rotulo_x": "6",
+     "rotulo_y": "150",
+     "rotulo_desloc": [
+      -40,
+      18
+     ]
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      7.0,
+      40
+     ],
+     "texto": "UMg < 0:\nUT cai",
+     "cor": "vermelho",
+     "negrito": true
+    }
+   ],
+   "checar": [
+    "abs(S.y - 150) < 0.01",
+    "UT(5.5) < S.y",
+    "UT(6.5) < S.y"
+   ]
+  },
+  {
+   "titulo": "Utilidade marginal",
+   "eixos": {
+    "x": "Q",
+    "y": "UMg",
+    "xmax": 10,
+    "ymax": 55
+   },
+   "curvas": [
+    {
+     "id": "UMg",
+     "tipo": "funcao",
+     "expr": "50 - 25*x/3",
+     "dominio": [
+      0,
+      6
+     ],
+     "familia": "oferta",
+     "rotulo": "UMg",
+     "rotulo_em": 2,
+     "rotulo_desloc": [
+      10,
+      8
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "Z",
+     "xy": [
+      6,
+      0
+     ],
+     "rotulo": "UMg = 0",
+     "rotulo_desloc": [
+      12,
+      14
+     ],
+     "rotulo_x": "6"
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      6.6,
+      12
+     ],
+     "texto": "além de 6:\nUMg negativa",
+     "cor": "vermelho",
+     "negrito": true
+    }
+   ],
+   "checar": [
+    "abs(UMg(6)) < 0.01",
+    "UMg(2) > UMg(4)"
+   ]
+  }
+ ]
+}

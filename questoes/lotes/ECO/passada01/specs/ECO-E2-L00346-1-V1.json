@@ -1,0 +1,122 @@
+{
+ "id": "ECO-E2-L00346-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Da esquerda para a direita, a substituição fica mais difícil e a curvatura aumenta: reta (substitutos perfeitos, convexidade nula, TMS constante), curva usual (TMS decrescente) e L (complementares perfeitos, curvatura máxima).",
+ "paineis": [
+  {
+   "titulo": "Substituição fácil",
+   "eixos": {
+    "x": "x₁",
+    "y": "x₂"
+   },
+   "curvas": [
+    {
+     "id": "U",
+     "tipo": "reta",
+     "p1": [
+      0,
+      8
+     ],
+     "p2": [
+      8,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U",
+     "rotulo_em": 5,
+     "rotulo_desloc": [
+      8,
+      8
+     ]
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      4.6,
+      8.6
+     ],
+     "texto": "reta: TMS constante",
+     "cor": "cinza"
+    }
+   ],
+   "checar": [
+    "abs((U(2) - U(4)) - (U(4) - U(6))) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Caso usual",
+   "eixos": {
+    "x": "x₁",
+    "y": "x₂"
+   },
+   "curvas": [
+    {
+     "id": "U",
+     "tipo": "funcao",
+     "expr": "12/x",
+     "dominio": [
+      1.3,
+      9.5
+     ],
+     "familia": "demanda",
+     "rotulo": "U"
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      4.0,
+      8.6
+     ],
+     "texto": "convexa: TMS cai",
+     "cor": "cinza"
+    }
+   ],
+   "checar": [
+    "U(2) - U(4) > U(4) - U(6)"
+   ]
+  },
+  {
+   "titulo": "Substituição difícil",
+   "eixos": {
+    "x": "x₁",
+    "y": "x₂"
+   },
+   "curvas": [
+    {
+     "id": "U",
+     "tipo": "pontos",
+     "pontos": [
+      [
+       3,
+       9.3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       9.3,
+       3
+      ]
+     ],
+     "suave": false,
+     "familia": "demanda",
+     "rotulo": "U"
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      4.0,
+      8.6
+     ],
+     "texto": "L: curvatura máxima",
+     "cor": "cinza"
+    }
+   ]
+  }
+ ]
+}

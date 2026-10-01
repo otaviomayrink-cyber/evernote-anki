@@ -1,0 +1,162 @@
+{
+ "id": "ECO-E2-L00290-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Com preço único, o monopolista para em qm (RMg = CMg) e deixa o triângulo de peso morto (PM). Discriminando perfeitamente, vende cada unidade pelo preço de reserva, vai até qc (P = CMg) e transforma todo o excedente em lucro: o peso morto desaparece.",
+ "paineis": [
+  {
+   "titulo": "Monopólio com preço único",
+   "modelo": "monopolio",
+   "params": {
+    "a": 9,
+    "b": 1,
+    "c": 3
+   },
+   "substituir": {
+    "CMg": {
+     "rotulo": "CMg"
+    },
+    "D": {
+     "rotulo": "D"
+    }
+   },
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       9
+      ],
+      [
+       0,
+       "M.y"
+      ],
+      "M"
+     ],
+     "papel": "excedente_consumidor",
+     "rotulo": "EC",
+     "rotulo_xy": [
+      0.32,
+      6.35
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       3
+      ],
+      [
+       0,
+       "M.y"
+      ],
+      "M",
+      [
+       "Q.x",
+       3
+      ]
+     ],
+     "papel": "excedente_produtor",
+     "rotulo": "lucro",
+     "rotulo_xy": [
+      1.5,
+      4.5
+     ]
+    }
+   ],
+   "checar": [
+    "abs(Q.x - 3) < 0.01",
+    "abs(M.y - 6) < 0.01",
+    "abs(C.x - 6) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Discriminação perfeita (1º grau)",
+   "eixos": {
+    "x": "q",
+    "y": "p",
+    "xmax": 9.45
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "funcao",
+     "expr": "9-x",
+     "dominio": [
+      0,
+      9
+     ],
+     "familia": "demanda",
+     "rotulo": "D = RMg",
+     "rotulo_em": 7.4,
+     "rotulo_desloc": [
+      6,
+      10
+     ]
+    },
+    {
+     "id": "CMg",
+     "tipo": "horizontal",
+     "y": 3,
+     "familia": "oferta",
+     "rotulo": "CMg"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "C",
+     "intersecao": [
+      "D",
+      "CMg"
+     ],
+     "rotulo": "C",
+     "projetar": "x",
+     "rotulo_x": "qc",
+     "rotulo_desloc": [
+      6,
+      12
+     ]
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       9
+      ],
+      "C",
+      [
+       0,
+       3
+      ]
+     ],
+     "papel": "excedente_produtor",
+     "rotulo": "lucro",
+     "rotulo_xy": [
+      1.6,
+      4.6
+     ]
+    }
+   ],
+   "checar": [
+    "abs(C.x - 6) < 0.01",
+    "abs(C.y - 3) < 0.01"
+   ],
+   "textos": [
+    {
+     "xy": [
+      5.2,
+      7.6
+     ],
+     "texto": "EC = 0 e PM = 0",
+     "cor": "cinza",
+     "tamanho": 12
+    }
+   ]
+  }
+ ]
+}

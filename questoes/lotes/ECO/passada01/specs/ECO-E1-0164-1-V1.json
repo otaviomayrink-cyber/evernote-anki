@@ -1,0 +1,150 @@
+{
+ "id": "ECO-E1-0164-1-V1",
+ "uso": "verso",
+ "legenda": "O subsídio s desloca a oferta para baixo (O → O − s): o comprador paga pc, abaixo de p₀, e o vendedor recebe pv, acima. Produz-se além de q₀; o gasto do governo (retângulo amarelo) supera o ganho somado de consumidores e produtores, e a diferença é o peso morto (triângulo vermelho).",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    1,
+    9
+   ],
+   "p2": [
+    9,
+    1
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    1,
+    1
+   ],
+   "p2": [
+    8.6,
+    8.6
+   ],
+   "familia": "oferta",
+   "rotulo": "O",
+   "estado": "inicial"
+  },
+  {
+   "id": "Ss",
+   "tipo": "reta",
+   "p1": [
+    2.2,
+    0.2
+   ],
+   "p2": [
+    9.4,
+    7.4
+   ],
+   "familia": "oferta",
+   "rotulo": "O − s"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E₀",
+   "projetar": true,
+   "rotulo_x": "q₀",
+   "rotulo_y": "p₀",
+   "rotulo_desloc": [
+    -8,
+    18
+   ]
+  },
+  {
+   "id": "Ec",
+   "intersecao": [
+    "D",
+    "Ss"
+   ],
+   "projetar": true,
+   "rotulo_x": "qₛ",
+   "rotulo_y": "pc"
+  },
+  {
+   "id": "Ev",
+   "sobre": "S",
+   "x": "Ec.x",
+   "projetar": "y",
+   "rotulo_y": "pv"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "Ev.y"
+    ],
+    "Ev",
+    "Ec",
+    [
+     0,
+     "Ec.y"
+    ]
+   ],
+   "papel": "gasto",
+   "rotulo": "gasto do governo",
+   "rotulo_xy": [
+    2.4,
+    5.5
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "E0",
+    "Ev",
+    "Ec"
+   ],
+   "papel": "peso_morto",
+   "rotulo": "PM",
+   "rotulo_xy": [
+    "(E0.x+Ev.x+Ec.x)/3+0.2",
+    "(E0.y+Ev.y+Ec.y)/3"
+   ]
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Ec.x+0.25",
+    "Ec.y"
+   ],
+   "para": [
+    "Ec.x+0.25",
+    "Ev.y"
+   ],
+   "estilo": "<|-|>",
+   "rotulo": "s",
+   "rotulo_desloc": [
+    8,
+    -8
+   ],
+   "espessura": 1.8
+  }
+ ],
+ "checar": [
+  "Ec.x > E0.x",
+  "Ev.y > E0.y",
+  "Ec.y < E0.y",
+  "abs((Ev.y - Ec.y) - 2) < 0.05"
+ ]
+}

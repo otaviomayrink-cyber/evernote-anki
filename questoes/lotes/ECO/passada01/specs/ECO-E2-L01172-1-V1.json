@@ -1,0 +1,97 @@
+{
+ "id": "ECO-E2-L01172-1-V1",
+ "uso": "verso",
+ "legenda": "x e y estão na mesma curva de indiferença; a média m fica acima dela, na região sombreada das cestas preferidas. Preferência convexa = o conjunto de cestas “pelo menos tão boas” é convexo: médias valem mais que extremos.",
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "U",
+   "tipo": "funcao",
+   "expr": "16/x",
+   "dominio": [
+    1.65,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₀"
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    2,
+    8
+   ],
+   "p2": [
+    8,
+    2
+   ],
+   "familia": "referencia"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "entre",
+   "x": [
+    1.65,
+    9.6
+   ],
+   "sup": 9.9,
+   "inf": "U",
+   "papel": "ganho",
+   "rotulo": "preferidas a x e y",
+   "rotulo_xy": [
+    6.6,
+    8.2
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "X",
+   "xy": [
+    2,
+    8
+   ],
+   "rotulo": "x",
+   "rotulo_desloc": [
+    -20,
+    0
+   ]
+  },
+  {
+   "id": "Y",
+   "xy": [
+    8,
+    2
+   ],
+   "rotulo": "y",
+   "rotulo_desloc": [
+    4,
+    -16
+   ]
+  },
+  {
+   "id": "M",
+   "xy": [
+    5,
+    5
+   ],
+   "rotulo": "m = média",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  }
+ ],
+ "checar": [
+  "abs(U(2) - 8) < 0.01",
+  "abs(U(8) - 2) < 0.01",
+  "M.y > U(M.x)"
+ ]
+}

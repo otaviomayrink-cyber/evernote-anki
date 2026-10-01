@@ -1,0 +1,144 @@
+{
+ "id": "ECO-E2-L01209-1-V1",
+ "uso": "verso",
+ "legenda": "Com demanda horizontal (infinitamente elástica), o preço pago pelo consumidor não sai de p₀: o imposto desloca a oferta para cima (O → O + t), a quantidade cai e o preço líquido do vendedor cai no valor INTEIRO do imposto (p₀ → pv).",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "horizontal",
+   "y": 5,
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    1,
+    1
+   ],
+   "p2": [
+    8.5,
+    9.6
+   ],
+   "familia": "oferta",
+   "rotulo": "O",
+   "estado": "inicial"
+  },
+  {
+   "id": "St",
+   "tipo": "reta",
+   "p1": [
+    1,
+    3
+   ],
+   "p2": [
+    6.75,
+    9.59
+   ],
+   "familia": "oferta",
+   "rotulo": "O + t"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "S",
+   "para": "St",
+   "sentido": "cima",
+   "em_x": 6.2
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E0",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E₀",
+   "projetar": "x",
+   "rotulo_x": "q₀",
+   "rotulo_desloc": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "E1",
+   "intersecao": [
+    "D",
+    "St"
+   ],
+   "rotulo": "E₁",
+   "projetar": "x",
+   "rotulo_x": "q₁",
+   "rotulo_desloc": [
+    -26,
+    12
+   ]
+  },
+  {
+   "id": "Ev",
+   "sobre": "S",
+   "x": "E1.x",
+   "projetar": "y",
+   "rotulo_y": "pv"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "E1.y"
+    ],
+    "E1",
+    "Ev",
+    [
+     0,
+     "Ev.y"
+    ]
+   ],
+   "papel": "receita_tributaria",
+   "rotulo": "Receita",
+   "rotulo_xy": [
+    1.0,
+    4.35
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "E1",
+    "E0",
+    "Ev"
+   ],
+   "papel": "peso_morto"
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.15,
+    5.4
+   ],
+   "texto": "p₀ = pc",
+   "cor": "azul",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs(E1.y - E0.y) < 1e-6",
+  "abs(E0.y - Ev.y - 2) < 0.02",
+  "E1.x < E0.x"
+ ]
+}

@@ -1,0 +1,243 @@
+{
+ "id": "ECO-E2-L00618-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Mesma oferta, mesmo imposto t. Com demanda inelástica (esquerda), a quantidade quase não cai: receita grande e peso morto (vermelho) minúsculo. Com demanda elástica (direita), a base encolhe: receita menor e peso morto maior.",
+ "paineis": [
+  {
+   "titulo": "Demanda inelástica",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      3.5,
+      9.5
+     ],
+     "p2": [
+      5.5,
+      0.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      1,
+      1
+     ],
+     "p2": [
+      9,
+      9
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial"
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      1,
+      3
+     ],
+     "p2": [
+      9,
+      11
+     ],
+     "familia": "oferta",
+     "rotulo": "O + t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "projetar": true
+    },
+    {
+     "id": "Ec",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "projetar": true,
+     "rotulo_x": "qₜ",
+     "rotulo_y": "pc"
+    },
+    {
+     "id": "Ev",
+     "sobre": "S",
+     "x": "Ec.x",
+     "projetar": "y",
+     "rotulo_y": "pv"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       "Ec.y"
+      ],
+      "Ec",
+      "Ev",
+      [
+       0,
+       "Ev.y"
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "Receita",
+     "rotulo_xy": [
+      "Ec.x*0.4",
+      "Ev.y+0.3*(Ec.y-Ev.y)"
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      "Ec",
+      "E0",
+      "Ev"
+     ],
+     "papel": "peso_morto"
+    }
+   ],
+   "checar": [
+    "abs((Ec.y - Ev.y) - 2) < 0.01",
+    "Ec.x < E0.x",
+    "abs(2*Ec.x - 8.4545) < 0.01",
+    "(E0.x - Ec.x) < 0.4"
+   ]
+  },
+  {
+   "titulo": "Demanda elástica",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      7
+     ],
+     "p2": [
+      9.5,
+      2.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      1,
+      1
+     ],
+     "p2": [
+      9,
+      9
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial"
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      1,
+      3
+     ],
+     "p2": [
+      9,
+      11
+     ],
+     "familia": "oferta",
+     "rotulo": "O + t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "projetar": true,
+     "rotulo_x": "q₀"
+    },
+    {
+     "id": "Ec",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "projetar": true,
+     "rotulo_x": "qₜ",
+     "rotulo_y": "pc"
+    },
+    {
+     "id": "Ev",
+     "sobre": "S",
+     "x": "Ec.x",
+     "projetar": "y",
+     "rotulo_y": "pv"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       "Ec.y"
+      ],
+      "Ec",
+      "Ev",
+      [
+       0,
+       "Ev.y"
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "Receita",
+     "rotulo_xy": [
+      "Ec.x*0.4",
+      "Ev.y+0.3*(Ec.y-Ev.y)"
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      "Ec",
+      "E0",
+      "Ev"
+     ],
+     "papel": "peso_morto"
+    }
+   ],
+   "checar": [
+    "abs((Ec.y - Ev.y) - 2) < 0.01",
+    "Ec.x < E0.x",
+    "abs(2*Ec.x - 7) < 0.01",
+    "(E0.x - Ec.x) > 1.3"
+   ]
+  }
+ ]
+}

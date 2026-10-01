@@ -1,0 +1,96 @@
+{
+ "id": "ECO-E1-0835-1-V1",
+ "uso": "verso",
+ "legenda": "Se I₁ e I₂ se cruzassem em A, teríamos A ~ C (ambas em I₁) e A ~ B (ambas em I₂); pela transitividade, B ~ C. Mas B tem o mesmo x₁ e mais x₂ que C, logo B ≻ C: contradição. Curvas de níveis distintos não se cruzam.",
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "I1",
+   "tipo": "funcao",
+   "expr": "12/x",
+   "dominio": [
+    1.25,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "I₁"
+  },
+  {
+   "id": "I2",
+   "tipo": "funcao",
+   "expr": "2 + 6/x",
+   "dominio": [
+    0.8,
+    9.6
+   ],
+   "familia": "destaque",
+   "rotulo": "I₂ (hipotética)",
+   "rotulo_desloc": [
+    -40,
+    14
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "I1",
+    "I2"
+   ],
+   "rotulo": "A",
+   "rotulo_desloc": [
+    -6,
+    16
+   ]
+  },
+  {
+   "id": "B",
+   "sobre": "I2",
+   "x": 7,
+   "rotulo": "B",
+   "rotulo_desloc": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "C",
+   "sobre": "I1",
+   "x": 7,
+   "rotulo": "C",
+   "rotulo_desloc": [
+    10,
+    -10
+   ]
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "C.x",
+    "C.y + 0.12"
+   ],
+   "para": [
+    "B.x",
+    "B.y - 0.12"
+   ],
+   "rotulo": "mais x₂",
+   "rotulo_desloc": [
+    10,
+    -4
+   ]
+  }
+ ],
+ "checar": [
+  "abs(A.x - 3) < 0.01",
+  "abs(A.y - 4) < 0.01",
+  "abs(B.x - C.x) < 0.01",
+  "B.y > C.y"
+ ]
+}

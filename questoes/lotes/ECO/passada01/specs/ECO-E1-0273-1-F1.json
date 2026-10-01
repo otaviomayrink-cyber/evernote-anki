@@ -1,0 +1,8 @@
+{"id": "ECO-E1-0273-1-F1", "uso": "frente",
+ "legenda": "Curva de demanda (D) e curva de custo marginal (C) de um produto sob monopólio natural; CMg e p na mesma escala do eixo vertical.",
+ "fidelidade": "conjectural",
+ "eixos": {"x": "Q", "y": "p, CMg", "xmax": 11, "ymax": 11},
+ "curvas": [
+   {"id": "D", "tipo": "funcao", "expr": "10 - x", "dominio": [0, 9.6], "familia": "demanda", "rotulo": "D"},
+   {"id": "C", "tipo": "funcao", "expr": "2.2 + 3.2*exp(-x/3)", "dominio": [0, 10.2], "familia": "oferta", "rotulo": "C"}]
+}

@@ -1,0 +1,183 @@
+{
+ "id": "ECO-E2-L00032-1-V1",
+ "uso": "verso",
+ "legenda": "Preço mínimo acima do equilíbrio: só se vende qᴰ. O produtor ganha o retângulo A (tirado do consumidor) e perde o triângulo C; o consumidor perde A + B. Em geral A > C e o EP aumenta, mas B + C é peso morto — e sobra o excesso de oferta qˢ − qᴰ.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    9.5
+   ],
+   "p2": [
+    9.5,
+    0.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    0.5
+   ],
+   "p2": [
+    9.5,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O"
+  },
+  {
+   "id": "Pmin",
+   "tipo": "horizontal",
+   "y": 6.5,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "destaque",
+   "rotulo": "preço mínimo",
+   "tracejada": true,
+   "rotulo_em": 7.4,
+   "rotulo_desloc": [
+    0,
+    14
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "q*",
+   "rotulo_y": "p*",
+   "rotulo_desloc": [
+    12,
+    -4
+   ]
+  },
+  {
+   "id": "Qd",
+   "intersecao": [
+    "D",
+    "Pmin"
+   ],
+   "projetar": "x",
+   "rotulo_x": "qᴰ",
+   "marcar": true
+  },
+  {
+   "id": "Qs",
+   "intersecao": [
+    "S",
+    "Pmin"
+   ],
+   "projetar": "x",
+   "rotulo_x": "qˢ",
+   "marcar": true
+  },
+  {
+   "id": "F",
+   "sobre": "S",
+   "x": "Qd.x",
+   "marcar": false
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     6.5
+    ],
+    "Qd",
+    [
+     "Qd.x",
+     "E.y"
+    ],
+    [
+     0,
+     "E.y"
+    ]
+   ],
+   "papel": "ganho",
+   "rotulo": "A",
+   "rotulo_xy": [
+    1.7,
+    5.75
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "Qd",
+    "E",
+    [
+     "Qd.x",
+     "E.y"
+    ]
+   ],
+   "papel": "peso_morto",
+   "rotulo": "B",
+   "rotulo_xy": [
+    "Qd.x+0.4",
+    "E.y+0.45"
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     "Qd.x",
+     "E.y"
+    ],
+    "E",
+    "F"
+   ],
+   "papel": "peso_morto",
+   "rotulo": "C",
+   "rotulo_xy": [
+    "Qd.x+0.4",
+    "E.y-0.45"
+   ]
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Qd.x",
+    7.6
+   ],
+   "para": [
+    "Qs.x",
+    7.6
+   ],
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "excesso de oferta",
+   "rotulo_desloc": [
+    -40,
+    8
+   ]
+  }
+ ],
+ "checar": [
+  "Qs.x > Qd.x",
+  "6.5 > E.y",
+  "(6.5 - E.y) * Qd.x > (E.x - Qd.x) * (E.y - F.y) / 2"
+ ]
+}

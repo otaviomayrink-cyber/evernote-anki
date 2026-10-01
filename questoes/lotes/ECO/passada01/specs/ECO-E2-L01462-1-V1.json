@@ -1,0 +1,106 @@
+{
+ "id": "ECO-E2-L01462-1-V1",
+ "uso": "verso",
+ "legenda": "Com renda e preço dos outros bens constantes, a alta do preço da energia mantém o intercepto R/pₒ e encolhe o de energia (R/pₑ): a reta GIRA para dentro e fica mais íngreme — muda a inclinação, não há deslocamento paralelo.",
+ "eixos": {
+  "x": "E",
+  "y": "O",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "R1",
+   "tipo": "reta",
+   "p1": [
+    0,
+    8
+   ],
+   "p2": [
+    8,
+    0
+   ],
+   "familia": "terceira",
+   "rotulo": "antes",
+   "estado": "inicial",
+   "rotulo_em": 6.2,
+   "rotulo_desloc": [
+    10,
+    8
+   ]
+  },
+  {
+   "id": "R2",
+   "tipo": "reta",
+   "p1": [
+    0,
+    8
+   ],
+   "p2": [
+    4,
+    0
+   ],
+   "familia": "destaque",
+   "rotulo": "depois (pₑ ↑)",
+   "rotulo_xy": [
+    1.55,
+    1.0
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "xy": [
+    0,
+    8
+   ],
+   "rotulo": "R/pₒ (não muda)",
+   "rotulo_desloc": [
+    12,
+    10
+   ]
+  },
+  {
+   "id": "B1",
+   "xy": [
+    8,
+    0
+   ],
+   "rotulo_x": "R/pₑ₀",
+   "marcar": true
+  },
+  {
+   "id": "B2",
+   "xy": [
+    4,
+    0
+   ],
+   "rotulo_x": "R/pₑ₁",
+   "marcar": true
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "R1.inv(2.2) - 0.25",
+    2.2
+   ],
+   "para": [
+    "R2.inv(2.2) + 0.25",
+    2.2
+   ],
+   "cor": "vermelho",
+   "rotulo": "rotação",
+   "rotulo_desloc": [
+    -30,
+    8
+   ]
+  }
+ ],
+ "checar": [
+  "B2.x < B1.x",
+  "abs(R1(0) - R2(0)) < 0.01",
+  "abs((R2(1) - R2(3))/2) > abs((R1(1) - R1(3))/2)"
+ ]
+}

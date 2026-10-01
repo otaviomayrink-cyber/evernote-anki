@@ -1,0 +1,14 @@
+{"id": "ECO-E1-0209-1-V1", "uso": "verso",
+ "legenda": "Café (x₁) e açúcar (x₂) sempre na proporção 1:1 são complementares perfeitos, U = min(x₁, x₂): as curvas de indiferença têm formato de L, com o vértice sobre o raio x₂ = x₁. Café ou açúcar a mais, sozinho, não eleva a utilidade.",
+ "eixos": {"x": "x₁", "y": "x₂", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "raio", "tipo": "reta", "p1": [0, 0], "p2": [9, 9], "familia": "referencia", "rotulo": "x₂ = x₁"},
+  {"id": "U1", "tipo": "pontos", "suave": false, "pontos": [[2, 8.5], [2, 2], [8.5, 2]], "familia": "demanda", "rotulo": "U = 2", "rotulo_desloc": [8, 0]},
+  {"id": "U2", "tipo": "pontos", "suave": false, "pontos": [[4, 8.5], [4, 4], [8.5, 4]], "familia": "demanda", "rotulo": "U = 4", "rotulo_desloc": [8, 0]},
+  {"id": "U3", "tipo": "pontos", "suave": false, "pontos": [[6, 8.5], [6, 6], [8.5, 6]], "familia": "demanda", "rotulo": "U = 6", "rotulo_desloc": [8, 0]}
+ ],
+ "pontos": [
+  {"id": "V1", "xy": [2, 2]}, {"id": "V2", "xy": [4, 4]}, {"id": "V3", "xy": [6, 6]}
+ ],
+ "textos": [{"xy": [6.3, 3.0], "texto": "café a mais, sem açúcar:\nmesma utilidade", "cor": "cinza", "tamanho": 11.5}],
+ "checar": ["abs(V1.x - V1.y) < 0.01", "abs(V2.x - V2.y) < 0.01", "abs(V3.x - V3.y) < 0.01"]}

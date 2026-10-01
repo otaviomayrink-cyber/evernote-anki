@@ -1,0 +1,12 @@
+{"id": "ECO-E1-0273-1-V1", "uso": "verso",
+ "legenda": "O monopolista produz onde a receita marginal (RMg, abaixo da demanda) cruza o custo marginal C: quantidade Qm, menor que a do cruzamento de D com C (Qc), vendida ao preço pm lido na demanda, acima do custo marginal.",
+ "eixos": {"x": "Q", "y": "p", "xmax": 11, "ymax": 11},
+ "curvas": [
+   {"id": "D", "tipo": "funcao", "expr": "10 - x", "dominio": [0, 9.6], "familia": "demanda", "rotulo": "D = RMe"},
+   {"id": "RMg", "tipo": "funcao", "expr": "10 - 2*x", "dominio": [0, 4.9], "familia": "quarta", "rotulo": "RMg", "rotulo_desloc": [6, -10]},
+   {"id": "C", "tipo": "funcao", "expr": "2.2 + 3.2*exp(-x/3)", "dominio": [0, 10.2], "familia": "oferta", "rotulo": "C = CMg"}],
+ "pontos": [
+   {"id": "A", "intersecao": ["RMg", "C"], "rotulo": "RMg = CMg", "rotulo_desloc": [-128, -16]},
+   {"id": "M", "sobre": "D", "x": "A.x", "rotulo": "M", "projetar": true, "rotulo_x": "Qm", "rotulo_y": "pm"},
+   {"id": "B", "intersecao": ["D", "C"], "rotulo": "D = C", "projetar": "x", "rotulo_x": "Qc", "rotulo_desloc": [8, 16]}],
+ "checar": ["M.x < B.x", "M.y > B.y", "M.y > A.y"]}

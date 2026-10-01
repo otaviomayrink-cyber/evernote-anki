@@ -1,0 +1,17 @@
+{"id": "ECO-E2-L01212-1-V1", "uso": "verso",
+ "legenda": "Sem teto, o monopolista iguala RMg = CMg, vende Qm ao preço Pm. Um preço máximo entre Pm e o custo marginal faz a firma vender até a demanda (Qmáx > Qm): o preço cai, a quantidade sobe, sem desabastecimento, e o peso morto encolhe (área verde recuperada; sobra só o vermelho).",
+ "eixos": {"x": "Q", "y": "P"},
+ "curvas": [
+   {"id": "D", "tipo": "reta", "p1": [0.3, 9.7], "p2": [9.6, 0.4], "familia": "demanda", "rotulo": "D = RMe"},
+   {"id": "RMg", "tipo": "reta", "p1": [0.3, 9.4], "p2": [4.8, 0.4], "familia": "quarta", "rotulo": "RMg"},
+   {"id": "CMg", "tipo": "reta", "p1": [0, 2], "p2": [9.6, 6.8], "familia": "oferta", "rotulo": "CMg"},
+   {"id": "Pmax", "tipo": "horizontal", "y": 5.5, "x": [0, 9.6], "familia": "destaque", "rotulo": "Pmáx", "tracejada": true}],
+ "pontos": [
+   {"id": "Mr", "intersecao": ["RMg", "CMg"], "marcar": false},
+   {"id": "Em", "sobre": "D", "x": "Mr.x", "rotulo": "monopólio", "projetar": true, "rotulo_x": "Qm", "rotulo_y": "Pm", "rotulo_desloc": [10, 6]},
+   {"id": "Ec", "intersecao": ["D", "CMg"], "rotulo": "Ec", "projetar": "x", "rotulo_x": "Qc", "rotulo_desloc": [8, 12]},
+   {"id": "Et", "intersecao": ["D", "Pmax"], "projetar": "x", "rotulo_x": "Qmáx"}],
+ "areas": [
+   {"tipo": "poligono", "vertices": ["Em", "Et", ["Et.x", "CMg(Et.x)"], ["Em.x", "CMg(Em.x)"]], "papel": "ganho"},
+   {"tipo": "poligono", "vertices": ["Et", "Ec", ["Et.x", "CMg(Et.x)"]], "papel": "peso_morto"}],
+ "checar": ["Et.x > Em.x", "Et.y < Em.y", "Et.x < Ec.x", "Pmax(1) > CMg(Et.x)"]}

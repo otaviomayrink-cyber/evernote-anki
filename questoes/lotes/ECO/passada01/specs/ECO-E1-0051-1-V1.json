@@ -1,0 +1,21 @@
+{
+ "id": "ECO-E1-0051-1-V1",
+ "uso": "verso",
+ "legenda": "A campanha muda as preferências e desloca a demanda para a direita (D₁ → D₂); com a oferta parada, o equilíbrio vai de E₁ a E₂: sobem o preço e a quantidade transacionada (volume de negócios).",
+ "modelo": "oferta_demanda",
+ "params": {
+  "deslocar": {
+   "D": "direita"
+  }
+ },
+ "checar": [
+  "E2.x > E1.x",
+  "E2.y > E1.y",
+  "E2.x*E2.y > E1.x*E1.y"
+ ],
+ "substituir": {
+  "S1": {
+   "rotulo": "O"
+  }
+ }
+}

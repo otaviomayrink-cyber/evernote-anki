@@ -1,0 +1,147 @@
+{
+ "id": "ECO-E2-L01195-1-V1",
+ "uso": "verso",
+ "legenda": "Sem regulação, o monopolista produz qm ao preço pm. Com teto em pt (entre pm e o CMg), a receita marginal vira o próprio teto até a demanda: ele passa a vender qt > qm. A quantidade aumenta, não há excesso de demanda e o peso morto encolhe para o triângulo entre qt e qc.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 105,
+  "ymax": 11
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - 0.1*x",
+   "dominio": [
+    0,
+    100
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 95,
+   "rotulo_desloc": [
+    4,
+    10
+   ]
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "10 - 0.2*x",
+   "dominio": [
+    0,
+    50
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg",
+   "estado": "inicial",
+   "rotulo_em": 47,
+   "rotulo_desloc": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "CMg",
+   "tipo": "horizontal",
+   "y": 2,
+   "x": [
+    0,
+    100
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "Teto",
+   "tipo": "horizontal",
+   "y": 4,
+   "x": [
+    0,
+    60
+   ],
+   "familia": "destaque",
+   "tracejada": true,
+   "rotulo": "teto",
+   "rotulo_xy": [
+    14,
+    4.5
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Q",
+   "intersecao": [
+    "RMg",
+    "CMg"
+   ],
+   "projetar": "x",
+   "rotulo_x": "qm",
+   "marcar": false
+  },
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": "Q.x",
+   "rotulo": "M",
+   "projetar": "y",
+   "rotulo_y": "pm"
+  },
+  {
+   "id": "T",
+   "intersecao": [
+    "D",
+    "Teto"
+   ],
+   "rotulo": "T",
+   "projetar": true,
+   "rotulo_x": "qt",
+   "rotulo_y": "pt",
+   "rotulo_desloc": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "C",
+   "intersecao": [
+    "D",
+    "CMg"
+   ],
+   "rotulo": "C",
+   "projetar": "x",
+   "rotulo_x": "qc",
+   "rotulo_desloc": [
+    6,
+    12
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    "T",
+    [
+     "T.x",
+     2
+    ],
+    "C"
+   ],
+   "papel": "peso_morto",
+   "rotulo": "PM",
+   "rotulo_xy": [
+    "(2*T.x + C.x)/3",
+    2.6
+   ]
+  }
+ ],
+ "checar": [
+  "T.x > Q.x",
+  "T.y < M.y",
+  "T.y > 2",
+  "abs(T.x - 60) < 0.01"
+ ]
+}

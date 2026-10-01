@@ -1,0 +1,167 @@
+{
+ "id": "ECO-E1-0127-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Com as mesmas curvas, dobrar o imposto (de 2 para 4) dobra a base e a altura do triângulo de peso morto: a área quadruplica (de 1 para 4). O peso morto cresce com o quadrado da alíquota.",
+ "paineis": [
+  {
+   "titulo": "Imposto t = 2",
+   "modelo": "tributo",
+   "params": {
+    "t": 2
+   },
+   "checar": [
+    "abs(0.5*(Ec.y-Ev.y)*(E0.x-Ec.x) - 1) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Imposto 2t = 4",
+   "checar": [
+    "Ec.x < E0.x",
+    "Ec.y > E0.y",
+    "Ev.y < E0.y",
+    "abs((Ec.y-Ev.y)-4) < 0.05",
+    "abs(0.5*(Ec.y-Ev.y)*(E0.x-Ec.x) - 4) < 0.01"
+   ],
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      1,
+      9
+     ],
+     "p2": [
+      9,
+      1
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      1,
+      1
+     ],
+     "p2": [
+      9,
+      9
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial"
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      2.4,
+      6.4
+     ],
+     "p2": [
+      9,
+      13
+     ],
+     "familia": "oferta",
+     "rotulo": "O + 2t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "rotulo": "E₀",
+     "projetar": true,
+     "rotulo_x": "q₀",
+     "rotulo_y": "p₀"
+    },
+    {
+     "id": "Ec",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "projetar": true,
+     "rotulo_x": "qₜ",
+     "rotulo_y": "pc",
+     "marcar": true
+    },
+    {
+     "id": "Ev",
+     "sobre": "S",
+     "x": "Ec.x",
+     "projetar": "y",
+     "rotulo_y": "pv"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       "Ec.y"
+      ],
+      "Ec",
+      "Ev",
+      [
+       0,
+       "Ev.y"
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "Receita",
+     "rotulo_xy": [
+      "Ec.x*0.3",
+      "(Ec.y+Ev.y)/2"
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      "Ec",
+      "E0",
+      "Ev"
+     ],
+     "papel": "peso_morto",
+     "rotulo": "PM",
+     "rotulo_xy": [
+      "(Ec.x+Ev.x+E0.x)/3+0.15",
+      "(Ec.y+Ev.y+E0.y)/3"
+     ]
+    }
+   ],
+   "setas": [
+    {
+     "de": [
+      "Ec.x-0.15",
+      "Ev.y"
+     ],
+     "para": [
+      "Ec.x-0.15",
+      "Ec.y"
+     ],
+     "cor": "vermelho",
+     "estilo": "<|-|>",
+     "rotulo": "2t",
+     "rotulo_desloc": [
+      -20,
+      -8
+     ],
+     "espessura": 1.8
+    }
+   ],
+   "deslocamentos": [],
+   "textos": []
+  }
+ ]
+}

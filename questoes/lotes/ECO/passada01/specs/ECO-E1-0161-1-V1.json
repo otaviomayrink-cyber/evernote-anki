@@ -1,0 +1,108 @@
+{
+ "id": "ECO-E1-0161-1-V1",
+ "uso": "verso",
+ "legenda": "O preço mínimo só tem efeito se fixado acima do equilíbrio (p* ): nesse preço os produtores querem vender Qˢ, mas os consumidores só compram Qᴰ — sobra produto (excedente de oferta), que o governo costuma comprar e estocar.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    1,
+    9
+   ],
+   "p2": [
+    9,
+    1
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    1,
+    1
+   ],
+   "p2": [
+    9,
+    9
+   ],
+   "familia": "oferta",
+   "rotulo": "O"
+  },
+  {
+   "id": "Pmin",
+   "tipo": "horizontal",
+   "y": 7,
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "destaque",
+   "rotulo": "preço mínimo",
+   "rotulo_xy": [
+    8.6,
+    7.45
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_y": "p*",
+   "rotulo_x": "q*"
+  },
+  {
+   "id": "Qd",
+   "intersecao": [
+    "D",
+    "Pmin"
+   ],
+   "projetar": "x",
+   "rotulo_x": "Qᴰ"
+  },
+  {
+   "id": "Qs",
+   "intersecao": [
+    "S",
+    "Pmin"
+   ],
+   "projetar": "x",
+   "rotulo_x": "Qˢ"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Qd.x",
+    7.9
+   ],
+   "para": [
+    "Qs.x",
+    7.9
+   ],
+   "estilo": "<|-|>",
+   "rotulo": "excedente de oferta",
+   "rotulo_desloc": [
+    -62,
+    10
+   ],
+   "espessura": 1.8
+  }
+ ],
+ "checar": [
+  "Pmin(5) > E.y",
+  "Qs.x > Qd.x"
+ ]
+}

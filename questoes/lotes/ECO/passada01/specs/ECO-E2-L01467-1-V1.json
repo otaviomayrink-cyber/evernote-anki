@@ -1,0 +1,117 @@
+{
+ "id": "ECO-E2-L01467-1-V1",
+ "uso": "verso",
+ "legenda": "Em B, a TMST (1/4) é menor que w/r (1): a isocusto que passa por B custa 10. Trocando trabalho por capital ao longo da mesma isoquanta, a firma chega a A, onde TMST = w/r e o custo cai para 8 — o mínimo.",
+ "eixos": {
+  "x": "L",
+  "y": "K",
+  "xmax": 11,
+  "ymax": 11,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "Q",
+   "tipo": "funcao",
+   "expr": "16/x",
+   "dominio": [
+    1.5,
+    10.5
+   ],
+   "familia": "demanda",
+   "rotulo": "Q₀",
+   "rotulo_desloc": [
+    4,
+    10
+   ]
+  },
+  {
+   "id": "C1",
+   "tipo": "reta",
+   "p1": [
+    0,
+    8
+   ],
+   "p2": [
+    8,
+    0
+   ],
+   "familia": "quarta",
+   "rotulo": "custo = 8",
+   "rotulo_xy": [
+    4.6,
+    1.0
+   ]
+  },
+  {
+   "id": "C2",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    10,
+    0
+   ],
+   "familia": "quarta",
+   "tracejada": true,
+   "estado": "inicial",
+   "rotulo": "custo = 10",
+   "rotulo_em": 0.4,
+   "rotulo_desloc": [
+    10,
+    0
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "xy": [
+    4,
+    4
+   ],
+   "rotulo": "A: TMST = w/r = 1",
+   "rotulo_desloc": [
+    -160,
+    -18
+   ]
+  },
+  {
+   "id": "B",
+   "xy": [
+    8,
+    2
+   ],
+   "rotulo": "B: TMST = 1/4 < w/r",
+   "rotulo_desloc": [
+    10,
+    12
+   ]
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    7.4,
+    2.35
+   ],
+   "para": [
+    4.6,
+    3.6
+   ],
+   "cor": "vermelho",
+   "rotulo": "",
+   "estilo": "-|>"
+  }
+ ],
+ "checar": [
+  "abs(Q(8) - 2) < 0.02",
+  "abs(Q(4) - 4) < 0.02",
+  "B.x + B.y > A.x + A.y",
+  "abs(A.x + A.y - 8) < 0.01",
+  "C1(3) < Q(3)",
+  "C1(5) < Q(5)"
+ ]
+}

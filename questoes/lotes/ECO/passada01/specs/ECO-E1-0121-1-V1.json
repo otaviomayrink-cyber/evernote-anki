@@ -1,0 +1,96 @@
+{
+ "id": "ECO-E1-0121-1-V1",
+ "uso": "verso",
+ "legenda": "Na demanda linear a inclinação é constante, mas a elasticidade não: |ε| = (ΔQ/ΔP)·(P/Q) vai de infinito no intercepto do preço (B) a 1 no ponto médio (C) e a zero no intercepto da quantidade (A).",
+ "eixos": {
+  "x": "Q",
+  "y": "P",
+  "xmax": 11,
+  "ymax": 11
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    10,
+    0
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 8.6,
+   "rotulo_desloc": [
+    8,
+    8
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "B",
+   "xy": [
+    0,
+    10
+   ],
+   "rotulo": "B: |ε| = ∞",
+   "rotulo_desloc": [
+    12,
+    4
+   ]
+  },
+  {
+   "id": "C",
+   "sobre": "D",
+   "x": 5,
+   "rotulo": "C: |ε| = 1",
+   "projetar": true,
+   "rotulo_x": "Qmáx/2",
+   "rotulo_y": "Pmáx/2",
+   "rotulo_desloc": [
+    12,
+    6
+   ]
+  },
+  {
+   "id": "A",
+   "xy": [
+    10,
+    0
+   ],
+   "rotulo": "A: |ε| = 0",
+   "rotulo_desloc": [
+    -30,
+    22
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    3.0,
+    8.6
+   ],
+   "texto": "trecho elástico: |ε| > 1",
+   "cor": "vermelho",
+   "negrito": true
+  },
+  {
+   "xy": [
+    6.6,
+    4.4
+   ],
+   "texto": "trecho inelástico: |ε| < 1",
+   "cor": "cinza",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs(C.x - 5) < 0.01",
+  "abs(C.y - 5) < 0.01",
+  "abs((C.y/C.x) - 1) < 0.01"
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "id": "ECO-E2-L01521-1-V1",
+ "uso": "verso",
+ "legenda": "Com x₁ e x₂ complementares perfeitos (1:1), o ótimo está sempre no vértice do L, sobre o raio x₁ = x₂. Quando p₁ dobra, a reta orçamentária gira para dentro e o ótimo desce pelo raio de E₁ (5; 5) para E₂ (3,3; 3,3): os DOIS bens caem na mesma proporção.",
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "raio",
+   "tipo": "reta",
+   "p1": [
+    0,
+    0
+   ],
+   "p2": [
+    9.6,
+    9.6
+   ],
+   "familia": "referencia",
+   "rotulo": "x₁ = x₂",
+   "rotulo_desloc": [
+    -30,
+    14
+   ]
+  },
+  {
+   "id": "R1",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    10,
+    0
+   ],
+   "familia": "terceira",
+   "rotulo": "RO₁",
+   "estado": "inicial",
+   "rotulo_em": 8.6,
+   "rotulo_desloc": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "R2",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    5,
+    0
+   ],
+   "familia": "destaque",
+   "rotulo": "RO₂ (p₁ dobra)",
+   "rotulo_em": 4.4,
+   "rotulo_desloc": [
+    8,
+    2
+   ]
+  },
+  {
+   "id": "U2",
+   "tipo": "pontos",
+   "suave": false,
+   "pontos": [
+    [
+     5,
+     9.3
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     9.3,
+     5
+    ]
+   ],
+   "familia": "demanda",
+   "rotulo": "U₁",
+   "estado": "inicial",
+   "rotulo_xy": [
+    9.6,
+    5.45
+   ]
+  },
+  {
+   "id": "U1",
+   "tipo": "pontos",
+   "suave": false,
+   "pontos": [
+    [
+     3.3333,
+     9.3
+    ],
+    [
+     3.3333,
+     3.3333
+    ],
+    [
+     9.3,
+     3.3333
+    ]
+   ],
+   "familia": "demanda",
+   "rotulo": "U₂",
+   "rotulo_xy": [
+    9.6,
+    2.9
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "R1",
+    "raio"
+   ],
+   "rotulo": "E₁",
+   "rotulo_desloc": [
+    8,
+    -30
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "R2",
+    "raio"
+   ],
+   "rotulo": "E₂",
+   "rotulo_desloc": [
+    -30,
+    -30
+   ]
+  }
+ ],
+ "checar": [
+  "E2.x < E1.x",
+  "E2.y < E1.y",
+  "abs(E2.x - E2.y) < 0.01",
+  "abs(E2.x - 10/3) < 0.01",
+  "abs(E1.x - 5) < 0.01"
+ ]
+}

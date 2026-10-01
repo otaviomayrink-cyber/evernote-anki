@@ -1,0 +1,41 @@
+{
+ "id": "ECO-E1-0168-1-V1",
+ "uso": "verso",
+ "legenda": "Demanda elástica (plana) e oferta inelástica (íngreme): o preço pago pelo comprador sobe pouco (p₀ → pc), e o recebido pelo vendedor despenca (p₀ → pv). Quem não consegue fugir do imposto — aqui, o produtor — arca com a maior parte.",
+ "modelo": "tributo",
+ "params": {
+  "t": 3,
+  "D": [
+   [
+    0.5,
+    7.7
+   ],
+   [
+    9.5,
+    2.3
+   ]
+  ],
+  "S": [
+   [
+    3.5,
+    0.5
+   ],
+   [
+    6.5,
+    9.5
+   ]
+  ]
+ },
+ "substituir": {
+  "S": {
+   "rotulo_em": 3.75,
+   "rotulo_desloc": [
+    10,
+    0
+   ]
+  }
+ },
+ "checar": [
+  "(E0.y - Ev.y) > 2*(Ec.y - E0.y)"
+ ]
+}

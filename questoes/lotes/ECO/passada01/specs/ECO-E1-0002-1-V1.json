@@ -1,0 +1,231 @@
+{
+ "id": "ECO-E1-0002-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "À esquerda, um computador por funcionário (proporções fixas): isoquantas em L, com vértices sobre o raio K = L; trabalhador sem máquina (ou máquina sem trabalhador) não produz nada a mais. À direita, o que o item descreveu: retas paralelas de inclinação −1, que só valem para substitutos perfeitos.",
+ "paineis": [
+  {
+   "titulo": "Complementares: q = mín(K, L)",
+   "eixos": {
+    "x": "L",
+    "y": "K"
+   },
+   "curvas": [
+    {
+     "id": "raio",
+     "tipo": "reta",
+     "p1": [
+      0,
+      0
+     ],
+     "p2": [
+      8.8,
+      8.8
+     ],
+     "familia": "referencia",
+     "tracejada": true,
+     "rotulo": "K = L"
+    },
+    {
+     "id": "Q1",
+     "tipo": "pontos",
+     "suave": false,
+     "pontos": [
+      [
+       2,
+       9
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       9.4,
+       2
+      ]
+     ],
+     "familia": "demanda",
+     "rotulo": "q₁",
+     "rotulo_xy": [
+      9.0,
+      2.45
+     ]
+    },
+    {
+     "id": "Q2",
+     "tipo": "pontos",
+     "suave": false,
+     "pontos": [
+      [
+       4,
+       9
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       9.4,
+       4
+      ]
+     ],
+     "familia": "demanda",
+     "rotulo": "q₂",
+     "rotulo_xy": [
+      9.0,
+      4.45
+     ]
+    },
+    {
+     "id": "Q3",
+     "tipo": "pontos",
+     "suave": false,
+     "pontos": [
+      [
+       6,
+       9
+      ],
+      [
+       6,
+       6
+      ],
+      [
+       9.4,
+       6
+      ]
+     ],
+     "familia": "demanda",
+     "rotulo": "q₃",
+     "rotulo_xy": [
+      9.0,
+      6.45
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "xy": [
+      2,
+      2
+     ],
+     "rotulo": "A",
+     "rotulo_desloc": [
+      12,
+      -20
+     ]
+    },
+    {
+     "id": "B",
+     "xy": [
+      4,
+      4
+     ],
+     "rotulo": "B",
+     "rotulo_desloc": [
+      12,
+      -20
+     ]
+    },
+    {
+     "id": "C",
+     "xy": [
+      6,
+      6
+     ],
+     "rotulo": "C",
+     "rotulo_desloc": [
+      12,
+      -20
+     ]
+    }
+   ],
+   "checar": [
+    "abs(A.x - A.y) < 1e-9",
+    "abs(B.x - B.y) < 1e-9",
+    "abs(C.x - C.y) < 1e-9"
+   ]
+  },
+  {
+   "titulo": "Substitutos perfeitos: q = K + L",
+   "eixos": {
+    "x": "L",
+    "y": "K"
+   },
+   "curvas": [
+    {
+     "id": "S1",
+     "tipo": "reta",
+     "p1": [
+      0,
+      3
+     ],
+     "p2": [
+      3,
+      0
+     ],
+     "familia": "destaque",
+     "rotulo": "q₁",
+     "rotulo_em": 1.5,
+     "rotulo_desloc": [
+      6,
+      8
+     ]
+    },
+    {
+     "id": "S2",
+     "tipo": "reta",
+     "p1": [
+      0,
+      6
+     ],
+     "p2": [
+      6,
+      0
+     ],
+     "familia": "destaque",
+     "rotulo": "q₂",
+     "rotulo_em": 3,
+     "rotulo_desloc": [
+      6,
+      8
+     ]
+    },
+    {
+     "id": "S3",
+     "tipo": "reta",
+     "p1": [
+      0,
+      9
+     ],
+     "p2": [
+      9,
+      0
+     ],
+     "familia": "destaque",
+     "rotulo": "q₃",
+     "rotulo_em": 4.5,
+     "rotulo_desloc": [
+      6,
+      8
+     ]
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      5.2,
+      8.6
+     ],
+     "texto": "inclinação = −1",
+     "cor": "vermelho",
+     "negrito": true
+    }
+   ],
+   "checar": [
+    "abs(S2(1) - S2(2) - 1) < 1e-9",
+    "abs(S3(1) - S3(2) - 1) < 1e-9"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{"id": "ECO-E1-0003-1-V1", "uso": "verso",
+ "legenda": "O preço da corrida de táxi não mudou (p₀); o estacionamento mais caro desloca a demanda por táxi para a direita (D₁ → D₂), e a quantidade passa de q₁ para q₂ AO MESMO PREÇO — sinal de que a curva andou, não de movimento ao longo dela.",
+ "eixos": {"x": "q", "y": "p"},
+ "curvas": [
+   {"id": "D1", "tipo": "reta", "p1": [1, 8.5], "p2": [6, 1.5], "familia": "demanda", "rotulo": "D₁", "estado": "inicial"},
+   {"id": "D2", "tipo": "reta", "p1": [3.5, 8.5], "p2": [8.5, 1.5], "familia": "demanda", "rotulo": "D₂"},
+   {"id": "P0", "tipo": "horizontal", "y": 4.2, "x": [0, 9.3], "familia": "referencia", "rotulo": "p₀"}],
+ "deslocamentos": [{"de": "D1", "para": "D2", "sentido": "direita", "em_y": 6.5}],
+ "pontos": [
+   {"id": "A", "intersecao": ["D1", "P0"], "rotulo": "A", "rotulo_desloc": [6, 14], "projetar": "x", "rotulo_x": "q₁"},
+   {"id": "B", "intersecao": ["D2", "P0"], "rotulo": "B", "rotulo_desloc": [6, 14], "projetar": "x", "rotulo_x": "q₂"}],
+ "checar": ["B.x > A.x", "abs(B.y - A.y) < 0.01"]}

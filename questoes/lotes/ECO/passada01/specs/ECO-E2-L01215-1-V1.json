@@ -1,0 +1,13 @@
+{"id": "ECO-E2-L01215-1-V1", "uso": "verso",
+ "legenda": "Salário mínimo acima do equilíbrio (wmín > w₀): as empresas contratam só L₁ e os trabalhadores ofertam L₂. O desemprego é L₂ − L₁; abaixo do equilíbrio, o piso não teria efeito.",
+ "eixos": {"x": "L", "y": "w"},
+ "curvas": [
+   {"id": "DL", "tipo": "reta", "p1": [0.5, 9.5], "p2": [9.5, 0.5], "familia": "demanda", "rotulo": "demanda por trabalho"},
+   {"id": "SL", "tipo": "reta", "p1": [0.5, 0.5], "p2": [9.5, 9.5], "familia": "oferta", "rotulo": "oferta de trabalho"},
+   {"id": "Wm", "tipo": "horizontal", "y": 7, "x": [0, 9.6], "familia": "destaque", "rotulo": "wmín", "tracejada": true}],
+ "pontos": [
+   {"id": "E0", "intersecao": ["DL", "SL"], "rotulo": "E₀", "projetar": true, "rotulo_x": "L₀", "rotulo_y": "w₀", "rotulo_desloc": [10, -4]},
+   {"id": "L1", "intersecao": ["DL", "Wm"], "projetar": "x", "rotulo_x": "L₁"},
+   {"id": "L2", "intersecao": ["SL", "Wm"], "projetar": "x", "rotulo_x": "L₂"}],
+ "setas": [{"de": ["L1.x", 7.7], "para": ["L2.x", 7.7], "cor": "vermelho", "estilo": "<|-|>", "rotulo": "desemprego", "rotulo_desloc": [-34, 8]}],
+ "checar": ["abs(L2.x - L1.x - 4) < 0.01", "L1.x < E0.x"]}

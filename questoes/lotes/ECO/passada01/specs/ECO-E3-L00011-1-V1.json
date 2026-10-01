@@ -1,0 +1,114 @@
+{
+ "id": "ECO-E3-L00011-1-V1",
+ "uso": "verso",
+ "legenda": "Em A e B a curva U₁ corta a reta orçamentária (RO): há cestas melhores na própria reta. U₃ é inalcançável com a renda dada. O ótimo E está sobre a RO, no ponto em que ela tangencia U₂, a curva mais alta que se consegue atingir (TMS = pₓ/pᵧ).",
+ "eixos": {
+  "x": "x",
+  "y": "y",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "RO",
+   "tipo": "reta",
+   "p1": [
+    0,
+    8
+   ],
+   "p2": [
+    8,
+    0
+   ],
+   "familia": "terceira",
+   "rotulo": "RO",
+   "rotulo_xy": [
+    8.45,
+    0.5
+   ]
+  },
+  {
+   "id": "U1",
+   "tipo": "funcao",
+   "expr": "9/x",
+   "dominio": [
+    0.95,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "U2",
+   "tipo": "funcao",
+   "expr": "16/x",
+   "dominio": [
+    1.65,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₂"
+  },
+  {
+   "id": "U3",
+   "tipo": "funcao",
+   "expr": "30/x",
+   "dominio": [
+    3.1,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₃",
+   "estado": "inicial"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "sobre": "U2",
+   "x": 4,
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "x*",
+   "rotulo_y": "y*",
+   "rotulo_desloc": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "A",
+   "intersecao": [
+    "U1",
+    "RO"
+   ],
+   "indice": 0,
+   "rotulo": "A",
+   "rotulo_desloc": [
+    -26,
+    0
+   ]
+  },
+  {
+   "id": "B",
+   "intersecao": [
+    "U1",
+    "RO"
+   ],
+   "indice": 1,
+   "rotulo": "B",
+   "rotulo_desloc": [
+    4,
+    -18
+   ]
+  }
+ ],
+ "checar": [
+  "abs(RO(4) - E.y) < 0.01",
+  "U3(4) > RO(4)",
+  "A.x < E.x",
+  "E.x < B.x",
+  "abs((U2(4.01) - U2(3.99))/0.02 + 1) < 0.01"
+ ]
+}

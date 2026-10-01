@@ -1,0 +1,83 @@
+{
+ "id": "ECO-E2-L01036-1-V1",
+ "uso": "verso",
+ "legenda": "Qᴰ = 300 − 30p e Qˢ = 10p + 20 se cruzam em (90; 7); a demanda zera em p = 10. O excedente do consumidor é o triângulo entre a demanda e o preço: (10 − 7) × 90 ÷ 2 = 135.",
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 150,
+  "ymax": 11,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - x/30",
+   "dominio": [
+    0,
+    150
+   ],
+   "familia": "demanda",
+   "rotulo": "Qᴰ = 300 − 30p",
+   "rotulo_em": 128,
+   "rotulo_desloc": [
+    4,
+    12
+   ]
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "(x - 20)/10",
+   "dominio": [
+    20,
+    125
+   ],
+   "familia": "oferta",
+   "rotulo": "Qˢ = 10p + 20"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E (90; 7)",
+   "projetar": true,
+   "rotulo_desloc": [
+    14,
+    -32
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     "E.y"
+    ],
+    "E"
+   ],
+   "papel": "excedente_consumidor",
+   "rotulo": "EC = 135",
+   "rotulo_xy": [
+    26,
+    7.9
+   ]
+  }
+ ],
+ "checar": [
+  "abs(E.x - 90) < 0.01",
+  "abs(E.y - 7) < 0.01",
+  "abs((10 - E.y) * E.x / 2 - 135) < 0.01"
+ ]
+}

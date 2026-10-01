@@ -1,0 +1,90 @@
+{
+ "id": "ECO-E1-0187-1-V1",
+ "uso": "verso",
+ "legenda": "Utilidade linear U = x₁ + x₂ (curvas de indiferença retas, TMS = 1) e reta orçamentária mais inclinada (p₁/p₂ = 2): a curva de indiferença mais alta que a renda alcança toca a reta só no eixo — o consumidor gasta tudo em x₂ e não consome x₁ (solução de canto).",
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 12,
+  "ymax": 12,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "RO",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    5,
+    0
+   ],
+   "familia": "terceira",
+   "rotulo": "RO",
+   "rotulo_xy": [
+    1.7,
+    5.4
+   ]
+  },
+  {
+   "id": "U1",
+   "tipo": "reta",
+   "p1": [
+    0,
+    6
+   ],
+   "p2": [
+    6,
+    0
+   ],
+   "familia": "demanda",
+   "rotulo": "U = 6",
+   "estado": "inicial",
+   "rotulo_xy": [
+    1.2,
+    4.1
+   ]
+  },
+  {
+   "id": "U2",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    10,
+    0
+   ],
+   "familia": "demanda",
+   "rotulo": "U = 10",
+   "rotulo_em": 8.2,
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "xy": [
+    0,
+    10
+   ],
+   "rotulo": "E (canto): x₁ = 0, x₂ = 10",
+   "rotulo_desloc": [
+    14,
+    10
+   ]
+  }
+ ],
+ "checar": [
+  "abs(U2(0) - E.y) < 0.01",
+  "abs(RO(0) - E.y) < 0.01",
+  "(RO(0) - RO(4)) / 4 > (U2(0) - U2(4)) / 4",
+  "U2(2) > RO(2)"
+ ]
+}

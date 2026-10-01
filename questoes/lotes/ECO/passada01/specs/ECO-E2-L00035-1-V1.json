@@ -1,0 +1,207 @@
+{
+ "id": "ECO-E2-L00035-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Mesmo preço garantido pₛ, demanda inelástica. Comprando estoques, o governo paga pₛ × (qˢ − qᴰ): a faixa estreita. Pagando a diferença (subsídio), precisa de pₘ muito baixo para o mercado absorver qˢ e paga (pₛ − pₘ) × qˢ: o retângulo bem maior.",
+ "paineis": [
+  {
+   "titulo": "Compra de estoques",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      2,
+      10
+     ],
+     "p2": [
+      6,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "D (inelástica)",
+     "rotulo_em": 2.3,
+     "rotulo_desloc": [
+      10,
+      4
+     ]
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      0,
+      0
+     ],
+     "p2": [
+      9,
+      9
+     ],
+     "familia": "oferta",
+     "rotulo": "O"
+    },
+    {
+     "id": "Ps",
+     "tipo": "horizontal",
+     "y": 5.5,
+     "x": [
+      0,
+      9
+     ],
+     "familia": "destaque",
+     "rotulo": "pₛ",
+     "tracejada": true
+    }
+   ],
+   "pontos": [
+    {
+     "id": "Qd",
+     "intersecao": [
+      "D",
+      "Ps"
+     ],
+     "projetar": "x",
+     "rotulo_x": "qᴰ"
+    },
+    {
+     "id": "Qs",
+     "intersecao": [
+      "S",
+      "Ps"
+     ],
+     "projetar": "x",
+     "rotulo_x": "qˢ"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       "Qd.x",
+       0
+      ],
+      "Qd",
+      "Qs",
+      [
+       "Qs.x",
+       0
+      ]
+     ],
+     "papel": "gasto",
+     "rotulo": "custo",
+     "rotulo_xy": [
+      "(Qd.x+Qs.x)/2",
+      0.8
+     ]
+    }
+   ],
+   "checar": [
+    "abs(Qs.x*(Qs.x - Qd.x) - 9.35) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Subsídio (paga a diferença)",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      2,
+      10
+     ],
+     "p2": [
+      6,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "D (inelástica)",
+     "rotulo_em": 2.3,
+     "rotulo_desloc": [
+      10,
+      4
+     ]
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      0,
+      0
+     ],
+     "p2": [
+      9,
+      9
+     ],
+     "familia": "oferta",
+     "rotulo": "O"
+    },
+    {
+     "id": "Ps",
+     "tipo": "horizontal",
+     "y": 5.5,
+     "x": [
+      0,
+      9
+     ],
+     "familia": "destaque",
+     "rotulo": "pₛ",
+     "tracejada": true
+    }
+   ],
+   "pontos": [
+    {
+     "id": "Qs",
+     "intersecao": [
+      "S",
+      "Ps"
+     ],
+     "projetar": "x",
+     "rotulo_x": "qˢ"
+    },
+    {
+     "id": "Pm",
+     "sobre": "D",
+     "x": "Qs.x",
+     "projetar": "y",
+     "rotulo_y": "pₘ"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       5.5
+      ],
+      "Qs",
+      "Pm",
+      [
+       0,
+       "Pm.y"
+      ]
+     ],
+     "papel": "gasto",
+     "rotulo": "custo",
+     "rotulo_xy": [
+      2.4,
+      3.4
+     ]
+    }
+   ],
+   "checar": [
+    "abs((5.5 - Pm.y)*Qs.x - 23.375) < 0.01",
+    "(5.5 - Pm.y)*Qs.x > 9.35"
+   ]
+  }
+ ]
+}

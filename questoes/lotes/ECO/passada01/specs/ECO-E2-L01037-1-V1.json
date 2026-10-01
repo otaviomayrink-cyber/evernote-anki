@@ -1,0 +1,109 @@
+{
+ "id": "ECO-E2-L01037-1-V1",
+ "uso": "verso",
+ "legenda": "Com o preço tabelado em 6 (abaixo do equilíbrio de 7), demanda-se 120 e oferta-se 80: falta produto — excesso de DEMANDA de 40 unidades.",
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 150,
+  "ymax": 11,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - x/30",
+   "dominio": [
+    0,
+    150
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 20,
+   "rotulo_desloc": [
+    6,
+    10
+   ]
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "(x - 20)/10",
+   "dominio": [
+    20,
+    125
+   ],
+   "familia": "oferta",
+   "rotulo": "O"
+  },
+  {
+   "id": "Pmax",
+   "tipo": "horizontal",
+   "y": 6,
+   "x": [
+    0,
+    135
+   ],
+   "familia": "destaque",
+   "rotulo": "preço tabelado = 6",
+   "tracejada": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E",
+   "rotulo_desloc": [
+    -6,
+    14
+   ]
+  },
+  {
+   "id": "Qs",
+   "intersecao": [
+    "S",
+    "Pmax"
+   ],
+   "projetar": "x",
+   "marcar": true
+  },
+  {
+   "id": "Qd",
+   "intersecao": [
+    "D",
+    "Pmax"
+   ],
+   "projetar": "x",
+   "marcar": true
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Qs.x",
+    4.6
+   ],
+   "para": [
+    "Qd.x",
+    4.6
+   ],
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "falta 40",
+   "rotulo_desloc": [
+    -26,
+    -22
+   ]
+  }
+ ],
+ "checar": [
+  "abs(Qs.x - 80) < 0.01",
+  "abs(Qd.x - 120) < 0.01",
+  "Qd.x - Qs.x > 0"
+ ]
+}

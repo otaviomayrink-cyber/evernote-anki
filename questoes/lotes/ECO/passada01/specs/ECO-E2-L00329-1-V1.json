@@ -1,0 +1,17 @@
+{"id": "ECO-E2-L00329-1-V1", "uso": "verso",
+ "legenda": "A CMeLP envolve as curvas de curto prazo por baixo, mas só toca o MÍNIMO de uma delas onde ela própria é mínima (T₂). No trecho de economias de escala, a tangência T₁ fica à esquerda do mínimo M₁; no de deseconomias, T₃ fica à direita de M₃.",
+ "eixos": {"x": "q", "y": "CMe", "xmax": 20, "ymax": 8},
+ "curvas": [
+  {"id": "LP", "tipo": "funcao", "expr": "2 + 0.05*(x-10)**2", "dominio": [1, 19], "familia": "demanda", "rotulo": "CMeLP", "rotulo_em": 1.2, "rotulo_desloc": [-6, 14]},
+  {"id": "CP1", "tipo": "funcao", "expr": "2 + 0.05*(x-10)**2 + 0.15*(x-5)**2", "dominio": [2.2, 10], "familia": "terceira", "rotulo": "CMeCP₁", "rotulo_em": 9.6, "rotulo_desloc": [-30, 14]},
+  {"id": "CP2", "tipo": "funcao", "expr": "2 + 0.05*(x-10)**2 + 0.15*(x-10)**2", "dominio": [6, 14], "familia": "terceira", "rotulo": "CMeCP₂", "rotulo_em": 13.6, "rotulo_desloc": [-6, 12]},
+  {"id": "CP3", "tipo": "funcao", "expr": "2 + 0.05*(x-10)**2 + 0.15*(x-15)**2", "dominio": [10.4, 18.5], "familia": "terceira", "rotulo": "CMeCP₃", "rotulo_em": 18.3, "rotulo_desloc": [-30, 12]}
+ ],
+ "pontos": [
+  {"id": "T1", "sobre": "LP", "x": 5, "rotulo": "T₁", "rotulo_desloc": [-14, -20]},
+  {"id": "M1", "sobre": "CP1", "x": 6.25, "rotulo": "M₁", "rotulo_desloc": [4, 12], "marcar": true},
+  {"id": "T2", "sobre": "LP", "x": 10, "rotulo": "T₂ = M₂", "rotulo_desloc": [-26, -22]},
+  {"id": "T3", "sobre": "LP", "x": 15, "rotulo": "T₃", "rotulo_desloc": [0, -20]},
+  {"id": "M3", "sobre": "CP3", "x": 13.75, "rotulo": "M₃", "rotulo_desloc": [-22, 12], "marcar": true}
+ ],
+ "checar": ["abs(CP1(5) - LP(5)) < 0.01", "abs(CP3(15) - LP(15)) < 0.01", "CP1(6.25) < CP1(5)", "CP1(6.25) < CP1(6.0)", "CP1(6.25) < CP1(6.5)", "CP3(13.75) < CP3(15)", "CP3(13.75) < CP3(13.5)", "CP3(13.75) < CP3(14)", "M1.x > T1.x", "M3.x < T3.x", "CP1(8) > LP(8)", "CP3(12) > LP(12)"]}

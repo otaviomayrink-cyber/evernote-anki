@@ -1,0 +1,208 @@
+{
+ "id": "ECO-E1-0163-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "O mesmo imposto t sobre curvas íngremes (inelásticas) quase não reduz a quantidade, e o peso morto (PM) é um triângulo fino; sobre curvas planas (elásticas), a quantidade cai muito e o PM fica bem maior.",
+ "paineis": [
+  {
+   "titulo": "Curvas inelásticas",
+   "checar": [
+    "Ec.x < E0.x",
+    "Ec.y > E0.y",
+    "Ev.y < E0.y",
+    "abs((Ec.y-Ev.y)-2) < 0.05",
+    "(E0.x - Ec.x) < 0.5"
+   ],
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      3.5,
+      9.5
+     ],
+     "p2": [
+      6.5,
+      0.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S",
+     "tipo": "reta",
+     "p1": [
+      3.5,
+      0.5
+     ],
+     "p2": [
+      6.5,
+      9.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O",
+     "estado": "inicial",
+     "rotulo_em": 3.75,
+     "rotulo_desloc": [
+      10,
+      0
+     ]
+    },
+    {
+     "id": "St",
+     "tipo": "reta",
+     "p1": [
+      3.5,
+      2.5
+     ],
+     "p2": [
+      6.5,
+      11.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O + t"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E0",
+     "intersecao": [
+      "D",
+      "S"
+     ],
+     "rotulo": "E₀",
+     "projetar": true,
+     "rotulo_x": "q₀ ≈ qₜ",
+     "rotulo_y": "p₀"
+    },
+    {
+     "id": "Ec",
+     "intersecao": [
+      "D",
+      "St"
+     ],
+     "projetar": true,
+     "rotulo_x": "",
+     "rotulo_y": "pc",
+     "marcar": true
+    },
+    {
+     "id": "Ev",
+     "sobre": "S",
+     "x": "Ec.x",
+     "projetar": "y",
+     "rotulo_y": "pv"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       "Ec.y"
+      ],
+      "Ec",
+      "Ev",
+      [
+       0,
+       "Ev.y"
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "Receita",
+     "rotulo_xy": [
+      "Ec.x*0.3",
+      "(Ec.y+Ev.y)/2"
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      "Ec",
+      "E0",
+      "Ev"
+     ],
+     "papel": "peso_morto"
+    }
+   ],
+   "setas": [
+    {
+     "de": [
+      "Ec.x-0.15",
+      "Ev.y"
+     ],
+     "para": [
+      "Ec.x-0.15",
+      "Ec.y"
+     ],
+     "cor": "vermelho",
+     "estilo": "<|-|>",
+     "rotulo": "t",
+     "rotulo_desloc": [
+      -20,
+      -8
+     ],
+     "espessura": 1.8
+    },
+    {
+     "de": [
+      "E0.x+1.25",
+      "E0.y+1.45"
+     ],
+     "para": [
+      "(Ec.x+Ev.x+E0.x)/3+0.05",
+      "(Ec.y+Ev.y+E0.y)/3"
+     ],
+     "cor": "texto",
+     "espessura": 1.2
+    }
+   ],
+   "deslocamentos": [],
+   "textos": [
+    {
+     "xy": [
+      "E0.x+1.3",
+      "E0.y+1.6"
+     ],
+     "texto": "PM (mínimo)",
+     "negrito": true
+    }
+   ]
+  },
+  {
+   "modelo": "tributo",
+   "params": {
+    "t": 2,
+    "D": [
+     [
+      0.5,
+      8.0
+     ],
+     [
+      9.5,
+      2.0
+     ]
+    ],
+    "S": [
+     [
+      0.5,
+      2.0
+     ],
+     [
+      9.5,
+      8.0
+     ]
+    ]
+   },
+   "titulo": "Curvas elásticas",
+   "checar": [
+    "(E0.x - Ec.x) > 1.2"
+   ]
+  }
+ ]
+}

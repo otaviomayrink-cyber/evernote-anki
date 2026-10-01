@@ -1,0 +1,111 @@
+{
+ "id": "ECO-E1-0295-1-V1",
+ "uso": "verso",
+ "legenda": "Na demanda linear, a RMg zera no ponto médio, onde |ε| = 1. Como o CMg é positivo, RMg = CMg só ocorre com RMg > 0 — à esquerda do ponto médio, no trecho elástico.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 10.5,
+  "ymax": 10.5
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - x",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "D = RMe",
+   "rotulo_em": 8.6,
+   "rotulo_desloc": [
+    6,
+    8
+   ]
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "10 - 2*x",
+   "dominio": [
+    0,
+    5
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg",
+   "rotulo_em": 4.6,
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  },
+  {
+   "id": "CMg",
+   "tipo": "horizontal",
+   "y": 2,
+   "x": [
+    0,
+    6.4
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "Q",
+   "intersecao": [
+    "RMg",
+    "CMg"
+   ],
+   "projetar": "x",
+   "rotulo_x": "qm",
+   "marcar": false
+  },
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": "Q.x",
+   "rotulo": "M",
+   "projetar": "y",
+   "rotulo_y": "pm"
+  },
+  {
+   "id": "U",
+   "sobre": "D",
+   "x": 5,
+   "rotulo": "|ε| = 1",
+   "projetar": "x",
+   "rotulo_x": "q médio",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    3.0,
+    8.9
+   ],
+   "texto": "trecho elástico (|ε| > 1)",
+   "cor": "azul"
+  },
+  {
+   "xy": [
+    7.6,
+    4.3
+   ],
+   "texto": "trecho inelástico (|ε| < 1)",
+   "cor": "cinza"
+  }
+ ],
+ "checar": [
+  "Q.x < U.x",
+  "M.y > U.y",
+  "abs(RMg(U.x)) < 0.01"
+ ]
+}

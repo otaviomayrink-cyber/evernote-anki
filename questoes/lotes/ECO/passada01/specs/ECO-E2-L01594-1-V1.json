@@ -1,0 +1,98 @@
+{
+ "id": "ECO-E2-L01594-1-V1",
+ "uso": "verso",
+ "legenda": "A oferta de curto prazo da firma competitiva (em vermelho) é o trecho do CMg acima do mínimo do CVMe, o ponto de fechamento F. Entre F e o ponto de nivelamento N, a firma produz com prejuízo; abaixo de F, produz zero. O mínimo do CTMe só decide a saída no longo prazo.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 11,
+  "ymax": 8
+ },
+ "curvas": [
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "0.3*x**2 - 2.4*x + 6",
+   "dominio": [
+    2,
+    9.4
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "CTMe",
+   "tipo": "funcao",
+   "expr": "0.1*x**2 - 1.2*x + 6 + 12/x",
+   "dominio": [
+    2.3,
+    9.8
+   ],
+   "familia": "terceira",
+   "rotulo": "CTMe"
+  },
+  {
+   "id": "CVMe",
+   "tipo": "funcao",
+   "expr": "0.1*x**2 - 1.2*x + 6",
+   "dominio": [
+    1.2,
+    9.8
+   ],
+   "familia": "quarta",
+   "rotulo": "CVMe"
+  },
+  {
+   "id": "Oferta",
+   "tipo": "funcao",
+   "expr": "0.3*x**2 - 2.4*x + 6",
+   "dominio": [
+    6,
+    8.76
+   ],
+   "familia": "destaque",
+   "rotulo": "oferta de CP",
+   "rotulo_em": 8.0,
+   "rotulo_desloc": [
+    -112,
+    4
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "F",
+   "intersecao": [
+    "CMg",
+    "CVMe"
+   ],
+   "rotulo": "F",
+   "projetar": "y",
+   "rotulo_y": "CVMe mín",
+   "rotulo_desloc": [
+    10,
+    -16
+   ]
+  },
+  {
+   "id": "N",
+   "intersecao": [
+    "CMg",
+    "CTMe"
+   ],
+   "rotulo": "N",
+   "projetar": "y",
+   "rotulo_y": "CTMe mín",
+   "rotulo_desloc": [
+    6,
+    -18
+   ]
+  }
+ ],
+ "checar": [
+  "abs(F.x - 6) < 0.02",
+  "abs(F.y - 2.4) < 0.01",
+  "N.y > F.y",
+  "N.x > F.x"
+ ]
+}

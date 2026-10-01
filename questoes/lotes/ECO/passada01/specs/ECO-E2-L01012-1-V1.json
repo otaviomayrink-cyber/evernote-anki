@@ -1,0 +1,158 @@
+{
+ "id": "ECO-E2-L01012-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Preferência bem comportada: o ótimo E é a tangência, com TMS = p₁/p₂. Substitutos perfeitos (|TMS| = 1) com p₁/p₂ = 1/2: a curva mais alta alcançável toca a restrição só no eixo — solução de canto, sem igualdade.",
+ "paineis": [
+  {
+   "titulo": "Bem comportada: tangência",
+   "eixos": {
+    "x": "x₁",
+    "y": "x₂",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "RO",
+     "tipo": "reta",
+     "p1": [
+      0,
+      8
+     ],
+     "p2": [
+      8,
+      0
+     ],
+     "familia": "terceira",
+     "rotulo": "RO",
+     "rotulo_desloc": [
+      4,
+      12
+     ]
+    },
+    {
+     "id": "U",
+     "tipo": "funcao",
+     "expr": "16/x",
+     "dominio": [
+      1.7,
+      9.6
+     ],
+     "familia": "demanda",
+     "rotulo": "U*"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E",
+     "xy": [
+      4,
+      4
+     ],
+     "rotulo": "E",
+     "projetar": true,
+     "rotulo_desloc": [
+      10,
+      8
+     ]
+    }
+   ],
+   "checar": [
+    "abs(U(4) - 4) < 0.01",
+    "abs(RO(4) - 4) < 0.01",
+    "U(3) > RO(3)",
+    "U(5) > RO(5)"
+   ]
+  },
+  {
+   "titulo": "Substitutos perfeitos: canto",
+   "eixos": {
+    "x": "x₁",
+    "y": "x₂",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "RO",
+     "tipo": "reta",
+     "p1": [
+      0,
+      4
+     ],
+     "p2": [
+      8,
+      0
+     ],
+     "familia": "terceira",
+     "rotulo": "RO",
+     "rotulo_em": 5.5,
+     "rotulo_desloc": [
+      0,
+      -18
+     ]
+    },
+    {
+     "id": "U1",
+     "tipo": "reta",
+     "p1": [
+      0,
+      5
+     ],
+     "p2": [
+      5,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₁",
+     "estado": "inicial",
+     "rotulo_em": 1,
+     "rotulo_desloc": [
+      6,
+      10
+     ]
+    },
+    {
+     "id": "U2",
+     "tipo": "reta",
+     "p1": [
+      0,
+      8
+     ],
+     "p2": [
+      8,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₂",
+     "rotulo_em": 3,
+     "rotulo_desloc": [
+      6,
+      10
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E",
+     "xy": [
+      8,
+      0
+     ],
+     "rotulo": "E (canto)",
+     "rotulo_desloc": [
+      8,
+      16
+     ]
+    }
+   ],
+   "checar": [
+    "abs(RO(8)) < 0.01",
+    "abs(U2(8)) < 0.01",
+    "U2(4) > RO(4)",
+    "U2(1) > RO(1)"
+   ]
+  }
+ ]
+}

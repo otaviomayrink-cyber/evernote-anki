@@ -1,0 +1,133 @@
+{
+ "id": "ECO-E2-L00881-1-V1",
+ "uso": "verso",
+ "legenda": "Na parte elástica da demanda p = 10 − q, subir o preço de 6 para 8 ganha 4 nas unidades que continuam vendidas (área verde), mas perde 12 nas que deixam de ser vendidas (área vermelha): a receita cai de 24 para 16.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 11,
+  "ymax": 11,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "10 - x",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "D",
+   "rotulo_em": 8.5,
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "sobre": "D",
+   "x": 4,
+   "rotulo": "A",
+   "projetar": true,
+   "rotulo_x": "q₁ = 4",
+   "rotulo_y": "p₁ = 6"
+  },
+  {
+   "id": "B",
+   "sobre": "D",
+   "x": 2,
+   "rotulo": "B",
+   "projetar": true,
+   "rotulo_x": "q₂ = 2",
+   "rotulo_y": "p₂ = 8"
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "A.y"
+    ],
+    [
+     0,
+     "B.y"
+    ],
+    "B",
+    [
+     "B.x",
+     "A.y"
+    ]
+   ],
+   "papel": "ganho",
+   "rotulo": "+4",
+   "rotulo_xy": [
+    1,
+    7
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     "B.x",
+     0
+    ],
+    [
+     "B.x",
+     "A.y"
+    ],
+    "A",
+    [
+     "A.x",
+     0
+    ]
+   ],
+   "papel": "perda",
+   "rotulo": "−12",
+   "rotulo_xy": [
+    3,
+    3
+   ]
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     "A.y"
+    ],
+    [
+     "B.x",
+     "A.y"
+    ],
+    [
+     "B.x",
+     0
+    ]
+   ],
+   "papel": "neutro",
+   "rotulo": "mantida",
+   "rotulo_xy": [
+    1,
+    3
+   ]
+  }
+ ],
+ "checar": [
+  "B.y > A.y",
+  "B.x*B.y < A.x*A.y",
+  "abs((B.y-A.y)*B.x - 4) < 0.01",
+  "abs(A.y*(A.x-B.x) - 12) < 0.01"
+ ]
+}

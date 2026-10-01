@@ -1,0 +1,4 @@
+{"id": "ECO-E1-0019-1-V1", "uso": "verso",
+ "legenda": "Custos menores deslocam a oferta para a direita (O₁ → O₂), o que, numa curva ascendente, é o mesmo que deslocá-la para baixo: cada quantidade passa a ser ofertada a preço menor. No novo equilíbrio, o preço cai e a quantidade sobe.",
+ "modelo": "oferta_demanda", "params": {"deslocar": {"S": "direita"}}, "substituir": {"D1": {"rotulo": "D"}},
+ "checar": ["E2.y < E1.y", "E2.x > E1.x"]}

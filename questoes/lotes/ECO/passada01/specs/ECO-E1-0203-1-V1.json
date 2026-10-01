@@ -1,0 +1,142 @@
+{
+ "id": "ECO-E1-0203-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Com demanda de elasticidade unitária (P·Q constante, uma hipérbole), dobrar o preço de 5 para 10 reduz a quantidade à metade, de 4 para 2: os dois retângulos de receita têm a mesma área (20).",
+ "paineis": [
+  {
+   "titulo": "P = 5 → RT = 5 × 4 = 20",
+   "eixos": {
+    "x": "Q",
+    "y": "P",
+    "xmax": 11,
+    "ymax": 11
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "funcao",
+     "expr": "20/x",
+     "dominio": [
+      1.9,
+      10
+     ],
+     "familia": "demanda",
+     "rotulo": "D (|ε| = 1)",
+     "rotulo_em": 8.5,
+     "rotulo_desloc": [
+      -30,
+      16
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "B",
+     "sobre": "D",
+     "x": 4,
+     "rotulo": "B",
+     "projetar": true,
+     "rotulo_x": "4",
+     "rotulo_y": "5"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       "B.y"
+      ],
+      "B",
+      [
+       "B.x",
+       0
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "RT = 20",
+     "rotulo_xy": [
+      2,
+      2.5
+     ]
+    }
+   ],
+   "checar": [
+    "abs(B.x*B.y - 20) < 0.01"
+   ]
+  },
+  {
+   "titulo": "P = 10 → RT = 10 × 2 = 20",
+   "eixos": {
+    "x": "Q",
+    "y": "P",
+    "xmax": 11,
+    "ymax": 11
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "funcao",
+     "expr": "20/x",
+     "dominio": [
+      1.9,
+      10
+     ],
+     "familia": "demanda",
+     "rotulo": "D (|ε| = 1)",
+     "rotulo_em": 8.5,
+     "rotulo_desloc": [
+      -30,
+      16
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "sobre": "D",
+     "x": 2,
+     "rotulo": "A",
+     "projetar": true,
+     "rotulo_x": "2",
+     "rotulo_y": "10"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       "A.y"
+      ],
+      "A",
+      [
+       "A.x",
+       0
+      ]
+     ],
+     "papel": "receita_tributaria",
+     "rotulo": "RT\n20",
+     "rotulo_xy": [
+      1,
+      5
+     ]
+    }
+   ],
+   "checar": [
+    "abs(A.x*A.y - 20) < 0.01"
+   ]
+  }
+ ]
+}

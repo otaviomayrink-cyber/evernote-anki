@@ -1,0 +1,95 @@
+{
+ "id": "ECO-E1-0208-1-V1",
+ "uso": "verso",
+ "legenda": "Com x₁ neutro e x₂ desejado, a utilidade depende só de x₂: cada curva de indiferença é uma reta horizontal, paralela ao eixo do bem neutro. Andar para a direita (mais x₁) não muda a utilidade; subir (mais x₂) leva a curvas mais altas.",
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "U1",
+   "tipo": "horizontal",
+   "y": 2.5,
+   "x": [
+    0,
+    8.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₁"
+  },
+  {
+   "id": "U2",
+   "tipo": "horizontal",
+   "y": 5,
+   "x": [
+    0,
+    8.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₂"
+  },
+  {
+   "id": "U3",
+   "tipo": "horizontal",
+   "y": 7.5,
+   "x": [
+    0,
+    8.6
+   ],
+   "familia": "demanda",
+   "rotulo": "U₃"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    1.5,
+    5.6
+   ],
+   "para": [
+    6.5,
+    5.6
+   ],
+   "cor": "cinza",
+   "rotulo": "mais x₁ (neutro): mesma utilidade",
+   "rotulo_desloc": [
+    -120,
+    10
+   ]
+  },
+  {
+   "de": [
+    7.6,
+    2.9
+   ],
+   "para": [
+    7.6,
+    7.1
+   ],
+   "cor": "vermelho",
+   "rotulo": "mais x₂: utilidade ↑",
+   "rotulo_desloc": [
+    -200,
+    -50
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    5.0,
+    0.6
+   ],
+   "texto": "x₁ = bem neutro · x₂ = bem desejado",
+   "cor": "cinza",
+   "ha": "center"
+  }
+ ],
+ "checar": [
+  "U1(1) == U1(7)",
+  "U3(3) > U2(3) > U1(3)"
+ ]
+}

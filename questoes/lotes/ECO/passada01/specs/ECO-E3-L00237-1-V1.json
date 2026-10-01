@@ -1,0 +1,13 @@
+{"id": "ECO-E3-L00237-1-V1", "uso": "verso",
+ "legenda": "Suponha que U₁ e U₂ se cruzem em A. Então A ~ B (sobre U₁) e A ~ D (sobre U₂); pela transitividade, B ~ D. Mas D tem o mesmo x e mais y que B, logo D ≻ B. Contradição: curvas de níveis distintos não podem se cruzar.",
+ "eixos": {"x": "x", "y": "y", "xmax": 10, "ymax": 10},
+ "curvas": [
+   {"id": "U1", "tipo": "funcao", "expr": "16/x", "dominio": [1.65, 9.6], "familia": "demanda", "rotulo": "U₁"},
+   {"id": "U2", "tipo": "funcao", "expr": "2 + 8/x", "dominio": [1.0, 9.6], "familia": "destaque", "rotulo": "U₂ (hipotética)", "rotulo_desloc": [8, 4]}],
+ "pontos": [
+   {"id": "A", "intersecao": ["U1", "U2"], "rotulo": "A", "rotulo_desloc": [12, 10]},
+   {"id": "B", "sobre": "U1", "x": 8, "rotulo": "B", "projetar": "x", "rotulo_desloc": [4, -20]},
+   {"id": "D", "sobre": "U2", "x": 8, "rotulo": "D", "rotulo_desloc": [4, 18]}],
+ "textos": [{"xy": [4.6, 8.6], "texto": "A ~ B e A ~ D ⇒ B ~ D\nmas D ≻ B (mais y)", "cor": "vermelho", "negrito": true}],
+ "checar": ["abs(A.x - 4) < 0.01", "abs(A.y - 4) < 0.01", "D.y > B.y", "abs(D.x - B.x) < 0.01"]
+}

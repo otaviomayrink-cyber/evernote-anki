@@ -270,4 +270,243 @@ CARDS = [
         "alertas": ["texto_corrigido: o sinal “<” de “α + β < 1” e os expoentes da função se perderam na "
                     "transcrição; restaurados pelo gabarito (CERTO) e pelos comentários"],
     },
+    # ------------------------------------------------------------------ E3-L00340
+    {
+        "id": "ECO-E3-L00340-1", "fonte_ref": "E3-L00340", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": ("Considerando a teoria da produção e suas implicações para o equilíbrio de curto e longo prazo "
+                    "para empresas competitivas, julgue (C ou E) o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("A curvatura da isoquanta é medida por sua inclinação em cada ponto, que representa a taxa à "
+                      "qual os dois insumos podem ser substituídos mantendo-se a produção constante. Esta taxa é "
+                      "chamada de taxa marginal de substituição técnica e, ao longo de uma isoquanta típica, ela "
+                      "diminui para o fator que está se tornando relativamente mais abundante à medida que nos "
+                      "movemos para os extremos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A curvatura da isoquanta é medida por sua inclinação em cada ponto, que representa a taxa "
+                      "à qual os dois insumos podem ser substituídos mantendo-se a produção constante. Esta taxa "
+                      "é chamada de taxa marginal de substituição técnica e, ao longo de uma isoquanta típica, "
+                      "ela <u>diminui</u> para o fator que está se tornando relativamente <u>mais abundante</u> à "
+                      "medida que nos movemos para os extremos."),
+        "poucas": ("A inclinação da isoquanta é a " + azb("TMST") + "; na isoquanta convexa típica, ela "
+                   + vd("decresce") + ": o fator que vai ficando abundante consegue substituir cada vez menos do "
+                   "fator que vai ficando escasso."),
+        "destrinchando": [
+            azb("TMST") + " de trabalho por capital = −ΔK/ΔL ao longo da isoquanta = PMg<sub>L</sub>/"
+            "PMg<sub>K</sub>. Mede quantas unidades de capital um trabalhador a mais consegue substituir sem "
+            "mudar a produção.",
+            "Por que decresce: ao trocar K por L, o trabalho fica abundante (PMg<sub>L</sub> cai) e o capital "
+            "fica escasso (PMg<sub>K</sub> sobe) — a razão PMg<sub>L</sub>/PMg<sub>K</sub> despenca. No "
+            "gráfico: de A para B, 1 trabalhador substitui " + vd("3") + " unidades de capital; de C para D, "
+            "só " + vd("0,5") + ".",
+            "TMST decrescente é o mesmo que " + azb("isoquanta convexa") + " em relação à origem. Casos-limite: "
+            "substitutos perfeitos (isoquanta reta, TMST constante) e complementares perfeitos (isoquanta em L, "
+            "sem substituição possível).",
+            "Precisão de vocabulário: a inclinação mede a TMST; a <b>curvatura</b>, a rigor, é a variação dessa "
+            "inclinação ao longo da curva (quanto mais curva, mais difícil a substituição). O item usa as duas "
+            "ideias de forma frouxa, mas o núcleo — TMST decrescente na isoquanta típica — está correto.",
+            "Por que importa: com TMST decrescente, a tangência entre isoquanta e isocusto (TMST = w/r) é de fato "
+            "um mínimo de custo, e a firma substitui gradualmente o fator que encarece.",
+        ],
+        "grafico_verso": "ECO-E3-L00340-1-V1",
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " O item parafraseia a definição de manual em frase "
+                       "longa e com uma imprecisão (“curvatura medida pela inclinação”) que pode levar o "
+                       "candidato a marcar ERRADO por excesso de rigor. O que decide é o comportamento da TMST "
+                       "ao longo da curva: “diminui” está certo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Ao longo de uma isoquanta convexa, a TMST de trabalho por capital é crescente à medida que se "
+            "substitui capital por trabalho.”</i> → ERRADO (inversão: é decrescente)",
+            "<i>“Se os insumos forem substitutos perfeitos, a TMST é constante ao longo da isoquanta.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["isoquanta típica"], "dificuldade": 2,
+        "comentario_fonte": "Isoquanta convexa reflete TMST decrescente: quanto mais se usa um insumo, menor a "
+                            "facilidade de substituí-lo pelo outro; TMST = −dK/dL = PMgL/PMgK (quatro respostas "
+                            "concordantes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 475", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (anotações manuscritas sobre TMST, com OCR ilegível)"},
+                          {"ref": "IMAGEM 476", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00340-1-V1, com valores próprios)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00406
+    {
+        "id": "ECO-E3-L00406-1", "fonte_ref": "E3-L00406", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("A Taxa Marginal de Substituição (TMS) para o consumidor indica a relação entre as quantidades "
+                      "de dois bens que um indivíduo está disposto a trocar para manter o mesmo nível de utilidade "
+                      "e é análoga à Taxa Marginal de Substituição Técnica (TMST) do produtor, que reflete a "
+                      "relação entre os insumos que o produtor pode substituir, mantendo o mesmo nível de "
+                      "produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A Taxa Marginal de Substituição (TMS) para o consumidor indica a relação entre as "
+                      "quantidades de dois bens que um indivíduo está disposto a trocar para manter o mesmo nível "
+                      "de utilidade e é <u>análoga</u> à Taxa Marginal de Substituição Técnica (TMST) do "
+                      "produtor, que reflete a relação entre os insumos que o produtor pode substituir, mantendo "
+                      "o mesmo nível de produção."),
+        "poucas": ("As duas são " + azb("taxas de troca na margem") + " que mantêm algo constante — utilidade "
+                   "(TMS, curva de indiferença) ou produção (TMST, isoquanta). A analogia é a estrutura comum das "
+                   "teorias do consumidor e da firma."),
+        "destrinchando": [
+            azb("TMS") + " = |ΔY/ΔX| com utilidade constante = " + vd("UMg<sub>X</sub>/UMg<sub>Y</sub>")
+            + ": inclinação da curva de indiferença. TMS = 2 → o consumidor cede 2 unidades de Y por 1 de X "
+            "e fica igualmente satisfeito.",
+            azb("TMST") + " = |ΔK/ΔL| com produção constante = " + vd("PMg<sub>L</sub>/PMg<sub>K</sub>")
+            + ": inclinação da isoquanta. TMST = 3 → um trabalhador a mais permite dispensar 3 unidades de "
+            "capital.",
+            "Paralelos completos: ambas são <b>decrescentes</b> no caso típico (preferências convexas × "
+            "rendimentos marginais decrescentes); no ótimo, ambas se igualam a um preço relativo (TMS = "
+            "P<sub>X</sub>/P<sub>Y</sub>, na tangência com a reta orçamentária; TMST = w/r, na tangência com a "
+            "isocusto).",
+            "Diferenças que a banca pode explorar: a utilidade é <b>ordinal</b> (o número da curva de indiferença "
+            "só ordena) e subjetiva; a isoquanta é <b>cardinal</b> (Q = 100 é mensurável) e técnica. "
+            "“Análoga” ≠ “idêntica”.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Item longo e sem armadilha de conteúdo: descreve corretamente as "
+                       "duas taxas e afirma só a analogia. Ele viraria ERRADO se trocasse os objetos (TMST entre "
+                       "bens; TMS entre insumos) ou se dissesse que os conceitos são idênticos ou que a utilidade "
+                       "é mensurável como a produção."),
+        "modulos": [
+            ("🧭 Panorama", [
+                "Consumidor → curva de indiferença → TMS → restrição orçamentária → ótimo TMS = P<sub>X</sub>/"
+                "P<sub>Y</sub>.",
+                "Produtor → isoquanta → TMST → isocusto → ótimo TMST = w/r.",
+            ]),
+            ("😈 Para dificultar", [
+                "<i>“A TMS é cardinal, assim como a TMST, pois ambas medem níveis observáveis de satisfação e de "
+                "produção.”</i> → ERRADO (a utilidade é ordinal)",
+                "<i>“No ótimo, a TMS iguala a razão de preços dos bens, e a TMST, a razão de preços dos "
+                "fatores.”</i> → CERTO",
+            ]),
+        ],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "TMS = UMgX/UMgY, inclinação da curva de indiferença; TMST = PMgL/PMgK, inclinação da "
+                            "isoquanta; ambas são taxas de troca na margem com algo constante (quatro respostas "
+                            "concordantes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 574", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (curva de indiferença ilustrativa; conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00407
+    {
+        "id": "ECO-E3-L00407-1", "fonte_ref": "E3-L00407", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024,
+        "cacd": False, "errei": True,
+        "comando": CMD_NIDI_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("Um produtor racional sempre escolhe uma combinação de fatores de produção localizada em uma "
+                      "curva de indiferença mais alta, pois curvas de indiferença mais baixas representam menores "
+                      "níveis de produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um produtor racional ") + vm("sempre") + az(" escolhe uma combinação de fatores de "
+                    "produção localizada em uma ") + vm("curva de indiferença mais alta") + az(", pois ")
+                    + vm("curvas de indiferença") + az(" mais baixas representam menores níveis de produção.")),
+        "poucas": ("Dois erros: o produtor trabalha com " + azb("isoquantas") + ", não com curvas de "
+                   "indiferença; e não escolhe “sempre a mais alta”, mas a isoquanta mais alta que sua "
+                   + azb("isocusto") + " alcança (ou a isocusto mais baixa para um dado produto)."),
+        "destrinchando": [
+            "Vocabulário: " + azb("curva de indiferença") + " = cestas de <b>bens</b> com a mesma "
+            "<b>utilidade</b> (consumidor); " + azb("isoquanta") + " = combinações de <b>insumos</b> com a mesma "
+            "<b>produção</b> (firma).",
+            "Critério de escolha: produzir mais custa mais. Escolher “sempre a isoquanta mais alta” sem olhar o "
+            "custo levaria a gastar sem limite. O problema da firma tem duas formas equivalentes: "
+            "<b>maximizar Q dado o custo</b> (isoquanta mais alta tocada pela isocusto) ou <b>minimizar o custo "
+            "dado Q</b> (isocusto mais baixa que toca a isoquanta). Ambas levam à tangência " + vd("TMST = w/r")
+            + ".",
+            "E a escala? O lucro máximo exige, além do custo mínimo para cada Q, escolher o Q em que a receita "
+            "marginal iguala o custo marginal. Mais produção só compensa até aí.",
+            "O paralelo com o consumidor é legítimo (curva mais alta = melhor, sob restrição), mas cada teoria "
+            "tem seu objeto e sua restrição: orçamento × custo.",
+            vm("Regra-âncora: firma → isoquanta + isocusto; consumidor → curva de indiferença + reta "
+               "orçamentária."),
+        ],
+        "dissecando": (cz("[troca de conceito · modulador absoluto]") + " O item transplanta o vocabulário do "
+                       "consumidor para a firma e retira a restrição de custo com o “sempre”. Pista imediata: "
+                       "“curva de indiferença” e “níveis de produção” na mesma frase não combinam. 🔥 Simulados "
+                       "do CACD gostam dessa troca de rótulos entre as duas teorias."),
+        "modulos": [
+            ("🧠 Mnemônico", ["Iso<b>quanta</b> = igual <b>quanti</b>dade; curva de indiferença = igual "
+                              "felicidade."]),
+            ("😈 Para dificultar", [
+                "<i>“Um consumidor racional escolhe a cesta na curva de indiferença mais alta compatível com sua "
+                "restrição orçamentária.”</i> → CERTO",
+                "<i>“Dada a isocusto, o produtor escolhe a isoquanta mais alta, ponto em que a TMST é maior que a "
+                "razão w/r.”</i> → ERRADO (no ótimo, TMST = w/r)",
+            ]),
+        ],
+        "reescrita": ("Um produtor racional " + hl("escolhe, dada a sua isocusto,") + " uma combinação de fatores "
+                      "de produção localizada " + hl("na isoquanta mais alta alcançável") + ", pois "
+                      + hl("isoquantas") + " mais baixas representam menores níveis de produção."),
+        "tipo_erro": ["TROCA_CONCEITO", "GENERALIZACAO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": "Produtores usam isoquantas, não curvas de indiferença; a escolha é a tangência entre "
+                            "isoquanta e isocusto, não “sempre a mais alta” (cinco respostas concordantes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 575", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (anotação manuscrita: “o nome da curva é isoquanta”; absorvida no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00409
+    {
+        "id": "ECO-E3-L00409-1", "fonte_ref": "E3-L00409", "destino": "05", "subtema": H2["fp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024,
+        "cacd": False, "errei": True,
+        "comando": CMD_NIDI_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("O axioma da transitividade na teoria do consumidor, que afirma que se um consumidor prefere o "
+                      "bem A ao bem B e prefere o bem B ao bem C, ele também prefere o bem A ao bem C, possui uma "
+                      "contraparte na teoria do produtor, segundo a qual a produção com uma combinação de insumos "
+                      "mais eficiente sempre é preferida pelo produtor, respeitando a lógica de eficiência "
+                      "técnica."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O axioma da transitividade na teoria do consumidor, que afirma que se um consumidor prefere "
+                      "o bem A ao bem B e prefere o bem B ao bem C, ele também prefere o bem A ao bem C, possui uma "
+                      "<u>contraparte</u> na teoria do produtor, segundo a qual a produção com uma combinação de "
+                      "insumos <u>mais eficiente</u> sempre é preferida pelo produtor, respeitando a lógica de "
+                      "eficiência técnica."),
+        "poucas": ("A " + azb("transitividade") + " garante uma ordenação coerente das cestas. No produtor, o "
+                   "papel equivalente cabe à ordenação por " + azb("eficiência técnica") + ": entre combinações "
+                   "que produzem o mesmo, a que usa menos insumo domina — e essa dominância também é transitiva."),
+        "destrinchando": [
+            "Axiomas do consumidor racional: " + azb("completude") + " (sabe comparar quaisquer duas cestas) e "
+            + azb("transitividade") + " (A ≻ B e B ≻ C ⇒ A ≻ C), além de monotonicidade e convexidade. "
+            "Completude + transitividade (com continuidade) permitem representar as preferências por uma função "
+            "utilidade; e é a transitividade que impede curvas de indiferença de se cruzarem.",
+            "Sem transitividade haveria ciclos (café ≻ chá ≻ suco ≻ café) e nenhuma cesta “melhor” — não haveria "
+            "o que maximizar.",
+            "No produtor: uma combinação é " + azb("tecnicamente eficiente") + " se nenhuma outra produz o mesmo "
+            "com menos de algum insumo e não mais de nenhum. Se A domina B e B domina C, A domina C. O produtor "
+            "racional nunca escolhe uma combinação dominada (desperdício): as eficientes formam a própria "
+            "isoquanta.",
+            "Segundo degrau: entre combinações tecnicamente eficientes, a firma prefere a de " + azb("menor custo")
+            + " (eficiência econômica, dados w e r) — de novo uma ordenação transitiva, agora pelo custo.",
+            "Limite da analogia: no consumidor a transitividade é um <b>axioma</b> sobre gostos subjetivos; no "
+            "produtor, a ordenação decorre da tecnologia e do objetivo de lucro — é objetiva. Por isso o item "
+            "fala em “contraparte”, não em identidade.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " Item abstrato e longo, que parece forçar uma "
+                       "analogia. O “sempre” assusta, mas aqui é legítimo: uma combinação mais eficiente "
+                       "(dominante) nunca pode ser pior para a firma. Moral: modulador absoluto não é erro "
+                       "automático — teste se a afirmação admite exceção."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A transitividade das preferências garante que curvas de indiferença de um mesmo consumidor não "
+            "se cruzem.”</i> → CERTO",
+            "<i>“Um produtor racional pode preferir uma combinação tecnicamente ineficiente, desde que seja mais "
+            "barata.”</i> → ERRADO (combinação dominada usa mais de algum insumo e não menos de nenhum: nunca é "
+            "mais barata)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": ["sempre"], "dificuldade": 3,
+        "comentario_fonte": "Transitividade garante preferências ordenáveis; no produtor, a contraparte é a "
+                            "preferência por combinações tecnicamente eficientes (dominância transitiva). Uma das "
+                            "respostas ressalva que a analogia não é perfeita (axioma subjetivo × consequência "
+                            "técnica), sem mudar o gabarito.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

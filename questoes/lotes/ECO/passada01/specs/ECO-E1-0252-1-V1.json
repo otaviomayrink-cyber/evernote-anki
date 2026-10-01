@@ -1,0 +1,13 @@
+{"id": "ECO-E1-0252-1-V1", "uso": "verso",
+ "legenda": "A oferta reflete só o custo privado (CMgP). Somado o custo imposto a terceiros, o custo social (CMgS) fica acima: o mercado produz qm, mais que o ótimo social q*, a um preço baixo demais. O triângulo vermelho é o peso morto da externalidade negativa.",
+ "eixos": {"x": "q", "y": "p", "xmax": 11, "ymax": 11},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "10 - x", "dominio": [0, 10], "familia": "demanda", "rotulo": "D = BMgS", "rotulo_em": 8.6, "rotulo_desloc": [6, 8]},
+  {"id": "S", "tipo": "funcao", "expr": "1 + 0.6*x", "dominio": [0, 10], "familia": "oferta", "rotulo": "O = CMgP", "rotulo_em": 9.5},
+  {"id": "SS", "tipo": "funcao", "expr": "3 + 0.6*x", "dominio": [0, 10], "familia": "destaque", "rotulo": "CMgS", "rotulo_em": 9.5}],
+ "pontos": [
+  {"id": "Em", "intersecao": ["D", "S"], "rotulo": "mercado", "projetar": true, "rotulo_x": "qm", "rotulo_y": "pm", "rotulo_desloc": [10, -14]},
+  {"id": "Es", "intersecao": ["D", "SS"], "rotulo": "ótimo social", "projetar": true, "rotulo_x": "q*", "rotulo_y": "p*", "rotulo_desloc": [-30, 14]},
+  {"id": "T", "sobre": "SS", "x": "Em.x", "marcar": false}],
+ "areas": [{"tipo": "poligono", "vertices": ["Es", "T", "Em"], "papel": "peso_morto"}],
+ "checar": ["Em.x > Es.x", "Em.y < Es.y", "T.y > Em.y"]}

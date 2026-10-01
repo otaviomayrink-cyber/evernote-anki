@@ -1,0 +1,18 @@
+{"id": "ECO-E2-L01412-1-V1", "uso": "verso",
+ "legenda": "Sem regulação, o monopolista natural fica em M (RMg = CMg): preço pm alto e quantidade qm baixa. Com o preço tabelado no CMg, o mercado vai a C: o consumidor paga menos e compra mais, e a área verde é o ganho de excedente do consumidor. O ponto C fica abaixo do CMe: é a firma, não o consumidor, que perde.",
+ "eixos": {"x": "q", "y": "p", "xmax": 105, "ymax": 11},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "10 - 0.1*x", "dominio": [0, 100], "familia": "demanda", "rotulo": "D", "rotulo_em": 95, "rotulo_desloc": [4, 10]},
+  {"id": "RMg", "tipo": "funcao", "expr": "10 - 0.2*x", "dominio": [0, 50], "familia": "quarta", "rotulo": "RMg", "rotulo_em": 47, "rotulo_desloc": [6, 6]},
+  {"id": "CMe", "tipo": "funcao", "expr": "2 + 100/x", "dominio": [13, 100], "familia": "terceira", "rotulo": "CMe", "rotulo_em": 100, "rotulo_desloc": [4, 8]},
+  {"id": "CMg", "tipo": "horizontal", "y": 2, "x": [0, 100], "familia": "oferta", "rotulo": "CMg"}
+ ],
+ "pontos": [
+  {"id": "Q", "intersecao": ["RMg", "CMg"], "projetar": "x", "rotulo_x": "qm", "marcar": false},
+  {"id": "M", "sobre": "D", "x": "Q.x", "rotulo": "M", "projetar": "y", "rotulo_y": "pm"},
+  {"id": "C", "intersecao": ["D", "CMg"], "rotulo": "C", "projetar": "x", "rotulo_x": "qc", "rotulo_desloc": [6, 12]}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": [[0, "M.y"], "M", "C", [0, 2]], "papel": "ganho", "rotulo": "ganho do consumidor", "rotulo_xy": [12, 3.6]}
+ ],
+ "checar": ["abs(M.y - 6) < 0.01", "abs(C.x - 80) < 0.01", "C.x > M.x", "C.y < M.y", "CMe(C.x) > C.y"]}

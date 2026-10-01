@@ -181,8 +181,8 @@
      "papel": "gasto",
      "rotulo": "gasto maior",
      "rotulo_xy": [
-      "E2.x*0.5",
-      "E2.y*0.33"
+      2.25,
+      3.35
      ]
     }
    ],

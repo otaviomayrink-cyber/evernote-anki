@@ -1173,7 +1173,7 @@ CARDS = [
                            "acao": "redesenhada (painel 1 de ECO-E2-L01010-1-V1)"},
                           {"ref": "IMAGEM 170", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "redesenhada (painel 2 de ECO-E2-L01010-1-V1)"}],
-        "alertas": ["gabarito_resolvido: o verso da fonte traz só imagens, sem a palavra ERRADO; gabarito deduzido "
+        "alertas": ["nota_redacao: gabarito resolvido — o verso da fonte traz só imagens, sem a palavra ERRADO; gabarito deduzido "
                     "das figuras e do conteúdo"],
     },
     # ------------------------------------------------------------------ E2-L01012
@@ -1227,5 +1227,222 @@ CARDS = [
                           {"ref": "IMAGEM 172", "tipo_fonte": "DIAGRAMA", "lado": "verso",
                            "acao": "redesenhada (painel 2 de ECO-E2-L01012-1-V1)"}],
         "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01171
+    {
+        "id": "ECO-E2-L01171-1", "fonte_ref": "E2-L01171", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CONS,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o consumidor prefere a cesta de consumo A à cesta de consumo B e a cesta B, à cesta C, "
+                      "então, pelo princípio da transitividade, pode-se afirmar que o consumidor prefere a cesta A em "
+                      "relação à cesta C."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o consumidor prefere a cesta de consumo A à cesta de consumo B e a cesta B, à cesta C, "
+                      "então, pelo princípio da <u>transitividade</u>, pode-se afirmar que o consumidor prefere a "
+                      "cesta A em relação à cesta C."),
+        "poucas": ("Definição literal de " + azb("transitividade") + ": " + vd("A ≻ B e B ≻ C ⇒ A ≻ C") + ". Vale "
+                   "também para a preferência fraca (≿) e para a indiferença (~)."),
+        "destrinchando": [
+            "Os três axiomas da " + azb("preferência racional") + ": " + azb("completude") + " (compara quaisquer "
+            "duas cestas), " + azb("reflexividade") + " (A ≿ A) e " + azb("transitividade") + " (consistência entre "
+            "três ou mais cestas).",
+            "Axioma = premissa assumida, não demonstrada. A transitividade não é um fato empírico garantido; é o "
+            "requisito para que as escolhas sejam consistentes e para que exista uma função de utilidade que as "
+            "represente.",
+            "Sem transitividade surgem ciclos (A ≻ B ≻ C ≻ A): o consumidor nunca encontraria a “melhor” cesta — e "
+            "poderia ser explorado por trocas sucessivas (o argumento da “bomba de dinheiro”).",
+            "A transitividade da indiferença é a que impede o cruzamento de curvas de indiferença de níveis "
+            "distintos.",
+            "Na prática, ela pode falhar em escolhas coletivas (" + azb("paradoxo de Condorcet") + ": maiorias "
+            "individualmente transitivas podem gerar uma preferência social cíclica).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item-definição. O risco é desconfiar do “pode-se afirmar” ou "
+                       "confundir com completude; a estrutura “A–B, B–C ⇒ A–C” com três cestas é a marca da "
+                       "transitividade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o consumidor é indiferente entre A e B e entre B e C, a transitividade implica que ele prefere "
+            "A a C.”</i> → ERRADO (implica indiferença entre A e C, não preferência)",
+            "<i>“A capacidade de comparar quaisquer duas cestas decorre da transitividade.”</i> → ERRADO (é a "
+            "completude)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["pode-se afirmar"], "dificuldade": 1,
+        "comentario_fonte": "Axiomas: completude, transitividade, reflexividade; se x ≿ y e y ≿ z, então x ≿ z, "
+                            "inclusive para a indiferença; preferência racional.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01172
+    {
+        "id": "ECO-E2-L01172-1", "fonte_ref": "E2-L01172", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CONS,
+        "rotulo_item": "Item",
+        "assertiva": "O consumidor irá preferir a diversificação no caso de preferências convexas.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O consumidor irá preferir a <u>diversificação</u> no caso de preferências convexas."),
+        "poucas": ("Preferências " + azb("convexas") + ": médias ponderadas de cestas indiferentes são " + vd("pelo "
+                   "menos tão boas") + " quanto os extremos (estritamente convexas: melhores). É a preferência pela "
+                   "diversificação."),
+        "destrinchando": [
+            "Definição: se x ~ y, então a cesta tx + (1 − t)y (0 < t < 1) é ≿ x. Na versão " + azb("estrita")
+            + ", é ≻ x. Equivalente: o conjunto das cestas “pelo menos tão boas quanto x” é convexo.",
+            "No gráfico: o segmento que liga x e y fica <b>acima</b> da curva de indiferença, na região das "
+            "cestas preferidas. A curva é convexa em relação à origem e a TMS é decrescente.",
+            "Exemplo: quem é indiferente entre (10 cafés; 0 pães) e (0 cafés; 10 pães) prefere (5; 5). O "
+            "contrário (preferência por extremos) caracteriza preferências " + azb("côncavas") + ", com escolha de "
+            "canto.",
+            "Nuance: com convexidade apenas fraca (substitutos perfeitos), a média é indiferente, não melhor — "
+            "“preferir a diversificação” vale em sentido fraco. A banca trata o item como CERTO no sentido usual.",
+        ],
+        "grafico_verso": "ECO-E2-L01172-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " “Preferir a diversificação” é a tradução verbal de “médias são "
+                       "preferidas a extremos”. Atenção à troca frequente: diversificação ↔ convexidade; "
+                       "especialização ↔ concavidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No caso de preferências côncavas, o consumidor prefere especializar-se no consumo de um dos "
+            "bens.”</i> → CERTO",
+            "<i>“Preferências convexas implicam que o consumidor sempre consumirá quantidades iguais dos dois "
+            "bens.”</i> → ERRADO (extrapolação: prefere combinações, não necessariamente iguais)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Preferências convexas: médias ponderadas de cestas indiferentes são pelo menos tão "
+                            "preferidas quanto os extremos; imagem da região estritamente preferida.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 197", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01172-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01173
+    {
+        "id": "ECO-E2-L01173-1", "fonte_ref": "E2-L01173", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CONS,
+        "rotulo_item": "Item",
+        "assertiva": "Preferências completas são preferências que fazem com que as pessoas desejem mais de todos os bens.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Preferências completas são preferências que ") + vm("fazem com que as pessoas desejem mais de "
+                    "todos os bens") + az(".")),
+        "poucas": ("“Desejar mais de todos os bens” é " + azb("monotonicidade") + ". " + azb("Completude") + " é "
+                   "poder " + vd("comparar quaisquer duas cestas") + ": x ≿ y, y ≿ x ou ambos."),
+        "destrinchando": [
+            azb("Completude") + ": para quaisquer x e y do conjunto de consumo, o consumidor sabe dizer se prefere "
+            "x, se prefere y ou se é indiferente. Não diz nada sobre <b>quais</b> cestas ele prefere.",
+            azb("Monotonicidade") + ": mais é melhor — se x tem pelo menos tanto de cada bem e mais de algum, x ≻ y. "
+            "Diz o <b>sentido</b> das preferências.",
+            "Os dois grupos: completude, reflexividade e transitividade definem preferências " + azb("racionais")
+            + "; monotonicidade e convexidade definem preferências " + azb("bem comportadas") + ". Um consumidor "
+            "pode ser racional e não monotônico (ex.: gosta de comida, detesta poluição).",
+            vm("Regra-âncora: completude = consegue comparar; monotonicidade = quer mais."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Atribui a um axioma de racionalidade o conteúdo de um axioma "
+                       "de “bom comportamento”. Pista: “completas” remete a <b>comparar tudo</b>, não a "
+                       "<b>querer tudo</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Preferências completas permitem ao consumidor ordenar quaisquer duas cestas de consumo.”</i> → "
+            "CERTO",
+            "<i>“Preferências monotônicas são aquelas em que o consumidor consegue comparar quaisquer duas "
+            "cestas.”</i> → ERRADO (troca de conceito: isso é completude)",
+        ])],
+        "reescrita": ("Preferências completas são preferências que " + hl("permitem ao consumidor comparar quaisquer "
+                      "duas cestas") + hl("; desejar mais de todos os bens é a monotonicidade") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Completude: consegue comparar duas cestas quaisquer — x ≿ y, y ≿ x ou x ~ y.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01174
+    {
+        "id": "ECO-E2-L01174-1", "fonte_ref": "E2-L01174", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CONS,
+        "rotulo_item": "Item",
+        "assertiva": ("As preferências são monotônicas porque cestas com maiores quantidades de bens são preferíveis "
+                      "às que possuem menores quantidades."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As preferências são monotônicas porque <u>cestas com maiores quantidades de bens são "
+                      "preferíveis</u> às que possuem menores quantidades."),
+        "poucas": ("É a definição de " + azb("monotonicidade") + " (“quanto mais, melhor”): cestas com mais bens "
+                   "são preferidas às com menos."),
+        "destrinchando": [
+            "Versões: " + azb("monotonicidade fraca") + " (mais de todos os bens → pelo menos tão bom ou melhor) e "
+            + azb("forte") + " (pelo menos tanto de cada e mais de algum → estritamente melhor).",
+            "Consequências: curvas de indiferença " + vd("negativamente inclinadas") + ", curvas mais altas "
+            "representam mais utilidade, e a cesta ótima fica sobre a restrição orçamentária (gasta-se toda a "
+            "renda).",
+            "Monotonicidade implica " + azb("não saciedade local") + " (sempre há, por perto, uma cesta melhor), mas "
+            "a recíproca não vale.",
+            "Quando falha: " + azb("males") + " (poluição), " + azb("bens neutros") + " e pontos de " + azb("saciedade")
+            + " (ponto de satisfação máxima, com curvas de indiferença circulares em volta).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição em forma causal (“são monotônicas porque…”). A redação "
+                       "pode parecer circular, mas é exatamente como os manuais apresentam a hipótese. O risco é "
+                       "procurar pegadinha onde não há."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A monotonicidade das preferências implica curvas de indiferença positivamente inclinadas.”</i> → "
+            "ERRADO (inversão: negativamente inclinadas)",
+            "<i>“A não saciedade local implica monotonicidade.”</i> → ERRADO (inversão: a monotonicidade é que "
+            "implica a não saciedade local)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Monotonicidade: quanto mais, melhor; implica não saciedade local; toda mercadoria é "
+                            "um bem.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01378
+    {
+        "id": "ECO-E2-L01378-1", "fonte_ref": "E2-L01378", "destino": "04", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IBRAM/Analista/2009", "ano": 2009, "cacd": False,
+        "errei": True,
+        "comando": "Acerca da teoria do consumidor, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se determinado consumidor aloca mensalmente parte de seu salário entre dois bens, x e y, e se a "
+                      "utilidade marginal do bem x for superior àquela referente ao bem y, então, para elevar seu "
+                      "nível de utilidade, o consumidor deve reduzir o consumo de x e elevar o consumo de y."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se determinado consumidor aloca mensalmente parte de seu salário entre dois bens, x e y, e se "
+                       "a utilidade marginal do bem x for superior àquela referente ao bem y, então, para elevar seu "
+                       "nível de utilidade, o consumidor deve ") + vm("reduzir o consumo de x e elevar o consumo de y")
+                    + az(".")),
+        "poucas": ("O dinheiro deve ir para onde rende " + azb("mais utilidade") + ": se x rende mais (por real), "
+                   "realoca-se " + vd("para x") + ", não para y. O item inverte a direção."),
+        "destrinchando": [
+            "Princípio da " + azb("equimarginalidade") + ": no ótimo, UMg<sub>x</sub>/p<sub>x</sub> = "
+            "UMg<sub>y</sub>/p<sub>y</sub>. Se UMg<sub>x</sub>/p<sub>x</sub> > UMg<sub>y</sub>/p<sub>y</sub>, tirar "
+            "um real de y e gastá-lo em x aumenta a utilidade total.",
+            "Com a UMg decrescente, aumentar x reduz UMg<sub>x</sub> e reduzir y eleva UMg<sub>y</sub>: a "
+            "realocação continua até as utilidades marginais por real se igualarem.",
+            "Precisão: a comparação correta é por <b>real gasto</b>. O item fala só em UMg, sem preços; a "
+            "conclusão “aumentar x” é imediata com preços iguais. Com preços diferentes, a direção depende de "
+            "UMg/p — mas a recomendação do item (reduzir justamente o bem de maior UMg) nunca decorre só dessa "
+            "informação.",
+            "Exemplo: UMg<sub>x</sub> = 10, UMg<sub>y</sub> = 4, p<sub>x</sub> = p<sub>y</sub> = 2 → 5 > 2 utilidades "
+            "por real em x: compra-se mais x. Se p<sub>x</sub> = 5 e p<sub>y</sub> = 1 → 2 < 4: aí convém mais y.",
+            vm("Regra-âncora: realoque para o bem com maior utilidade marginal por real."),
+        ],
+        "dissecando": (cz("[inversão]") + " A premissa é correta e a conclusão aponta o sentido oposto da "
+                       "realocação. A banca aposta em quem lê “utilidade marginal maior” como “bem já saturado”. "
+                       "Nota: o item omite os preços — o ponto fino é que a regra correta compara UMg/p."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se UMg<sub>x</sub>/p<sub>x</sub> > UMg<sub>y</sub>/p<sub>y</sub>, o consumidor eleva sua utilidade "
+            "aumentando o consumo de x e reduzindo o de y.”</i> → CERTO",
+            "<i>“No equilíbrio do consumidor, as utilidades marginais dos dois bens são necessariamente "
+            "iguais.”</i> → ERRADO (iguais são as UMg por real; as UMg só se igualam com preços iguais)",
+        ])],
+        "reescrita": ("Se determinado consumidor aloca mensalmente parte de seu salário entre dois bens, x e y, e se a "
+                      "utilidade marginal do bem x for superior àquela referente ao bem y, então, para elevar seu "
+                      "nível de utilidade, o consumidor deve " + hl("elevar o consumo de x e reduzir o consumo de y")
+                      + hl(" (supondo preços iguais; em geral, compara-se a utilidade marginal por real)") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Se a UMg de x é maior, para elevar a utilidade deve-se aumentar o consumo de x, ainda "
+                            "que reduzindo o de y.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem trata a conclusão como “óbvia” sem mencionar preços; a "
+                    "regra correta compara UMg/p"],
     },
 ]

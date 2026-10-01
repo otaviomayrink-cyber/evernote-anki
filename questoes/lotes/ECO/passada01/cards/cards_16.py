@@ -175,7 +175,7 @@ CARDS = [
                              "comentários empilhados marcava CERTO, alegando gabarito oficial nesse sentido."),
         "qualidade_fonte": "com_erro",
         "figuras_fonte": [],
-        "alertas": ["gabarito_a_conferir: a indicação principal da fonte e quatro dos seis comentários dão "
+        "alertas": ["nota_redacao: gabarito a conferir — a indicação principal da fonte e quatro dos seis comentários dão "
                     "ERRADO; dois comentários dão CERTO, um deles alegando que o gabarito oficial considerou o "
                     "item correto — não confirmado por busca; mantido ERRADO, que é o defensável pelo conteúdo"],
     },
@@ -336,16 +336,17 @@ CARDS = [
             "<i>“Em mercados não competitivos, as firmas são tomadoras de preço.”</i> → ERRADO (inversão: "
             "são fixadoras)",
         ])],
-        "reescrita": ("O conceito de mercados " + hl("competitivos") + " sugere que o " + hl("preço de mercado, "
-                      "tomado como dado pelos agentes, é o sinal que orienta") + " a determinação da quantidade "
-                      "demandada e da quantidade ofertada de um bem."),
+        "reescrita": ("O conceito de mercados não competitivos sugere que " + hl("o preço de mercado não é o "
+                      "único atributo") + " para a determinação da quantidade demandada e da quantidade ofertada "
+                      "de um bem" + hl(", que depende também de poder de mercado, diferenciação e barreiras à "
+                      "entrada") + "."),
         "tipo_erro": ["TROCA_CONCEITO", "RESTRICAO"], "moduladores": ["único"], "dificuldade": 1,
         "comentario_fonte": ("Em mercados não competitivos há poder de mercado; os agentes são fixadores de preço "
                              "e outros atributos (diferenciação, barreiras, número de ofertantes) influenciam o "
                              "resultado."),
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": ["assertiva_adaptada: a fonte formulava o item como pergunta (“É correto afirmar que …?”); "
+        "alertas": ["texto_corrigido: a fonte formulava o item como pergunta (“É correto afirmar que …?”); "
                     "convertida em afirmação, com “quantidade oferta” corrigido para “quantidade ofertada”"],
     },
     # ------------------------------------------------------------------ E1-0231
@@ -824,7 +825,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "image (68).png, image (64).png, image (66).png", "tipo_fonte": "não preservada",
                            "lado": "verso", "acao": "cortadas; gráfico didático novo em ECO-E1-0194-1-V1"}],
-        "alertas": ["assertiva_adaptada: a fonte formulava o item como pergunta (“É correto afirmar que …?”); "
+        "alertas": ["texto_corrigido: a fonte formulava o item como pergunta (“É correto afirmar que …?”); "
                     "convertida em afirmação"],
     },
     # ------------------------------------------------------------------ E1-0230
@@ -1272,6 +1273,284 @@ CARDS = [
         "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": ("Altos investimentos em capital fixo dificultam a livre entrada e saída, violando "
                              "condição básica da concorrência perfeita."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0258
+    {
+        "id": "ECO-E1-0258-1", "fonte_ref": "E1-0258", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de concorrência perfeita, o equilíbrio geral se dá, dentre outras condições, na "
+                      "capacidade das firmas estabelecerem seus preços."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de concorrência perfeita, o equilíbrio geral se dá, dentre outras condições, ")
+                   + vm("na capacidade das firmas estabelecerem seus preços") + az("."),
+        "poucas": ("Em concorrência perfeita as firmas são " + azb("tomadoras de preço") + " (<i>price "
+                   "takers</i>): o preço sai da interação de oferta e demanda, e nenhuma firma isolada o "
+                   "fixa."),
+        "destrinchando": [
+            "Por que ninguém fixa preço: cada firma é pequena demais em relação ao mercado (" + vd("atomicidade")
+            + ") e vende um produto idêntico ao dos rivais (" + vd("homogeneidade") + "). Se cobrar acima do "
+            "preço de mercado, vende zero; abaixo, perde receita sem ganhar nada.",
+            "Para a firma, a demanda é " + azb("horizontal") + " ao preço de mercado (perfeitamente elástica). "
+            "A única variável de escolha é a quantidade, fixada em P = CMg.",
+            "No " + azb("equilíbrio geral") + " competitivo (" + oc("Walras") + "; formalizado por "
+            + oc("Arrow e Debreu") + "), os preços são os que zeram o excesso de demanda em todos os mercados "
+            "ao mesmo tempo, com todos os agentes tomando-os como dados. A figura do “leiloeiro walrasiano” "
+            "expressa isso: os preços vêm de fora das decisões individuais.",
+            "Fixar preço é atributo de quem tem " + azb("poder de mercado") + " — monopólio, oligopólio, "
+            "concorrência monopolística.",
+            vm("Regra-âncora: concorrência perfeita = tomador de preço; formador de preço = poder de mercado."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca “tomar” por “estabelecer” preços — exatamente o oposto da "
+                       "hipótese. O “dentre outras condições” dá ar de lista técnica e disfarça a inversão."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de concorrência perfeita, as firmas tomam os preços como dados e escolhem apenas a "
+            "quantidade.”</i> → CERTO",
+            "<i>“Na concorrência monopolística, as firmas são tomadoras de preço.”</i> → ERRADO (têm algum "
+            "poder de preço pela diferenciação)",
+        ])],
+        "reescrita": ("No modelo de concorrência perfeita, o equilíbrio geral se dá, dentre outras condições, "
+                      + hl("com firmas tomadoras de preço, incapazes de estabelecer seus preços") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["dentre outras condições"], "dificuldade": 1,
+        "comentario_fonte": "Na concorrência perfeita, as firmas são tomadoras de preço, sem poder de mercado.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0259
+    {
+        "id": "ECO-E1-0259-1", "fonte_ref": "E1-0259", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("Na concorrência perfeita, o equilíbrio geral se dá, dentre outras condições, na necessidade "
+                      "da observância de equilíbrio no mercado de trabalho, quando demanda e oferta de trabalho "
+                      "se igualam."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na concorrência perfeita, o <u>equilíbrio geral</u> se dá, dentre outras condições, na "
+                      "necessidade da observância de equilíbrio no mercado de trabalho, quando demanda e oferta "
+                      "de trabalho se igualam."),
+        "poucas": (azb("Equilíbrio geral") + " = todos os mercados equilibrados ao mesmo tempo, inclusive os "
+                   "de fatores. O de trabalho é um deles: oferta = demanda de trabalho ao salário real de "
+                   "equilíbrio."),
+        "destrinchando": [
+            azb("Equilíbrio parcial") + " (" + oc("Marshall") + ") olha um mercado de cada vez, com o resto "
+            "constante. " + azb("Equilíbrio geral") + " (" + oc("Walras") + ", <i>Elementos de Economia Política "
+            "Pura</i>, 1874) exige que bens, serviços e fatores — trabalho, capital, terra — estejam "
+            "simultaneamente em equilíbrio, porque os mercados são interdependentes.",
+            "No mercado de trabalho competitivo, a firma contrata até " + vd("w = P × PMg<sub>L</sub>") + " "
+            "(valor do produto marginal); as famílias ofertam trabalho comparando salário e lazer. O "
+            "equilíbrio iguala as duas.",
+            azb("Lei de Walras") + ": se n − 1 mercados estão em equilíbrio, o n-ésimo também está — a soma "
+            "dos excessos de demanda, valorados a preços, é zero.",
+            "Por que importa: o " + azb("primeiro teorema do bem-estar") + " garante que o equilíbrio geral "
+            "competitivo é " + vd("eficiente no sentido de Pareto") + " — o que exige todos os mercados, "
+            "inclusive o de trabalho, funcionando em concorrência e equilibrados.",
+            "Contraponto: para " + oc("Keynes") + ", a economia pode ficar em equilíbrio no mercado de bens com "
+            "desemprego involuntário — o mercado de trabalho não se equilibra sozinho. A afirmação vale "
+            "<b>dentro</b> do modelo competitivo.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O item amplia o foco para além do mercado do bem; quem "
+                       "pensa só em equilíbrio parcial estranha a menção ao trabalho e marca ERRADO. A redação "
+                       "truncada (“na necessidade da observância”) é ruído, não erro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O equilíbrio geral competitivo dispensa o equilíbrio nos mercados de fatores de "
+            "produção.”</i> → ERRADO (todos os mercados se equilibram simultaneamente)",
+            "<i>“Segundo a lei de Walras, se todos os mercados menos um estão em equilíbrio, o restante também "
+            "está.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["dentre outras condições"], "dificuldade": 1,
+        "comentario_fonte": ("O equilíbrio geral pressupõe que todos os mercados, inclusive o de trabalho, estejam "
+                             "em equilíbrio."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0261
+    {
+        "id": "ECO-E1-0261-1", "fonte_ref": "E1-0261", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um mercado de concorrência perfeita, a maximização do lucro de uma dada empresa ocorre "
+                      "sob a mesma condição de igualdade entre o custo marginal e o custo médio."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um mercado de concorrência perfeita, a maximização do lucro de uma dada empresa ocorre "
+                      "sob a mesma condição de igualdade entre o custo marginal e ") + vm("o custo médio")
+                   + az("."),
+        "poucas": ("Lucro máximo: " + vd("RMg = CMg") + " (na concorrência perfeita, P = CMg). CMg = CMe marca "
+                   "o " + azb("mínimo do custo médio") + " — condição de eficiência produtiva, não de lucro "
+                   "máximo."),
+        "destrinchando": [
+            "Dois cruzamentos diferentes no mesmo gráfico: P = CMg dá a quantidade que maximiza o lucro; "
+            "CMg = CMe dá a quantidade que minimiza o custo por unidade. Coincidem só se o preço for exatamente "
+            "o CMe mínimo.",
+            "Curto prazo: com " + vd("P > CMe mínimo") + ", a firma produz <b>além</b> do mínimo do CMe (onde "
+            "CMg já supera o CMe) e tem lucro econômico; com P menor, produz aquém dele.",
+            "Longo prazo competitivo: a livre entrada empurra o preço até " + vd("P = CMg = CMe mínimo") + ". "
+            "Aí as duas condições coincidem — por isso o item seduz. Mas a coincidência é <b>resultado</b> do "
+            "ajuste de mercado, não a regra de decisão da firma.",
+            "Por que a firma não mira o CMe mínimo: produzir menos custos médios não é o objetivo; o objetivo é "
+            "o lucro total. Se o preço está alto, vale aceitar um custo médio maior para vender mais unidades "
+            "lucrativas.",
+            vm("Regra-âncora: CMg = CMe → custo médio mínimo; RMg = CMg → lucro máximo."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca a condição de lucro máximo (RMg = CMg) pela de "
+                       "custo médio mínimo (CMg = CMe), aproveitando que as duas se cruzam no equilíbrio de longo "
+                       "prazo. O “sob a mesma condição” é o gancho: “mesma” que qual? — nenhuma regra de lucro "
+                       "envolve o CMe."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No equilíbrio de longo prazo da concorrência perfeita, o preço iguala o custo marginal e o "
+            "custo médio mínimo.”</i> → CERTO",
+            "<i>“A firma competitiva sempre produz no ponto de custo médio mínimo.”</i> → ERRADO (só no longo "
+            "prazo; no curto, produz onde P = CMg)",
+        ])],
+        "reescrita": ("Em um mercado de concorrência perfeita, a maximização do lucro de uma dada empresa ocorre "
+                      "sob a condição de igualdade entre o custo marginal e " + hl("a receita marginal (o "
+                      "preço)") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Lucro máximo em RMg = CMg; CMg = CMe indica o mínimo do custo médio.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0262
+    {
+        "id": "ECO-E1-0262-1", "fonte_ref": "E1-0262", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("Em concorrência perfeita, a definição do quanto produzir de cada bem será determinada pela "
+                      "atuação dos consumidores e dos produtores no mercado com os ajustamentos dados pelo "
+                      "sistema de preços."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em concorrência perfeita, a definição do quanto produzir de cada bem será determinada pela "
+                      "atuação dos consumidores e dos produtores no mercado com os ajustamentos dados pelo "
+                      "<u>sistema de preços</u>."),
+        "poucas": ("Na economia de mercado competitiva, o " + azb("sistema de preços") + " coordena "
+                   "descentralizadamente o que e quanto produzir: preços sobem onde há escassez e caem onde há "
+                   "excesso, e produtores e consumidores reagem."),
+        "destrinchando": [
+            "Problemas econômicos fundamentais: " + vd("o que e quanto produzir, como produzir e para quem") + ". "
+            "Em economia de mercado, quem os resolve é o mecanismo de preços; em economia planificada, o órgão "
+            "central de planejamento.",
+            "Como os preços ajustam: excesso de demanda → preço sobe → consumidores compram menos e produtores "
+            "ofertam mais; excesso de oferta → o contrário. Os preços carregam " + azb("informação") + " "
+            "(escassez relativa) e " + azb("incentivo") + " (lucro).",
+            oc("Adam Smith") + " (<i>A Riqueza das Nações</i>, 1776) chamou a coordenação descentralizada de "
+            + azb("mão invisível") + "; " + oc("Hayek") + " (“O uso do conhecimento na sociedade”, 1945) "
+            "enfatizou o preço como sinal que resume informação dispersa, que nenhum planejador teria.",
+            "Limites: a alocação é eficiente só sem " + azb("falhas de mercado") + " (externalidades, bens "
+            "públicos, informação assimétrica, poder de mercado) — terreno da intervenção do Estado.",
+        ],
+        "dissecando": (cz("[literalidade · paráfrase fiel]") + " Item de fundamentos, sem armadilha técnica. "
+                       "A versão ERRADA atribuiria a decisão a um agente único (“será determinada pelo governo” "
+                       "ou “pelas firmas, que fixam os preços”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, a quantidade produzida de cada bem é fixada pelas firmas, que "
+            "estabelecem os preços.”</i> → ERRADO (firmas são tomadoras de preço)",
+            "<i>“Os preços sinalizam a escassez relativa dos bens e orientam a alocação de recursos.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O quanto produzir é definido pela interação entre oferta e demanda, ajustada pelos preços.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0264
+    {
+        "id": "ECO-E1-0264-1", "fonte_ref": "E1-0264", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": "Firmas em competição perfeita não têm economias de escala como um fator dominante.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Firmas em competição perfeita não têm economias de escala como um fator "
+                      "<u>dominante</u>."),
+        "poucas": ("Se as " + azb("economias de escala") + " dominassem, a firma maior teria custo menor e "
+                   "expulsaria as demais — a " + azb("atomicidade") + " desapareceria. Concorrência perfeita "
+                   "pressupõe escala mínima eficiente pequena em relação ao mercado."),
+        "destrinchando": [
+            "Economias de escala = custo médio de longo prazo decrescente com o volume. Quando persistem até "
+            "volumes grandes em relação à demanda, a estrutura tende ao " + azb("oligopólio") + " ou ao "
+            + azb("monopólio natural") + " (uma só firma produz mais barato que várias).",
+            "Para caber muitas firmas pequenas, a " + vd("escala mínima eficiente") + " (fundo do CMe de "
+            "longo prazo) deve ser pequena diante do mercado. As firmas até podem ter economias de escala em "
+            "níveis baixos de produção, mas elas se esgotam cedo — não são “dominantes”.",
+            "Daí o CMe de longo prazo em U (ou com fundo plano longo) da firma competitiva: economias de escala "
+            "no início, depois rendimentos constantes ou deseconomias.",
+            "Economias <b>externas</b> são outra história: dependem do tamanho da indústria, não da firma, e "
+            "são compatíveis com concorrência perfeita (" + oc("Marshall") + ").",
+        ],
+        "dissecando": (cz("[modulador relativo · detalhe]") + " O “como um fator dominante” é o que torna o "
+                       "item verdadeiro: não se nega que existam economias de escala, só que prevaleçam. A "
+                       "versão ERRADA tiraria o modulador (“não têm economias de escala”) ou diria que elas "
+                       "são compatíveis com atomicidade em qualquer nível."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Economias internas de escala substanciais, relativamente ao tamanho do mercado, levam a "
+            "estruturas concentradas.”</i> → CERTO",
+            "<i>“O monopólio natural surge quando há deseconomias de escala em toda a faixa relevante de "
+            "produção.”</i> → ERRADO (inversão: surge com economias de escala)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "DETALHE"], "moduladores": ["dominante"], "dificuldade": 1,
+        "comentario_fonte": ("Em concorrência perfeita as firmas operam geralmente em escala eficiente mínima; "
+                             "economias de escala não são o principal fator competitivo."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0265
+    {
+        "id": "ECO-E1-0265-1", "fonte_ref": "E1-0265", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": "Firmas em um mercado competitivo não podem influenciar a quantidade do bem que é produzida.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Firmas em um mercado competitivo não podem influenciar ") + vm("a quantidade do bem que é "
+                      "produzida") + az("."),
+        "poucas": ("A firma competitiva não influencia o " + azb("preço") + ", mas escolhe livremente a "
+                   + azb("quantidade") + " que produz — aquela em que " + vd("P = CMg") + "."),
+        "destrinchando": [
+            "Divisão de papéis na " + azb("concorrência perfeita") + ": o mercado (oferta × demanda) fixa o "
+            "preço; cada firma, tomando-o como dado, decide quanto produzir. Quantidade é a variável de "
+            "decisão; preço é o parâmetro.",
+            "A decisão segue a curva de custo marginal: preço maior → a firma desliza para cima no CMg e "
+            "produz mais. Por isso a oferta de curto prazo da firma é o próprio CMg acima do mínimo do CVMe, e "
+            "a oferta da indústria é a soma horizontal dessas curvas.",
+            "O que a firma não consegue: mexer no preço pelo volume que vende. Como é pequena, dobrar ou zerar "
+            "sua produção não altera a oferta total de modo perceptível — e é <b>nesse</b> sentido estrito "
+            "que ela não “influencia” o mercado.",
+            "No monopólio é diferente: a firma escolhe a quantidade <b>sabendo</b> que ela determina o preço "
+            "(ao longo da demanda). Daí RMg < P.",
+            vm("Regra-âncora: tomador de preço, não de quantidade."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca preço por quantidade. A frase lembra a definição de "
+                       "tomador de preço e por isso soa familiar; quem lê rápido marca CERTO. Leitura "
+                       "rigorosa: a firma controla a quantidade que <b>ela</b> produz, e é isso que o item "
+                       "nega."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Firmas em um mercado competitivo não podem influenciar o preço de mercado do bem.”</i> → "
+            "CERTO",
+            "<i>“A firma competitiva produz a quantidade em que o preço iguala o custo médio.”</i> → ERRADO "
+            "(regra é P = CMg)",
+        ])],
+        "reescrita": ("Firmas em um mercado competitivo não podem influenciar " + hl("o preço do bem, mas "
+                      "escolhem a quantidade que produzem") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Cada firma decide quanto produzir, onde preço = custo marginal; o que ela não pode "
+                             "influenciar é o preço."),
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
         "alertas": [],

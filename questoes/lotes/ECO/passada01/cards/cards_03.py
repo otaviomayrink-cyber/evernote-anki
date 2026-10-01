@@ -355,7 +355,7 @@ CARDS = [
                             "seu custo marginal de produção (P = CMg), tornando inviável tal estratégia.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": ["errei: na fonte, a marca ❌ está só no item 2 da questão",
+        "alertas": ["nota_redacao: errei — na fonte, a marca ❌ está só no item 2 da questão",
                     "banca_provavel: a fonte só traz o ano (2020); possivelmente CEBRASPE, não confirmado"],
     },
     # ------------------------------------------------------------------ E1-0234 (3)
@@ -402,7 +402,7 @@ CARDS = [
                             "sobe e produtores respondem com maior produção.",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["gabarito: classificação sem gabarito; adotado o da fonte (Correto)",
+        "alertas": ["nota_redacao: classificação sem gabarito; adotado o da fonte (Correto)",
                     "banca_provavel: a fonte só traz o ano (2020); possivelmente CEBRASPE, não confirmado"],
     },
     # ------------------------------------------------------------------ E1-0234 (4)
@@ -459,7 +459,7 @@ CARDS = [
                             "menor quantidade demandada.",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["gabarito: classificação sem gabarito; adotado o da fonte (errado)",
+        "alertas": ["nota_redacao: classificação sem gabarito; adotado o da fonte (errado)",
                     "banca_provavel: a fonte só traz o ano (2020); possivelmente CEBRASPE, não confirmado"],
     },
     # ------------------------------------------------------------------ E2-L00336

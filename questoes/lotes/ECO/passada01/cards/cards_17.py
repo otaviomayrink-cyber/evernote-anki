@@ -391,7 +391,7 @@ CARDS = [
                             "CTM no mínimo do CTM, lucro zero.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": ["texto_ajustado: retirados os parênteses de OCR em torno das siglas e o “E” solto no fim da "
+        "alertas": ["texto_corrigido: retirados os parênteses de OCR em torno das siglas e o “E” solto no fim da "
                     "frente (gabarito vazado)"],
     },
     # ------------------------------------------------------------------ E2-L00344
@@ -598,8 +598,9 @@ CARDS = [
         "assertiva": ("Em um mercado de concorrência perfeita, como existem livre entrada e livre saída de "
                       "empresas no mercado, o lucro de curto prazo de uma empresa nunca é negativo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Em um mercado de concorrência perfeita, como existem livre entrada e livre saída de "
-                       "empresas no mercado, o lucro de curto prazo de uma empresa ") + vm("nunca é negativo")
+        "anotada": (az("Em um mercado de concorrência perfeita, ") + vm("como") + az(" existem livre entrada e "
+                       "livre saída de empresas no mercado, o lucro de curto prazo de uma empresa ")
+                    + vm("nunca é negativo")
                     + az(".")),
         "poucas": ("Livre entrada e saída é ajuste de " + azb("longo prazo") + ". No curto prazo a firma pode "
                    "ter " + vd("prejuízo") + " — e continua produzindo enquanto P ≥ CVMe."),
@@ -633,7 +634,7 @@ CARDS = [
                             "P cobre o CVMe; no longo prazo lucro econômico zero.",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["item_repetido: mesmo enunciado de ECO-E2-L01189-1 (Nabuco, Pré-TPS/2023); mantidos os dois "
+        "alertas": ["quase_duplicata: mesmo enunciado de ECO-E2-L01189-1 (Nabuco, Pré-TPS/2023); mantidos os dois "
                     "por virem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L00631
@@ -676,7 +677,7 @@ CARDS = [
                             "(horizontal) ao preço de mercado; firma price taker.",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["item_repetido: mesmo enunciado de ECO-E2-L01190-1 (Nabuco, Pré-TPS/2023); mantidos os dois "
+        "alertas": ["quase_duplicata: mesmo enunciado de ECO-E2-L01190-1 (Nabuco, Pré-TPS/2023); mantidos os dois "
                     "por virem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L00632
@@ -722,7 +723,7 @@ CARDS = [
         "figuras_fonte": [{"ref": "IMAGEM 134 (linha duplicada E2-L00866)", "tipo_fonte": "TEXTO",
                            "lado": "verso", "acao": "absorvida no 📖"}],
         "alertas": ["duplicata_fundida: comentário de E2-L00866 fundido neste card",
-                    "item_repetido: mesmo enunciado de ECO-E2-L01191-1 (Nabuco, Pré-TPS/2023); mantidos os dois "
+                    "quase_duplicata: mesmo enunciado de ECO-E2-L01191-1 (Nabuco, Pré-TPS/2023); mantidos os dois "
                     "por virem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L00675
@@ -964,8 +965,9 @@ CARDS = [
         "assertiva": ("Em um mercado de concorrência perfeita, como existem livre entrada e livre saída de "
                       "empresas no mercado, o lucro de curto prazo de uma empresa nunca é negativo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Em um mercado de concorrência perfeita, como existem livre entrada e livre saída de "
-                       "empresas no mercado, o lucro de curto prazo de uma empresa ") + vm("nunca é negativo")
+        "anotada": (az("Em um mercado de concorrência perfeita, ") + vm("como") + az(" existem livre entrada e "
+                       "livre saída de empresas no mercado, o lucro de curto prazo de uma empresa ")
+                    + vm("nunca é negativo")
                     + az(".")),
         "poucas": ("No curto prazo há " + azb("custo fixo irrecuperável") + ": com CVMe ≤ P < CTMe a firma "
                    "produz " + vd("com prejuízo") + ", porque parar custaria mais (todo o custo fixo)."),
@@ -1003,7 +1005,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 199", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "redesenhada (ECO-E2-L01189-1-V1, com números próprios)"}],
-        "alertas": ["item_repetido: mesmo enunciado de ECO-E2-L00630-1 (Nabuco, 2026); mantidos os dois por "
+        "alertas": ["quase_duplicata: mesmo enunciado de ECO-E2-L00630-1 (Nabuco, 2026); mantidos os dois por "
                     "virem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L01190
@@ -1050,7 +1052,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 200", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (exemplo absorvido no 📖; desenho equivalente em ECO-E2-L00848-1-V1)"}],
-        "alertas": ["item_repetido: mesmo enunciado de ECO-E2-L00631-1 (Nabuco, 2026); mantidos os dois por "
+        "alertas": ["quase_duplicata: mesmo enunciado de ECO-E2-L00631-1 (Nabuco, 2026); mantidos os dois por "
                     "virem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L01191
@@ -1092,9 +1094,9 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 201", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida no 📖"}],
-        "alertas": ["gabarito_inferido: a fonte não traz C/E explícito; CERTO inferido do texto da imagem do "
+        "alertas": ["nota_redacao: gabarito inferido — a fonte não traz C/E explícito; CERTO inferido do texto da imagem do "
                     "verso (P = RMg = RMe) e confirmado pelo conteúdo",
-                    "item_repetido: mesmo enunciado de ECO-E2-L00632-1 (Nabuco, 2026); mantidos os dois por "
+                    "quase_duplicata: mesmo enunciado de ECO-E2-L00632-1 (Nabuco, 2026); mantidos os dois por "
                     "virem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L01395
@@ -1143,7 +1145,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 290-292", "tipo_fonte": "GRÁFICO/TEXTO", "lado": "verso",
                            "acao": "cortadas (quadrinhos; texto dos balões absorvido no 📖)"}],
-        "alertas": ["item_adaptado: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
+        "alertas": ["nota_redacao: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
     },
     # ------------------------------------------------------------------ E2-L01396
     {
@@ -1183,7 +1185,7 @@ CARDS = [
         "comentario_fonte": "A firma não deve operar caso o preço seja inferior ao custo variável médio.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": ["item_adaptado: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
+        "alertas": ["nota_redacao: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
     },
     # ------------------------------------------------------------------ E2-L01397
     {
@@ -1230,7 +1232,7 @@ CARDS = [
                             "(curto prazo) e com o CTMe (longo prazo).",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["item_adaptado: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
+        "alertas": ["nota_redacao: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
     },
     # ------------------------------------------------------------------ E2-L01399
     {

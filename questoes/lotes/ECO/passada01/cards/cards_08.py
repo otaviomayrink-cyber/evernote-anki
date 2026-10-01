@@ -440,4 +440,217 @@ CARDS = [
         "alertas": ["nota_redacao: errei — marca ❌ da fonte preservada (ver ECO-E1-0235-1)",
                     "banca_provavel: CEBRASPE/CACD 2013 (a fonte só traz “C/E (2013)”; não confirmada)"],
     },
+    # ------------------------------------------------------------------ E1-0436
+    {
+        "id": "ECO-E1-0436-1", "fonte_ref": "E1-0436", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": ("No estudo das estruturas de mercado, a concorrência perfeita e o monopólio representam "
+                    "extremos analíticos com implicações distintas sobre o bem-estar social e a eficiência "
+                    "alocativa. Com base nesse contexto, julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("A introdução de um imposto específico em um mercado competitivo afeta exclusivamente os "
+                      "consumidores, visto que as firmas tomam o preço como dado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A introdução de um imposto específico em um mercado competitivo afeta ")
+                    + vm("exclusivamente os consumidores") + az(", visto que ")
+                    + vm("as firmas tomam o preço como dado") + az(".")),
+        "poucas": ("O ônus se reparte conforme as " + azb("elasticidades") + " da oferta e da demanda "
+                   + azb("de mercado") + ". Ser tomadora de preço é atributo da firma individual e não garante "
+                   "repasse integral."),
+        "destrinchando": [
+            "Imposto específico t: a oferta de mercado sobe t; o comprador paga pc > p₀ e o vendedor recebe "
+            "pv = pc − t < p₀. Os dois lados perdem excedente; parte vira receita, parte é " + azb("peso morto")
+            + ".",
+            "Quem paga mais é o lado menos elástico: parcela do consumidor = " + vd("εˢ / (εˢ + |εᴰ|)")
+            + ". Demanda inelástica (gasolina no curto prazo) → consumidor paga mais; oferta inelástica (safra "
+            "colhida) → produtor paga mais.",
+            "A confusão que o item explora: a firma competitiva enfrenta demanda <b>horizontal</b> ao preço de "
+            "mercado, mas a incidência se decide no <b>mercado</b>, onde a demanda é negativamente inclinada. "
+            "O imposto muda o próprio preço de mercado, que cada firma depois toma como dado.",
+            "Se o raciocínio “firma tomadora de preço” valesse para o mercado, levaria ao contrário do que o "
+            "item diz: com demanda de mercado horizontal, o <b>produtor</b> pagaria tudo.",
+            "O repasse integral ao consumidor só ocorre com demanda perfeitamente inelástica ou oferta "
+            "perfeitamente elástica (indústria de custos constantes no longo prazo).",
+        ],
+        "dissecando": (cz("[modulador absoluto · nexo indevido]") + " “Exclusivamente” é o erro principal; a "
+                       "justificativa (“visto que as firmas tomam o preço como dado”) é um fato verdadeiro sobre "
+                       "a firma usado como causa de algo que não decorre dele. Pista: o item fala do mercado e "
+                       "justifica com a firma."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em mercado competitivo de custos constantes, no longo prazo, um imposto específico recai "
+            "integralmente sobre os consumidores.”</i> → CERTO",
+            "<i>“Como a firma competitiva enfrenta demanda horizontal, o imposto específico recai integralmente "
+            "sobre os produtores do mercado.”</i> → ERRADO (confunde demanda da firma com demanda de mercado)",
+        ])],
+        "reescrita": ("A introdução de um imposto específico em um mercado competitivo afeta " + hl("tanto os "
+                      "consumidores quanto os produtores") + ", " + hl("na proporção das elasticidades-preço da "
+                      "demanda e da oferta de mercado") + "."),
+        "tipo_erro": ["GENERALIZACAO", "NEXO_INDEVIDO"], "moduladores": ["exclusivamente"], "dificuldade": 2,
+        "comentario_fonte": "Incidência depende das elasticidades relativas; ônus dividido; o erro está em "
+                            "“exclusivamente”; demanda horizontal é da firma, não do mercado.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E1-0538 (mesmo item e mesmo comentário) fundida neste card"],
+    },
+    # ------------------------------------------------------------------ E1-0957
+    {
+        "id": "ECO-E1-0957-1", "fonte_ref": "E1-0957", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo ao excedente do consumidor.",
+        "rotulo_item": "Item",
+        "assertiva": ("O aumento no preço de um bem normal provoca um aumento no excedente dos consumidores, que se "
+                      "refere a toda a área abaixo da curva da demanda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O aumento no preço de um bem normal provoca ") + vm("um aumento") + az(" no excedente "
+                    "dos consumidores, que se refere a ") + vm("toda a área abaixo da curva da demanda")
+                    + az(".")),
+        "poucas": ("Preço maior " + vd("reduz") + " o " + azb("excedente do consumidor") + ", que é só a área "
+                   "<b>entre a demanda e a linha do preço</b> — não toda a área sob a demanda."),
+        "destrinchando": [
+            azb("Excedente do consumidor") + " = soma, sobre as unidades compradas, de (disposição a pagar − "
+            "preço pago). A disposição a pagar está na altura da curva de demanda; o preço pago, na linha "
+            "horizontal p. Logo, EC = área <b>abaixo da demanda e acima do preço</b>, de 0 até q.",
+            "A área total sob a demanda até q é o " + azb("benefício bruto") + " (valor total atribuído às "
+            "unidades); subtraindo o gasto p × q, sobra o EC.",
+            "Quando p sobe de p₁ para p₂, o consumidor perde: (i) o retângulo (p₂ − p₁) × q₂ — paga mais pelas "
+            "unidades que continua comprando; (ii) o triângulo entre q₂ e q₁ — o excedente das unidades que "
+            "deixou de comprar.",
+            "O “bem normal” é distrator: normal/inferior é classificação pela <b>renda</b>, não mexe no efeito "
+            "de uma alta de preço sobre o EC.",
+            vm("Regra-âncora: EC fica acima do preço e abaixo da demanda; preço sobe → EC cai."),
+        ],
+        "grafico_verso": "ECO-E1-0957-1-V1",
+        "dissecando": (cz("[inversão · meia-verdade]") + " Duas falhas: o sentido do efeito (aumento × "
+                       "redução) e a definição, que esquece o “acima do preço”. A segunda é a mais traiçoeira, "
+                       "porque “área abaixo da demanda” é a metade verdadeira da definição."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O aumento no preço de um bem reduz o excedente do consumidor, que corresponde à área entre a "
+            "curva de demanda e a linha do preço.”</i> → CERTO",
+            "<i>“Uma queda de preço aumenta o excedente do consumidor apenas pelas novas unidades "
+            "compradas.”</i> → ERRADO (restrição indevida: também ganha nas unidades que já comprava)",
+        ])],
+        "reescrita": ("O aumento no preço de um bem normal provoca " + hl("uma redução") + " no excedente dos "
+                      "consumidores, que se refere à área abaixo da curva da demanda " + hl("e acima da linha do "
+                      "preço") + "."),
+        "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": ["toda"], "dificuldade": 1,
+        "comentario_fonte": "EC é a área abaixo da demanda; com aumento de preço o bem-estar do consumidor "
+                            "diminui; as áreas novas seriam pesos mortos.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "image (315).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada; redesenho didático em "
+                                   "ECO-E1-0957-1-V1)"},
+                          {"ref": "image (313).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada; conteúdo absorvido no 📖)"}],
+        "alertas": ["qualidade_fonte: o comentário de origem confirma o EC como “a área abaixo da curva de "
+                    "demanda” (omite o “acima do preço”) e chama de peso morto a perda de EC numa simples alta de "
+                    "preço — corrigido"],
+    },
+    # ------------------------------------------------------------------ E2-L00032
+    {
+        "id": "ECO-E2-L00032-1", "fonte_ref": "E2-L00032", "destino": "03", "subtema": H2["piso"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("As políticas de preço mínimo estabelecem um valor superior ao preço de equilíbrio de "
+                      "mercado com o objetivo de proteger os ofertantes, o que resulta em um aumento do excedente "
+                      "do produtor."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As políticas de preço mínimo estabelecem um valor <u>superior ao preço de equilíbrio</u> "
+                      "de mercado com o objetivo de proteger os ofertantes, o que resulta em um <u>aumento do "
+                      "excedente do produtor</u>."),
+        "poucas": ("Descreve o " + azb("preço mínimo vinculante") + " do manual: piso acima do equilíbrio, para "
+                   "proteger o produtor, que ganha excedente às custas do consumidor — com " + azb("peso morto")
+                   + " e excesso de oferta."),
+        "destrinchando": [
+            "Um piso abaixo do equilíbrio é " + azb("não vinculante") + ": o mercado já paga mais que ele, nada "
+            "muda. Por isso, quando se fala da <b>política</b> e de seus efeitos, subentende-se o piso efetivo, "
+            "acima de p*.",
+            "Efeitos do piso acima de p*: qᴰ cai, qˢ sobe, surge " + azb("excesso de oferta") + " (qˢ − qᴰ). "
+            "O consumidor perde A + B (paga mais e compra menos); o produtor ganha A (preço maior nas unidades "
+            "vendidas) e perde C (vende menos). Peso morto = " + vd("B + C") + ".",
+            "Em geral A > C e o excedente do produtor aumenta; mas, sem compra do excedente pelo governo e com "
+            "demanda muito elástica, A pode ser pequeno. E se o produtor fabricar qˢ sem conseguir vender tudo, "
+            "o custo das sobras corrói o ganho. O item segue o caso-padrão de livro-texto.",
+            rx("No Brasil") + ", a " + azb("Política de Garantia de Preços Mínimos (PGPM)") + ", executada pela "
+            + rx("Conab") + ", sustenta o piso agrícola com compra direta de estoques (AGF) e prêmios de "
+            "escoamento. Outro piso clássico é o salário mínimo, no mercado de trabalho.",
+        ],
+        "grafico_verso": "ECO-E2-L00032-1-V1",
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " A objeção “nem todo preço mínimo fica acima do "
+                       "equilíbrio” é logicamente correta, mas o examinador descreve a política na sua forma "
+                       "efetiva — a única que tem efeito a analisar. 🔥 Em C/E, “política de preço mínimo” = piso "
+                       "vinculante, salvo menção expressa em contrário."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política de preço mínimo acima do equilíbrio eleva o excedente total do mercado.”</i> → "
+            "ERRADO (gera peso morto B + C)",
+            "<i>“Um preço mínimo fixado abaixo do preço de equilíbrio não altera a quantidade "
+            "transacionada.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Piso acima do equilíbrio protege o ofertante; reduz EC e gera peso morto; discussão "
+                            "sobre piso vinculante × não vinculante; em prova, assume-se o vinculante; PGPM.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 003", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (mecânica da PGPM no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00033
+    {
+        "id": "ECO-E2-L00033-1", "fonte_ref": "E2-L00033", "destino": "03", "subtema": H2["piso"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando uma política de preço mínimo é implementada, o excedente do consumidor é ampliado, o "
+                      "que resulta em um aumento do bem-estar do consumidor. Isto ocorre porque a quantidade "
+                      "demandada expande devido ao preço inferior ao de equilíbrio, incentivando uma maior "
+                      "produção e consumo dentro do mercado regulado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Quando uma política de preço mínimo é implementada, o excedente do consumidor é ")
+                    + vm("ampliado") + az(", o que resulta em ") + vm("um aumento") + az(" do bem-estar do "
+                    "consumidor. Isto ocorre porque a quantidade demandada ") + vm("expande") + az(" devido ao "
+                    "preço ") + vm("inferior") + az(" ao de equilíbrio, incentivando uma maior produção")
+                    + vm(" e consumo") + az(" dentro do mercado regulado.")),
+        "poucas": ("O item descreve um " + azb("preço máximo") + ". O " + azb("preço mínimo") + " fica "
+                   "<b>acima</b> do equilíbrio: a quantidade demandada cai e o excedente do consumidor "
+                   + vd("diminui") + "."),
+        "destrinchando": [
+            "Piso vinculante (p<sub>mín</sub> > p*): o consumidor paga mais e compra menos — perde o retângulo "
+            "transferido ao produtor e o triângulo das compras que deixou de fazer.",
+            "A produção, essa sim, é estimulada: ao preço maior, qˢ > q*. Daí o " + azb("excesso de oferta")
+            + " (qˢ − qᴰ), que o governo precisa comprar, estocar, exportar ou deixar encalhar.",
+            "Quem ganha: o produtor (em regra, excedente maior). Quem perde: o consumidor. O mercado como um "
+            "todo perde o " + azb("peso morto") + ", e o contribuinte ainda paga a compra de estoques, se "
+            "houver.",
+            "Espelho: o " + azb("preço máximo") + " (teto abaixo de p*) é que reduz o preço ao consumidor — mas "
+            "também reduz a quantidade transacionada (os produtores ofertam menos), gerando escassez, não "
+            "expansão do consumo.",
+            vm("Regra-âncora: piso alto → produto sobrando e consumidor perdendo; teto baixo → fila e produtor "
+               "perdendo."),
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " O item cola no preço mínimo os efeitos "
+                       "imaginados de um preço baixo (“preço inferior ao de equilíbrio”). A frase é internamente "
+                       "coerente, o que engana; basta checar o ponto de partida: piso = preço <b>acima</b> de "
+                       "p*."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política de preço mínimo reduz o excedente do consumidor e estimula a produção, gerando "
+            "excesso de oferta.”</i> → CERTO",
+            "<i>“O preço máximo abaixo do equilíbrio amplia o consumo, pois o bem fica mais barato.”</i> → "
+            "ERRADO (a quantidade transacionada é limitada pela oferta, que cai)",
+        ])],
+        "reescrita": ("Quando uma política de preço mínimo é implementada, o excedente do consumidor é "
+                      + hl("reduzido") + ", o que resulta em " + hl("uma redução") + " do bem-estar do "
+                      "consumidor. Isto ocorre porque a quantidade demandada " + hl("se contrai") + " devido ao "
+                      "preço " + hl("superior") + " ao de equilíbrio, incentivando uma maior produção"
+                      + hl(", mas menor consumo,") + " dentro do mercado regulado."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Preço mínimo reduz o EC: preço acima do equilíbrio reduz a quantidade demandada; o "
+                            "EP é que se expande; há peso morto.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

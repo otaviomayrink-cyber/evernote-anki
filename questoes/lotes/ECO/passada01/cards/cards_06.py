@@ -618,4 +618,394 @@ CARDS = [
                            "acao": "redesenhada (ECO-E3-L00452-1-V1)"}],
         "alertas": ["nota_redacao: gabarito preliminar — a fonte indica “gabarito preliminar: CERTO”"],
     },
+    # ------------------------------------------------------------------ E1-0005
+    {
+        "id": "ECO-E1-0005-1", "fonte_ref": "E1-0005", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2010", "ano": 2010, "cacd": False,
+        "errei": True,
+        "comando": "Acerca da intervenção do governo em mercados agrícolas, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("A fixação de um preço mínimo para determinado produto agrícola resulta em excedentes "
+                      "agrícolas, que serão tanto mais elevados quanto mais inelástica for a curva de oferta de "
+                      "mercado do produto beneficiado por esse tipo de política."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A fixação de um preço mínimo para determinado produto agrícola resulta em excedentes "
+                      "agrícolas, que serão tanto mais elevados quanto mais ") + vm("inelástica")
+                   + az(" for a curva de oferta de mercado do produto beneficiado por esse tipo de política."),
+        "poucas": ("O excedente é a distância entre o que se oferta e o que se demanda ao preço mínimo. Quanto "
+                   "mais " + azb("elástica") + " a oferta, mais os produtores expandem a produção em resposta ao "
+                   "preço alto — e " + vd("maior") + " o excedente."),
+        "destrinchando": [
+            "Um " + azb("preço mínimo") + " só tem efeito (“morde”) se fixado <b>acima</b> do equilíbrio. Ali, a "
+            "quantidade demandada cai (o consumidor compra menos) e a ofertada sobe (o produtor quer vender "
+            "mais): " + vd("excedente = Qˢ − Qᴰ") + ".",
+            "Os dois lados contribuem: o excedente é tanto maior quanto mais elásticas forem a oferta (expansão "
+            "da produção) e a demanda (retração do consumo). Com oferta perfeitamente inelástica (vertical), a "
+            "produção nem reagiria ao preço — o excedente viria só da retração da demanda.",
+            "No exemplo do gráfico, com a mesma demanda e o mesmo preço mínimo (7 > 5 de equilíbrio), a demanda "
+            "cai para 4; a oferta mais elástica leva a produção a " + vd("10") + " (excedente de 6), a menos "
+            "elástica, a " + vd("8") + " (excedente de 4).",
+            "Para o preço se sustentar, alguém precisa absorver o excedente — em regra o governo, que compra e "
+            "estoca. " + rx("Brasil") + ": a " + azb("Política de Garantia de Preços Mínimos (PGPM)") + ", "
+            "executada pela " + rx("Conab") + " com compras diretas (AGF) e prêmios de escoamento, é o exemplo "
+            "clássico.",
+            vm("Regra-âncora: excedente de um preço mínimo cresce com as elasticidades — de oferta e de "
+               "demanda."),
+        ],
+        "grafico_verso": "ECO-E1-0005-1-V1",
+        "dissecando": (cz("[inversão]") + " Troca “elástica” por “inelástica”. Atenção à palavra "
+                       "“excedentes”: aqui é <b>excesso de oferta</b> (sobras físicas), não “excedente do "
+                       "produtor” (área de bem-estar) — quem mistura os dois raciocina sobre a coisa errada. "
+                       "A primeira oração (“resulta em excedentes”) pressupõe preço mínimo acima do equilíbrio, "
+                       "que é o caso relevante."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…excedentes que serão tanto mais elevados quanto mais elástica for a curva de demanda do "
+            "produto.”</i> → CERTO (o consumo se retrai mais)",
+            "<i>“A fixação de um preço mínimo abaixo do preço de equilíbrio gera excedentes agrícolas.”</i> → "
+            "ERRADO (piso abaixo do equilíbrio é inócuo)",
+        ])],
+        "reescrita": ("A fixação de um preço mínimo para determinado produto agrícola resulta em excedentes "
+                      "agrícolas, que serão tanto mais elevados quanto mais " + hl("elástica") + " for a curva "
+                      "de oferta de mercado do produto beneficiado por esse tipo de política."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tanto mais… quanto mais"], "dificuldade": 2,
+        "comentario_fonte": ("Quanto mais inelástica a oferta, menor o excesso de oferta; preço mínimo eficaz fica "
+                             "acima do equilíbrio. Gráfico: Qᴰ = 4; Qˢ = 10 com a oferta mais elástica e 8 com a "
+                             "menos elástica. Um comentário diz que o preço poderia estar abaixo do equilíbrio."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "00021.jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E1-0005-1-V1, com os números citados no comentário)"},
+                          {"ref": "image (35).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada; conteúdo descrito no comentário)"}],
+        "alertas": ["banca_provavel: possível CACD/CEBRASPE 2010; a fonte só traz o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0090
+    {
+        "id": "ECO-E1-0090-1", "fonte_ref": "E1-0090", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2022", "ano": 2022, "cacd": False,
+        "errei": True,
+        "comando": "Acerca dos efeitos da tributação sobre o bem-estar, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Tributos mais altos em bens que causam vício, como cigarros e bebidas alcoólicas, têm a "
+                      "quase-totalidade de seu efeito sobre o bem-estar do consumidor."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Tributos mais altos em bens que causam vício, como cigarros e bebidas alcoólicas, têm a "
+                      "<u>quase-totalidade</u> de seu efeito sobre o bem-estar do <u>consumidor</u>."),
+        "poucas": ("Vício = " + azb("demanda muito inelástica") + ". O ônus do tributo recai sobre o lado "
+                   "<b>menos elástico</b> do mercado: o consumidor."),
+        "destrinchando": [
+            "Regra da " + azb("incidência econômica") + ": quem paga o imposto não é quem o recolhe, e sim quem "
+            "tem menos condição de fugir dele. A parcela do consumidor é aproximadamente "
+            + vd("ε<sub>O</sub> / (ε<sub>O</sub> + |ε<sub>D</sub>|)") + "; a do produtor, "
+            "|ε<sub>D</sub>| / (ε<sub>O</sub> + |ε<sub>D</sub>|).",
+            "Bens que causam dependência têm |ε<sub>D</sub>| muito baixo: o consumidor continua comprando mesmo "
+            "com o preço maior. Com ε<sub>D</sub> perto de zero, a fração do consumidor tende a 1 — o preço "
+            "final sobe quase no valor do imposto, e o preço líquido do produtor quase não cai.",
+            "Efeito colateral: com demanda inelástica, a quantidade cai pouco, então o " + azb("peso morto")
+            + " é pequeno e a arrecadação é alta e estável — por isso esses bens são bases tributárias "
+            "preferidas (" + oc("Mankiw") + ", <i>Introdução à Economia</i>, capítulo sobre os custos da "
+            "tributação).",
+            "Há também a função " + azb("extrafiscal") + ": o tributo encarece o hábito para desestimulá-lo "
+            "(lógica de imposto corretivo sobre externalidades e “internalidades” do vício). " + rx("Brasil")
+            + ": cigarros e bebidas sempre tiveram IPI elevado e são alvo do Imposto Seletivo criado pela "
+            "reforma tributária do consumo (EC 132/2023).",
+        ],
+        "grafico_verso": "ECO-E1-0090-1-V1",
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " O item não menciona elasticidade: a banca espera que "
+                       "o candidato traduza “vício” em “demanda inelástica”. O “quase-totalidade” é modulador "
+                       "<b>relativo</b> — admite que o produtor arca com um pouco —, e por isso o item se "
+                       "sustenta. 🔥 Par recorrente: bens viciantes × incidência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…têm a totalidade de seu efeito sobre o bem-estar do consumidor.”</i> → ERRADO (modulador "
+            "absoluto: só com demanda perfeitamente inelástica)",
+            "<i>“…geram elevado peso morto, pois a quantidade consumida cai muito.”</i> → ERRADO (demanda "
+            "inelástica: a quantidade cai pouco)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["quase-totalidade"], "dificuldade": 2,
+        "comentario_fonte": ("Bens viciantes têm demanda inelástica; o ônus recai sobre os consumidores (Mankiw); "
+                             "função extrafiscal do tributo (Prof. Jetro Coutinho). Gabarito: Certo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "1edabab1-7344-4b7b-ae78-ee575825b656", "tipo_fonte": "GRÁFICO",
+                           "lado": "verso", "acao": "redesenhada (ECO-E1-0090-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0093
+    {
+        "id": "ECO-E1-0093-1", "fonte_ref": "E1-0093", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Daniel – Economia CACD (Telegram)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, acerca de elasticidade, receita total e incidência tributária.",
+        "rotulo_item": "Item",
+        "assertiva": ("O ônus de um imposto recai mais intensamente no lado do mercado que é mais elástico. Quando "
+                      "a demanda é elástica, um aumento de preço leva a uma diminuição proporcionalmente menor da "
+                      "quantidade demandada, portanto a Receita Total aumenta. Quando a demanda é inelástica, um "
+                      "aumento de preço leva a uma diminuição proporcionalmente maior da quantidade demandada, "
+                      "portanto a Receita Total diminui."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O ônus de um imposto recai mais intensamente no lado do mercado que é ")
+                   + vm("mais elástico") + az(". Quando a demanda é elástica, um aumento de preço leva a uma "
+                                              "diminuição proporcionalmente ") + vm("menor")
+                   + az(" da quantidade demandada, portanto a Receita Total ") + vm("aumenta")
+                   + az(". Quando a demanda é inelástica, um aumento de preço leva a uma diminuição "
+                        "proporcionalmente ") + vm("maior") + az(" da quantidade demandada, portanto a Receita "
+                                                                 "Total ") + vm("diminui") + az("."),
+        "poucas": ("As três frases estão invertidas: o ônus recai no lado " + azb("menos elástico")
+                   + "; na demanda elástica a quantidade cai <b>mais</b> que o preço sobe e a receita "
+                   + vd("cai") + "; na inelástica, ao contrário."),
+        "destrinchando": [
+            azb("Incidência") + ": paga mais quem tem menos alternativas. Se a demanda é rígida, o consumidor "
+            "absorve o aumento; se a oferta é rígida, o produtor aceita receber menos. O lado elástico “foge” "
+            "(reduz a quantidade) e transfere o ônus ao outro.",
+            azb("Elasticidade e receita") + ": |ε| > 1 significa que a quantidade reage <b>mais</b> que "
+            "proporcionalmente ao preço. Logo, preço ↑ → quantidade ↓ muito → " + vd("RT ↓") + ". Com "
+            "|ε| < 1, a quantidade reage menos que proporcionalmente → preço ↑ → " + vd("RT ↑") + ".",
+            "Os dois temas se conectam: o lado que “foge” do imposto é o mesmo cujo gasto cai com o aumento "
+            "de preço. Por isso governos tributam pesadamente bens de demanda inelástica (combustíveis, energia, "
+            "cigarros): a arrecadação é alta e a base não encolhe.",
+            vm("Regra-âncora: imposto e receita seguem a mesma lógica — quem não consegue reagir paga."),
+        ],
+        "dissecando": (cz("[inversão]") + " Item “espelhado”: cada frase é a versão invertida de uma regra "
+                       "correta, e a coerência interna entre elas (“proporcionalmente menor… portanto aumenta”) "
+                       "dá falsa segurança. Basta checar a definição de elástica (reação <b>maior</b>) para "
+                       "desmontar o conjunto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O ônus de um imposto recai mais intensamente no lado do mercado que é menos elástico.”</i> → "
+            "CERTO",
+            "<i>“Quando a demanda tem elasticidade unitária, um aumento de preço reduz a receita total.”</i> → "
+            "ERRADO (unitária: receita constante)",
+        ])],
+        "reescrita": ("O ônus de um imposto recai mais intensamente no lado do mercado que é "
+                      + hl("menos elástico") + ". Quando a demanda é elástica, um aumento de preço leva a uma "
+                      "diminuição proporcionalmente " + hl("maior") + " da quantidade demandada, portanto a "
+                      "Receita Total " + hl("diminui") + ". Quando a demanda é inelástica, um aumento de preço "
+                      "leva a uma diminuição proporcionalmente " + hl("menor") + " da quantidade demandada, "
+                      "portanto a Receita Total " + hl("aumenta") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Apenas “ERRADO”, uma imagem não preservada e o link do canal (t.me/cacdeconomia/100).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (40).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada; comentário escrito a partir da teoria)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0094
+    {
+        "id": "ECO-E1-0094-1", "fonte_ref": "E1-0094", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COM_2023,
+        "rotulo_item": "Item",
+        "assertiva": ("Um aumento no imposto sobre o consumo de um bem com demanda perfeitamente preço-elástica e "
+                      "oferta preço-inelástica terá incidência apenas sobre o bem-estar dos produtores, pois os "
+                      "consumidores somente adquirem o bem a um preço único de equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um aumento no imposto sobre o consumo de um bem com demanda <u>perfeitamente</u> "
+                      "preço-elástica e oferta preço-inelástica terá incidência <u>apenas</u> sobre o bem-estar "
+                      "dos produtores, pois os consumidores somente adquirem o bem a um preço único de "
+                      "equilíbrio."),
+        "poucas": ("Demanda " + azb("perfeitamente elástica") + " é horizontal: os consumidores não aceitam "
+                   "pagar um centavo a mais. O preço ao consumidor não muda, e " + vd("todo o imposto") + " sai "
+                   "do preço líquido do produtor."),
+        "destrinchando": [
+            "Pela fórmula de incidência, a parcela do consumidor é ε<sub>O</sub> / (ε<sub>O</sub> + "
+            "|ε<sub>D</sub>|). Com " + vd("|ε<sub>D</sub>| → ∞") + ", ela vai a zero, qualquer que seja a "
+            "oferta. A oferta inelástica do item só reforça o resultado.",
+            "Intuição: há substitutos perfeitos ao preço p₀ (pense numa pequena região que vende a um mercado "
+            "maior a preço dado). Se o vendedor tentar repassar o imposto, perde toda a clientela. Resta "
+            "aceitar receber " + vd("p₀ − t") + ".",
+            "Bem-estar: o " + azb("excedente do consumidor") + " já é nulo com demanda horizontal (todos pagam "
+            "exatamente o que valorizam) e continua nulo. A receita do governo e o " + azb("peso morto")
+            + " saem inteiros do excedente do produtor.",
+            "Espelho: com demanda perfeitamente <b>inelástica</b> (vertical), o imposto recai inteiro sobre o "
+            "consumidor e não há peso morto.",
+        ],
+        "grafico_verso": "ECO-E1-0094-1-V1",
+        "dissecando": (cz("[literalidade · exceção]") + " Dois moduladores fortes (“perfeitamente”, “apenas”) "
+                       "que, juntos, tornam o item verdadeiro: é o caso-limite da regra de incidência. A "
+                       "justificativa final (“preço único de equilíbrio”) é uma forma simples de dizer que a "
+                       "demanda é horizontal. Lição: “apenas” só é suspeito quando o caso não é extremo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com demanda preço-elástica (não perfeitamente) e oferta preço-inelástica, o imposto incidirá "
+            "apenas sobre os produtores.”</i> → ERRADO (modulador absoluto: os consumidores arcam com uma parte)",
+            "<i>“…com demanda perfeitamente preço-elástica, o imposto elevará o preço pago pelo consumidor no "
+            "valor integral do tributo.”</i> → ERRADO (inversão: o preço ao consumidor não muda)",
+        ])],
+        "tipo_erro": ["LITERAL", "EXCECAO"], "moduladores": ["perfeitamente", "apenas", "somente"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Demanda perfeitamente elástica: qualquer aumento de preço leva ao abandono do "
+                             "consumo; com oferta inelástica, todo o peso recai sobre o produtor. Um dos "
+                             "comentários afirma, por engano, que a quantidade demandada não muda e que o "
+                             "consumidor perde bem-estar."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "image (42).png", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "cortada (não preservada; conteúdo de incidência absorvido no 📖)"}],
+        "alertas": ["qualidade_fonte: um dos comentários confunde demanda perfeitamente elástica com "
+                    "perfeitamente inelástica (diz que a quantidade não muda e que o consumidor arca com o "
+                    "imposto)",
+                    "banca_provavel: possível CACD 2023; a fonte só traz o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0095
+    {
+        "id": "ECO-E1-0095-1", "fonte_ref": "E1-0095", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COM_2023,
+        "rotulo_item": "Item",
+        "assertiva": ("Um aumento no imposto sobre o consumo de um bem cuja demanda e oferta tenham elasticidades "
+                      "unitárias incidirá apenas sobre o bem-estar do consumidor, pois as firmas conseguem "
+                      "repassar o tributo totalmente no novo preço de equilíbrio."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um aumento no imposto sobre o consumo de um bem cuja demanda e oferta tenham elasticidades "
+                      "unitárias incidirá ") + vm("apenas sobre o bem-estar do consumidor, pois as firmas "
+                                                  "conseguem repassar o tributo totalmente")
+                   + az(" no novo preço de equilíbrio."),
+        "poucas": ("Elasticidades iguais (em módulo) → " + azb("ônus repartido igualmente") + ": cerca de "
+                   + vd("metade") + " do imposto para cada lado. Repasse total exigiria demanda perfeitamente "
+                   "inelástica ou oferta perfeitamente elástica."),
+        "destrinchando": [
+            "Parcela do consumidor ≈ " + vd("ε<sub>O</sub> / (ε<sub>O</sub> + |ε<sub>D</sub>|)") + ". Com "
+            "ε<sub>O</sub> = |ε<sub>D</sub>| = 1: 1 / (1 + 1) = " + vd("½") + ". O preço pago sobe metade do "
+            "imposto; o preço recebido cai a outra metade.",
+            "Os dois perdem " + azb("excedente") + ": o consumidor paga mais e compra menos; o produtor recebe "
+            "menos e vende menos. Além da receita transferida ao governo, surge " + azb("peso morto") + ".",
+            "O que importa é a elasticidade <b>relativa</b>, não o valor absoluto: com ε<sub>O</sub> = 3 e "
+            "|ε<sub>D</sub>| = 1, o consumidor arca com 3/4; com ε<sub>O</sub> = 1 e |ε<sub>D</sub>| = 3, com "
+            "1/4. Repasse integral (100%) só nos extremos: |ε<sub>D</sub>| = 0 ou ε<sub>O</sub> → ∞.",
+            "Não confundir “elasticidade unitária” com “sem efeito”: ela só diz que a receita do vendedor "
+            "ficaria constante diante de variações de preço ao longo da demanda — nada diz sobre ausência de "
+            "ônus.",
+        ],
+        "dissecando": (cz("[modulador absoluto · nexo indevido]") + " “Apenas” e “totalmente” transformam uma "
+                       "repartição em transferência integral, e a justificativa (“as firmas conseguem repassar”) "
+                       "cria um nexo que o dado do item (elasticidades iguais) não autoriza. Pista: curvas "
+                       "<b>igualmente</b> elásticas sugerem divisão, não concentração."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com elasticidades unitárias, o ônus do imposto será repartido em partes aproximadamente iguais "
+            "entre consumidores e produtores.”</i> → CERTO",
+            "<i>“…com elasticidades unitárias, o imposto não altera o bem-estar de consumidores nem de "
+            "produtores.”</i> → ERRADO (ambos perdem excedente)",
+        ])],
+        "reescrita": ("Um aumento no imposto sobre o consumo de um bem cuja demanda e oferta tenham elasticidades "
+                      "unitárias incidirá " + hl("sobre o bem-estar de consumidores e de produtores, em partes "
+                      "aproximadamente iguais, pois as firmas conseguem repassar apenas cerca de metade do "
+                      "tributo") + " no novo preço de equilíbrio."),
+        "tipo_erro": ["GENERALIZACAO", "NEXO_INDEVIDO"], "moduladores": ["apenas", "totalmente"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Elasticidades idênticas: o peso do imposto é distribuído igualmente entre "
+                             "produtores e consumidores. Comentários empilhados trazem erros: um fala em demanda "
+                             "“altamente inelástica” (de outro item); outro diz que o imposto não altera o "
+                             "bem-estar de ninguém."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "image (44).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada)"},
+                          {"ref": "image (45).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada)"}],
+        "alertas": ["qualidade_fonte: dois comentários empilhados estão errados (demanda “altamente "
+                    "inelástica”, de outro item; “não altera o bem-estar”); prevaleceu o que divide o ônus "
+                    "igualmente",
+                    "banca_provavel: possível CACD 2023; a fonte só traz o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0096
+    {
+        "id": "ECO-E1-0096-1", "fonte_ref": "E1-0096", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COM_2023,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto sobre o consumo de produtos viciantes tem redução pequena no bem-estar dos "
+                      "consumidores, uma vez que a demanda desses produtos é altamente elástica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um imposto sobre o consumo de produtos viciantes tem redução ") + vm("pequena")
+                   + az(" no bem-estar dos consumidores, uma vez que a demanda desses produtos é ")
+                   + vm("altamente elástica") + az("."),
+        "poucas": ("Produto viciante tem demanda " + azb("altamente inelástica") + ": o consumidor não "
+                   "consegue reduzir o consumo e absorve a maior parte do imposto — a perda de bem-estar dele "
+                   "é " + vd("grande") + "."),
+        "destrinchando": [
+            "Dependência química e hábito reduzem a sensibilidade ao preço: |ε<sub>D</sub>| pequeno. Pela "
+            "regra de incidência, o lado menos elástico paga mais — aqui, o consumidor.",
+            "Perda do consumidor = preço mais alto em cada unidade que continua comprando (quase todas) + o "
+            "pouco que deixa de consumir. Com demanda inelástica, a primeira parcela domina e é grande.",
+            "O que é <b>pequeno</b> nesse caso é outra coisa: o " + azb("peso morto") + ". Como a quantidade "
+            "quase não cai, quase todo o excedente perdido pelo consumidor vira " + azb("receita do governo")
+            + " (transferência), e pouco se desperdiça. Daí a combinação “boa arrecadação, baixa distorção” "
+            "que torna esses bens alvo preferido da tributação.",
+            "Lógica do item inteiro invertida: se a demanda fosse altamente elástica, o consumidor escaparia do "
+            "imposto trocando de produto — e então, sim, sua perda seria pequena. A frase descreve um bem "
+            "comum, não um viciante.",
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " O item atribui a bens viciantes a elasticidade "
+                       "oposta à verdadeira e tira dela a conclusão coerente — mas falsa. Vício → "
+                       "<b>inelástica</b> é associação automática que a banca testa nos dois sentidos. 🔥 Mesmo "
+                       "tema, com gabarito CERTO, em item de 2022 sobre cigarros e bebidas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto sobre o consumo de produtos viciantes gera peso morto relativamente pequeno, uma vez "
+            "que a demanda desses produtos é inelástica.”</i> → CERTO",
+            "<i>“…tem redução grande no bem-estar dos produtores, pois a demanda é inelástica.”</i> → ERRADO "
+            "(troca de ator: o ônus recai sobre os consumidores)",
+        ])],
+        "reescrita": ("Um imposto sobre o consumo de produtos viciantes tem redução " + hl("grande") + " no "
+                      "bem-estar dos consumidores, uma vez que a demanda desses produtos é "
+                      + hl("altamente inelástica") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": ["altamente"], "dificuldade": 1,
+        "comentario_fonte": ("Reescrita: redução grande no bem-estar dos consumidores, pois a demanda é altamente "
+                             "inelástica."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (39).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada)"},
+                          {"ref": "image (46).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada)"}],
+        "alertas": ["banca_provavel: possível CACD 2023; a fonte só traz o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0097
+    {
+        "id": "ECO-E1-0097-1", "fonte_ref": "E1-0097", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COM_2023,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma redução no imposto sobre o consumo de um bem com demanda preço-inelástica e oferta "
+                      "preço-elástica terá incidência maior sobre o bem-estar dos consumidores do que sobre o "
+                      "bem-estar das firmas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma <u>redução</u> no imposto sobre o consumo de um bem com demanda preço-inelástica e "
+                      "oferta preço-elástica terá incidência <u>maior sobre o bem-estar dos consumidores</u> do "
+                      "que sobre o bem-estar das firmas."),
+        "poucas": ("A regra de incidência vale nos dois sentidos: o lado " + azb("menos elástico") + " arca com "
+                   "a maior parte de um aumento e se apropria da maior parte de uma " + vd("redução") + ". "
+                   "Aqui, o consumidor."),
+        "destrinchando": [
+            "Parcela do consumidor ≈ ε<sub>O</sub> / (ε<sub>O</sub> + |ε<sub>D</sub>|). Com oferta elástica "
+            "(ε<sub>O</sub> grande) e demanda inelástica (|ε<sub>D</sub>| pequeno), a fração é próxima de 1: o "
+            "preço ao consumidor cai quase no valor do corte.",
+            "Intuição: a oferta elástica significa que as firmas ofertam qualquer quantidade a um preço líquido "
+            "praticamente dado (próximo do custo). Quando o imposto cai, a concorrência empurra o preço final para "
+            "baixo, e o ganho escoa para quem compra.",
+            "Simetria útil: se o mesmo bem tivesse o imposto <b>aumentado</b>, o consumidor arcaria com a maior "
+            "parte. Incidência descreve quem absorve a variação, para cima ou para baixo.",
+            "Aplicação: em desonerações de bens de demanda inelástica e oferta competitiva (combustíveis, "
+            "alimentos básicos), espera-se repasse elevado ao preço final; quando a oferta é inelástica ou "
+            "concentrada, parte do corte vira margem das empresas.",
+            vm("Regra-âncora: incidência segue a inelasticidade — no aumento e na redução do imposto."),
+        ],
+        "dissecando": (cz("[contraintuitivo · paráfrase fiel]") + " O item troca o habitual “aumento” por "
+                       "“redução” e fala em “incidência” de um benefício, o que causa estranheza; quem lembra "
+                       "que a regra é simétrica julga rápido. Os dois dados (demanda inelástica, oferta "
+                       "elástica) apontam para o mesmo lado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma redução no imposto sobre o consumo de um bem com demanda preço-elástica e oferta "
+            "preço-inelástica beneficiará principalmente os consumidores.”</i> → ERRADO (inversão: beneficia as "
+            "firmas)",
+            "<i>“Uma redução de imposto sobre bem de demanda inelástica e oferta elástica será integralmente "
+            "apropriada pelas firmas.”</i> → ERRADO (troca de ator e modulador absoluto)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "PARAFRASE_FIEL"], "moduladores": ["maior"], "dificuldade": 2,
+        "comentario_fonte": ("Com demanda inelástica, o consumidor mantém o consumo e se beneficia da queda do "
+                             "preço; a oferta elástica ajusta a quantidade sem elevar o preço recebido; a "
+                             "incidência afeta mais a curva menos elástica."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (43).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada)"},
+                          {"ref": "image (41).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não preservada)"}],
+        "alertas": ["banca_provavel: possível CACD 2023; a fonte só traz o ano"],
+    },
 ]

@@ -109,7 +109,11 @@
    ],
    "cor": "vermelho",
    "estilo": "<|-|>",
-   "rotulo": "sobra 4"
+   "rotulo": "sobra 4",
+   "rotulo_desloc": [
+    -40,
+    18
+   ]
   }
  ],
  "checar": [

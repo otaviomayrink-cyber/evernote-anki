@@ -623,7 +623,7 @@ CARDS += [
             "Comparação útil: com complementares <b>imperfeitos</b> (pão e manteiga) A poderia cair mais que B; "
             "com complementares <b>perfeitos</b>, nunca.",
         ],
-        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " O item aplica a complementares perfeitos "
+        "dissecando": (cz("[troca de conceito]") + " O item aplica a complementares perfeitos "
                        "uma intuição de complementares comuns (o bem que encareceu cai mais). O “perfeitos” é a "
                        "palavra-gatilho: proporção fixa não admite ritmos diferentes de redução."),
         "modulos": [("😈 Para dificultar", [
@@ -1033,6 +1033,276 @@ CARDS += [
                            "acao": "cortada (cestas (20,30) e (20,25) descritas no 📖)"},
                           {"ref": "IMAGEM 161-164", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvidas (monotonicidade forte × fraca)"}],
+        "alertas": [],
+    },
+]
+
+# ====================================================================== bloco 5
+CARDS += [
+    # ------------------------------------------------------------------ E3-L00236
+    {
+        "id": "ECO-E3-L00236-1", "fonte_ref": "E3-L00236", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", **NIDI_MAR, "errei": False,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Com exceção da relação entre bens substitutos, a taxa marginal de substituição entre dois bens "
+                      "é geralmente expressa por uma taxa constante ao longo da curva de indiferença."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com exceção da relação entre bens ") + vm("substitutos") + az(", a taxa marginal de "
+                      "substituição entre dois bens é geralmente expressa por uma taxa ") + vm("constante")
+                   + az(" ao longo da curva de indiferença."),
+        "poucas": ("Regra e exceção estão trocadas: a " + azb("TMS") + " é, em geral, " + vd("decrescente") +
+                   " ao longo da curva; " + vd("constante") + " só para " + azb("substitutos perfeitos") + "."),
+        "destrinchando": [
+            "A TMS mede a disposição de trocar y por x mantendo a utilidade: TMS = UMg<sub>x</sub>/UMg<sub>y</sub> "
+            "= |inclinação da curva de indiferença|. Ela reflete a relação entre abundância e escassez dos bens na "
+            "cesta.",
+            "Exemplo numérico com u = xy (Cobb-Douglas): TMS = y/x. Na cesta (2, 8), TMS = " + vd("4") + "; na "
+            "cesta (4, 4), da mesma curva, TMS = " + vd("1") + "; em (8, 2), " + vd("0,25") + ". Andando para a "
+            "direita, a TMS cai: curva " + azb("convexa") + ".",
+            "Com u = 2x + y (substitutos perfeitos), TMS = 2 em qualquer ponto: a curva é uma " + azb("reta") +
+            ". É o único formato com TMS constante.",
+            "Dois desvios de vocabulário que a banca explora: “substitutos” sem “perfeitos” (substitutos comuns "
+            "têm TMS decrescente) e “complementares perfeitos” (curva em L, sem TMS constante).",
+            vm("Regra-âncora: convexa → TMS decrescente (regra); reta → TMS constante (exceção dos substitutos "
+               "perfeitos)."),
+        ],
+        "dissecando": (cz("[inversão · meia-verdade]") + " O examinador mantém o vocabulário certo (TMS, curva de "
+                       "indiferença, substitutos) e só inverte o papel de regra e exceção. Item idêntico ao do "
+                       "Simulado Julho/2025 (ECO-E3-L00078-1): a banca recicla a pegadinha."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para preferências convexas, a TMS diminui à medida que o consumidor substitui y por x ao longo de "
+            "uma curva de indiferença.”</i> → CERTO",
+            "<i>“Se a TMS é constante, os bens são complementares perfeitos.”</i> → ERRADO (troca de conceito: "
+            "substitutos perfeitos)",
+        ])],
+        "reescrita": ("Com exceção da relação entre bens " + hl("substitutos perfeitos") + ", a taxa marginal de "
+                      "substituição entre dois bens é geralmente expressa por uma taxa " + hl("decrescente") +
+                      " ao longo da curva de indiferença."),
+        "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": ["geralmente", "com exceção"], "dificuldade": 1,
+        "comentario_fonte": ("TMS é a inclinação da curva; decrescente por utilidade marginal decrescente; constante "
+                             "só para substitutos perfeitos; reescrita: “substitutos perfeitos… decrescente”. O verso "
+                             "trazia ainda, por engano, o comentário do item seguinte (curvas que não se cruzam)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 322", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetia a assertiva)"},
+                          {"ref": "IMAGEM 323", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (curva convexa com TMS decrescente, descrita no 📖)"},
+                          {"ref": "IMAGEM 324", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (substitutos perfeitos, descritos no 📖)"}],
+        "alertas": ["item_repetido: assertiva idêntica em ECO-E3-L00078-1 (Nidi, Simulado Julho/2025); mantidos os "
+                    "dois por serem provas diferentes (Folha -Q §8.6)",
+                    "fonte: o fim do verso traz um comentário “CERTO” sobre curvas que não se cruzam, pertencente a "
+                    "E3-L00237; ignorado aqui"],
+    },
+    # ------------------------------------------------------------------ E3-L00237
+    {
+        "id": "ECO-E3-L00237-1", "fonte_ref": "E3-L00237", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", **NIDI_MAR, "errei": False,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Considerando curvas de indiferença que satisfaçam os axiomas de completude, reflexividade e "
+                      "transitividade, bem como a existência de apenas dois bens, é impossível que as curvas de "
+                      "indiferença de um consumidor que representem níveis distintos de preferência se cruzem."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considerando curvas de indiferença que satisfaçam os axiomas de completude, reflexividade e "
+                      "<u>transitividade</u>, bem como a existência de apenas dois bens, é <u>impossível</u> que as "
+                      "curvas de indiferença de um consumidor que representem níveis distintos de preferência se "
+                      "cruzem."),
+        "poucas": ("Se duas curvas de níveis distintos se cruzassem, a cesta do cruzamento seria indiferente a "
+                   "cestas de níveis diferentes — e a " + azb("transitividade") + " tornaria essas cestas "
+                   "indiferentes entre si, o que é contraditório."),
+        "destrinchando": [
+            "Prova por absurdo: U₁ e U₂ se cruzam em A. Tome B em U₁ e D em U₂. A ~ B (mesma curva) e A ~ D (mesma "
+            "curva) ⇒, por " + azb("transitividade") + ", " + vd("B ~ D") + ". Mas B e D estão em curvas de "
+            "níveis distintos, ou seja, uma é estritamente preferida à outra. Contradição.",
+            "Com " + azb("monotonicidade") + " o absurdo fica visível: escolhendo D com o mesmo x e mais y que B, "
+            "D ≻ B — e, ao mesmo tempo, B ~ D.",
+            "Rigor: a contradição decisiva vem da transitividade (com a definição de “níveis distintos”); a "
+            "monotonicidade só ilustra. Por isso o item lista completude, reflexividade e transitividade — os "
+            "axiomas de " + azb("racionalidade") + " — e basta.",
+            "Outras propriedades das curvas e de onde vêm: inclinação negativa ← monotonicidade; convexidade ← "
+            "preferência pela diversidade; curvas “finas” ← monotonicidade estrita; não cruzamento ← "
+            "transitividade.",
+        ],
+        "grafico_verso": "ECO-E3-L00237-1-V1",
+        "dissecando": (cz("[literalidade]") + " Propriedade clássica com um “impossível” que "
+                       "assusta. O absoluto está correto porque decorre de um axioma, não de evidência empírica. 🔥 "
+                       "Variante frequente: atribuir o não cruzamento à convexidade ou à completude (ERRADO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Curvas de indiferença não se cruzam porque as preferências são convexas.”</i> → ERRADO (troca de "
+            "conceito: é a transitividade)",
+            "<i>“Se as preferências de um consumidor forem intransitivas, suas curvas de indiferença podem se "
+            "cruzar.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["impossível"], "dificuldade": 1,
+        "comentario_fonte": ("Curvas de níveis distintos nunca se cruzam para não ferir a transitividade: se A ~ B e "
+                             "A ~ D, D ≻ B é impossível."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 325", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00237-1-V1, curvas que se cruzam em A)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00270
+    {
+        "id": "ECO-E3-L00270-1", "fonte_ref": "E3-L00270", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": ("Segundo a teoria microeconômica e os seus axiomas da racionalidade, julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("O axioma da convexidade expressa uma preferência por diversidade de bens na cesta de consumo e "
+                      "esta convexidade pode ser compreendida pela taxa marginal de substituição (TMS) decrescente. "
+                      "Existe, no entanto, um caso em que essa TMS é constante, quando os bens são complementares "
+                      "perfeitos. Nesse caso, a curva de indiferença perde sua convexidade e se torna linear."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O axioma da convexidade expressa uma preferência por diversidade de bens na cesta de consumo e "
+                      "esta convexidade pode ser compreendida pela taxa marginal de substituição (TMS) decrescente. "
+                      "Existe, no entanto, um caso em que essa TMS é constante, quando os bens são ")
+                   + vm("complementares") + az(" perfeitos. Nesse caso, a curva de indiferença perde sua convexidade "
+                      "e se torna linear."),
+        "poucas": ("TMS constante e curva linear são de " + azb("substitutos perfeitos") + ". Complementares "
+                   "perfeitos têm curva em " + azb("L") + ", com TMS infinita no braço vertical, zero no "
+                   "horizontal e indefinida no vértice."),
+        "destrinchando": [
+            "A 1ª frase é a definição correta: " + azb("convexidade") + " = gosto pela diversidade = " + azb("TMS "
+            "decrescente") + " (quanto mais x se tem, menos y se aceita ceder por mais um x).",
+            "Substitutos perfeitos (u = ax + by): troca a taxa fixa a/b → " + vd("TMS constante") + " → curva "
+            "<b>reta</b>. Ex.: canetas azuis e pretas para quem só quer escrever.",
+            "Complementares perfeitos (u = mín{ax, by}, " + oc("Leontief") + "): consumo em proporção fixa → curva "
+            "em <b>L</b>. No braço vertical, mais y sem x não vale nada (TMS infinita); no horizontal, mais x sem y "
+            "também não (TMS zero); no vértice, a TMS não é definida.",
+            "Nuance de prova: uma reta ainda é <b>fracamente</b> convexa (a média de duas cestas indiferentes é "
+            "indiferente), mas não estritamente; “perde sua convexidade” deve ser lido como “perde a convexidade "
+            "estrita”. O erro decisivo do item é o nome do caso.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Tudo está certo, menos uma palavra: “complementares” no lugar "
+                       "de “substitutos”. Como substitutos e complementares perfeitos aparecem sempre juntos nos "
+                       "manuais (mesma figura, painéis a e b), a troca é a pegadinha natural."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No caso de complementares perfeitos, as curvas de indiferença têm formato de L e a TMS não é "
+            "definida no vértice.”</i> → CERTO",
+            "<i>“A convexidade das preferências implica TMS crescente ao longo da curva de indiferença.”</i> → "
+            "ERRADO (inversão: decrescente)",
+        ])],
+        "reescrita": ("O axioma da convexidade expressa uma preferência por diversidade de bens na cesta de consumo e "
+                      "esta convexidade pode ser compreendida pela taxa marginal de substituição (TMS) decrescente. "
+                      "Existe, no entanto, um caso em que essa TMS é constante, quando os bens são "
+                      + hl("substitutos") + " perfeitos. Nesse caso, a curva de indiferença perde sua convexidade e se "
+                      "torna linear."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Se fossem substitutos perfeitos, o item estaria certo; complementares perfeitos têm "
+                             "curva em L, TMS zero/infinita, indefinida no vértice."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 374", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (substitutos × complementares perfeitos, descritos no 📖)"},
+                          {"ref": "IMAGEM 375", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvida (texto sobre TMS decrescente no 📖)"}],
+        "alertas": ["comando_reconstruido: o comando da fonte estava truncado (“…os indivíduos buscam m…”); usado "
+                    "comando neutro"],
+    },
+    # ------------------------------------------------------------------ E3-L00371
+    {
+        "id": "ECO-E3-L00371-1", "fonte_ref": "E3-L00371", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", **NIDI_NOV, "errei": True,
+        "comando": CMD_NIDI_NOV,
+        "excerto": EXC_NIDI_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("O pressuposto de que “quanto mais de um bem, melhor” é duplamente tratado nos axiomas da "
+                      "plenitude e da monotonicidade das preferências."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O pressuposto de que “quanto mais de um bem, melhor” é ") + vm("duplamente tratado nos axiomas "
+                      "da plenitude e") + az(" da monotonicidade das preferências."),
+        "poucas": ("“Mais é melhor” é só a " + azb("monotonicidade") + " (não saciedade, dominância). A "
+                   + azb("plenitude") + " (completude) garante apenas que o consumidor <b>consegue comparar</b> "
+                   "quaisquer cestas — sem dizer qual prefere."),
+        "destrinchando": [
+            azb("Completude / plenitude / integralidade") + ": para quaisquer cestas A e B, A ≿ B, B ≿ A ou ambos. "
+            "Não impõe direção: alguém pode ter preferências completas e preferir <b>menos</b> poluição, ou ter "
+            "um ponto de saciedade.",
+            azb("Monotonicidade / não saciedade / dominância") + ": se A tem pelo menos tanto de cada bem quanto B "
+            "e mais de algum, A ≻ B. É ela que formaliza “quanto mais, melhor” e dá às curvas de indiferença "
+            "inclinação negativa e ordem crescente a partir da origem.",
+            "Lista completa para revisão: completude, reflexividade e transitividade (racionalidade); "
+            "continuidade (permite representar por função de utilidade); monotonicidade e convexidade (“bom "
+            "comportamento”).",
+            "O texto motivador lembra a exceção: bens com saciedade violam a monotonicidade além de certo ponto "
+            "(UMg < 0), mas continuam satisfazendo a completude — prova de que os dois axiomas são independentes.",
+        ],
+        "dissecando": (cz("[troca de conceito · meia-verdade]") + " O item acerta a monotonicidade e enxerta a "
+                       "plenitude, aproveitando a ambiguidade do nome (“plenitude” lembra “satisfação plena”). O "
+                       "“duplamente” é o sinal de alerta: cada axioma tem uma função própria."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O pressuposto de que ‘quanto mais, melhor’ corresponde ao axioma da monotonicidade, também chamado "
+            "de não saciedade.”</i> → CERTO",
+            "<i>“O axioma da completude estabelece que o consumidor prefere cestas com mais bens.”</i> → ERRADO "
+            "(completude = comparabilidade)",
+        ])],
+        "reescrita": ("O pressuposto de que “quanto mais de um bem, melhor” é " + hl("tratado apenas no axioma") +
+                      " da monotonicidade das preferências" + hl("; a plenitude garante somente que o consumidor "
+                      "consegue comparar quaisquer cestas") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "MEIA_VERDADE"], "moduladores": ["duplamente"], "dificuldade": 1,
+        "comentario_fonte": ("Plenitude = capacidade de comparar cestas; só a monotonicidade trata de “mais é "
+                             "melhor”. Versos com comparação extensa entre teoria do consumidor e do produtor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 519", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (axiomas básicos no 📖)"},
+                          {"ref": "IMAGEM 520", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvida (seleção, continuidade, convexidade no 📖)"},
+                          {"ref": "IMAGEM 521", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida no 📖"},
+                          {"ref": "IMAGEM 522-524", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortadas (tabelas consumidor × produtor, fora do ponto do item)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00372
+    {
+        "id": "ECO-E3-L00372-1", "fonte_ref": "E3-L00372", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", **NIDI_NOV, "errei": False,
+        "comando": CMD_NIDI_NOV,
+        "excerto": EXC_NIDI_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("A satisfação adicional a cada nova unidade consumida é reflexo da lei da utilidade marginal "
+                      "decrescente e da renda excedente após a aquisição da cesta ótima do consumidor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A satisfação adicional a cada nova unidade consumida é reflexo da lei da utilidade marginal "
+                      "decrescente ") + vm("e da renda excedente após a aquisição da cesta ótima do consumidor")
+                   + az("."),
+        "poucas": ("A " + azb("utilidade marginal") + " é propriedade das preferências, não do bolso. E não há "
+                   + vd("renda excedente") + " no ótimo: com monotonicidade, a cesta ótima esgota a renda."),
+        "destrinchando": [
+            azb("Utilidade marginal") + " = satisfação trazida pela última unidade. A " + azb("lei da utilidade "
+            "marginal decrescente") + " (" + oc("Gossen") + "; base do marginalismo de " + oc("Jevons") + ", "
+            + oc("Menger") + " e " + oc("Walras") + ", década de 1870) diz que ela cai à medida que o consumo "
+            "aumenta: o 1º copo d’água vale muito, o 10º quase nada.",
+            "Cesta ótima: máx u sujeito a p<sub>x</sub>x + p<sub>y</sub>y = R. Com monotonicidade (e axioma da "
+            "“seleção”, na nomenclatura da fonte), o consumidor " + vd("gasta toda a renda") + " — sobra de renda "
+            "significaria utilidade desperdiçada. Na teoria estática não há poupança.",
+            "A relação causal correta é a inversa: UMg decrescente + restrição orçamentária ⇒ cesta ótima "
+            "(UMg<sub>x</sub>/p<sub>x</sub> = UMg<sub>y</sub>/p<sub>y</sub>). A cesta não “explica” a UMg.",
+            "Possível origem da confusão: o " + azb("excedente do consumidor") + " (" + oc("Marshall") + ") — "
+            "diferença entre disposição a pagar e preço pago — é medida de bem-estar, não renda que sobra.",
+        ],
+        "dissecando": (cz("[nexo indevido · meia-verdade]") + " A 1ª metade é verdadeira; o “e da renda "
+                       "excedente…” cria uma causa inexistente e ainda pressupõe sobra de renda no ótimo. Basta "
+                       "apagar o trecho final para o item ficar certo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A satisfação adicional decrescente a cada nova unidade consumida é reflexo da lei da utilidade "
+            "marginal decrescente.”</i> → CERTO",
+            "<i>“Na cesta ótima, o consumidor com preferências monotônicas mantém parte da renda como reserva.”</i> "
+            "→ ERRADO (a renda é toda gasta)",
+        ])],
+        "reescrita": ("A satisfação adicional a cada nova unidade consumida é reflexo da lei da utilidade marginal "
+                      "decrescente" + hl(", independentemente da renda; na cesta ótima, toda a renda é gasta") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("UMg decrescente é fenômeno de saciedade, sem relação com renda excedente; toda a renda é "
+                             "gasta; possível confusão com excedente do consumidor (Marshall)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 525", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (UT e UMg dos copos d’água, descritas no 📖)"},
+                          {"ref": "IMAGEM 526", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (função de produção em três fases, fora do tema; imagem de banco)"},
+                          {"ref": "IMAGEM 527", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (UMgₓ/pₓ = UMgᵧ/pᵧ no 📖)"},
+                          {"ref": "IMAGEM 528", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "irrecuperavel (ilegível)"}],
         "alertas": [],
     },
 ]

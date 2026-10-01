@@ -939,7 +939,7 @@ CARDS = [
             "<i>“Rendimentos constantes de escala implicam produto marginal constante de cada fator.”</i> → "
             "ERRADO (confunde escala com rendimento marginal)",
         ])],
-        "reescrita": ("Se uma firma apresenta tecnologia de produção com rendimentos constantes de escala, ela "
+        "reescrita": ("Se uma firma apresenta tecnologia de produção com rendimentos constantes de escala, então ela "
                       + hl("pode") + " apresentar produto marginal decrescente para cada fator"
                       + hl(", como na Cobb-Douglas com α + β = 1") + "."),
         "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["não poderá"], "dificuldade": 2,
@@ -949,5 +949,189 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
         "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01216
+    {
+        "id": "ECO-E2-L01216-1", "fonte_ref": "E2-L01216", "destino": "05", "subtema": H2["escala"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_ISO,
+        "frente_figuras": ["ECO-E2-L01216-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": "A referida função de produção apresenta rendimentos constantes à escala.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A referida função de produção apresenta rendimentos <u>constantes</u> à escala."),
+        "poucas": ("Isoquantas retas igualmente espaçadas ao longo de qualquer raio (Q1, Q2 = 2Q1, Q3 = 3Q1): "
+                   "dobrar K e L leva da isoquanta Q1 à Q2, isto é, " + vd("dobra o produto") + " — "
+                   + azb("rendimentos constantes de escala") + "."),
+        "destrinchando": [
+            "Rendimentos de escala se leem no mapa de isoquantas pelo <b>espaçamento</b> ao longo de um raio "
+            "a partir da origem: se dobrar a distância à origem dobra o nível de produto, são constantes.",
+            "Na figura, a isoquanta Q2 está ao dobro da distância de Q1, e Q3 ao triplo. Com níveis de produto "
+            "na mesma progressão (por exemplo, 10, 20 e 30), multiplicar todos os insumos por t multiplica a "
+            "produção por t: " + vd("f(tK, tL) = t·f(K, L)") + ".",
+            "Forma funcional compatível: q = aK + bL (substitutos perfeitos), homogênea de grau 1. Se as "
+            "isoquantas de níveis igualmente crescentes fossem ficando <b>mais próximas</b> entre si, os "
+            "rendimentos seriam crescentes; se <b>mais distantes</b>, decrescentes.",
+            "Cuidado: o formato da isoquanta (reta, L, convexa) informa sobre a <b>substituição</b> entre "
+            "insumos; o espaçamento informa sobre a <b>escala</b>. São leituras independentes.",
+        ],
+        "dissecando": (cz("[detalhe]") + " O item exige ler o gráfico pelo espaçamento das isoquantas, não pelo "
+                       "formato. 🔥 No mesmo bloco, a banca pergunta escala (CERTO), substituição (CERTO) e "
+                       "rendimento marginal (ERRADO) sobre a mesma figura."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Como as isoquantas são retas, a função apresenta necessariamente rendimentos crescentes de "
+            "escala.”</i> → ERRADO (nexo indevido: o formato não define a escala)",
+            "<i>“Se as isoquantas de níveis 10, 20 e 30 fossem cada vez mais próximas, haveria rendimentos "
+            "crescentes de escala.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Um aumento dos insumos aumenta a produção na mesma proporção.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 209", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (ECO-E2-L01216-1-F1)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L01216-1-F1 redesenhada a partir da descrição (três isoquantas "
+                    "retas negativamente inclinadas, K no eixo horizontal e L no vertical); a transcrição não "
+                    "traz os níveis de produto, e o espaçamento uniforme foi deduzido do gabarito (rendimentos "
+                    "constantes = CERTO)"],
+    },
+    # ------------------------------------------------------------------ E2-L01217
+    {
+        "id": "ECO-E2-L01217-1", "fonte_ref": "E2-L01217", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_ISO,
+        "frente_figuras": ["ECO-E2-L01216-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("As isoquantas apresentadas representam o capital e o trabalho como substitutos perfeitos na "
+                      "produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As isoquantas apresentadas representam o capital e o trabalho como <u>substitutos "
+                      "perfeitos</u> na produção."),
+        "poucas": ("Isoquanta reta = " + azb("TMST constante") + ": capital e trabalho se trocam sempre à mesma "
+                   "taxa, qualquer que seja a combinação — definição de " + azb("substitutos perfeitos") + "."),
+        "destrinchando": [
+            "A " + azb("TMST") + " é o módulo da inclinação da isoquanta. Numa reta, a inclinação é a mesma em "
+            "todos os pontos: abrir mão de uma unidade de capital exige sempre a mesma quantidade adicional de "
+            "trabalho, esteja a firma usando muito ou pouco de cada fator.",
+            "Forma funcional: q = aK + bL, com TMST = a/b (na figura, com L no eixo vertical). Produtos "
+            "marginais constantes: PMg<sub>K</sub> = a e PMg<sub>L</sub> = b.",
+            "Implicações: " + vd("elasticidade de substituição infinita") + "; a firma pode produzir só com "
+            "capital ou só com trabalho (intercepto em cada eixo); na minimização de custos, a regra é usar só "
+            "o insumo cujo produto marginal por real gasto for maior — " + azb("solução de canto") + ".",
+            "Contraste: isoquantas em L → complementares perfeitos (σ = 0); convexas → substituição imperfeita, "
+            "com TMST decrescente.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Leitura direta do formato: reta = substitutos perfeitos. A "
+                       "banca costuma inverter para “complementares perfeitos” (ERRADO) ou cobrar a TMST "
+                       "“decrescente” (ERRADO: é constante)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As isoquantas apresentadas indicam que capital e trabalho devem ser usados em proporções "
+            "fixas.”</i> → ERRADO (troca de conceito: isso seria isoquanta em L)",
+            "<i>“A taxa marginal de substituição técnica é a mesma em todos os pontos de cada isoquanta.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Isoquantas retas: TMST constante, a mesma qualquer que seja o nível de insumos; "
+                             "capital e trabalho são substitutos perfeitos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 209", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (ECO-E2-L01216-1-F1)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L01216-1-F1 (mesma figura do item 1)"],
+    },
+    # ------------------------------------------------------------------ E2-L01218
+    {
+        "id": "ECO-E2-L01218-1", "fonte_ref": "E2-L01218", "destino": "05", "subtema": H2["pmg"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_ISO,
+        "frente_figuras": ["ECO-E2-L01216-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": "A função de produção em questão respeita a lei dos rendimentos marginais decrescentes.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A função de produção em questão ") + vm("respeita") + az(" a lei dos rendimentos "
+                                                                                "marginais decrescentes."),
+        "poucas": ("Isoquantas retas e igualmente espaçadas = " + azb("substitutos perfeitos") + " (Q = aK + "
+                   "bL): o produto marginal de cada fator é <b>constante</b>, não decrescente."),
+        "destrinchando": [
+            "Isoquanta reta → " + azb("TMST constante") + ": troca-se K por L sempre à mesma taxa. Forma "
+            "funcional típica: Q = aK + bL. Daí PMg<sub>K</sub> = a e PMg<sub>L</sub> = b, constantes.",
+            "Fixe o capital (uma linha horizontal no gráfico, digamos K = 2) e aumente o trabalho: cada unidade "
+            "extra de L acrescenta sempre b unidades de produto — " + azb("rendimentos marginais constantes")
+            + ". A lei dos rendimentos decrescentes exigiria PMg caindo com o uso do fator.",
+            "Espaçamento uniforme (Q2 = 2Q1, Q3 = 3Q1 a distâncias iguais da origem) indica "
+            + azb("rendimentos constantes de escala") + ": dobrar K e L dobra Q.",
+            "Não confundir: <b>rendimento marginal</b> = um fator varia, o outro fixo (curto prazo); "
+            "<b>rendimento de escala</b> = todos os fatores na mesma proporção (longo prazo). Uma Cobb-Douglas "
+            "com α + β = 1 tem rendimentos constantes de escala <i>e</i> marginais decrescentes.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item empresta uma “lei” geral da microeconomia e a "
+                       "aplica a uma tecnologia que é justamente a exceção. Pista visual: retas. 🔥 A banca "
+                       "pede no mesmo bloco escala (CERTO aqui) e rendimento marginal (ERRADO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A função apresenta rendimentos constantes de escala.”</i> → CERTO",
+            "<i>“A taxa marginal de substituição técnica é decrescente ao longo de cada isoquanta.”</i> → "
+            "ERRADO (é constante: isoquanta reta)",
+        ])],
+        "reescrita": ("A função de produção em questão " + hl("não") + " respeita a lei dos rendimentos "
+                      "marginais decrescentes" + hl(": os produtos marginais de K e de L são constantes") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Rendimentos marginais constantes: fixado o capital (ex.: K = 2), cada unidade "
+                             "adicional de trabalho gera acréscimo constante de produção."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 209", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (ECO-E2-L01216-1-F1)"},
+                          {"ref": "IMAGEM 210", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (repetia a figura da frente)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L01216-1-F1 (mesma figura do item 1)"],
+    },
+    # ------------------------------------------------------------------ E2-L01219
+    {
+        "id": "ECO-E2-L01219-1", "fonte_ref": "E2-L01219", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_ISO,
+        "frente_figuras": ["ECO-E2-L01216-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("A taxa marginal de substituição técnica em cada ponto da isoquanta corresponde à quantidade "
+                      "de capital que pode ser substituída por determinada quantidade de trabalho com o objetivo "
+                      "de aumentar a produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A taxa marginal de substituição técnica em cada ponto da isoquanta corresponde à quantidade "
+                      "de capital que pode ser substituída por determinada quantidade de trabalho ")
+                   + vm("com o objetivo de aumentar a produção") + az("."),
+        "poucas": ("Sobre uma isoquanta (Q1, Q2 ou Q3) o produto é <b>constante</b>. A " + azb("TMST")
+                   + " mede a troca entre K e L que mantém a produção; para aumentá-la, é preciso passar a uma "
+                   "isoquanta mais alta."),
+        "destrinchando": [
+            "Definição: TMST = decréscimo máximo de um insumo quando se usa uma unidade adicional do outro, "
+            + vd("mantido o produto constante") + ". Geometricamente, é o módulo da inclinação da isoquanta "
+            "naquele ponto.",
+            "Na figura, as isoquantas são retas: a TMST é a mesma em todos os pontos de cada uma. Deslizar "
+            "sobre Q1 troca capital por trabalho sem alterar a produção; aumentá-la significa sair de Q1 para Q2 "
+            "ou Q3 — usar mais insumos, não trocá-los.",
+            "Relação com os produtos marginais: ao longo da isoquanta, PMg<sub>L</sub>·ΔL + PMg<sub>K</sub>·ΔK "
+            "= 0, logo " + vd("TMST = PMg<sub>L</sub>/PMg<sub>K</sub>") + ". Com isoquantas retas, os dois "
+            "PMg são constantes, e a razão também.",
+            vm("Regra-âncora: movimento ao longo da isoquanta = mesma produção; mudança de isoquanta = outra "
+               "produção."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A definição está certa até “trabalho”; o "
+                       "erro é o objetivo enxertado no fim. 🔥 Assertiva idêntica aparece em outro bloco Nabuco "
+                       "sobre teoria da firma — mesmo gabarito."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Nas isoquantas apresentadas, a taxa marginal de substituição técnica é a mesma em todos os "
+            "pontos de cada isoquanta.”</i> → CERTO",
+            "<i>“Passar da isoquanta Q1 para Q2 mantendo a mesma razão K/L aumenta a TMST.”</i> → ERRADO "
+            "(isoquantas paralelas: a TMST não muda)",
+        ])],
+        "reescrita": ("A taxa marginal de substituição técnica em cada ponto da isoquanta corresponde à quantidade "
+                      "de capital que pode ser substituída por determinada quantidade de trabalho "
+                      + hl("mantendo-se constante a produção") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("TMST é a inclinação em cada ponto da isoquanta; ao longo dela o produto não muda; "
+                             "substitui-se um insumo pelo outro para manter a produção constante."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 209", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (ECO-E2-L01216-1-F1)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L01216-1-F1 (mesma figura do item 1)",
+                    "quase_duplicata: assertiva idêntica à de ECO-E2-L00861-1 (outro bloco Nabuco, sem figura); "
+                    "mantidos os dois"],
     },
 ]

@@ -1,0 +1,110 @@
+{
+ "id": "ECO-E2-L01658-1-V1",
+ "uso": "verso",
+ "legenda": "Longo prazo na concorrência monopolística: a demanda da firma tangencia o CMe em q* (P = CMe, lucro zero), mas o preço fica acima do CMg — e q* fica à esquerda da escala eficiente (CMe mínimo): capacidade ociosa.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 12,
+  "ymax": 20
+ },
+ "curvas": [
+  {
+   "id": "CMe",
+   "tipo": "funcao",
+   "expr": "36/x + x",
+   "dominio": [
+    2.3,
+    11
+   ],
+   "familia": "terceira",
+   "rotulo": "CMe"
+  },
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "2*x",
+   "dominio": [
+    0.5,
+    9.3
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg"
+  },
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "18 - 1.25*x",
+   "dominio": [
+    0,
+    12
+   ],
+   "familia": "demanda",
+   "rotulo": "D = RMe"
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "18 - 2.5*x",
+   "dominio": [
+    0,
+    5.6
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "sobre": "D",
+   "x": 4,
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "q*",
+   "rotulo_y": "P",
+   "rotulo_desloc": [
+    10,
+    10
+   ]
+  },
+  {
+   "id": "M",
+   "intersecao": [
+    "RMg",
+    "CMg"
+   ],
+   "rotulo": "RMg = CMg",
+   "projetar": "y",
+   "rotulo_y": "CMg"
+  },
+  {
+   "id": "Min",
+   "sobre": "CMe",
+   "x": 6,
+   "projetar": "x",
+   "rotulo_x": "q ef. (CMe mín.)"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    4,
+    0.9
+   ],
+   "para": [
+    6,
+    0.9
+   ],
+   "estilo": "<|-|>",
+   "cor": "vermelho",
+   "rotulo": "capacidade ociosa"
+  }
+ ],
+ "checar": [
+  "abs(D(4) - CMe(4)) < 0.01",
+  "abs(M.x - 4) < 0.01",
+  "E.y > M.y",
+  "Min.x > E.x"
+ ]
+}

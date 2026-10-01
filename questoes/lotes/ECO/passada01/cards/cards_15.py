@@ -509,4 +509,371 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0045
+    {
+        "id": "ECO-E1-0045-1", "fonte_ref": "E1-0045", "destino": "06", "subtema": H2["cec"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Acerca da distinção entre as abordagens contábil e econômica dos custos de produção, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("A abordagem contábil visa fornecer e utilizar valores que representem a eficiência da "
+                      "utilização dos recursos no processo produtivo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A abordagem ") + vm("contábil") + az(" visa fornecer e utilizar valores que representem a "
+                    "eficiência da utilização dos recursos no processo produtivo.")),
+        "poucas": ("Medir a eficiência do uso dos recursos — o que exige o " + azb("custo de oportunidade")
+                   + " — é o objetivo da abordagem <b>econômica</b>. A contábil registra os valores efetivamente "
+                   "pagos, para relatórios e tributação."),
+        "destrinchando": [
+            azb("Abordagem contábil") + ": olha para trás. Registra custos <b>explícitos</b> (desembolsos), a "
+            "valores históricos, com depreciação por regras legais e fiscais. Serve a acionistas, credores e "
+            "fisco.",
+            azb("Abordagem econômica") + ": olha para a decisão. Mede o " + azb("custo de oportunidade")
+            + " de todos os recursos — explícitos e <b>implícitos</b> (o salário que o dono deixa de ganhar "
+            "fora, o rendimento que o capital próprio teria em outro uso). Serve para decidir se e quanto "
+            "produzir.",
+            "Exemplo: receita de R$ 500 mil e custos explícitos de R$ 350 mil → " + vd("lucro contábil = 150 mil")
+            + ". Se o dono ganharia R$ 100 mil como empregado e o capital próprio renderia R$ 60 mil, o "
+            + vd("lucro econômico = −10 mil") + ": o negócio destrói valor, embora o balanço mostre lucro.",
+            "Por isso " + azb("lucro econômico nulo") + " é o “lucro normal”: todos os fatores recebem o que "
+            "receberiam no melhor uso alternativo. É o equilíbrio de longo prazo da concorrência perfeita.",
+            vm("Regra-âncora: eficiência alocativa e custo de oportunidade → economista; valores pagos e "
+               "históricos → contador."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A definição está correta, mas atribuída à abordagem errada. "
+                       "Pista: “eficiência da utilização dos recursos” é linguagem de alocação, que só faz sentido "
+                       "com custo de oportunidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A abordagem econômica dos custos considera os custos de oportunidade, inclusive os implícitos.”</i> "
+            "→ CERTO",
+            "<i>“O lucro econômico é sempre maior ou igual ao lucro contábil.”</i> → ERRADO (inversão: é menor ou "
+            "igual, pois desconta os custos implícitos)",
+        ])],
+        "reescrita": ("A abordagem " + hl("econômica") + " visa fornecer e utilizar valores que representem a "
+                      "eficiência da utilização dos recursos no processo produtivo."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. Essa é a abordagem econômica, não a contábil.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0046
+    {
+        "id": "ECO-E1-0046-1", "fonte_ref": "E1-0046", "destino": "06", "subtema": H2["cec"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Acerca da distinção entre as abordagens contábil e econômica dos custos de produção, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Os custos econômicos são aqueles medidos em termos de valores pagos por uma firma na "
+                      "aquisição de seus insumos de produção (os chamados custos históricos)."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Os custos econômicos são aqueles medidos em termos de ")
+                    + vm("valores pagos por uma firma na aquisição de seus insumos de produção (os chamados custos "
+                         "históricos)") + az(".")),
+        "poucas": ("Custo histórico é critério <b>contábil</b>. O " + azb("custo econômico") + " é o custo de "
+                   "oportunidade: o valor do melhor uso alternativo de cada recurso hoje, incluindo os custos "
+                   "implícitos."),
+        "destrinchando": [
+            azb("Custo histórico") + " = o preço pago na aquisição. " + azb("Custo econômico")
+            + " = o que se renuncia ao usar o recurso agora. Exemplo: um estoque comprado a R$ 10 por unidade "
+            "que hoje vale " + vd("R$ 15") + " no mercado custa, economicamente, R$ 15 para ser usado — é o que "
+            "a firma deixa de receber vendendo-o.",
+            "Inclui " + azb("custos implícitos") + ", que não passam pelo caixa: trabalho do proprietário, "
+            "imóvel próprio que poderia ser alugado, capital próprio que renderia juros.",
+            azb("Custos irrecuperáveis") + " (afundados): uma máquina sob medida, sem revenda, tem custo "
+            "histórico alto e custo de oportunidade de uso ≈ " + vd("zero") + ". Para a decisão, o que foi gasto "
+            "e não volta é irrelevante.",
+            "Consequência prática: a contabilidade pode mostrar lucro onde o economista vê prejuízo (e vice-"
+            "versa, quando ativos se valorizaram).",
+            vm("Regra-âncora: custo econômico = custo de oportunidade — olhe para a melhor alternativa, não para "
+               "a nota fiscal."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A definição de custo contábil foi atribuída ao custo "
+                       "econômico. O parêntese “os chamados custos históricos” é a pista: é termo de "
+                       "contabilidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O custo econômico de usar um estoque adquirido no passado é seu valor atual de mercado, e não o "
+            "preço pago.”</i> → CERTO",
+            "<i>“Custos irrecuperáveis devem pesar na decisão de continuar ou não produzindo.”</i> → ERRADO "
+            "(custos afundados são irrelevantes para a decisão)",
+        ])],
+        "reescrita": ("Os custos econômicos são aqueles medidos em termos de " + hl("custo de oportunidade — o "
+                      "valor do melhor uso alternativo dos insumos, inclusive os próprios —, e não dos valores "
+                      "históricos pagos na sua aquisição") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. Custos históricos referem-se à contabilidade; custos econômicos incluem custo "
+                            "de oportunidade.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0221
+    {
+        "id": "ECO-E1-0221-1", "fonte_ref": "E1-0221", "destino": "06", "subtema": H2["ccp"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_RT_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": "Se o produto marginal do trabalho for decrescente, então o custo marginal será crescente.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o produto marginal do trabalho for <u>decrescente</u>, então o custo marginal será "
+                      "<u>crescente</u>."),
+        "poucas": ("Com salário dado e trabalho como fator variável, " + vd("CMg = w/PMg<sub>L</sub>")
+                   + ": se cada trabalhador extra produz menos, cada unidade extra exige mais horas e custa mais."),
+        "destrinchando": [
+            "Dedução: CMg = ΔCV/ΔQ = w·ΔL/ΔQ = " + vd("w/PMg<sub>L</sub>") + ". Do mesmo modo, CVMe = w·L/Q = "
+            + vd("w/PMe<sub>L</sub>") + ". As curvas de custo são o “espelho” das curvas de produto.",
+            "Espelhamento completo: PMg crescente ↔ CMg decrescente; " + vd("PMg máximo ↔ CMg mínimo") + "; "
+            + vd("PMe máximo ↔ CVMe mínimo") + ". Exemplo: w = R$ 100; se o PMg<sub>L</sub> cai de 20 para 10 "
+            "unidades, o CMg sobe de R$ 5 para R$ 10.",
+            "A " + azb("lei dos rendimentos marginais decrescentes") + " é, portanto, a origem do CMg crescente "
+            "no curto prazo — e daí vem a curva de oferta positivamente inclinada da firma competitiva (P = CMg, "
+            "acima do mínimo do CVMe).",
+            "Hipóteses implícitas: curto prazo (capital fixo) e salário constante (a firma é tomadora de preço no "
+            "mercado de trabalho).",
+            vm("Regra-âncora: produto e custo andam em sentidos opostos — CMg = w/PMg."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Relação-padrão de dualidade, enunciada como condicional (“se… "
+                       "então”). O candidato hesita porque “decrescente” e “crescente” parecem contraditórios; "
+                       "é justamente essa oposição que está certa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o produto médio do trabalho for máximo, o custo variável médio será mínimo.”</i> → CERTO",
+            "<i>“Se o produto marginal do trabalho for decrescente, o custo total médio será necessariamente "
+            "crescente.”</i> → ERRADO (o CTMe ainda cai enquanto o CMg estiver abaixo dele)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["se… então"], "dificuldade": 1,
+        "comentario_fonte": "CMg = w/PMgL; com salário constante, PMgL decrescente implica CMg crescente "
+                            "(dualidade entre produção e custos).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: fonte indica apenas “Aula 7” do professor, sem prova de origem"],
+    },
+    # ------------------------------------------------------------------ E1-0222
+    {
+        "id": "ECO-E1-0222-1", "fonte_ref": "E1-0222", "destino": "06", "subtema": H2["ccp"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_RT_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": "Se o custo marginal estiver acima do custo total médio, então este último está diminuindo.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se o custo marginal estiver acima do custo total médio, então este último está ")
+                    + vm("diminuindo") + az(".")),
+        "poucas": ("Se a unidade extra custa <b>mais</b> que a média, ela puxa a média para cima: com "
+                   "CMg > CTMe, o " + azb("CTMe está aumentando") + "."),
+        "destrinchando": [
+            "Regra da média: com média 7 na disciplina, tirar 9 na próxima prova sobe a média; tirar 5 a "
+            "derruba. No custo: " + vd("CMg &lt; CTMe") + " → CTMe cai; " + vd("CMg = CTMe") + " → CTMe no "
+            "mínimo; " + vd("CMg > CTMe") + " → CTMe sobe.",
+            "Atenção: o que decide é a <b>posição</b> do CMg em relação à média, não a inclinação do CMg. O CMg "
+            "já começa a subir antes do mínimo do CTMe — nesse trecho, ainda abaixo da média, ele continua a "
+            "puxá-la para baixo.",
+            "Formato em U do CTMe = " + azb("CFMe") + " (sempre decrescente, pela diluição do custo fixo) + "
+            + azb("CVMe") + " (crescente a partir de certo ponto, pelos rendimentos decrescentes).",
+            "O CMg corta o CVMe e o CTMe nos respectivos mínimos; o mínimo do CVMe vem antes (à esquerda), "
+            "porque CTMe − CVMe = CFMe > 0 e ainda está caindo.",
+            "Importância: o mínimo do CTMe é a " + azb("escala eficiente") + " da planta; na concorrência "
+            "perfeita de longo prazo, o preço converge para ele.",
+        ],
+        "grafico_verso": "ECO-E1-0222-1-V1",
+        "dissecando": (cz("[inversão]") + " O item inverte a relação marginal × média. Quem guarda só a "
+                       "imagem do CMg “cortando” o CTMe, sem saber de que lado está cada trecho, cai. Pista: "
+                       "“acima” ↔ “aumentando”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o custo marginal estiver crescendo, o custo total médio também estará crescendo.”</i> → "
+            "ERRADO (o CMg sobe antes do mínimo do CTMe)",
+            "<i>“O custo marginal intercepta o custo variável médio no ponto mínimo deste.”</i> → CERTO",
+        ])],
+        "reescrita": ("Se o custo marginal estiver acima do custo total médio, então este último está "
+                      + hl("aumentando") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["se… então"], "dificuldade": 1,
+        "comentario_fonte": "É o contrário: com CMg > CTMe, o CTMe está subindo; o CMg passa pelo mínimo do CTMe. "
+                            "Analogia da nota da prova e da média.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (74).png, image (75).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagens não preservadas; mecanismo redesenhado em ECO-E1-0222-1-V1)"}],
+        "alertas": ["nota_redacao: fonte indica apenas “Aula 7” do professor, sem prova de origem"],
+    },
+    # ------------------------------------------------------------------ E1-0223
+    {
+        "id": "ECO-E1-0223-1", "fonte_ref": "E1-0223", "destino": "06", "subtema": H2["clp"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False, "errei": True,
+        "comando": CMD_RT_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("Se a função de produção tem retornos de escala constantes, então o custo total médio de "
+                      "longo prazo será crescente"),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se a função de produção tem retornos de escala constantes, então o custo total médio de "
+                       "longo prazo será ") + vm("crescente")),
+        "poucas": ("Com " + azb("retornos constantes") + " (e preços de fatores dados), dobrar a produção dobra "
+                   "os insumos e o custo total: o " + vd("CTMe de longo prazo é constante") + " (horizontal). "
+                   "Crescente seria com retornos decrescentes."),
+        "destrinchando": [
+            "Mapa escala → custo, com preços dos fatores constantes: retornos " + vd("crescentes") + " → CMeLP "
+            "decrescente (economias de escala); " + vd("constantes") + " → CMeLP constante, e CMgLP = CMeLP; "
+            + vd("decrescentes") + " → CMeLP crescente (deseconomias).",
+            "Conta: com retornos constantes, produzir 2Q exige 2K e 2L; o custo vai de wL + rK para 2(wL + rK). "
+            "Custo médio = CT/Q fica igual.",
+            "A ressalva “preços dos fatores constantes” importa: se a expansão da firma encarece os insumos que "
+            "ela compra (deseconomias <b>pecuniárias</b>), o custo médio pode subir mesmo com tecnologia de "
+            "retornos constantes.",
+            "Por isso se distinguem " + azb("rendimentos de escala") + " (propriedade da função de produção) e "
+            + azb("economias de escala") + " (comportamento do custo médio).",
+            "A CMeLP típica em U combina os três trechos: economias no início, um fundo plano ou ponto de "
+            "mínimo (escala eficiente) e deseconomias depois.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item associa retornos constantes ao comportamento de "
+                       "custo dos retornos decrescentes. Pista: “constante” na produção vira “constante” no "
+                       "custo médio — a palavra se conserva."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com retornos constantes de escala e preços dos fatores dados, o custo marginal de longo prazo "
+            "iguala o custo médio de longo prazo.”</i> → CERTO",
+            "<i>“Retornos crescentes de escala implicam custo médio de longo prazo crescente.”</i> → ERRADO "
+            "(inversão: implicam custo médio decrescente)",
+        ])],
+        "reescrita": ("Se a função de produção tem retornos de escala constantes, então o custo total médio de "
+                      "longo prazo será " + hl("constante") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["se… então"], "dificuldade": 1,
+        "comentario_fonte": "Retornos constantes → CTMe de longo prazo constante; crescente seria com retornos "
+                            "decrescentes.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: fonte indica apenas “Aula 7” do professor, sem prova de origem"],
+    },
+    # ------------------------------------------------------------------ E1-0224
+    {
+        "id": "ECO-E1-0224-1", "fonte_ref": "E1-0224", "destino": "06", "subtema": H2["isc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_RT_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma elevação da taxa de juros (custo do capital) relativamente ao salário levará as empresas "
+                      "a usarem técnicas de produção menos intensivas em capital."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma elevação da taxa de juros (custo do capital) relativamente ao salário levará as empresas "
+                      "a usarem técnicas de produção <u>menos intensivas em capital</u>."),
+        "poucas": ("Juros mais altos encarecem o capital em relação ao trabalho (w/r cai): a isocusto fica mais "
+                   "plana e a nova tangência usa " + vd("menos K por unidade de L") + " — efeito substituição."),
+        "destrinchando": [
+            "O preço do serviço do capital (r) é o seu " + azb("custo de uso") + ": juros (o custo de "
+            "oportunidade dos recursos empatados) mais depreciação. Se os juros sobem, r sobe.",
+            "Condição de custo mínimo: " + vd("TMST = PMg<sub>L</sub>/PMg<sub>K</sub> = w/r") + ". Com r maior, "
+            "w/r cai; para restabelecer a igualdade, a firma precisa reduzir PMg<sub>L</sub>/PMg<sub>K</sub> — "
+            "usar mais trabalho e menos capital.",
+            "No gráfico (Q fixo): com w = r, o ótimo é A = (4; 4), K/L = 1; se r quadruplica, o ótimo passa a "
+            "B = (8; 2), " + vd("K/L = 1/4") + ".",
+            "Ressalva: isso é o efeito-substituição, com produção dada. O custo maior também pode reduzir a "
+            "escala (efeito-produção) e, com ele, o uso dos dois fatores. Mas a <b>intensidade</b> em capital "
+            "(K/L), que é o que o item afirma, cai.",
+            "Exceção: com " + azb("complementares perfeitos") + " (isoquanta em L, proporções fixas), não há "
+            "substituição e K/L não muda.",
+        ],
+        "grafico_verso": "ECO-E1-0224-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " Item de mecanismo direto. O cuidado é ler “intensivas em "
+                       "capital” como proporção K/L, e não como quantidade absoluta de capital — é isso que "
+                       "garante o CERTO independentemente do efeito-produção."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma elevação dos salários em relação à taxa de juros levará as empresas a adotar técnicas mais "
+            "intensivas em capital.”</i> → CERTO",
+            "<i>“Com tecnologia de proporções fixas, a alta dos juros reduz a relação capital/trabalho.”</i> → "
+            "ERRADO (proporções fixas: não há substituição)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["relativamente"], "dificuldade": 1,
+        "comentario_fonte": "Juros maiores elevam o custo do capital em relação ao salário; a minimização de "
+                            "custos leva à substituição de capital por trabalho.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: fonte indica apenas “Aula 7” do professor, sem prova de origem"],
+    },
+    # ------------------------------------------------------------------ E1-0225
+    {
+        "id": "ECO-E1-0225-1", "fonte_ref": "E1-0225", "destino": "06", "subtema": H2["isc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_RT_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("A firma minimiza custos quando a inclinação da curva de isocusto (salário/remuneração do "
+                      "capital) é igual à razão entre os produtos marginais do trabalho e do capital."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A firma minimiza custos quando a inclinação da curva de isocusto (<u>salário/remuneração do "
+                      "capital</u>) é igual à razão entre os produtos marginais <u>do trabalho e do capital</u>."),
+        "poucas": ("No custo mínimo, isocusto e isoquanta são tangentes: " + vd("w/r = PMg<sub>L</sub>/"
+                   "PMg<sub>K</sub> = TMST") + " — ou, o que é o mesmo, PMg<sub>L</sub>/w = PMg<sub>K</sub>/r."),
+        "destrinchando": [
+            azb("Isocusto") + ": C = wL + rK → K = C/r − (w/r)·L; inclinação (em módulo) = " + vd("w/r") + ", o "
+            "preço relativo do trabalho. " + azb("Isoquanta") + ": inclinação = TMST = PMg<sub>L</sub>/"
+            "PMg<sub>K</sub>.",
+            "Três formas da mesma condição: (1) tangência entre a isocusto e a isoquanta; (2) TMST = w/r; "
+            "(3) " + vd("PMg<sub>L</sub>/w = PMg<sub>K</sub>/r") + " — o último real gasto rende o mesmo produto "
+            "em qualquer fator.",
+            "Fora do ótimo: w = 20, r = 10, PMg<sub>L</sub> = 30, PMg<sub>K</sub> = 10 → PMg<sub>L</sub>/w = 1,5 "
+            "> PMg<sub>K</sub>/r = 1. Cada real em trabalho rende mais: trocar capital por trabalho reduz o custo "
+            "até a igualdade.",
+            "Condições para a tangência ser mínimo: isoquantas convexas (TMST decrescente) e solução interior "
+            "(a firma usa os dois fatores).",
+            "É o espelho exato do consumidor: TMS = P<sub>X</sub>/P<sub>Y</sub>, ou UMg<sub>X</sub>/P<sub>X</sub> "
+            "= UMg<sub>Y</sub>/P<sub>Y</sub>.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Enunciado de manual. O risco está na <b>ordem</b> das razões: "
+                       "trabalho em cima dos dois lados (w/r com PMg<sub>L</sub>/PMg<sub>K</sub>). A banca "
+                       "costuma inverter uma delas para fabricar o ERRADO."),
+        "modulos": [
+            ("🧠 Mnemônico", ["“Trabalho em cima nos dois lados”: w/r = PMg<sub>L</sub>/PMg<sub>K</sub>."]),
+            ("😈 Para dificultar", [
+                "<i>“…é igual à razão entre os produtos marginais do capital e do trabalho.”</i> → ERRADO (razão "
+                "invertida)",
+                "<i>“No ponto de custo mínimo, o produto marginal por real gasto é o mesmo em todos os "
+                "fatores.”</i> → CERTO",
+            ]),
+        ],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Tangência entre isocusto (inclinação w/r) e isoquanta (PMgL/PMgK); três formas do "
+                            "ponto ótimo: tangência, TMST = preço relativo, PMgL/w = PMgK/r.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (72).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem não preservada; conteúdo absorvido no 📖)"}],
+        "alertas": ["nota_redacao: fonte indica apenas “Aula 7” do professor, sem prova de origem"],
+    },
+    # ------------------------------------------------------------------ E1-0237
+    {
+        "id": "ECO-E1-0237-1", "fonte_ref": "E1-0237", "destino": "06", "subtema": H2["clp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2012, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo a custos de produção e economias de escala.",
+        "rotulo_item": "Item",
+        "assertiva": ("Alegar que as escolas públicas brasileiras, por serem muito pequenas, apresentam custos "
+                      "médios elevados é um raciocínio consistente com a existência de economias de escala na "
+                      "produção do ensino público."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Alegar que as escolas públicas brasileiras, por serem muito pequenas, apresentam custos "
+                      "médios elevados é um raciocínio <u>consistente com</u> a existência de economias de escala "
+                      "na produção do ensino público."),
+        "poucas": (azb("Economias de escala") + " = custo médio de longo prazo que cai quando a produção "
+                   "aumenta. Unidade pequena opera no trecho descendente da CMeLP — logo, " + vd("custo por "
+                   "aluno alto") + ". O raciocínio é coerente."),
+        "destrinchando": [
+            "Fontes de economias de escala numa escola: custos fixos e indivisíveis (direção, secretaria, "
+            "biblioteca, laboratório, quadra) diluídos por mais alunos; professores especializados com turmas "
+            "completas; compras em volume.",
+            "Exemplo: um professor de física com 3 turmas ou com 10 turmas recebe o mesmo salário por aula, mas "
+            "a escola pequena paga-o subocupado; o custo por aluno da disciplina é maior.",
+            "Limites: a partir de certo tamanho surgem " + azb("deseconomias") + " (gestão mais difícil, turmas "
+            "superlotadas, deslocamentos longos dos alunos), e há a dimensão da qualidade, que o custo médio não "
+            "capta.",
+            rx("No Brasil") + ", o argumento aparece no debate sobre a " + azb("nucleação") + " de escolas "
+            "rurais pequenas (agrupamento em unidades maiores com transporte escolar), em que o ganho de escala "
+            "é confrontado com o custo do transporte e com o fechamento de escolas próximas das comunidades.",
+            "O item pede <b>consistência lógica</b> do argumento com a teoria, não a sua verdade empírica.",
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " “Consistente com” rebaixa a exigência: "
+                       "basta que a alegação decorra do conceito. Quem procura dado empírico sobre escolas "
+                       "brasileiras para julgar perde tempo — é aplicação direta de economias de escala."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Alegar que escolas muito grandes têm custo médio elevado é consistente com a existência de "
+            "deseconomias de escala.”</i> → CERTO",
+            "<i>“Se o ensino público tivesse retornos constantes de escala, escolas menores teriam custo médio "
+            "por aluno mais alto.”</i> → ERRADO (com retornos constantes e preços dados, a CMeLP é constante)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["consistente com"],
+        "dificuldade": 1,
+        "comentario_fonte": "Correta: economias de escala; escola maior dilui custos (um aluno a mais não eleva "
+                            "proporcionalmente o custo do professor), reduzindo o custo médio.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE/CACD 2012 (não confirmada: a fonte só traz o ano entre "
+                    "parênteses)"],
+    },
 ]

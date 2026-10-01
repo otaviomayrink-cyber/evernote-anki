@@ -653,4 +653,214 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00034
+    {
+        "id": "ECO-E2-L00034-1", "fonte_ref": "E2-L00034", "destino": "03", "subtema": H2["piso"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Complementar a política de preço mínimo com incentivos à exportação pode permitir que os "
+                      "produtores alcancem um excedente exportável, deslocando a curva de demanda à direita e "
+                      "aumentando a quantidade produzida. Isso pode ser uma estratégia eficaz para potencializar "
+                      "os ganhos do ofertante, especialmente quando a demanda interna é insuficiente para absorver "
+                      "a produção desejada."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Complementar a política de preço mínimo com incentivos à exportação <u>pode</u> permitir "
+                      "que os produtores alcancem um excedente exportável, deslocando a curva de demanda à direita "
+                      "e aumentando a quantidade produzida. Isso <u>pode</u> ser uma estratégia eficaz para "
+                      "potencializar os ganhos do ofertante, especialmente quando a demanda interna é insuficiente "
+                      "para absorver a produção desejada."),
+        "poucas": ("O piso gera " + azb("excesso de oferta") + "; a " + azb("demanda externa") + " soma-se à "
+                   "interna (demanda total desloca-se à direita) e absorve as sobras ao preço garantido: o "
+                   "produtor vende mais sem que o governo precise estocar tudo."),
+        "destrinchando": [
+            "Com piso acima do equilíbrio, a quantidade que os produtores querem ofertar (qˢ) supera a que o "
+            "mercado interno compra (qᴰ). Sem destino para a diferença, ou o governo compra o estoque, ou o "
+            "produto encalha.",
+            "Abrir o mercado externo equivale a somar à demanda doméstica uma demanda de exportação: a "
+            + azb("demanda total") + " desloca-se para a direita. A esse preço, vende-se mais e o excesso "
+            "encolhe ou desaparece; a produção efetivamente vendida aumenta, e com ela o excedente do produtor.",
+            "Os moduladores (“pode”, “especialmente”) tornam o item seguro: funciona se o preço externo, somado "
+            "ao incentivo, cobrir o preço mínimo. O custo vai para o contribuinte (o incentivo) e, em regra, "
+            "para o consumidor doméstico, que continua pagando o piso.",
+            "Limite institucional: subsídios à exportação de produtos agrícolas foram proibidos na "
+            + azb("OMC") + " pela decisão de " + vd("Nairóbi (2015)") + ", causa defendida pelo "
+            + rx("Brasil") + ", grande exportador agrícola prejudicado pelos subsídios de países ricos. "
+            "Incentivos à exportação hoje precisam caber nas regras multilaterais.",
+            "Na " + rx("PGPM brasileira") + ", o governo pode, em vez de comprar o produto, pagar prêmios para que "
+            "o setor privado o escoe para outras regiões a preço que respeite o mínimo — a mesma lógica de "
+            "criar demanda adicional em vez de estocar.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " O item é protegido por “pode” duas vezes e pelo "
+                       "“especialmente”. A tentação de marcar ERRADO vem de achar que só a política de compra "
+                       "sustenta o piso; o item apenas descreve um complemento possível."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Complementar o preço mínimo com incentivos à exportação elimina necessariamente a perda de "
+            "bem-estar do consumidor doméstico.”</i> → ERRADO (modulador absoluto: o consumidor continua pagando "
+            "o piso)",
+            "<i>“Os incentivos à exportação deslocam para a direita a curva de oferta doméstica.”</i> → ERRADO "
+            "(curva trocada: desloca-se a demanda total)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode", "especialmente"], "dificuldade": 2,
+        "comentario_fonte": "Exportações ampliam as vendas além do mercado interno; deslocam a demanda à "
+                            "direita; ajudam o produtor a alcançar produção maior.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00035
+    {
+        "id": "ECO-E2-L00035-1", "fonte_ref": "E2-L00035", "destino": "03", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A implementação de um subsídio pelo governo, ao invés de compras diretas de estoque, pode ser "
+                      "mais vantajosa em mercados onde a demanda apresenta baixa elasticidade preço."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A implementação de um subsídio pelo governo, ao invés de compras diretas de estoque, pode "
+                       "ser mais vantajosa em mercados onde a demanda apresenta ") + vm("baixa")
+                    + az(" elasticidade preço.")),
+        "poucas": ("Com demanda " + azb("inelástica") + ", escoar toda a produção exige derrubar muito o preço de "
+                   "mercado, e o subsídio (a diferença até o preço garantido, sobre toda a produção) fica caro. "
+                   "Comprar o pequeno excedente sai mais barato."),
+        "destrinchando": [
+            "Mesmo objetivo — garantir ao produtor o preço pₛ, acima do equilíbrio — por dois caminhos:",
+            "<b>Compra de estoques</b>: o governo fixa pₛ e compra a sobra. Custo = " + vd("pₛ × (qˢ − qᴰ)")
+            + ". Com demanda inelástica, qᴰ quase não cai quando o preço sobe: a sobra é pequena.",
+            "<b>Subsídio (pagamento da diferença)</b>: deixa-se o mercado absorver toda a produção qˢ ao preço "
+            "pₘ que a demanda aceita, e paga-se ao produtor " + vd("(pₛ − pₘ) × qˢ") + ". Com demanda "
+            "inelástica, pₘ precisa cair muito para vender qˢ — a diferença é enorme e incide sobre toda a "
+            "produção.",
+            "No exemplo do gráfico: compra = " + vd("≈ 9,4") + "; subsídio = " + vd("≈ 23,4") + ". Com demanda "
+            "<b>elástica</b>, a lógica se inverte: pₘ cai pouco (subsídio barato) e a sobra a comprar é grande "
+            "(estoque caro).",
+            "Além do custo fiscal, há diferenças de bem-estar: o subsídio entrega ao consumidor preço baixo e "
+            "consumo maior; a compra mantém o consumidor pagando pₛ e gera custos de armazenagem. "
+            + rx("No Brasil") + ", a " + rx("PGPM") + " tem os dois tipos de instrumento: compra direta (AGF) e "
+            "prêmios equalizadores pagos ao produtor (PEPRO).",
+        ],
+        "grafico_verso": "ECO-E2-L00035-1-V1",
+        "dissecando": (cz("[inversão]") + " A comparação é real e cobrada; o item inverte a condição. Ajuda "
+                       "lembrar qual área cresce com a rigidez da demanda: o retângulo do subsídio (pₛ − pₘ) × qˢ "
+                       "explode quando a demanda é inclinada demais."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A compra direta de estoques tende a ser menos onerosa para o governo que o pagamento da "
+            "diferença de preço quando a demanda é inelástica.”</i> → CERTO",
+            "<i>“O subsídio ao produtor eleva o preço pago pelo consumidor.”</i> → ERRADO (inversão: o consumidor "
+            "paga pₘ, abaixo do equilíbrio)",
+        ])],
+        "reescrita": ("A implementação de um subsídio pelo governo, ao invés de compras diretas de estoque, pode ser "
+                      "mais vantajosa em mercados onde a demanda apresenta " + hl("alta") + " elasticidade "
+                      "preço."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["pode"], "dificuldade": 3,
+        "comentario_fonte": "Com demanda inelástica, subsidiar cada unidade é mais caro; compras de estoque são "
+                            "mais adequadas.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00334
+    {
+        "id": "ECO-E2-L00334-1", "fonte_ref": "E2-L00334", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à incidência tributária.",
+        "rotulo_item": "Item",
+        "assertiva": ("A incidência econômica de um imposto específico sobre vendas depende da elasticidade-preço "
+                      "relativa da oferta e da demanda. Se a demanda for perfeitamente inelástica, todo o ônus do "
+                      "imposto recairá sobre o produtor, pois o consumidor não reduzirá a quantidade demandada "
+                      "diante do aumento de preço."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A incidência econômica de um imposto específico sobre vendas depende da elasticidade-preço "
+                       "relativa da oferta e da demanda. Se a demanda for perfeitamente inelástica, todo o ônus do "
+                       "imposto recairá sobre o ") + vm("produtor") + az(", pois o consumidor não reduzirá a "
+                       "quantidade demandada diante do aumento de preço.")),
+        "poucas": ("Demanda " + azb("perfeitamente inelástica") + " = consumidor que compra a mesma quantidade a "
+                   "qualquer preço: o imposto é repassado por inteiro e o ônus fica com o "
+                   + vd("consumidor") + "."),
+        "destrinchando": [
+            "Demanda vertical (|εᴰ| = 0): a oferta sobe t, o preço ao consumidor sobe " + vd("exatamente t") + " e "
+            "a quantidade não muda. O produtor continua recebendo o preço líquido de antes.",
+            "Pela fórmula, parcela do consumidor = εˢ / (εˢ + |εᴰ|) = εˢ / εˢ = " + vd("1") + ", qualquer que "
+            "seja a oferta (desde que εˢ > 0).",
+            "Note a incoerência interna do item: a própria justificativa (“o consumidor não reduzirá a quantidade "
+            "diante do aumento de preço”) é o motivo pelo qual <b>ele</b> paga tudo — quem não foge do preço "
+            "maior absorve o imposto.",
+            "Simetria para memorizar: quem é perfeitamente <b>inelástico</b> paga tudo; quem é perfeitamente "
+            "<b>elástico</b> não paga nada. Para o produtor arcar com tudo, seria preciso oferta vertical ou "
+            "demanda horizontal.",
+            "Como a quantidade não cai, também não há peso morto: o imposto é pura transferência do consumidor "
+            "para o governo.",
+        ],
+        "dissecando": (cz("[troca de ator]") + " A 1ª frase é a regra correta e a premissa (“perfeitamente "
+                       "inelástica”) está certa; o erro é só o destinatário do ônus. Pista: a justificativa "
+                       "descreve o comportamento de quem <b>paga</b> o imposto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a oferta for perfeitamente inelástica, todo o ônus do imposto recairá sobre o "
+            "produtor.”</i> → CERTO",
+            "<i>“Com demanda perfeitamente inelástica, o imposto gera peso morto elevado.”</i> → ERRADO (sem "
+            "queda de quantidade, peso morto nulo)",
+        ])],
+        "reescrita": ("A incidência econômica de um imposto específico sobre vendas depende da elasticidade-preço "
+                      "relativa da oferta e da demanda. Se a demanda for perfeitamente inelástica, todo o ônus do "
+                      "imposto recairá sobre o " + hl("consumidor") + ", pois o consumidor não reduzirá a "
+                      "quantidade demandada diante do aumento de preço."),
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": ["todo"], "dificuldade": 1,
+        "comentario_fonte": "Demanda vertical: consumidor absorve todo o aumento; o produtor repassa todo o "
+                            "imposto e a quantidade não muda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00337
+    {
+        "id": "ECO-E2-L00337-1", "fonte_ref": "E2-L00337", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à incidência tributária.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em uma indústria perfeitamente competitiva de custos constantes, a incidência de um imposto "
+                      "ad valorem sobre o consumo recai integralmente sobre os consumidores no longo prazo, uma "
+                      "vez que a curva de oferta de longo prazo da indústria é perfeitamente elástica."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em uma indústria perfeitamente competitiva de <u>custos constantes</u>, a incidência de um "
+                      "imposto ad valorem sobre o consumo recai integralmente sobre os consumidores <u>no longo "
+                      "prazo</u>, uma vez que a curva de oferta de longo prazo da indústria é perfeitamente "
+                      "elástica."),
+        "poucas": ("Custos constantes → " + azb("oferta de longo prazo horizontal") + " no CMe mínimo. O preço "
+                   "líquido do produtor não pode ficar abaixo dele, então o consumidor paga " + vd("todo") + " o "
+                   "imposto."),
+        "destrinchando": [
+            "Longo prazo em concorrência perfeita: livre entrada e saída levam o lucro econômico a zero e o "
+            "preço ao " + azb("mínimo do custo médio") + ". Em indústria de " + azb("custos constantes") + " "
+            "(a expansão não encarece os insumos), esse mínimo não muda com a escala: a oferta de longo prazo é "
+            "uma reta horizontal.",
+            "Com o imposto, se o preço líquido caísse abaixo do CMe mínimo, as firmas teriam prejuízo e sairiam "
+            "até o preço ao consumidor subir o suficiente para restaurar pv = CMe mín. Resultado: pv inalterado; "
+            "pc sobe o valor inteiro do imposto.",
+            "Ad valorem ou específico tanto faz aqui: com oferta horizontal, pc = (1 + τ) × CMe mín. A "
+            "quantidade cai (a demanda é inclinada) e há peso morto, mas o ônus é todo do consumidor.",
+            "No <b>curto prazo</b>, com a oferta inclinada (CMg crescente das firmas existentes), o ônus é "
+            "repartido; o repasse integral é resultado de longo prazo. Em indústria de custos crescentes, a "
+            "oferta de longo prazo inclina-se e o produtor também arca com parte.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Três qualificadores sustentam o CERTO: "
+                       "“perfeitamente competitiva”, “custos constantes” e “longo prazo”. O “integralmente” "
+                       "assusta, mas aqui é exato. Retire qualquer um dos três e o item vira ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a incidência recai integralmente sobre os consumidores no curto prazo…”</i> → ERRADO (dado "
+            "alterado: no curto prazo a oferta é inclinada)",
+            "<i>“Em indústria de custos crescentes, o imposto recai integralmente sobre os consumidores no longo "
+            "prazo.”</i> → ERRADO (oferta de longo prazo inclinada: ônus repartido)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["integralmente", "no longo prazo"],
+        "dificuldade": 2,
+        "comentario_fonte": "Custos constantes: oferta de longo prazo horizontal no CMe mínimo; imposto eleva o "
+                            "preço final no valor do imposto; produtor mantém lucro econômico zero.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

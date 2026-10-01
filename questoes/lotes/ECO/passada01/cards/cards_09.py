@@ -253,7 +253,7 @@ CARDS = [
             "transacionada.”</i> → ERRADO (modulador absoluto: abaixo do cruzamento da demanda com o CMg a "
             "quantidade volta a cair)",
         ])],
-        "reescrita": ("A imposição de preço máximo (“teto”) " + hl("abaixo do equilíbrio, em mercados "
+        "reescrita": ("A imposição de preço máximo (“teto”) <s>necessariamente</s> " + hl("abaixo do equilíbrio, em mercados "
                       "competitivos,") + " conduz à perda de bem-estar e ao desabastecimento" + hl("; em "
                       "monopólio, um teto entre o preço de monopólio e o custo marginal pode elevar a quantidade "
                       "e reduzir o peso morto") + "."),
@@ -264,7 +264,7 @@ CARDS = [
         "figuras_fonte": [{"ref": "IMAGEM 205", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (teto em concorrência perfeita; substituída por ECO-E2-L01212-1-V1, "
                                    "caso do monopólio)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva em ECO-E3-L00199-1 (Nidi/Jacqueline Bueno, Simulado Abril/2025); cards mantidos e referidos"],
     },
     # ------------------------------------------------------------------ E2-L01213
     {
@@ -314,13 +314,13 @@ CARDS = [
         ])],
         "reescrita": ("Quando o governo adota uma política de preços mínimos para determinado produto, com vistas à "
                       "garantia de renda e ao estímulo da produção, ao optar pela política de compra, pagará ao "
-                      "produtor o preço mínimo definido " + hl("pelas unidades excedentes que adquirir") + "."),
+                      "produtor <s>a diferença entre o preço pago pelo consumidor no mercado e</s> o preço mínimo definido " + hl("pelas unidades excedentes que adquirir") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": "Na política de compra, o governo paga ao produtor o preço mínimo, e não a diferença.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 206", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "redesenhada (ECO-E2-L01213-1-V1: compra × pagamento da diferença)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva em ECO-E2-L01393-1 (CEBRASPE, PF/Agente/2009), de onde o item foi copiado"],
     },
     # ------------------------------------------------------------------ E2-L01214
     {
@@ -526,9 +526,9 @@ CARDS = [
                       "definido."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Quando o governo adota uma política de preços mínimos para determinado produto, com vistas "
-                      "à garantia de renda e ao estímulo da produção, ao optar pela política de compra, pagará ao "
-                      "produtor ") + vm("a diferença entre o preço pago pelo consumidor no mercado e") + az(" o "
-                      "preço mínimo definido."),
+                      "à garantia de renda e ao estímulo da produção, ao optar pela política de ") + vm("compra")
+                   + az(", pagará ao produtor a diferença entre o preço pago pelo consumidor no mercado e o preço "
+                        "mínimo definido."),
         "poucas": ("No " + azb("programa de compras") + ", o governo vira comprador e adquire o excedente "
                    "pagando o " + vd("preço mínimo") + ". Pagar a diferença entre o preço de mercado e o mínimo "
                    "é a política de " + azb("subsídio") + "."),
@@ -565,7 +565,7 @@ CARDS = [
                             "demandante; a política descrita no item é a de subsídios.",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva em ECO-E2-L01213-1 (Nabuco, Pré-TPS/2023)"],
     },
     # ------------------------------------------------------------------ E2-L01394
     {
@@ -1032,7 +1032,7 @@ CARDS = [
                            "acao": "cortada (conteúdo absorvido no 📖)"},
                           {"ref": "IMAGEM 259", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida (resumo comparativo no 📖)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva em ECO-E2-L01212-1 (Nabuco, Pré-TPS/2023); cards mantidos e referidos"],
     },
     # ------------------------------------------------------------------ E3-L00202
     {
@@ -1375,7 +1375,7 @@ CARDS = [
                             "por um cinto convertida em TMS de 5 kg por cinto).",
         "qualidade_fonte": "com_erro",
         "figuras_fonte": [],
-        "alertas": ["gabarito: a classificação marcava “?”; o verso da fonte indica CERTO em todas as respostas "
+        "alertas": ["nota_redacao: a classificação marcava gabarito “?”; o verso da fonte indica CERTO em todas as respostas "
                     "(“Correta”, “Item correto!”, “Verdadeiro”)",
                     "banca_provavel: item com ano (2010) e estilo C/E de CEBRASPE; prova não identificada por "
                     "busca"],

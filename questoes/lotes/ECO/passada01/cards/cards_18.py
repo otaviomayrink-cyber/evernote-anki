@@ -922,5 +922,495 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["banca_provavel: CEBRASPE (CACD 2018), não confirmada: a fonte traz só o ano"],
     },
+    # ------------------------------------------------------------------ E1-0248
+    {
+        "id": "ECO-E1-0248-1", "fonte_ref": "E1-0248", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2010", "ano": 2010, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do monopólio e da discriminação de preços, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Políticas de dumping adotadas por empresas que vendem seus produtos nos mercados "
+                      "internacionais a um preço inferior ao praticado no mercado doméstico podem ser consideradas "
+                      "ações próprias de monopolista discriminador de preços que visa à maximização de lucros."),
+        "gabarito": "CERTO", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": az("Políticas de dumping adotadas por empresas que vendem seus produtos nos mercados "
+                      "internacionais a um preço inferior ao praticado no mercado doméstico <u>podem ser "
+                      "consideradas</u> ações próprias de monopolista <u>discriminador de preços</u> que visa à "
+                      "maximização de lucros."),
+        "poucas": ("O " + azb("dumping") + " é discriminação de preços de 3º grau entre países: a firma cobra "
+                   + vd("menos no exterior") + ", onde a demanda que enfrenta é mais elástica (há concorrentes), "
+                   "e " + vd("mais em casa") + ", onde tem poder de mercado e está protegida."),
+        "destrinchando": [
+            "Definição econômica (e do " + azb("Acordo Antidumping da OMC") + ", art. VI do GATT): exportar a "
+            "preço inferior ao " + azb("valor normal") + " — em regra, o preço praticado no mercado doméstico do "
+            "exportador.",
+            "Lógica do discriminador: com mercados separados, a firma iguala a RMg de cada mercado ao CMg comum. "
+            "No mercado externo, disputado com outros produtores, a demanda da firma é mais elástica → markup "
+            "menor; no doméstico, menos elástica → markup maior. Resultado: preço externo < preço interno, "
+            "sem nenhuma intenção predatória — é " + vd("maximização de lucro") + ".",
+            "Condições: poder de mercado no país de origem e mercados segmentados (custos de transporte, "
+            "barreiras comerciais) que impeçam a revenda do produto barato de volta ao mercado doméstico. É o "
+            "tratamento de " + oc("Krugman e Obstfeld") + ", que apresentam o dumping como forma de "
+            "discriminação internacional de preços.",
+            "Distinguir do " + azb("dumping predatório") + " (preço abaixo do custo para eliminar concorrentes e "
+            "depois subir). A OMC não proíbe o dumping em si; autoriza o país importador a aplicar "
+            + azb("direitos antidumping") + " se houver dano à indústria doméstica. " + rx("O Brasil") + " é "
+            "usuário frequente do instrumento, por meio da Camex/Gecex.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " O item reformula a definição de livro-texto "
+                       "(dumping = discriminação internacional de preços) e se protege com “podem ser "
+                       "consideradas”. A armadilha é associar dumping só à prática desleal ou predatória e "
+                       "negar que maximize lucro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O dumping pressupõe necessariamente a venda no exterior a preço inferior ao custo de "
+            "produção.”</i> → ERRADO (o critério é o preço doméstico, não o custo)",
+            "<i>“O exportador pratica dumping porque a demanda externa que enfrenta é menos elástica que a "
+            "doméstica.”</i> → ERRADO (inversão: a externa é mais elástica)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["podem"], "dificuldade": 2,
+        "comentario_fonte": "Verso da fonte composto só de imagens não preservadas; gabarito resolvido.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (81).png, image (79).png, image (82).png", "tipo_fonte": "não preservada",
+                           "lado": "verso", "acao": "irrecuperavel (verso só com imagens não preservadas)"}],
+        "alertas": ["nota_redacao: gabarito resolvido — o verso da fonte era só imagens não preservadas; CERTO pela teoria "
+                    "(dumping como discriminação internacional de preços)",
+                    "banca_provavel: CEBRASPE (CACD 2010), não confirmada: a fonte traz só o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0251
+    {
+        "id": "ECO-E1-0251-1", "fonte_ref": "E1-0251", "destino": "08", "subtema": H2["mono"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das falhas de mercado e das estruturas de mercado, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("O monopólio é uma falha de mercado relacionada à quantidade e à dimensão dos agentes do "
+                      "lado da oferta."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O monopólio é uma <u>falha de mercado</u> relacionada à <u>quantidade e à dimensão dos "
+                      "agentes do lado da oferta</u>."),
+        "poucas": ("Com um único vendedor, desaparece a hipótese de muitos agentes pequenos: o monopolista tem "
+                   + azb("poder de mercado") + ", cobra " + vd("P > CMg") + ", produz menos que o ótimo e gera "
+                   + azb("peso morto") + " — o mercado deixa de ser eficiente no sentido de Pareto."),
+        "destrinchando": [
+            azb("Falha de mercado") + ": situação em que o mercado livre não leva a uma alocação "
+            + azb("Pareto-eficiente") + ". As clássicas: poder de mercado (monopólio, oligopólio), "
+            "externalidades, bens públicos e informação assimétrica.",
+            "Na concorrência perfeita, muitos vendedores pequenos são tomadores de preço e P = CMg (eficiência "
+            "alocativa). No monopólio, o número (um) e o tamanho (o mercado inteiro) do ofertante dão a ele o "
+            "controle do preço: escolhe Q onde RMg = CMg e cobra o preço da demanda.",
+            "Consequências: " + vd("P maior e Q menor") + " que na concorrência; parte do excedente do "
+            "consumidor vira lucro (transferência) e parte se perde (" + azb("peso morto") + ", o triângulo "
+            "entre a demanda e o CMg, de Q<sub>m</sub> a Q<sub>c</sub>).",
+            "Respostas de política: defesa da concorrência (" + rx("no Brasil, o CADE, Lei 12.529/2011") + "), "
+            "regulação de preços nos monopólios naturais ou provisão pública.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Reformula a ideia de poder de mercado como falha “do lado da "
+                       "oferta”, ligada a número e tamanho dos vendedores. A dúvida seria se monopólio “conta” "
+                       "como falha de mercado — conta: viola a hipótese de atomicidade e gera ineficiência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O monopsônio é uma falha de mercado relacionada à quantidade e à dimensão dos agentes do lado "
+            "da oferta.”</i> → ERRADO (troca de ator: é do lado da demanda)",
+            "<i>“O monopólio gera perda de bem-estar porque transfere excedente do consumidor ao "
+            "produtor.”</i> → ERRADO (a transferência não é perda; a perda é o peso morto)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Monopólio: um único ofertante com poder de mercado, preço maior e quantidade menor "
+                             "que na concorrência perfeita; perda de excedente; alocação não Pareto-eficiente."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (89).png, image (88).png, image (86).png", "tipo_fonte": "não preservada",
+                           "lado": "verso", "acao": "cortada (conteúdo absorvido no 📖)"}],
+        "alertas": ["banca_provavel: CEBRASPE (CACD 2023), não confirmada: a fonte traz só o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0263
+    {
+        "id": "ECO-E1-0263-1", "fonte_ref": "E1-0263", "destino": "08", "subtema": H2["markup"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do poder de mercado, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Comparando a empresa A (concorrência perfeita) e a empresa B (monopólio): a diferença entre "
+                      "o preço e o custo marginal dividida pelo preço revela um indicador do poder de monopólio "
+                      "da empresa B."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Comparando a empresa A (concorrência perfeita) e a empresa B (monopólio): a diferença entre "
+                      "o preço e o custo marginal <u>dividida pelo preço</u> revela um indicador do poder de "
+                      "monopólio da empresa B."),
+        "poucas": ("É o " + azb("índice de Lerner") + ": " + vd("L = (P − CMg)/P") + ". Vale 0 na concorrência "
+                   "perfeita (empresa A, P = CMg) e é positivo no monopólio (empresa B)."),
+        "destrinchando": [
+            oc("Abba Lerner") + " (1934) propôs medir o poder de monopólio pela margem de preço sobre o custo "
+            "marginal, como fração do preço: " + vd("0 ≤ L < 1") + ". Quanto maior L, maior o poder de mercado.",
+            "Ligação com a elasticidade: no ótimo do monopolista, RMg = P(1 − 1/|ε|) = CMg, logo "
+            + vd("L = 1/|ε|") + ". Demanda pouco elástica → margem alta; demanda muito elástica → L perto de "
+            "zero (a firma se aproxima da tomadora de preço).",
+            "Exemplo: P = 100 e CMg = 60 → L = " + vd("0,4") + ", compatível com |ε| = 2,5 no ótimo.",
+            "Cuidados: (1) L mede poder de " + azb("precificar") + ", não lucro — um monopólio natural pode ter L "
+            "alto e lucro zero, por causa do custo fixo; (2) o CMg é difícil de observar, e o índice é estático: "
+            "ignora a ameaça de entrada.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Descreve a fórmula de Lerner sem nomeá-la. Erros típicos que a "
+                       "banca enxertaria: dividir pelo custo marginal (isso é o markup sobre o custo, outra "
+                       "medida) ou trocar CMg por custo médio."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para a empresa A, o índice de Lerner é igual a 1.”</i> → ERRADO (na concorrência perfeita, "
+            "P = CMg e L = 0)",
+            "<i>“O índice de Lerner do monopolista maximizador de lucro é o inverso do módulo da elasticidade-"
+            "preço da demanda.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Índice de Lerner: indicador do poder de mercado de uma firma monopolista; quanto "
+                             "menor, menor o poder de monopólio."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (55).jpeg, Untitled (58).jpeg", "tipo_fonte": "não preservada",
+                           "lado": "verso", "acao": "cortada (conteúdo provável: fórmula, absorvida no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0273
+    {
+        "id": "ECO-E1-0273-1", "fonte_ref": "E1-0273", "destino": "08", "subtema": H2["mono"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2017", "ano": 2017, "cacd": False,
+        "errei": False,
+        "comando": CMD_2017,
+        "frente_figuras": ["ECO-E1-0273-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("A quantidade a ser produzida e vendida no mercado a que se refere o gráfico em questão é "
+                      "igual àquela determinada pelo cruzamento das curvas D e C."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A quantidade a ser produzida e vendida no mercado a que se refere o gráfico em questão é ")
+                    + vm("igual àquela determinada pelo cruzamento das curvas D e C") + az(".")),
+        "poucas": ("O monopolista maximiza lucro onde " + vd("RMg = CMg") + ". A RMg fica abaixo da demanda e não "
+                   "aparece no gráfico; o cruzamento D × C (P = CMg) é a quantidade da concorrência perfeita, "
+                   "maior que a do monopólio."),
+        "destrinchando": [
+            "Toda firma maximiza lucro onde " + azb("receita marginal = custo marginal") + ". Na concorrência, "
+            "RMg = P, e por isso a quantidade sai do cruzamento da demanda com o CMg. No monopólio, vender uma "
+            "unidade a mais exige baixar o preço de todas: " + vd("RMg < P") + " (com demanda linear, a RMg tem o "
+            "dobro da inclinação).",
+            "Resultado: Q<sub>m</sub> (RMg = CMg) < Q<sub>c</sub> (D = C) e p<sub>m</sub> > CMg. A diferença é a "
+            "fonte do " + azb("peso morto") + " do monopólio.",
+            "Agravante do monopólio natural: com C decrescente, o custo médio fica acima do CMg. Se o regulador "
+            "impusesse P = CMg (o cruzamento D × C), a firma não cobriria o custo fixo e teria prejuízo — por "
+            "isso a regulação usual é por " + azb("custo médio") + " (P = CMe, segundo melhor) ou P = CMg com "
+            "subsídio/tarifa em duas partes.",
+            "Logo, o cruzamento D × C não é a quantidade de mercado nem sob monopólio livre (que produz menos) "
+            "nem sob regulação sem subsídio.",
+        ],
+        "grafico_verso": "ECO-E1-0273-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " O item aplica ao monopólio a regra da concorrência (P = CMg), "
+                       "aproveitando que o gráfico mostra só D e C. Pista: quando a figura de um monopólio não "
+                       "traz a RMg, a banca quer que você a “desenhe” mentalmente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A quantidade que maximiza o lucro do monopolista é inferior à determinada pelo cruzamento das "
+            "curvas D e C.”</i> → CERTO",
+            "<i>“Se o regulador fixar o preço no cruzamento das curvas D e C, o monopolista natural obterá "
+            "lucro econômico positivo.”</i> → ERRADO (com CMe acima do CMg, terá prejuízo)",
+        ])],
+        "reescrita": ("A quantidade a ser produzida e vendida no mercado a que se refere o gráfico em questão é "
+                      + hl("inferior") + " àquela determinada pelo cruzamento das curvas D e C" + hl(", pois o "
+                      "monopolista produz onde a receita marginal iguala o custo marginal") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Em monopólio, a quantidade é dada pelo cruzamento do CMg com a RMg, ausente do "
+                             "gráfico e abaixo da demanda; o cruzamento D × C equivale a P = CMg; na regulação do "
+                             "monopólio natural, usa-se P = CMe."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (98).png", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (conjectural, ECO-E1-0273-1-F1)"},
+                          {"ref": "image (104).png a (108).png", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "substituídas pelo gráfico didático ECO-E1-0273-1-V1"}],
+        "alertas": [ALERTA_F1, ALERTA_2017],
+    },
+    # ------------------------------------------------------------------ E1-0274
+    {
+        "id": "ECO-E1-0274-1", "fonte_ref": "E1-0274", "destino": "08", "subtema": H2["markup"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2017", "ano": 2017, "cacd": False,
+        "errei": False,
+        "comando": CMD_2017,
+        "frente_figuras": ["ECO-E1-0273-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("O preço de equilíbrio para venda de um produto monopolista é dado em função do custo "
+                      "marginal e da elasticidade-preço da demanda, sendo tanto maior quanto maior for o módulo da "
+                      "elasticidade-preço da demanda, para um dado custo marginal, no trecho em que a demanda for "
+                      "elástica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O preço de equilíbrio para venda de um produto monopolista é dado em função do custo "
+                       "marginal e da elasticidade-preço da demanda, sendo tanto ") + vm("maior") + az(" quanto "
+                       "maior for o módulo da elasticidade-preço da demanda, para um dado custo marginal, no "
+                       "trecho em que a demanda for elástica.")),
+        "poucas": ("Pela regra do markup, " + vd("P = CMg / (1 − 1/|ε|)") + ": quanto " + azb("maior") + " o "
+                   "|ε|, " + azb("menor") + " o preço. Consumidor sensível a preço limita o poder do "
+                   "monopolista."),
+        "destrinchando": [
+            "Derivação: RMg = P(1 − 1/|ε|). No ótimo, RMg = CMg → " + vd("P = CMg / (1 − 1/|ε|)") + ", ou, na "
+            "forma de Lerner, (P − CMg)/P = 1/|ε|.",
+            "Teste numérico com CMg = 10: |ε| = 2 → P = " + vd("20") + "; |ε| = 5 → P = " + vd("12,5") + "; "
+            "|ε| → ∞ → P → " + vd("10") + " (preço de concorrência perfeita).",
+            "Por que “no trecho elástico”: o monopolista nunca opera onde |ε| < 1, porque ali a RMg é negativa — "
+            "reduzir a quantidade aumentaria a receita e diminuiria o custo. A fórmula só faz sentido com "
+            + vd("|ε| > 1") + ".",
+            "Leitura econômica: o poder de monopólio depende de haver ou não substitutos próximos. Remédio sem "
+            "genérico → demanda inelástica → markup alto; marca de refrigerante → demanda elástica → markup "
+            "baixo.",
+        ],
+        "dissecando": (cz("[inversão]") + " Todo o arcabouço está correto (função de CMg e de ε, trecho elástico); "
+                       "só a direção da relação foi invertida. 🔥 Itens de markup quase sempre testam o sentido: "
+                       "elasticidade e preço andam em direções opostas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o módulo da elasticidade-preço da demanda for igual a 2, o preço do monopolista será o "
+            "dobro do custo marginal.”</i> → CERTO",
+            "<i>“O monopolista maximizador de lucro pode operar no trecho inelástico da demanda.”</i> → ERRADO "
+            "(ali a RMg é negativa)",
+        ])],
+        "reescrita": ("O preço de equilíbrio para venda de um produto monopolista é dado em função do custo "
+                      "marginal e da elasticidade-preço da demanda, sendo tanto " + hl("menor") + " quanto maior "
+                      "for o módulo da elasticidade-preço da demanda, para um dado custo marginal, no trecho em "
+                      "que a demanda for elástica."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tanto maior quanto"], "dificuldade": 1,
+        "comentario_fonte": ("P = CMg/[1 − 1/|E|]: quanto maior o módulo da elasticidade, menor o preço; o "
+                             "monopolista atua no trecho elástico; demanda pouco elástica permite preço maior."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (98).png", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (conjectural, ECO-E1-0273-1-F1, compartilhada)"},
+                          {"ref": "image (109).png, image (110).png", "tipo_fonte": "não preservada",
+                           "lado": "verso", "acao": "cortada (fórmula absorvida no 📖)"}],
+        "alertas": [ALERTA_F1, ALERTA_2017],
+    },
+    # ------------------------------------------------------------------ E1-0275
+    {
+        "id": "ECO-E1-0275-1", "fonte_ref": "E1-0275", "destino": "08", "subtema": H2["mono"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2017", "ano": 2017, "cacd": False,
+        "errei": False,
+        "comando": CMD_2017,
+        "frente_figuras": ["ECO-E1-0273-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Embora seja decrescente no trecho mostrado no gráfico em apreço, C representa a curva de "
+                      "oferta do monopolista."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Embora seja decrescente no trecho mostrado no gráfico em apreço, C ")
+                    + vm("representa a curva de oferta do monopolista") + az(".")),
+        "poucas": ("O monopolista " + azb("não tem curva de oferta") + ": a quantidade que oferece a cada preço "
+                   "depende do formato da demanda (via RMg), não só do custo. C é apenas o custo marginal."),
+        "destrinchando": [
+            "Curva de oferta = relação única entre preço e quantidade ofertada. Na concorrência, ela existe "
+            "porque a firma toma o preço como dado e escolhe P = CMg: o próprio CMg (acima do CVMe) é a oferta.",
+            "O monopolista escolhe preço e quantidade juntos, olhando a demanda: Q onde RMg = CMg, e P na curva "
+            "de demanda. Duas demandas diferentes podem levar ao " + vd("mesmo preço com quantidades "
+            "diferentes") + " (ou à mesma quantidade com preços diferentes) sem que o custo mude — não há "
+            "função P → Q estável.",
+            "Por isso, num gráfico de monopólio, só se marca um " + azb("ponto") + " escolhido sobre a demanda, "
+            "nunca uma curva de oferta.",
+            "O detalhe do item (“embora seja decrescente”) é verdadeiro e relevante: CMg decrescente é típico do "
+            "monopólio natural, com fortes economias de escala — mas isso não transforma C em oferta.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Transfere para o monopólio a regra da firma competitiva (CMg "
+                       "= oferta). A concessiva “embora seja decrescente” desvia a atenção para a inclinação, como "
+                       "se ela fosse o único problema."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na concorrência perfeita, a curva de oferta de curto prazo da firma é o trecho do custo "
+            "marginal acima do mínimo do custo variável médio.”</i> → CERTO",
+            "<i>“A curva de oferta do monopolista é o trecho da receita marginal acima do custo "
+            "marginal.”</i> → ERRADO (o monopolista não tem curva de oferta)",
+        ])],
+        "reescrita": ("Embora seja decrescente no trecho mostrado no gráfico em apreço, C " + hl("não representa "
+                      "uma curva de oferta: o monopolista não possui curva de oferta, e C é seu custo marginal")
+                      + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["embora"], "dificuldade": 2,
+        "comentario_fonte": ("Não há curva de oferta no monopólio: o monopolista reage à demanda e escolhe um "
+                             "ponto; C é a curva de custo marginal; na concorrência perfeita o CMg acima do CVMe "
+                             "seria a oferta da firma."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "image (98).png", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (conjectural, ECO-E1-0273-1-F1, compartilhada)"},
+                          {"ref": "image (102).png, image (100).png, image (101).png", "tipo_fonte": "não preservada",
+                           "lado": "verso", "acao": "cortada"}],
+        "alertas": [ALERTA_F1, ALERTA_2017,
+                    "qualidade_fonte: um dos comentários de origem afirma que o monopolista “ofertará a quantidade "
+                    "que sua capacidade produtiva conseguir atender” e ajusta só o preço — descartado; a "
+                    "quantidade sai de RMg = CMg"],
+    },
+    # ------------------------------------------------------------------ E1-0276
+    {
+        "id": "ECO-E1-0276-1", "fonte_ref": "E1-0276", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2017", "ano": 2017, "cacd": False,
+        "errei": False,
+        "comando": CMD_2017,
+        "frente_figuras": ["ECO-E1-0273-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("A característica de um monopólio natural é a existência de custos marginais baixos e custos "
+                      "fixos muito altos, impedindo a entrada de concorrentes."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A característica de um monopólio natural é a existência de <u>custos marginais baixos e "
+                      "custos fixos muito altos</u>, impedindo a entrada de concorrentes."),
+        "poucas": ("Custo fixo alto diluído por muitas unidades de custo marginal baixo = " + azb("custo médio "
+                   "decrescente") + " em toda a faixa relevante da demanda: uma só firma atende o mercado mais "
+                   "barato, e um entrante, menor, não consegue competir."),
+        "destrinchando": [
+            "CMe = CF/Q + CVMe. Com CF enorme e CMg baixo, o CMe cai continuamente com a escala — "
+            + azb("economias de escala") + ". Se isso vale até a quantidade que o mercado demanda, a função "
+            "custo é " + azb("subaditiva") + ": duas firmas dividindo o mercado teriam custo médio maior.",
+            "Daí a " + azb("barreira à entrada") + " “natural”: o entrante começaria com escala pequena e custo "
+            "médio alto, e a incumbente poderia baixar o preço sem prejuízo. Não é preciso lei para impedir a "
+            "entrada — por isso o nome.",
+            "Exemplos: redes de distribuição de energia, gás, água e esgoto, ferrovias. O gráfico do enunciado "
+            "mostra exatamente um C (CMg) decrescente.",
+            "Dilema regulatório: P = CMg (eficiente) dá prejuízo, porque CMg < CMe; P = CMe (segundo melhor) "
+            "cobre custos com algum peso morto; alternativas são tarifas em duas partes, subsídio ou "
+            + azb("price cap") + ". " + rx("No Brasil") + ", agências como ANEEL e ANA fazem essa regulação.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " Descrição simplificada mas correta da estrutura de "
+                       "custos. A dúvida possível é o “impedindo a entrada”: no monopólio natural a barreira vem "
+                       "da própria escala, e a banca aceitou o nexo. O rigor seria “custo médio decrescente em "
+                       "toda a demanda”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, a fixação do preço igual ao custo marginal garante à firma lucro "
+            "econômico nulo.”</i> → ERRADO (com CMg < CMe, gera prejuízo)",
+            "<i>“O monopólio natural decorre necessariamente de concessão legal exclusiva.”</i> → ERRADO "
+            "(decorre da estrutura de custos)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Monopólio natural: grandes economias de escala, custos fixos altos e custos "
+                             "marginais baixos; uma firma abastece o mercado a custo menor; P = CMg levaria a "
+                             "prejuízo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (98).png", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (conjectural, ECO-E1-0273-1-F1, compartilhada)"},
+                          {"ref": "image (103).png", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "cortada (conteúdo absorvido no 📖)"}],
+        "alertas": [ALERTA_F1, ALERTA_2017],
+    },
+    # ------------------------------------------------------------------ E1-0279
+    {
+        "id": "ECO-E1-0279-1", "fonte_ref": "E1-0279", "destino": "08", "subtema": H2["markup"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2018", "ano": 2018, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do poder de mercado do monopolista, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a regra de mark-up, quanto mais preço-elástica for a curva de demanda do "
+                      "mercado, maior será o poder de mercado do monopolista."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com a regra de mark-up, quanto mais preço-elástica for a curva de demanda do "
+                       "mercado, ") + vm("maior") + az(" será o poder de mercado do monopolista.")),
+        "poucas": ("Regra do markup: " + vd("(P − CMg)/P = 1/|ε|") + ". Demanda mais elástica → margem menor → "
+                   + azb("menos") + " poder de mercado; no limite (|ε| → ∞), P = CMg, como na concorrência."),
+        "destrinchando": [
+            "A regra vem de RMg = CMg com RMg = P(1 − 1/|ε|): " + vd("P = CMg / (1 − 1/|ε|)") + ". O termo "
+            "1/(1 − 1/|ε|) é o fator de markup sobre o custo marginal.",
+            "Exemplos: |ε| = 2 → P = " + vd("2 × CMg") + "; |ε| = 4 → P = " + vd("1,33 × CMg") + "; "
+            "|ε| = 11 → P = " + vd("1,1 × CMg") + ". O fator cai à medida que a demanda fica mais elástica.",
+            "Intuição: demanda elástica significa consumidores com alternativas. Subir o preço espanta muitos "
+            "clientes, e o monopolista não consegue cobrar muito acima do custo.",
+            "O poder de mercado medido pelo " + azb("índice de Lerner") + " (" + oc("Lerner") + ") é "
+            "exatamente 1/|ε|: inverso da elasticidade.",
+            vm("Regra-âncora: elasticidade e poder de mercado andam em sentidos opostos."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca o sentido da relação na regra do markup. 🔥 É o mesmo erro de "
+                       "itens sobre o preço do monopolista “tanto maior quanto maior a elasticidade”: o tema se "
+                       "repete com redações diferentes."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“De acordo com a regra de mark-up, quanto menos preço-elástica for a demanda, maior será a "
+            "margem do preço sobre o custo marginal.”</i> → CERTO",
+            "<i>“Se a demanda for perfeitamente elástica, o índice de Lerner será igual a 1.”</i> → ERRADO "
+            "(será 0)",
+        ])],
+        "reescrita": ("De acordo com a regra de mark-up, quanto mais preço-elástica for a curva de demanda do "
+                      "mercado, " + hl("menor") + " será o poder de mercado do monopolista."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["quanto mais"], "dificuldade": 1,
+        "comentario_fonte": ("Markup P = CMg/(1 + 1/Ed): elasticidade elevada aproxima o preço do custo marginal, "
+                             "como na concorrência perfeita; com Ed = −2, P = 2CMg."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "00032.jpeg", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "texto (fórmula do markup transcrita no 📖)"}],
+        "alertas": ["banca_provavel: CEBRASPE (CACD 2018), não confirmada: a fonte traz só o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0280
+    {
+        "id": "ECO-E1-0280-1", "fonte_ref": "E1-0280", "destino": "08", "subtema": H2["markup"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2018", "ano": 2018, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do poder de mercado do monopolista, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Curva de demanda de mercado com módulo da elasticidade preço da demanda inferior a um pode "
+                      "ser indicativa da presença de barreiras à entrada."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Curva de demanda de mercado com módulo da elasticidade preço da demanda inferior a um "
+                      "<u>pode ser indicativa</u> da presença de barreiras à entrada."),
+        "poucas": ("Demanda inelástica (" + vd("|ε| < 1") + ") revela " + azb("ausência de substitutos "
+                   "próximos") + " — condição em que um vendedor pode ter grande poder de mercado. Se esse poder "
+                   "persiste, é porque algo impede a entrada: o item só afirma que isso “pode” ser indício."),
+        "destrinchando": [
+            "A elasticidade-preço da demanda depende sobretudo da disponibilidade de substitutos. Poucos "
+            "substitutos → consumidores “presos” → |ε| baixo → espaço para preço muito acima do custo.",
+            "Esse espaço só se sustenta se os lucros não atraírem concorrentes que ofereçam substitutos: é "
+            "a presença de " + azb("barreiras à entrada") + " (patentes, escala mínima elevada, controle de "
+            "insumo, licença legal) que preserva o poder de mercado.",
+            "Nuance importante: o monopolista maximizador de lucro " + vd("nunca") + " opera no trecho inelástico "
+            "(ali a RMg é negativa). Se o mercado está num ponto com |ε| < 1, o preço está abaixo do de "
+            "monopólio — por regulação, ameaça de entrada (preço-limite) ou concorrência entre as firmas "
+            "existentes.",
+            "Por isso o indício é fraco e o item se apoia no “pode”: a inelasticidade da demanda <b>de "
+            "mercado</b> descreve o produto, enquanto o poder de cada firma depende da demanda que ela "
+            "enfrenta (|ε<sub>firma</sub>| ≥ |ε<sub>mercado</sub>|).",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " Afirmação causal frouxa, salva pelo “pode ser indicativa”. "
+                       "Em itens assim, a banca costuma aceitar a relação plausível (pouco substituto → poder de "
+                       "mercado → barreiras); troque “pode ser indicativa” por “comprova” e o item vira "
+                       "ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Curva de demanda de mercado com módulo da elasticidade inferior a um comprova a existência de "
+            "monopólio.”</i> → ERRADO (modulador absoluto)",
+            "<i>“O monopolista maximizador de lucro produz no trecho inelástico da curva de demanda.”</i> → "
+            "ERRADO (produz no trecho elástico)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode", "indicativa"], "dificuldade": 3,
+        "comentario_fonte": ("Baixa elasticidade indica ausência de substitutos próximos, compatível com "
+                             "monopólio e poder de mercado; barreiras à entrada são causa de monopólios."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (CACD 2018), não confirmada: a fonte traz só o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0281
+    {
+        "id": "ECO-E1-0281-1", "fonte_ref": "E1-0281", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simulado 07/2023", "ano": 2023, "cacd": False,
+        "errei": True,
+        "comando": "Acerca do monopólio natural, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("O monopólio natural é um tipo de monopólio em que uma única empresa é capaz de fornecer o "
+                      "bem ou serviço a um custo mais baixo do que várias empresas menores, devido a economias de "
+                      "escala ou a vantagens tecnológicas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O monopólio natural é um tipo de monopólio em que uma única empresa é capaz de fornecer o "
+                      "bem ou serviço a um <u>custo mais baixo do que várias empresas menores</u>, devido a "
+                      "economias de escala ou a vantagens tecnológicas."),
+        "poucas": ("É a definição: há monopólio natural quando " + azb("uma firma produz a quantidade do mercado "
+                   "mais barato que duas ou mais") + " (custo subaditivo), em geral por economias de escala."),
+        "destrinchando": [
+            "Definição formal: a função custo é " + azb("subaditiva") + " na quantidade demandada — C(Q) < "
+            "C(q<sub>1</sub>) + C(q<sub>2</sub>) para qualquer divisão Q = q<sub>1</sub> + q<sub>2</sub>.",
+            "Causa típica: " + azb("economias de escala") + " — custo fixo alto e custo marginal baixo fazem o "
+            "custo médio cair em toda a faixa relevante. A tecnologia de rede (dutos, cabos, trilhos) é o "
+            "exemplo clássico; as “vantagens tecnológicas” do item entram como fonte dessas economias.",
+            "Consequência: a concorrência seria ineficiente (duplicação de redes) e instável (a maior firma "
+            "expulsa as menores). A solução usual é uma firma só, com " + azb("regulação") + " de preço e "
+            "qualidade ou provisão pública.",
+            "Distinções: monopólio natural (causa: custos) × monopólio legal (causa: lei, patente, concessão) "
+            "× monopólio por controle de insumo essencial.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual. O “ou vantagens tecnológicas” poderia "
+                       "parecer ampliação indevida, mas tecnologia de rede é justamente a origem das economias "
+                       "de escala; o critério decisivo — custo menor com uma só firma — está correto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O monopólio natural caracteriza-se por custo médio crescente na faixa relevante da "
+            "demanda.”</i> → ERRADO (é decrescente)",
+            "<i>“No monopólio natural, a divisão do mercado entre várias empresas reduziria o custo médio de "
+            "produção.”</i> → ERRADO (inversão: elevaria)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Monopólio natural: custos fixos altos e variáveis baixos, custo médio decrescente, "
+                             "economias de escala; ex.: distribuição de energia elétrica; regulação para evitar "
+                             "abusos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
     # FIM
 ]

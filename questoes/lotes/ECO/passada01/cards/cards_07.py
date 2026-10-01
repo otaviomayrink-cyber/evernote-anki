@@ -969,8 +969,8 @@ CARDS = [
             "o mercado operar. Não há perda de eficiência — o “bolo” continua do tamanho máximo, só que "
             "repartido de outro modo.",
             "O que o teorema <b>não</b> diz: que todos ficam tão bem quanto antes. Mover-se ao longo da "
-            "fronteira de Pareto melhora uns e piora outros, por definição. A afirmação do comentário de "
-            "origem de que “todos ficam tão bem quanto estavam” está errada.",
+            "fronteira de Pareto melhora uns e piora outros, por definição. A ideia de que, após a "
+            "redistribuição, “todos ficam tão bem quanto estavam” é falsa.",
             "Contraste com o caminho alternativo — controlar preços (tabelamentos, subsídios cruzados) para "
             "redistribuir: isso gera " + azb("peso morto") + " e tira a economia da fronteira. O 2º Teorema "
             "recomenda mexer nas dotações, não nos preços.",

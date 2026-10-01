@@ -60,10 +60,10 @@
     "D",
     "CS"
    ],
-   "rotulo": "E* (ótimo)",
+   "rotulo": "E*",
    "rotulo_desloc": [
-    -60,
-    28
+    -6,
+    24
    ],
    "projetar": "x",
    "rotulo_x": "Q*"

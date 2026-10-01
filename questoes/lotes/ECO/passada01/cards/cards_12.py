@@ -639,7 +639,7 @@ CARDS += [
                              "mesma proporção; u = mín{αA, βB}."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 497", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida no 📖"}],
-        "alertas": ["observacao: assertiva com erro de redação na fonte (“reduzir seu consumo mais rapidamente o "
+        "alertas": ["nota_redacao: assertiva com erro de redação na fonte (“reduzir seu consumo mais rapidamente o "
                     "consumo de A”); mantida fiel"],
     },
     # ------------------------------------------------------------------ E2-L01779
@@ -881,7 +881,7 @@ CARDS += [
                            "acao": "cortada (substitutos perfeitos e exemplo dos pendrives no 📖)"},
                           {"ref": "IMAGEM 36-37", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "irrecuperavel (ilegíveis)"}],
-        "alertas": ["item_repetido: assertiva idêntica em ECO-E3-L00236-1 (Nidi, Simulado Março/2025); mantidos os "
+        "alertas": ["quase_duplicata: assertiva idêntica em ECO-E3-L00236-1 (Nidi, Simulado Março/2025); mantidos os "
                     "dois por serem provas diferentes (Folha -Q §8.6)"],
     },
     # ------------------------------------------------------------------ E3-L00146
@@ -1090,9 +1090,9 @@ CARDS += [
                            "acao": "cortada (curva convexa com TMS decrescente, descrita no 📖)"},
                           {"ref": "IMAGEM 324", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (substitutos perfeitos, descritos no 📖)"}],
-        "alertas": ["item_repetido: assertiva idêntica em ECO-E3-L00078-1 (Nidi, Simulado Julho/2025); mantidos os "
+        "alertas": ["quase_duplicata: assertiva idêntica em ECO-E3-L00078-1 (Nidi, Simulado Julho/2025); mantidos os "
                     "dois por serem provas diferentes (Folha -Q §8.6)",
-                    "fonte: o fim do verso traz um comentário “CERTO” sobre curvas que não se cruzam, pertencente a "
+                    "nota_redacao: o fim do verso traz um comentário “CERTO” sobre curvas que não se cruzam, pertencente a "
                     "E3-L00237; ignorado aqui"],
     },
     # ------------------------------------------------------------------ E3-L00237
@@ -1197,7 +1197,7 @@ CARDS += [
                            "acao": "cortada (substitutos × complementares perfeitos, descritos no 📖)"},
                           {"ref": "IMAGEM 375", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "absorvida (texto sobre TMS decrescente no 📖)"}],
-        "alertas": ["comando_reconstruido: o comando da fonte estava truncado (“…os indivíduos buscam m…”); usado "
+        "alertas": ["texto_parcial: o comando da fonte estava truncado (“…os indivíduos buscam m…”); usado "
                     "comando neutro"],
     },
     # ------------------------------------------------------------------ E3-L00371
@@ -1304,5 +1304,274 @@ CARDS += [
                            "acao": "texto (UMgₓ/pₓ = UMgᵧ/pᵧ no 📖)"},
                           {"ref": "IMAGEM 528", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "irrecuperavel (ilegível)"}],
         "alertas": [],
+    },
+]
+
+# ====================================================================== bloco 6
+CARDS += [
+    # ------------------------------------------------------------------ E3-L00373
+    {
+        "id": "ECO-E3-L00373-1", "fonte_ref": "E3-L00373", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", **NIDI_NOV, "errei": False,
+        "comando": CMD_NIDI_NOV,
+        "excerto": EXC_NIDI_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("A quantidade máxima que pode ser adquirida de um bem sem reduzir a utilidade total do "
+                      "consumidor, quando existe, marca um ponto de saciedade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A quantidade máxima que pode ser adquirida de um bem <u>sem reduzir a utilidade total</u> do "
+                      "consumidor, <u>quando existe</u>, marca um ponto de saciedade."),
+        "poucas": ("O " + azb("ponto de saciedade") + " é a quantidade em que a utilidade total atinge o máximo "
+                   "(" + vd("UMg = 0") + "): uma unidade a mais já reduziria a satisfação (UMg < 0)."),
+        "destrinchando": [
+            "Antes do ponto: UMg > 0 e UT crescente. No ponto: " + vd("UMg = 0") + ", UT máxima. Depois: UMg < 0, "
+            "UT decrescente — o bem passa a se comportar como um “mal” na margem (exemplo da fonte: copos d’água "
+            "para quem já matou a sede).",
+            "A expressão “quantidade máxima… sem reduzir a utilidade total” descreve exatamente esse máximo: até ali "
+            "cada unidade soma (ou, no limite, não subtrai); a seguinte subtrairia.",
+            "O “quando existe” é tecnicamente necessário: sob " + azb("monotonicidade") + " (“mais é melhor”, "
+            "hipótese padrão dos modelos) não há saciedade, e a UT cresce sempre, ainda que a taxas decrescentes. "
+            "O texto motivador lembra justamente que o pressuposto nem sempre vale.",
+            "Comportamento racional: o consumidor nunca escolhe passar do ponto de saciedade, mesmo com o bem de "
+            "graça; com preço zero, a quantidade demandada é a de saciedade.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Define o ponto de saciedade sem usar a "
+                       "palavra “máximo da UT”. O “quando existe” protege o item da objeção de que, com "
+                       "monotonicidade, não há saciedade. É o 3º item de um bloco sobre o tema (ver "
+                       "ECO-E3-L00374-1)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No ponto de saciedade, a utilidade marginal é máxima.”</i> → ERRADO (troca de conceito: a UT é "
+            "máxima; a UMg é nula)",
+            "<i>“Preferências monotônicas excluem a existência de ponto de saciedade.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["quando existe"], "dificuldade": 1,
+        "comentario_fonte": ("No ponto de saciedade a UMg é zero; além dele, desutilidade (UMg negativa); caso "
+                             "associado ao consumo de um “mal”."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 529", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (UT e UMg dos copos d’água, descritas no 📖)"},
+                          {"ref": "IMAGEM 530", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida no 📖"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00374
+    {
+        "id": "ECO-E3-L00374-1", "fonte_ref": "E3-L00374", "destino": "04", "subtema": H2["dem"],
+        "tipo": "C/E", **NIDI_NOV, "errei": False,
+        "comando": CMD_NIDI_NOV,
+        "excerto": EXC_NIDI_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("Bens que apresentam nível de quantidade a partir do qual a satisfação adicional é negativa têm "
+                      "curva de demanda crescente a partir dessa quantidade."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Bens que apresentam nível de quantidade a partir do qual a satisfação adicional é negativa ")
+                   + vm("têm curva de demanda crescente") + az(" a partir dessa quantidade."),
+        "poucas": ("Além do " + azb("ponto de saciedade") + ", ninguém paga por mais unidades: a demanda "
+                   + vd("se esgota") + " ali (quantidade máxima, demandada a preço zero). Demanda crescente é outro "
+                   "fenômeno (Giffen, Veblen)."),
+        "destrinchando": [
+            "A curva de demanda registra a " + azb("disposição a pagar") + " por cada unidade adicional, que "
+            "acompanha a utilidade marginal. Com UMg > 0 e decrescente, a disposição a pagar cai: demanda "
+            "negativamente inclinada.",
+            "No ponto de saciedade (UMg = 0), a disposição a pagar pela unidade seguinte é " + vd("zero") + "; além "
+            "dele, seria " + vd("negativa") + " (o consumidor teria de ser pago para aceitar). No quadrante de "
+            "preços positivos, a demanda simplesmente <b>termina</b> — não sobe.",
+            "Curvas de demanda positivamente inclinadas existem por outros motivos: " + azb("bem de Giffen") +
+            " (inferior, com efeito renda superando o efeito substituição; exemplo histórico atribuído à batata na "
+            "Irlanda do séc. XIX) e " + azb("bem de Veblen") + " (" + oc("Thorstein Veblen") + ", consumo "
+            "conspícuo: preço alto como sinal de status). Nenhum deles tem relação com UMg negativa.",
+            vm("Regra-âncora: UMg < 0 → o consumo para; demanda crescente → Giffen ou Veblen."),
+        ],
+        "dissecando": (cz("[nexo indevido]") + " Liga dois fatos de domínios diferentes — utilidade marginal "
+                       "negativa e inclinação da demanda — como causa e efeito. O texto motivador fala de “redução na "
+                       "satisfação”, convidando a imaginar um comportamento “anormal” da demanda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Bens que apresentam ponto de saciedade têm demanda que não ultrapassa essa quantidade, mesmo a "
+            "preço zero.”</i> → CERTO",
+            "<i>“A curva de demanda positivamente inclinada caracteriza os bens inferiores.”</i> → ERRADO "
+            "(generalização: só os de Giffen, subconjunto dos inferiores)",
+        ])],
+        "reescrita": ("Bens que apresentam nível de quantidade a partir do qual a satisfação adicional é negativa "
+                      + hl("deixam de ser demandados") + " a partir dessa quantidade" + hl(", pois o consumidor não "
+                      "paga por unidades que reduzem sua utilidade") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A demanda acaba no ponto de saciedade; utilidade negativa não gera demanda crescente; "
+                             "demanda crescente: Giffen e Veblen. Um dos comentários empilhados era dirigido "
+                             "pessoalmente ao leitor (descartado)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 531", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (lei da demanda no 📖)"},
+                          {"ref": "IMAGEM 532", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (quadro UMg × tipo de item × demanda no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00408
+    {
+        "id": "ECO-E3-L00408-1", "fonte_ref": "E3-L00408", "destino": "04", "subtema": H2["otimo"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": True,
+        "comando": ("Considerando as teorias básicas do consumidor e do produtor e os conceitos que elas envolvem, "
+                    "julgue certo ou errado (C ou E) o item a seguir."),
+        "excerto": ("<p><i>As teorias do consumidor e do produtor são fundamentais para compreender como agentes "
+                    "econômicos tomam decisões racionais em condições de escassez [...]</i></p>"),
+        "rotulo_item": "Item",
+        "assertiva": ("No equilíbrio de longo prazo, tanto para o consumidor quanto para o produtor, a TMS e a TMST se "
+                      "igualam ao preço relativo dos bens e insumos, respectivamente. Essa condição se reflete no fato "
+                      "de que essas taxas devem ser iguais à relação dos preços dos produtos no mercado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("No equilíbrio de longo prazo, tanto para o consumidor quanto para o produtor, a <u>TMS e a "
+                      "TMST se igualam ao preço relativo dos bens e insumos, respectivamente</u>. Essa condição se "
+                      "reflete no fato de que essas taxas devem ser iguais à relação dos preços dos produtos no "
+                      "mercado."),
+        "poucas": ("Consumidor: " + vd("TMS = p<sub>x</sub>/p<sub>y</sub>") + " (tangência curva de indiferença × "
+                   "reta orçamentária). Produtor: " + vd("TMST = w/r") + " (tangência isoquanta × isocusto). Cada "
+                   "agente iguala sua taxa interna de troca à taxa do mercado."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "a 2ª frase diz que “essas taxas” igualam a relação dos preços dos <b>produtos</b>, o que "
+                          "só vale para a TMS; a TMST iguala a relação dos preços dos <b>insumos</b> (w/r). E o "
+                          "“longo prazo” é desnecessário para o consumidor (a condição vale a todo momento). O "
+                          "gabarito CERTO se sustenta pelo “respectivamente” da 1ª frase; numa prova CEBRASPE, a "
+                          "redação seria recorrível.")],
+        "destrinchando": [
+            "Consumidor: no ótimo interior, TMS = UMg<sub>x</sub>/UMg<sub>y</sub> = " + vd("p<sub>x</sub>/"
+            "p<sub>y</sub>") + ". Se a TMS fosse 3 e a razão de preços 2, ele valorizaria x mais do que o mercado "
+            "cobra e compraria mais x até igualar.",
+            "Produtor: na minimização de custos, TMST = PMg<sub>L</sub>/PMg<sub>K</sub> = " + vd("w/r") + ". Se a "
+            "TMST superasse w/r, trocar capital por trabalho produziria o mesmo com custo menor. A escolha de K "
+            "só é livre no " + azb("longo prazo") + " (no curto prazo o capital está fixo) — daí a menção ao longo "
+            "prazo, pertinente para a firma.",
+            "Equilíbrio geral competitivo: como todos enfrentam os mesmos preços, as TMS se igualam entre "
+            "consumidores (eficiência nas trocas), as TMST entre firmas (eficiência na produção) e TMS = TMT "
+            "(taxa marginal de transformação) — condições do " + azb("1º teorema do bem-estar") + ".",
+            "Para não confundir: TMS ↔ bens ↔ preços dos produtos; TMST ↔ insumos ↔ preços dos fatores; TMT ↔ "
+            "fronteira de possibilidades de produção ↔ razão dos custos marginais.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " A 1ª frase é a dupla condição de tangência de manual, "
+                       "amarrada por “respectivamente”. A 2ª frase é frouxa (“preços dos produtos”) e induz a "
+                       "marcar ERRADO; o simulado a tratou como reforço da 1ª."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No equilíbrio do produtor, a TMST iguala a razão entre os preços dos bens produzidos.”</i> → "
+            "ERRADO (troca de conceito: razão dos preços dos insumos, w/r)",
+            "<i>“Em equilíbrio competitivo, todos os consumidores apresentam a mesma TMS entre dois bens.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["respectivamente"], "dificuldade": 2,
+        "comentario_fonte": ("Consumidor: TMS = Px/Py; produtor: TMST = w/r; condição de eficiência (Pareto); "
+                             "anotação do professor: vale no longo prazo, mas também no curto prazo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 576", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (condição UMg/p e nota “também no curto prazo”)"}],
+        "alertas": ["contestavel: 2ª frase iguala TMST à relação dos preços dos produtos (seria dos insumos); "
+                    "gabarito CERTO da fonte mantido, com ⚠️ no card",
+                    "texto_parcial: o comando da fonte estava truncado (“…em condições de escassez...”); "
+                    "excerto preservado com [...] e comando completado"],
+    },
+    # ------------------------------------------------------------------ E1-0001
+    {
+        "id": "ECO-E1-0001-1", "fonte_ref": "E1-0001", "destino": "04-A", "subtema": H2["giffen"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2012, "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir, relativo à teoria do consumidor.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considere que um consumidor gaste toda a sua renda com a compra de bens e serviços. Nessa "
+                      "hipótese, não é possível que todos os bens da cesta de consumo desse consumidor sejam bens "
+                      "inferiores."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considere que um consumidor <u>gaste toda a sua renda</u> com a compra de bens e serviços. "
+                      "Nessa hipótese, <u>não é possível</u> que todos os bens da cesta de consumo desse consumidor "
+                      "sejam bens inferiores."),
+        "poucas": ("Se todos os bens fossem " + azb("inferiores") + ", um aumento de renda reduziria o consumo de "
+                   "todos — e o gasto total cairia enquanto a renda sobe, contrariando a hipótese de que " +
+                   vd("toda a renda é gasta") + ". Pelo menos um bem tem de ser normal."),
+        "destrinchando": [
+            azb("Bem inferior") + ": consumo cai quando a renda sobe (elasticidade-renda < 0). " + azb("Bem normal")
+            + ": consumo sobe com a renda (elasticidade-renda > 0).",
+            "Prova pela restrição orçamentária: Σ p<sub>i</sub>x<sub>i</sub> = R. Derivando em relação a R (preços "
+            "fixos): " + vd("Σ p<sub>i</sub>·∂x<sub>i</sub>/∂R = 1") + ". O gasto adicional total tem de somar o "
+            "real a mais. Se todo ∂x<sub>i</sub>/∂R fosse negativo, a soma seria negativa — impossível.",
+            "Em elasticidades (" + azb("agregação de Engel") + "): " + vd("Σ s<sub>i</sub>·η<sub>i</sub> = 1") +
+            ", em que s<sub>i</sub> é a parcela da renda gasta no bem i e η<sub>i</sub> sua elasticidade-renda. A "
+            "média ponderada das elasticidades-renda é 1: alguns bens podem ter η < 0, mas nunca todos. Questão "
+            "clássica do " + oc("Varian") + " (<i>Microeconomia</i>, cap. 6, “Demanda”).",
+            "Por que a hipótese “gasta toda a renda”: ela decorre da " + azb("monotonicidade") + ". Note que "
+            "inferior não é “sem utilidade”: o consumidor de salsicha que ganha mais compra menos salsicha porque "
+            "a combinação “menos salsicha + mais carne” rende mais utilidade.",
+        ],
+        "dissecando": (cz("[contraintuitivo · detalhe]") + " O “não é possível” assusta, mas é dedução lógica da "
+                       "restrição orçamentária: com renda toda gasta, a soma das variações de gasto tem de igualar a "
+                       "variação da renda. Pista: a premissa “gaste toda a sua renda” está ali por um motivo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o consumidor gasta toda a sua renda em dois bens e um deles é inferior, o outro é "
+            "necessariamente normal.”</i> → CERTO",
+            "<i>“Se o consumidor gasta toda a sua renda em dois bens, ambos podem ser bens de luxo.”</i> → ERRADO "
+            "(η > 1 para todos daria Σ sᵢηᵢ > 1)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "DETALHE"], "moduladores": ["não é possível", "todos"], "dificuldade": 2,
+        "comentario_fonte": ("Se todos os bens fossem inferiores, aumento de renda reduziria o consumo de todos e "
+                             "sobraria renda, contrariando a hipótese; exemplo carne × salsicha (Heber Carvalho); "
+                             "questão do cap. 6 do Varian. Um comentário empilhado justificava por “bens essenciais”, "
+                             "sem rigor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (provável CACD/2012; a fonte só traz o ano entre parênteses — não "
+                    "confirmada)"],
+    },
+    # ------------------------------------------------------------------ E1-0006
+    {
+        "id": "ECO-E1-0006-1", "fonte_ref": "E1-0006", "destino": "04-A", "subtema": H2["ers"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2010, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos efeitos renda e substituição.",
+        "rotulo_item": "Item",
+        "assertiva": ("Supondo-se que, no Brasil, o uso de transporte coletivo seja um bem inferior, conclui-se que o "
+                      "efeito renda decorrente do aumento do preço das passagens de ônibus contribui para reforçar o "
+                      "efeito substituição, o que reduz a demanda por esse tipo de transporte."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Supondo-se que, no Brasil, o uso de transporte coletivo seja um bem inferior, conclui-se que o "
+                      "efeito renda decorrente do aumento do preço das passagens de ônibus contribui para ")
+                   + vm("reforçar") + az(" o efeito substituição, o que reduz a demanda por esse tipo de transporte."),
+        "poucas": ("Para bem " + azb("inferior") + ", os efeitos têm sinais " + vd("opostos") + ": a passagem mais "
+                   "cara empobrece o usuário, e, mais pobre, ele usa <b>mais</b> ônibus. O efeito renda "
+                   + azb("atenua") + " o efeito substituição, não o reforça."),
+        "destrinchando": [
+            azb("Efeito substituição") + ": com a utilidade constante, o bem que encareceu é trocado por outros "
+            "(carro, aplicativo, bicicleta). É sempre " + vd("negativo") + " em relação ao próprio preço: ↑p ⇒ ↓q.",
+            azb("Efeito renda") + ": a alta da passagem reduz o poder de compra. Bem normal → menos renda, menos "
+            "consumo (reforça o ES). Bem " + azb("inferior") + " → menos renda, <b>mais</b> consumo (contraria o "
+            "ES).",
+            "Equação de " + oc("Slutsky") + ": " + vd("∂x/∂p = ∂xᶜ/∂p − x·∂x/∂R") + " (efeito total = substituição, "
+            "pela demanda compensada, + renda). No inferior, ∂x/∂R < 0 torna o 2º termo positivo, empurrando contra "
+            "o 1º.",
+            "Resultado líquido: no inferior comum, o ES domina e a quantidade ainda cai, só que menos que num bem "
+            "normal. No " + azb("bem de Giffen") + " (inferior extremo), o efeito renda supera o ES e a demanda sobe "
+            "com o preço. Todo Giffen é inferior; nem todo inferior é Giffen.",
+            vm("Regra-âncora: normal → ER reforça o ES; inferior → ER atenua; Giffen → ER supera."),
+        ],
+        "dissecando": (cz("[inversão]") + " O item aplica a um bem inferior a relação que vale para bens normais. A "
+                       "conclusão final (“reduz a demanda”) costuma ser verdadeira, o que dá falsa segurança: o erro "
+                       "está no mecanismo, não no resultado. Pista: “bem inferior” no enunciado é convite a "
+                       "inverter o sinal do efeito renda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Supondo que o transporte coletivo seja bem normal, o efeito renda do aumento das passagens reforça "
+            "o efeito substituição.”</i> → CERTO",
+            "<i>“Se o transporte coletivo for bem inferior, a alta das passagens necessariamente aumentará o seu "
+            "uso.”</i> → ERRADO (só se for Giffen)",
+        ])],
+        "reescrita": ("Supondo-se que, no Brasil, o uso de transporte coletivo seja um bem inferior, conclui-se que o "
+                      "efeito renda decorrente do aumento do preço das passagens de ônibus contribui para "
+                      + hl("atenuar") + " o efeito substituição" + hl(", embora, salvo no caso de Giffen, a "
+                      "quantidade demandada desse tipo de transporte diminua") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Bem inferior: efeito renda oposto ao substituição (atenua); equação de Slutsky; Giffen "
+                             "quando o ER supera o ES. Dois comentários empilhados afirmavam que o ER reforçava o ES "
+                             "ou que o ES “não se aplicaria”."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "image (34).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "irrecuperavel (imagem não preservada; conteúdo deduzido do texto)"},
+                          {"ref": "image (33).png", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (equação de Slutsky reescrita no 📖)"},
+                          {"ref": "image (37).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "irrecuperavel (gráfico de decomposição não preservado; mecanismo descrito no 📖)"}],
+        "alertas": ["banca_provavel: CEBRASPE (provável CACD/2010; a fonte só traz o ano entre parênteses — não "
+                    "confirmada)",
+                    "qualidade_fonte: dois comentários da fonte erravam o mecanismo (ER “reforçado”; ES “não se "
+                    "aplicaria”); corrigido"],
     },
 ]

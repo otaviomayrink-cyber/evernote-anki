@@ -1,13 +1,119 @@
-{"id": "ECO-E3-L00307-1-V1", "uso": "verso",
+{
+ "id": "ECO-E3-L00307-1-V1",
+ "uso": "verso",
  "legenda": "Duopólio com P = 30 − Q e custo zero. As funções de reação R₁ e R₂ se cruzam no equilíbrio de Cournot (10; 10), com lucro conjunto de 200. Qualquer ponto da curva de conluio (q₁ + q₂ = 15), como o cartel simétrico (7,5; 7,5), dá o lucro de monopólio, 225: em conjunto, o cartel sempre lucra mais.",
- "eixos": {"x": "q₂", "y": "q₁", "xmax": 32, "ymax": 32, "numeros": true},
+ "eixos": {
+  "x": "q₂",
+  "y": "q₁",
+  "xmax": 32,
+  "ymax": 32,
+  "numeros": true
+ },
  "curvas": [
-  {"id": "R1", "tipo": "funcao", "expr": "15 - x/2", "dominio": [0, 30], "familia": "demanda", "rotulo": "R₁", "rotulo_xy": [1, 16.5]},
-  {"id": "R2", "tipo": "funcao", "expr": "30 - 2*x", "dominio": [0, 15], "familia": "oferta", "rotulo": "R₂", "rotulo_xy": [4.6, 23]},
-  {"id": "CL", "tipo": "funcao", "expr": "15 - x", "dominio": [0, 15], "familia": "destaque", "tracejada": true, "rotulo": "conluio: q₁ + q₂ = 15", "rotulo_xy": [0.8, 2.2]},
-  {"id": "CC", "tipo": "funcao", "expr": "30 - x", "dominio": [0, 30], "familia": "referencia", "rotulo": "competitiva: q₁ + q₂ = 30", "rotulo_xy": [17, 18]}],
+  {
+   "id": "R1",
+   "tipo": "funcao",
+   "expr": "15 - x/2",
+   "dominio": [
+    0,
+    30
+   ],
+   "familia": "demanda",
+   "rotulo": "R₁",
+   "rotulo_xy": [
+    1,
+    16.5
+   ]
+  },
+  {
+   "id": "R2",
+   "tipo": "funcao",
+   "expr": "30 - 2*x",
+   "dominio": [
+    0,
+    15
+   ],
+   "familia": "oferta",
+   "rotulo": "R₂",
+   "rotulo_xy": [
+    4.6,
+    23
+   ]
+  },
+  {
+   "id": "CL",
+   "tipo": "funcao",
+   "expr": "15 - x",
+   "dominio": [
+    0,
+    15
+   ],
+   "familia": "destaque",
+   "tracejada": true,
+   "rotulo": "conluio (Q = 15)",
+   "rotulo_xy": [
+    5.5,
+    2.0
+   ]
+  },
+  {
+   "id": "CC",
+   "tipo": "funcao",
+   "expr": "30 - x",
+   "dominio": [
+    0,
+    30
+   ],
+   "familia": "referencia",
+   "rotulo": "competitiva (Q = 30)",
+   "rotulo_xy": [
+    17,
+    20.5
+   ]
+  }
+ ],
  "pontos": [
-  {"id": "N", "intersecao": ["R1", "R2"], "rotulo": "Cournot", "rotulo_desloc": [12, 6]},
-  {"id": "K", "xy": [7.5, 7.5], "rotulo": "cartel", "rotulo_desloc": [-62, -8]},
-  {"id": "P", "xy": [15, 15], "rotulo": "competitivo", "rotulo_desloc": [12, -14]}],
- "checar": ["abs(N.x - 10) < 0.01", "abs(N.y - 10) < 0.01", "(30 - N.x - N.y)*(N.x + N.y) < (30 - K.x - K.y)*(K.x + K.y)", "abs((30 - K.x - K.y)*(K.x + K.y) - 225) < 0.01"]}
+  {
+   "id": "N",
+   "intersecao": [
+    "R1",
+    "R2"
+   ],
+   "rotulo": "Cournot",
+   "rotulo_desloc": [
+    12,
+    6
+   ]
+  },
+  {
+   "id": "K",
+   "xy": [
+    7.5,
+    7.5
+   ],
+   "rotulo": "cartel",
+   "rotulo_desloc": [
+    -62,
+    -8
+   ]
+  },
+  {
+   "id": "P",
+   "xy": [
+    15,
+    15
+   ],
+   "rotulo": "competitivo",
+   "rotulo_desloc": [
+    12,
+    8
+   ]
+  }
+ ],
+ "checar": [
+  "abs(N.x - 10) < 0.01",
+  "abs(N.y - 10) < 0.01",
+  "(30 - N.x - N.y)*(N.x + N.y) < (30 - K.x - K.y)*(K.x + K.y)",
+  "abs((30 - K.x - K.y)*(K.x + K.y) - 225) < 0.01"
+ ]
+}

@@ -644,7 +644,7 @@ CARDS = [
                              "não são máximos: parte do EC vira lucro e parte é peso morto; P > CMg."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva de ECO-E2-L01020-1 (Nabuco Pré-TPS/2023); mantidos os dois por serem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L00812
     {
@@ -728,7 +728,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 135", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida (definição do Lerner no 📖)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva de ECO-E2-L01018-1 (Nabuco Pré-TPS/2023); mantidos os dois por serem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L00993
     {
@@ -869,7 +869,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 173", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida (fórmula no 📖)"}],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva de ECO-E2-L00867-1 (Nabuco, sem ano); mantidos os dois por serem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L01019
     {
@@ -963,7 +963,7 @@ CARDS = [
                              "morto; quantidade menor e preço maior que na concorrência perfeita."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["quase_duplicata: mesma assertiva de ECO-E2-L00811-1 (Nabuco, sem ano); mantidos os dois por serem de provas diferentes"],
     },
     # ------------------------------------------------------------------ E2-L01021
     {
@@ -1033,6 +1033,9 @@ CARDS = [
             "exatamente onde |ε| = 1. O monopolista fica sempre à esquerda desse ponto.",
             "Limite: com " + vd("CMg = 0") + " (custo marginal desprezível, como em bens digitais), o ótimo é "
             "RMg = 0, no ponto de elasticidade unitária. Fora desse caso-limite, a regra é estrita.",
+            "Não confundir com a regra do markup: demanda menos elástica dá markup maior <i>entre firmas</i> "
+            "(" + vd("L = 1/|ε|") + "), mas cada monopolista escolhe, na sua própria curva, um ponto do trecho "
+            "elástico — por isso L fica sempre abaixo de 1.",
         ],
         "dissecando": (cz("[literalidade · modulador absoluto]") + " O “sempre” assusta, mas aqui é a regra de "
                        "manual (o único caso-limite, CMg nulo, não é cobrado). 🔥 O tema volta em versões "
@@ -1364,7 +1367,7 @@ CARDS = [
                            "acao": "absorvida (regra do markup no 📖)"},
                           {"ref": "IMAGEM 321", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida (caso ε = ∞ no 📖)"}],
-        "alertas": ["gabarito_resolvido: a fonte não traz gabarito explícito; as imagens do verso e o conteúdo "
+        "alertas": ["nota_redacao: gabarito resolvido — a fonte não traz gabarito explícito; as imagens do verso e o conteúdo "
                     "indicam CERTO"],
     },
 ]

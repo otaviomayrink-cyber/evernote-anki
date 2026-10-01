@@ -1,0 +1,17 @@
+{"id": "ECO-E3-L00070-1-V1", "uso": "verso",
+ "legenda": "Para abater 16 toneladas no total: com a taxa t = 6, a firma 1 (abatimento barato) reduz 12 e a firma 2 reduz 4, e os custos marginais se igualam em 6 (custo total 48). Com o limite uniforme de 8 para cada, os custos marginais ficam desiguais (4 × 12) e o custo total sobe para 64.",
+ "eixos": {"x": "abatimento", "y": "R$", "xmax": 16, "ymax": 14, "numeros": true},
+ "curvas": [
+  {"id": "C1", "tipo": "funcao", "expr": "0.5*x", "dominio": [0, 15.5], "familia": "demanda", "rotulo": "CMgA₁"},
+  {"id": "C2", "tipo": "funcao", "expr": "1.5*x", "dominio": [0, 9.2], "familia": "oferta", "rotulo": "CMgA₂"},
+  {"id": "T", "tipo": "horizontal", "y": 6, "x": [0, 15.5], "familia": "destaque", "rotulo": "taxa t = 6"},
+  {"id": "L", "tipo": "vertical", "x": 8, "y": [0, 13.2], "familia": "referencia", "rotulo": "limite uniforme"}
+ ],
+ "pontos": [
+  {"id": "T1", "intersecao": ["C1", "T"], "rotulo": "a₁ = 12", "projetar": "x", "rotulo_desloc": [6, 14]},
+  {"id": "T2", "intersecao": ["C2", "T"], "rotulo": "a₂ = 4", "projetar": "x", "rotulo_desloc": [-70, 14]},
+  {"id": "Q1", "sobre": "C1", "x": 8, "rotulo": "4", "rotulo_desloc": [10, -12]},
+  {"id": "Q2", "sobre": "C2", "x": 8, "rotulo": "12", "rotulo_desloc": [10, 0]}
+ ],
+ "checar": ["abs(T1.x + T2.x - 16) < 0.01", "abs(Q1.y - 4) < 0.01", "abs(Q2.y - 12) < 0.01",
+            "abs(0.5*T1.x**2/2 + 1.5*T2.x**2/2 - 48) < 0.01", "abs(0.5*64/2 + 1.5*64/2 - 64) < 0.01"]}

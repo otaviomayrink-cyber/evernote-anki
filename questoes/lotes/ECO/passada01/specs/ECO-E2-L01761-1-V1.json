@@ -1,0 +1,18 @@
+{"id": "ECO-E2-L01761-1-V1", "uso": "verso",
+ "legenda": "Na vacina, a externalidade está no consumo: o benefício marginal social (BMgS) fica acima da demanda privada (BMgP), enquanto a oferta (CMg privado = CMg social) não muda. O mercado para em qm, abaixo do ótimo q*; o triângulo vermelho é o peso morto da subvacinação.",
+ "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "D", "tipo": "reta", "p1": [0, 7], "p2": [8.75, 0], "familia": "demanda", "rotulo": "D = BMgP"},
+  {"id": "BS", "tipo": "reta", "p1": [0, 9.4], "p2": [9.6, 1.72], "familia": "destaque", "rotulo": "BMgS"},
+  {"id": "S", "tipo": "reta", "p1": [0, 1], "p2": [9.4, 8.52], "familia": "oferta", "rotulo": "O = CMg"}
+ ],
+ "pontos": [
+  {"id": "Em", "intersecao": ["D", "S"], "rotulo": "Eₘ", "projetar": "x", "rotulo_x": "qm"},
+  {"id": "Eo", "intersecao": ["BS", "S"], "rotulo": "E*", "projetar": "x", "rotulo_x": "q*", "rotulo_desloc": [-8, 14]},
+  {"id": "Bm", "sobre": "BS", "x": "Em.x", "marcar": false}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": ["Em", "Bm", "Eo"], "papel": "peso_morto", "rotulo": "PM", "rotulo_xy": ["Em.x+0.55", "Em.y+1.0"]}
+ ],
+ "setas": [{"de": [1.6, "D(1.6)+0.12"], "para": [1.6, "BS(1.6)-0.12"], "estilo": "<|-|>", "rotulo": "benefício externo", "rotulo_desloc": [8, 0]}],
+ "checar": ["Eo.x > Em.x", "Eo.y > Em.y", "BS(Em.x) > Em.y", "abs((BS(2) - D(2)) - (BS(5) - D(5))) < 0.01"]}

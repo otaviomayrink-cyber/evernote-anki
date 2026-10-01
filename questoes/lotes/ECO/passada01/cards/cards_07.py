@@ -1039,4 +1039,327 @@ CARDS = [
                           "e isso pode afastar consumidores e produtores de suas escolhas ótimas."),
         qualidade_fonte="raso",
     ),
+    # ------------------------------------------------------------------ E1-0161
+    card(
+        "E1-0161", "teto", "Julgue o item a seguir, relativo às intervenções do governo nos preços de mercado.",
+        assertiva=("A política de preços mínimos compulsórios tem por objetivo beneficiar o produtor, garantindo "
+                   "um preço geralmente inferior ao preço de equilíbrio de mercado."),
+        gabarito="ERRADO",
+        anotada=(az("A política de preços mínimos compulsórios tem por objetivo beneficiar o produtor, "
+                    "garantindo um preço geralmente ") + vm("inferior") + az(" ao preço de equilíbrio de "
+                    "mercado.")),
+        poucas=("O " + azb("preço mínimo") + " (piso) só beneficia o produtor — e só tem efeito — se fixado "
+                + vd("acima") + " do equilíbrio. Abaixo dele, seria inócuo: o mercado já paga mais."),
+        destrinchando=[
+            "Um piso abaixo do preço de equilíbrio não “morde”: compradores e vendedores continuam "
+            "transacionando no equilíbrio, que já respeita o mínimo. Para proteger a renda do produtor, o "
+            "piso precisa ficar <b>acima</b> de p*.",
+            "Efeito do piso efetivo: ao preço mínimo, Qˢ > Qᴰ — " + azb("excedente de oferta") + ". Para "
+            "sustentar o preço, o governo costuma comprar e estocar o excedente, ou pagar a diferença ao "
+            "produtor. Há peso morto e custo fiscal.",
+            "Espelho: o " + azb("preço máximo") + " (teto) protege o consumidor e só tem efeito se fixado "
+            "<b>abaixo</b> do equilíbrio — gera excesso de demanda, filas e mercado paralelo.",
+            "No " + rx("Brasil") + ", o exemplo clássico é a " + rx("Política de Garantia de Preços Mínimos "
+            "(PGPM)") + " para produtos agrícolas, operada pela " + rx("Conab") + " com compras públicas e "
+            "instrumentos de equalização de preços. O " + azb("salário mínimo") + " é o piso mais conhecido "
+            "no mercado de trabalho.",
+            vm("Regra-âncora: piso efetivo fica acima do equilíbrio (sobra produto); teto efetivo, abaixo "
+               "(falta produto)."),
+        ],
+        grafico_verso="ECO-E1-0161-1-V1",
+        dissecando=(cz("[inversão]") + " O objetivo (beneficiar o produtor) está certo; o erro está na posição "
+                    "do preço em relação ao equilíbrio, trocada com a do preço máximo. Pista lógica: um preço "
+                    "garantido <i>menor</i> que o de mercado não beneficiaria ninguém."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Um preço mínimo fixado acima do equilíbrio tende a gerar excesso de oferta do bem.”</i> → "
+            "CERTO",
+            "<i>“Um preço máximo fixado acima do equilíbrio gera escassez do bem.”</i> → ERRADO (inversão: "
+            "acima do equilíbrio o teto é inócuo)",
+        ])],
+        reescrita=("A política de preços mínimos compulsórios tem por objetivo beneficiar o produtor, garantindo "
+                   "um preço geralmente " + hl("superior") + " ao preço de equilíbrio de mercado."),
+        tipo_erro=["INVERSAO"], dificuldade=1,
+        comentario_fonte=("ERRADO. A política de preços mínimos visa beneficiar o produtor, mas isso é feito "
+                          "garantindo um preço superior, e não inferior, ao preço de equilíbrio de mercado."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0162
+    card(
+        "E1-0162", "trib", COM_TRIB,
+        assertiva=("O governo decide criar um imposto sobre um determinado produto. Considerando-se a elasticidade "
+                   "com relação ao preço, se a demanda for menos elástica do que a oferta, a carga tributária "
+                   "recairá principalmente sobre os compradores."),
+        gabarito="CERTO",
+        anotada=az("O governo decide criar um imposto sobre um determinado produto. Considerando-se a elasticidade "
+                   "com relação ao preço, se a demanda for <u>menos elástica</u> do que a oferta, a carga "
+                   "tributária recairá principalmente sobre os <u>compradores</u>."),
+        poucas=("A " + azb("incidência econômica") + " recai mais sobre o lado " + vd("menos elástico") + ": "
+                "compradores pouco sensíveis ao preço não conseguem “fugir” do imposto e absorvem a maior parte "
+                "da cunha."),
+        destrinchando=[
+            "O imposto abre uma cunha t entre o preço pago pelo comprador (pc) e o recebido pelo vendedor "
+            "(pv). Como essa cunha se divide depende de quem reage menos: com demanda inelástica, a "
+            "quantidade quase não cai, o pc sobe quase t inteiro e o pv cai pouco.",
+            "Fórmula de repartição: parcela do comprador ≈ " + vd("ε<sub>O</sub> / (ε<sub>O</sub> + "
+            "|ε<sub>D</sub>|)") + "; parcela do vendedor ≈ |ε<sub>D</sub>| / (ε<sub>O</sub> + |ε<sub>D</sub>|). "
+            "Quanto menor |ε<sub>D</sub>| em relação a ε<sub>O</sub>, maior a fatia do comprador.",
+            azb("Incidência legal") + " ≠ " + azb("incidência econômica") + ": não importa quem recolhe o "
+            "imposto ao fisco (vendedor ou comprador); o resultado em preços e quantidades é o mesmo. O que "
+            "decide é a elasticidade relativa.",
+            "Exemplos típicos de demanda inelástica com carga sobre o consumidor: combustíveis, cigarros, "
+            "bebidas, energia elétrica — bases preferidas para tributação justamente porque a arrecadação "
+            "é estável e o peso morto, menor.",
+            vm("Regra-âncora: o imposto “gruda” em quem tem menos alternativa — o lado menos elástico."),
+        ],
+        grafico_verso="ECO-E1-0162-1-V1",
+        dissecando=(cz("[paráfrase fiel]") + " Regra de manual (" + oc("Mankiw") + ", capítulo sobre "
+                    "oferta, demanda e políticas do governo) em redação direta. O risco é confundir incidência "
+                    "econômica com legal e responder “recai sobre quem recolhe” — o item nem diz quem "
+                    "recolhe, o que confirma que a resposta depende só das elasticidades."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Se o imposto for recolhido pelos vendedores, a carga recairá sobre eles, qualquer que seja a "
+            "elasticidade da demanda.”</i> → ERRADO (troca de conceito: incidência legal × econômica)",
+            "<i>“Se a oferta for perfeitamente elástica, toda a carga recairá sobre os compradores.”</i> → "
+            "CERTO",
+        ])],
+        tipo_erro=["PARAFRASE_FIEL"], dificuldade=1,
+        comentario_fonte=("CERTO. A incidência depende das elasticidades relativas; com demanda menos elástica, "
+                          "os compradores suportam a maior parte da carga. Com oferta elástica e demanda "
+                          "inelástica, o preço recebido pelos vendedores cai pouco e o pago pelos compradores "
+                          "sobe bastante. [imagem]"),
+        qualidade_fonte="bom",
+        figuras_fonte=[{"ref": "Untitled (43).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                        "acao": "irrecuperavel (imagem não preservada; o texto descreve oferta elástica × demanda "
+                                "inelástica — mecanismo redesenhado em ECO-E1-0162-1-V1)"}],
+    ),
+    # ------------------------------------------------------------------ E1-0163
+    card(
+        "E1-0163", "trib", COM_TRIB,
+        assertiva=("Um imposto constitui um peso-morto porque afeta as decisões de compradores e vendedores. Em "
+                   "vista disso, conclui-se que quanto maiores forem as elasticidades da oferta e da demanda, "
+                   "maior será o peso morto de um imposto."),
+        gabarito="CERTO",
+        anotada=az("Um imposto constitui um peso-morto porque afeta as decisões de compradores e vendedores. Em "
+                   "vista disso, conclui-se que <u>quanto maiores</u> forem as elasticidades da oferta e da "
+                   "demanda, <u>maior</u> será o peso morto de um imposto."),
+        poucas=("O " + azb("peso morto") + " nasce da redução da quantidade transacionada. Quanto mais "
+                + vd("elásticas") + " as curvas, mais compradores e vendedores reagem à cunha do imposto, mais "
+                "a quantidade cai — e maior a perda."),
+        destrinchando=[
+            "O peso morto é o triângulo entre as curvas, de q<sub>t</sub> a q<sub>0</sub>: base ≈ t (a cunha) "
+            "e altura ≈ Δq. Como a cunha é a mesma, o tamanho depende de quanto a quantidade cai — e isso "
+            "depende das elasticidades.",
+            "Aproximação útil: " + vd("PM ≈ ½ · t² · [ε<sub>O</sub>·|ε<sub>D</sub>| / (ε<sub>O</sub> + "
+            "|ε<sub>D</sub>|)] · (Q/P)") + ". Cresce com cada elasticidade e com o quadrado da alíquota.",
+            "Caso-limite: se a demanda (ou a oferta) for perfeitamente inelástica, a quantidade não muda e o "
+            "peso morto é <b>zero</b> — o imposto vira pura transferência. É a lógica do imposto sobre a terra "
+            "de " + oc("Henry George") + " (oferta de terra fixa).",
+            "Consequência de política: a " + azb("regra de Ramsey") + " (" + oc("Ramsey") + ", 1927) recomenda "
+            "alíquotas maiores sobre bens de demanda inelástica para minimizar o peso morto — o que conflita "
+            "com equidade, porque esses bens (alimentos, energia) pesam mais no orçamento dos pobres.",
+            "Mesma lógica nos tributos sobre trabalho: se a oferta de trabalho é elástica (segundo provedor da "
+            "família, idosos), impostos sobre salários geram grande peso morto.",
+        ],
+        grafico_verso="ECO-E1-0163-1-V1",
+        dissecando=(cz("[literalidade]") + " Paráfrase direta da conclusão de " + oc("Mankiw") + " no capítulo "
+                    "sobre os custos da tributação. A premissa (“porque afeta as decisões”) já entrega o "
+                    "raciocínio: mais reação = mais distorção. O item irmão usa a mesma premissa para uma "
+                    "conclusão falsa sobre subsídios."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“O peso morto de um imposto é tanto maior quanto menos elásticas forem a oferta e a "
+            "demanda.”</i> → ERRADO (inversão: inelasticidade reduz o peso morto)",
+            "<i>“Se a oferta de um bem for perfeitamente inelástica, um imposto sobre esse bem não gera peso "
+            "morto.”</i> → CERTO",
+        ])],
+        tipo_erro=["LITERAL"], dificuldade=1,
+        comentario_fonte=("CERTO. O peso-morto representa a perda líquida de bem-estar causada por uma distorção. "
+                          "Quanto maior a elasticidade da demanda e da oferta, mais os agentes ajustam suas "
+                          "quantidades diante de variações no preço, o que aumenta a retração do mercado e, "
+                          "portanto, o peso-morto."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0164
+    card(
+        "E1-0164", "sub", COM_TRIB,
+        assertiva=("Um imposto constitui um peso-morto porque afeta as decisões de compradores e vendedores. Em "
+                   "vista disso, conclui-se que subsídios não geram peso-morto."),
+        gabarito="ERRADO",
+        anotada=(az("Um imposto constitui um peso-morto porque afeta as decisões de compradores e vendedores. Em "
+                    "vista disso, conclui-se que subsídios ") + vm("não geram") + az(" peso-morto.")),
+        poucas=("O " + azb("subsídio") + " também distorce decisões, só que no sentido oposto: a quantidade "
+                "passa do ótimo, o gasto do governo supera o ganho de consumidores e produtores, e a diferença "
+                "é " + vd("peso morto") + "."),
+        destrinchando=[
+            "Um subsídio s por unidade é um “imposto negativo”: desloca a oferta para baixo (O − s). O "
+            "comprador passa a pagar pc < p<sub>0</sub>, o vendedor recebe pv > p<sub>0</sub>, e "
+            + vd("pv − pc = s") + ".",
+            "A quantidade sobe de q<sub>0</sub> para q<sub>s</sub>. As unidades extras custam ao produtor "
+            "(curva de oferta) mais do que valem para o consumidor (curva de demanda): produzi-las destrói "
+            "valor.",
+            "Contabilidade: excedente do consumidor e do produtor aumentam, mas o " + azb("gasto do governo")
+            + " (s × q<sub>s</sub>) é maior que a soma desses ganhos. A diferença — o triângulo entre "
+            "q<sub>0</sub> e q<sub>s</sub> — é o " + azb("peso morto do subsídio") + ".",
+            "Exceção: subsídio sobre um bem com " + azb("externalidade positiva") + " (vacinação, pesquisa, "
+            "educação básica) pode <b>corrigir</b> uma subprodução e aumentar a eficiência — é o subsídio "
+            "pigouviano. Sem externalidade, o subsídio é distorção.",
+            vm("Regra-âncora: imposto → quantidade abaixo do ótimo; subsídio → quantidade acima. Os dois "
+               "geram peso morto."),
+        ],
+        grafico_verso="ECO-E1-0164-1-V1",
+        dissecando=(cz("[nexo indevido]") + " A premissa é verdadeira e, aplicada corretamente, leva à "
+                    "conclusão oposta: se o peso morto vem de afetar decisões, o subsídio, que também afeta "
+                    "decisões, também o gera. O “em vista disso” finge uma dedução que não existe."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Um subsídio eleva o excedente do consumidor e o do produtor, mas o custo para o governo supera "
+            "a soma desses ganhos.”</i> → CERTO",
+            "<i>“Como o subsídio aumenta a quantidade transacionada, ele sempre eleva o bem-estar total.”</i> → "
+            "ERRADO (nexo indevido: produzir além do ótimo destrói valor)",
+        ])],
+        reescrita=("Um imposto constitui um peso-morto porque afeta as decisões de compradores e vendedores. Em "
+                   "vista disso, conclui-se que subsídios, " + hl("que também afetam essas decisões, também "
+                   "geram") + " peso-morto."),
+        tipo_erro=["NEXO_INDEVIDO"], dificuldade=1,
+        comentario_fonte=("ERRADO. Subsídios também geram peso-morto, pois distorcem os incentivos de mercado e "
+                          "podem levar a superprodução e consumo excessivo, resultando em ineficiência "
+                          "alocativa."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0165
+    card(
+        "E1-0165", "trib", COM_TRIB,
+        assertiva=("À medida que se aumentam as alíquotas de um imposto sobre as vendas, o peso-morto do produtor "
+                   "diminui."),
+        gabarito="ERRADO",
+        anotada=(az("À medida que se aumentam as alíquotas de um imposto sobre as vendas, o peso-morto do "
+                    "produtor ") + vm("diminui") + az(".")),
+        poucas=("Alíquota maior → cunha maior → quantidade menor → " + vd("peso morto maior") + ", inclusive a "
+                "parcela que cabe ao produtor. O peso morto cresce aproximadamente com o " + vd("quadrado")
+                + " da alíquota."),
+        destrinchando=[
+            "Áreas da convenção de " + oc("Mankiw") + ": o imposto reduz o excedente do consumidor em "
+            + vd("B + C") + " e o do produtor em " + vd("D + E") + "; a receita do governo é B + D; o peso "
+            "morto é " + vd("C + E") + ". Logo E é a parcela do peso morto que recai sobre o produtor.",
+            "Ao elevar a alíquota, pc sobe, pv cai e a quantidade encolhe: os dois lados do triângulo do peso "
+            "morto (a cunha t e a queda Δq) aumentam juntos. Por isso " + vd("dobrar a alíquota "
+            "quadruplica") + " o peso morto (com curvas lineares).",
+            "A receita se comporta de outro modo: base (q) cai e alíquota sobe; a partir de certo ponto, a "
+            "receita para de crescer e começa a cair — a " + azb("curva de Laffer") + ". O peso morto, ao "
+            "contrário, cresce sempre.",
+            "Consequência de política: é mais eficiente arrecadar com alíquotas moderadas sobre bases amplas "
+            "do que com alíquotas altas sobre bases estreitas.",
+        ],
+        grafico_verso="ECO-E1-0165-1-V1",
+        dissecando=(cz("[inversão]") + " O item inverte a relação entre alíquota e distorção. A expressão "
+                    "“peso-morto do produtor” é incomum e pode confundir; ela designa a parte da perda de "
+                    "eficiência que corresponde ao produtor (área E), que cresce junto com o total."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Se a alíquota de um imposto dobra, o peso morto mais que dobra.”</i> → CERTO",
+            "<i>“Elevar a alíquota de um imposto sempre aumenta a arrecadação.”</i> → ERRADO (modulador "
+            "absoluto: a curva de Laffer mostra que a receita pode cair)",
+        ])],
+        reescrita=("À medida que se aumentam as alíquotas de um imposto sobre as vendas, o peso-morto do produtor "
+                   + hl("aumenta") + "."),
+        tipo_erro=["INVERSAO"], dificuldade=1,
+        comentario_fonte=("ERRADO. O aumento das alíquotas tende a aumentar o peso-morto total, inclusive o "
+                          "associado aos produtores. Com o imposto, demandantes pagam mais e ofertantes recebem "
+                          "menos. O imposto reduz o EC em B + C e o EP em D + E (receita tributária mais peso "
+                          "morto). [imagem]"),
+        qualidade_fonte="bom",
+        figuras_fonte=[{"ref": "Untitled (41).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                        "acao": "irrecuperavel (imagem não preservada; áreas B–E descritas no texto e absorvidas "
+                                "no 📖; gráfico didático novo em ECO-E1-0165-1-V1)"}],
+    ),
+    # ------------------------------------------------------------------ E1-0167
+    card(
+        "E1-0167", "trib", COM_TRIB,
+        assertiva=("Quando a oferta de um bem é mais elástica à variação do preço do que a demanda "
+                   "(preço-inelástica), a incidência tributária recai mais pesadamente sobre os produtores do que "
+                   "sobre os consumidores."),
+        gabarito="ERRADO",
+        anotada=(az("Quando a oferta de um bem é mais elástica à variação do preço do que a demanda "
+                    "(preço-inelástica), a incidência tributária recai mais pesadamente sobre os ")
+                 + vm("produtores") + az(" do que sobre os ") + vm("consumidores") + az(".")),
+        poucas=("Demanda inelástica e oferta elástica: quem tem menos alternativa é o " + azb("consumidor")
+                + ", e é sobre ele que recai a " + vd("maior parte") + " do imposto."),
+        destrinchando=[
+            "Regra da incidência: o imposto pesa mais sobre o lado " + azb("menos elástico") + " do mercado. "
+            "Elasticidade alta = capacidade de fugir (o produtor desloca recursos para outro bem; o "
+            "consumidor troca de produto). Elasticidade baixa = ficar e pagar.",
+            "No caso do item, a demanda é a inelástica (o parêntese qualifica a demanda). Com o imposto, o "
+            "preço pago pelo consumidor sobe quase toda a cunha, e o recebido pelo produtor cai pouco.",
+            "Parcela do consumidor ≈ " + vd("ε<sub>O</sub> / (ε<sub>O</sub> + |ε<sub>D</sub>|)") + ": com "
+            "ε<sub>O</sub> grande e |ε<sub>D</sub>| pequeno, ela se aproxima de 1.",
+            "Quem recolhe o imposto (incidência legal) não altera essa conclusão: um ICMS cobrado da empresa "
+            "sobre um bem de demanda inelástica é, economicamente, pago sobretudo pelo consumidor.",
+        ],
+        grafico_verso="ECO-E1-0167-1-V1",
+        dissecando=(cz("[inversão · troca de ator]") + " Premissas corretas, conclusão com os atores trocados. "
+                    "O parêntese “(preço-inelástica)” em posição ambígua é um distrator: refere-se à demanda. "
+                    "🔥 Itens irmãos de incidência só mudam qual curva é elástica e quem paga — monte a "
+                    "frase-regra antes de ler o item."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Quando a demanda é mais elástica que a oferta, a incidência recai mais pesadamente sobre os "
+            "produtores.”</i> → CERTO",
+            "<i>“A divisão da carga tributária entre produtores e consumidores depende de quem recolhe o "
+            "imposto ao governo.”</i> → ERRADO (troca de conceito: depende das elasticidades)",
+        ])],
+        reescrita=("Quando a oferta de um bem é mais elástica à variação do preço do que a demanda "
+                   "(preço-inelástica), a incidência tributária recai mais pesadamente sobre os "
+                   + hl("consumidores") + " do que sobre os " + hl("produtores") + "."),
+        tipo_erro=["INVERSAO", "TROCA_ATOR"], dificuldade=1,
+        comentario_fonte=("ERRADO. A demanda mais inelástica indica que os consumidores reagem menos a variações "
+                          "de preço; a maior parte da carga recai sobre os consumidores, que absorvem o aumento no "
+                          "preço com menor redução na quantidade demandada. [imagem]"),
+        qualidade_fonte="bom",
+        figuras_fonte=[{"ref": "Untitled (40).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                        "acao": "irrecuperavel (imagem não preservada; mecanismo redesenhado em "
+                                "ECO-E1-0167-1-V1)"}],
+    ),
+    # ------------------------------------------------------------------ E1-0168
+    card(
+        "E1-0168", "trib", COM_TRIB,
+        assertiva=("Quando a demanda por um bem é mais elástica à variação do preço do que a oferta "
+                   "(preço-inelástica), a incidência tributária recai mais pesadamente sobre os produtores do que "
+                   "sobre os consumidores."),
+        gabarito="CERTO",
+        anotada=az("Quando a demanda por um bem é <u>mais elástica</u> à variação do preço do que a oferta "
+                   "(preço-inelástica), a incidência tributária recai mais pesadamente sobre os "
+                   "<u>produtores</u> do que sobre os consumidores."),
+        poucas=("Demanda elástica e oferta inelástica: o consumidor foge do imposto trocando de produto; o "
+                + azb("produtor") + ", sem alternativa, absorve a " + vd("maior parte") + " da cunha com "
+                "queda do preço recebido."),
+        destrinchando=[
+            "O lado " + azb("menos elástico") + " — aqui, a oferta — paga mais. Com demanda elástica, "
+            "qualquer alta de preço derruba as vendas; o produtor só mantém clientes baixando o preço "
+            "líquido que recebe (pv).",
+            "Parcela do produtor ≈ " + vd("|ε<sub>D</sub>| / (ε<sub>O</sub> + |ε<sub>D</sub>|)") + ": com "
+            "|ε<sub>D</sub>| grande e ε<sub>O</sub> pequeno, ela se aproxima de 1.",
+            "Ofertas inelásticas típicas: produtos agrícolas no curto prazo (a safra já foi plantada), imóveis "
+            "e terra, bens com capacidade instalada fixa. Por isso, no curto prazo, tributos sobre esses bens "
+            "tendem a ser absorvidos pelos produtores.",
+            "O mesmo raciocínio explica o debate sobre tributos sobre salários: se a oferta de trabalho é "
+            "inelástica, o trabalhador arca com a maior parte do imposto, ainda que a lei mande a empresa "
+            "recolher.",
+            vm("Regra-âncora: paga mais quem tem menos para onde fugir."),
+        ],
+        grafico_verso="ECO-E1-0168-1-V1",
+        dissecando=(cz("[paráfrase fiel]") + " Item espelho do irmão ERRADO: aqui a curva elástica é a demanda "
+                    "e o parêntese “(preço-inelástica)” qualifica a oferta. A conclusão (produtores) bate com a "
+                    "regra. Leia o parêntese como pertencendo ao termo imediatamente anterior."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Quando a demanda é perfeitamente elástica, toda a carga do imposto recai sobre os "
+            "produtores.”</i> → CERTO",
+            "<i>“Quando a demanda é mais elástica que a oferta, o preço pago pelos consumidores sobe quase todo "
+            "o valor do imposto.”</i> → ERRADO (inversão: sobe pouco; quem perde é o preço recebido pelo "
+            "produtor)",
+        ])],
+        tipo_erro=["PARAFRASE_FIEL"], dificuldade=1,
+        comentario_fonte=("CERTO. Os consumidores reagem fortemente a aumentos de preços (demanda elástica), "
+                          "enquanto os produtores têm menos flexibilidade para ajustar a oferta (oferta "
+                          "inelástica). Assim, os produtores absorvem a maior parte da tributação. [imagem]"),
+        qualidade_fonte="bom",
+        figuras_fonte=[{"ref": "Untitled (46).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                        "acao": "irrecuperavel (imagem não preservada; mecanismo redesenhado em "
+                                "ECO-E1-0168-1-V1)"}],
+    ),
 ]

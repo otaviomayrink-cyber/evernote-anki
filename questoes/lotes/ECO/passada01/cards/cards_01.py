@@ -1036,7 +1036,7 @@ CARDS = [
             azb("Bens de produção") + " servem para produzir outros bens: " + azb("bens de capital") + " "
             "(máquinas, equipamentos, instalações — duram vários ciclos produtivos) e " + azb("bens "
             "intermediários") + " (matérias-primas e insumos, consumidos ou transformados no processo).",
-            "Mais uma vez, o critério é o uso: um computador comprado por uma família é bem de consumo durável; o "
+            "O critério é o uso, não a natureza física do bem: um computador comprado por uma família é bem de consumo durável; o "
             "mesmo computador comprado por um escritório é bem de capital.",
             "Nas contas nacionais, a compra de bens de capital pelas empresas entra como " + azb("formação bruta "
             "de capital fixo") + " (investimento); a compra de bens de consumo pelas famílias, como consumo.",

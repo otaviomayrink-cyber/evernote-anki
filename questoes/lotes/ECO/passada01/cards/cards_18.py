@@ -1078,7 +1078,7 @@ CARDS = [
                       "igual àquela determinada pelo cruzamento das curvas D e C."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A quantidade a ser produzida e vendida no mercado a que se refere o gráfico em questão é ")
-                    + vm("igual àquela determinada pelo cruzamento das curvas D e C") + az(".")),
+                    + vm("igual") + az(" àquela determinada pelo cruzamento das curvas D e C.")),
         "poucas": ("O monopolista maximiza lucro onde " + vd("RMg = CMg") + ". A RMg fica abaixo da demanda e não "
                    "aparece no gráfico; o cruzamento D × C (P = CMg) é a quantidade da concorrência perfeita, "
                    "maior que a do monopólio."),

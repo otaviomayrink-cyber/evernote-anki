@@ -757,7 +757,7 @@ CARDS = [
                       "obtenham um lucro maior do que em uma estrutura de cartel."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Em um mercado oligopolista em que ocorra um equilíbrio de Cournot, ") + vm("é possível")
-                    + az(" que as empresas obtenham um lucro ") + vm("maior") + az(" do que em uma estrutura de "
+                    + az(" que as empresas obtenham um lucro maior do que em uma estrutura de "
                                                                                  "cartel.")),
         "poucas": ("O cartel escolhe o lucro conjunto <b>máximo</b> (o de monopólio); qualquer outro resultado — "
                    "Cournot inclusive — dá lucro conjunto " + vd("menor") + ". Logo não é possível."),
@@ -771,8 +771,8 @@ CARDS = [
             "Exemplo do gráfico (P = 30 − Q, custo zero): Cournot → 10 + 10 = 20 unidades, P = 10, lucro "
             "conjunto " + vd("200") + "; cartel → 15 unidades, P = 15, lucro " + vd("225") + "; competitivo → 30 "
             "unidades, P = 0, lucro zero.",
-            "Hierarquia com produto homogêneo e custos iguais: lucro conjunto " + vd("cartel > Stackelberg > "
-            "Cournot > Bertrand (= 0)") + ". O “custo” do cartel não é lucro menor, é a " + azb("instabilidade")
+            "Hierarquia com produto homogêneo e custos iguais: lucro conjunto " + vd("cartel > Cournot > "
+            "Stackelberg > Bertrand (= 0)") + ". O “custo” do cartel não é lucro menor, é a " + azb("instabilidade")
             + ": cada membro ganha individualmente se trair (no exemplo, quem mantém 7,5 vê a rival responder com "
             "11,25 e lucrar mais).",
             "Ressalva que não salva o item: uma firma <b>individual</b> pode lucrar mais em Cournot do que "

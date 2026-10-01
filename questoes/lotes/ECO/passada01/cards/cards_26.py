@@ -450,8 +450,8 @@ CARDS = [
                       "estatais, garantindo a eficiência do processo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("As agências reguladoras no Brasil atuam ")
-                    + vm("exclusivamente na privatização de empresas estatais, garantindo a eficiência do "
-                         "processo") + az(".")),
+                    + vm("exclusivamente na") + az(" privatização de empresas estatais")
+                    + vm(", garantindo a eficiência do processo") + az(".")),
         "poucas": ("As agências fazem " + azb("regulação setorial permanente") + " (normas, tarifas, contratos de "
                    "concessão, qualidade, fiscalização). Quem conduz privatizações é o programa de desestatização, "
                    "não a agência."),
@@ -483,7 +483,8 @@ CARDS = [
         ])],
         "reescrita": ("As agências reguladoras no Brasil atuam " + hl("na regulação e na fiscalização permanentes de "
                       "setores específicos — normas técnicas, tarifas, contratos de concessão e qualidade —, não "
-                      "se limitando à") + " privatização de empresas estatais."),
+                      "se limitando à") + " privatização de empresas estatais"
+                      "<s>, garantindo a eficiência do processo</s>."),
         "tipo_erro": ["GENERALIZACAO", "RESTRICAO"], "moduladores": ["exclusivamente"], "dificuldade": 1,
         "comentario_fonte": "Agências fazem regulação setorial (normas, tarifas, concessões, qualidade, "
                             "fiscalização), função permanente; não atuam exclusivamente na privatização.",
@@ -758,7 +759,7 @@ CARDS = [
             "baterista.”</i> → ERRADO (troca de conceito: o efeito sobre terceiros é negativo)",
         ])],
         "reescrita": (hl("Há") + " externalidade " + hl("negativa") + " causada pelo baterista, uma vez que a perda "
-                      "de utilidade do casal por causa do ruído dos ensaios " + hl("não é compensada, ainda que") +
+                      "de utilidade pelo casal por causa do ruído dos ensaios " + hl("não é compensada, ainda que") +
                       " o baterista ganhe utilidade ao cumprir sua atividade."),
         "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "Ruído é externalidade negativa: afeta o casal sem mediação de preço nem compensação; "

@@ -817,8 +817,8 @@ CARDS = [
             "isso empresas os criam deliberadamente — planos de fidelidade, ecossistemas fechados.",
         ],
         "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Regra de manual, protegida pelo "
-                       "“pode-se esperar”. Itens-irmãos do mesmo bloco: ECO-E1-0101-1, ECO-E1-0106-1 e "
-                       "ECO-E1-0110-1 (versão ERRADA)."),
+                       "“pode-se esperar”. A versão ERRADA desse item costuma inverter o sentido (“reduz a "
+                       "elasticidade”) ou trocar o modulador por um absoluto (“perfeitamente elástica”)."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A existência de bens substitutos reduz a elasticidade-preço da demanda de um bem.”</i> → ERRADO "
             "(inversão)",

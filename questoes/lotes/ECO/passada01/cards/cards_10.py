@@ -891,4 +891,240 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0432
+    {
+        "id": "ECO-E1-0432-1", "fonte_ref": "E1-0432", "destino": "04", "subtema": H2["otimo"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Julho/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CLIP25,
+        "rotulo_item": "Item",
+        "assertiva": ("A condição de equilíbrio do consumidor em uma situação de convexidade das preferências "
+                      "ocorre quando a taxa marginal de substituição entre dois bens é inferior ao preço relativo "
+                      "entre esses bens."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A condição de equilíbrio do consumidor em uma situação de convexidade das preferências "
+                      "ocorre quando a taxa marginal de substituição entre dois bens é ") + vm("inferior ao")
+                   + az(" preço relativo entre esses bens."),
+        "poucas": ("Com preferências convexas, o ótimo (interior) é a " + azb("tangência") + " entre a curva de "
+                   "indiferença mais alta e a reta orçamentária: " + vd("TMS = p₁/p₂") + ", e não TMS menor."),
+        "destrinchando": [
+            "A " + azb("convexidade") + " garante que a tangência é um máximo (e não um mínimo) e que ele é "
+            "único quando a convexidade é estrita. Por isso a condição de primeira ordem — "
+            + vd("TMS₁₂ = UMg₁/UMg₂ = p₁/p₂") + " — caracteriza o equilíbrio.",
+            "Leitura econômica: a TMS é a taxa à qual o consumidor <b>quer</b> trocar; p₁/p₂ é a taxa à qual o "
+            "mercado <b>permite</b> trocar. Se TMS < p₁/p₂, x₁ vale menos para ele do que custa: vender x₁ "
+            "(comprar menos) e comprar x₂ eleva a utilidade. O ponto ainda não é ótimo.",
+            "Se TMS > p₁/p₂, o ajuste é o inverso: comprar mais x₁. Só na igualdade não há troca vantajosa.",
+            "Formulação equivalente: " + vd("UMg₁/p₁ = UMg₂/p₂") + " — o último real gasto rende a mesma "
+            "utilidade em qualquer bem.",
+            "Exceção sem convexidade estrita: substitutos perfeitos e preferências côncavas levam a soluções de "
+            "canto, em que a desigualdade pode subsistir.",
+        ],
+        "dissecando": (cz("[dado alterado]") + " Troca “igual” por “inferior”. A menção à convexidade é isca "
+                       "de sofisticação: ela reforça que a solução é de tangência, ou seja, de igualdade. Itens "
+                       "irmãos: ECO-E1-0687-1 (mesma construção, outro simulado) e ECO-E1-0191-1 "
+                       "(“superior”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com preferências convexas e solução interior, no ótimo a TMS iguala a razão entre os preços dos "
+            "bens.”</i> → CERTO",
+            "<i>“Se a TMS for inferior ao preço relativo, o consumidor aumenta sua utilidade comprando mais do "
+            "bem 1.”</i> → ERRADO (inversão: deve comprar menos do bem 1)",
+        ])],
+        "reescrita": ("A condição de equilíbrio do consumidor em uma situação de convexidade das preferências "
+                      "ocorre quando a taxa marginal de substituição entre dois bens é " + hl("igual ao")
+                      + " preço relativo entre esses bens."),
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Ótimo do consumidor: TMS igual à razão de preços; curva de indiferença mais alta "
+                             "tangencia a reta orçamentária (comentário idêntico na duplicata E1-0534)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["fundido: comentário da duplicata E1-0534"],
+    },
+    # ------------------------------------------------------------------ E1-0433
+    {
+        "id": "ECO-E1-0433-1", "fonte_ref": "E1-0433", "destino": "04", "subtema": H2["ro"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Julho/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CLIP25,
+        "rotulo_item": "Item",
+        "assertiva": ("A restrição orçamentária representa todas as combinações de bens que um consumidor pode "
+                      "adquirir, sendo modificada apenas quando há variação da renda nominal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A restrição orçamentária representa todas as combinações de bens que um consumidor pode "
+                      "adquirir, sendo modificada ") + vm("apenas quando há variação da renda nominal") + az("."),
+        "poucas": ("A reta orçamentária " + vd("p₁x₁ + p₂x₂ = m") + " muda com a " + azb("renda")
+                   + " (deslocamento paralelo) <b>e</b> com os " + azb("preços") + " (giro, mudança de "
+                   "inclinação)."),
+        "destrinchando": [
+            "Elementos da reta: interceptos " + vd("m/p₁") + " (tudo em x₁) e " + vd("m/p₂") + " (tudo em x₂); "
+            "inclinação " + vd("−p₁/p₂") + " (custo de oportunidade de x₁ em unidades de x₂). O "
+            + azb("conjunto orçamentário") + " inclui a reta e a área abaixo dela.",
+            "Variação da renda m (preços fixos): " + azb("deslocamento paralelo") + " — para fora se m sobe, "
+            "para dentro se cai. A inclinação não muda.",
+            "Variação de um preço: a reta " + azb("gira") + " em torno do intercepto do outro bem. Se p₁ cai, o "
+            "intercepto m/p₁ se afasta e a reta fica menos inclinada.",
+            "Variação proporcional de todos os preços: equivale a uma variação da renda real — p e m "
+            "multiplicados pelo mesmo fator deixam a reta intacta (homogeneidade de grau zero). Ver "
+            "ECO-E1-0808-1.",
+            "Outras mudanças: impostos e subsídios específicos alteram o preço efetivo (giro); "
+            "racionamento ou impostos sobre quantidades acima de um limite criam “quebras” na reta.",
+        ],
+        "dissecando": (cz("[restrição indevida]") + " O “apenas” elimina os preços como causa de mudança. "
+                       "Pista: a própria definição (combinações que se <b>pode adquirir</b>) depende dos preços. "
+                       "🔥 “Apenas”/“somente” em itens de teoria quase sempre sinaliza ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma redução do preço de um dos bens provoca um giro da reta orçamentária, que se torna menos "
+            "inclinada se o bem barateado estiver no eixo horizontal.”</i> → CERTO",
+            "<i>“Um aumento da renda nominal altera a inclinação da reta orçamentária.”</i> → ERRADO (troca de "
+            "conceito: desloca paralelamente)",
+        ])],
+        "reescrita": ("A restrição orçamentária representa todas as combinações de bens que um consumidor pode "
+                      "adquirir, sendo modificada " + hl("tanto por variações da renda nominal quanto por "
+                                                         "variações dos preços dos bens") + "."),
+        "tipo_erro": ["RESTRICAO"], "moduladores": ["apenas"], "dificuldade": 1,
+        "comentario_fonte": ("Muda com a renda (deslocamento paralelo) e com os preços (mudança de inclinação) "
+                             "(comentário idêntico na duplicata E1-0535)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["fundido: comentário da duplicata E1-0535"],
+    },
+    # ------------------------------------------------------------------ E1-0434
+    {
+        "id": "ECO-E1-0434-1", "fonte_ref": "E1-0434", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Julho/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CLIP25,
+        "rotulo_item": "Item",
+        "assertiva": ("O axioma da transitividade das preferências garante que, se um consumidor prefere A a B e "
+                      "B a C, ele também preferirá A a C, conferindo consistência às escolhas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O axioma da transitividade das preferências garante que, se um consumidor prefere A a B e "
+                      "B a C, ele também preferirá A a C, conferindo consistência às escolhas."),
+        "poucas": ("É a definição de " + azb("transitividade") + ": A ≻ B e B ≻ C ⇒ " + vd("A ≻ C")
+                   + ". Sem ela, as preferências seriam circulares e não haveria escolha “melhor”."),
+        "destrinchando": [
+            "Axiomas das preferências racionais: " + azb("completude") + " (toda cesta é comparável: A ≿ B, "
+            "B ≿ A ou ambos), " + azb("reflexividade") + " (A ≿ A) e " + azb("transitividade") + " (A ≿ B e "
+            "B ≿ C ⇒ A ≿ C). Completude + transitividade = racionalidade.",
+            "Hipóteses adicionais, de “bom comportamento”: " + azb("monotonicidade") + " (mais é melhor), "
+            + azb("convexidade") + " (médias preferidas a extremos) e " + azb("continuidade") + " (necessária "
+            "para haver função utilidade).",
+            "Por que a transitividade importa: com A ≻ B ≻ C ≻ A não existe cesta “melhor” e o consumidor "
+            "poderia ser explorado indefinidamente — o argumento da " + azb("bomba de dinheiro") + " (ele paga "
+            "para trocar C por B, B por A, A por C…).",
+            "Consequência gráfica: curvas de indiferença " + vd("não se cruzam") + ". Se se cruzassem, a "
+            "transitividade (junto com a monotonicidade) seria violada.",
+            "Crítica empírica: há violações observadas em laboratório (efeitos de enquadramento), estudadas pela "
+            "economia comportamental — mas, na teoria, a transitividade é axioma.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição pura. A banca costuma trocar o nome do axioma "
+                       "(atribuir “mais é melhor” à transitividade — ver ECO-E1-0632-1) ou inverter a "
+                       "conclusão (“C preferida a A”). Item irmão: ECO-E1-0688-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O axioma da completude garante que, se A é preferida a B e B a C, então A é preferida a C.”</i> "
+            "→ ERRADO (troca de conceito: isso é transitividade)",
+            "<i>“Se as preferências forem transitivas e monotônicas, as curvas de indiferença não se "
+            "cruzam.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Transitividade é axioma da escolha racional: preferências lógicas, não circulares, "
+                             "permitem ordenar cestas (comentário idêntico na duplicata E1-0536)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["fundido: comentário da duplicata E1-0536"],
+    },
+    # ------------------------------------------------------------------ E1-0632
+    {
+        "id": "ECO-E1-0632-1", "fonte_ref": "E1-0632", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Simulado Sapientia", "prova": "Set/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das preferências do consumidor, julgue o item a seguir.",
+        "aviso_frente": "Enunciado reconstruído: na fonte, a frente era só uma imagem, não preservada.",
+        "rotulo_item": "Item",
+        "assertiva": ("A propriedade da transitividade das preferências estabelece que o consumidor sempre prefere "
+                      "mais a menos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A propriedade da ") + vm("transitividade") + az(" das preferências estabelece que o "
+                                                                     "consumidor sempre prefere mais a menos."),
+        "poucas": ("“Preferir mais a menos” é a " + azb("monotonicidade") + ". A " + azb("transitividade")
+                   + " trata da coerência entre comparações: A ≻ B e B ≻ C ⇒ A ≻ C."),
+        "destrinchando": [
+            azb("Transitividade") + " — axioma de racionalidade: impede preferências circulares e permite "
+            "ordenar todas as cestas. Não diz nada sobre quantidades.",
+            azb("Monotonicidade") + " — hipótese de “bom comportamento”: se a cesta A tem ao menos tanto de cada "
+            "bem que B e mais de algum, A é preferida (versão estrita) ou ao menos tão boa (versão fraca). É "
+            "ela que gera curvas de indiferença " + vd("negativamente inclinadas") + " e curvas mais afastadas "
+            "da origem com " + vd("mais utilidade") + ".",
+            "Ela falha com saciedade, bem neutro e mal — por isso é hipótese, não axioma de racionalidade.",
+            "Mapa rápido: completude e transitividade → racionalidade; monotonicidade → inclinação negativa; "
+            "convexidade → curvatura (TMS decrescente); continuidade → existência de função utilidade.",
+            vm("Regra-âncora: “mais é melhor” = monotonicidade; “coerência A-B-C” = transitividade."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Atribui à transitividade o conteúdo da monotonicidade. "
+                       "Itens sobre axiomas costumam trocar nome e definição entre os vizinhos da lista; "
+                       "memorize o par nome → frase."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A hipótese de monotonicidade estabelece que o consumidor prefere mais a menos.”</i> → CERTO",
+            "<i>“A transitividade garante que as curvas de indiferença sejam convexas.”</i> → ERRADO (troca de "
+            "conceito: convexidade é outra hipótese)",
+        ])],
+        "reescrita": ("A propriedade da " + hl("monotonicidade") + " das preferências estabelece que o consumidor "
+                      "sempre prefere mais a menos."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": ("Preferir mais a menos é monotonicidade; não tem relação com a transitividade."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (178).png", "tipo_fonte": "QUESTÃO EM IMAGEM", "lado": "frente",
+                           "acao": "texto reconstruído pelo comentário"}],
+        "alertas": ["texto_reconstruido: frente original era imagem (image (178).png); assertiva reconstruída a "
+                    "partir do comentário, que refuta a atribuição de “preferir mais a menos” à transitividade; "
+                    "redação exata não preservada"],
+    },
+    # ------------------------------------------------------------------ E1-0633
+    {
+        "id": "ECO-E1-0633-1", "fonte_ref": "E1-0633", "destino": "04", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Simulado Sapientia", "prova": "Set/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da demanda do consumidor, julgue o item a seguir.",
+        "aviso_frente": "Enunciado reconstruído: na fonte, a frente era só uma imagem, não preservada.",
+        "rotulo_item": "Item",
+        "assertiva": ("Ao longo da curva de demanda individual há diferentes níveis de utilidade associados, "
+                      "mantidos constantes a renda e os preços dos demais bens."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Ao longo da curva de demanda individual há <u>diferentes níveis de utilidade</u> "
+                      "associados, mantidos constantes a renda e os preços dos demais bens."),
+        "poucas": ("Na demanda " + azb("marshalliana") + " (renda fixa), cada preço gera uma cesta ótima numa "
+                   "curva de indiferença diferente: preço mais alto → " + vd("utilidade menor") + ". A utilidade "
+                   "só é constante ao longo da " + azb("hicksiana") + "."),
+        "destrinchando": [
+            "Derivação: fixe renda e preço de y; varie p<sub>x</sub>. A reta orçamentária gira e o ótimo percorre "
+            "a " + azb("curva preço-consumo") + ", tocando curvas de indiferença diferentes. Cada par (p<sub>x</sub>, "
+            "x*) vira um ponto da demanda.",
+            "Se p<sub>x</sub> sobe, o conjunto orçamentário encolhe e o consumidor vai para uma curva de "
+            "indiferença mais baixa: " + vd("utilidade decresce com o preço") + " ao longo da demanda ordinária.",
+            "A " + azb("demanda hicksiana") + " (compensada) faz o oposto: ajusta a renda para manter a "
+            "utilidade fixa. Ela capta só o " + azb("efeito substituição") + "; a marshalliana capta "
+            "substituição + renda (equação de " + oc("Slutsky") + ").",
+            "Para bens normais, a hicksiana é mais inclinada (menos sensível ao preço) que a marshalliana, pois "
+            "esta soma o efeito renda no mesmo sentido.",
+            vm("Regra-âncora: marshalliana → renda constante, utilidade varia; hicksiana → utilidade constante, "
+               "renda compensada."),
+        ],
+        "dissecando": (cz("[detalhe · troca de conceito potencial]") + " O item testa se o candidato confunde as "
+                       "duas demandas. A versão ERRADA diria “mesmo nível de utilidade ao longo da curva de "
+                       "demanda ordinária”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Ao longo da curva de demanda marshalliana, o nível de utilidade do consumidor permanece "
+            "constante.”</i> → ERRADO (troca de conceito: isso é a hicksiana)",
+            "<i>“A curva de demanda compensada de Hicks reflete apenas o efeito substituição.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Ao longo da curva de demanda há diferentes utilidades; o nível de utilidade decresce "
+                             "à medida que o preço aumenta, com renda e preço dos outros bens constantes."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (182).png", "tipo_fonte": "QUESTÃO EM IMAGEM", "lado": "frente",
+                           "acao": "texto reconstruído pelo comentário"}],
+        "alertas": ["texto_reconstruido: frente original era imagem (image (182).png); assertiva reconstruída a "
+                    "partir do comentário, que a reafirma (utilidades diferentes ao longo da demanda, com renda e "
+                    "outros preços constantes); redação exata não preservada"],
+    },
 ]

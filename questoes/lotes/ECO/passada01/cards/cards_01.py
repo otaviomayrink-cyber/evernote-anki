@@ -193,7 +193,7 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["contestavel: o item não especifica bem normal; para bem inferior, o aumento de renda desloca "
                     "a demanda para a esquerda — mantido o CERTO da fonte",
-                    "assertiva: retirada a duplicação “É correto afirmar que ‘É correto afirmar que…’” da frente "
+                    "texto_corrigido: retirada a duplicação “É correto afirmar que ‘É correto afirmar que…’” da frente "
                     "(formato de questionário próprio, data 04/22)"],
     },
     # ------------------------------------------------------------------ E1-0014
@@ -917,8 +917,8 @@ CARDS = [
             "<i>“Bens públicos não são bens econômicos, pois ninguém pode ser excluído de seu consumo.”</i> → "
             "ERRADO (troca de conceito: não exclusão ≠ abundância)",
         ])],
-        "reescrita": ("Os bens " + hl("livres") + " são de livre acesso a todos os agentes econômicos" + hl("; "
-                      "os econômicos são escassos e têm preço") + "."),
+        "reescrita": ("Os bens econômicos " + hl("são escassos e não são") + " de livre acesso a todos os "
+                      "agentes econômicos" + hl("; livre acesso caracteriza os bens livres") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["todos"], "dificuldade": 1,
         "comentario_fonte": "Bens econômicos são escassos, não de livre acesso.",
         "qualidade_fonte": "raso",
@@ -1190,6 +1190,181 @@ CARDS = [
                       + " revestida de racionalidade econômica."),
         "tipo_erro": ["INVERSAO"], "moduladores": ["não"], "dificuldade": 1,
         "comentario_fonte": "Mudança marginal é um pequeno ajuste incremental que considera racionalidade econômica.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0047
+    {
+        "id": "ECO-E1-0047-1", "fonte_ref": "E1-0047", "destino": "01", "subtema": H2["fund"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_FUND,
+        "rotulo_item": "Item",
+        "assertiva": ("Um empresário deve estar atento ao custo de oportunidade de seu negócio. Ele deve avaliar se "
+                      "existe alternativa mais rentável para investir seu capital."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um empresário deve estar atento ao custo de oportunidade de seu negócio. Ele deve avaliar "
+                      "se existe <u>alternativa mais rentável</u> para investir seu capital."),
+        "poucas": ("O " + azb("custo de oportunidade do capital") + " é o retorno da melhor aplicação "
+                   "alternativa. Se outra opção rende mais, manter o negócio significa perder dinheiro em termos "
+                   "econômicos, mesmo com lucro contábil."),
+        "destrinchando": [
+            "Distinção-chave: " + azb("custo contábil") + " (desembolsos explícitos: salários, aluguel, insumos) "
+            "× " + azb("custo econômico") + " (explícitos + " + azb("implícitos") + ", como o rendimento que o "
+            "capital próprio teria em outra aplicação e o salário que o dono deixa de ganhar trabalhando para "
+            "outro).",
+            "Daí " + azb("lucro contábil") + " = receita − custos explícitos; " + azb("lucro econômico") + " = "
+            "receita − custos explícitos e implícitos. Ex.: um negócio com R$ 500 mil de capital que lucra "
+            + vd("R$ 40 mil/ano") + " tem lucro contábil positivo; se o título público pagasse " + vd("10% "
+            "a.a.") + " (R$ 50 mil), o lucro econômico seria " + vd("−R$ 10 mil") + ".",
+            azb("Lucro econômico zero") + " (lucro normal) significa que o capital rende exatamente o mesmo que a "
+            "melhor alternativa — é o equilíbrio de longo prazo na concorrência perfeita.",
+            "Na prática, as empresas usam o " + azb("custo de capital") + " (taxa mínima de atratividade) como "
+            "taxa de desconto na análise de investimentos.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Aplicação direta do conceito ao capital. O tom normativo "
+                       "(“deve estar atento”) pode parecer conselho de administração, mas descreve exatamente o "
+                       "raciocínio econômico de custo de oportunidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o lucro contábil de um negócio é positivo, o empresário não tem motivo econômico para "
+            "transferir seu capital para outra atividade.”</i> → ERRADO (troca de conceito: decide o lucro "
+            "econômico)",
+            "<i>“Lucro econômico nulo significa que o capital remunera exatamente seu custo de "
+            "oportunidade.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["deve"], "dificuldade": 1,
+        "comentario_fonte": "O custo de oportunidade está ligado à melhor alternativa de investimento.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0048
+    {
+        "id": "ECO-E1-0048-1", "fonte_ref": "E1-0048", "destino": "01", "subtema": H2["fund"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_FUND,
+        "rotulo_item": "Item",
+        "assertiva": ("O cálculo do custo de oportunidade em projetos sociais pode utilizar conceitos vindos de "
+                      "parâmetros como o valor presente líquido e a taxa interna de retorno."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O cálculo do custo de oportunidade em projetos sociais <u>pode</u> utilizar conceitos "
+                      "vindos de parâmetros como o valor presente líquido e a taxa interna de retorno."),
+        "poucas": ("Projetos sociais disputam recursos públicos escassos. A " + azb("análise custo-benefício")
+                   + " compara alternativas pelo " + azb("VPL") + " e pela " + azb("TIR") + ", descontando os "
+                   "fluxos a uma taxa que representa o custo de oportunidade do dinheiro."),
+        "destrinchando": [
+            azb("Valor presente líquido") + " (VPL) = soma dos benefícios menos custos de cada período, trazidos "
+            "a valor presente por uma taxa de desconto. VPL > 0 → o projeto rende mais que a alternativa "
+            "representada pela taxa. " + azb("Taxa interna de retorno") + " (TIR) = taxa que zera o VPL; o projeto "
+            "é atraente se a TIR supera o custo de oportunidade do capital.",
+            "A taxa de desconto é justamente o " + azb("custo de oportunidade") + ": o retorno que os recursos "
+            "teriam no melhor uso alternativo. No setor público, fala-se em " + azb("taxa social de desconto") + ".",
+            "Em projetos sociais, a avaliação é " + azb("social") + ", não só financeira: os benefícios incluem "
+            "externalidades e ganhos não monetários (vidas salvas, anos de escolaridade), valorados por "
+            + azb("preços-sombra") + ". O ferramental (VPL, TIR) é o mesmo.",
+            "No " + rx("Brasil") + ", a avaliação ex ante de políticas públicas e grandes investimentos usa essa "
+            "lógica em guias oficiais de análise custo-benefício.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " O “pode” torna o item quase impossível de estar errado. "
+                       "A possível armadilha é achar que VPL e TIR só servem a projetos privados com fins "
+                       "lucrativos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em projetos sociais, a avaliação deve considerar exclusivamente os fluxos financeiros, "
+            "desprezando externalidades.”</i> → ERRADO (modulador absoluto: a avaliação social inclui "
+            "externalidades)",
+            "<i>“Um projeto com TIR inferior ao custo de oportunidade do capital apresenta VPL negativo, quando "
+            "descontado a essa taxa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "Avaliações econômicas de projetos sociais podem usar esses parâmetros.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0049
+    {
+        "id": "ECO-E1-0049-1", "fonte_ref": "E1-0049", "destino": "01", "subtema": H2["fund"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_FUND,
+        "rotulo_item": "Item",
+        "assertiva": ("A existência ilimitada de recursos utilizáveis tornaria frágil o caráter econômico dos "
+                      "problemas contidos em ‘O que produzir’, ‘Como produzir’ e ‘Para quem produzir’."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A <u>existência ilimitada de recursos</u> utilizáveis tornaria frágil o caráter econômico "
+                      "dos problemas contidos em ‘O que produzir’, ‘Como produzir’ e ‘Para quem produzir’."),
+        "poucas": ("Os três problemas econômicos só existem por causa da " + azb("escassez") + ". Com recursos "
+                   "ilimitados, produzir-se-ia tudo, de qualquer forma, para todos — não haveria escolha nem "
+                   "custo de oportunidade."),
+        "destrinchando": [
+            "Os " + azb("três problemas fundamentais") + " — <b>o que</b> e quanto produzir, <b>como</b> "
+            "produzir e <b>para quem</b> produzir — são, todos, problemas de alocação de meios escassos entre "
+            "fins concorrentes.",
+            "Sem escassez: não importaria o que produzir (dá para produzir tudo), nem como (a técnica mais "
+            "esbanjadora serviria), nem para quem (todos teriam o que quisessem). Todos os bens seriam "
+            + azb("bens livres") + ", com preço zero.",
+            "É a definição de " + oc("Lionel Robbins") + " (<i>An Essay on the Nature and Significance of "
+            "Economic Science</i>, 1932): economia é a ciência que estuda o comportamento humano como relação "
+            "entre fins e meios escassos que têm usos alternativos.",
+            "Graficamente: com recursos ilimitados, não haveria " + azb("fronteira de possibilidades de "
+            "produção") + " — a FPP seria infinitamente distante, e não haveria trade-off.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Hipótese contrafactual (“tornaria”) que "
+                       "testa se o candidato sabe que a escassez é a raiz do problema econômico. “Tornaria "
+                       "frágil” é formulação cautelosa, que reforça o CERTO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Mesmo que os recursos fossem ilimitados, persistiria o problema econômico de decidir o que "
+            "produzir.”</i> → ERRADO (contradição: sem escassez não há escolha)",
+            "<i>“A escassez decorre da relação entre recursos limitados e necessidades humanas "
+            "ilimitadas.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["tornaria frágil"],
+        "dificuldade": 1,
+        "comentario_fonte": "Os problemas econômicos surgem da escassez de recursos.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0050
+    {
+        "id": "ECO-E1-0050-1", "fonte_ref": "E1-0050", "destino": "01", "subtema": H2["fund"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_FUND,
+        "rotulo_item": "Item",
+        "assertiva": "O trade-off enfrentado pelo agente econômico implica um custo marginal.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O trade-off enfrentado pelo agente econômico implica um ") + vm("custo marginal")
+                    + az(".")),
+        "poucas": ("O conceito que o " + azb("trade-off") + " implica é o " + azb("custo de oportunidade")
+                   + " (o que se renuncia na escolha). " + azb("Custo marginal") + " é outra coisa: o custo "
+                   "adicional de uma unidade a mais."),
+        "destrinchando": [
+            azb("Trade-off") + " = escolha conflitante sob escassez: ganhar em uma frente exige perder em outra. "
+            "A medida dessa perda é o " + azb("custo de oportunidade") + " — o par conceitual que os manuais "
+            "ensinam junto (princípios 1 e 2 de " + oc("Mankiw") + ").",
+            azb("Custo marginal") + " (CMg) = variação do custo total ao produzir uma unidade adicional "
+            "(ΔCT/ΔQ). É conceito da teoria da firma e da decisão na margem, não a definição do que se sacrifica "
+            "numa escolha.",
+            "Os conceitos se tocam: o custo marginal de uma decisão pode ser medido em custo de oportunidade (na "
+            "FPP, a inclinação é o custo marginal de X em unidades de Y). Mas o item pede a implicação direta do "
+            "trade-off, e a resposta de manual é custo de oportunidade.",
+            vm("Regra-âncora: trade-off ↔ custo de oportunidade; margem ↔ custo e benefício marginais."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Substitui o conceito irmão correto (custo de oportunidade) "
+                       "por um vizinho do mesmo vocabulário (custo marginal). Itens de fundamentos costumam "
+                       "trocar entre si os rótulos dos princípios de Mankiw."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O trade-off enfrentado pelo agente econômico implica um custo de oportunidade.”</i> → CERTO",
+            "<i>“O custo marginal corresponde ao custo total dividido pela quantidade produzida.”</i> → ERRADO "
+            "(troca de conceito: essa é a definição de custo médio)",
+        ])],
+        "reescrita": ("O trade-off enfrentado pelo agente econômico implica um " + hl("custo de oportunidade")
+                      + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O trade-off implica custo de oportunidade, não o custo marginal.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
         "alertas": [],

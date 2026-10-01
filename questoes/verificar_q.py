@@ -28,7 +28,7 @@ PROIBIDOS = ["o texto acima", "questão anterior", "[[IMAGEM", "[Imagem não", "
 ALERTAS = ("contestavel", "texto_parcial", "texto_irrecuperavel", "texto_reconstruido", "banca_confirmada",
            "banca_provavel", "destino_sugerido", "redirecionado", "duplicata", "figura_conjectural",
            "figura_irrecuperavel", "transcricao_incoerente", "teste_importacao", "qualidade_fonte",
-           "quase_duplicata", "texto_corrigido", "dado_aproximado")
+           "quase_duplicata", "texto_corrigido", "dado_aproximado", "nota_redacao")
 
 
 def serial(el):

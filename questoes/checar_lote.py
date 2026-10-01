@@ -17,6 +17,7 @@ import tempfile
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 import montar_nota_q as M  # noqa: E402
+from verificar_q import ALERTAS  # noqa: E402
 
 OBRIG = ["id", "fonte_ref", "destino", "subtema", "tipo", "banca", "prova", "ano", "cacd", "errei", "comando",
          "rotulo_item", "assertiva", "gabarito", "gabarito_origem", "status", "anotada", "poucas", "destrinchando",
@@ -43,6 +44,9 @@ for c in cards:
         erros.append(f"{c.get('id')}: subtema fora do plano da nota {c.get('destino')}")
     if c.get("gabarito") == "ERRADO" and not c.get("reescrita"):
         erros.append(f"{c.get('id')}: ERRADO sem reescrita")
+    for al in c.get("alertas", []):
+        if not al.startswith(ALERTAS):
+            print(f"aviso {c.get('id')}: alerta fora da lista vira 'nota_redacao:' na montagem: {al[:40]}")
     if len(c.get("modulos", [])) > 3:
         erros.append(f"{c.get('id')}: mais de 3 módulos")
 for e in erros:

@@ -162,7 +162,7 @@ CARDS = [
             + vd("Σ s<sub>i</sub>·η<sub>i</sub> = 1") + ", em que s<sub>i</sub> é a participação do bem no "
             "gasto e η<sub>i</sub> a elasticidade-renda. A média ponderada das elasticidades-renda é 1; se "
             "todas fossem negativas, a soma seria negativa — impossível.",
-            "Corolário útil: se existe um bem inferior (η < 1), algum outro precisa ter " + vd("η > 1")
+            "Corolário útil: se existe um bem inferior (η < 0, abaixo da média 1), algum outro precisa ter " + vd("η > 1")
             + " (bem de luxo) para a média dar 1. Sem bem inferior, todos podem ter η = 1 (preferências "
             "homotéticas).",
             "A hipótese “gaste toda a renda” vem da " + azb("não saciedade local") + " (monotonicidade): "
@@ -292,5 +292,183 @@ CARDS = [
         "figuras_fonte": [{"ref": "image (73).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "irrecuperavel"}],
         "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0226
+    {
+        "id": "ECO-E1-0226-1", "fonte_ref": "E1-0226", "destino": "05", "subtema": H2["cp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, acerca dos horizontes de curto e de longo prazo na teoria da produção.",
+        "rotulo_item": "Item",
+        "assertiva": ("Curto prazo é o período em que pelo menos um dos fatores de produção permanece constante "
+                      "ou fixo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Curto prazo é o período em que <u>pelo menos um</u> dos fatores de produção permanece "
+                      "constante ou fixo."),
+        "poucas": ("É a definição de manual: no " + azb("curto prazo") + " há ao menos um " + azb("fator fixo")
+                   + "; no " + azb("longo prazo") + ", todos são variáveis."),
+        "destrinchando": [
+            "A distinção é <b>analítica</b>, não de calendário: curto prazo é o horizonte em que a firma ainda "
+            "não consegue ajustar algum insumo (em geral a planta, o capital). Para uma barraca de feira, isso "
+            "dura dias; para uma hidrelétrica, anos.",
+            "Consequências que a banca cobra em seguida: só no curto prazo existem " + azb("custos fixos")
+            + " (no longo prazo todo custo é variável); só no curto prazo vale a " + azb("lei dos rendimentos "
+            "marginais decrescentes") + ", que pressupõe um fator fixo; no longo prazo, fala-se em "
+            + azb("rendimentos de escala") + ".",
+            "Na representação gráfica, o curto prazo com capital fixo é uma reta horizontal (K = K̄) no mapa de "
+            "isoquantas: a firma só anda ao longo dela, variando o trabalho.",
+            "A divisão em períodos (mercado, curto e longo) foi sistematizada por " + oc("Alfred Marshall")
+            + " nos <i>Princípios de Economia</i> (1890).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Reproduz a definição, e o ponto de risco é o “pelo menos um”: "
+                       "a banca costuma trocá-lo por “todos” (ERRADO) ou por um prazo em meses."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Curto prazo é o período em que todos os fatores de produção permanecem fixos.”</i> → ERRADO "
+            "(modulador absoluto: basta um fator fixo)",
+            "<i>“Curto prazo é o período inferior a um ano em que a firma não altera sua planta.”</i> → ERRADO "
+            "(não é prazo de calendário)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["pelo menos um"], "dificuldade": 1,
+        "comentario_fonte": ("Curto prazo: pelo menos um fator fixo. Longo prazo: todos os fatores variáveis."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0227
+    {
+        "id": "ECO-E1-0227-1", "fonte_ref": "E1-0227", "destino": "05", "subtema": H2["cp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, acerca dos horizontes de curto e de longo prazo na teoria da produção.",
+        "rotulo_item": "Item",
+        "assertiva": "No longo prazo, uma firma pode variar seu insumo capital mas não seu insumo mão de obra.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No longo prazo, uma firma pode variar seu insumo capital ")
+                   + vm("mas não seu insumo mão de obra") + az("."),
+        "poucas": ("No " + azb("longo prazo") + " <b>todos</b> os insumos são variáveis — capital e mão de obra. "
+                   "O item cria uma restrição que não existe."),
+        "destrinchando": [
+            "Longo prazo é, por definição, o horizonte em que a firma ajusta <b>qualquer</b> insumo: muda de "
+            "planta, compra máquinas, contrata ou demite, e pode até entrar ou sair do mercado.",
+            "O item ainda inverte a figura típica do " + azb("curto prazo") + ": nos manuais, o fator fixo "
+            "costuma ser o <b>capital</b> (a planta), e o variável, o <b>trabalho</b> — contratar horas de "
+            "trabalho é mais rápido do que erguer uma fábrica.",
+            "Por isso a função de produção de curto prazo se escreve q = f(K̄, L), e a de longo prazo, "
+            "q = f(K, L), com os dois insumos livres. No longo prazo, a escolha é o ponto de tangência entre "
+            "isoquanta e isocusto: " + vd("TMST = w/r") + ".",
+            vm("Regra-âncora: longo prazo não tem fator fixo — nem capital, nem trabalho."),
+        ],
+        "dissecando": (cz("[restrição indevida · inversão]") + " A restrição “mas não seu insumo mão de obra” é "
+                       "falsa em qualquer leitura: no longo prazo nada é fixo e, no curto prazo usual, o fixo é o "
+                       "capital, não o trabalho. Pista: qualquer limitação a insumos no “longo prazo” é ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No curto prazo, uma firma pode variar seu insumo mão de obra, mas não seu insumo "
+            "capital.”</i> → CERTO",
+            "<i>“No longo prazo, os custos fixos da firma tendem a zero, mas não desaparecem.”</i> → ERRADO "
+            "(no longo prazo todo custo é variável)",
+        ])],
+        "reescrita": ("No longo prazo, uma firma pode variar seu insumo capital " + hl("e também seu insumo mão de "
+                      "obra") + "."),
+        "tipo_erro": ["RESTRICAO", "INVERSAO"], "moduladores": ["mas não"], "dificuldade": 1,
+        "comentario_fonte": "No longo prazo, todos os fatores de produção são variáveis, inclusive capital e mão de obra.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0228
+    {
+        "id": "ECO-E1-0228-1", "fonte_ref": "E1-0228", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Daniel – Economia CACD (Telegram)", "prova": "", "ano": None, "cacd": False,
+        "errei": True,
+        "comando": "Julgue o item a seguir, relativo às isoquantas e à taxa marginal de substituição técnica.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma isoquanta representa todas as possíveis combinações de insumos que resultam no mesmo "
+                      "custo de produção. Sua inclinação descendente pode ser explicada pela taxa marginal de "
+                      "substituição técnica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma isoquanta representa todas as possíveis combinações de insumos que resultam no mesmo ")
+                   + vm("custo de produção") + az(". Sua inclinação descendente pode ser explicada pela taxa "
+                                                  "marginal de substituição técnica."),
+        "poucas": ("Isoquanta = mesma <b>quantidade</b> produzida. A curva de mesmo <b>custo</b> é a "
+                   + azb("isocusto") + ". A 2ª frase está certa."),
+        "destrinchando": [
+            azb("Isoquanta") + ": combinações (K, L) com o mesmo produto q. É o análogo, na firma, da curva de "
+            "indiferença do consumidor — com a vantagem de o nível (q) ser mensurável.",
+            azb("Isocusto") + ": combinações com o mesmo gasto C = wL + rK; reta de inclinação "
+            + vd("−w/r") + ". Ela é a “restrição orçamentária” da firma.",
+            "A inclinação negativa da isoquanta decorre de os produtos marginais serem positivos: para manter q "
+            "ao tirar capital, é preciso pôr trabalho. Essa taxa de troca é a " + azb("TMST") + " = "
+            + vd("PMg<sub>L</sub>/PMg<sub>K</sub>") + " — por isso a 2ª frase é aceitável.",
+            "As duas curvas se encontram na escolha ótima de longo prazo: minimizar o custo de produzir q (ou "
+            "maximizar q com custo C) leva à tangência " + vd("TMST = w/r") + ", ou seja, "
+            "PMg<sub>L</sub>/w = PMg<sub>K</sub>/r.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca isoquanta por isocusto, curvas que aparecem juntas no "
+                       "mesmo gráfico. A 2ª frase, correta, serve de isca. Pista: o próprio nome entrega o "
+                       "conceito."),
+        "modulos": [("🧠 Mnemônico", ["ISO = mesmo; QUANTA = <b>quantidade</b>. ISO + CUSTO = mesmo "
+                                      "<b>custo</b>."]),
+                    ("😈 Para dificultar", [
+            "<i>“A isocusto representa as combinações de insumos de mesmo custo, e sua inclinação é dada pela "
+            "razão entre os preços dos insumos.”</i> → CERTO",
+            "<i>“No ponto ótimo, a TMST iguala a razão entre os produtos médios dos insumos.”</i> → ERRADO "
+            "(é a razão entre os preços, w/r)",
+        ])],
+        "reescrita": ("Uma isoquanta representa todas as possíveis combinações de insumos que resultam na "
+                      + hl("mesma quantidade produzida") + ". Sua inclinação descendente pode ser explicada pela "
+                      "taxa marginal de substituição técnica."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A curva de combinações de mesmo custo é a isocusto. ISO = mesmo; QUANTA = quantidade.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (76).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "irrecuperavel"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0245
+    {
+        "id": "ECO-E1-0245-1", "fonte_ref": "E1-0245", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2010", "ano": 2010, "cacd": False,
+        "errei": True,
+        "comando": "Julgue o item a seguir, relativo à teoria da produção.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se, para determinada empresa, trabalhadores sem qualificação específica e máquinas executam "
+                      "exatamente o mesmo tipo de tarefa, então, para essa empresa, as isoquantas entre esses dois "
+                      "insumos podem ser representadas como linhas retas paralelas."),
+        "gabarito": "CERTO", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": az("Se, para determinada empresa, trabalhadores sem qualificação específica e máquinas executam "
+                      "<u>exatamente o mesmo tipo de tarefa</u>, então, para essa empresa, as isoquantas entre "
+                      "esses dois insumos <u>podem ser</u> representadas como linhas retas paralelas."),
+        "poucas": ("Insumos que fazem exatamente a mesma tarefa são " + azb("substitutos perfeitos")
+                   + ": q = aL + bM, com isoquantas " + vd("retas e paralelas") + " (TMST constante)."),
+        "destrinchando": [
+            "Se trabalhador e máquina fazem o mesmo serviço, a empresa troca um pelo outro a uma taxa fixa — "
+            "digamos, uma máquina substitui dois trabalhadores — em qualquer ponto da produção. Função: "
+            "q = aL + bM.",
+            "Daí a isoquanta reta, com inclinação " + vd("−a/b") + " (não necessariamente −1), e a "
+            + azb("TMST constante") + ". Como a inclinação é a mesma para todo nível de produto, as isoquantas "
+            "são <b>paralelas</b>. Elasticidade de substituição: " + vd("infinita") + ".",
+            "Consequência para o custo: com isoquanta reta, a firma tende a uma " + azb("solução de canto")
+            + " — usa só o insumo relativamente mais barato (compara TMST com w/r).",
+            "Contraste com a complementaridade: “um computador para cada funcionário” (proporção fixa) gera "
+            "isoquantas em L, sem substituição possível.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " “Exatamente o mesmo tipo de tarefa” é a "
+                       "descrição verbal de substitutos perfeitos; “podem ser” torna o item ainda mais seguro. "
+                       "🔥 A banca alterna este par: mesma tarefa → reta; uso conjunto obrigatório → L."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…as isoquantas entre esses dois insumos são, necessariamente, retas com inclinação −1.”</i> → "
+            "ERRADO (a inclinação depende da produtividade relativa: −a/b)",
+            "<i>“…a empresa usará sempre os dois insumos em proporção fixa.”</i> → ERRADO (troca de conceito: "
+            "isso é complementaridade)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["podem ser", "exatamente"],
+        "dificuldade": 1,
+        "comentario_fonte": "Verso só com uma imagem não preservada; gabarito ausente na fonte.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (77).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "irrecuperavel"}],
+        "alertas": ["gabarito_resolvido: a fonte não traz gabarito (verso só com imagem perdida); resolvido como "
+                    "CERTO pelo conteúdo (substitutos perfeitos → isoquantas retas paralelas)",
+                    "banca_provavel: CEBRASPE (não confirmada: a fonte só traz o ano, 2010)"],
     },
 ]

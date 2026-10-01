@@ -216,4 +216,250 @@ CARDS = [
                           "ninguém."),
         qualidade_fonte="bom",
     ),
+    # ------------------------------------------------------------------ E1-0139
+    card(
+        "E1-0139", "efi", COM_PARETO,
+        assertiva=("Na economia das trocas, a alocação eficiente de Pareto é a situação em que ninguém consegue "
+                   "aumentar o próprio bem-estar sem reduzir o bem-estar de outra pessoa."),
+        gabarito="CERTO",
+        anotada=az("Na economia das trocas, a alocação eficiente de Pareto é a situação em que ninguém consegue "
+                   "aumentar o próprio bem-estar <u>sem reduzir o bem-estar de outra pessoa</u>."),
+        poucas=("É a definição de " + azb("eficiência de Pareto") + " aplicada à troca: esgotadas as trocas "
+                "mutuamente vantajosas, qualquer ganho de um passa a custar a outro."),
+        destrinchando=[
+            "Na " + azb("economia de trocas pura") + " não há produção: dois consumidores dividem quantidades "
+            "fixas de dois bens. O instrumento é a " + azb("caixa de Edgeworth") + ", com a origem de um "
+            "consumidor no canto inferior esquerdo e a do outro no superior direito.",
+            "Condição de eficiência na troca: " + vd("TMS<sub>A</sub> = TMS<sub>B</sub>") + " (curvas de "
+            "indiferença tangentes). Se as taxas diferem, cada um valoriza mais o bem que o outro valoriza "
+            "menos — há troca que melhora os dois.",
+            "O conjunto de todas as alocações eficientes é a " + azb("curva de contrato") + ". Sobre ela, "
+            "mover-se em direção à origem de B melhora A e piora B, e vice-versa.",
+            "Eficiência é um dos três “andares” do ótimo de Pareto em equilíbrio geral: eficiência na "
+            "<b>troca</b> (TMS iguais entre consumidores), na <b>produção</b> (TMST iguais entre indústrias) e "
+            "no <b>mix de produtos</b> (TMS = taxa marginal de transformação).",
+        ],
+        dissecando=(cz("[literalidade]") + " Reprodução quase literal da definição de manual (" + oc("Pindyck")
+                    + " e " + oc("Rubinfeld") + ", cap. 16). O risco é o leitor achar que eficiência exige que "
+                    "<i>ninguém</i> possa melhorar de forma alguma — a cláusula decisiva é “sem reduzir o "
+                    "bem-estar de outra pessoa”."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Na economia das trocas, a alocação eficiente de Pareto é aquela em que as taxas marginais de "
+            "substituição dos consumidores entre os dois bens são iguais.”</i> → CERTO",
+            "<i>“Na economia das trocas, a alocação eficiente de Pareto é única e corresponde à divisão "
+            "igualitária dos bens.”</i> → ERRADO (há infinitas, sobre toda a curva de contrato)",
+        ])],
+        tipo_erro=["LITERAL"], dificuldade=1,
+        comentario_fonte=("CERTO. Essa é a definição clássica de eficiência de Pareto: um estado em que não é "
+                          "possível melhorar alguém sem piorar outra pessoa. [imagem]"),
+        qualidade_fonte="raso",
+        figuras_fonte=[img_verso("Untitled (32).jpeg")],
+    ),
+    # ------------------------------------------------------------------ E1-0140
+    card(
+        "E1-0140", "efi", COM_TEOREMAS,
+        assertiva=("O Segundo Teorema do Bem-Estar estabelece que para toda alocação eficiente de Pareto existem "
+                   "um vetor de preços e um vetor de dotações iniciais tal que essa alocação também é um "
+                   "equilíbrio competitivo."),
+        gabarito="CERTO",
+        anotada=az("O Segundo Teorema do Bem-Estar estabelece que para <u>toda alocação eficiente de Pareto</u> "
+                   "existem um vetor de preços e um vetor de dotações iniciais tal que essa alocação também é "
+                   "um equilíbrio competitivo."),
+        poucas=("É o enunciado do " + azb("2º Teorema") + ": qualquer ótimo de Pareto pode ser "
+                "<b>descentralizado</b> pelo mercado, desde que se redistribuam as dotações iniciais e se deixem "
+                "os preços operar (sob preferências convexas)."),
+        destrinchando=[
+            azb("1º Teorema do Bem-Estar") + ": equilíbrio competitivo ⇒ Pareto-eficiente (mercado → "
+            "eficiência). " + azb("2º Teorema") + ": Pareto-eficiente ⇒ alcançável como equilíbrio "
+            "competitivo, com redistribuição prévia das dotações (eficiência → mercado). São recíprocos, mas "
+            "não simétricos nas hipóteses.",
+            "Hipóteses do 2º: preferências (e tecnologias) " + vd("convexas") + ", não saciedade local, "
+            "mercados completos, ausência de externalidades, informação perfeita e possibilidade de "
+            + azb("transferências lump-sum") + " (de montante fixo, que não distorcem incentivos).",
+            "Mensagem de política: separa <b>eficiência</b> de <b>distribuição</b>. Se a sociedade prefere outra "
+            "distribuição, não precisa controlar preços (o que geraria peso morto): basta redistribuir riqueza "
+            "e deixar o mercado alcançar o ótimo correspondente.",
+            "Limite prático: transferências lump-sum puras quase não existem — os tributos reais incidem sobre "
+            "renda, consumo ou propriedade e alteram incentivos. Daí o dilema entre equidade e eficiência na "
+            "tributação ótima.",
+            "Base teórica: " + oc("Arrow") + " e " + oc("Debreu") + " deram a formalização moderna dos dois "
+            "teoremas no modelo de equilíbrio geral (anos 1950).",
+        ],
+        dissecando=(cz("[literalidade · detalhe]") + " Enunciado formal, com “vetor de preços” e “vetor de "
+                    "dotações iniciais”. O risco é a troca de teoremas: se o item partisse do equilíbrio "
+                    "competitivo e concluísse eficiência, seria o 1º. A direção (eficiente → equilíbrio, com "
+                    "dotações ajustadas) identifica o 2º."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“O Segundo Teorema do Bem-Estar estabelece que todo equilíbrio competitivo é eficiente no "
+            "sentido de Pareto.”</i> → ERRADO (esse é o 1º Teorema)",
+            "<i>“Segundo o Segundo Teorema do Bem-Estar, qualquer alocação eficiente pode ser obtida pelo "
+            "mercado, desde que as dotações sejam redistribuídas por transferências de montante fixo.”</i> → "
+            "CERTO",
+        ])],
+        tipo_erro=["LITERAL", "DETALHE"], dificuldade=2,
+        comentario_fonte=("CERTO. Esse é exatamente o enunciado do Segundo Teorema do Bem-Estar: qualquer "
+                          "alocação eficiente de Pareto pode ser alcançada como equilíbrio competitivo, desde que "
+                          "haja redistribuição adequada das dotações iniciais."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0141
+    card(
+        "E1-0141", "efi",
+        "Com relação aos conceitos de eficiência técnica e de eficiência de Pareto, julgue o item.",
+        assertiva="Alocações são consideradas “ineficientes” se melhorias inequívocas forem possíveis.",
+        gabarito="CERTO",
+        anotada=az("Alocações são consideradas “ineficientes” se <u>melhorias inequívocas</u> forem possíveis."),
+        poucas=("“" + azb("Melhoria inequívoca") + "” é outro nome da " + azb("melhoria de Pareto") + " — "
+                "alguém ganha e ninguém perde. Se ela é possível, a alocação é " + vd("ineficiente") + "."),
+        destrinchando=[
+            "Uma melhoria é “inequívoca” quando não exige comparar ganhos e perdas entre pessoas: como ninguém "
+            "piora, qualquer critério de bem-estar razoável a aprova. É exatamente a melhoria de Pareto.",
+            azb("Eficiência de Pareto") + " = não restam melhorias inequívocas. " + azb("Ineficiência")
+            + " = ainda resta ao menos uma.",
+            azb("Eficiência técnica") + " (ou produtiva) é conceito mais estreito: produzir o máximo possível "
+            "com os insumos dados (estar sobre a função de produção ou a isoquanta, sem desperdício físico). "
+            "É necessária, mas não suficiente, para a eficiência de Pareto, que exige também alocar bem os "
+            "fatores entre indústrias e os bens entre consumidores.",
+            "Exemplo: uma fábrica tecnicamente eficiente que produz um bem que ninguém quer, em vez de outro "
+            "mais valorizado, está tecnicamente eficiente e alocativamente ineficiente.",
+        ],
+        dissecando=(cz("[paráfrase fiel]") + " A banca troca o termo técnico (“melhoria de Pareto”) por um "
+                    "sinônimo menos usual (“melhoria inequívoca”) para testar se o candidato reconhece o "
+                    "conceito. As aspas em “ineficientes” sinalizam o sentido técnico, não o coloquial."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Alocações tecnicamente eficientes são necessariamente eficientes no sentido de Pareto.”</i> → "
+            "ERRADO (eficiência técnica é necessária, não suficiente)",
+            "<i>“Alocações são consideradas eficientes se não houver melhorias inequívocas possíveis.”</i> → "
+            "CERTO",
+        ])],
+        tipo_erro=["PARAFRASE_FIEL"], dificuldade=1,
+        comentario_fonte=("CERTO. Por definição, uma alocação é ineficiente no sentido de Pareto se for possível "
+                          "melhorar alguém sem prejudicar ninguém, ou seja, se melhorias inequívocas forem "
+                          "possíveis."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0142
+    card(
+        "E1-0142", "efi", COM_HIPOTESES,
+        assertiva=("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que as "
+                   "preferências sejam convexas."),
+        gabarito="CERTO",
+        anotada=az("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que as "
+                   "preferências sejam <u>convexas</u>."),
+        poucas=("Sim: a " + azb("convexidade") + " das preferências é a hipótese que distingue o 2º Teorema "
+                "do 1º. Sem ela, um ótimo de Pareto pode não ser sustentável por nenhum sistema de preços."),
+        destrinchando=[
+            azb("Preferências convexas") + " = médias são preferidas a extremos; curvas de indiferença "
+            "convexas em relação à origem (TMS decrescente).",
+            "Por que o 2º Teorema precisa dela: para “descentralizar” um ótimo de Pareto, é preciso uma reta "
+            "de preços que, passando pelo ponto, deixe cada consumidor escolhendo exatamente aquela cesta. "
+            "Com curvas convexas, a reta tangente comum (TMS<sub>A</sub> = TMS<sub>B</sub>) separa as cestas "
+            "preferidas das demais. Com curvas não convexas, o consumidor pode preferir outra cesta sobre a "
+            "mesma reta, e o ótimo não vira equilíbrio.",
+            "O " + azb("1º Teorema") + " <b>não</b> precisa de convexidade: basta " + vd("não saciedade "
+            "local") + " (sempre haver uma cesta próxima melhor), mercados completos e ausência de "
+            "externalidades.",
+            "Demais hipóteses do 2º: mercados completos e competitivos, informação perfeita (simétrica), "
+            "ausência de externalidades e de bens públicos, e transferências de montante fixo para "
+            "redistribuir as dotações.",
+        ],
+        dissecando=(cz("[literalidade · detalhe]") + " Item de lista de hipóteses, em bloco com variantes "
+                    "falsas (informação assimétrica, mercados incompletos). 🔥 A banca costuma cobrar a "
+                    "convexidade justamente para separar os dois teoremas."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Uma das hipóteses para que o 1º Teorema do Bem-Estar seja válido é que as preferências sejam "
+            "convexas.”</i> → ERRADO (o 1º só exige não saciedade local)",
+            "<i>“Com preferências não convexas, nem toda alocação eficiente de Pareto pode ser sustentada como "
+            "equilíbrio competitivo.”</i> → CERTO",
+        ])],
+        tipo_erro=["LITERAL", "DETALHE"], dificuldade=2,
+        comentario_fonte=("CERTO. O 2º Teorema do Bem-Estar Social exige que as preferências dos consumidores "
+                          "sejam convexas (bem-comportadas), o que garante a possibilidade de se alcançar qualquer "
+                          "alocação eficiente de Pareto como um equilíbrio competitivo após redistribuição "
+                          "adequada das dotações iniciais. [imagem]"),
+        qualidade_fonte="bom",
+        figuras_fonte=[img_verso("Untitled (31).jpeg")],
+    ),
+    # ------------------------------------------------------------------ E1-0143
+    card(
+        "E1-0143", "efi", COM_HIPOTESES,
+        assertiva=("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que a informação "
+                   "seja assimétrica."),
+        gabarito="ERRADO",
+        anotada=(az("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que a informação "
+                    "seja ") + vm("assimétrica") + az(".")),
+        poucas=("Os teoremas do bem-estar supõem " + azb("informação perfeita e simétrica") + ". A "
+                + azb("assimetria de informação") + " é uma " + vd("falha de mercado") + " que derruba as "
+                "conclusões, não uma hipótese delas."),
+        destrinchando=[
+            "No modelo de equilíbrio geral de " + oc("Arrow") + "-" + oc("Debreu") + ", todos conhecem preços, "
+            "qualidades e características dos bens. Os preços resumem toda a informação relevante.",
+            "Com " + azb("informação assimétrica") + ", uma parte sabe mais que a outra e surgem "
+            + azb("seleção adversa") + " (antes do contrato: " + oc("Akerlof") + ", “mercado de limões”, 1970) "
+            "e " + azb("risco moral") + " (depois do contrato: o segurado relaxa os cuidados). Mercados "
+            "encolhem ou desaparecem, e o equilíbrio deixa de ser eficiente.",
+            oc("Greenwald") + " e " + oc("Stiglitz") + " (1986) mostraram que, com informação imperfeita, o "
+            "equilíbrio competitivo em geral não é sequer eficiente “restrito” — há intervenções que melhoram "
+            "todos.",
+            "Por isso a assimetria de informação aparece na lista de " + azb("falhas de mercado") + ", ao lado "
+            "de externalidades, bens públicos e poder de mercado: são justamente as violações das hipóteses "
+            "dos teoremas.",
+        ],
+        dissecando=(cz("[inversão]") + " O item transforma uma falha de mercado em hipótese do teorema. "
+                    "Itens irmãos do mesmo bloco trocam outras hipóteses pelo seu oposto (convexas × não "
+                    "convexas; completos × incompletos): basta lembrar que a hipótese é sempre o “mundo "
+                    "ideal”."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“A existência de informação assimétrica entre compradores e vendedores pode impedir que o "
+            "equilíbrio competitivo seja eficiente no sentido de Pareto.”</i> → CERTO",
+            "<i>“A seleção adversa decorre de ações ocultas tomadas após a assinatura do contrato.”</i> → "
+            "ERRADO (troca de conceito: isso é risco moral)",
+        ])],
+        reescrita=("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que a informação "
+                   "seja " + hl("simétrica (perfeita)") + "."),
+        tipo_erro=["INVERSAO"], dificuldade=1,
+        comentario_fonte=("ERRADO. O teorema assume informação perfeita e simétrica entre os agentes. A "
+                          "informação assimétrica compromete a validade do teorema."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0144
+    card(
+        "E1-0144", "efi", COM_HIPOTESES,
+        assertiva=("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que os mercados "
+                   "sejam incompletos."),
+        gabarito="ERRADO",
+        anotada=(az("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que os mercados "
+                    "sejam ") + vm("incompletos") + az(".")),
+        poucas=("O teorema exige " + azb("mercados completos") + ": um mercado (e um preço) para cada bem, em "
+                "cada data e em cada estado da natureza. Mercados incompletos são falha de mercado."),
+        destrinchando=[
+            azb("Mercados completos") + " (" + oc("Arrow") + "-" + oc("Debreu") + "): existe mercado para "
+            "todo bem que afete utilidade ou produção, inclusive " + azb("bens contingentes") + " (entregues só "
+            "em determinado estado do mundo) e entregas futuras. Assim, todo risco pode ser negociado e todo "
+            "efeito passa pelo sistema de preços.",
+            "Mercado incompleto = há algo que importa e não tem preço: seguros inexistentes (riscos não "
+            "seguráveis), crédito racionado, ausência de mercados futuros de longo prazo, efeitos sem mercado "
+            "(as " + azb("externalidades") + " são, no fundo, mercados ausentes).",
+            "Sem preço, o mercado não consegue implementar todas as alocações eficientes — e nem o 1º "
+            "Teorema vale em geral (equilíbrios com mercados incompletos costumam ser ineficientes).",
+            "Leitura de política: completar mercados (criar seguros, direitos de propriedade, mercados de "
+            "carbono) é uma das respostas clássicas às falhas de mercado; " + oc("Coase") + " vai na mesma "
+            "linha ao propor definir direitos para que a negociação resolva a externalidade.",
+        ],
+        dissecando=(cz("[inversão]") + " Mesmo padrão do bloco: a hipótese verdadeira (mercados completos) é "
+                    "trocada pela falha correspondente. Regra prática: a hipótese de um teorema de eficiência "
+                    "nunca é uma falha de mercado."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“A ausência de mercados para certos riscos é uma das razões pelas quais o equilíbrio de mercado "
+            "pode não ser eficiente.”</i> → CERTO",
+            "<i>“Os teoremas do bem-estar dispensam a existência de mercados para bens futuros e "
+            "contingentes.”</i> → ERRADO (exigem mercados completos, inclusive esses)",
+        ])],
+        reescrita=("Uma das hipóteses para que o 2º Teorema do Bem-Estar Social seja válido é que os mercados "
+                   "sejam " + hl("completos") + "."),
+        tipo_erro=["INVERSAO"], dificuldade=1,
+        comentario_fonte=("ERRADO. O 2º Teorema requer mercados completos. Mercados incompletos impedem que todas "
+                          "as alocações eficientes sejam implementadas via preços."),
+        qualidade_fonte="bom",
+    ),
 ]

@@ -926,4 +926,199 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0435
+    {
+        "id": "ECO-E1-0435-1", "fonte_ref": "E1-0435", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Clipping", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COM_CLIP25,
+        "rotulo_item": "Item",
+        "assertiva": ("No monopólio, a receita marginal é sempre igual ao preço, o que implica que o monopolista "
+                      "opera no ponto em que o custo marginal iguala o preço."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No monopólio, a receita marginal é sempre ") + vm("igual ao preço") + az(", o que implica "
+                      "que o monopolista opera no ponto em que o custo marginal iguala ") + vm("o preço") + az("."),
+        "poucas": ("No monopólio, " + vd("RMg < P") + " (para vender mais, baixa-se o preço de todas as "
+                   "unidades). O ótimo é " + vd("RMg = CMg") + ", com " + vd("P > CMg") + ". RMg = P só na "
+                   "concorrência perfeita."),
+        "destrinchando": [
+            "Diante da demanda negativamente inclinada, vender uma unidade a mais tem dois efeitos sobre a "
+            "receita: " + azb("efeito-quantidade") + " (+ o preço da unidade extra) e " + azb("efeito-preço")
+            + " (− a redução de preço aplicada a todas as unidades que já seriam vendidas). Logo a RMg fica "
+            "abaixo do preço.",
+            "Exemplo: 10 unidades a R$ 20 (RT = 200); para vender a 11ª, o preço cai a R$ 19 (RT = 209). A "
+            "RMg da 11ª unidade é " + vd("R$ 9") + ", bem abaixo do preço de R$ 19.",
+            "Na concorrência perfeita, a firma vende o quanto quiser ao preço de mercado: não há efeito-preço, "
+            "e " + vd("RMg = P") + ". Daí a regra P = CMg.",
+            "Como o monopolista iguala RMg = CMg e RMg < P, obtém " + vd("P > CMg") + ": a margem medida pelo "
+            + azb("índice de Lerner") + " (P − CMg)/P, que se aproxima de 1 quanto maior o poder de mercado.",
+            "Resultado de bem-estar: preço mais alto, quantidade menor e " + azb("peso morto") + " em relação "
+            "ao mercado competitivo.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item transplanta para o monopólio a identidade RMg = P "
+                       "da concorrência perfeita e deduz dela, com lógica impecável, a regra P = CMg. A premissa "
+                       "falsa contamina a conclusão. O “sempre” reforça o erro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio, a receita marginal é inferior ao preço para toda quantidade positiva.”</i> → "
+            "CERTO",
+            "<i>“Na concorrência perfeita, a receita marginal da firma é igual ao preço, o que implica produção "
+            "no ponto em que o custo marginal iguala o preço.”</i> → CERTO",
+        ])],
+        "reescrita": ("No monopólio, a receita marginal é sempre " + hl("inferior ao preço") + ", o que implica "
+                      "que o monopolista opera no ponto em que o custo marginal iguala " + hl("a receita "
+                      "marginal, com preço acima do custo marginal") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": ("RMg abaixo da demanda; ótimo em RMg = CMg com P > CMg; igualdade entre preço e "
+                             "RMg só na concorrência perfeita; efeitos quantidade e preço; exemplos numéricos; "
+                             "índice de Lerner. Duplicata E1-0537 com o mesmo comentário."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (154).png", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "irrecuperavel (fórmula do índice de Lerner reescrita no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0437
+    {
+        "id": "ECO-E1-0437-1", "fonte_ref": "E1-0437", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Clipping", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COM_CLIP25,
+        "rotulo_item": "Item",
+        "assertiva": ("O poder de mercado do monopolista gera perda de eficiência alocativa, pois a produção "
+                      "ocorre em quantidade inferior àquela que maximizaria o bem-estar social."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O poder de mercado do monopolista gera perda de eficiência alocativa, pois a produção "
+                      "ocorre em quantidade <u>inferior</u> àquela que maximizaria o bem-estar social."),
+        "poucas": ("Ao produzir onde RMg = CMg (com P > CMg), o monopolista deixa de realizar trocas "
+                   "mutuamente vantajosas: é o " + azb("peso morto") + ", a perda de " + azb("eficiência "
+                   "alocativa") + "."),
+        "destrinchando": [
+            azb("Eficiência alocativa") + ": produzir cada bem até que o valor da última unidade para o "
+            "consumidor (preço) iguale seu custo marginal — " + vd("P = CMg") + ". O monopólio viola essa "
+            "condição: " + vd("P > CMg") + ".",
+            "Bem-estar comparado com a concorrência perfeita (mesmos custos): o consumidor perde excedente; "
+            "parte dele vira lucro do monopolista (" + azb("transferência") + "); outra parte não vai para "
+            "ninguém (" + azb("peso morto") + ", <i>deadweight loss</i>).",
+            "O peso morto é maior quanto menos elástica a demanda e quanto mais o preço se afasta do CMg.",
+            "Ineficiências adicionais discutidas na literatura: " + azb("ineficiência X") + " ("
+            + oc("Leibenstein") + ": sem pressão competitiva, custos acima do mínimo) e gastos de "
+            + azb("rent-seeking") + " para obter ou preservar o monopólio (" + oc("Tullock") + ", "
+            + oc("Posner") + ").",
+            "Contraponto: monopólio natural e patentes podem ser socialmente justificáveis (economias de escala, "
+            "incentivo à inovação — " + oc("Schumpeter") + "), o que motiva regulação em vez de proibição.",
+        ],
+        "dissecando": (cz("[literalidade · paráfrase fiel]") + " Descrição padrão do custo social do monopólio. "
+                       "A versão ERRADA trocaria “inferior” por “superior” ou diria que a perda de bem-estar "
+                       "equivale ao lucro do monopolista (que é transferência)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A perda de bem-estar do monopólio corresponde integralmente ao lucro extraordinário da "
+            "firma.”</i> → ERRADO (troca de conceito: o lucro é transferência; a perda é o peso morto)",
+            "<i>“O monopólio gera ineficiência alocativa porque o preço supera o custo marginal.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Definição do peso morto do monopólio: ao produzir menos e cobrar mais, o "
+                             "monopolista impede trocas mutuamente vantajosas. Duplicata E1-0539 com o mesmo "
+                             "comentário."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0691
+    {
+        "id": "ECO-E1-0691-1", "fonte_ref": "E1-0691", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_CLIP26,
+        "rotulo_item": "Item",
+        "assertiva": ("Um monopólio natural, caracterizado por custos marginais crescentes, justifica a entrada de "
+                      "múltiplas empresas para promover concorrência e eficiência alocativa no mercado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um monopólio natural, caracterizado por ") + vm("custos marginais crescentes")
+                   + az(", ") + vm("justifica a entrada de múltiplas empresas") + az(" para promover "
+                                                                                       "concorrência e "
+                                                                                       "eficiência alocativa "
+                                                                                       "no mercado."),
+        "poucas": ("O monopólio natural se define por " + azb("custo médio decrescente") + " em toda a faixa da "
+                   "demanda (economias de escala). Aí uma só firma produz mais barato que várias: a entrada "
+                   + vd("elevaria") + " o custo, não o reduziria."),
+        "destrinchando": [
+            "Definição: há monopólio natural quando uma única firma atende toda a demanda a custo menor do que "
+            "duas ou mais — " + azb("subaditividade de custos") + ". O caso típico: custo fixo alto e custo "
+            "marginal baixo, constante ou decrescente, sempre " + vd("abaixo do custo médio") + ".",
+            "Custos marginais crescentes apontariam o contrário: a partir de certo ponto, deseconomias de escala "
+            "e espaço para várias firmas — característica de mercados competitivos, não de monopólio natural.",
+            "Fragmentar o mercado duplicaria o custo fixo (duas redes de distribuição de água na mesma rua) e "
+            "reduziria a escala de cada firma, perdendo " + azb("eficiência produtiva") + ".",
+            "Por isso a resposta de política é " + azb("regular") + " o monopólio (tarifa, metas de qualidade, "
+            "concessão por licitação — a “concorrência <b>pelo</b> mercado” de " + oc("Demsetz") + "), e não "
+            "estimular a entrada.",
+            vm("Regra-âncora: monopólio natural = CMe decrescente na faixa relevante → uma firma é o arranjo de "
+               "menor custo."),
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " Dois erros empilhados: a estrutura de custos "
+                       "trocada (CMg crescente) e a política deduzida dela (entrada de várias firmas). Qualquer um "
+                       "basta para o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, a entrada de novas firmas elevaria o custo médio de produção do "
+            "setor.”</i> → CERTO",
+            "<i>“O monopólio natural caracteriza-se por deseconomias de escala na faixa relevante da "
+            "demanda.”</i> → ERRADO (inversão: economias de escala)",
+        ])],
+        "reescrita": ("Um monopólio natural, caracterizado por " + hl("custos médios decrescentes em toda a faixa "
+                      "relevante da demanda") + ", " + hl("não justifica") + " a entrada de múltiplas empresas "
+                      "para promover concorrência e eficiência alocativa no mercado" + hl(", mas sim a "
+                      "regulação de uma única firma") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Monopólio natural: economias de escala em toda a faixa relevante, CMe decrescente, "
+                             "CMg baixo e constante ou decrescente; mais eficiente uma única firma; a entrada "
+                             "elevaria o custo médio."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0693
+    {
+        "id": "ECO-E1-0693-1", "fonte_ref": "E1-0693", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_CLIP26,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um monopólio, a maximização do lucro exige que o preço seja igual ao custo marginal, de "
+                      "modo a expandir o consumo e aumentar o bem-estar social."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um monopólio, a maximização do lucro exige que ") + vm("o preço seja igual ao custo "
+                      "marginal, de modo a expandir o consumo e aumentar o bem-estar social") + az("."),
+        "poucas": ("O lucro do monopolista é máximo em " + vd("RMg = CMg") + ", com " + vd("P > CMg")
+                   + ": ele restringe o consumo e gera peso morto. P = CMg é condição de eficiência, não de "
+                   "lucro máximo do monopólio."),
+        "destrinchando": [
+            "Condição de lucro máximo de qualquer firma: " + vd("RMg = CMg") + ". Com demanda negativamente "
+            "inclinada, " + vd("P > RMg") + ", logo no ótimo do monopolista " + vd("P > CMg") + ".",
+            "O monopolista não tem interesse em expandir o consumo até P = CMg: as unidades entre q<sub>m</sub> "
+            "e q<sub>c</sub> têm RMg < CMg e reduziriam seu lucro.",
+            "Efeito sobre o bem-estar: menor quantidade, preço maior e " + azb("peso morto") + " em relação à "
+            "concorrência perfeita. O item atribui ao monopolista o objetivo (bem-estar social) que é de um "
+            "planejador ou regulador.",
+            "Onde P = CMg aparece no monopólio: como " + azb("regra de regulação") + " (preço fixado pelo "
+            "regulador) e como resultado da " + azb("discriminação perfeita") + " — em que a última unidade é "
+            "vendida a P = CMg, mas sem ganho para o consumidor.",
+        ],
+        "dissecando": (cz("[troca de conceito · juízo indevido]") + " Troca a regra (RMg por P) e atribui ao "
+                       "monopolista a motivação de “aumentar o bem-estar social”. Pista: lucro privado e "
+                       "eficiência social só coincidem na concorrência perfeita."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em um monopólio, a maximização do lucro exige receita marginal igual ao custo marginal, com "
+            "preço acima deste.”</i> → CERTO",
+            "<i>“A regulação que impõe preço igual ao custo marginal reduz a quantidade produzida pelo "
+            "monopolista.”</i> → ERRADO (inversão: aumenta a quantidade)",
+        ])],
+        "reescrita": ("Em um monopólio, a maximização do lucro exige que " + hl("a receita marginal seja igual ao "
+                      "custo marginal, com preço acima do custo marginal, o que restringe o consumo e reduz o "
+                      "bem-estar social") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "JUIZO_INDEVIDO"], "moduladores": ["exige"], "dificuldade": 1,
+        "comentario_fonte": ("Condição de lucro máximo: RMg = CMg; P > RMg, logo P > CMg; peso morto e menor "
+                             "bem-estar que na concorrência perfeita."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

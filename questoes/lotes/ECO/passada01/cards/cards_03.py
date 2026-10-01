@@ -760,5 +760,263 @@ CARDS = [
                            "acao": "redesenhada (figura compartilhada ECO-E2-L00746-1-F1)"}],
         "alertas": ["figura_conjectural: ECO-E2-L00746-1-F1 (mesma figura do item 1)"],
     },
+    # ------------------------------------------------------------------ E2-L00885
+    {
+        "id": "ECO-E2-L00885-1", "fonte_ref": "E2-L00885", "destino": "01", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": ("Em relação aos princípios da teoria do consumidor e da teoria da demanda, julgue o item que "
+                    "se segue."),
+        "rotulo_item": "Item",
+        "assertiva": "A demanda de um bem normal é função crescente do preço do bem substituto.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A demanda de um bem normal é função <u>crescente</u> do preço do bem <u>substituto</u>."),
+        "poucas": ("Substitutos têm " + azb("elasticidade-preço cruzada positiva") + ": se o substituto "
+                   "encarece, a demanda pelo bem aumenta. Logo, ela cresce com o preço do substituto."),
+        "destrinchando": [
+            "Função demanda: q<sub>x</sub> = f(p<sub>x</sub>, p<sub>y</sub>, m, gostos…). Para substitutos, "
+            + vd("∂q<sub>x</sub>/∂p<sub>y</sub> > 0") + "; para complementares, < 0; para independentes, = 0.",
+            "Exemplo brasileiro: " + rx("etanol × gasolina") + " no carro flex. Se a gasolina sobe, parte dos "
+            "motoristas migra para o etanol — a demanda de etanol se desloca para a direita (a regra prática "
+            "dos 70% do preço da gasolina).",
+            "O “bem normal” do item é um detalhe que não muda o resultado: a relação com o preço do "
+            "substituto vale para bem normal ou inferior. O que define normal/inferior é a reação à "
+            "<b>renda</b>, não ao preço de outros bens.",
+            "Em termos gráficos: o preço do substituto é um <b>deslocador</b> da curva de demanda de x; o "
+            "preço de x é que provoca movimento ao longo dela.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " A banca põe “bem normal” para criar dúvida (quem acha "
+                       "que é condição necessária pode desconfiar). “Função crescente de p<sub>y</sub>” é só a "
+                       "tradução de ε<sub>xy</sub> > 0."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A demanda de um bem normal é função crescente do preço do bem complementar.”</i> → ERRADO "
+            "(troca de conceito: é decrescente)",
+            "<i>“A demanda de um bem inferior é função decrescente do preço do bem substituto.”</i> → ERRADO "
+            "(a inferioridade não inverte a relação cruzada)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Elasticidade-preço cruzada positiva para substitutos: se o preço de um "
+                            "aumenta, a demanda pelo outro aumenta (gasolina e etanol).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00973
+    {
+        "id": "ECO-E2-L00973-1", "fonte_ref": "E2-L00973", "destino": "01", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": ("Em relação à microeconomia e à teoria do comércio internacional, julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("No mercado de um bem inferior, ocorre um choque que diminui a renda dos consumidores desse "
+                      "bem. Assumindo tudo o mais constante, após o choque ocorre redução da quantidade "
+                      "transacionada e do preço de equilíbrio do bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No mercado de um bem inferior, ocorre um choque que diminui a renda dos consumidores desse "
+                      "bem. Assumindo tudo o mais constante, após o choque ocorre ")
+                   + vm("redução") + az(" da quantidade transacionada e do preço de equilíbrio do bem."),
+        "poucas": ("Bem " + azb("inferior") + " + renda menor = demanda <b>maior</b> (curva para a direita). Com "
+                   "oferta inalterada, sobem " + vd("preço e quantidade") + "."),
+        "destrinchando": [
+            "Passo 1 — qual curva? A renda é deslocador da demanda. Passo 2 — para que lado? Bem inferior tem "
+            "elasticidade-renda negativa: ↓renda → ↑demanda. Passo 3 — efeito no equilíbrio: choque positivo "
+            "de demanda → " + vd("p ↑ e q ↑") + ".",
+            "Intuição: com menos renda, consumidores abandonam versões mais caras e voltam ao bem inferior "
+            "(ônibus no lugar do carro, marca própria no lugar da marca líder).",
+            "O resultado do item (p ↓ e q ↓) seria correto para um bem <b>normal</b>: menos renda, menos "
+            "demanda.",
+            "Aplicação: em recessões, bens inferiores costumam ter demanda resiliente ou crescente, e alguns "
+            "setores são chamados de anticíclicos por isso.",
+        ],
+        "dissecando": (cz("[inversão · troca de conceito]") + " O item aplica a um bem inferior o resultado do "
+                       "bem normal. Duas negativas (renda ↓ e η < 0) produzem um efeito positivo — quem lê "
+                       "rápido erra o sinal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No mercado de um bem normal, a queda da renda reduz o preço e a quantidade de "
+            "equilíbrio.”</i> → CERTO",
+            "<i>“No mercado de um bem inferior, a queda da renda eleva o preço, mas reduz a quantidade "
+            "transacionada.”</i> → ERRADO (meia-verdade: a quantidade também sobe)",
+        ])],
+        "reescrita": ("No mercado de um bem inferior, ocorre um choque que diminui a renda dos consumidores desse "
+                      "bem. Assumindo tudo o mais constante, após o choque ocorre " + hl("aumento") + " da "
+                      "quantidade transacionada e do preço de equilíbrio do bem."),
+        "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. Se o bem é inferior, a diminuição de renda aumenta a demanda, aumentando a "
+                            "quantidade transacionada e o preço de equilíbrio.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01035
+    {
+        "id": "ECO-E2-L01035-1", "fonte_ref": "E2-L01035", "destino": "01", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_EQ,
+        "rotulo_item": "Item",
+        "assertiva": ("Em equilíbrio, sem intervenção governamental, a quantidade de produto transacionado no "
+                      "mercado será de 90 unidades, e o preço praticado será de R$ 7,00 por unidade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em equilíbrio, sem intervenção governamental, a quantidade de produto transacionado no "
+                      "mercado será de <u>90 unidades</u>, e o preço praticado será de <u>R$ 7,00</u> por "
+                      "unidade."),
+        "poucas": ("Igualando Qᴰ = Qˢ: 300 − 30p = 10p + 20 → " + vd("p* = 7") + " e, substituindo, "
+                   + vd("Q* = 90") + "."),
+        "destrinchando": [
+            "Equilíbrio = preço em que os planos de compradores e vendedores são compatíveis (Qᴰ = Qˢ). "
+            "Conta: 300 − 20 = 30p + 10p → 280 = 40p → " + vd("p = 7") + ".",
+            "Quantidade: Qᴰ = 300 − 210 = " + vd("90") + "; confira na oferta: Qˢ = 70 + 20 = 90. Sempre "
+            "substitua nas <b>duas</b> curvas — a conferência pega erro de sinal.",
+            "Atalhos de prova: interceptos. A demanda zera em " + vd("p = 10") + " (preço de reserva); a "
+            "oferta começa em Q = 20 com p = 0. Daí saem os excedentes: consumidor = (10 − 7) × 90 ÷ 2 = "
+            + vd("135") + ".",
+            "Fora do equilíbrio: p > 7 → excesso de oferta (pressão para baixo); p < 7 → excesso de demanda. "
+            "Ex.: com preço tabelado em 6, Qᴰ = 120 e Qˢ = 80 — faltam 40 unidades.",
+        ],
+        "dissecando": (cz("[detalhe]") + " Item de cálculo direto, que abre a bateria da questão (excedentes e "
+                       "tabelamento vêm em seguida). Os erros típicos que a banca exploraria: inverter p e Q "
+                       "(“7 unidades a R$ 90”) ou errar o sinal na passagem de termos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em equilíbrio, o excedente do consumidor é de R$ 270,00.”</i> → ERRADO (esqueceu o ÷ 2: são "
+            "R$ 135,00)",
+            "<i>“Se o preço for fixado em R$ 8,00, haverá excesso de oferta de 40 unidades.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Igualando 300 − 30p = 10p + 20 → p = 7; QD = 300 − 210 = 90.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 174", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "texto (equações transcritas no comando)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01373
+    {
+        "id": "ECO-E2-L01373-1", "fonte_ref": "E2-L01373", "destino": "01", "subtema": H2["fund"],
+        "tipo": "C/E", "banca": "FGV", "prova": "SEFAZ/ES/Consultor Legislativo/2022", "ano": 2022,
+        "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir (questão adaptada), relativo aos fatores de produção e às suas remunerações.",
+        "rotulo_item": "Item",
+        "assertiva": ("São remunerações do trabalho, da terra e do capital, respectivamente, salário, aluguel, e "
+                      "juros e lucros."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("São remunerações do trabalho, da terra e do capital, <u>respectivamente</u>, salário, "
+                      "aluguel, e juros e lucros."),
+        "poucas": ("Na repartição funcional da renda: " + vd("trabalho → salário") + "; " + vd("terra → "
+                   "aluguel (renda da terra)") + "; " + vd("capital → juros e lucros") + ". A ordem do item "
+                   "está correta."),
+        "destrinchando": [
+            "Os fatores de produção clássicos e suas remunerações: " + azb("trabalho") + " → salários; "
+            + azb("terra") + " (recursos naturais) → aluguel ou renda da terra; " + azb("capital") + " "
+            "(máquinas, instalações) → juros (e lucros); " + azb("capacidade empresarial") + " → lucro.",
+            "Por que “juros e lucros” para o capital: muitos manuais tratam o lucro como retorno do capital "
+            "próprio investido; outros o reservam ao fator empresarial (que assume o risco e organiza a "
+            "produção). O item adaptado adota a primeira leitura, e o gabarito a aceita.",
+            "Na contabilidade nacional, essa divisão aparece na ótica da renda: remuneração dos empregados + "
+            "excedente operacional bruto (aluguéis, juros, lucros) + rendimento misto.",
+            "Origem da classificação: economia política clássica — " + oc("Adam Smith") + " e " + oc("David "
+            "Ricardo") + " dividem a renda entre trabalhadores (salários), proprietários de terras (renda) e "
+            "capitalistas (lucros).",
+        ],
+        "dissecando": (cz("[literalidade]") + " O item testa a ordem (“respectivamente”), que é onde a banca "
+                       "costuma plantar o erro trocando aluguel e juros. A marca ❌ provavelmente veio da "
+                       "dúvida sobre o lucro, que alguns autores atribuem só ao empresário."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“São remunerações do trabalho, da terra e do capital, respectivamente, salário, juros e "
+            "aluguel.”</i> → ERRADO (ordem trocada: terra → aluguel; capital → juros)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["respectivamente"], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Diagrama: trabalho → salário; terra → aluguel; capital → juros e lucros; "
+                            "capacidade empresarial → lucros.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 248", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "absorvida (no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01374
+    {
+        "id": "ECO-E2-L01374-1", "fonte_ref": "E2-L01374", "destino": "01", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "FGV", "prova": "SEFAZ/ES/Consultor Legislativo/2022", "ano": 2022,
+        "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir (questão adaptada), relativo à classificação dos bens.",
+        "rotulo_item": "Item",
+        "assertiva": ("Assuma uma economia de dois bens (x1 e x2). Se x1 é um bem inferior, então necessariamente "
+                      "x2 é um bem normal."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Assuma uma economia de dois bens (x1 e x2). Se x1 é um bem inferior, então "
+                      "<u>necessariamente</u> x2 é um bem normal."),
+        "poucas": ("Toda renda extra tem de ser gasta em algum bem. Se o gasto com x1 <b>cai</b> quando a renda "
+                   "sobe, o gasto com x2 tem de subir mais que a renda: x2 é " + azb("normal") + " (na verdade, "
+                   "de luxo)."),
+        "destrinchando": [
+            "Com preferências monótonas, o consumidor gasta toda a renda: p₁x₁ + p₂x₂ = m. Derivando em m: "
+            + vd("p₁·∂x₁/∂m + p₂·∂x₂/∂m = 1") + " — cada real adicional é repartido entre os bens.",
+            "Se x₁ é inferior, ∂x₁/∂m < 0: o primeiro termo é negativo, e o segundo precisa ser maior que 1. "
+            "Logo ∂x₂/∂m > 0 — x₂ é normal. Os dois não podem ser inferiores (sobraria renda sem destino).",
+            "Em elasticidades, é a " + azb("agregação de Engel") + ": s₁η₁ + s₂η₂ = 1 (s = parcela do gasto). "
+            "Com η₁ < 0, " + vd("η₂ > 1/s₂ > 1") + ": x₂ é não só normal, mas " + azb("bem de luxo") + ".",
+            "Generalizando: com n bens, nem todos podem ser inferiores; a média ponderada das "
+            "elasticidades-renda é sempre 1.",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " O “necessariamente” assusta, porque a banca costuma usá-lo "
+                       "para itens falsos. Aqui ele é verdadeiro por uma restrição contábil (a renda tem de ir "
+                       "para algum lugar). Pista: “economia de dois bens”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Numa economia de dois bens, ambos podem ser inferiores.”</i> → ERRADO (a renda adicional "
+            "precisa ser gasta)",
+            "<i>“Numa economia de dois bens, se x1 é inferior, x2 tem elasticidade-renda maior que 1.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["necessariamente"], "dificuldade": 2,
+        "comentario_fonte": "CERTO. Se os dois fossem inferiores, ao aumentar a renda sobraria dinheiro, o que a "
+                            "teoria não permite.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01379
+    {
+        "id": "ECO-E2-L01379-1", "fonte_ref": "E2-L01379", "destino": "01", "subtema": H2["fund"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "SESPA/PA/Economista/2004", "ano": 2004,
+        "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir, relativo aos fundamentos da economia.",
+        "rotulo_item": "Item",
+        "assertiva": ("Os consumidores devem fazer escolhas em razão da existência de mapas de preferências "
+                      "distintos entre os indivíduos de uma sociedade."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os consumidores devem fazer escolhas em razão da ") + vm("existência de mapas de "
+                      "preferências distintos entre os indivíduos de uma sociedade") + az("."),
+        "poucas": ("Escolher é imposto pela " + azb("escassez") + " (renda limitada diante de desejos "
+                   "ilimitados), não pela diversidade de preferências. Um consumidor sozinho no mundo também "
+                   "teria de escolher."),
+        "destrinchando": [
+            "O " + azb("problema econômico fundamental") + ": necessidades ilimitadas × recursos escassos. "
+            "Daí as perguntas clássicas — o que, quanto, como e para quem produzir — e a necessidade de "
+            "escolha, com " + azb("custo de oportunidade") + ".",
+            "No consumidor, a escassez é a " + azb("restrição orçamentária") + ": com preços dados e renda "
+            "finita, comprar mais de um bem exige comprar menos de outro.",
+            "O " + azb("mapa de indiferença") + " descreve as preferências <b>de cada</b> consumidor e diz "
+            "<b>como</b> ele escolhe (qual cesta prefere), não <b>por que</b> precisa escolher. Preferências "
+            "diferentes explicam por que as pessoas fazem escolhas diferentes — e por que a troca gera ganho "
+            "—, mas não são a origem da escolha.",
+            vm("Regra-âncora: a escolha nasce da escassez; as preferências só determinam qual será a escolha."),
+        ],
+        "dissecando": (cz("[nexo indevido]") + " Dois fatos verdadeiros (consumidores escolhem; preferências "
+                       "diferem) ligados por uma causalidade falsa (“em razão da”). O conector é o ponto a "
+                       "atacar. 🔥 A CEBRASPE gosta de itens de fundamentos que trocam a causa da escolha."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os consumidores devem fazer escolhas em razão da escassez de recursos diante de necessidades "
+            "ilimitadas.”</i> → CERTO",
+            "<i>“Se todos os indivíduos tivessem as mesmas preferências, não haveria necessidade de "
+            "escolha.”</i> → ERRADO (a escassez continuaria a impor escolhas)",
+        ])],
+        "reescrita": ("Os consumidores devem fazer escolhas em razão da " + hl("escassez de recursos (renda "
+                      "limitada) diante de necessidades ilimitadas") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["em razão da"], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. O erro está no “em razão da…”: não é porque os consumidores possuem "
+                            "preferências diferentes que devem fazer escolhas, mas porque seus recursos são "
+                            "limitados e suas necessidades, infinitas. Mesmo um único consumidor teria de "
+                            "escolher.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
     # ---- FIM
 ]

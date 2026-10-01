@@ -260,4 +260,339 @@ CARDS = [
                            "acao": "cortada (mecanismo descrito no 📖; gráfico do teto em ECO-E2-L01195-1-V1)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00619
+    {
+        "id": "ECO-E2-L00619-1", "fonte_ref": "E2-L00619", "destino": "08", "subtema": H2["mk"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à microeconomia, julgue (C ou E) os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a regra de mark-up, o poder de mercado de um monopolista é diretamente "
+                      "relacionado à elasticidade-preço da demanda; quanto mais elástica for a demanda, maior será o "
+                      "mark-up do preço sobre o custo marginal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo com a regra de mark-up, o poder de mercado de um monopolista é ")
+                   + vm("diretamente") + az(" relacionado à elasticidade-preço da demanda; quanto mais elástica for "
+                                            "a demanda, ") + vm("maior") + az(" será o mark-up do preço sobre o "
+                                                                             "custo marginal."),
+        "poucas": ("A relação é " + azb("inversa") + ": " + vd("(P − CMg)/P = 1/|ε|") + ". Demanda mais "
+                   "elástica → consumidores fogem do aumento de preço → markup <b>menor</b>."),
+        "destrinchando": [
+            "Partindo de RMg = CMg e de RMg = P(1 − 1/|ε|), chega-se à " + azb("regra de markup") + ": "
+            + vd("(P − CMg)/P = 1/|ε|") + " ou, na forma de multiplicador, " + vd("P = CMg · |ε|/(|ε| − 1)")
+            + ".",
+            "Exemplos: |ε| = 2 → P = 2 × CMg (Lerner 0,5); |ε| = 5 → P = 1,25 × CMg (Lerner 0,2); |ε| → ∞ "
+            "(firma competitiva) → P = CMg, Lerner 0.",
+            "Intuição: a elasticidade mede quanto os clientes reagem ao preço. Se reagem muito, cada real acima "
+            "do custo marginal custa muitas vendas, e a firma não sustenta margem alta. O " + azb("poder de "
+            "mercado") + " nasce justamente da demanda pouco sensível (poucos substitutos próximos).",
+            "Detalhe que a banca cobra: a elasticidade relevante é a da demanda <b>da firma</b>, não a do "
+            "mercado. Num oligopólio, cada firma enfrenta demanda mais elástica que a do mercado.",
+            vm("Regra-âncora: markup e elasticidade andam em sentidos opostos."),
+        ],
+        "dissecando": (cz("[inversão]") + " O item inverte o sinal da relação duas vezes, de modo coerente "
+                       "(“diretamente” e “maior”), o que lhe dá aparência de raciocínio fechado. Basta testar o "
+                       "extremo: demanda perfeitamente elástica = concorrência perfeita = markup nulo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com elasticidade-preço da demanda igual a −2, o preço de monopólio é o dobro do custo "
+            "marginal.”</i> → CERTO",
+            "<i>“Com elasticidade-preço da demanda igual a −0,5, o markup ótimo é de 200%.”</i> → ERRADO (com "
+            "|ε| < 1 não há ótimo: o monopolista não opera no trecho inelástico)",
+        ])],
+        "reescrita": ("De acordo com a regra de mark-up, o poder de mercado de um monopolista é "
+                      + hl("inversamente") + " relacionado à elasticidade-preço da demanda; quanto mais elástica "
+                      "for a demanda, " + hl("menor") + " será o mark-up do preço sobre o custo marginal."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["diretamente"], "dificuldade": 1,
+        "comentario_fonte": ("Relação inversa: (P − CMg)/P = −1/Ed; demanda mais elástica, menor markup, pois a "
+                             "firma perde muitos clientes ao elevar o preço."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00652
+    {
+        "id": "ECO-E2-L00652-1", "fonte_ref": "E2-L00652", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à microeconomia, julgue (C ou E) os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("Empresas com poder de mercado buscam capturar o excedente do consumidor por meio de "
+                      "estratégias de diferenciação de preços."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Empresas com <u>poder de mercado</u> buscam capturar o excedente do consumidor por meio de "
+                      "estratégias de <u>diferenciação de preços</u>."),
+        "poucas": ("A " + azb("discriminação de preços") + " (aqui chamada “diferenciação”) serve exatamente para "
+                   "converter excedente do consumidor em receita da firma — e exige " + azb("poder de mercado")
+                   + "."),
+        "destrinchando": [
+            "Com preço único, quem estaria disposto a pagar mais que o preço fica com um " + azb("excedente do "
+            "consumidor") + ". Cobrar preços diferentes conforme a disposição a pagar transfere parte dessa área "
+            "para a firma.",
+            "Condições para discriminar: (1) poder de mercado (o tomador de preço não escolhe preço); (2) "
+            "identificar ou separar grupos com disposições a pagar diferentes; (3) impedir a " + azb("revenda")
+            + " (arbitragem) entre eles.",
+            "Os três graus (" + oc("Pigou") + ", 1920): " + vd("1º grau") + " — preço de reserva de cada "
+            "unidade, captura todo o EC; " + vd("2º grau") + " — preço depende da quantidade comprada (descontos "
+            "por volume, tarifas em blocos), com autosseleção; " + vd("3º grau") + " — preços diferentes para "
+            "grupos observáveis (estudantes, idosos, mercados regionais), maior preço no grupo menos elástico.",
+            "Efeito sobre a eficiência: no 1º grau, peso morto zero. No 2º e no 3º, ambíguo — melhora se a "
+            "discriminação expandir a quantidade total (atendendo grupos que o preço único excluía), piora se "
+            "apenas redistribuir a mesma produção.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item troca o termo técnico “discriminação” por "
+                       "“diferenciação de preços” — que não deve ser confundido com diferenciação de "
+                       "<b>produto</b> (concorrência monopolística). O verbo “buscam” descreve o objetivo, não "
+                       "promete sucesso nem ganho de eficiência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A discriminação de preços de terceiro grau sempre aumenta a eficiência alocativa.”</i> → ERRADO "
+            "(modulador absoluto: o efeito é ambíguo)",
+            "<i>“Firmas em concorrência perfeita praticam discriminação de preços para capturar o excedente do "
+            "consumidor.”</i> → ERRADO (sem poder de mercado não há discriminação)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["buscam"], "dificuldade": 1,
+        "comentario_fonte": ("Discriminação transforma excedente do consumidor em excedente do produtor; a fonte "
+                             "acrescenta que isso aumenta a eficiência alocativa em relação ao preço único."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem afirma que a discriminação aumenta a eficiência "
+                    "alocativa; isso só é garantido no 1º grau — no 2º e no 3º o efeito é ambíguo (corrigido)"],
+    },
+    # ------------------------------------------------------------------ E2-L00676
+    {
+        "id": "ECO-E2-L00676-1", "fonte_ref": "E2-L00676", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_ESTR_ITENS,
+        "rotulo_item": "Item",
+        "assertiva": ("Um monopolista que pratica discriminação de preços de primeiro grau (perfeita) extrai todo o "
+                      "excedente do consumidor, resultando em uma quantidade produzida socialmente eficiente, "
+                      "idêntica à de concorrência perfeita."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um monopolista que pratica discriminação de preços de primeiro grau (perfeita) extrai todo o "
+                      "excedente do consumidor, resultando em uma quantidade produzida socialmente eficiente, "
+                      "<u>idêntica</u> à de concorrência perfeita."),
+        "poucas": ("Com o preço de reserva de cada comprador, a " + vd("RMg coincide com a demanda") + " e o "
+                   "monopolista vende até " + vd("P = CMg") + " — a mesma quantidade da concorrência perfeita."),
+        "destrinchando": [
+            "Na " + azb("discriminação perfeita") + ", vender uma unidade a mais não exige baixar o preço das "
+            "anteriores. A receita marginal da última unidade é o próprio preço dela.",
+            "A firma expande a produção enquanto o preço de reserva do próximo comprador superar o CMg; para "
+            "onde a demanda cruza o CMg — o ponto da " + azb("concorrência perfeita") + ". Resultado: "
+            + azb("eficiência alocativa") + ", sem peso morto.",
+            "A diferença em relação à concorrência é só distributiva: lá o consumidor fica com o triângulo acima "
+            "do preço; aqui " + vd("EC = 0") + " e o produtor fica com tudo.",
+            "Ressalva técnica: “idêntica à de concorrência perfeita” supõe as mesmas curvas de custo — a "
+            "quantidade em que a demanda corta o CMg da firma.",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " Verdadeiro, mas contraria a ideia de que monopólio sempre "
+                       "produz menos que a concorrência. 🔥 Itens gêmeos no mesmo lote: ECO-E2-L00332-1 (CERTO) e "
+                       "ECO-E2-L00290-1 (versão ERRADA, com peso morto “maior”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…resultando em quantidade socialmente eficiente, mas a um preço único superior ao de concorrência "
+            "perfeita.”</i> → ERRADO (não há preço único: cada unidade tem o seu)",
+            "<i>“Na discriminação de terceiro grau, a quantidade é sempre idêntica à de concorrência "
+            "perfeita.”</i> → ERRADO (troca de conceito: isso vale para o 1º grau)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Preço de reserva de cada consumidor; RMg = demanda; produz até P = CMg; mesma "
+                             "quantidade da concorrência perfeita; excedente apropriado como lucro."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00677
+    {
+        "id": "ECO-E2-L00677-1", "fonte_ref": "E2-L00677", "destino": "08", "subtema": H2["mk"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_ESTR_ITENS,
+        "rotulo_item": "Item",
+        "assertiva": ("O mark-up de um monopolista é inversamente proporcional à elasticidade-preço da demanda; "
+                      "portanto, quanto mais inelástica for a demanda, menor será o poder de mercado da firma."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O mark-up de um monopolista é inversamente proporcional à elasticidade-preço da demanda; "
+                      "portanto, quanto mais inelástica for a demanda, ") + vm("menor") + az(" será o poder de "
+                                                                                             "mercado da firma."),
+        "poucas": ("A premissa está certa (" + vd("L = 1/|ε|") + "), mas a conclusão a inverte: demanda mais "
+                   + azb("inelástica") + " (|ε| menor) dá markup e poder de mercado <b>maiores</b>."),
+        "destrinchando": [
+            "O " + azb("índice de Lerner") + " mede o poder de mercado: " + vd("L = (P − CMg)/P = −1/ε = 1/|ε|")
+            + ". É literalmente o inverso da elasticidade (em módulo).",
+            "Se |ε| cai (demanda mais inelástica), 1/|ε| sobe: a firma sustenta preço mais distante do CMg sem "
+            "perder muitas vendas. Exemplos: medicamento patenteado sem substituto, insumo essencial, serviço "
+            "com alto custo de troca.",
+            "Se |ε| sobe (demanda mais elástica), 1/|ε| cai; no limite |ε| → ∞, L → 0: a firma é tomadora de "
+            "preço.",
+            "Cuidado com o limite oposto: a regra vale no ótimo, que fica no trecho elástico (|ε| > 1). Por isso "
+            "L fica entre 0 e 1 — “demanda mais inelástica” compara firmas ou mercados, não autoriza o "
+            "monopolista a operar com |ε| < 1.",
+            vm("Regra-âncora: menos elástica → mais poder de mercado."),
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " A 1ª oração é verdadeira e o “portanto” sugere que a "
+                       "conclusão decorre dela; mas a dedução foi feita com o sinal trocado. Teste rápido: se "
+                       "“inversamente”, então elasticidade baixa → markup alto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto mais inelástica a demanda com que se defronta a firma, maior o índice de Lerner.”</i> → "
+            "CERTO",
+            "<i>“O índice de Lerner é diretamente proporcional à elasticidade-preço da demanda.”</i> → ERRADO "
+            "(inversão: é o inverso de |ε|)",
+        ])],
+        "reescrita": ("O mark-up de um monopolista é inversamente proporcional à elasticidade-preço da demanda; "
+                      "portanto, quanto mais inelástica for a demanda, " + hl("maior") + " será o poder de "
+                      "mercado da firma."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": ["portanto"], "dificuldade": 1,
+        "comentario_fonte": ("Lerner L = (P − CMg)/P = −1/Ed; relação inversa correta, conclusão invertida: "
+                             "demanda mais inelástica, maior poder de mercado."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 103", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (fórmula do Lerner no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00731
+    {
+        "id": "ECO-E2-L00731-1", "fonte_ref": "E2-L00731", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Considerando os conceitos de microeconomia, julgue (C ou E) os itens a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de monopólio, o lucro econômico é positivo tanto no curto quanto no longo prazo, "
+                      "sendo o preço, no longo prazo, igual ao custo médio de produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de monopólio, o lucro econômico ") + vm("é") + az(" positivo tanto no curto "
+                      "quanto no longo prazo, sendo o preço, no longo prazo, ") + vm("igual ao") + az(" custo médio "
+                                                                                                     "de produção."),
+        "poucas": ("Dois erros: o lucro de monopólio <b>pode</b> ser positivo (não é garantido) e, se for positivo, "
+                   "o preço fica " + vd("acima do CMe") + ". P = CMe significa lucro zero — e a frase se "
+                   "contradiz."),
+        "destrinchando": [
+            "Lucro econômico por unidade = " + vd("P − CMe") + ". Lucro positivo ⇔ P > CMe; lucro nulo ⇔ "
+            "P = CMe. As duas orações do item são, portanto, incompatíveis entre si.",
+            "No longo prazo, as " + azb("barreiras à entrada") + " (legais, patentes, controle de recurso, "
+            "economias de escala) impedem que novos concorrentes eliminem o lucro: o monopólio <b>pode</b> manter "
+            "lucro extraordinário indefinidamente, ao contrário da concorrência perfeita.",
+            "Mas monopólio não é garantia de lucro: se a demanda for fraca em relação aos custos, o melhor ponto "
+            "(RMg = CMg) pode ter P < CMe — prejuízo no curto prazo; no longo prazo, a firma sai do mercado.",
+            "P = CMe no longo prazo é a marca da " + azb("concorrência perfeita") + " (livre entrada, no mínimo "
+            "do CMe) e da " + azb("concorrência monopolística") + " (Chamberlin: tangência entre demanda e CMe, "
+            "lucro zero).",
+            vm("Regra-âncora: monopólio = lucro possível no longo prazo; P = CMe = lucro zero."),
+        ],
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " “É positivo” transforma possibilidade "
+                       "em certeza, e “igual ao custo médio” importa a condição de longo prazo da concorrência. A "
+                       "pista é a contradição interna: lucro positivo com P = CMe é impossível."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em razão das barreiras à entrada, o monopolista pode auferir lucro econômico positivo no longo "
+            "prazo.”</i> → CERTO",
+            "<i>“Na concorrência monopolística, o preço de longo prazo iguala o custo médio, e o lucro econômico "
+            "é nulo.”</i> → CERTO",
+        ])],
+        "reescrita": ("No modelo de monopólio, o lucro econômico " + hl("pode ser") + " positivo tanto no curto "
+                      "quanto no longo prazo, sendo o preço, no longo prazo, " + hl("superior ao") + " custo médio "
+                      "de produção " + hl("sempre que houver lucro") + "."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["é", "tanto…quanto"], "dificuldade": 2,
+        "comentario_fonte": ("Barreiras permitem lucro positivo no longo prazo, mas ele não é necessário; lucro "
+                             "positivo exige P > CMe; P = CMe implicaria lucro zero (comentário repetido em linha "
+                             "duplicada)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00742
+    {
+        "id": "ECO-E2-L00742-1", "fonte_ref": "E2-L00742", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_ESTR_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("O monopólio é considerado uma estrutura de mercado imperfeita, na qual apenas uma empresa "
+                      "atua nesse segmento. Uma característica do nível ótimo de produção (que maximiza lucro) do "
+                      "monopolista é que a empresa nunca opera na parte inelástica da curva de demanda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O monopólio é considerado uma estrutura de mercado imperfeita, na qual apenas uma empresa "
+                      "atua nesse segmento. Uma característica do nível ótimo de produção (que maximiza lucro) do "
+                      "monopolista é que a empresa <u>nunca</u> opera na parte <u>inelástica</u> da curva de "
+                      "demanda."),
+        "poucas": ("No trecho " + azb("inelástico") + " a " + vd("RMg é negativa") + ": reduzir a produção "
+                   "aumentaria a receita e cortaria custos. O ótimo (RMg = CMg > 0) está sempre no trecho elástico."),
+        "destrinchando": [
+            "Fórmula: " + vd("RMg = P(1 − 1/|ε|)") + ". Se |ε| < 1, o parêntese é negativo e a RMg também.",
+            "Um ponto com RMg < 0 não pode ser ótimo: vendendo menos, a firma ganharia receita (o preço sobe mais "
+            "que a quantidade cai) e gastaria menos (produz menos). Ela recua até a RMg voltar a ser positiva.",
+            "Com " + vd("CMg > 0") + ", a igualdade RMg = CMg exige RMg > 0 → |ε| > 1. Só no caso-limite de "
+            "CMg = 0 o ótimo cai exatamente em |ε| = 1 (maximizar receita).",
+            "A 1ª frase também está correta: monopólio é a estrutura de concorrência imperfeita com " + azb("um "
+            "único vendedor") + ", produto sem substitutos próximos e barreiras à entrada.",
+        ],
+        "dissecando": (cz("[literalidade · modulador absoluto]") + " O “nunca” costuma ser sinal de ERRADO, mas "
+                       "aqui é exato: com CMg positivo não há exceção. 🔥 A banca repete o tema em várias "
+                       "roupagens: ECO-E2-L00441-1 (versão errada) e ECO-E2-L01192-1 (“sempre na parte "
+                       "elástica”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O monopolista maximiza lucro no ponto de elasticidade unitária da demanda.”</i> → ERRADO (isso "
+            "só ocorre com CMg nulo; em regra, |ε| > 1)",
+            "<i>“No trecho inelástico da demanda, a receita marginal do monopolista é negativa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "GENERALIZACAO"], "moduladores": ["nunca", "apenas"], "dificuldade": 1,
+        "comentario_fonte": ("Demanda inelástica → RMg negativa; reduzir a quantidade eleva preço, receita e "
+                             "lucro."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 106", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mecanismo redesenhado em ECO-E2-L00441-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00743
+    {
+        "id": "ECO-E2-L00743-1", "fonte_ref": "E2-L00743", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_ESTR_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Na regulação de um monopólio natural relativo à prestação de um serviço público, a "
+                      "eficiência econômica pode ser obtida por meio da fixação do preço da prestação do serviço "
+                      "em patamar equivalente ao seu custo marginal de produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("Na regulação de um monopólio natural relativo à prestação de um serviço público, a "
+                      "eficiência econômica ") + vm("pode ser obtida") + az(" por meio da fixação do preço da "
+                      "prestação do serviço em patamar equivalente ao seu custo marginal de produção."),
+        "poucas": ("No " + azb("monopólio natural") + " o CMe cai em toda a faixa relevante, logo "
+                   + vd("CMg < CMe") + ". Preço = CMg não cobre o custo médio: a empresa tem prejuízo e, sem "
+                   "subsídio, sai do mercado."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "P = CMg é, por definição, a regra de " + azb("eficiência alocativa") + " (first best); "
+                          "o que falha é a viabilidade financeira. Com subsídio ou tarifa em duas partes, a "
+                          "eficiência <b>pode</b> ser obtida — o que torna o item defensável como CERTO. O gabarito "
+                          "ERRADO lê “eficiência econômica” como solução regulatória sustentável sem transferência.")],
+        "destrinchando": [
+            azb("Monopólio natural") + ": uma única firma abastece o mercado a custo menor do que duas ou mais, "
+            "graças a " + azb("economias de escala") + " (altos custos fixos de rede, custo marginal baixo): "
+            "distribuição de energia, saneamento, gás canalizado, ferrovias.",
+            "Se o CMe é decrescente, o CMg fica abaixo dele. No ponto C (demanda = CMg), a quantidade é a "
+            "eficiente, mas " + vd("P = CMg < CMe") + ": a receita não paga o custo fixo.",
+            "Saídas regulatórias: (1) " + vd("P = CMe") + " (ponto R, " + azb("second best") + "): lucro zero, "
+            "quantidade menor que a eficiente, mas sem subsídio; (2) P = CMg com " + azb("subsídio") + " igual ao "
+            "prejuízo, pago pelo Tesouro; (3) " + azb("tarifa em duas partes") + ": parcela fixa (assinatura) "
+            "cobre o custo fixo e o preço por unidade = CMg.",
+            "Sem regulação, o monopolista escolhe RMg = CMg (ponto M): preço alto, quantidade baixa, peso morto.",
+            rx("No Brasil") + ", as agências reguladoras (ANEEL, ANP, ANA) usam variantes de preço-teto e "
+            "revisão tarifária justamente para conciliar modicidade e equilíbrio econômico-financeiro.",
+        ],
+        "grafico_verso": "ECO-E2-L00743-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " O item aplica ao monopólio natural a regra de eficiência do "
+                       "mercado competitivo sem considerar o custo fixo. O “pode” deixa a porta aberta — por isso o "
+                       "gabarito é discutível. Itens vizinhos: ECO-E2-L01019-1 (ERRADO) e ECO-E2-L01196-1 "
+                       "(CERTO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, o preço igual ao custo marginal causaria prejuízo à empresa.”</i> → CERTO",
+            "<i>“A regulação pelo custo médio elimina o peso morto do monopólio natural.”</i> → ERRADO (reduz, "
+            "mas a quantidade ainda fica abaixo da eficiente)",
+        ])],
+        "reescrita": ("Na regulação de um monopólio natural relativo à prestação de um serviço público, a "
+                      "eficiência econômica " + hl("não pode ser obtida, sem subsídio,") + " por meio da fixação "
+                      "do preço da prestação do serviço em patamar equivalente ao seu custo marginal de produção"
+                      + hl(", pois esse preço fica abaixo do custo médio e gera prejuízo") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 2,
+        "comentario_fonte": ("P = CMg maximiza a eficiência alocativa, mas é insustentável: CMg < CMe gera "
+                             "prejuízo; o governo costuma fixar o preço no custo médio (comentário fundido com a "
+                             "linha duplicada E2-L00850)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 107", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00743-1-V1)"},
+                          {"ref": "IMAGEM 129 (linha duplicada E2-L00850)", "tipo_fonte": "GRÁFICO",
+                           "lado": "verso", "acao": "cortada (igual à IMAGEM 107)"}],
+        "alertas": ["contestavel: P = CMg é a condição de eficiência alocativa; o item seria CERTO se admitido "
+                    "subsídio ou tarifa em duas partes — gabarito ERRADO mantido"],
+    },
 ]

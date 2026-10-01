@@ -1,0 +1,12 @@
+{"id": "ECO-E2-L01618-1-V1", "uso": "verso",
+ "legenda": "Curvas de Engel com preços constantes: crescentes para bens normais (côncava na necessidade, convexa no luxo) e decrescente para o bem inferior — a inclinação é o sinal da elasticidade-renda.",
+ "eixos": {"x": "R", "y": "q"},
+ "curvas": [
+   {"id": "N", "tipo": "funcao", "expr": "2.6*x**0.5", "dominio": [0, 9.6], "familia": "demanda", "rotulo": "normal: necessidade", "rotulo_em": 9.0, "rotulo_desloc": [-150, 14]},
+   {"id": "L", "tipo": "funcao", "expr": "0.09*x**2", "dominio": [0, 9.6], "familia": "oferta", "rotulo": "normal: luxo", "rotulo_em": 9.4, "rotulo_desloc": [-120, 10]},
+   {"id": "I", "tipo": "funcao", "expr": "6.2 - 0.5*x", "dominio": [0.5, 9.6], "familia": "terceira", "rotulo": "inferior", "rotulo_em": 9.0, "rotulo_desloc": [-20, 14]}],
+ "pontos": [
+   {"id": "N1", "sobre": "N", "x": 2, "marcar": false}, {"id": "N2", "sobre": "N", "x": 8, "marcar": false},
+   {"id": "L1", "sobre": "L", "x": 2, "marcar": false}, {"id": "L2", "sobre": "L", "x": 8, "marcar": false},
+   {"id": "I1", "sobre": "I", "x": 2, "marcar": false}, {"id": "I2", "sobre": "I", "x": 8, "marcar": false}],
+ "checar": ["N2.y > N1.y", "L2.y > L1.y", "I2.y < I1.y", "(N2.y-N1.y) < 2*(N1.y-0)", "(L2.y-L1.y) > 4*(L1.y-0)"]}

@@ -47,6 +47,9 @@ def main():
     dup = [i for i, n in ids.items() if n > 1]
     if dup:
         raise SystemExit(f"ids duplicados: {dup[:10]}")
+    from verificar_q import ALERTAS
+    for c in cards:  # alertas fora da lista fechada viram nota_redacao (Especificação v2 §2)
+        c["alertas"] = [a if a.startswith(ALERTAS) else "nota_redacao: " + a for a in c.get("alertas", [])]
     erros = []
     for c in cards:
         n = notas.get(c.get("destino"))

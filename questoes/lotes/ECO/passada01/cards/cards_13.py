@@ -1140,3 +1140,195 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L01423
+    {
+        "id": "ECO-E2-L01423-1", "fonte_ref": "E2-L01423", "destino": "04-A", "subtema": H2["pc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_MICRO2,
+        "rotulo_item": "Item",
+        "assertiva": ("O aumento do preço do gás de cozinha, supondo que os consumidores comprem apenas gás e "
+                      "feijão, e que estes são bens complementares, leva a uma mudança da inclinação da restrição "
+                      "orçamentária e à redução do consumo de gás e aumento do consumo de feijão."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O aumento do preço do gás de cozinha, supondo que os consumidores comprem apenas gás e "
+                      "feijão, e que estes são bens complementares, leva a uma mudança da inclinação da restrição "
+                      "orçamentária e à redução do consumo de gás e ") + vm("aumento do consumo de feijão")
+                   + az("."),
+        "poucas": ("Se gás e feijão são " + azb("complementares") + ", encarecer o gás reduz o consumo " + vd("dos "
+                   "dois") + ". Aumento do feijão só ocorreria se fossem substitutos."),
+        "destrinchando": [
+            "Mudança de um preço <b>gira</b> a restrição orçamentária em torno do intercepto do outro bem: com "
+            "gás no eixo horizontal, o intercepto R/p<sub>gás</sub> recua e a reta fica mais inclinada. Essa "
+            "parte do item está correta.",
+            azb("Complementares") + " (consumidos juntos — feijão precisa de gás para cozinhar): "
+            + vd("elasticidade-preço cruzada negativa") + ". p<sub>gás</sub> ↑ → q<sub>gás</sub> ↓ → "
+            "q<sub>feijão</sub> ↓. " + azb("Substitutos") + ": cruzada positiva, e o outro bem aumentaria.",
+            "Ligando as cestas ótimas para diferentes p<sub>gás</sub> obtém-se a " + azb("curva preço-consumo")
+            + ". Com complementares, ela tem inclinação positiva: quando o gás encarece, o consumidor recua nos "
+            "dois eixos ao mesmo tempo. Com substitutos, tem inclinação negativa.",
+            "Leitura por Slutsky: o efeito renda da alta do gás reduz o feijão (bem normal); com "
+            "complementaridade forte, ele prevalece sobre qualquer substituição entre os dois.",
+            vm("Regra-âncora: complementar → caem juntos; substituto → um cai, o outro sobe."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " Duas primeiras consequências corretas "
+                       "(inclinação muda, gás cai) e a terceira com o comportamento de substitutos. O item até "
+                       "declara a relação (“complementares”) — o erro é contradição interna."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…leva a um deslocamento paralelo da restrição orçamentária…”</i> → ERRADO (troca de conceito: "
+            "deslocamento paralelo é variação de renda)",
+            "<i>“…supondo que estes sejam bens substitutos, leva à redução do consumo de gás e ao aumento do "
+            "consumo de feijão.”</i> → CERTO",
+        ])],
+        "reescrita": ("O aumento do preço do gás de cozinha, supondo que os consumidores comprem apenas gás e "
+                      "feijão, e que estes são bens complementares, leva a uma mudança da inclinação da restrição "
+                      "orçamentária e à redução do consumo de gás e " + hl("também do consumo de feijão") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Três comentários concordantes: complementares têm demanda conjunta; a alta do gás "
+                            "reduz o consumo dos dois; a inclinação da restrição muda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0216
+    {
+        "id": "ECO-E1-0216-1", "fonte_ref": "E1-0216", "destino": "04-A", "subtema": H2["slutsky"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das funções de demanda do consumidor, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Na função Hicksiana ou Compensada a quantidade demandada é função do preço e do nível de "
+                      "utilidade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na função Hicksiana ou Compensada a quantidade demandada é função do preço e do "
+                      "<u>nível de utilidade</u>."),
+        "poucas": ("A " + azb("demanda hicksiana") + " h(p, U) sai da " + azb("minimização do gasto") + " para "
+                   "atingir uma utilidade U dada: depende dos " + vd("preços e da utilidade") + ", não da renda."),
+        "destrinchando": [
+            azb("Demanda marshalliana") + " (ou ordinária) x(p, R): maximiza a utilidade dada a renda R. "
+            "Argumentos: preços e " + vd("renda") + ".",
+            azb("Demanda hicksiana") + " (ou compensada) h(p, U): minimiza o gasto p·x para alcançar a utilidade "
+            "U. Argumentos: preços e " + vd("utilidade") + ". Variando p, a renda é “compensada” para manter o "
+            "consumidor na mesma curva de indiferença.",
+            "Dualidade: h(p, U) = x(p, e(p, U)), em que e(p, U) é a " + azb("função gasto") + "; e x(p, R) = "
+            "h(p, v(p, R)), com v a " + azb("utilidade indireta") + ". Pelo " + azb("lema de Shephard") + ", "
+            "∂e/∂p<sub>i</sub> = h<sub>i</sub>.",
+            "Como só capta o efeito substituição, a hicksiana é sempre " + vd("não crescente") + " no próprio "
+            "preço — mesmo para bens de Giffen. A diferença entre as inclinações das duas curvas é o efeito "
+            "renda (equação de " + oc("Slutsky") + ").",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta. A troca típica da banca é “preço e renda” "
+                       "(marshalliana) no lugar de “preço e utilidade” (hicksiana), ou atribuir à hicksiana o "
+                       "efeito renda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na função de demanda hicksiana, a quantidade demandada é função dos preços e da renda "
+            "monetária.”</i> → ERRADO (troca de conceito: é a marshalliana)",
+            "<i>“A curva de demanda compensada de um bem de Giffen é positivamente inclinada.”</i> → ERRADO "
+            "(a compensada é sempre não crescente)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Hicksiana: quantidade demandada quando os preços variam e a renda é compensada para "
+                            "manter a utilidade.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01524
+    {
+        "id": "ECO-E2-L01524-1", "fonte_ref": "E2-L01524", "destino": "04-A", "subtema": H2["slutsky"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_CONS,
+        "rotulo_item": "Item",
+        "assertiva": ("A equação de Slutsky mostra a decomposição do efeito preço total em efeito renda e efeito "
+                      "substituição. Para um bem inferior, os efeitos renda e substituição sempre terão sinais "
+                      "opostos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A equação de Slutsky mostra a decomposição do efeito preço total em efeito renda e efeito "
+                      "substituição. Para um bem inferior, os efeitos renda e substituição <u>sempre</u> terão "
+                      "sinais opostos."),
+        "poucas": ("Pela " + azb("equação de Slutsky") + ", o efeito substituição é sempre de sinal contrário ao "
+                   "preço; no " + azb("bem inferior") + ", o efeito renda tem o sinal oposto ao do substituição. "
+                   "Aqui o “sempre” é " + vd("verdadeiro") + "."),
+        "destrinchando": [
+            "Equação: " + vd("∂x/∂p = ∂h/∂p − x·∂x/∂R") + ". Efeito total = efeito substituição (∂h/∂p ≤ 0) + "
+            "efeito renda (−x·∂x/∂R).",
+            "Bem inferior ⇔ ∂x/∂R < 0 ⇔ termo renda > 0. Como o substituição é ≤ 0, os sinais são "
+            "<b>sempre</b> opostos — é a própria definição de inferioridade aplicada à decomposição.",
+            "O que <b>não</b> é fixo é o tamanho: se o substituição vencer, inferior comum (demanda "
+            "decrescente); se o renda vencer, " + azb("Giffen") + " (demanda crescente).",
+            "Bem normal: termo renda < 0, mesmo sinal do substituição; o efeito total é inequivocamente "
+            "negativo.",
+        ],
+        "dissecando": (cz("[contraintuitivo · literalidade]") + " Item CERTO com “sempre” — o modulador "
+                       "absoluto aqui é legítimo, porque decorre da definição. Treina a não marcar ERRADO por "
+                       "reflexo: o “sempre” é falso quando se fala de <b>tamanho</b> (quem domina), não de "
+                       "<b>sinal</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para um bem inferior, o efeito renda sempre supera o efeito substituição.”</i> → ERRADO "
+            "(modulador absoluto: só no Giffen)",
+            "<i>“Para um bem normal, os efeitos renda e substituição sempre terão sinais opostos.”</i> → ERRADO "
+            "(têm o mesmo sinal)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "LITERAL"], "moduladores": ["sempre"], "dificuldade": 2,
+        "comentario_fonte": "Slutsky: ES sempre não positivo; ER positivo para inferiores; sinais opostos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01781
+    {
+        "id": "ECO-E2-L01781-1", "fonte_ref": "E2-L01781", "destino": "04-A", "subtema": H2["slutsky"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_CONS,
+        "rotulo_item": "Item",
+        "assertiva": ("A equação de Slutsky mostra a separação entre efeito renda e efeito substituição. No caso de "
+                      "bens normais, ambos efeitos vão na mesma direção, porém no caso dos bens inferiores, estes "
+                      "efeitos terão sinais contrários, porém com predomínio do efeito substituição."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("A equação de Slutsky mostra a separação entre efeito renda e efeito substituição. No caso de "
+                      "bens normais, ambos efeitos vão na mesma direção, porém no caso dos bens inferiores, estes "
+                      "efeitos terão sinais contrários, porém <u>com predomínio do efeito substituição</u>."),
+        "poucas": ("Normal: efeitos no " + azb("mesmo sentido") + "; inferior: " + azb("sentidos opostos")
+                   + ", e, no caso típico, o " + vd("substituição predomina") + " (a exceção é o Giffen). A banca "
+                   "leu o item pelo caso típico."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "o predomínio do efeito substituição não vale para <b>todo</b> bem inferior: nos bens "
+                          "de " + azb("Giffen") + " (que são inferiores) predomina o efeito renda. O item, sem "
+                          "ressalva, generaliza o caso típico; a leitura mais rigorosa daria ERRADO, como em itens "
+                          "do tipo “se o bem é inferior, sua demanda será necessariamente…”. O gabarito da fonte "
+                          "(CERTO) foi mantido por tratar do inferior comum, que é a regra.")],
+        "destrinchando": [
+            azb("Slutsky") + ": efeito total = substituição (sempre contrário ao preço) + renda (sinal dado pela "
+            "elasticidade-renda).",
+            "Bem normal: renda real ↓ (preço ↑) → q ↓ pelos dois canais. Bem inferior: renda real ↓ → q ↑, "
+            "contra o substituição.",
+            "Inferior comum: substituição > renda → a demanda continua decrescente, só que menos elástica que a "
+            "de um normal equivalente. Inferior de " + azb("Giffen") + ": renda > substituição → demanda "
+            "crescente.",
+            "Por que o caso típico é o predomínio do substituição: o efeito renda é proporcional ao peso do bem "
+            "no orçamento (x·∂x/∂R), em geral pequeno; Giffen exige bem muito inferior <b>e</b> de grande peso "
+            "na cesta.",
+            vm("Regra-âncora: inferior → sinais opostos sempre; quem domina, só em regra (o substituição)."),
+        ],
+        "dissecando": (cz("[meia-verdade · detalhe]") + " Duas primeiras orações irretocáveis; a última "
+                       "acrescenta o predomínio do substituição sem o “em regra”. Em prova CEBRASPE, compare com "
+                       "o enunciado: se o item fala de “todo” ou “necessariamente”, o Giffen derruba; se descreve "
+                       "o comportamento usual, tende a ser CERTO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…no caso dos bens inferiores, estes efeitos terão sinais contrários, podendo predominar "
+            "qualquer um deles.”</i> → CERTO",
+            "<i>“…no caso dos bens inferiores, estes efeitos terão o mesmo sinal.”</i> → ERRADO (inversão: sinais "
+            "opostos)",
+        ])],
+        "tipo_erro": ["MEIA_VERDADE", "DETALHE"], "moduladores": [], "dificuldade": 3,
+        "comentario_fonte": "Certa: descreve Slutsky para normais e inferiores (que não sejam de Giffen); nos "
+                            "inferiores, o substituição domina, exceto no Giffen.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 543", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "cortada (decomposição de Hicks para bem inferior; mecanismo explicado no 📖)"}],
+        "alertas": ["contestavel: “predomínio do efeito substituição” para bens inferiores sem ressalva ao Giffen; "
+                    "gabarito da fonte (CERTO) mantido"],
+    },
+]

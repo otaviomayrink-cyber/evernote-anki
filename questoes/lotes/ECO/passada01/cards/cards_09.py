@@ -466,4 +466,307 @@ CARDS = [
                            "acao": "redesenhadas e fundidas em ECO-E2-L01389-1-V1"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L01392
+    {
+        "id": "ECO-E2-L01392-1", "fonte_ref": "E2-L01392", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "FCC", "prova": "CLDF/Consultor Legislativo/2018", "ano": 2018, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das políticas de preços mínimos, julgue o item a seguir (item adaptado).",
+        "rotulo_item": "Item",
+        "assertiva": ("A política de preços mínimos compulsórios tem por objetivo ajustar a relação de oferta e "
+                      "demanda, eliminando o excesso de oferta."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A política de preços mínimos compulsórios tem por objetivo ") + vm("ajustar a relação de "
+                      "oferta e demanda, eliminando o excesso de oferta") + az("."),
+        "poucas": ("O preço mínimo visa " + azb("garantir renda ao produtor") + ", com preço acima do "
+                   "equilíbrio — e, por isso mesmo, " + vd("cria") + " excesso de oferta, em vez de eliminá-lo."),
+        "destrinchando": [
+            "Quem ajusta oferta e demanda e elimina excessos é o próprio " + azb("mecanismo de preços") + ": "
+            "excesso de oferta derruba o preço até o equilíbrio. Uma intervenção só é necessária quando o "
+            "governo quer um resultado <b>diferente</b> do de mercado.",
+            "O " + azb("preço mínimo") + " (piso) só é efetivo se fixado acima de p₀. Nesse caso, Qˢ > Qᴰ: o piso "
+            + vd("gera") + " excedente de produto. Para sustentá-lo, o governo compra o excedente, paga a "
+            "diferença ao produtor ou restringe a produção.",
+            "Objetivos típicos: estabilizar e garantir a renda do produtor (sobretudo agrícola, sujeito a "
+            "choques de safra), estimular a produção e formar estoques reguladores. Exemplos no mercado de "
+            "trabalho: o salário mínimo.",
+            "Custos: gasto público, estoques a administrar, preço mais alto para o consumidor e peso morto. "
+            + rx("No Brasil") + ", o instrumento é a " + azb("PGPM") + " (Política de Garantia de Preços "
+            "Mínimos), operada pela Conab.",
+            vm("Regra-âncora: piso acima do equilíbrio → excesso de oferta; teto abaixo → excesso de demanda."),
+        ],
+        "dissecando": (cz("[inversão · troca de conceito]") + " O item atribui ao preço mínimo o efeito oposto "
+                       "ao que ele produz: em vez de eliminar o excesso de oferta, ele o cria. A linguagem "
+                       "neutra (“ajustar a relação de oferta e demanda”) descreve o mercado livre, não a "
+                       "intervenção."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política de preços mínimos, quando o preço é fixado acima do equilíbrio, gera excesso de "
+            "oferta que precisa ser absorvido pelo governo ou pelo mercado.”</i> → CERTO",
+            "<i>“O preço mínimo fixado abaixo do preço de equilíbrio gera excesso de oferta.”</i> → ERRADO "
+            "(abaixo do equilíbrio o piso não vincula)",
+        ])],
+        "reescrita": ("A política de preços mínimos compulsórios tem por objetivo " + hl("garantir renda ao "
+                      "produtor, fixando preço acima do equilíbrio, o que gera") + " excesso de oferta."),
+        "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O objetivo é beneficiar o produtor, com preço geralmente acima do equilíbrio.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01393
+    {
+        "id": "ECO-E2-L01393-1", "fonte_ref": "E2-L01393", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "PF/Agente/2009", "ano": 2009, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das políticas de intervenção do governo nos mercados, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Quando o governo adota uma política de preços mínimos para determinado produto, com vistas "
+                      "à garantia de renda e ao estímulo da produção, ao optar pela política de compra, pagará ao "
+                      "produtor a diferença entre o preço pago pelo consumidor no mercado e o preço mínimo "
+                      "definido."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quando o governo adota uma política de preços mínimos para determinado produto, com vistas "
+                      "à garantia de renda e ao estímulo da produção, ao optar pela política de compra, pagará ao "
+                      "produtor ") + vm("a diferença entre o preço pago pelo consumidor no mercado e") + az(" o "
+                      "preço mínimo definido."),
+        "poucas": ("No " + azb("programa de compras") + ", o governo vira comprador e adquire o excedente "
+                   "pagando o " + vd("preço mínimo") + ". Pagar a diferença entre o preço de mercado e o mínimo "
+                   "é a política de " + azb("subsídio") + "."),
+        "destrinchando": [
+            "Preço mínimo acima do equilíbrio gera Qˢ > Qᴰ. Duas formas clássicas de sustentá-lo:",
+            azb("Compra") + ": o governo adquire o excedente (Qˢ − Qᴰ) a Pmín. O preço de mercado fica em Pmín "
+            "para todos; o consumidor compra menos e paga mais; o governo gasta " + vd("Pmín × (Qˢ − Qᴰ)")
+            + " e acumula estoques.",
+            azb("Subsídio (pagamento da diferença)") + ": o governo deixa o mercado absorver toda a produção, o "
+            "preço cai para p < Pmín, e paga ao produtor " + vd("Pmín − p") + " por unidade vendida. O "
+            "consumidor sai ganhando; o gasto é (Pmín − p) × Qˢ.",
+            "Nos dois casos o produtor recebe Pmín por unidade e produz Qˢ — a diferença está em quem consome o "
+            "produto (governo × consumidor) e em quanto custa ao Tesouro, o que depende da elasticidade da "
+            "demanda.",
+            rx("No Brasil") + ", a PGPM, operada pela Conab, usa a aquisição direta (AGF) e prêmios que cobrem a "
+            "diferença de preço — as duas lógicas.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Fabricação por empréstimo: o mecanismo correto do subsídio "
+                       "foi colado no rótulo “compra”. Pista lógica: na compra, o consumidor paga Pmín, então a "
+                       "“diferença entre o preço pago pelo consumidor e o preço mínimo” seria zero. 🔥 O item foi "
+                       "reaproveitado, com o mesmo texto e gabarito, no Pré-TPS/2023 da Nabuco."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na política de compra, o governo adquire o excedente de produção ao preço mínimo, tornando-se "
+            "demandante do bem.”</i> → CERTO",
+            "<i>“A política de subsídio eleva o preço pago pelo consumidor ao nível do preço mínimo.”</i> → "
+            "ERRADO (no subsídio o consumidor paga menos que Pmín)",
+        ])],
+        "reescrita": ("Quando o governo adota uma política de preços mínimos para determinado produto, com vistas à "
+                      "garantia de renda e ao estímulo da produção, ao optar pela política de " + hl("subsídio")
+                      + ", pagará ao produtor a diferença entre o preço pago pelo consumidor no mercado e o preço "
+                      "mínimo definido."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "No programa de compras, o governo adquire o excedente ao preço mínimo, tornando-se "
+                            "demandante; a política descrita no item é a de subsídios.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01394
+    {
+        "id": "ECO-E2-L01394-1", "fonte_ref": "E2-L01394", "destino": "03", "subtema": H2["exc"],
+        "tipo": "DISC", "banca": "Intensivo MM", "prova": "Intensivo Pré-TPS/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": "Explique a diferença entre os dois conceitos indicados a seguir.",
+        "rotulo_item": "Questão",
+        "assertiva": "Excedente do produtor vs excedente do consumidor.",
+        "gabarito": "RESPOSTA", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": az("Excedente do consumidor: diferença entre o que o consumidor estaria disposto a pagar e o "
+                      "que efetivamente paga, somada sobre as unidades compradas — área entre a curva de demanda "
+                      "e o preço. Excedente do produtor: diferença entre o preço recebido e o custo marginal (o "
+                      "mínimo que o vendedor aceitaria), somada sobre as unidades vendidas — área entre o preço e "
+                      "a curva de oferta. A soma é o excedente total, máximo no equilíbrio competitivo."),
+        "poucas": ("EC mede o ganho de quem " + azb("compra") + " (disposição a pagar − preço); EP, o ganho de "
+                   "quem " + azb("vende") + " (preço − custo marginal). Um fica acima do preço, o outro abaixo."),
+        "destrinchando": [
+            azb("Excedente do consumidor") + ": cada ponto da demanda é a disposição a pagar marginal (o "
+            "“preço de reserva” daquela unidade). Exemplo: três consumidores valorizam o bem em 10, 7 e 5; com "
+            "preço 5, os dois primeiros ganham 10 − 5 = 5 e 7 − 5 = 2; o terceiro é indiferente. "
+            + vd("EC = 7") + ".",
+            azb("Excedente do produtor") + ": cada ponto da oferta competitiva é o custo marginal daquela unidade "
+            "— o preço mínimo que o vendedor aceitaria. EP = Σ (p − CMg). No curto prazo, equivale a "
+            + vd("receita total − custo variável") + " (= lucro + custo fixo), não ao lucro.",
+            "Preço sobe → EP cresce e EC encolhe (parte é transferência de um para o outro). Preço cai → o "
+            "contrário. Intervenções (impostos, tetos, pisos, tarifas) criam ainda o " + azb("peso morto")
+            + ": excedente que some sem ir para ninguém.",
+            vm("Regra-âncora: EC = área entre a demanda e o preço; EP = área entre o preço e a oferta; o "
+               "equilíbrio competitivo maximiza EC + EP."),
+        ],
+        "grafico_verso": "ECO-E2-L01394-1-V1",
+        "dissecando": (cz("[exercício aberto]") + " Em C/E, a banca costuma testar: EC definido como “diferença "
+                       "entre o que o consumidor está disposto a pagar e o que paga” (CERTO), EP medido pelo "
+                       "lucro (ERRADO no curto prazo) e queda de preço aumentando o EP (ERRADO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O excedente do produtor corresponde à área abaixo da curva de oferta e acima do eixo das "
+            "quantidades.”</i> → ERRADO (essa área é o custo variável; o EP fica entre o preço e a oferta)",
+            "<i>“No equilíbrio competitivo, a soma dos excedentes do consumidor e do produtor é máxima.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": [], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Verso só com imagem: exemplo numérico com consumidores que valorizam o bem em 10, "
+                            "7 e 5, preço 5 e excedente total do consumidor de 7.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "IMAGEM 289", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvida (exemplo numérico no 📖; gráfico substituído por "
+                                   "ECO-E2-L01394-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01401
+    {
+        "id": "ECO-E2-L01401-1", "fonte_ref": "E2-L01401", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "FCC", "prova": "TCE/PR/Analista de Controle/2011", "ano": 2011, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da incidência de impostos sobre vendas, julgue o item a seguir (item adaptado).",
+        "rotulo_item": "Item",
+        "assertiva": ("A instituição de um imposto sobre vendas implicará aumento do preço de mercado exatamente "
+                      "igual ao valor do imposto, qualquer que seja a elasticidade-preço da demanda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A instituição de um imposto sobre vendas implicará aumento do preço de mercado ")
+                   + vm("exatamente igual ao valor do imposto, qualquer que seja") + az(" a elasticidade-preço "
+                   "da demanda."),
+        "poucas": ("O repasse ao preço depende das " + azb("elasticidades") + ": em regra o preço ao consumidor "
+                   "sobe " + vd("menos") + " que o imposto. Repasse integral só com demanda perfeitamente "
+                   "inelástica ou oferta perfeitamente elástica."),
+        "destrinchando": [
+            "Com o imposto, abre-se a cunha pc − pv = t. A alta de pc é a parcela do consumidor: "
+            + vd("Δpc = t · ε<sub>O</sub> / (ε<sub>O</sub> + |ε<sub>D</sub>|)") + ". Só é igual a t se "
+            "|ε<sub>D</sub>| = 0 ou ε<sub>O</sub> → ∞.",
+            "Casos: demanda " + azb("perfeitamente inelástica") + " (vertical) → pc sobe t inteiro, quantidade "
+            "não muda; demanda " + azb("infinitamente elástica") + " (horizontal) → pc não sobe nada, o "
+            "vendedor absorve tudo; casos intermediários → o imposto se reparte.",
+            "Por isso a frase “o imposto indireto é repassado ao consumidor” é uma " + azb("presunção "
+            "jurídica") + " (contribuinte de fato × de direito), não um resultado econômico: a "
+            "<b>incidência econômica</b> é decidida pelas elasticidades.",
+            vm("Regra-âncora: repasse integral é exceção (curva vertical de demanda ou horizontal de oferta), "
+               "não regra."),
+        ],
+        "dissecando": (cz("[modulador absoluto]") + " Dois absolutos — “exatamente igual” e “qualquer que seja "
+                       "a elasticidade” — transformam um caso-limite em regra. O caso-limite existe (demanda "
+                       "vertical), e é justamente a exceção que o “qualquer que seja” ignora."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a demanda for perfeitamente inelástica, o preço de mercado aumentará exatamente no valor do "
+            "imposto.”</i> → CERTO",
+            "<i>“Quanto mais inelástica a demanda, menor a parcela do imposto repassada ao preço.”</i> → ERRADO "
+            "(inversão: maior)",
+        ])],
+        "reescrita": ("A instituição de um imposto sobre vendas implicará aumento do preço de mercado "
+                      + hl("que depende das elasticidades-preço da demanda e da oferta, sendo igual ao valor do "
+                        "imposto apenas se a demanda for perfeitamente inelástica ou a oferta perfeitamente "
+                        "elástica") + "."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["exatamente", "qualquer que seja"], "dificuldade": 1,
+        "comentario_fonte": "Verso com gráfico de peso morto e observação de que, com demanda totalmente "
+                            "inelástica, o consumidor arca com todo o imposto (exceção à regra geral).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 308", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (conteúdo absorvido no 📖)"},
+                          {"ref": "IMAGEM 309", "tipo_fonte": "DECORATIVA", "lado": "verso",
+                           "acao": "cortada"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00008
+    {
+        "id": "ECO-E3-L00008-1", "fonte_ref": "E3-L00008", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": "Acerca dos conceitos fundamentais de microeconomia, julgue o item que se segue.",
+        "rotulo_item": "Item",
+        "assertiva": ("A intervenção governamental por meio de controle de preços corrige falhas de mercado e tem "
+                      "impacto positivo no bem-estar de consumidores e produtores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A intervenção governamental por meio de controle de preços ") + vm("corrige falhas de "
+                      "mercado") + az(" e ") + vm("tem impacto positivo no bem-estar de consumidores e produtores")
+                   + az("."),
+        "poucas": ("Controle de preços, em regra, " + azb("cria distorções") + " em vez de corrigir falhas: teto "
+                   "gera escassez, piso gera excedente, e o bem-estar total cai — no máximo, um lado ganha à "
+                   "custa do outro."),
+        "destrinchando": [
+            azb("Falhas de mercado") + " são externalidades, bens públicos, assimetria de informação e poder de "
+            "mercado. Os remédios típicos são outros: tributo pigouviano ou mercado de licenças "
+            "(externalidade), provisão pública (bem público), regulação de informação, defesa da concorrência.",
+            azb("Teto") + " abaixo do equilíbrio: escassez, filas, mercado paralelo, queda de qualidade. "
+            + azb("Piso") + " acima: excedente, estoques, desemprego (salário mínimo). Em mercado competitivo, "
+            "ambos geram " + vd("peso morto") + ".",
+            "Efeito distributivo: o teto pode beneficiar os consumidores que conseguem comprar (transferência de "
+            "EP para EC), mas prejudica produtores e quem fica sem o bem; o piso faz o inverso. Melhorar "
+            "<b>os dois lados ao mesmo tempo</b> é impossível partindo de um equilíbrio eficiente.",
+            "Exceção relevante: em " + azb("monopólio") + " (inclusive o natural), um teto calibrado entre o "
+            "preço de monopólio e o custo marginal aumenta a quantidade e reduz o peso morto — aí o controle de "
+            "preço corrige a falha de poder de mercado. Mesmo nesse caso, o monopolista perde excedente.",
+            vm("Regra-âncora: controle de preço em mercado competitivo = transferência + peso morto, nunca "
+               "ganho para todos."),
+        ],
+        "dissecando": (cz("[juízo indevido · modulador absoluto]") + " O item atribui ao instrumento uma "
+                       "virtude genérica (“corrige falhas”) e um efeito impossível (melhora para consumidores "
+                       "<b>e</b> produtores). A pista é o “e”: qualquer controle de preço transfere excedente de "
+                       "um lado para o outro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O tabelamento de preços abaixo do equilíbrio, em mercado competitivo, tende a gerar escassez e "
+            "mercados paralelos.”</i> → CERTO",
+            "<i>“A regulação do preço de um monopólio natural nunca pode elevar o bem-estar social.”</i> → ERRADO "
+            "(modulador absoluto: o teto bem calibrado reduz o peso morto)",
+        ])],
+        "reescrita": ("A intervenção governamental por meio de controle de preços " + hl("em regra não corrige")
+                      + " falhas de mercado e " + hl("tende a reduzir o bem-estar total, beneficiando um dos "
+                      "lados à custa do outro") + "."),
+        "tipo_erro": ["JUIZO_INDEVIDO", "GENERALIZACAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Seis respostas de IA concordantes: controle de preços cria distorções (escassez ou "
+                            "excedente), perda de eficiência e efeitos distributivos; exceção teórica no monopólio "
+                            "natural.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00017
+    {
+        "id": "ECO-E3-L00017-1", "fonte_ref": "E3-L00017", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": ("Em relação à teoria da produção, ao equilíbrio da firma e à economia do bem-estar, julgue o "
+                    "item subsecutivo."),
+        "rotulo_item": "Item",
+        "assertiva": ("O resultado do equilíbrio competitivo resulta em uma alocação pareto-eficiente, que "
+                      "pressupõe a equidade na distribuição dos bens produzidos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O resultado do equilíbrio competitivo resulta em uma alocação pareto-eficiente, que ")
+                   + vm("pressupõe a equidade") + az(" na distribuição dos bens produzidos."),
+        "poucas": ("O equilíbrio competitivo é " + azb("Pareto-eficiente") + " (1º teorema do bem-estar), mas "
+                   "eficiência " + vd("não implica equidade") + ": uma alocação pode ser eficiente e muito "
+                   "desigual."),
+        "destrinchando": [
+            azb("Eficiência de Pareto") + ": não é possível melhorar alguém sem piorar outro. É um critério "
+            "sobre o “tamanho do bolo”, não sobre a sua divisão — dar tudo a uma só pessoa também é "
+            "Pareto-eficiente.",
+            azb("1º Teorema Fundamental do Bem-Estar") + ": sob concorrência perfeita, mercados completos e "
+            "ausência de externalidades, todo equilíbrio competitivo é Pareto-eficiente. O resultado depende da "
+            "dotação inicial: dotações desiguais geram equilíbrios eficientes e desiguais.",
+            azb("2º Teorema") + ": qualquer alocação eficiente pode ser alcançada como equilíbrio competitivo, "
+            "desde que se redistribuam as dotações iniciais (por transferências lump-sum). É a separação "
+            "clássica: o mercado cuida da eficiência; a " + azb("função distributiva") + " do Estado, da "
+            "equidade.",
+            "Na prática, a redistribuição usa impostos distorcivos, e surge o dilema eficiência × equidade "
+            "(" + oc("Arthur Okun") + ", <i>Equality and Efficiency: The Big Tradeoff</i>, 1975).",
+            vm("Regra-âncora: Pareto mede eficiência, não justiça distributiva."),
+        ],
+        "dissecando": (cz("[meia-verdade · nexo indevido]") + " A primeira parte reproduz o 1º teorema "
+                       "(correta); o erro está na oração adjetiva, que amarra à eficiência um pressuposto que ela "
+                       "não tem. 🔥 CEBRASPE gosta de colar “justo”, “equitativo” ou “igualitário” em definições "
+                       "de eficiência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma alocação pareto-eficiente pode ser altamente desigual.”</i> → CERTO",
+            "<i>“Pelo segundo teorema do bem-estar, toda alocação eficiente é equitativa.”</i> → ERRADO (troca "
+            "de conceito: o teorema trata de alcançar qualquer alocação eficiente via redistribuição de "
+            "dotações)",
+        ])],
+        "reescrita": ("O resultado do equilíbrio competitivo resulta em uma alocação pareto-eficiente, que "
+                      + hl("não pressupõe") + " a equidade na distribuição dos bens produzidos."),
+        "tipo_erro": ["MEIA_VERDADE", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Seis respostas de IA concordantes: eficiência de Pareto e equidade são conceitos "
+                            "distintos; uma alocação eficiente pode ser profundamente desigual.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

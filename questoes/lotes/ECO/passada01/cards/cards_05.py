@@ -982,4 +982,426 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00420
+    {
+        "id": "ECO-E2-L00420-1", "fonte_ref": "E2-L00420", "destino": "02", "subtema": H2["rc"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": CMD_ARMS,
+        "rotulo_item": "Item",
+        "assertiva": ("A elasticidade-preço cruzada dispensa avaliar delimitação de mercado: positiva indica bens "
+                      "substitutos; negativa indica bens complementares, sem ressalvas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A elasticidade-preço cruzada ") + vm("dispensa avaliar delimitação de mercado")
+                    + az(": positiva indica bens substitutos; negativa indica bens complementares, ")
+                    + vm("sem ressalvas") + az(".")),
+        "poucas": ("O " + azb("sinal") + " está certo (positiva → substitutos; negativa → complementares), mas a "
+                   "interpretação depende do " + azb("mercado relevante") + " e do contexto da medida: não se "
+                   "dispensa delimitação nem ressalvas."),
+        "destrinchando": [
+            vd("ε<sub>xy</sub> = %ΔQ<sub>x</sub> / %ΔP<sub>y</sub>") + ": > 0 substitutos (etanol × gasolina); "
+            "< 0 complementares (carro × gasolina); ≈ 0 independentes.",
+            "Por que há ressalvas: (1) o valor depende de quais bens se comparam — a cruzada entre duas marcas "
+            "de cerveja é alta; entre “cerveja” e “bebidas” não faz sentido; (2) a cruzada mistura " + azb("efeito "
+            "substituição") + " e " + azb("efeito renda") + ": um bem que pesa muito no orçamento pode, ao "
+            "encarecer, reduzir a compra de outro mesmo sem complementaridade técnica; (3) a cruzada não é "
+            "necessariamente simétrica (ε<sub>xy</sub> ≠ ε<sub>yx</sub>).",
+            "Uso prático: em " + azb("defesa da concorrência") + ", cruzadas altas indicam que dois produtos "
+            "estão no mesmo mercado relevante — a medida serve para <b>delimitar</b> o mercado, não para "
+            "dispensar a delimitação.",
+            "Classificação rigorosa (substitutos/complementares <b>líquidos</b> × brutos) usa a demanda "
+            "compensada, de " + oc("Hicks") + ", que isola o efeito substituição.",
+        ],
+        "dissecando": (cz("[modulador absoluto · meia-verdade]") + " A regra de sinais é verdadeira; o erro "
+                       "está nos absolutos “dispensa” e “sem ressalvas”. Quem reconhece a regra de sinais e "
+                       "para de ler marca CERTO — foi o erro registrado aqui."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A elasticidade-preço cruzada positiva entre dois bens indica, em regra, que são substitutos, "
+            "e é usada na delimitação do mercado relevante.”</i> → CERTO",
+            "<i>“Elasticidade-preço cruzada negativa indica que os bens são substitutos.”</i> → ERRADO "
+            "(inversão)",
+        ])],
+        "reescrita": ("A elasticidade-preço cruzada " + hl("não") + " dispensa avaliar delimitação de mercado: "
+                      "positiva indica bens substitutos; negativa indica bens complementares, " + hl("mas a "
+                      "interpretação depende do escopo do mercado relevante") + "."),
+        "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["dispensa", "sem ressalvas"],
+        "dificuldade": 2,
+        "comentario_fonte": "O sinal é esse, mas a interpretação depende do escopo (mercado relevante).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00436
+    {
+        "id": "ECO-E2-L00436-1", "fonte_ref": "E2-L00436", "destino": "02", "subtema": H2["det"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_ELAS,
+        "rotulo_item": "Item",
+        "assertiva": ("A elasticidade-preço da demanda por um bem X será maior quanto menor for o número de bens "
+                      "substitutos próximos disponíveis no mercado e quanto menor for o peso desse bem no "
+                      "orçamento do consumidor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A elasticidade-preço da demanda por um bem X será maior quanto ") + vm("menor")
+                    + az(" for o número de bens substitutos próximos disponíveis no mercado e quanto ")
+                    + vm("menor") + az(" for o peso desse bem no orçamento do consumidor.")),
+        "poucas": ("Os dois determinantes estão invertidos: a demanda é " + azb("mais elástica") + " quanto "
+                   "<b>mais</b> substitutos próximos houver e quanto <b>maior</b> o peso do bem no orçamento."),
+        "destrinchando": [
+            azb("Substitutos") + ": com alternativas próximas, uma alta de preço desvia o consumo (manteiga × "
+            "margarina). Sem elas, o consumidor fica preso ao bem (sal, insulina).",
+            azb("Peso no orçamento") + ": se o bem consome fatia grande da renda (aluguel, carro), uma alta de "
+            "preço corrói o poder de compra e força ajuste — demanda mais elástica. Se o peso é ínfimo (sal, "
+            "fósforo, palito), dobrar o preço quase não se nota — demanda inelástica.",
+            "Lista completa dos determinantes: substitutos, necessidade × luxo, definição do mercado, "
+            "horizonte de tempo e peso no orçamento. Todos com o mesmo sentido: tudo o que facilita ou torna "
+            "mais vantajoso fugir do bem aumenta a elasticidade.",
+            vm("Regra-âncora: mais substitutos, mais peso no orçamento, mais tempo → mais elástica."),
+        ],
+        "dissecando": (cz("[inversão]") + " Dupla inversão: os dois “menor” deveriam ser “maior”. A estrutura "
+                       "“quanto menor…, maior” soa técnica e passa despercebida. Basta testar com um exemplo "
+                       "concreto (sal: sem substitutos, peso ínfimo → inelástico)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A demanda por sal tende a ser inelástica, entre outras razões, pelo pequeno peso do bem no "
+            "orçamento.”</i> → CERTO",
+            "<i>“Quanto maior o peso de um bem no orçamento, menos elástica tende a ser sua demanda.”</i> → "
+            "ERRADO (inversão)",
+        ])],
+        "reescrita": ("A elasticidade-preço da demanda por um bem X será maior quanto " + hl("maior") + " for o "
+                      "número de bens substitutos próximos disponíveis no mercado e quanto " + hl("maior") + " for "
+                      "o peso desse bem no orçamento do consumidor."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Elasticidade maior quanto MAIOR o número de substitutos e quanto MAIOR o peso no "
+                            "orçamento.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00437
+    {
+        "id": "ECO-E2-L00437-1", "fonte_ref": "E2-L00437", "destino": "02", "subtema": H2["rec"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_ELAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Se a demanda por um serviço é elástica, uma redução no seu preço resultará em uma queda na "
+                      "receita total auferida pelos prestadores desse serviço, pois a variação percentual na "
+                      "quantidade demandada será maior que a variação percentual no preço."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se a demanda por um serviço é elástica, uma redução no seu preço resultará em ")
+                    + vm("uma queda") + az(" na receita total auferida pelos prestadores desse serviço, pois a "
+                                           "variação percentual na quantidade demandada será maior que a "
+                                           "variação percentual no preço.")),
+        "poucas": ("Com demanda " + azb("elástica") + ", preço e receita andam em sentidos <b>opostos</b>: "
+                   "baixar o preço <b>aumenta</b> a receita. A justificativa do item está certa e leva à "
+                   "conclusão contrária."),
+        "destrinchando": [
+            "|ε| > 1 → %ΔQ > %ΔP, em módulo. Exemplo: preço −10%, quantidade +25% → receita ≈ 0,9 × 1,25 = "
+            + vd("1,125") + " (alta de 12,5%).",
+            "Resumo do " + azb("teste da receita total") + ": elástica → P↓ Q↑↑ RT↑ e P↑ Q↓↓ RT↓; "
+            "inelástica → P↓ Q↑ RT↓ e P↑ Q↓ RT↑; unitária → RT constante.",
+            "Aplicação: promoções e tarifas reduzidas fazem sentido para serviços de demanda elástica (lazer, "
+            "viagens de turismo, passagens fora de pico); em serviços de demanda inelástica (energia, "
+            "transporte essencial), aumentos de tarifa elevam a receita.",
+            "Na linguagem da firma: com |ε| > 1, a " + azb("receita marginal") + " é positiva — vender mais "
+            "(baixando o preço) aumenta a receita.",
+        ],
+        "dissecando": (cz("[contradição · inversão]") + " O item traz a premissa correta (variação da "
+                       "quantidade maior que a do preço) e tira dela a conclusão oposta. Pista: se Q sobe "
+                       "proporcionalmente mais do que P cai, o produto P × Q tem de subir."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a demanda por um serviço é inelástica, uma redução no seu preço resultará em queda da "
+            "receita total.”</i> → CERTO",
+            "<i>“Se a demanda é elástica, um aumento de preço elevará a receita total.”</i> → ERRADO "
+            "(inversão)",
+        ])],
+        "reescrita": ("Se a demanda por um serviço é elástica, uma redução no seu preço resultará em "
+                      + hl("um aumento") + " na receita total auferida pelos prestadores desse serviço, pois a "
+                      "variação percentual na quantidade demandada será maior que a variação percentual no "
+                      "preço."),
+        "tipo_erro": ["CONTRADICAO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Demanda elástica: redução de preço aumenta a receita, porque o aumento percentual "
+                            "da quantidade supera a redução percentual do preço.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 067", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00439
+    {
+        "id": "ECO-E2-L00439-1", "fonte_ref": "E2-L00439", "destino": "02", "subtema": H2["rc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_ELAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Se a elasticidade-preço cruzada da demanda entre os bens A e B é negativa, um aumento no "
+                      "preço do bem A levará a uma redução na quantidade demandada do bem B, indicando que A e B "
+                      "são bens complementares."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se a elasticidade-preço cruzada da demanda entre os bens A e B é <u>negativa</u>, um "
+                      "aumento no preço do bem A levará a uma <u>redução</u> na quantidade demandada do bem B, "
+                      "indicando que A e B são bens <u>complementares</u>."),
+        "poucas": ("Cruzada " + vd("negativa") + " = preço de um e quantidade do outro em sentidos opostos = "
+                   + azb("complementares") + " (consumidos juntos)."),
+        "destrinchando": [
+            vd("ε<sub>BA</sub> = %ΔQ<sub>B</sub> / %ΔP<sub>A</sub>") + ". Se P<sub>A</sub> sobe e Q<sub>B</sub> "
+            "cai, numerador e denominador têm sinais opostos → ε < 0.",
+            "Complementares: café × açúcar, carro × gasolina, impressora × cartucho. Encarecer um torna o "
+            "“pacote” mais caro e reduz a compra dos dois. No gráfico do bem B, a demanda se desloca para a "
+            "<b>esquerda</b>.",
+            "Substitutos: cruzada " + vd("positiva") + " (etanol × gasolina) — encarecer um desvia consumo para "
+            "o outro. Independentes: cruzada ≈ 0.",
+            "Note que o preço de A aparece no gráfico de B como " + azb("deslocador") + " da curva, e não como "
+            "movimento ao longo dela.",
+            "Item vizinho (mesma ideia, outra redação): “Um bem é denominado bem complementar se a "
+            "elasticidade-preço cruzada da demanda desse bem for negativa” — também CERTO.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Encadeia definição → mecanismo → classificação, tudo "
+                       "coerente. O risco é ler “negativa” e associar a “substitutos” por pressa. 🔥 Regra de "
+                       "sinais é cobrada em quase todo bloco de elasticidades."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a elasticidade-preço cruzada entre A e B é positiva, um aumento no preço de A reduz a "
+            "quantidade demandada de B.”</i> → ERRADO (inversão: aumenta; são substitutos)",
+            "<i>“Elasticidade-preço cruzada nula indica bens independentes.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Cruzada negativa: aumento do preço de A reduz a quantidade de B; bens "
+                            "complementares (café e açúcar).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_parcial: o verso da fonte traz, colado ao fim, o enunciado de outra questão (“2. A "
+                    "respeito das estruturas de mercado…”) — descartado"],
+    },
+    # ------------------------------------------------------------------ E2-L00599
+    {
+        "id": "ECO-E2-L00599-1", "fonte_ref": "E2-L00599", "destino": "02", "subtema": H2["rc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MICRO3,
+        "rotulo_item": "Item",
+        "assertiva": "Um bem normal apresenta elasticidade-renda nula.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um bem normal apresenta elasticidade-renda ") + vm("nula") + az("."),
+        "poucas": ("Bem " + azb("normal") + " é aquele cujo consumo sobe com a renda: " + vd("η > 0")
+                   + ". Elasticidade-renda nula indica consumo insensível à renda."),
+        "destrinchando": [
+            vd("η = %ΔQ / %ΔR") + ". Normal: η > 0, dividido em " + azb("necessário") + " (0 < η < 1 — a "
+            "quantidade cresce, mas menos que a renda; ex.: alimentos básicos) e " + azb("de luxo/superior")
+            + " (η > 1 — cresce mais que a renda; ex.: viagens internacionais).",
+            azb("Inferior") + ": η < 0 — com mais renda, compra-se menos (ônibus intermunicipal, carne de "
+            "segunda, marcas mais baratas).",
+            "η = 0: consumo que não responde à renda — fronteira entre normal e inferior (às vezes chamado de "
+            "bem “neutro” ou de consumo saciado, como sal).",
+            "Graficamente: aumento de renda desloca a demanda para a direita (normal), para a esquerda "
+            "(inferior) ou a deixa parada (η = 0). A " + oc("curva de Engel") + " é positivamente inclinada "
+            "para bens normais.",
+        ],
+        "dissecando": (cz("[dado alterado · troca de conceito]") + " Troca o sinal que define a categoria "
+                       "(positivo → nulo). Pista: a palavra “normal” não sugere “neutro”; a classificação é "
+                       "sempre pelo sinal de η."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um bem de luxo apresenta elasticidade-renda maior que um.”</i> → CERTO",
+            "<i>“Todo bem normal tem elasticidade-renda maior que um.”</i> → ERRADO (generalização: só os de "
+            "luxo)",
+        ])],
+        "reescrita": "Um bem normal apresenta elasticidade-renda " + hl("positiva") + ".",
+        "tipo_erro": ["DADO_ALTERADO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Bem normal: consumo aumenta com a renda, elasticidade-renda positiva; nula "
+                            "caracteriza consumo que não se altera com a renda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00600
+    {
+        "id": "ECO-E2-L00600-1", "fonte_ref": "E2-L00600", "destino": "02", "subtema": H2["rc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MICRO3,
+        "rotulo_item": "Item",
+        "assertiva": "Um bem inferior apresenta elasticidade-renda negativa.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um bem inferior apresenta elasticidade-renda <u>negativa</u>."),
+        "poucas": ("Bem " + azb("inferior") + ": a renda sobe e o consumo cai — numerador e denominador de "
+                   "η com sinais opostos, logo " + vd("η < 0") + "."),
+        "destrinchando": [
+            "Por que existem: com mais renda, o consumidor troca o bem por versões de melhor qualidade (pão "
+            "comum → pão especial; transporte coletivo → carro próprio). “Inferior” não é juízo de qualidade "
+            "física, é classificação pela reação à renda.",
+            "Inferioridade é " + azb("relativa à faixa de renda") + ": o mesmo bem pode ser normal para os "
+            "pobres e inferior para os ricos (a curva de Engel “volta para trás”).",
+            azb("Bem de Giffen") + " é um caso extremo de inferior: o efeito renda (positivo, quando o preço "
+            "sobe) supera o efeito substituição, e a demanda passa a ter inclinação positiva. Todo Giffen é "
+            "inferior; nem todo inferior é Giffen.",
+            "Não confundir com bem " + azb("necessário") + " (0 < η < 1): é normal, só que com resposta "
+            "menos que proporcional à renda.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta. O risco é a confusão inferior × necessário "
+                       "(η < 1) ou inferior × Giffen. 🔥 Itens vizinhos do mesmo bloco testam “normal = nula” e "
+                       "“inferior = menor que 1” (ambos ERRADOS)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Todo bem inferior é um bem de Giffen.”</i> → ERRADO (inversão: todo Giffen é inferior)",
+            "<i>“Um bem pode ser normal em baixos níveis de renda e inferior em níveis elevados.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Bem inferior: consumo diminui quando a renda aumenta; elasticidade-renda "
+                            "negativa.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00650
+    {
+        "id": "ECO-E2-L00650-1", "fonte_ref": "E2-L00650", "destino": "02", "subtema": H2["rc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à microeconomia, julgue os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("A elasticidade-preço cruzada da demanda é negativa para bens substitutos e positiva para "
+                      "bens complementares."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A elasticidade-preço cruzada da demanda é ") + vm("negativa") + az(" para bens substitutos "
+                                                                                          "e ")
+                    + vm("positiva") + az(" para bens complementares.")),
+        "poucas": ("Sinais invertidos: " + azb("substitutos") + " → cruzada " + vd("positiva") + "; "
+                   + azb("complementares") + " → cruzada " + vd("negativa") + "."),
+        "destrinchando": [
+            vd("ε<sub>xy</sub> = %ΔQ<sub>x</sub> / %ΔP<sub>y</sub>") + ".",
+            "Substitutos: gasolina encarece → demanda por etanol <b>sobe</b>. Numerador e denominador com o "
+            "mesmo sinal → ε > 0.",
+            "Complementares: café encarece → demanda por açúcar <b>cai</b>. Sinais opostos → ε < 0.",
+            "Teste rápido: pergunte “o preço de y sobe — a quantidade de x sobe ou cai?”. Sobe = substituto "
+            "(sinal +); cai = complementar (sinal −). O sinal da cruzada é o sinal do “sentimento” entre os "
+            "bens: concorrentes ganham com a alta do rival.",
+            vm("Regra-âncora: substituto +, complementar −."),
+        ],
+        "dissecando": (cz("[inversão]") + " Inversão pura dos dois sinais, mantendo a estrutura da definição. "
+                       "Quem associa “complementar” a “positivo” (sentido de “somar”) cai. 🔥 A Nabuco repete "
+                       "essa troca em vários blocos."),
+        "modulos": [("🧠 Mnemônico", ["<b>S</b>ubstituto <b>S</b>obe junto com o preço do rival (+); "
+                                      "<b>C</b>omplementar <b>C</b>ai (−)."])],
+        "reescrita": ("A elasticidade-preço cruzada da demanda é " + hl("positiva") + " para bens substitutos e "
+                      + hl("negativa") + " para bens complementares."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Inverteu: cruzada positiva para substitutos (gasolina × etanol) e negativa para "
+                            "complementares (café × açúcar).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00674
+    {
+        "id": "ECO-E2-L00674-1", "fonte_ref": "E2-L00674", "destino": "02", "subtema": H2["rec"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "A respeito da teoria do consumidor e dos conceitos de elasticidade, julgue os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se a demanda por um produto é inelástica em relação ao preço, um aumento no preço do "
+                      "produto levará a uma redução na receita total dos vendedores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se a demanda por um produto é inelástica em relação ao preço, um aumento no preço do "
+                       "produto levará a ") + vm("uma redução") + az(" na receita total dos vendedores.")),
+        "poucas": ("Demanda " + azb("inelástica") + " (|ε| < 1): a quantidade cai proporcionalmente menos que o "
+                   "preço sobe, e a receita total <b>aumenta</b>."),
+        "destrinchando": [
+            "%ΔRT ≈ %ΔP·(1 − |ε|). Com |ε| = 0,5 e preço +10%: quantidade −5%, receita ≈ 1,10 × 0,95 = "
+            + vd("1,045") + " (+4,5%).",
+            "Preço e receita andam no <b>mesmo sentido</b> na demanda inelástica; em sentidos opostos na "
+            "elástica; na unitária, a receita não muda.",
+            "Exemplos de demanda inelástica: combustíveis no curto prazo, energia elétrica, medicamentos, "
+            "cigarro. Por isso tributos e reajustes sobre esses bens arrecadam/faturam mais.",
+            "Aplicação clássica (" + oc("Mankiw") + "): quebra de safra ou cartel que restringe a oferta (como "
+            "a " + azb("OPEP") + " nos anos 1970) eleva o preço e, com demanda inelástica, a receita dos "
+            "produtores sobe.",
+        ],
+        "dissecando": (cz("[inversão]") + " Atribui à demanda inelástica o efeito da elástica. Pista: "
+                       "“inelástica” = consumidor reage pouco = o vendedor ganha ao subir o preço."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a demanda por um produto é elástica, um aumento no preço levará a uma redução na receita "
+            "total.”</i> → CERTO",
+            "<i>“Com demanda inelástica, uma safra recorde eleva a receita total dos agricultores.”</i> → "
+            "ERRADO (inversão: o preço despenca e a receita cai)",
+        ])],
+        "reescrita": ("Se a demanda por um produto é inelástica em relação ao preço, um aumento no preço do "
+                      "produto levará a " + hl("um aumento") + " na receita total dos vendedores."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Demanda inelástica: queda na quantidade proporcionalmente pequena; RT aumenta. Só "
+                            "cairia se a demanda fosse elástica.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00879
+    {
+        "id": "ECO-E2-L00879-1", "fonte_ref": "E2-L00879", "destino": "02", "subtema": H2["rc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_INTERV,
+        "rotulo_item": "Item",
+        "assertiva": "Um bem inferior é um bem com elasticidade-renda da demanda menor que 1.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um bem inferior é um bem com elasticidade-renda da demanda ") + vm("menor que 1") + az("."),
+        "poucas": ("Bem inferior tem " + vd("η < 0") + ". Elasticidade-renda entre 0 e 1 caracteriza bem "
+                   + azb("normal necessário") + ", não inferior."),
+        "destrinchando": [
+            "Régua completa: " + vd("η < 0") + " inferior; " + vd("η = 0") + " consumo insensível à renda; "
+            + vd("0 < η < 1") + " normal necessário; " + vd("η > 1") + " normal de luxo (superior).",
+            "“Menor que 1” abarca tanto inferiores quanto necessários: um bem com η = 0,4 tem consumo "
+            "<b>crescente</b> com a renda — não é inferior. A definição do item é ampla demais.",
+            "O limite 1 importa para a <b>parcela no orçamento</b>: com η < 1, a fatia da renda gasta com o bem "
+            "cai quando a renda sobe (lei de " + oc("Engel") + "), mas a quantidade pode estar subindo.",
+            "Bem inferior: a quantidade cai em termos absolutos com a renda. Bem necessário: a quantidade sobe, "
+            "mas a fatia do orçamento cai.",
+        ],
+        "dissecando": (cz("[troca de conceito · dado alterado]") + " Troca o limiar que define a categoria (0 "
+                       "→ 1), confundindo inferior com necessário. Pista: “inferior” fala da direção da "
+                       "resposta (sinal); “necessário × luxo” fala da intensidade (maior ou menor que 1)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Todo bem inferior tem elasticidade-renda menor que 1, mas nem todo bem com elasticidade-renda "
+            "menor que 1 é inferior.”</i> → CERTO",
+            "<i>“Bens necessários têm elasticidade-renda negativa.”</i> → ERRADO (troca de conceito: entre 0 e "
+            "1)",
+        ])],
+        "reescrita": "Um bem inferior é um bem com elasticidade-renda da demanda " + hl("negativa (menor que 0)")
+                     + ".",
+        "tipo_erro": ["TROCA_CONCEITO", "DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Bem inferior: renda aumenta, quantidade diminui; elasticidade-renda negativa, não "
+                            "“menor que um”.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00880
+    {
+        "id": "ECO-E2-L00880-1", "fonte_ref": "E2-L00880", "destino": "02", "subtema": H2["rc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_INTERV,
+        "rotulo_item": "Item",
+        "assertiva": ("Um bem é denominado bem complementar se a elasticidade-preço cruzada da demanda desse bem "
+                      "for negativa."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um bem é denominado bem complementar se a elasticidade-preço cruzada da demanda desse bem "
+                      "for <u>negativa</u>."),
+        "poucas": ("Complementares são consumidos juntos: a alta do preço de um reduz a quantidade do outro, e a "
+                   + azb("elasticidade-preço cruzada") + " é " + vd("negativa") + "."),
+        "destrinchando": [
+            vd("ε<sub>xy</sub> = %ΔQ<sub>x</sub> / %ΔP<sub>y</sub>") + " — variação percentual na quantidade de "
+            "um bem diante de variação de 1% no preço de <b>outro</b>.",
+            "Negativa → " + azb("complementares") + " (pão × manteiga, impressora × cartucho); positiva → "
+            + azb("substitutos") + " (manteiga × margarina); nula → independentes.",
+            "Precisão de linguagem: a cruzada é sempre <b>entre dois bens</b>; “a cruzada desse bem” "
+            "subentende o par em análise. Ser complementar não é atributo absoluto do bem, mas da relação "
+            "com outro.",
+            "Para classificação rigorosa (complementares líquidos), a teoria usa a demanda compensada de "
+            + oc("Hicks") + "; em provas objetivas, vale a regra do sinal da cruzada.",
+            "Mesmo conteúdo em outra redação: “se a cruzada entre A e B é negativa, um aumento no preço de A "
+            "reduz a quantidade de B, indicando complementares” — também CERTO.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual pelo sinal. A imprecisão (“desse bem”, sem "
+                       "dizer em relação a qual) não basta para tornar o item errado. 🔥 O mesmo bloco cobra "
+                       "“inferior = menor que 1” (ERRADO), para testar se o candidato distingue sinal de "
+                       "intensidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um bem é denominado substituto se a elasticidade-preço cruzada da demanda for negativa.”</i> → "
+            "ERRADO (inversão: positiva)",
+            "<i>“A elasticidade-preço cruzada mede a variação percentual da quantidade de um bem diante da "
+            "variação percentual da renda.”</i> → ERRADO (troca de conceito: é o preço de outro bem)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Complementares são consumidos conjuntamente; cruzada positiva para substitutos e "
+                            "negativa para complementares.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 138", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
 ]

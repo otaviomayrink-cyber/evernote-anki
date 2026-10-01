@@ -373,7 +373,7 @@ CARDS = [
         "poucas": ("Convexidade " + azb("implica") + " TMS não crescente, mas não “equivale” a TMS decrescente: "
                    "preferências convexas admitem retas (" + vd("substitutos perfeitos") + ", TMS constante) e "
                    "quinas (" + vd("complementares perfeitos") + ", TMS indefinida)."),
-        "condicionais": [("⚠️ Gabarito contestável", "Em linguagem de manual introdutório (Pindyck, Varian), "
+        "condicionais": [("⚠️ Gabarito contestável", "Em linguagem de manual introdutório, "
                           "convexidade e TMS decrescente são tratadas como as duas faces da mesma hipótese, e uma "
                           "banca poderia aceitar o item como CERTO. O ERRADO se sustenta no rigor do “equivale”: a "
                           "convexidade é definida sem derivadas e inclui casos de TMS constante ou indefinida.")],
@@ -463,6 +463,263 @@ CARDS = [
         "comentario_fonte": "Com U = −x₁x₂, aumentar um bem piora a utilidade: não há monotonicidade; os conjuntos "
                             "de preferência superior não satisfazem a convexidade usual.",
         "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00015
+    {
+        "id": "ECO-E2-L00015-1", "fonte_ref": "E2-L00015", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A curva de indiferença é convexa à origem, pois reflete o desejo do consumidor de diversificar "
+                      "seu consumo. No entanto, não é possível que uma curva de indiferença seja côncava, pois isso "
+                      "contrariaria o princípio de monotonicidade de preferências mais a mais."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A curva de indiferença é convexa à origem, pois reflete o desejo do consumidor de diversificar "
+                       "seu consumo. No entanto, ") + vm("não é possível que uma curva de indiferença seja côncava, "
+                       "pois isso contrariaria o princípio de monotonicidade") + az(" de preferências mais a mais.")),
+        "poucas": ("Curvas " + azb("côncavas") + " são possíveis: violam a " + azb("convexidade") + " (o consumidor "
+                   "prefere especializar-se), não a " + azb("monotonicidade") + ", que só exige inclinação negativa."),
+        "destrinchando": [
+            "Cada hipótese molda um traço da curva: " + azb("monotonicidade") + " → inclinação " + vd("negativa")
+            + " (para ganhar x₁ é preciso ceder x₂) e curvas mais altas melhores; " + azb("convexidade") + " → "
+            "curvatura voltada para a origem (médias preferidas a extremos).",
+            "Uma curva côncava (curvada para fora) continua negativamente inclinada — monotonicidade intacta. O que "
+            "muda é a TMS, que passa a ser " + vd("crescente") + ": quanto mais x₁ o consumidor tem, mais x₂ aceita "
+            "ceder por x₁ adicional. Resultado: ele prefere os extremos.",
+            "Exemplo de manual: alguém que gosta de vinho e de refrigerante, mas não dos dois juntos na mesma "
+            "refeição. O ótimo de preferências côncavas é uma " + azb("solução de canto") + ": todo o orçamento em "
+            "um só bem, e a tangência seria um ponto de <b>mínimo</b>, não de máximo.",
+            "A primeira frase do item está correta para o caso usual (bem comportado). O erro é proibir a "
+            "concavidade e atribuir a proibição ao axioma errado.",
+        ],
+        "dissecando": (cz("[troca de conceito · modulador absoluto]") + " A 1ª frase, verdadeira, dá credibilidade; "
+                       "a 2ª traz um “não é possível” e uma justificativa com o axioma trocado (monotonicidade no "
+                       "lugar de convexidade). Pista: monotonicidade fala de <b>inclinação</b>; convexidade, de "
+                       "<b>curvatura</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Curvas de indiferença positivamente inclinadas contrariariam a monotonicidade das preferências "
+            "quando ambos são bens.”</i> → CERTO",
+            "<i>“Com curvas de indiferença côncavas, o ponto de tangência com a restrição orçamentária maximiza a "
+            "utilidade.”</i> → ERRADO (a tangência é um mínimo; o ótimo é de canto)",
+        ])],
+        "reescrita": ("A curva de indiferença é convexa à origem, pois reflete o desejo do consumidor de diversificar "
+                      "seu consumo. No entanto, " + hl("é possível") + " que uma curva de indiferença seja côncava"
+                      + hl(" — preferências não convexas, que favorecem a especialização —, sem contrariar") + " o "
+                      "princípio de monotonicidade de preferências mais a mais."),
+        "tipo_erro": ["TROCA_CONCEITO", "GENERALIZACAO"], "moduladores": ["não é possível"], "dificuldade": 2,
+        "comentario_fonte": "Curvas côncavas refletem especialização e são possíveis sem violar a monotonicidade; "
+                            "a fonte as associa, por engano, a bens complementares.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem associa curvas côncavas a “preferências por bens "
+                    "complementares”; complementares perfeitos geram curvas em L (convexas), não côncavas"],
+    },
+    # ------------------------------------------------------------------ E2-L00016
+    {
+        "id": "ECO-E2-L00016-1", "fonte_ref": "E2-L00016", "destino": "04", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A inclinação das curvas de indiferença corresponde à taxa marginal de substituição entre dois "
+                      "bens e deve ser igual à razão entre os preços dos bens na escolha ótima do consumidor. No "
+                      "entanto, essa igualdade de inclinações não é válida para substitutos perfeitos, onde a "
+                      "maximização pode ocorrer sem que as inclinações sejam equivalentes."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A inclinação das curvas de indiferença corresponde à taxa marginal de substituição entre dois "
+                      "bens e deve ser igual à razão entre os preços dos bens na escolha ótima do consumidor. No "
+                      "entanto, essa igualdade de inclinações não é válida para substitutos perfeitos, onde a "
+                      "maximização <u>pode</u> ocorrer sem que as inclinações sejam equivalentes."),
+        "poucas": ("A " + azb("tangência") + " (TMS = p₁/p₂) é a regra do ótimo interior; com " + azb("substitutos "
+                   "perfeitos") + ", a TMS é constante e, se diferir de p₁/p₂, o ótimo é um " + vd("canto") + ", sem "
+                   "igualdade."),
+        "destrinchando": [
+            "Inclinação da curva de indiferença = " + azb("TMS") + " = UMg₁/UMg₂ (em módulo). Inclinação da "
+            "restrição orçamentária = " + azb("preço relativo") + " p₁/p₂. No ótimo interior de preferências "
+            "convexas e suaves, as duas se igualam: a taxa a que o consumidor <b>quer</b> trocar coincide com a que "
+            "o mercado <b>permite</b>.",
+            "Substitutos perfeitos (U = ax₁ + bx₂, TMS = a/b constante): se " + vd("a/b > p₁/p₂") + ", só x₁ é "
+            "comprado; se " + vd("a/b < p₁/p₂") + ", só x₂; se " + vd("a/b = p₁/p₂") + ", qualquer ponto da "
+            "restrição é ótimo — e aí as inclinações coincidem. Daí o “pode” do item.",
+            "Outros casos sem igualdade: " + azb("complementares perfeitos") + " (ótimo no vértice do L, onde a TMS "
+            "não está definida) e preferências " + azb("côncavas") + " (ótimo de canto).",
+            "No canto, vale uma desigualdade: o bem comprado oferece utilidade marginal por real maior ou igual à do "
+            "bem não comprado (UMg₁/p₁ ≥ UMg₂/p₂ se só x₁ é consumido).",
+        ],
+        "dissecando": (cz("[exceção · modulador relativo]") + " O item ensina a regra e cobra a exceção, protegida "
+                       "pelo “pode”. Se dissesse “nunca são equivalentes”, estaria ERRADO (caso a/b = p₁/p₂)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para substitutos perfeitos, a escolha ótima nunca apresenta igualdade entre a TMS e a razão de "
+            "preços.”</i> → ERRADO (modulador absoluto: se forem iguais, toda a restrição é ótima)",
+            "<i>“Na escolha ótima de complementares perfeitos, a TMS iguala a razão de preços no vértice.”</i> → "
+            "ERRADO (no vértice a TMS não está definida)",
+        ])],
+        "tipo_erro": ["EXCECAO", "MODULADOR_RELATIVO"], "moduladores": ["deve", "pode"], "dificuldade": 1,
+        "comentario_fonte": "Tangência TMS = preço relativo no ótimo usual; nos substitutos perfeitos a "
+                            "maximização pode ocorrer num extremo, sem igualdade.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00017
+    {
+        "id": "ECO-E2-L00017-1", "fonte_ref": "E2-L00017", "destino": "04", "subtema": H2["ro"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando ocorre uma variação na renda de um consumidor, a restrição orçamentária se desloca "
+                      "paralelamente sem alterar sua inclinação. Já uma alteração nos preços modifica necessariamente "
+                      "a inclinação da restrição orçamentária, impactando as possibilidades de consumo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Quando ocorre uma variação na renda de um consumidor, a restrição orçamentária se desloca "
+                       "paralelamente sem alterar sua inclinação. Já uma alteração nos preços modifica ")
+                    + vm("necessariamente") + az(" a inclinação da restrição orçamentária, impactando as "
+                                                 "possibilidades de consumo.")),
+        "poucas": ("A inclinação é o " + azb("preço relativo") + " p₁/p₂. Se os " + vd("dois preços") + " variarem "
+                   "na mesma proporção, ela não muda: a restrição só se desloca paralelamente, como numa variação "
+                   "de renda."),
+        "destrinchando": [
+            "Restrição: p₁x₁ + p₂x₂ = R. Interceptos: R/p₁ (eixo x₁) e R/p₂ (eixo x₂). Inclinação: " + vd("−p₁/p₂")
+            + ".",
+            "Renda ↑ → interceptos sobem na mesma proporção → " + azb("deslocamento paralelo") + " para fora. "
+            "Um preço só ↑ (p₁) → o intercepto de x₁ cai e a reta " + azb("gira") + " em torno do intercepto de x₂, "
+            "ficando mais inclinada.",
+            "Todos os preços ↑ k% com R constante → equivale a uma queda da renda real: a reta se desloca "
+            "paralelamente para dentro. Preços e renda ↑ k% juntos → " + vd("nada muda") + " (homogeneidade de grau "
+            "zero: sem ilusão monetária).",
+            "Também não giram: impostos ou subsídios <b>ad valorem</b> uniformes sobre todos os bens. Já um "
+            "imposto sobre um único bem gira a reta; um imposto <b>lump-sum</b> (fixo) a desloca paralelamente.",
+            vm("Regra-âncora: inclinação = preço relativo; só muda se p₁/p₂ mudar."),
+        ],
+        "dissecando": (cz("[modulador absoluto]") + " A 1ª frase é exata e o erro mora num advérbio: "
+                       "“necessariamente”. Pista: “alteração nos preços” (plural, genérico) inclui a mudança "
+                       "proporcional de todos eles."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a renda e todos os preços dobrarem, a restrição orçamentária permanece inalterada.”</i> → CERTO",
+            "<i>“A elevação do preço de um dos bens desloca a restrição orçamentária paralelamente para "
+            "dentro.”</i> → ERRADO (um preço só faz a reta girar)",
+        ])],
+        "reescrita": ("Quando ocorre uma variação na renda de um consumidor, a restrição orçamentária se desloca "
+                      "paralelamente sem alterar sua inclinação. Já uma alteração nos preços modifica "
+                      "<s>necessariamente</s> a inclinação da restrição orçamentária" + hl(", salvo se os dois preços "
+                      "variarem na mesma proporção") + ", impactando as possibilidades de consumo."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["necessariamente"], "dificuldade": 1,
+        "comentario_fonte": "Renda desloca paralelamente; preço altera a inclinação (rotação), salvo se os dois "
+                            "preços mudarem na mesma direção e proporção.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00018
+    {
+        "id": "ECO-E2-L00018-1", "fonte_ref": "E2-L00018", "destino": "04", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma solução de canto indica que o consumidor emprega toda sua renda na aquisição de apenas um "
+                      "dos bens. Isso ocorre frequentemente para complementos perfeitos, onde o consumo de um bem "
+                      "depende intrinsecamente do consumo do outro, forçando a escolha para um ponto extremo da "
+                      "curva de restrição orçamentária."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma solução de canto indica que o consumidor emprega toda sua renda na aquisição de apenas um "
+                       "dos bens. Isso ocorre frequentemente para ") + vm("complementos perfeitos, onde o consumo de "
+                       "um bem depende intrinsecamente do consumo do outro, forçando") + az(" a escolha para um "
+                       "ponto extremo da curva de restrição orçamentária.")),
+        "poucas": ("Canto é típico de " + azb("substitutos perfeitos") + " (e de preferências côncavas). Com "
+                   + azb("complementos perfeitos") + ", o consumidor compra os " + vd("dois bens") + " na proporção "
+                   "fixa: o ótimo fica no vértice do L, no interior da restrição."),
+        "destrinchando": [
+            azb("Solução de canto") + ": a cesta ótima tem quantidade zero de algum bem. Com dois bens, toda a renda "
+            "vai para um só.",
+            "Substitutos perfeitos (U = ax₁ + bx₂): o consumidor compara a/b com p₁/p₂ e compra só o bem que dá "
+            "mais utilidade por real. Ex.: U = x₁ + x₂, p₁ = 2, p₂ = 4, R = 40 → " + vd("x₁ = 20, x₂ = 0") + ".",
+            "Complementos perfeitos (U = mín{x₁, x₂}): comprar um sem o outro não gera utilidade. Com R = 40, p₁ = 2, "
+            "p₂ = 4 → x₁ = x₂ = R/(p₁ + p₂) ≈ " + vd("6,67 de cada") + ". Justamente porque um bem “depende do "
+            "outro”, o canto é a pior escolha possível.",
+            "O canto também aparece com preferências " + azb("côncavas") + " (preferência por especialização) e, em "
+            "preferências usuais, quando a TMS em um dos eixos já é menor que o preço relativo (bem muito caro ou "
+            "pouco desejado).",
+            vm("Regra-âncora: substitutos perfeitos → canto; complementos perfeitos → vértice com os dois bens."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca substitutos por complementos e ainda descreve "
+                       "corretamente a complementaridade (“um bem depende do outro”) — o que, lido com atenção, "
+                       "desmente a própria conclusão. 🔥 A dupla substitutos × complementos perfeitos é das trocas "
+                       "mais frequentes em teoria do consumidor."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com substitutos perfeitos, se a TMS for diferente da razão de preços, a escolha ótima será uma "
+            "solução de canto.”</i> → CERTO",
+            "<i>“Com complementos perfeitos, o consumidor gasta toda a renda no bem mais barato.”</i> → ERRADO "
+            "(compra os dois na proporção fixa)",
+        ])],
+        "reescrita": ("Uma solução de canto indica que o consumidor emprega toda sua renda na aquisição de apenas um "
+                      "dos bens. Isso ocorre frequentemente para " + hl("substitutos perfeitos, quando a taxa de troca "
+                      "entre os bens difere da razão de preços, o que leva") + " a escolha para um ponto extremo da "
+                      "curva de restrição orçamentária" + hl(" (com complementos perfeitos, o ótimo fica no vértice "
+                      "do L, com os dois bens)") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["frequentemente"], "dificuldade": 1,
+        "comentario_fonte": "Canto é típico de substitutos perfeitos; com complementos perfeitos o ótimo é na "
+                            "junção (proporção fixa).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00345
+    {
+        "id": "ECO-E2-L00345-1", "fonte_ref": "E2-L00345", "destino": "04", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_ARMSTRONG,
+        "rotulo_item": "Item",
+        "assertiva": ("No problema padrão de utilidade bem-comportada, o ponto ótimo exige (TMgS = Px/Py) e, "
+                      "equivalentemente, (UMg_X/UMg_Y = Px/Py), o que implica (UMg_X/Px = UMg_Y/Py). Essa igualdade "
+                      "vale inclusive em soluções de canto com bens perfeitamente complementares ou substitutos "
+                      "perfeitos, pois a utilidade marginal por real sempre se iguala entre bens."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No problema padrão de utilidade bem-comportada, o ponto ótimo exige (TMgS = Px/Py) e, "
+                       "equivalentemente, (UMg_X/UMg_Y = Px/Py), o que implica (UMg_X/Px = UMg_Y/Py). Essa igualdade ")
+                    + vm("vale inclusive em soluções de canto com bens perfeitamente complementares ou substitutos "
+                         "perfeitos, pois a utilidade marginal por real sempre se iguala entre bens") + az(".")),
+        "poucas": ("A " + azb("equimarginalidade") + " (UMg/p igual entre bens) é condição de " + vd("ótimo "
+                   "interior") + ". No canto, o bem comprado rende " + vd("mais") + " utilidade por real que o "
+                   "outro; no vértice dos complementos, as UMg nem estão definidas."),
+        "destrinchando": [
+            "A cadeia da 1ª frase está correta: TMgS = UMg<sub>X</sub>/UMg<sub>Y</sub>; igualando a P<sub>X</sub>/"
+            "P<sub>Y</sub> e rearranjando, " + vd("UMg<sub>X</sub>/P<sub>X</sub> = UMg<sub>Y</sub>/P<sub>Y</sub>")
+            + ": o último real gasto em cada bem rende a mesma utilidade (" + oc("Gossen") + ", “segunda lei”).",
+            "Por que vale no interior: se UMg<sub>X</sub>/P<sub>X</sub> > UMg<sub>Y</sub>/P<sub>Y</sub>, tirar um "
+            "real de Y e pô-lo em X eleva a utilidade — o consumidor realoca até igualar. No " + azb("canto") + " "
+            "(Y = 0) não há mais Y para tirar: a desigualdade " + vd("UMg<sub>X</sub>/P<sub>X</sub> ≥ UMg<sub>Y</sub>"
+            "/P<sub>Y</sub>") + " persiste. São as condições de " + azb("Kuhn-Tucker") + ".",
+            "Substitutos perfeitos (U = X + Y, P<sub>X</sub> = 1, P<sub>Y</sub> = 2): UMg/P = 1 para X e 0,5 para Y. "
+            "Compra-se só X, com utilidades por real diferentes.",
+            "Complementos perfeitos não costumam gerar canto: o ótimo é o vértice do L, com os dois bens. Ali a "
+            "função não é diferenciável e a condição em UMg simplesmente não se aplica; o ótimo sai de X/Y = "
+            "proporção fixa + restrição.",
+        ],
+        "dissecando": (cz("[generalização · meia-verdade]") + " A 1ª frase, técnica e correta, empresta "
+                       "autoridade à 2ª, que estende a regra aos casos que são justamente suas exceções. Os "
+                       "gatilhos: “inclusive” e “sempre”. Bônus de erro: complementos perfeitos citados como "
+                       "fonte de canto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Numa solução de canto em que só X é consumido, UMg<sub>X</sub>/P<sub>X</sub> ≥ UMg<sub>Y</sub>"
+            "/P<sub>Y</sub>.”</i> → CERTO",
+            "<i>“Se UMg<sub>X</sub>/P<sub>X</sub> > UMg<sub>Y</sub>/P<sub>Y</sub> num ótimo interior, o consumidor "
+            "deve reduzir o consumo de X.”</i> → ERRADO (inversão: deve aumentar X)",
+        ])],
+        "reescrita": ("No problema padrão de utilidade bem-comportada, o ponto ótimo exige (TMgS = Px/Py) e, "
+                      "equivalentemente, (UMg_X/UMg_Y = Px/Py), o que implica (UMg_X/Px = UMg_Y/Py). Essa igualdade "
+                      + hl("vale apenas em ótimos interiores com curvas suaves: não vale em soluções de canto "
+                           "(típicas de substitutos perfeitos), em que o bem comprado tem utilidade marginal por "
+                           "real maior ou igual à do outro, nem no vértice dos complementos perfeitos, onde as "
+                           "utilidades marginais não estão definidas") + "."),
+        "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["inclusive", "sempre"], "dificuldade": 2,
+        "comentario_fonte": "UMg_X/Px = UMg_Y/Py vale em ótimos interiores; em cantos (substitutos perfeitos) não "
+                            "se aplica.",
+        "qualidade_fonte": "raso",
         "figuras_fonte": [],
         "alertas": [],
     },

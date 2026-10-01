@@ -1,0 +1,16 @@
+{"id": "ECO-E2-L01522-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "O mesmo bem de Giffen em dois gráficos: na curva de Engel (quantidade × renda) a inclinação é negativa, porque todo Giffen é inferior; é a curva de demanda (preço × quantidade) que sobe e contraria a lei da demanda.",
+ "paineis": [
+  {"titulo": "Curva de Engel: q × renda",
+   "eixos": {"x": "R", "y": "q"},
+   "curvas": [{"id": "E", "tipo": "funcao", "expr": "8.6 - 0.62*x", "dominio": [0.8, 9.2], "familia": "demanda", "rotulo": "Engel (inferior)", "rotulo_em": 6.2, "rotulo_desloc": [8, 10]}],
+   "pontos": [{"id": "A", "sobre": "E", "x": 2.5, "rotulo": "A", "projetar": true, "rotulo_x": "R₁", "rotulo_y": "q₁"},
+              {"id": "B", "sobre": "E", "x": 6.5, "rotulo": "B", "projetar": true, "rotulo_x": "R₂", "rotulo_y": "q₂"}],
+   "checar": ["B.y < A.y", "B.x > A.x"]},
+  {"titulo": "Curva de demanda: p × q",
+   "eixos": {"x": "q", "y": "p"},
+   "curvas": [{"id": "D", "tipo": "funcao", "expr": "1.0 + 0.85*x", "dominio": [0.8, 9.5], "familia": "destaque", "rotulo": "D (Giffen)", "rotulo_em": 6.0, "rotulo_desloc": [10, -6]}],
+   "pontos": [{"id": "C", "sobre": "D", "x": 3, "rotulo": "C", "projetar": true, "rotulo_x": "q₁", "rotulo_y": "p₁"},
+              {"id": "F", "sobre": "D", "x": 7, "rotulo": "F", "projetar": true, "rotulo_x": "q₂", "rotulo_y": "p₂"}],
+   "checar": ["F.y > C.y", "F.x > C.x"]}
+ ]}

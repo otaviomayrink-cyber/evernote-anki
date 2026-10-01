@@ -282,4 +282,272 @@ CARDS = [
         "figuras_fonte": [{"ref": "IMAGEM 413", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L01662
+    {
+        "id": "ECO-E2-L01662-1", "fonte_ref": "E2-L01662", "destino": "08", "subtema": H2["mk"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": "A respeito dos conceitos e teorias da microeconomia, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": "Num monopólio, o <i>mark up</i> é maior quanto mais inelástica ao preço for a demanda.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Num monopólio, o <i>mark up</i> é <u>maior</u> quanto mais <u>inelástica</u> ao preço for a "
+                      "demanda."),
+        "poucas": ("Pela " + azb("regra de Lerner") + ", no ótimo do monopolista " + vd("(P − CMg)/P = 1/|ε|")
+                   + ": quanto menor |ε| (demanda mais inelástica), maior o markup."),
+        "destrinchando": [
+            "Derivação em uma linha: o monopolista iguala RMg = CMg, e " + vd("RMg = P·(1 − 1/|ε|)") + ". Logo "
+            "P·(1 − 1/|ε|) = CMg, o que dá " + vd("(P − CMg)/P = 1/|ε|") + " — o " + azb("índice de Lerner") + " ("
+            + oc("Abba Lerner") + ", 1934).",
+            "Na forma de multiplicador: " + vd("P = CMg · |ε|/(|ε| − 1)") + ". Com |ε| = 2, P = 2·CMg (markup de "
+            "100% sobre o custo); com |ε| = 5, P = 1,25·CMg; com |ε| → ∞ (firma competitiva), P → CMg.",
+            "Intuição: demanda inelástica significa consumidor pouco sensível ao preço (poucos substitutos, bem "
+            "essencial, hábito). O monopolista sobe o preço e perde poucas vendas — por isso pode cobrar margem alta.",
+            "Detalhe que a banca explora: o monopolista <b>nunca</b> opera no trecho inelástico da demanda "
+            "(|ε| < 1), pois ali a RMg é negativa e reduzir a quantidade aumentaria a receita e cortaria custos. "
+            "“Mais inelástica” quer dizer |ε| menor, mas ainda maior que 1 no ponto escolhido.",
+            "Aplicações: é a mesma lógica da " + azb("discriminação de 3º grau") + " (preço maior no grupo de "
+            "demanda menos elástica) e da " + azb("regra de Ramsey") + " na tarifação de monopólios regulados "
+            "(margens maiores onde a demanda é menos elástica).",
+            vm("Regra-âncora: markup de Lerner = 1/|ε| — elasticidade e markup andam em sentidos opostos."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Item que reproduz a regra de Lerner em palavras. O risco é a "
+                       "inversão mental: quem associa “mais elástica” a “mais reação” pode achar que a margem cresce "
+                       "com a elasticidade. Pista: elasticidade alta = concorrência próxima = margem pequena."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Num monopólio, o mark up é maior quanto mais elástica ao preço for a demanda.”</i> → ERRADO "
+            "(inversão: Lerner = 1/|ε|)",
+            "<i>“O monopolista maximizador de lucro pode operar no trecho inelástico da curva de demanda.”</i> → "
+            "ERRADO (ali a RMg é negativa)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["quanto mais"], "dificuldade": 1,
+        "comentario_fonte": "Duas respostas convergentes: (P − CMg)/P = 1/|ε|; demanda mais inelástica → |ε| "
+                            "menor → markup maior; consumidores menos sensíveis permitem elevar o preço.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01759
+    {
+        "id": "ECO-E2-L01759-1", "fonte_ref": "E2-L01759", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": COM_FIRMA_CUSTOS,
+        "rotulo_item": "Item",
+        "assertiva": ("Por possuir elevados custos fixos em laboratórios e pagamento de pesquisadores, porém baixos "
+                      "custos marginais de produção após a descoberta da fórmula de uma vacina, a produção de "
+                      "vacinas tende a apresentar estrutura de mercado com poder de monopólio, sujeita a patentes e "
+                      "ganhos de monopólio que garantem o pagamento dos custos fixos e irrecuperáveis aos seus "
+                      "produtores."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Por possuir <u>elevados custos fixos</u> em laboratórios e pagamento de pesquisadores, porém "
+                      "<u>baixos custos marginais</u> de produção após a descoberta da fórmula de uma vacina, a "
+                      "produção de vacinas <u>tende a</u> apresentar estrutura de mercado com poder de monopólio, "
+                      "sujeita a patentes e ganhos de monopólio que garantem o pagamento dos custos fixos e "
+                      "irrecuperáveis aos seus produtores."),
+        "poucas": ("Custo fixo e " + azb("irrecuperável") + " alto + custo marginal baixo: se o preço caísse ao CMg "
+                   "(cópia livre), ninguém recuperaria a pesquisa. A " + azb("patente") + " cria monopólio "
+                   "temporário para que o preço acima do CMg pague o investimento."),
+        "destrinchando": [
+            "Estrutura de custos da inovação: a P&amp;D é um " + azb("custo fixo e irrecuperável") + " (sunk cost) — "
+            "uma vez gasto, não volta, haja ou não produção. Depois da fórmula, cada dose custa pouco: "
+            + vd("CMg baixo") + " e " + vd("CMe decrescente") + ", como no monopólio natural.",
+            "Problema de " + azb("apropriabilidade") + ": conhecimento é não rival e, sem proteção, pouco "
+            "excludente. Com cópia livre, a concorrência levaria o preço ao CMg, abaixo do CMe, e o inovador nunca "
+            "cobriria o custo da pesquisa — subinvestimento em inovação.",
+            "A " + azb("patente") + " é um " + azb("monopólio legal") + " temporário (no " + rx("Brasil") + ", "
+            + vd("20 anos") + " contados do depósito, pela Lei 9.279/1996, alinhada ao acordo TRIPS da OMC). O "
+            "preço acima do CMg gera receita para pagar o custo fixo — e também peso morto enquanto dura a "
+            "proteção.",
+            "Trade-off clássico: " + azb("ineficiência estática") + " (P > CMg, menos acesso) × "
+            + azb("eficiência dinâmica") + " (incentivo a novas descobertas, na linha de " + oc("Schumpeter")
+            + "). Por isso a proteção é temporária e admite flexibilidades, como a licença compulsória — usada "
+            "pelo " + rx("Brasil") + " em 2007 para o antirretroviral efavirenz.",
+            "Atenção à nomenclatura: o item fala em “poder de monopólio” e “tende a”, não em monopólio natural "
+            "estrito; o mercado de vacinas tem poucos grandes produtores, e o poder de mercado vem sobretudo da "
+            "patente e da escala.",
+            vm("Regra-âncora: patente = monopólio temporário que paga o custo fixo da inovação (eficiência "
+               "dinâmica) ao preço de peso morto (ineficiência estática)."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " O item descreve a justificativa econômica "
+                       "padrão das patentes, com o modulador “tende a” protegendo a generalização. O risco é o "
+                       "candidato reagir ao tom (“ganhos de monopólio” soa negativo) e marcar ERRADO. 🔥 O par "
+                       "patente × peso morto é recorrente: veja o item gêmeo sobre “perda líquida sempre”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Como os custos marginais são baixos, a fixação do preço da vacina no custo marginal garantiria a "
+            "recuperação dos custos de pesquisa.”</i> → ERRADO (P = CMg &lt; CMe não cobre o custo fixo)",
+            "<i>“A patente cria um monopólio legal temporário que gera peso morto enquanto vigora.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": "Duas respostas convergentes: custos fixos de P&amp;D como barreira, CMg baixo após a "
+                            "fórmula, patentes como monopólio legal temporário que permite recuperar os custos "
+                            "irrecuperáveis e incentiva a inovação.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 524", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (regulação de monopólio natural por Pc e Pr; mecanismo descrito no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01760
+    {
+        "id": "ECO-E2-L01760-1", "fonte_ref": "E2-L01760", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": COM_FIRMA_CUSTOS,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma patente de medicamentos introduz um monopólio que sempre trará uma perda líquida para a "
+                      "sociedade, pois os ganhos do avanço científico certamente não compensam as perdas para os "
+                      "consumidores, que pagarão preços acima do custo marginal de produção, gerando peso morto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma patente de medicamentos introduz um monopólio que ") + vm("sempre trará uma perda líquida")
+                   + az(" para a sociedade, pois os ganhos do avanço científico ") + vm("certamente não compensam")
+                   + az(" as perdas para os consumidores, que pagarão preços acima do custo marginal de produção, "
+                        "gerando peso morto."),
+        "poucas": ("O peso morto da patente é real, mas o saldo social é um " + azb("trade-off") + ": sem a "
+                   "proteção, muitos medicamentos nem existiriam. “Sempre” e “certamente” transformam uma questão "
+                   "empírica em certeza."),
+        "destrinchando": [
+            azb("Perda estática") + ": durante a patente, o laboratório é monopolista, cobra P > CMg e restringe a "
+            "quantidade. Pacientes dispostos a pagar acima do custo de fabricação ficam sem o remédio — "
+            + azb("peso morto") + ". Essa parte do item está correta.",
+            azb("Ganho dinâmico") + ": o desenvolvimento de um medicamento envolve custos de P&amp;D enormes e "
+            "irrecuperáveis. Sem a perspectiva de lucro de monopólio, a cópia imediata levaria o preço ao CMg e "
+            "ninguém investiria. O excedente gerado por um remédio novo (que antes não existia) pode superar em "
+            "muito o peso morto do período protegido.",
+            "O saldo depende de parâmetros: duração e amplitude da patente, elasticidade da demanda, custo da "
+            "pesquisa, existência de substitutos. A teoria do " + azb("desenho ótimo de patentes") + " ("
+            + oc("Nordhaus") + ", 1969) busca justamente o prazo que equilibra incentivo e peso morto.",
+            "Instrumentos que reduzem a perda sem destruir o incentivo: prazo limitado (" + vd("20 anos") + " no "
+            "TRIPS), " + azb("licença compulsória") + " em emergências de saúde pública, compras governamentais em "
+            "grande escala, prêmios à inovação e entrada de genéricos após a expiração.",
+            vm("Regra-âncora: patente = peso morto estático × inovação dinâmica; o saldo é empírico, nunca "
+               "“sempre”."),
+        ],
+        "dissecando": (cz("[modulador absoluto · meia-verdade]") + " A parte final (P > CMg, peso morto) é verdadeira "
+                       "e dá credibilidade; o erro está nos absolutos “sempre” e “certamente”, que negam o ganho "
+                       "dinâmico. 🔥 Em economia, “sempre” e “certamente” sobre saldo de bem-estar quase sempre "
+                       "indicam ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Durante sua vigência, a patente de medicamentos permite preços acima do custo marginal, gerando "
+            "peso morto.”</i> → CERTO",
+            "<i>“A patente de medicamentos é eficiente do ponto de vista estático, pois iguala o preço ao custo "
+            "marginal.”</i> → ERRADO (a ineficiência estática é justamente P > CMg)",
+        ])],
+        "reescrita": ("Uma patente de medicamentos introduz um monopólio que " + hl("pode trazer") + " uma perda "
+                      "líquida para a sociedade " + hl("se") + " os ganhos do avanço científico não "
+                      + hl("compensarem") + " as perdas para os consumidores, que pagarão preços acima do custo "
+                      "marginal de produção, gerando peso morto."),
+        "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["sempre", "certamente"], "dificuldade": 1,
+        "comentario_fonte": "Duas respostas convergentes: o erro está em “sempre” e “certamente”; patentes "
+                            "envolvem trade-off entre perda estática (peso morto) e ganho dinâmico (incentivo à "
+                            "inovação).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00018
+    {
+        "id": "ECO-E3-L00018-1", "fonte_ref": "E3-L00018", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": ("No que se refere a estruturas de mercado, cadeias e redes produtivas, competitividade e "
+                    "estratégia empresarial, julgue o item seguinte."),
+        "rotulo_item": "Item",
+        "assertiva": ("Empresas com poder de mercado buscam capturar o excedente do consumidor por meio de "
+                      "estratégias de diferenciação de preços."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Empresas com <u>poder de mercado</u> buscam capturar o excedente do consumidor por meio de "
+                      "estratégias de <u>diferenciação de preços</u>."),
+        "poucas": ("“Diferenciação de preços” = " + azb("discriminação de preços") + ": cobrar valores distintos "
+                   "conforme a disposição a pagar, convertendo " + vd("excedente do consumidor em lucro") + ". Só é "
+                   "possível com poder de mercado."),
+        "destrinchando": [
+            "Com preço único, o monopolista deixa excedente com todo consumidor que pagaria mais que o preço. "
+            "Discriminar é a forma de se apropriar dessa diferença.",
+            "Três graus (classificação de " + oc("Pigou") + ", 1920): " + azb("1º grau") + " — preço de reserva de "
+            "cada um, captura todo o EC; " + azb("2º grau") + " — menus, pacotes, descontos por quantidade, em que o "
+            "consumidor se autosseleciona; " + azb("3º grau") + " — grupos observáveis (estudantes, idosos, "
+            "regiões), com preço maior para a demanda menos elástica.",
+            "Condições: (i) " + azb("poder de mercado") + " — a firma competitiva é tomadora de preço e não "
+            "discrimina; (ii) capacidade de " + azb("segmentar") + " os consumidores; (iii) impedir a "
+            + azb("revenda") + " (arbitragem) entre quem paga barato e quem paga caro.",
+            "Exemplos: passagens aéreas (antecedência, tarifas flexíveis), meia-entrada, cupons, planos de "
+            "telefonia e streaming, precificação por região em plataformas digitais.",
+            vm("Regra-âncora: discriminação de preços = conversão de excedente do consumidor em lucro; exige poder "
+               "de mercado, segmentação e ausência de revenda."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item usa “diferenciação de preços” no lugar do termo técnico "
+                       "“discriminação”. O risco é confundir com " + azb("diferenciação de produto") + " (a marca da "
+                       "concorrência monopolística), que também gera poder de mercado, mas não é o mecanismo de "
+                       "captura de excedente descrito."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Empresas em concorrência perfeita podem capturar o excedente do consumidor por meio de "
+            "discriminação de preços.”</i> → ERRADO (tomadora de preço não discrimina)",
+            "<i>“A discriminação de preços de primeiro grau converte todo o excedente do consumidor em "
+            "excedente do produtor.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Seis respostas convergentes: firmas com poder de mercado usam discriminação de preços "
+                            "(1º, 2º e 3º graus) para extrair excedente do consumidor; exige segmentação e "
+                            "limitação da revenda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00157
+    {
+        "id": "ECO-E3-L00157-1", "fonte_ref": "E3-L00157", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": True,
+        "comando": COM_ANTT,
+        "rotulo_item": "Item",
+        "assertiva": ("A administração de uma rodovia federal sob concessão é um monopólio, pois tem apenas um "
+                      "provedor do serviço, apesar de ser livre a entrada de concorrentes."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A administração de uma rodovia federal sob concessão é um monopólio, pois tem apenas um "
+                      "provedor do serviço, ") + vm("apesar de ser livre a entrada de concorrentes") + az("."),
+        "poucas": ("Monopólio pressupõe " + azb("barreiras à entrada") + ". Na rodovia concedida, elas são legais "
+                   "(o contrato dá exclusividade) e econômicas (ninguém duplica uma estrada): a entrada "
+                   "<b>não</b> é livre."),
+        "destrinchando": [
+            "Monopólio = um único vendedor, sem substitutos próximos e com " + azb("barreiras à entrada") + ". "
+            "Sem barreiras, lucros extraordinários atrairiam concorrentes e o monopólio não se sustentaria. Por "
+            "isso “monopólio com entrada livre” é contradição em termos.",
+            "Fontes de barreiras: (i) " + azb("legais") + " — concessão exclusiva, patentes, licenças; (ii) "
+            + azb("controle de insumo essencial") + "; (iii) " + azb("economias de escala") + " que tornam um "
+            "único produtor mais barato (monopólio natural); (iv) custos irrecuperáveis elevados.",
+            "Na " + rx("rodovia federal concedida") + " (contratos da " + rx("ANTT") + "), duas barreiras se somam: "
+            "a jurídica (a concessionária detém por contrato a exploração daquele trecho) e a técnica (a estrada "
+            "é infraestrutura de rede, com custo fixo enorme e custo marginal baixo — traço de "
+            + azb("monopólio natural") + ").",
+            "Por isso a tarifa de pedágio é fixada no leilão e corrigida pelo contrato, com regras de reajuste e "
+            "revisão: o regulador substitui a disciplina que a concorrência não oferece. A competição possível é "
+            + azb("pelo mercado") + " (no leilão), não " + azb("no mercado") + ".",
+            "Concorrência indireta existe (outras rodovias, ferrovia, transporte aéreo), mas são substitutos "
+            "imperfeitos e não anulam a barreira na exploração daquele trecho.",
+            vm("Regra-âncora: sem barreira à entrada não há monopólio duradouro."),
+        ],
+        "dissecando": (cz("[contradição · meia-verdade]") + " A 1ª parte (monopólio, um só provedor) está certa; o "
+                       "erro foi enxertado na concessiva “apesar de ser livre a entrada”, que contradiz o próprio "
+                       "conceito de monopólio e a natureza da concessão. Pista: “sob concessão” já anuncia barreira "
+                       "legal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A administração de uma rodovia federal sob concessão configura monopólio, sustentado por barreira "
+            "legal à entrada de concorrentes.”</i> → CERTO",
+            "<i>“Em mercados contestáveis, a ameaça de entrada disciplina o monopolista mesmo sem concorrentes "
+            "efetivos.”</i> → CERTO",
+        ])],
+        "reescrita": ("A administração de uma rodovia federal sob concessão é um monopólio, pois tem apenas um "
+                      "provedor do serviço" + hl(" e não há livre") + " entrada de concorrentes."),
+        "tipo_erro": ["CONTRADICAO", "MEIA_VERDADE"], "moduladores": ["apesar de"], "dificuldade": 1,
+        "comentario_fonte": "Monopólio puro sem possibilidade de entrada; a concessão é barreira legal e duplicar "
+                            "a infraestrutura é inviável. Uma das respostas fala em “ferrovia” e chama a concessão de "
+                            "“monopólio natural devido à permissão do governo”, confundindo barreira legal com "
+                            "monopólio natural.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 167", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "absorvida (características do monopólio e barreiras à entrada no 📖)"},
+                          {"ref": "IMAGEM 168", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "cortada (quadro comparativo de estruturas, ilegível na transcrição)"}],
+        "alertas": ["qualidade_fonte: uma resposta da fonte chama a concessão de monopólio natural por causa da "
+                    "permissão do governo (barreira legal ≠ monopólio natural) e troca rodovia por ferrovia — "
+                    "corrigido"],
+    },
 ]

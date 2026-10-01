@@ -107,4 +107,103 @@ CARDS = [
         "alertas": ["quase_duplicata: ECO-E1-0396-1 traz a mesma assertiva com “famílias” (gabarito ERRADO); "
                     "mantidos os dois"],
     },
+    # ------------------------------------------------------------------ E1-0402
+    {
+        "id": "ECO-E1-0402-1", "fonte_ref": "E1-0402", "destino": "16", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_FLUXO,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma forma de compreendermos o funcionamento de uma economia se dá por meio do chamado "
+                      "“fluxo circular da renda”, em que os entes da sociedade se organizam como produtores e "
+                      "como consumidores."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma forma de compreendermos o funcionamento de uma economia se dá por meio do chamado "
+                      "“fluxo circular da renda”, em que os entes da sociedade se organizam <u>como produtores e "
+                      "como consumidores</u>."),
+        "poucas": ("O " + azb("fluxo circular da renda") + " é um modelo simplificado da economia em que os "
+                   "agentes aparecem em dois papéis interdependentes: produtores (empresas) e consumidores "
+                   "(famílias), ligados pelos mercados de bens e de fatores."),
+        "destrinchando": [
+            "Como todo modelo, o fluxo circular simplifica: na versão básica há só famílias e empresas, sem "
+            "governo, sem setor externo e sem poupança. Tudo o que se produz é vendido, e toda a renda é gasta.",
+            "Os dois circuitos correm em sentidos opostos: o " + azb("real") + " (fatores → empresas; bens e "
+            "serviços → famílias) e o " + azb("monetário") + " (renda → famílias; gasto de consumo → "
+            "empresas). Cada fluxo monetário paga um fluxo real.",
+            "O papel do mesmo agente muda conforme o mercado: a família é <b>ofertante</b> no mercado de "
+            "fatores e <b>demandante</b> no de bens; a empresa, o inverso. Por isso o item fala em entes que "
+            "“se organizam como produtores e como consumidores”.",
+            "A lição macroeconômica é a " + azb("interdependência") + ": o gasto de um agente é a renda de "
+            "outro. Daí a identidade " + vd("produto ≡ renda ≡ despesa") + " e a intuição keynesiana de que "
+            "uma queda do gasto reduz a renda e realimenta a queda do gasto.",
+            "Ampliado, o modelo ganha " + azb("vazamentos") + " (poupança, tributos, importações) e "
+            + azb("injeções") + " (investimento, gastos do governo, exportações); no equilíbrio, vazamentos = "
+            "injeções.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Definição genérica, sem modulador restritivo. A expressão "
+                       "“uma forma de compreendermos” relativiza o modelo, o que protege o item. O erro, quando "
+                       "a banca quer, costuma vir na troca de papéis (empresas consumindo fatores × famílias "
+                       "organizando a produção) ou na omissão de um dos fluxos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No fluxo circular da renda, o fluxo monetário e o fluxo real correm no mesmo sentido.”</i> → "
+            "ERRADO (inversão: correm em sentidos opostos)",
+            "<i>“No modelo básico do fluxo circular, a renda das famílias corresponde ao valor da produção das "
+            "empresas.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. No modelo do fluxo circular da renda, os agentes econômicos (famílias e "
+                             "empresas) atuam de forma interdependente: as famílias consomem bens e serviços e "
+                             "oferecem fatores de produção, enquanto as empresas produzem e demandam os fatores."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0413
+    {
+        "id": "ECO-E1-0413-1", "fonte_ref": "E1-0413", "destino": "16", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_AGR,
+        "rotulo_item": "Item",
+        "assertiva": ("Despesa agregada ou demanda agregada é o total de gastos realizados por todos os agentes "
+                      "econômicos (famílias, empresas, governo e setor externo) em uma economia durante um "
+                      "determinado período de tempo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Despesa agregada ou demanda agregada é o total de gastos realizados por <u>todos os agentes "
+                      "econômicos (famílias, empresas, governo e setor externo)</u> em uma economia durante um "
+                      "determinado período de tempo."),
+        "poucas": ("A " + azb("despesa (demanda) agregada") + " soma os gastos dos quatro setores com bens e "
+                   "serviços produzidos no país num período: " + vd("DA = C + I + G + (X − M)") + "."),
+        "destrinchando": [
+            "Cada agente responde por um componente: " + azb("famílias") + " → consumo (C); "
+            + azb("empresas") + " → investimento (I: máquinas, construções, variação de estoques); "
+            + azb("governo") + " → gastos com bens e serviços (G); " + azb("setor externo") + " → exportações "
+            "(X), das quais se subtraem as importações (M).",
+            "Por que subtrair M? Parte de C, I e G é gasto com bens estrangeiros, que não remunera produção "
+            "doméstica. Ao descontar M, a despesa agregada mede só a demanda dirigida ao produto do país.",
+            "Ficam de fora as " + azb("transferências") + " (aposentadorias, Bolsa Família, juros da dívida): "
+            "elas mudam a renda disponível, mas não são compra de bens e serviços — por isso não entram em G.",
+            "É uma variável " + azb("fluxo") + " (medida num intervalo: trimestre, ano), não estoque. Na "
+            "contabilidade nacional, despesa agregada = produto (identidade ex post); no modelo keynesiano, a "
+            "despesa <b>planejada</b> determina o produto de equilíbrio (cruz keynesiana).",
+            vm("Regra-âncora: DA = C + I + G + X − M — gasto em bens e serviços finais, nunca transferências."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual. O “todos os agentes” poderia soar como "
+                       "modulador absoluto, mas é exato: a despesa agregada inclui de fato os quatro setores. "
+                       "Para virar ERRADO, a banca costuma excluir um setor, somar as importações em vez de "
+                       "subtraí-las ou incluir transferências em G."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A demanda agregada corresponde à soma do consumo, do investimento, dos gastos do governo, das "
+            "exportações e das importações.”</i> → ERRADO (sinal trocado: as importações são subtraídas)",
+            "<i>“As transferências de renda do governo às famílias integram diretamente a variável G da "
+            "demanda agregada.”</i> → ERRADO (troca de conceito: transferência não é compra de bem ou serviço)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["todos"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. A demanda agregada representa a soma dos gastos de consumo das famílias (C), "
+                             "investimentos das empresas (I), gastos do governo (G) e saldo do setor externo "
+                             "(X − M). A equação é: DA = C + I + G + (X − M)."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

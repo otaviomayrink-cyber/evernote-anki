@@ -1085,4 +1085,427 @@ CARDS = [
                            "acao": "absorvida (validade por estrutura de mercado no 📖)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00271
+    {
+        "id": "ECO-E3-L00271-1", "fonte_ref": "E3-L00271", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": ("Segundo a teoria microeconômica e os seus axiomas da racionalidade, julgue o item a seguir, "
+                    "relativo ao bem-estar do consumidor."),
+        "rotulo_item": "Item",
+        "assertiva": ("A perda de bem-estar do consumidor no caso de um aumento de preço de um bem será dada pelo "
+                      "aumento na despesa com a quantidade que ele continua consumindo do bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A perda de bem-estar do consumidor no caso de um aumento de preço de um bem será dada ")
+                   + vm("pelo aumento na despesa com a quantidade que ele continua consumindo do bem") + az("."),
+        "poucas": ("A perda é a " + azb("redução do excedente do consumidor") + ": o gasto a mais com as "
+                   "unidades que continua comprando (A) " + vd("mais") + " o excedente das unidades que deixou de "
+                   "comprar (B). O item conta só A."),
+        "destrinchando": [
+            "Preço sobe de p₁ para p₂; a quantidade cai de q₁ para q₂. O excedente do consumidor (área entre a "
+            "demanda e o preço) encolhe em duas parcelas:",
+            "<b>A — retângulo</b> (p₂ − p₁) × q₂: o que o consumidor paga a mais pelas unidades que mantém. Não "
+            "some da economia: vira excedente do produtor (ou receita do governo, se a alta vier de um imposto).",
+            "<b>B — triângulo</b> entre q₂ e q₁: as unidades que deixaram de ser compradas, que valiam para ele "
+            "mais que p₁. Com demanda linear, ≈ ½ · Δp · Δq. Exemplo: p de 4 para 6, q de 6 para 4 → A = "
+            + vd("8") + ", B = " + vd("2") + ", perda total = " + vd("10") + ".",
+            "Quanto mais elástica a demanda, maior B em relação a A. Com demanda perfeitamente inelástica, B "
+            "desaparece e o item seria correto — é o único caso.",
+            "Medidas exatas de bem-estar (" + oc("Hicks") + "): a " + azb("variação compensatória") + " e a "
+            + azb("variação equivalente") + "; a variação do excedente marshalliano é uma aproximação entre "
+            "elas, que coincidem quando não há efeito-renda.",
+        ],
+        "grafico_verso": "ECO-E3-L00271-1-V1",
+        "dissecando": (cz("[meia-verdade]") + " O item descreve uma parte verdadeira da perda (o retângulo A) "
+                       "como se fosse o todo. O “será dada pelo” exige a medida completa; falta o triângulo das "
+                       "unidades abandonadas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O aumento na despesa com a quantidade que o consumidor continua consumindo é parte da perda de "
+            "excedente do consumidor.”</i> → CERTO",
+            "<i>“Com demanda perfeitamente inelástica, a perda de excedente do consumidor equivale ao aumento "
+            "da despesa com a quantidade consumida.”</i> → CERTO",
+        ])],
+        "reescrita": ("A perda de bem-estar do consumidor no caso de um aumento de preço de um bem será dada "
+                      + hl("pela redução do excedente do consumidor: o aumento na despesa com a quantidade que ele "
+                        "continua consumindo mais a perda de excedente nas unidades que deixou de consumir") + "."),
+        "tipo_erro": ["MEIA_VERDADE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Perda de EC = gasto adicional com as unidades ainda consumidas + perda nas unidades "
+                            "que deixaram de ser consumidas. Algumas respostas de IA associam as duas parcelas "
+                            "aos efeitos renda e substituição.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 376", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00271-1-V1: áreas A e B)"}],
+        "alertas": ["qualidade_fonte: respostas de origem identificam o retângulo com o efeito-renda e o "
+                    "triângulo com o efeito-substituição — associação imprecisa, não reproduzida"],
+    },
+    # ------------------------------------------------------------------ E3-L00336
+    {
+        "id": "ECO-E3-L00336-1", "fonte_ref": "E3-L00336", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": True,
+        "comando": CMD_NIDI_DEZ,
+        "rotulo_item": "Item",
+        "assertiva": ("Preço Marginal de Reserva é o preço máximo que o consumidor está disposto a pagar por uma "
+                      "unidade adicional da mercadoria."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Preço Marginal de Reserva é o preço <u>máximo</u> que o consumidor está disposto a pagar "
+                      "por uma <u>unidade adicional</u> da mercadoria."),
+        "poucas": ("É a " + azb("disposição marginal a pagar") + ": quanto vale, em dinheiro, a próxima unidade. "
+                   "Graficamente, a " + vd("altura da curva de demanda") + " em cada quantidade."),
+        "destrinchando": [
+            azb("Preço de reserva") + ": o máximo que um consumidor pagaria por um bem (para um bem indivisível "
+            "comprado uma vez, como um carro). " + azb("Preço marginal de reserva") + ": o mesmo conceito "
+            "aplicado a cada unidade adicional — a 1ª, a 2ª, a 3ª…",
+            "Como a utilidade marginal é decrescente, o preço marginal de reserva cai à medida que o consumidor "
+            "já tem mais unidades. É por isso que a demanda individual é negativamente inclinada: lida "
+            "verticalmente, ela é a curva de benefício marginal.",
+            "O consumidor compra enquanto o preço marginal de reserva for ≥ preço de mercado. Cada unidade "
+            "rende um excedente de (preço de reserva − preço); somando-se tudo, chega-se ao "
+            + azb("excedente do consumidor") + " = área entre a demanda e o preço.",
+            "Leitura dupla da demanda: horizontal (dado p, quanto se compra) e vertical (dada a quantidade, "
+            "quanto se pagaria pela última unidade). O conceito do item é a leitura vertical.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual, com os dois termos-chave no lugar: "
+                       "“máximo” e “unidade adicional”. A dúvida que derruba o candidato é confundir o preço "
+                       "marginal de reserva com o preço de mercado ou com o preço de reserva da unidade inteira "
+                       "comprada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Preço marginal de reserva é o preço mínimo que o consumidor aceita pagar por uma unidade "
+            "adicional.”</i> → ERRADO (é o máximo)",
+            "<i>“O preço marginal de reserva corresponde ao preço de mercado pago pelo consumidor.”</i> → ERRADO "
+            "(coincide com ele só na última unidade comprada)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["máximo"], "dificuldade": 1,
+        "comentario_fonte": "Cinco respostas de IA concordantes: disposição marginal a pagar, lida na altura da "
+                            "curva de demanda; base do cálculo do excedente do consumidor.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 466", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00337
+    {
+        "id": "ECO-E3-L00337-1", "fonte_ref": "E3-L00337", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_DEZ,
+        "rotulo_item": "Item",
+        "assertiva": ("Excedente do Consumidor é a diferença que o consumidor está disposto a pagar e o que ele "
+                      "efetivamente paga por uma mercadoria."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Excedente do Consumidor é a diferença <u>que o consumidor está disposto a pagar e o que ele "
+                      "efetivamente paga</u> por uma mercadoria."),
+        "poucas": ("Definição clássica: " + azb("disposição a pagar − preço pago") + ". Somada sobre todas as "
+                   "unidades, é a " + vd("área entre a demanda e o preço") + "."),
+        "destrinchando": [
+            "Para uma unidade: excedente = preço de reserva − preço. Para o mercado: soma dessas diferenças "
+            "sobre todas as unidades compradas — o triângulo abaixo da demanda e acima do preço (com demanda "
+            "linear, ½ × base × altura).",
+            "Mede o ganho líquido de bem-estar dos compradores por participarem do mercado. Sobe quando o preço "
+            "cai (os antigos compradores pagam menos e novos compradores entram) e cai quando o preço sobe.",
+            "Par simétrico: " + azb("excedente do produtor") + " = preço recebido − custo marginal (área entre o "
+            "preço e a oferta). A soma é o excedente total, máximo no equilíbrio competitivo.",
+            "A redação omite o “entre” (“a diferença [entre o] que…”) e não diz “somada sobre as unidades”, mas "
+            "o núcleo da definição está correto — e é assim que a banca a aceita.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Item-definição. O risco é o candidato procurar defeito na "
+                       "redação imperfeita e marcar ERRADO; o critério é o conteúdo, que está certo. Erraria se "
+                       "trocasse “disposto a pagar” por “custo de produção” (seria o EP)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Excedente do consumidor é a diferença entre o preço pago pelo consumidor e o custo marginal de "
+            "produção.”</i> → ERRADO (troca de conceito: mistura com o excedente do produtor)",
+            "<i>“Uma queda no preço de mercado aumenta o excedente do consumidor.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Cinco respostas de IA concordantes: definição clássica; área abaixo da demanda e "
+                            "acima do preço; formalmente, soma das diferenças por unidade.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 467-469", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00338
+    {
+        "id": "ECO-E3-L00338-1", "fonte_ref": "E3-L00338", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_DEZ,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o preço de um bem cair, o excedente do produtor aumenta por duas razões. Primeiro, há "
+                      "aumento do excedente para os produtores que já vendiam o bem por causa do aumento da "
+                      "demanda e, além disso, há crescimento por causa do incentivo à entrada de novos "
+                      "produtores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o preço de um bem ") + vm("cair") + az(", o excedente do produtor aumenta por duas "
+                      "razões. Primeiro, há aumento do excedente para os produtores que já vendiam o bem por "
+                      "causa do aumento da demanda e, além disso, há crescimento por causa do incentivo à "
+                      "entrada de novos produtores."),
+        "poucas": ("As “duas razões” descrevem uma " + azb("alta") + " de preço: produtores antigos ganham mais "
+                   "por unidade e novos produtores entram. Com o preço em queda, o excedente do produtor "
+                   + vd("diminui") + "."),
+        "destrinchando": [
+            "Excedente do produtor = área entre o preço e a oferta. Se o preço " + azb("sobe") + " (por exemplo, "
+            "por aumento da demanda), a área cresce por duas vias: (1) os produtores que já vendiam recebem mais "
+            "por unidade (retângulo); (2) novos produtores, com custo marginal mais alto, passam a vender "
+            "(triângulo). É a decomposição de " + oc("Mankiw") + " no capítulo sobre consumidores, produtores e "
+            "eficiência dos mercados.",
+            "Se o preço " + azb("cai") + ", ocorre o inverso: os antigos produtores recebem menos e os de custo "
+            "mais alto saem do mercado. O EP " + vd("encolhe") + ".",
+            "O item também é incoerente por dentro: aumento da demanda <b>eleva</b> o preço — não pode ser a "
+            "causa de um preço em queda.",
+            "Espelho do lado do consumidor: com preço em queda, o " + azb("excedente do consumidor") + " aumenta "
+            "por duas razões — os compradores antigos pagam menos e novos compradores entram. O item parece "
+            "ter misturado as duas decomposições.",
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " O item copia a decomposição correta do aumento do EP "
+                       "e troca só o sentido da variação de preço. Pista interna: “aumento da demanda” e “preço "
+                       "cair” não convivem."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o preço de um bem cair, o excedente do consumidor aumenta, porque os compradores antigos "
+            "pagam menos e novos compradores entram no mercado.”</i> → CERTO",
+            "<i>“Uma alta do preço eleva o excedente do produtor apenas por meio da entrada de novos "
+            "produtores.”</i> → ERRADO (restrição indevida: os antigos também ganham)",
+        ])],
+        "reescrita": ("Se o preço de um bem " + hl("subir") + ", o excedente do produtor aumenta por duas razões. "
+                      "Primeiro, há aumento do excedente para os produtores que já vendiam o bem por causa do "
+                      "aumento da demanda e, além disso, há crescimento por causa do incentivo à entrada de novos "
+                      "produtores."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Várias respostas de IA concordantes: queda de preço reduz o EP; aumento da demanda "
+                            "eleva o preço; a descrição corresponde a uma alta de preço (ou ao EC numa queda).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 470-471", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00339
+    {
+        "id": "ECO-E3-L00339-1", "fonte_ref": "E3-L00339", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_DEZ,
+        "rotulo_item": "Item",
+        "assertiva": "O excedente do produtor no curto prazo pode ser medido pelo lucro total da empresa.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O excedente do produtor no curto prazo pode ser medido pelo ") + vm("lucro total")
+                   + az(" da empresa."),
+        "poucas": ("No curto prazo, " + vd("EP = RT − CV") + "; lucro = RT − CV − CF. Logo "
+                   + vd("EP = lucro + custo fixo") + ": os dois só coincidem se o custo fixo for zero."),
+        "destrinchando": [
+            "O excedente do produtor é a soma, sobre as unidades vendidas, de (preço − custo marginal). Como a "
+            "soma dos custos marginais é o " + azb("custo variável") + " (o custo fixo não varia com q), "
+            "EP = RT − CV — no gráfico da firma, o retângulo (P − CVMe) × q.",
+            azb("Lucro econômico") + " = RT − CT = RT − CV − CF. A diferença é o " + azb("custo fixo")
+            + ", que no curto prazo é afundado e não afeta a decisão de produzir.",
+            "Por isso a firma pode ter EP positivo com lucro negativo: se P > CVMe, ela cobre os custos variáveis "
+            "e parte do fixo — melhor produzir que fechar (fechar daria prejuízo = CF inteiro).",
+            "No longo prazo, sem custos fixos, EP e lucro econômico tendem a coincidir. Referência: "
+            + oc("Pindyck e Rubinfeld") + ", <i>Microeconomia</i>, capítulo sobre maximização de lucros e "
+            "oferta competitiva.",
+            vm("Regra-âncora: EP de curto prazo = lucro + custo fixo."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca o excedente do produtor por um conceito vizinho "
+                       "(lucro). A pista é “no curto prazo”: é justamente o horizonte em que existe custo fixo "
+                       "e os dois conceitos se separam."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No curto prazo, o excedente do produtor é igual à receita total menos o custo variável "
+            "total.”</i> → CERTO",
+            "<i>“O excedente do produtor de curto prazo é sempre menor que o lucro econômico.”</i> → ERRADO "
+            "(inversão: é maior, pelo custo fixo)",
+        ])],
+        "reescrita": ("O excedente do produtor no curto prazo pode ser medido " + hl("pela receita total menos o "
+                      "custo variável, isto é, pelo lucro mais o custo fixo") + " da empresa."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["no curto prazo"], "dificuldade": 2,
+        "comentario_fonte": "EP = RT − CV; lucro = RT − CT; EP = lucro + custo fixo. Referência a Pindyck nas "
+                            "anotações.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 472", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (identidades no 📖)"},
+                          {"ref": "IMAGEM 473-474", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0008
+    {
+        "id": "ECO-E1-0008-1", "fonte_ref": "E1-0008", "destino": "04", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2010, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da escolha do consumidor em mercados competitivos, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Nos mercados competitivos, a escolha ótima a ser feita por determinado consumidor "
+                      "corresponde à escolha em que a taxa marginal de substituição entre dois bens quaisquer é "
+                      "igual para todos os consumidores."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Nos <u>mercados competitivos</u>, a escolha ótima a ser feita por determinado consumidor "
+                      "corresponde à escolha em que a taxa marginal de substituição entre dois bens quaisquer é "
+                      "<u>igual para todos os consumidores</u>."),
+        "poucas": ("Cada consumidor escolhe onde " + vd("TMS = p<sub>x</sub>/p<sub>y</sub>") + ". Em mercado "
+                   "competitivo, todos enfrentam os " + azb("mesmos preços") + ", logo, no ótimo, todas as TMS "
+                   "são iguais."),
+        "destrinchando": [
+            "Ótimo do consumidor (solução interior): tangência entre a curva de indiferença e a reta "
+            "orçamentária, " + vd("TMS<sub>xy</sub> = UMg<sub>x</sub>/UMg<sub>y</sub> = "
+            "p<sub>x</sub>/p<sub>y</sub>") + ". A TMS mede quanto de y o consumidor aceita ceder por mais uma "
+            "unidade de x; o preço relativo, quanto o mercado cobra.",
+            "Em concorrência perfeita há preço único (todos são tomadores de preço). Se cada um iguala a sua "
+            "TMS ao mesmo p<sub>x</sub>/p<sub>y</sub>, então TMS<sup>A</sup> = TMS<sup>B</sup> = … para todos "
+            "— ainda que as cestas, as rendas e as preferências sejam diferentes.",
+            "Esse é o resultado de " + azb("eficiência nas trocas") + ": com TMS iguais, não há troca adicional "
+            "que melhore alguém sem piorar outro (curva de contrato na caixa de " + oc("Edgeworth")
+            + "). É peça do 1º teorema do bem-estar.",
+            "Se as TMS diferissem (A valoriza x em 3 y e B em 1 y), A compraria x de B a qualquer preço entre 1 "
+            "e 3 e ambos ganhariam — sinal de que o ótimo ainda não foi atingido.",
+            "Limites: soluções de canto (consumidor que não compra um dos bens) e preços diferenciados "
+            "(discriminação, subsídios por grupo) quebram a igualdade.",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " A redação junta duas coisas — o ótimo individual "
+                       "(TMS = preço relativo) e a consequência agregada (TMS igual para todos) — numa só frase, "
+                       "o que soa estranho. O elo é o preço único do mercado competitivo; quem pensa que "
+                       "preferências diferentes geram TMS diferentes no ótimo marca ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em mercados competitivos, no ótimo, todos os consumidores consomem as mesmas quantidades dos "
+            "bens.”</i> → ERRADO (as TMS se igualam, não as cestas)",
+            "<i>“Se o vendedor praticar discriminação de preços entre consumidores, as TMS no ótimo continuam "
+            "necessariamente iguais.”</i> → ERRADO (preços relativos diferentes → TMS diferentes)",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": ["quaisquer", "todos"], "dificuldade": 2,
+        "comentario_fonte": "Comentários empilhados concordam: TMS = preço relativo no ótimo; preços dados e "
+                            "iguais para todos tornam as TMS iguais; igualdade de TMS não implica igualdade de "
+                            "quantidades. Um deles traz exemplo numérico inconsistente (troca de 2 kg de arroz "
+                            "por um cinto convertida em TMS de 5 kg por cinto).",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["gabarito: a classificação marcava “?”; o verso da fonte indica CERTO em todas as respostas "
+                    "(“Correta”, “Item correto!”, “Verdadeiro”)",
+                    "banca_provavel: item com ano (2010) e estilo C/E de CEBRASPE; prova não identificada por "
+                    "busca"],
+    },
+    # ------------------------------------------------------------------ E1-0012
+    {
+        "id": "ECO-E1-0012-1", "fonte_ref": "E1-0012", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da teoria do consumidor, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("É correto afirmar que “Uma curva de indiferença representa uma combinação de quantidades "
+                      "de bens expressa em cestas de consumo que mantém o consumidor indiferente entre tais "
+                      "cestas.”?"),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma curva de indiferença representa uma combinação de quantidades de bens expressa em "
+                      "cestas de consumo que mantém o consumidor <u>indiferente</u> entre tais cestas."),
+        "poucas": ("Curva de indiferença = lugar geométrico das " + azb("cestas que dão o mesmo nível de "
+                   "utilidade") + ": o consumidor não prefere nenhuma delas às demais."),
+        "destrinchando": [
+            "Cada ponto da curva é uma cesta (x, y); todas as cestas da mesma curva geram a mesma satisfação. "
+            "Cestas acima/à direita (em curvas mais altas) são preferidas, sob monotonicidade.",
+            "A curva retrata só as " + azb("preferências") + ": não envolve preços nem renda — estes entram pela "
+            "reta orçamentária. O ótimo é a tangência entre as duas.",
+            "Propriedades das preferências bem-comportadas: inclinação negativa (monotonicidade: para ter menos "
+            "de um bem, é preciso mais do outro), convexidade (TMS decrescente) e curvas que " + vd("não se "
+            "cruzam") + " (transitividade).",
+            "A inclinação é a " + azb("taxa marginal de substituição") + " (TMS = UMg<sub>x</sub>/UMg<sub>y</sub>), "
+            "a taxa à qual o consumidor troca um bem pelo outro sem mudar de utilidade.",
+            "Formatos especiais: retas (substitutos perfeitos), em L (complementares perfeitos), "
+            "positivamente inclinadas quando um dos bens é um “mal”.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual em forma de pergunta. O risco é procurar "
+                       "pelo em ovo: “combinação de quantidades … em cestas” é redundante, mas correto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma curva de indiferença mostra as cestas que o consumidor pode adquirir com a sua "
+            "renda.”</i> → ERRADO (troca de conceito: essa é a restrição orçamentária)",
+            "<i>“Curvas de indiferença de um mesmo consumidor com preferências transitivas podem se "
+            "cruzar.”</i> → ERRADO (o cruzamento violaria a transitividade)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Definição: combinações de dois bens entre as quais o consumidor é indiferente, mesma "
+                            "utilidade; não considera preços nem renda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0053
+    {
+        "id": "ECO-E1-0053-1", "fonte_ref": "E1-0053", "destino": "04", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da demanda de mercado, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": "A curva de demanda de mercado de um determinado bem representa a soma das demandas individuais.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A curva de demanda de mercado de um determinado bem representa a <u>soma</u> das demandas "
+                      "individuais."),
+        "poucas": ("A demanda de mercado é a " + azb("soma horizontal") + " das demandas individuais: para cada "
+                   "preço, somam-se as " + vd("quantidades") + " demandadas por todos os consumidores."),
+        "destrinchando": [
+            "Soma horizontal: fixa-se o preço e somam-se as quantidades — Q(p) = q<sub>1</sub>(p) + "
+            "q<sub>2</sub>(p) + … Não se somam preços (isso seria soma vertical).",
+            "Exemplo: q<sub>A</sub> = 10 − p e q<sub>B</sub> = 20 − 2p → Q = " + vd("30 − 3p") + " para p ≤ 10. "
+            "Acima de p = 10, A sai do mercado e só B demanda: a curva de mercado tem uma " + azb("quebra")
+            + " (dobra) no preço em que um consumidor entra ou sai.",
+            "Consequências: a demanda de mercado é mais plana (mais elástica em cada preço) que as individuais, e "
+            "se desloca também com o " + azb("número de consumidores") + " — um determinante que não existe "
+            "na demanda individual.",
+            "Contraste: para " + azb("bens públicos") + " (não rivais), a disposição a pagar agregada é a soma "
+            + vd("vertical") + " das demandas — todos consomem a mesma quantidade, e somam-se os valores "
+            "marginais.",
+            "Ressalva teórica: a soma simples supõe demandas independentes; efeitos de rede, “efeito manada” ou "
+            "“esnobe” tornam a demanda de cada um dependente da dos outros.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item curto e verdadeiro. A versão que a banca usa para "
+                       "derrubar é trocar “soma horizontal” por “vertical” ou aplicar a soma horizontal a bens "
+                       "públicos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A curva de demanda de mercado é obtida pela soma vertical das curvas de demanda "
+            "individuais.”</i> → ERRADO (soma-se horizontalmente, as quantidades)",
+            "<i>“Para bens públicos, a curva de disposição marginal a pagar agregada é a soma vertical das "
+            "individuais.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A demanda de mercado é a soma horizontal das demandas individuais para cada preço.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0183
+    {
+        "id": "ECO-E1-0183-1", "fonte_ref": "E1-0183", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2019, "cacd": False,
+        "errei": True,
+        "comando": "Acerca das preferências do consumidor, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("O pressuposto de que “quanto mais de um bem, melhor” é tratado no axioma da "
+                      "monotonicidade das preferências."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O pressuposto de que “quanto mais de um bem, melhor” é tratado no axioma da "
+                      "<u>monotonicidade</u> das preferências."),
+        "poucas": ("" + azb("Monotonicidade") + " (não saciedade): uma cesta com mais de pelo menos um bem, e não "
+                   "menos de nenhum, é preferida. É o “quanto mais, melhor”."),
+        "destrinchando": [
+            "Axiomas das preferências racionais: " + azb("completude") + " (o consumidor compara quaisquer duas "
+            "cestas), " + azb("transitividade") + " (A ≻ B e B ≻ C ⇒ A ≻ C) e, para preferências "
+            "<b>bem-comportadas</b>, " + azb("monotonicidade") + " e " + azb("convexidade") + ".",
+            "Monotonicidade = não saciedade: utilidade marginal positiva, mesmo que pequena. Consequências "
+            "gráficas: curvas de indiferença " + vd("negativamente inclinadas") + " (perder um bem exige "
+            "compensação no outro) e curvas mais afastadas da origem representando mais utilidade.",
+            "Convexidade é outra coisa: “médias são preferidas aos extremos” — gera TMS decrescente e curvas "
+            "convexas em relação à origem.",
+            "Exceções que violam a monotonicidade: males (poluição, lixo), bens com ponto de saciedade "
+            "(“bliss point”) e bens neutros.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Associação direta entre o rótulo e a ideia. As versões erradas "
+                       "costumam trocar o axioma: atribuir o “quanto mais, melhor” à convexidade ou à "
+                       "transitividade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O pressuposto de que médias são preferidas aos extremos decorre do axioma da "
+            "monotonicidade.”</i> → ERRADO (troca de conceito: é a convexidade)",
+            "<i>“Sob monotonicidade, as curvas de indiferença têm inclinação negativa.”</i> → CERTO",
+        ]), ("🧠 Mnemônico", ["<b>MONEY</b>tonicidade: com dinheiro, quanto mais, melhor."])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Vários comentários de professores concordantes: monotonicidade = não saciedade, "
+                            "“quanto mais, melhor”; lista de axiomas (completude, transitividade, monotonicidade, "
+                            "convexidade); mnemônico “MONEYtonicidade”.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

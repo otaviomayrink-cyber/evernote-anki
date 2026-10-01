@@ -770,4 +770,273 @@ CARDS = [
         alertas=["qualidade_fonte: o comentário de origem lista as “hipóteses necessárias” sem distinguir os "
                  "teoremas; a convexidade é exigida só pelo 2º (precisado no 📖)"],
     ),
+    # ------------------------------------------------------------------ E1-0152
+    card(
+        "E1-0152", "efi", COM_PARETO,
+        assertiva=("No ótimo de Pareto, a economia está na fronteira de possibilidades de produção e na fronteira "
+                   "de possibilidades de utilidade, simultaneamente, pois os preços funcionam como sinal de "
+                   "escassez para as empresas e de utilidade social para os consumidores."),
+        gabarito="CERTO",
+        anotada=az("No ótimo de Pareto, a economia está na fronteira de possibilidades de produção <u>e</u> na "
+                   "fronteira de possibilidades de utilidade, <u>simultaneamente</u>, pois os preços funcionam "
+                   "como sinal de escassez para as empresas e de utilidade social para os consumidores."),
+        poucas=("O ótimo de Pareto em " + azb("equilíbrio geral") + " exige eficiência na produção (estar na "
+                + azb("FPP") + ") e na distribuição dos bens (estar na " + azb("FPU") + "); em concorrência, "
+                "os " + vd("preços relativos") + " coordenam as duas coisas ao mesmo tempo."),
+        destrinchando=[
+            "Três condições de eficiência em equilíbrio geral: (1) <b>produção</b> — TMST entre capital e "
+            "trabalho igual em todas as indústrias → economia sobre a " + azb("fronteira de possibilidades de "
+            "produção") + "; (2) <b>troca</b> — TMS entre os bens igual para todos os consumidores → sobre a "
+            "curva de contrato; (3) <b>mix de produtos</b> — " + vd("TMS = TMT") + " (taxa marginal de "
+            "transformação, a inclinação da FPP).",
+            "Satisfeitas as três, a economia está na " + azb("fronteira de possibilidades de utilidade") + " "
+            "“grande”: não dá para elevar a utilidade de alguém sem reduzir a de outro, nem reorganizando a "
+            "produção, nem redistribuindo os bens.",
+            "O “pois” do item remete ao " + azb("1º Teorema do Bem-Estar") + ": em concorrência perfeita, as "
+            "firmas igualam a TMT à razão de preços (p = CMg) e os consumidores igualam a TMS à mesma razão. "
+            "Os preços transmitem, de um lado, o custo de oportunidade (escassez) e, do outro, a valoração "
+            "marginal dos consumidores — e as três condições se cumprem sem planejador central.",
+            "Estar na FPP é necessário, mas não suficiente: pode-se produzir eficientemente a cesta errada "
+            "(TMS ≠ TMT) ou distribuí-la mal entre consumidores.",
+        ],
+        dissecando=(cz("[detalhe · paráfrase fiel]") + " Item longo, com duas afirmações encadeadas por "
+                    "“pois”. A primeira (FPP e FPU simultaneamente) é a definição; a segunda explica o "
+                    "mecanismo competitivo que leva até lá. O risco é desconfiar do “simultaneamente” ou do "
+                    "nexo causal — ambos corretos no modelo competitivo."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Basta que a economia esteja sobre a fronteira de possibilidades de produção para que se "
+            "alcance o ótimo de Pareto.”</i> → ERRADO (restrição indevida: falta a eficiência na troca e no "
+            "mix, TMS = TMT)",
+            "<i>“No ótimo de Pareto, a taxa marginal de substituição dos consumidores iguala a taxa marginal "
+            "de transformação da economia.”</i> → CERTO",
+        ])],
+        tipo_erro=["DETALHE", "PARAFRASE_FIEL"], dificuldade=2,
+        comentario_fonte=("CERTO. No ótimo de Pareto em equilíbrio geral, a economia atinge eficiência na produção "
+                          "(FPP) e na alocação dos bens entre os consumidores (FPU). Os preços relativos orientam "
+                          "a produção (escassez) e as escolhas dos consumidores (preferências e utilidade "
+                          "marginal)."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0153
+    card(
+        "E1-0153", "efi", COM_PARETO,
+        assertiva="A alocação eficiente dos recursos produtivos garante maior equidade social.",
+        gabarito="ERRADO",
+        anotada=(az("A alocação eficiente dos recursos produtivos ") + vm("garante maior equidade social")
+                 + az(".")),
+        poucas=(azb("Eficiência") + " e " + azb("equidade") + " são critérios independentes: uma alocação "
+                "pode ser Pareto-eficiente e " + vd("extremamente desigual") + ". Eficiência não garante "
+                "justiça distributiva."),
+        destrinchando=[
+            "Eficiência alocativa (ótimo de Pareto) responde à pergunta “há desperdício?”. Equidade responde "
+            "a “a distribuição é justa?”. A primeira é positiva; a segunda depende de um juízo de valor "
+            "(critério distributivo).",
+            "Toda a curva de contrato é eficiente — inclusive os pontos próximos das origens, em que um "
+            "consumidor fica com quase tudo. O mercado competitivo leva a um ponto eficiente que reflete a "
+            "<b>dotação inicial</b>: se ela é desigual, o resultado também será.",
+            "O " + azb("2º Teorema do Bem-Estar") + " sugere o caminho para conciliar os dois: redistribuir as "
+            "dotações (idealmente com transferências de montante fixo) e deixar o mercado operar. Na prática, "
+            "tributos e transferências reais alteram incentivos, e surge o " + azb("trade-off entre "
+            "equidade e eficiência") + " — o “grande dilema” de " + oc("Arthur Okun") + " (<i>Equality and "
+            "Efficiency: The Big Tradeoff</i>, 1975).",
+            "Por isso a política pública trata as duas dimensões com instrumentos diferentes: concorrência e "
+            "correção de falhas de mercado para a eficiência; tributação progressiva e transferências para a "
+            "equidade.",
+            vm("Regra-âncora: eficiência diz se o bolo é o maior possível; equidade, como ele é repartido."),
+        ],
+        dissecando=(cz("[nexo indevido]") + " O item cria uma relação causal entre dois conceitos que a teoria "
+                    "separa. O verbo “garante” agrava: nem uma relação de tendência seria correta."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Uma alocação Pareto-eficiente pode ser socialmente indesejável do ponto de vista "
+            "distributivo.”</i> → CERTO",
+            "<i>“Toda redistribuição de renda reduz a eficiência econômica.”</i> → ERRADO (modulador absoluto: "
+            "transferências de montante fixo não distorcem)",
+        ])],
+        reescrita=("A alocação eficiente dos recursos produtivos " + hl("não garante, por si só,")
+                   + " maior equidade social."),
+        tipo_erro=["NEXO_INDEVIDO"], dificuldade=1,
+        comentario_fonte=("ERRADO. A eficiência alocativa diz respeito ao uso mais produtivo possível dos "
+                          "recursos, mas não garante equidade. É possível ter uma alocação altamente desigual e "
+                          "ainda assim eficiente de Pareto; a equidade depende de critérios distributivos, "
+                          "normativos."),
+        qualidade_fonte="bom",
+    ),
+    # ------------------------------------------------------------------ E1-0154
+    card(
+        "E1-0154", "efi", COM_PARETO,
+        assertiva=("Com a eficiência de Pareto não há como melhorar o bem-estar de ambos os indivíduos: se "
+                   "melhorar a condição de um, será à custa do outro."),
+        gabarito="CERTO",
+        anotada=az("Com a eficiência de Pareto não há como melhorar o bem-estar de ambos os indivíduos: <u>se "
+                   "melhorar a condição de um, será à custa do outro</u>."),
+        poucas=("Na alocação " + azb("Pareto-eficiente") + " (de dois indivíduos, como na caixa de "
+                "Edgeworth), as trocas vantajosas se esgotaram: qualquer ganho de um " + vd("exige a perda") + " "
+                "do outro."),
+        destrinchando=[
+            "O item descreve o caso de dois agentes (“ambos”), típico da " + azb("caixa de Edgeworth") + ". "
+            "Num ponto da curva de contrato, as curvas de indiferença são tangentes: mover-se para melhorar A "
+            "leva B para uma curva de indiferença inferior.",
+            "Nas duas metades da frase estão as duas formulações equivalentes: (1) não dá para melhorar "
+            "todos ao mesmo tempo; (2) melhorar um exige piorar outro.",
+            "No espaço das utilidades, a " + azb("fronteira de possibilidades de utilidade") + " é "
+            "negativamente inclinada justamente por isso: ao longo dela, U<sub>A</sub> só sobe se "
+            "U<sub>B</sub> cair.",
+            "O conceito é <b>local à alocação</b>: dizer que uma alocação é eficiente não diz nada sobre "
+            "outras. A partir de uma alocação ineficiente, ambos podem melhorar — e é isso que as trocas "
+            "voluntárias fazem até atingir a curva de contrato.",
+        ],
+        dissecando=(cz("[paráfrase fiel]") + " Reformulação coloquial da definição. Quem pensa em “trocas "
+                    "ganha-ganha” pode marcar ERRADO por intuição; o ganha-ganha existe só <b>antes</b> de se "
+                    "alcançar a eficiência."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Em uma alocação eficiente de Pareto, ainda é possível que ambos os indivíduos melhorem por "
+            "meio de trocas voluntárias.”</i> → ERRADO (contradição: isso caracteriza a alocação "
+            "ineficiente)",
+            "<i>“Ao longo da fronteira de possibilidades de utilidade, o aumento da utilidade de um indivíduo "
+            "implica redução da do outro.”</i> → CERTO",
+        ])],
+        tipo_erro=["PARAFRASE_FIEL"], dificuldade=1,
+        comentario_fonte=("CERTO. Em uma alocação eficiente de Pareto, ninguém consegue aumentar o próprio "
+                          "bem-estar sem reduzir o bem-estar de outra pessoa. [imagem]"),
+        qualidade_fonte="raso",
+        figuras_fonte=[img_verso("Untitled (33).jpeg")],
+    ),
+    # ------------------------------------------------------------------ E1-0155
+    card(
+        "E1-0155", "efi", COM_TEOREMAS,
+        assertiva=("O Primeiro Teorema do Bem-Estar explica que, em um mercado onde todos competem justamente, "
+                   "as trocas que beneficiam ambas as partes vão acontecer até não ser possível fazer mais "
+                   "nenhuma troca vantajosa."),
+        gabarito="CERTO",
+        anotada=az("O Primeiro Teorema do Bem-Estar explica que, em um mercado onde todos competem justamente, "
+                   "as trocas que beneficiam ambas as partes vão acontecer <u>até não ser possível fazer mais "
+                   "nenhuma troca vantajosa</u>."),
+        poucas=("É a intuição do " + azb("1º Teorema") + ": em concorrência, as trocas voluntárias prosseguem "
+                "até se esgotarem os ganhos mútuos — e a alocação resultante é " + vd("Pareto-eficiente")
+                + "."),
+        destrinchando=[
+            "Toda troca voluntária é uma pequena melhoria de Pareto: só acontece se as duas partes ganham (ou "
+            "ao menos uma ganha e a outra não perde). Enquanto houver diferenças entre as TMS dos agentes, "
+            "existe troca vantajosa a fazer.",
+            "Em concorrência perfeita, todos enfrentam os mesmos preços e ajustam suas TMS à mesma razão de "
+            "preços. Quando o mercado se equilibra, as TMS estão igualadas e não sobra ganho de troca: a "
+            "alocação está na " + azb("curva de contrato") + ".",
+            "“Competem justamente” é forma coloquial de dizer " + azb("concorrência perfeita") + ": muitos "
+            "agentes tomadores de preço, sem poder de mercado, com informação perfeita e mercados completos.",
+            "O resultado é eficiente, mas não necessariamente equitativo: o ponto da curva de contrato "
+            "atingido depende da dotação inicial. Corrigir a distribuição é tarefa do " + azb("2º Teorema")
+            + " (redistribuir dotações).",
+        ],
+        dissecando=(cz("[paráfrase fiel]") + " Versão em linguagem leiga do 1º Teorema. O “justamente” pode "
+                    "soar como juízo de valor e assustar; no contexto, significa concorrência sem poder de "
+                    "mercado, não justiça distributiva."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“O Primeiro Teorema do Bem-Estar garante que, em concorrência perfeita, o resultado das trocas "
+            "será equitativo.”</i> → ERRADO (troca de conceito: eficiente, não equitativo)",
+            "<i>“Em concorrência perfeita, as trocas cessam quando as taxas marginais de substituição dos "
+            "agentes se igualam.”</i> → CERTO",
+        ])],
+        tipo_erro=["PARAFRASE_FIEL"], dificuldade=1,
+        comentario_fonte=("CERTO. O resultado final é que os recursos são distribuídos de maneira eficiente, de "
+                          "acordo com o critério de Pareto, em que não se pode melhorar a situação de alguém sem "
+                          "piorar a de outra pessoa. [imagens]"),
+        qualidade_fonte="raso",
+        figuras_fonte=[img_verso("Untitled (47).jpeg"), img_verso("Untitled (34).jpeg")],
+    ),
+    # ------------------------------------------------------------------ E1-0156
+    card(
+        "E1-0156", "efi", COM_TEOREMAS,
+        assertiva=("O Segundo Teorema do Bem-Estar sugere que é possível redistribuir a riqueza de forma a manter "
+                   "o mesmo nível de satisfação geral que havia antes da redistribuição."),
+        gabarito="CERTO", status="contestavel",
+        anotada=az("O Segundo Teorema do Bem-Estar sugere que <u>é possível</u> redistribuir a riqueza de forma "
+                   "a manter o mesmo nível de <u>satisfação geral</u> que havia antes da redistribuição."),
+        poucas=("Na leitura que sustenta o gabarito, o " + azb("2º Teorema") + " mostra que se pode "
+                "redistribuir riqueza " + vd("sem perder eficiência") + ": a economia muda de ponto, mas "
+                "continua na fronteira de Pareto."),
+        condicionais=[("⚠️ Gabarito contestável",
+                       "A redação é imprecisa. Se “satisfação geral” for lida como <b>eficiência</b> (permanecer "
+                       "na fronteira de possibilidades de utilidade), o item é CERTO. Se for lida como “cada um "
+                       "fica tão bem quanto antes”, é ERRADO: redistribuir move a economia <b>ao longo</b> da "
+                       "fronteira, e quem perde riqueza fica pior. A leitura de eficiência é a mais defensável "
+                       "e a que sustenta o gabarito.")],
+        destrinchando=[
+            "Enunciado do " + azb("2º Teorema do Bem-Estar") + ": sob preferências convexas e as demais "
+            "hipóteses do modelo competitivo, " + vd("toda") + " alocação Pareto-eficiente pode ser alcançada "
+            "como equilíbrio competitivo, desde que as dotações iniciais sejam redistribuídas adequadamente.",
+            "Implicação: a sociedade pode escolher a distribuição que julgar justa e chegar a ela "
+            "redistribuindo riqueza por " + azb("transferências de montante fixo") + " (lump-sum) e deixando "
+            "o mercado operar. Não há perda de eficiência — o “bolo” continua do tamanho máximo, só que "
+            "repartido de outro modo.",
+            "O que o teorema <b>não</b> diz: que todos ficam tão bem quanto antes. Mover-se ao longo da "
+            "fronteira de Pareto melhora uns e piora outros, por definição. A afirmação do comentário de "
+            "origem de que “todos ficam tão bem quanto estavam” está errada.",
+            "Contraste com o caminho alternativo — controlar preços (tabelamentos, subsídios cruzados) para "
+            "redistribuir: isso gera " + azb("peso morto") + " e tira a economia da fronteira. O 2º Teorema "
+            "recomenda mexer nas dotações, não nos preços.",
+            "Limite prático: tributos reais (sobre renda, consumo) alteram incentivos; transferências "
+            "verdadeiramente lump-sum são raras.",
+        ],
+        dissecando=(cz("[modulador relativo]") + " O “sugere que é possível” suaviza a afirmação, e a "
+                    "expressão vaga “satisfação geral” abre duas leituras. A banca pensou em eficiência "
+                    "agregada; o candidato que lê “cada um fica igual” tende a marcar ERRADO. Diante de "
+                    "redação ambígua, prefira a leitura que corresponde ao enunciado de manual."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“O Segundo Teorema do Bem-Estar mostra que é possível redistribuir a riqueza sem que nenhum "
+            "indivíduo tenha seu bem-estar reduzido.”</i> → ERRADO (generalização: redistribuir piora quem "
+            "perde dotação)",
+            "<i>“Segundo o Segundo Teorema do Bem-Estar, questões distributivas podem ser tratadas por "
+            "redistribuição de dotações, sem necessidade de distorcer os preços.”</i> → CERTO",
+        ])],
+        tipo_erro=["MODULADOR_RELATIVO"], dificuldade=3,
+        comentario_fonte=("CERTO. O 2º Teorema mostra que, sob certas circunstâncias, qualquer alocação ótima de "
+                          "Pareto pode se basear no mecanismo de livre mercado. Por meio do livre mercado, as "
+                          "redistribuições de riqueza podem ser feitas de maneira que todos fiquem tão bem quanto "
+                          "estavam anteriormente. [imagem]"),
+        qualidade_fonte="com_erro",
+        figuras_fonte=[img_verso("Untitled (35).jpeg")],
+        alertas=["contestavel: redação ambígua (“mesmo nível de satisfação geral”); gabarito CERTO mantido na "
+                 "leitura de eficiência — na leitura literal (todos tão bem quanto antes), seria ERRADO",
+                 "qualidade_fonte: o comentário de origem afirma que a redistribuição deixa “todos tão bem "
+                 "quanto estavam anteriormente”, o que é falso — corrigido no 📖"],
+    ),
+    # ------------------------------------------------------------------ E1-0157
+    card(
+        "E1-0157", "trib", COM_TRIB,
+        assertiva="A tributação afeta diretamente a eficiência de Pareto porque altera os incentivos de mercado.",
+        gabarito="CERTO",
+        anotada=az("A tributação <u>afeta</u> diretamente a eficiência de Pareto porque altera os incentivos de "
+                   "mercado."),
+        poucas=("Tributos sobre bens, renda ou produção criam uma " + azb("cunha") + " entre o preço pago pelo "
+                "comprador e o recebido pelo vendedor; os agentes reagem, trocas vantajosas deixam de ocorrer "
+                "e surge " + vd("peso morto") + "."),
+        destrinchando=[
+            "Com um imposto, o comprador paga pc e o vendedor recebe pv < pc. O comprador ajusta sua TMS a pc, "
+            "o vendedor ajusta o custo marginal a pv: as condições de eficiência (TMS = TMT, p = CMg) deixam "
+            "de valer. A quantidade cai abaixo da eficiente — é o " + azb("peso morto") + " (ou "
+            + azb("excesso de carga") + ").",
+            "A distorção cresce com as elasticidades (mais reação dos agentes) e, aproximadamente, com o "
+            + vd("quadrado da alíquota") + ".",
+            "Exceções que testam o item: (1) " + azb("tributo de montante fixo") + " (lump-sum), que não "
+            "depende de nenhuma decisão do contribuinte e por isso não altera incentivos na margem — é o "
+            "instrumento ideal do 2º Teorema; (2) " + azb("tributo pigouviano") + " (" + oc("Pigou")
+            + ", 1920), que incide sobre uma externalidade negativa e <b>melhora</b> a eficiência, porque "
+            "corrige um preço que estava errado.",
+            "Por isso o verbo “afeta” é o adequado: a tributação, em regra, reduz a eficiência; a pigouviana "
+            "a aumenta; a lump-sum a preserva. Em todos os casos, o canal é o mesmo — os incentivos.",
+        ],
+        dissecando=(cz("[modulador relativo]") + " O verbo neutro “afeta” (e não “reduz”) salva o item das "
+                    "exceções. Se a banca escrevesse “toda tributação reduz a eficiência”, a pigouviana e a "
+                    "lump-sum o tornariam ERRADO."),
+        modulos=[("😈 Para dificultar", [
+            "<i>“Todo tributo reduz a eficiência de Pareto, pois altera os incentivos de mercado.”</i> → ERRADO "
+            "(modulador absoluto: lump-sum não distorce e o pigouviano corrige externalidade)",
+            "<i>“Um tributo de montante fixo, por não depender das decisões dos agentes, não gera peso "
+            "morto.”</i> → CERTO",
+        ])],
+        tipo_erro=["MODULADOR_RELATIVO"], dificuldade=2,
+        comentario_fonte=("CERTO. Impostos sobre bens, serviços, renda ou produção modificam os preços relativos, "
+                          "e isso pode afastar consumidores e produtores de suas escolhas ótimas."),
+        qualidade_fonte="raso",
+    ),
 ]

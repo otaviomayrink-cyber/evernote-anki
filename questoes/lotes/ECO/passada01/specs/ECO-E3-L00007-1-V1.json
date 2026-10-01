@@ -1,5 +1,40 @@
-{"id": "ECO-E3-L00007-1-V1", "uso": "verso",
+{
+ "id": "ECO-E3-L00007-1-V1",
+ "uso": "verso",
  "legenda": "Em concorrência, produz-se até qc, onde p = CMg. O cartel age como monopolista: restringe a produção a qm (RMg = CMg) e cobra pm. O triângulo PM é o peso morto: trocas que valiam mais do que custavam e deixaram de ocorrer.",
- "modelo": "monopolio", "params": {"a": 10, "b": 1, "c": 2},
- "substituir": {"Q": {"rotulo_x": "qm"}, "M": {"rotulo": "cartel", "rotulo_y": "pm"}, "C": {"rotulo": "concorrência", "rotulo_x": "qc"}},
- "checar": ["abs(Q.x - 4) < 0.01", "abs(C.x - 8) < 0.01", "M.y > C.y"]}
+ "modelo": "monopolio",
+ "params": {
+  "a": 10,
+  "b": 1,
+  "c": 2
+ },
+ "substituir": {
+  "D": {
+   "rotulo_em": 1.2,
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  },
+  "Q": {
+   "rotulo_x": "qm"
+  },
+  "M": {
+   "rotulo": "cartel",
+   "rotulo_y": "pm"
+  },
+  "C": {
+   "rotulo": "concorrência",
+   "rotulo_x": "qc",
+   "rotulo_desloc": [
+    10,
+    10
+   ]
+  }
+ },
+ "checar": [
+  "abs(Q.x - 4) < 0.01",
+  "abs(C.x - 8) < 0.01",
+  "M.y > C.y"
+ ]
+}

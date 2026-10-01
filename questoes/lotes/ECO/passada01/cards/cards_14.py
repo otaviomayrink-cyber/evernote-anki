@@ -1134,4 +1134,179 @@ CARDS = [
                     "quase_duplicata: assertiva idêntica à de ECO-E2-L00861-1 (outro bloco Nabuco, sem figura); "
                     "mantidos os dois"],
     },
+    # ------------------------------------------------------------------ E2-L01220
+    {
+        "id": "ECO-E2-L01220-1", "fonte_ref": "E2-L01220", "destino": "05", "subtema": H2["cp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("O curto prazo é um período de tempo no qual pelo menos um fator de produção é fixo. No longo "
+                      "prazo a empresa pode alterar a quantidade de qualquer fator utilizado na produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O curto prazo é um período de tempo no qual <u>pelo menos um</u> fator de produção é fixo. "
+                      "No longo prazo a empresa pode alterar a quantidade de <u>qualquer</u> fator utilizado na "
+                      "produção."),
+        "poucas": ("As duas definições estão corretas: " + azb("curto prazo") + " = ao menos um fator fixo; "
+                   + azb("longo prazo") + " = tempo suficiente para que todos os fatores se tornem variáveis."),
+        "destrinchando": [
+            "O critério é a possibilidade de ajuste, não o calendário: longo prazo é o tempo necessário para "
+            "que <b>todos</b> os insumos possam variar — construir outra fábrica, mudar a tecnologia, entrar ou "
+            "sair do mercado.",
+            "Reflexo nos custos: no curto prazo, CT = " + azb("CF") + " + " + azb("CV") + " (o fator fixo "
+            "gera custo fixo, que existe mesmo com produção zero); no longo prazo, todo custo é variável, e a "
+            "curva de custo médio de longo prazo é a “envoltória” das curvas de curto prazo.",
+            "Reflexo na produção: o curto prazo é o domínio da " + azb("lei dos rendimentos marginais "
+            "decrescentes") + "; o longo prazo, dos " + azb("rendimentos de escala") + ".",
+            "Reflexo na concorrência perfeita: lucro econômico pode persistir no curto prazo; no longo prazo, a "
+            "livre entrada e saída o leva a zero.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Duas definições de manual encadeadas; os moduladores “pelo "
+                       "menos um” e “qualquer” são os pontos que a banca costuma adulterar (“todos os fatores "
+                       "fixos”, “apenas o capital varia”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, a empresa pode alterar a quantidade de capital, mas a de trabalho permanece "
+            "fixa.”</i> → ERRADO (restrição indevida: no longo prazo todos variam)",
+            "<i>“No curto prazo, a firma pode ter custos fixos mesmo que nada produza.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["pelo menos um", "qualquer"], "dificuldade": 1,
+        "comentario_fonte": ("Curto prazo: um ou mais fatores não podem ser modificados. Longo prazo: tempo "
+                             "necessário para que todos os insumos se tornem variáveis."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01221
+    {
+        "id": "ECO-E2-L01221-1", "fonte_ref": "E2-L01221", "destino": "05", "subtema": H2["pmg"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("Em uma firma que opera com capital constante no curto prazo, aumento na quantidade de "
+                      "trabalho faz que o produto marginal e o produto médio do trabalho cresçam e depois tendam a "
+                      "cair. Nesse processo, enquanto o produto médio cresce, o produto marginal é maior que o "
+                      "médio; e, enquanto o produto médio diminui, o produto marginal é menor que o produto "
+                      "médio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em uma firma que opera com capital constante no curto prazo, aumento na quantidade de "
+                      "trabalho faz que o produto marginal e o produto médio do trabalho cresçam e depois tendam a "
+                      "cair. Nesse processo, enquanto o produto médio cresce, o produto marginal é <u>maior</u> "
+                      "que o médio; e, enquanto o produto médio diminui, o produto marginal é <u>menor</u> que o "
+                      "produto médio."),
+        "poucas": ("É a relação " + azb("marginal × média") + ": se a unidade nova rende mais que a média, puxa "
+                   "a média para cima; se rende menos, puxa para baixo. Por isso o " + azb("PMg corta o PMe no "
+                   "máximo do PMe") + "."),
+        "destrinchando": [
+            "Definições, com K fixo: " + azb("produto médio") + " PMe = q/L; " + azb("produto marginal")
+            + " PMg = Δq/ΔL. Ambos costumam subir no início (especialização, uso da planta ociosa) e cair "
+            "depois (rendimentos decrescentes).",
+            "A relação é aritmética, como a média de notas: tirar uma nota acima da média sobe a média; abaixo, "
+            "derruba. Formalmente, " + vd("dPMe/dL = (PMg − PMe)/L") + ": o PMe cresce quando PMg > PMe, cai "
+            "quando PMg < PMe e é máximo quando " + vd("PMg = PMe") + ".",
+            "Exemplo: q = 6L² − 0,5L³ → PMe = 6L − 0,5L² e PMg = 12L − 1,5L². O PMg é máximo em L = 4; o PMe é "
+            "máximo em " + vd("L = 6") + ", onde PMg = PMe = " + vd("18") + "; o produto total é máximo onde "
+            "PMg = 0 (L = 8).",
+            "Os três estágios da produção: I (até o máximo do PMe), II (do máximo do PMe até PMg = 0) e III "
+            "(PMg < 0). A firma racional opera no estágio II.",
+            "A mesma lógica vale nos custos, espelhada: o " + azb("CMg corta o CMe no mínimo do CMe") + ".",
+        ],
+        "grafico_verso": "ECO-E2-L01221-1-V1",
+        "dissecando": (cz("[literalidade · detalhe]") + " Reproduz o resultado de manual. O risco está na "
+                       "ordem das comparações: a banca inverte “maior” e “menor” ou afirma que o PMg corta o PMe "
+                       "no máximo do <b>PMg</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O produto marginal intercepta o produto médio no ponto de máximo do produto marginal.”</i> → "
+            "ERRADO (troca: é no máximo do PMe)",
+            "<i>“Enquanto o produto marginal for positivo, o produto total cresce, ainda que o produto médio "
+            "esteja caindo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["tendam a"], "dificuldade": 2,
+        "comentario_fonte": ("Verso só com o gráfico de produção total (máximo de 112 com 8 trabalhadores) e de "
+                             "produto médio e marginal."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 211", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01221-1-V1, didática, com função própria)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01222
+    {
+        "id": "ECO-E2-L01222-1", "fonte_ref": "E2-L01222", "destino": "05", "subtema": H2["pmg"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("A lei dos retornos marginais decrescentes afirma que o produto total cai à medida que mais do "
+                      "insumo é adicionado à produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A lei dos retornos marginais decrescentes afirma que o ") + vm("produto total")
+                   + az(" cai à medida que mais do insumo é adicionado à produção."),
+        "poucas": ("O que decresce é o " + azb("produto marginal") + " (o acréscimo de produção de cada nova "
+                   "unidade), não o produto total, que continua subindo enquanto PMg > 0."),
+        "destrinchando": [
+            "Enunciado correto: aumentando-se o uso de um insumo, com os demais fixos, a " + azb("produção "
+            "adicional") + " obtida a cada unidade acaba diminuindo.",
+            "Exemplo: com uma máquina fixa, o 1º operário acrescenta 10 unidades; o 2º, 8; o 3º, 5. O produto "
+            "total vai de 10 a " + vd("18") + " e a " + vd("23") + " — sobe, só que cada vez menos. O PMg "
+            "caiu; o total, não.",
+            "O produto total só cai quando o PMg fica " + vd("negativo") + " (operários demais atrapalhando-se "
+            "na mesma planta) — o estágio III da produção, que nenhuma firma racional escolhe.",
+            "Graficamente: rendimentos decrescentes = a curva de produto total fica <b>côncava</b> (inclinação "
+            "diminuindo), não descendente.",
+            vm("Regra-âncora: rendimento decrescente = o marginal cai; total cai só com PMg < 0."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca marginal por total — o mesmo erro de quem confunde "
+                       "“crescer menos” com “diminuir”. Pista: a palavra “marginais” está no nome da lei."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela lei dos rendimentos decrescentes, o produto total cresce a taxas decrescentes a partir "
+            "de certo ponto.”</i> → CERTO",
+            "<i>“A lei dos rendimentos decrescentes aplica-se ao longo prazo, quando todos os insumos "
+            "variam.”</i> → ERRADO (anacronismo: pressupõe fator fixo, curto prazo)",
+        ])],
+        "reescrita": ("A lei dos retornos marginais decrescentes afirma que o " + hl("produto marginal")
+                      + " cai à medida que mais do insumo é adicionado à produção."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O produto adicional é que decresce, não necessariamente a produção; com outros "
+                             "insumos constantes, a produção adicional diminui."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01223
+    {
+        "id": "ECO-E2-L01223-1", "fonte_ref": "E2-L01223", "destino": "05", "subtema": H2["escala"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um processo produtivo, se existir produto marginal decrescente em relação a um insumo, "
+                      "então os retornos de escala serão decrescentes."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um processo produtivo, se existir produto marginal decrescente em relação a um insumo, ")
+                   + vm("então os retornos de escala serão decrescentes") + az("."),
+        "poucas": ("PMg decrescente (um insumo varia) não determina " + azb("retornos de escala")
+                   + " (todos variam): eles podem ser crescentes, constantes ou decrescentes."),
+        "destrinchando": [
+            azb("Produto marginal") + ": produção adicional com uma unidade a mais de um insumo, mantidos fixos "
+            "os demais. Cai porque o insumo variável dispõe de cada vez menos dos fixos.",
+            azb("Retornos de escala") + ": todos os insumos crescem na mesma proporção, nenhum fica fixo — a "
+            "causa da queda do PMg desaparece. O resultado depende da tecnologia.",
+            "Contraexemplos na Cobb-Douglas q = K<sup>α</sup>L<sup>β</sup>, todos com PMg decrescentes (α, β "
+            "< 1): " + vd("0,7 + 0,7 = 1,4") + " → crescentes; " + vd("0,5 + 0,5 = 1") + " → constantes; "
+            + vd("0,3 + 0,3 = 0,6") + " → decrescentes.",
+            vm("Regra-âncora: do PMg não se deduz a escala; da escala não se deduz o PMg."),
+        ],
+        "dissecando": (cz("[nexo indevido]") + " Liga dois conceitos de horizontes diferentes por um “então” que "
+                       "não existe. 🔥 Família de itens recorrente: “rendimentos constantes ⇒ PMg constante”, "
+                       "“PMg decrescente ⇒ escala decrescente” — todos ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma função com produto marginal decrescente em cada insumo pode apresentar retornos crescentes "
+            "de escala.”</i> → CERTO",
+        ])],
+        "reescrita": ("Em um processo produtivo, se existir produto marginal decrescente em relação a um insumo, "
+                      + hl("nada se pode concluir sobre os retornos de escala, que podem ser crescentes, "
+                           "constantes ou decrescentes") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["então"], "dificuldade": 2,
+        "comentario_fonte": ("PMg decresce porque os demais insumos ficam fixos; nos rendimentos de escala todos "
+                             "variam, e a produção pode crescer em proporção igual, maior ou menor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

@@ -240,7 +240,7 @@ CARDS = [
             "no <b>mix de produtos</b> (TMS = taxa marginal de transformação).",
         ],
         dissecando=(cz("[literalidade]") + " Reprodução quase literal da definição de manual (" + oc("Pindyck")
-                    + " e " + oc("Rubinfeld") + ", cap. 16). O risco é o leitor achar que eficiência exige que "
+                    + " e " + oc("Rubinfeld") + ", capítulo de equilíbrio geral). O risco é o leitor achar que eficiência exige que "
                     "<i>ninguém</i> possa melhorar de forma alguma — a cláusula decisiva é “sem reduzir o "
                     "bem-estar de outra pessoa”."),
         modulos=[("😈 Para dificultar", [

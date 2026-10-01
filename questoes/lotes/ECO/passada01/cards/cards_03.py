@@ -1018,5 +1018,313 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
-    # ---- FIM
+    # ------------------------------------------------------------------ E3-L00009
+    {
+        "id": "ECO-E3-L00009-1", "fonte_ref": "E3-L00009", "destino": "01", "subtema": H2["fpp"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos conceitos fundamentais de microeconomia, julgue o item que se segue.",
+        "rotulo_item": "Item",
+        "assertiva": ("A concavidade da fronteira de possibilidades de produção decorre da lei dos rendimentos "
+                      "marginais decrescentes."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A concavidade da fronteira de possibilidades de produção decorre da lei dos "
+                      "<u>rendimentos marginais decrescentes</u>."),
+        "poucas": ("FPP côncava = " + azb("custo de oportunidade crescente") + "; e o custo cresce porque os "
+                   "recursos transferidos rendem cada vez menos no novo uso — " + azb("rendimentos marginais "
+                   "decrescentes") + "."),
+        "destrinchando": [
+            "A inclinação da FPP é a " + azb("taxa marginal de transformação") + ": quanto de Y se sacrifica "
+            "por uma unidade a mais de X. Na FPP côncava, ela cresce à medida que se produz mais X.",
+            "Por quê: os recursos não são igualmente aptos a todos os usos. Os primeiros fatores deslocados "
+            "para X são os mais adequados a X (e menos produtivos em Y); depois, só restam fatores bons em Y "
+            "e ruins em X. Cada unidade adicional de X custa mais Y — o " + azb("produto marginal") + " dos "
+            "fatores realocados cai.",
+            "Leitura numérica (gráfico): cada 2 unidades extras de X custam " + vd("0,3") + ", depois "
+            + vd("0,8") + ", " + vd("1,6") + " e, por fim, " + vd("5,3") + " unidades de Y.",
+            "Formas da FPP: côncava → custo de oportunidade crescente (caso usual); reta → constante "
+            "(recursos perfeitamente substituíveis, modelo ricardiano); convexa → decrescente (economias de "
+            "escala fortes).",
+            "Nuance técnica: mesmo com retornos constantes de escala nos dois setores, a FPP é côncava se as "
+            "intensidades fatoriais diferirem (" + oc("Heckscher-Ohlin") + "); o mecanismo continua sendo a "
+            "queda do produto marginal quando muda a proporção capital/trabalho.",
+        ],
+        "grafico_verso": "ECO-E3-L00009-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " O item pula um elo: rendimentos decrescentes → custo de "
+                       "oportunidade crescente → concavidade. A banca aceita o atalho. A versão ERRADA "
+                       "clássica é atribuir a concavidade a rendimentos <b>crescentes</b> ou a custo de "
+                       "oportunidade constante."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A concavidade da fronteira de possibilidades de produção reflete custos de oportunidade "
+            "constantes.”</i> → ERRADO (troca de conceito: constantes dão FPP reta)",
+            "<i>“Se os recursos fossem igualmente produtivos em todos os usos, a FPP seria uma reta.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. FPP côncava porque os recursos não são perfeitamente adaptáveis; ao "
+                            "realocá-los incidem rendimentos marginais decrescentes, elevando o custo de "
+                            "oportunidade (seis respostas convergentes fundidas).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00305
+    {
+        "id": "ECO-E3-L00305-1", "fonte_ref": "E3-L00305", "destino": "01", "subtema": H2["of"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": True,
+        "comando": ("Considerando as diversas estruturas de mercado, suas semelhanças e diferenças, julgue o item "
+                    "a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("A curva de oferta de um determinado setor ou indústria, como por exemplo a indústria de "
+                      "calçados ou de vestuário, é a soma simples da oferta individual de cada empresa "
+                      "participante desse mercado para cada nível de preços praticado por pelo menos uma delas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A curva de oferta de um determinado setor ou indústria, como por exemplo a indústria de "
+                      "calçados ou de vestuário, é a <u>soma simples</u> da oferta individual de cada empresa "
+                      "participante desse mercado <u>para cada nível de preços</u> praticado por pelo menos uma "
+                      "delas."),
+        "poucas": ("A oferta de mercado é a " + azb("soma horizontal") + " das ofertas individuais: fixa-se o "
+                   "preço e somam-se as quantidades que cada firma oferta a esse preço."),
+        "destrinchando": [
+            "Soma <b>horizontal</b> porque a quantidade está no eixo horizontal: Q(p) = q<sub>A</sub>(p) + "
+            "q<sub>B</sub>(p) + … No gráfico, a p = 8 a firma A oferta 6 e a B, 8; o mercado, "
+            + vd("14") + ".",
+            "“Pelo menos uma delas”: abaixo do preço de fechamento (CVMe mínimo) a firma oferta zero e não "
+            "entra na soma. Por isso a curva de mercado tem uma <b>quebra</b>: entre p = 2 e p = 4 só a "
+            "firma A produz; acima de 4, as duas — e a oferta de mercado fica mais plana (mais elástica).",
+            "A curva individual vem do custo marginal: em concorrência perfeita, a firma oferta onde "
+            + vd("p = CMg") + ", no trecho acima do CVMe mínimo.",
+            "Limites: (1) se a expansão do setor encarece insumos (couro, tecido), a oferta da indústria fica "
+            "mais inclinada que a soma simples — indústria de custos crescentes; (2) em monopólio e oligopólio "
+            "não existe curva de oferta no sentido estrito, pois a firma escolhe o preço.",
+            "Contraste: " + azb("soma vertical") + " é a dos bens públicos (somam-se as disposições a pagar, "
+            "para a mesma quantidade).",
+        ],
+        "grafico_verso": "ECO-E3-L00305-1-V1",
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " “Soma simples” é a paráfrase de soma horizontal; o "
+                       "trecho final, de redação estranha (firma competitiva não “pratica” preço), só quer dizer "
+                       "“a cada preço em que alguma firma oferte”. A banca aposta que o candidato confunda com "
+                       "soma vertical ou desconfie da redação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A curva de oferta da indústria é obtida pela soma vertical das curvas de oferta individuais, "
+            "somando-se os preços para cada quantidade.”</i> → ERRADO (troca de conceito: soma vertical é a "
+            "dos bens públicos)",
+            "<i>“Em uma indústria de custos crescentes, a oferta de longo prazo é mais inclinada que a simples "
+            "soma das ofertas individuais.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "CERTO. Respostas de várias IAs fundidas: oferta de mercado como soma horizontal das "
+                            "ofertas individuais para cada preço; nuances sobre preço de fechamento, curto × longo "
+                            "prazo, indústria de custos crescentes e estruturas não competitivas.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 409", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (exemplo numérico substituído pelo do gráfico)"},
+                          {"ref": "IMAGEM 410", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00305-1-V1)"},
+                          {"ref": "IMAGEM 411", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00375
+    {
+        "id": "ECO-E3-L00375-1", "fonte_ref": "E3-L00375", "destino": "01", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": COMANDO_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("A inclinação da curva de demanda individual é negativa para bens normais e bens "
+                      "superiores, como os bens de Veblen, pois reflete a lei da demanda, segundo a qual, quando "
+                      "o preço de um bem aumenta, a quantidade demandada diminui."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A inclinação da curva de demanda individual é negativa para bens normais e bens "
+                      "superiores, ") + vm("como os bens de Veblen") + az(", pois reflete a lei da demanda, "
+                      "segundo a qual, quando o preço de um bem aumenta, a quantidade demandada diminui."),
+        "poucas": ("Bens de " + azb("Veblen") + " são a exceção, não o exemplo: o preço alto é parte do atrativo "
+                   "(status), e a demanda pode ter " + vd("inclinação positiva") + "."),
+        "destrinchando": [
+            "Para bens normais e superiores (de luxo comuns), a lei da demanda vale: efeito substituição e "
+            "efeito renda puxam na mesma direção quando o preço sobe — a quantidade cai.",
+            azb("Bem superior") + " é classificação pela <b>renda</b> (elasticidade-renda > 1); " + azb("bem "
+            "de Veblen") + " é definido pela relação com o <b>preço</b>: o consumo é " + azb("conspícuo") +
+            ", e o preço elevado sinaliza exclusividade. Se a joia ou a bolsa de grife barateia, perde parte "
+            "do valor simbólico e pode ser menos demandada.",
+            "Origem: " + oc("Thorstein Veblen") + ", <i>A Teoria da Classe Ociosa</i> (1899), sobre o consumo "
+            "ostentatório.",
+            "As duas exceções à lei da demanda, com causas diferentes: " + azb("Giffen") + " (bem inferior com "
+            "efeito renda maior que o substituição; batatas na Irlanda do séc. XIX) e " + azb("Veblen") +
+            " (preferências que dependem do próprio preço). Todo Giffen é inferior; o Veblen costuma ser bem "
+            "de luxo.",
+            vm("Regra-âncora: superior ≠ Veblen — o primeiro fala de renda e obedece à lei da demanda; o "
+               "segundo fala de status e a desafia."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item cola um exemplo errado (“como os bens de Veblen”) "
+                       "numa frase correta, explorando a associação luxo = superior = Veblen. O “como” "
+                       "transforma a exceção em ilustração da regra."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os bens de Veblen e os bens de Giffen são exceções à lei da demanda.”</i> → CERTO",
+            "<i>“Todo bem superior é um bem de Veblen.”</i> → ERRADO (modulador absoluto: o superior comum "
+            "segue a lei da demanda)",
+        ])],
+        "reescrita": ("A inclinação da curva de demanda individual é negativa para bens normais e bens "
+                      "superiores, " + hl("mas não para os bens de Veblen, que constituem exceção") + ", pois "
+                      "reflete a lei da demanda, segundo a qual, quando o preço de um bem aumenta, a quantidade "
+                      "demandada diminui."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. Bens de Veblen são exceções à lei da demanda (inclinação positiva, consumo "
+                            "por status); bem superior (elasticidade-renda > 1) não se confunde com Veblen. "
+                            "Exceções: Giffen e Veblen (três respostas convergentes fundidas).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 533", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (texto absorvido no 📖)"},
+                          {"ref": "IMAGEM 534", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem de terceiros, Shutterstock)"},
+                          {"ref": "IMAGEM 535", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00376
+    {
+        "id": "ECO-E3-L00376-1", "fonte_ref": "E3-L00376", "destino": "01", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": COMANDO_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("A curva de demanda individual pode se deslocar para a direita se houver um aumento na renda "
+                      "do consumidor, considerando que o bem seja normal."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A curva de demanda individual pode se deslocar para a direita se houver um aumento na renda "
+                      "do consumidor, considerando que o bem seja <u>normal</u>."),
+        "poucas": ("Bem " + azb("normal") + " tem elasticidade-renda positiva: renda maior → mais quantidade "
+                   "demandada <b>a cada preço</b> → curva inteira para a direita."),
+        "destrinchando": [
+            "Com o preço do bem constante (p₁), o consumidor mais rico compra q₂ > q₁. Como isso vale para "
+            "todos os preços, a curva toda se desloca — não é movimento ao longo dela.",
+            "Formalmente: q = D(p, m, …), com " + vd("∂q/∂m > 0") + " para bem normal. Necessários "
+            "(0 < η < 1) e de luxo (η > 1) são ambos normais.",
+            "Se o bem fosse " + azb("inferior") + " (η < 0), o mesmo aumento de renda deslocaria a demanda "
+            "para a <b>esquerda</b>.",
+            "Na teoria do consumidor, o aumento de renda desloca a restrição orçamentária para fora em "
+            "paralelo; a curva " + azb("renda-consumo") + " e a " + azb("curva de Engel") + " mostram a "
+            "trajetória da quantidade com a renda — crescente para bens normais.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Item de manual, com dupla proteção: o "
+                       "“pode” e a condição “considerando que o bem seja normal”. A versão ERRADA trocaria "
+                       "normal por inferior ou deslocamento por movimento."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…se houver um aumento na renda do consumidor, considerando que o bem seja inferior.”</i> → "
+            "ERRADO (troca de conceito: deslocaria para a esquerda)",
+            "<i>“O aumento da renda provoca movimento ao longo da curva de demanda de um bem normal.”</i> → "
+            "ERRADO (troca de conceito: é deslocamento)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Para bens normais, o aumento da renda eleva a quantidade demandada a qualquer "
+                            "preço, deslocando a curva para a direita (três respostas convergentes fundidas).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 536", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (descrição absorvida no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00377
+    {
+        "id": "ECO-E3-L00377-1", "fonte_ref": "E3-L00377", "destino": "01", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": COMANDO_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Se a taxa para carregamento de carros elétricos em estações públicas é substancialmente "
+                      "reduzida, a demanda por este tipo de automóvel tende a aumentar, deslocando sua curva de "
+                      "demanda para a direita."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se a taxa para carregamento de carros elétricos em estações públicas é substancialmente "
+                      "reduzida, a demanda por este tipo de automóvel <u>tende a</u> aumentar, deslocando sua "
+                      "curva de demanda para a direita."),
+        "poucas": ("Recarga e carro elétrico são " + azb("complementares") + ": recarga mais barata reduz o "
+                   "custo de usar o carro e aumenta a demanda por ele a cada preço — curva para a direita."),
+        "destrinchando": [
+            "O preço de um complementar é deslocador da demanda: " + vd("↓p do complementar → ↑D do bem") +
+            " (elasticidade-preço cruzada negativa). O preço do próprio carro não mudou, logo não se trata de "
+            "movimento ao longo da curva.",
+            "Intuição: o consumidor avalia o " + azb("custo total de uso") + " (preço do carro + energia + "
+            "manutenção). Barateando a energia, o pacote fica mais atraente — o mesmo vale para impressora e "
+            "cartucho, carro a combustão e gasolina.",
+            "No mercado de recarga, a redução da taxa é movimento ao longo da demanda por recarga; no "
+            "mercado de carros elétricos, é deslocamento. Cada gráfico tem seu bem nos eixos.",
+            "Aplicação de política: subsidiar infraestrutura e tarifa de recarga é uma forma indireta de "
+            "estimular a compra de elétricos, ao lado de incentivos tributários à própria compra.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Aplicação direta de complementaridade, "
+                       "amortecida pelo “tende a”. A banca poderia derrubar o item chamando os bens de "
+                       "substitutos ou dizendo que a curva se desloca para a esquerda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a demanda por carros elétricos tende a aumentar, pois recarga e carro elétrico são bens "
+            "substitutos.”</i> → ERRADO (troca de conceito: são complementares)",
+            "<i>“Um aumento no preço da gasolina tende a deslocar para a direita a demanda por carros "
+            "elétricos.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Eletricidade e carros elétricos são complementares; a queda no preço do "
+                            "complementar aumenta a demanda do bem principal (três respostas convergentes "
+                            "fundidas; dados empíricos não verificados descartados).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 537", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00378
+    {
+        "id": "ECO-E3-L00378-1", "fonte_ref": "E3-L00378", "destino": "01", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": COMANDO_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Considerando que os agentes microeconômicos são racionais e tomam suas decisões "
+                      "considerando o princípio conhecido como <i>coeteris paribus</i>, mudanças no preço de um "
+                      "bem não afetam a posição da curva de demanda dos bens que são substitutos, uma vez que o "
+                      "consumidor avalia cada um deles de forma isolada."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considerando que os agentes microeconômicos são racionais e ") + vm("tomam suas decisões "
+                      "considerando o princípio conhecido como <i>coeteris paribus</i>") + az(", mudanças no "
+                      "preço de um bem ") + vm("não afetam") + az(" a posição da curva de demanda dos bens que "
+                      "são substitutos, ") + vm("uma vez que o consumidor avalia cada um deles de forma isolada")
+                   + az("."),
+        "poucas": ("O preço de um " + azb("substituto") + " é justamente um deslocador da demanda: se a manteiga "
+                   "encarece, a curva de demanda da margarina vai para a direita. " + azb("Coeteris paribus") +
+                   " é hipótese do analista, não regra de decisão do consumidor."),
+        "destrinchando": [
+            "A curva de demanda de x é traçada mantendo constantes os outros preços. Quando um deles muda, "
+            "a hipótese deixa de valer e a curva <b>muda de posição</b>: " + vd("↑p substituto → ↑D") + "; "
+            + vd("↑p complementar → ↓D") + ".",
+            azb("Coeteris paribus") + " (“tudo o mais constante”) é um recurso de método do economista para "
+            "isolar o efeito de uma variável; não descreve como o consumidor decide. O consumidor racional "
+            "faz exatamente o contrário do que diz o item: compara os bens entre si, pelos preços relativos.",
+            "Exemplo: se a Pepsi sobe de preço, parte dos consumidores passa à Coca-Cola, cuja demanda se "
+            "desloca para a direita mesmo com o preço da Coca inalterado.",
+            "O que não desloca a curva de x é só o preço do <b>próprio</b> x (movimento ao longo).",
+            vm("Regra-âncora: ceteris paribus define o que fica fora dos eixos; quando algo fora dos eixos "
+               "muda, a curva se move."),
+        ],
+        "dissecando": (cz("[nexo indevido · troca de conceito]") + " O item usa uma premissa pomposa "
+                       "(racionalidade + ceteris paribus) para justificar uma conclusão falsa, e transforma uma "
+                       "hipótese de análise em comportamento do consumidor. O “avalia cada um de forma isolada” "
+                       "contraria a própria definição de substituto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Mudanças no preço de um bem afetam a posição da curva de demanda de seus substitutos e de seus "
+            "complementares.”</i> → CERTO",
+            "<i>“O aumento do preço da manteiga desloca para a esquerda a curva de demanda por margarina.”</i> "
+            "→ ERRADO (sentido trocado: substituto → direita)",
+        ])],
+        "reescrita": ("Considerando que os agentes microeconômicos são racionais e " + hl("que a curva de demanda "
+                      "é traçada sob a hipótese") + " <i>coeteris paribus</i>, mudanças no preço de um bem "
+                      + hl("afetam") + " a posição da curva de demanda dos bens que são substitutos, uma vez que "
+                      "o consumidor " + hl("compara os bens entre si, pelos preços relativos") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. Mudanças no preço de substitutos deslocam a curva (Pepsi × Coca-Cola; "
+                            "manteiga × margarina). O ceteris paribus serve para desenhar a curva mantendo os "
+                            "outros preços constantes; quando eles mudam, a curva se move.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 538", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (no 📖)"}],
+        "alertas": [],
+    },
 ]

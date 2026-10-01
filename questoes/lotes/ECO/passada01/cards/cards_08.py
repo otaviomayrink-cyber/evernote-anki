@@ -261,4 +261,183 @@ CARDS = [
         "figuras_fonte": FIG_E1("Untitled (48).jpeg"),
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0235 (1)
+    {
+        "id": "ECO-E1-0235-1", "fonte_ref": "E1-0235", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2013, "cacd": False,
+        "errei": True,
+        "comando": CMD_2013,
+        "rotulo_item": "Item",
+        "assertiva": "Se a elasticidade-preço da demanda for infinita, os vendedores abandonarão o mercado.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se a elasticidade-preço da demanda for infinita, os vendedores ")
+                    + vm("abandonarão o mercado") + az(".")),
+        "poucas": ("Com demanda " + azb("infinitamente elástica") + " (horizontal), o preço ao consumidor não "
+                   "sobe: o vendedor arca com " + vd("todo o imposto") + " e a quantidade cai — mas o mercado "
+                   "continua existindo."),
+        "destrinchando": [
+            "Demanda horizontal ao preço p₀: a qualquer preço acima de p₀, os compradores somem (substitutos "
+            "perfeitos, ou o preço é dado pelo mercado mundial). O consumidor continua pagando " + vd("pc = p₀")
+            + ".",
+            "Como o comprador não aceita nenhum aumento, o vendedor passa a receber " + vd("pv = p₀ − t")
+            + ": toda a cunha sai do seu preço líquido. Pela fórmula, parcela do produtor = |εᴰ| / (εˢ + |εᴰ|) "
+            "→ 1 quando |εᴰ| → ∞.",
+            "Com preço líquido menor, os vendedores andam <b>ao longo</b> da curva de oferta: produzem menos "
+            "(qₜ < q₀). Saem apenas as unidades (e as firmas) cujo custo marginal fica acima de p₀ − t. O mercado "
+            "só desapareceria se p₀ − t ficasse abaixo do menor custo de qualquer produtor — hipótese que o item "
+            "não traz.",
+            "Exemplo: pequena economia aberta exportadora de uma commodity com preço internacional dado; um "
+            "imposto sobre a venda reduz a receita do produtor doméstico sem mexer no preço mundial.",
+            vm("Regra-âncora: demanda infinitamente elástica → produtor paga tudo; demanda perfeitamente "
+               "inelástica → consumidor paga tudo."),
+        ],
+        "grafico_verso": "ECO-E1-0235-1-V1",
+        "dissecando": (cz("[extrapolação]") + " O ponto de partida é certo (o vendedor fica com todo o ônus), "
+                       "mas o item salta para uma consequência extrema que não decorre do modelo. Quem lembra "
+                       "que “o produtor perde tudo” confunde ônus integral com saída do mercado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a elasticidade-preço da demanda for infinita, os vendedores arcarão com todo o ônus do "
+            "imposto.”</i> → CERTO",
+            "<i>“Se a elasticidade-preço da demanda for infinita, o preço pago pelos consumidores subirá no valor "
+            "do imposto.”</i> → ERRADO (inversão: pc fica constante)",
+        ])],
+        "reescrita": ("Se a elasticidade-preço da demanda for infinita, os vendedores " + hl("arcarão com todo o "
+                      "peso do imposto, e a quantidade transacionada diminuirá") + "."),
+        "tipo_erro": ["EXTRAPOLACAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Demanda horizontal: toda a cunha recai sobre o excedente do produtor, que não "
+                            "consegue repassar; consumidores pagam o mesmo preço; receita do produtor cai.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: errei — na fonte, os itens (1), (3) e (4) vêm com ❌; como o (4) é CERTO, a marca foi lida "
+                    "como “errei”, não como gabarito",
+                    "banca_provavel: CEBRASPE/CACD 2013 (a fonte só traz “C/E (2013)”; não confirmada)"],
+    },
+    # ------------------------------------------------------------------ E1-0235 (2)
+    {
+        "id": "ECO-E1-0235-2", "fonte_ref": "E1-0235", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2013, "cacd": False,
+        "errei": False,
+        "comando": CMD_2013,
+        "rotulo_item": "Item",
+        "assertiva": ("Vendedores e consumidores arcarão com o peso do imposto, conforme a sensibilidade das curvas "
+                      "de oferta e demanda às variações de preço."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Vendedores e consumidores arcarão com o peso do imposto, <u>conforme a sensibilidade</u> "
+                      "das curvas de oferta e demanda às variações de preço."),
+        "poucas": ("É a definição de " + azb("incidência econômica") + ": o imposto se divide entre os dois "
+                   "lados na proporção inversa das " + azb("elasticidades") + " (a “sensibilidade às variações "
+                   "de preço”)."),
+        "destrinchando": [
+            "“Sensibilidade das curvas às variações de preço” é a " + azb("elasticidade-preço") + ". Parcela do "
+            "consumidor = " + vd("εˢ / (εˢ + |εᴰ|)") + "; do vendedor = " + vd("|εᴰ| / (εˢ + |εᴰ|)") + ".",
+            "Leitura intuitiva: paga mais quem tem menos opções de fuga. Consumidor sem substitutos aceita preço "
+            "maior; produtor com capital imobilizado aceita preço líquido menor.",
+            "O item é regra geral e admite os casos extremos como limites da mesma fórmula: com |εᴰ| = 0 ou "
+            "εˢ = ∞, o consumidor paga tudo; com εˢ = 0 ou |εᴰ| = ∞, o vendedor paga tudo.",
+            "Irrelevância da incidência legal: o resultado não muda se a lei mandar o vendedor ou o comprador "
+            "recolher o tributo.",
+        ],
+        "dissecando": (cz("[literalidade · paráfrase fiel]") + " Reescreve a regra trocando “elasticidade” "
+                       "por “sensibilidade às variações de preço”. A paráfrase é o único obstáculo: quem procura "
+                       "a palavra técnica pode estranhar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Vendedores e consumidores sempre dividirão igualmente o peso do imposto.”</i> → ERRADO "
+            "(modulador absoluto: a divisão depende das elasticidades)",
+            "<i>“O lado do mercado mais sensível às variações de preço arcará com a maior parte do "
+            "imposto.”</i> → ERRADO (inversão: arca com a menor parte)",
+        ])],
+        "tipo_erro": ["LITERAL", "PARAFRASE_FIEL"], "moduladores": ["conforme"], "dificuldade": 1,
+        "comentario_fonte": "Correto; afirmação exaustiva sobre o tema.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE/CACD 2013 (a fonte só traz “C/E (2013)”; não confirmada)"],
+    },
+    # ------------------------------------------------------------------ E1-0235 (3)
+    {
+        "id": "ECO-E1-0235-3", "fonte_ref": "E1-0235", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2013, "cacd": False,
+        "errei": True,
+        "comando": CMD_2013,
+        "rotulo_item": "Item",
+        "assertiva": ("Vendedores irão transferir aos compradores o valor relativo a toda incidência do novo "
+                      "imposto, o que aumentará o preço do bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Vendedores irão transferir aos compradores o valor relativo a ")
+                    + vm("toda incidência") + az(" do novo imposto, o que aumentará o preço do bem.")),
+        "poucas": ("Repasse " + azb("integral") + " só ocorre em casos-limite (demanda perfeitamente inelástica "
+                   "ou oferta perfeitamente elástica). Sem essa hipótese, o preço sobe <b>menos</b> que o "
+                   "imposto e o vendedor absorve parte."),
+        "destrinchando": [
+            "Com curvas de inclinação normal, o novo equilíbrio tem pc subindo e pv caindo: " + vd("ΔPc + |ΔPv| "
+            "= t") + ", e cada parcela depende das elasticidades.",
+            "Repasse total exige que o comprador não reaja ao preço — " + vd("|εᴰ| = 0") + ", demanda vertical "
+            "— ou que o vendedor não aceite nenhuma redução do preço líquido — " + vd("εˢ = ∞") + ", oferta "
+            "horizontal (indústria de custos constantes no longo prazo).",
+            "A metade verdadeira do item é a segunda oração: o preço ao consumidor <b>aumenta</b>, salvo no caso "
+            "de demanda infinitamente elástica. O erro está no “toda”.",
+            "Detalhe de redação: o comando trata de um imposto genérico, sem informar elasticidades. Faltando "
+            "a hipótese extrema, vale a regra geral de partilha.",
+        ],
+        "dissecando": (cz("[modulador absoluto · meia-verdade]") + " O preço sobe (verdade), mas não no valor "
+                       "inteiro do imposto. O absoluto “toda” transforma um caso-limite em regra. 🔥 Itens de "
+                       "incidência sem elasticidade informada quase sempre pedem a regra geral de partilha."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a oferta for perfeitamente elástica, os vendedores transferirão aos compradores todo o "
+            "imposto.”</i> → CERTO",
+            "<i>“Só se a demanda for perfeitamente inelástica os vendedores transferirão todo o imposto.”</i> → "
+            "ERRADO (restrição indevida: também com oferta perfeitamente elástica)",
+        ])],
+        "reescrita": ("Vendedores irão transferir aos compradores " + hl("apenas parte do") + " novo imposto, "
+                      "o que aumentará o preço do bem " + hl("em montante inferior ao do tributo") + "."),
+        "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["toda"], "dificuldade": 1,
+        "comentario_fonte": "Só ocorreria com demanda de elasticidade nula (vertical); nesse caso o consumidor "
+                            "absorve toda a elevação de preço.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: errei — marca ❌ da fonte preservada (ver ECO-E1-0235-1)",
+                    "qualidade_fonte: o comentário de origem diz que o repasse integral “apenas” ocorre com "
+                    "demanda vertical; também ocorre com oferta perfeitamente elástica — corrigido",
+                    "banca_provavel: CEBRASPE/CACD 2013 (a fonte só traz “C/E (2013)”; não confirmada)"],
+    },
+    # ------------------------------------------------------------------ E1-0235 (4)
+    {
+        "id": "ECO-E1-0235-4", "fonte_ref": "E1-0235", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2013, "cacd": False,
+        "errei": True,
+        "comando": CMD_2013,
+        "rotulo_item": "Item",
+        "assertiva": ("Quanto menor for a elasticidade-preço da demanda, maior será a incidência do tributo para "
+                      "os consumidores."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quanto <u>menor</u> for a elasticidade-preço da demanda, <u>maior</u> será a incidência "
+                      "do tributo para os consumidores."),
+        "poucas": ("Demanda menos elástica = consumidor com menos alternativas: ele aceita pagar mais, e a "
+                   "parcela do imposto que recai sobre ele " + vd("aumenta") + "."),
+        "destrinchando": [
+            "Parcela do consumidor = " + vd("εˢ / (εˢ + |εᴰ|)") + ". Mantida a oferta, reduzir |εᴰ| diminui o "
+            "denominador e eleva a fração; no limite |εᴰ| = 0, ela vale 1 (o consumidor paga tudo).",
+            "A elasticidade-preço da demanda é baixa quando o bem é necessário, tem poucos substitutos, pesa "
+            "pouco no orçamento ou o horizonte é curto (combustível na semana seguinte ao aumento).",
+            "Por isso tributos sobre combustíveis, energia, bebidas e cigarros são, em boa parte, pagos pelo "
+            "consumidor final, ainda que recolhidos pelo produtor ou distribuidor.",
+            "Cuidado com o sinal: a elasticidade-preço da demanda é negativa; “menor elasticidade” significa "
+            "menor <b>em módulo</b> (mais próxima de zero).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Relação monotônica correta (menos elástico → paga mais). O "
+                       "risco é a inversão mental de “menor”, ou o tropeço no sinal negativo da "
+                       "elasticidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto maior for a elasticidade-preço da oferta, maior será a incidência do tributo para os "
+            "consumidores.”</i> → CERTO",
+            "<i>“Quanto menor for a elasticidade-preço da oferta, maior será a incidência do tributo para os "
+            "consumidores.”</i> → ERRADO (inversão: oferta rígida joga o ônus no produtor)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["quanto menor… maior"], "dificuldade": 1,
+        "comentario_fonte": "Correto: com poucas alternativas, o consumidor absorve o custo via preço; a empresa "
+                            "repassa parte do fardo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: errei — marca ❌ da fonte preservada (ver ECO-E1-0235-1)",
+                    "banca_provavel: CEBRASPE/CACD 2013 (a fonte só traz “C/E (2013)”; não confirmada)"],
+    },
 ]

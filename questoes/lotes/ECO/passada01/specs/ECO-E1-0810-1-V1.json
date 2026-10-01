@@ -1,15 +1,137 @@
-{"id": "ECO-E1-0810-1-V1", "uso": "verso",
+{
+ "id": "ECO-E1-0810-1-V1",
+ "uso": "verso",
  "legenda": "Com U = x₁x₂ e preços fixos (p₁ = 10, p₂ = 4), dobrar a renda de 80 para 160 desloca a restrição em paralelo e leva o ótimo de (4; 10) para (8; 20): os dois ótimos estão no mesmo raio x₂ = 2,5·x₁, a curva renda-consumo de preferências homotéticas.",
- "eixos": {"x": "x₁", "y": "x₂", "xmax": 18, "ymax": 44, "numeros": true},
+ "eixos": {
+  "x": "x₁",
+  "y": "x₂",
+  "xmax": 18,
+  "ymax": 44,
+  "numeros": true
+ },
  "curvas": [
-   {"id": "RO1", "tipo": "funcao", "expr": "20 - 2.5*x", "dominio": [0, 8], "familia": "terceira", "estado": "inicial", "rotulo": "r = 80", "rotulo_em": 7.0, "rotulo_desloc": [6, 4]},
-   {"id": "RO2", "tipo": "funcao", "expr": "40 - 2.5*x", "dominio": [0, 16], "familia": "terceira", "rotulo": "r = 160", "rotulo_em": 15.0, "rotulo_desloc": [6, 4]},
-   {"id": "U1", "tipo": "funcao", "expr": "40/x", "dominio": [1.4, 17], "familia": "demanda", "estado": "inicial", "rotulo": "U = 40", "rotulo_em": 16.5, "rotulo_desloc": [-10, 12]},
-   {"id": "U2", "tipo": "funcao", "expr": "160/x", "dominio": [4.2, 17], "familia": "demanda", "rotulo": "U = 160", "rotulo_em": 16.5, "rotulo_desloc": [-14, 12]},
-   {"id": "RC", "tipo": "funcao", "expr": "2.5*x", "dominio": [0, 16], "familia": "referencia", "rotulo": "renda-consumo: x₂ = 2,5·x₁", "rotulo_xy": [9.6, 37]}],
- "deslocamentos": [{"de": "RO1", "para": "RO2", "sentido": "direita", "em_y": 4}],
+  {
+   "id": "RO1",
+   "tipo": "funcao",
+   "expr": "20 - 2.5*x",
+   "dominio": [
+    0,
+    8
+   ],
+   "familia": "terceira",
+   "estado": "inicial",
+   "rotulo": "r = 80",
+   "rotulo_xy": [
+    8.6,
+    1.8
+   ]
+  },
+  {
+   "id": "RO2",
+   "tipo": "funcao",
+   "expr": "40 - 2.5*x",
+   "dominio": [
+    0,
+    16
+   ],
+   "familia": "terceira",
+   "rotulo": "r = 160",
+   "rotulo_xy": [
+    16.2,
+    3.2
+   ]
+  },
+  {
+   "id": "U1",
+   "tipo": "funcao",
+   "expr": "40/x",
+   "dominio": [
+    1.4,
+    12
+   ],
+   "familia": "demanda",
+   "estado": "inicial",
+   "rotulo": "U = 40",
+   "rotulo_xy": [
+    12.2,
+    5.2
+   ]
+  },
+  {
+   "id": "U2",
+   "tipo": "funcao",
+   "expr": "160/x",
+   "dominio": [
+    4.2,
+    17
+   ],
+   "familia": "demanda",
+   "rotulo": "U = 160",
+   "rotulo_em": 16.5,
+   "rotulo_desloc": [
+    -14,
+    12
+   ]
+  },
+  {
+   "id": "RC",
+   "tipo": "funcao",
+   "expr": "2.5*x",
+   "dominio": [
+    0,
+    16
+   ],
+   "familia": "referencia",
+   "rotulo": "renda-consumo: x₂ = 2,5·x₁",
+   "rotulo_xy": [
+    9.6,
+    37
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "RO1",
+   "para": "RO2",
+   "sentido": "direita",
+   "em_y": 15
+  }
+ ],
  "pontos": [
-   {"id": "E1", "intersecao": ["RO1", "RC"], "rotulo": "E₁ (4; 10)", "projetar": true, "rotulo_desloc": [-96, 4]},
-   {"id": "E2", "intersecao": ["RO2", "RC"], "rotulo": "E₂ (8; 20)", "projetar": true, "rotulo_desloc": [12, 4]}],
- "checar": ["abs(E1.x - 4) < 0.01", "abs(E1.y - 10) < 0.01", "abs(E2.x - 8) < 0.01", "abs(E2.y - 20) < 0.01",
-            "abs(E1.x*E1.y - 40) < 0.01", "abs(E2.x*E2.y - 160) < 0.01", "abs(E2.y/E2.x - E1.y/E1.x) < 0.001"]}
+  {
+   "id": "E1",
+   "intersecao": [
+    "RO1",
+    "RC"
+   ],
+   "rotulo": "E₁ (4; 10)",
+   "projetar": true,
+   "rotulo_desloc": [
+    -96,
+    4
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "RO2",
+    "RC"
+   ],
+   "rotulo": "E₂ (8; 20)",
+   "projetar": true,
+   "rotulo_desloc": [
+    40,
+    -6
+   ]
+  }
+ ],
+ "checar": [
+  "abs(E1.x - 4) < 0.01",
+  "abs(E1.y - 10) < 0.01",
+  "abs(E2.x - 8) < 0.01",
+  "abs(E2.y - 20) < 0.01",
+  "abs(E1.x*E1.y - 40) < 0.01",
+  "abs(E2.x*E2.y - 160) < 0.01",
+  "abs(E2.y/E2.x - E1.y/E1.x) < 0.001"
+ ]
+}

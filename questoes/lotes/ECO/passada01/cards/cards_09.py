@@ -769,4 +769,320 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00195
+    {
+        "id": "ECO-E3-L00195-1", "fonte_ref": "E3-L00195", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Abril/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_ABR_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um aumento no imposto sobre o consumo de um bem com demanda perfeitamente preço-elástica e "
+                      "oferta preço-inelástica terá incidência apenas sobre o bem-estar dos produtores, pois os "
+                      "consumidores somente adquirem o bem a um preço único de equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um aumento no imposto sobre o consumo de um bem com demanda <u>perfeitamente "
+                      "preço-elástica</u> e oferta preço-inelástica terá incidência <u>apenas</u> sobre o "
+                      "bem-estar dos produtores, pois os consumidores somente adquirem o bem a um preço único de "
+                      "equilíbrio."),
+        "poucas": ("Demanda perfeitamente elástica (horizontal): o consumidor não aceita preço acima do vigente, "
+                   "então o imposto não chega ao preço final — o " + vd("produtor absorve tudo") + "."),
+        "destrinchando": [
+            "Demanda " + azb("perfeitamente elástica") + " = horizontal no preço p*. Qualquer centavo acima e a "
+            "quantidade demandada vai a zero; o preço pago pelo consumidor fica fixo (o “preço único” do item).",
+            "Com o imposto, a cunha pc − pv = t sai inteira do lado do vendedor: " + vd("pc = p*") + " e "
+            + vd("pv = p* − t") + ". Pela fórmula, a parcela do consumidor é ε<sub>O</sub> / (ε<sub>O</sub> + "
+            "|ε<sub>D</sub>|) → 0.",
+            "A oferta inelástica reforça o resultado: os produtores não conseguem reduzir muito a produção, a "
+            "quantidade cai pouco e quase toda a perda vira receita do governo, com peso morto pequeno. Com a "
+            "demanda horizontal, porém, a incidência sobre o produtor seria total mesmo com oferta elástica — "
+            "nesse caso a quantidade cairia mais.",
+            "Bem-estar: o excedente do consumidor não muda (com demanda horizontal ele já é nulo); o do produtor "
+            "encolhe pela receita arrecadada mais o peso morto.",
+            vm("Regra-âncora: curva horizontal de um lado → esse lado não paga nada do imposto."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Item construído sobre um caso-limite. O “apenas” "
+                       "assusta quem associa absolutos a ERRADO, mas aqui é exato: demanda perfeitamente elástica "
+                       "torna a incidência sobre o consumidor nula. 🔥 A banca combina extremos (horizontal, "
+                       "vertical) com o modulador absoluto para testar se o candidato sabe quando ele é "
+                       "legítimo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com demanda perfeitamente preço-inelástica e oferta preço-elástica terá incidência apenas sobre "
+            "o bem-estar dos produtores…”</i> → ERRADO (inversão: recairia só sobre os consumidores)",
+            "<i>“Com demanda perfeitamente elástica, o imposto não altera a quantidade transacionada.”</i> → "
+            "ERRADO (a quantidade cai, salvo oferta perfeitamente inelástica)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["apenas", "somente"], "dificuldade": 1,
+        "comentario_fonte": "Demanda horizontal: o consumidor não aceita pagar acima do preço; o imposto não é "
+                            "repassado e o preço recebido pelo produtor cai no valor integral do imposto. "
+                            "Anotações com as condições da cunha e gráficos de incidência.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 245", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (condições da cunha no 📖)"},
+                          {"ref": "IMAGEM 246-249", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (gráficos de incidência; conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00196
+    {
+        "id": "ECO-E3-L00196-1", "fonte_ref": "E3-L00196", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Abril/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_ABR_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um aumento no imposto sobre o consumo de um bem cuja demanda e oferta tenham elasticidades "
+                      "unitárias incidirá apenas sobre o bem-estar do consumidor, pois as firmas conseguem "
+                      "repassar o tributo totalmente no novo preço de equilíbrio."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um aumento no imposto sobre o consumo de um bem cuja demanda e oferta tenham elasticidades "
+                      "unitárias incidirá ") + vm("apenas sobre o bem-estar do consumidor") + az(", pois as "
+                      "firmas ") + vm("conseguem repassar o tributo totalmente") + az(" no novo preço de "
+                      "equilíbrio."),
+        "poucas": ("Elasticidades iguais (|ε<sub>D</sub>| = ε<sub>O</sub> = 1) → o ônus se " + vd("reparte ao "
+                   "meio") + " entre consumidores e produtores. Repasse total exigiria demanda vertical ou "
+                   "oferta horizontal."),
+        "destrinchando": [
+            "Parcela do consumidor = ε<sub>O</sub> / (ε<sub>O</sub> + |ε<sub>D</sub>|) = 1 / (1 + 1) = "
+            + vd("½") + ". O preço ao consumidor sobe metade do imposto; o preço líquido do produtor cai a outra "
+            "metade (para variações pequenas, em torno do equilíbrio).",
+            "A regra geral: " + azb("o lado mais inelástico paga mais") + ". Elasticidades iguais = nenhum lado "
+            "“foge” mais que o outro = divisão equilibrada.",
+            "Repasse integral ao consumidor só em dois extremos: " + azb("demanda perfeitamente inelástica")
+            + " (vertical) ou " + azb("oferta perfeitamente elástica") + " (horizontal).",
+            "Atenção: elasticidade <b>unitária</b> (|ε| = 1) não tem nada a ver com repasse integral; o que ela "
+            "tem de especial é a receita (p × q) ficar constante quando o preço varia ao longo da demanda.",
+        ],
+        "dissecando": (cz("[troca de conceito · modulador absoluto]") + " O item usa elasticidades simétricas e "
+                       "conclui por uma incidência assimétrica e total. Pista: se nada distingue os dois lados, "
+                       "nada justifica que um pague tudo. O “apenas” e o “totalmente” só seriam válidos nos "
+                       "casos-limite."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se demanda e oferta tiverem a mesma elasticidade-preço, em módulo, o ônus do imposto se "
+            "dividirá igualmente entre consumidores e produtores.”</i> → CERTO",
+            "<i>“Com oferta perfeitamente elástica, as firmas repassam o tributo totalmente ao preço.”</i> → "
+            "CERTO",
+        ])],
+        "reescrita": ("Um aumento no imposto sobre o consumo de um bem cuja demanda e oferta tenham elasticidades "
+                      "unitárias incidirá " + hl("igualmente sobre o bem-estar do consumidor e o das firmas")
+                      + ", pois " + hl("cada lado arca com metade do tributo") + " no novo preço de "
+                      "equilíbrio."),
+        "tipo_erro": ["TROCA_CONCEITO", "GENERALIZACAO"], "moduladores": ["apenas", "totalmente"],
+        "dificuldade": 1,
+        "comentario_fonte": "Com elasticidades iguais, o ônus é repartido; repasse total só com demanda "
+                            "perfeitamente inelástica ou oferta perfeitamente elástica. Gráfico com divisão "
+                            "50%-50%.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 250", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetia a assertiva)"},
+                          {"ref": "IMAGEM 251-252", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvidas (divisão 50%-50% no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00197
+    {
+        "id": "ECO-E3-L00197-1", "fonte_ref": "E3-L00197", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Abril/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_ABR_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto sobre o consumo de produtos viciantes tem redução pequena no bem-estar dos "
+                      "consumidores, uma vez que a demanda desses produtos é altamente elástica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um imposto sobre o consumo de produtos viciantes tem redução ") + vm("pequena")
+                   + az(" no bem-estar dos consumidores, uma vez que a demanda desses produtos é altamente ")
+                   + vm("elástica") + az("."),
+        "poucas": ("Produtos viciantes têm demanda " + azb("inelástica") + ": o consumidor continua comprando "
+                   "quase o mesmo e paga quase todo o imposto — a perda de bem-estar dele é " + vd("grande")
+                   + "."),
+        "destrinchando": [
+            "Determinantes da elasticidade-preço da demanda: disponibilidade de substitutos, essencialidade ou "
+            + azb("dependência") + ", peso no orçamento e horizonte de tempo. Cigarro, álcool e drogas têm "
+            "dependência e poucos substitutos → demanda inelástica.",
+            "Incidência: o lado mais inelástico arca com a maior parte do imposto. Aqui, o preço ao consumidor "
+            "sobe quase o valor de t, e a quantidade cai pouco: a perda de excedente do consumidor ≈ (Δpc) × q é "
+            + vd("grande") + ".",
+            "Por que esses bens são tributados pesadamente (" + azb("impostos seletivos") + ", “sin taxes”): "
+            "arrecadam muito com peso morto pequeno (a quantidade cai pouco) e ainda desestimulam um consumo com "
+            "externalidades negativas. O efeito sobre o consumo é maior no longo prazo, quando a demanda fica "
+            "mais elástica.",
+            rx("No Brasil") + ", a reforma tributária do consumo (EC 132/2023) criou o " + azb("Imposto "
+            "Seletivo") + ", que incide sobre bens prejudiciais à saúde ou ao meio ambiente, como fumo e "
+            "bebidas alcoólicas.",
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " Dois erros encadeados: classifica a "
+                       "demanda como elástica (é inelástica) e, a partir disso, conclui pela perda pequena. A "
+                       "pista é “viciantes”: vício é o exemplo de manual de inelasticidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto sobre produtos viciantes recai majoritariamente sobre os consumidores, cuja demanda "
+            "é inelástica.”</i> → CERTO",
+            "<i>“Por ser inelástica a demanda de cigarros, o imposto sobre eles gera grande peso morto.”</i> → "
+            "ERRADO (demanda inelástica → peso morto pequeno)",
+        ])],
+        "reescrita": ("Um imposto sobre o consumo de produtos viciantes tem redução " + hl("grande") + " no "
+                      "bem-estar dos consumidores, uma vez que a demanda desses produtos é altamente "
+                      + hl("inelástica") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": ["altamente"], "dificuldade": 1,
+        "comentario_fonte": "A demanda por produtos viciantes é inelástica e a redução de bem-estar do "
+                            "consumidor é grande: ele continua comprando quase o mesmo, a preço maior.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 253", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetia a assertiva)"},
+                          {"ref": "IMAGEM 254", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00198
+    {
+        "id": "ECO-E3-L00198-1", "fonte_ref": "E3-L00198", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Abril/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_ABR_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma redução no imposto sobre o consumo de um bem com demanda preço-inelástica e oferta "
+                      "preço-elástica terá incidência maior sobre o bem-estar dos consumidores do que sobre o "
+                      "bem-estar das firmas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma <u>redução</u> no imposto sobre o consumo de um bem com demanda <u>preço-inelástica</u> "
+                      "e oferta preço-elástica terá incidência maior sobre o bem-estar dos <u>consumidores</u> do "
+                      "que sobre o bem-estar das firmas."),
+        "poucas": ("A regra da incidência vale nos dois sentidos: o lado " + azb("mais inelástico") + " paga a "
+                   "maior parte de um aumento e " + vd("captura a maior parte de uma redução") + ". Aqui, os "
+                   "consumidores."),
+        "destrinchando": [
+            "A cunha pc − pv encolhe com a redução do imposto. Como a demanda é inelástica e a oferta elástica, "
+            "o ajuste se dá quase todo em pc: o " + vd("preço ao consumidor cai quase o valor da redução")
+            + ", e o preço líquido do produtor quase não muda.",
+            "Parcela do consumidor = ε<sub>O</sub> / (ε<sub>O</sub> + |ε<sub>D</sub>|): com ε<sub>O</sub> "
+            "grande e |ε<sub>D</sub>| pequeno, fica próxima de 1.",
+            "Implicação de política: desonerações de bens com oferta elástica (produção facilmente expansível) "
+            "tendem a chegar ao consumidor; com oferta inelástica, a desoneração fica com os produtores (vira "
+            "margem).",
+            rx("No Brasil") + ", o debate sobre repasse de desonerações (cesta básica, combustíveis) gira "
+            "exatamente em torno disso: o repasse ao preço depende das elasticidades, não da intenção da lei.",
+        ],
+        "dissecando": (cz("[contraintuitivo · detalhe]") + " A palavra “incidência” costuma vir associada a "
+                       "ônus; aqui ela se aplica a um <b>benefício</b> (redução de imposto). Quem não percebe "
+                       "a simetria da regra hesita. Pista: demanda inelástica + oferta elástica = consumidor "
+                       "no centro do ajuste, para cima ou para baixo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma redução de imposto sobre um bem com oferta inelástica e demanda elástica beneficiará "
+            "sobretudo os produtores.”</i> → CERTO",
+            "<i>“Uma redução de imposto sempre se transmite integralmente ao preço pago pelo consumidor.”</i> → "
+            "ERRADO (modulador absoluto: depende das elasticidades)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "DETALHE"], "moduladores": ["maior"], "dificuldade": 2,
+        "comentario_fonte": "A parte mais inelástica arca com a maior parte do ônus num aumento e se apropria da "
+                            "maior parte do benefício numa redução; os consumidores capturam a redução via queda "
+                            "de preços.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 255-256", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00199
+    {
+        "id": "ECO-E3-L00199-1", "fonte_ref": "E3-L00199", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Abril/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_ABR_INTERV,
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição de preço máximo necessariamente conduz à perda de bem-estar e ao "
+                      "desabastecimento, independente da estrutura de mercado prevalecente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A imposição de preço máximo ") + vm("necessariamente") + az(" conduz à perda de "
+                      "bem-estar e ao desabastecimento, ") + vm("independente da estrutura de mercado "
+                      "prevalecente") + az("."),
+        "poucas": ("O resultado depende do nível do teto e da estrutura de mercado: em " + azb("monopólio")
+                   + ", um teto entre o preço de monopólio e o custo marginal " + vd("eleva a quantidade e "
+                   "reduz o peso morto") + ", sem desabastecimento."),
+        "destrinchando": [
+            "Três situações a separar: (1) teto " + azb("acima") + " do preço de equilíbrio → não vinculante, "
+            "nada muda; (2) teto abaixo do equilíbrio em " + azb("concorrência perfeita") + " → escassez e peso "
+            "morto; (3) teto em " + azb("monopólio") + " → pode melhorar a alocação.",
+            "No monopólio, a firma produz onde RMg = CMg e cobra P > CMg: já há peso morto (o “triângulo de "
+            + oc("Harberger") + "”). Com o teto, a receita marginal vira o próprio Pmáx até a demanda; a firma "
+            "passa a vender mais.",
+            "Resumo comparativo: concorrência perfeita com teto abaixo do equilíbrio → quantidade " + vd("cai")
+            + ", peso morto " + vd("aumenta") + "; monopólio com teto entre Pm e o CMg → quantidade "
+            + vd("sobe") + ", peso morto " + vd("diminui") + ".",
+            "O teto ótimo para o monopólio é o preço em que a demanda cruza o CMg: replica o resultado "
+            "competitivo. Abaixo dele, o teto volta a criar escassez. É a base da " + azb("regulação por "
+            "preço-teto") + " (price cap) de monopólios naturais.",
+            vm("Regra-âncora: o efeito do teto depende de onde ele é fixado e da estrutura de mercado."),
+        ],
+        "dissecando": (cz("[modulador absoluto]") + " “Necessariamente” + “independente da estrutura de mercado” "
+                       "convertem o caso competitivo em lei universal. 🔥 Mesmo item do Pré-TPS/2023 da Nabuco "
+                       "(gabarito ERRADO): estrutura de mercado como contraexemplo é padrão recorrente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, um preço máximo fixado acima do preço de equilíbrio não produz "
+            "desabastecimento.”</i> → CERTO",
+            "<i>“Em monopólio, um preço máximo igual ao preço de monopólio eleva a quantidade "
+            "transacionada.”</i> → ERRADO (teto igual a Pm não vincula)",
+        ])],
+        "reescrita": ("A imposição de preço máximo " + hl("pode conduzir") + " à perda de bem-estar e ao "
+                      "desabastecimento " + hl("em mercados competitivos, mas, em monopólio, um teto bem "
+                      "calibrado pode elevar a quantidade e reduzir o peso morto") + "."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["necessariamente", "independente"], "dificuldade": 2,
+        "comentario_fonte": "Várias respostas de IA concordantes: em monopólio, um preço máximo entre o preço de "
+                            "monopólio e o CMg aumenta a quantidade e reduz o peso morto; em concorrência "
+                            "perfeita, gera escassez; teto acima do equilíbrio é não vinculante.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 257", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetia a assertiva)"},
+                          {"ref": "IMAGEM 258", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (conteúdo absorvido no 📖)"},
+                          {"ref": "IMAGEM 259", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (resumo comparativo no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00202
+    {
+        "id": "ECO-E3-L00202-1", "fonte_ref": "E3-L00202", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Abril/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_ABR_INTERV,
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição de um imposto sobre a margem de lucro das empresas não afeta a condição de "
+                      "equilíbrio de primeira ordem em nenhuma estrutura de mercado, ou seja, o ponto no qual a "
+                      "receita marginal é igual ao custo marginal (Rmg = Cmg)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A imposição de um imposto sobre a <u>margem de lucro</u> das empresas não afeta a condição "
+                      "de equilíbrio de primeira ordem em <u>nenhuma</u> estrutura de mercado, ou seja, o ponto no "
+                      "qual a receita marginal é igual ao custo marginal (Rmg = Cmg)."),
+        "poucas": ("Imposto proporcional ao lucro multiplica a função lucro por " + vd("(1 − t)") + ", uma "
+                   "constante positiva: o máximo continua no mesmo q, onde " + azb("RMg = CMg") + "."),
+        "destrinchando": [
+            "Sem imposto: máx π(q) = RT(q) − CT(q) → CPO: RMg = CMg. Com alíquota t sobre o lucro: máx "
+            "(1 − t)·π(q) → CPO: (1 − t)·(RMg − CMg) = 0. Como " + vd("1 − t > 0") + ", a condição continua "
+            "RMg = CMg.",
+            "Intuição: o governo vira um “sócio” que leva uma fração fixa do lucro. Para maximizar a sua parte, "
+            "a firma precisa maximizar o lucro total — o ranking das opções não muda (100 > 80 vira 70 > 56).",
+            "Vale para concorrência perfeita (P = CMg), monopólio (RMg = CMg), concorrência monopolística e "
+            "oligopólio (as funções de reação não mudam). Por isso o imposto sobre lucro econômico puro é "
+            + azb("neutro") + " no curto prazo: não gera peso morto na decisão de quanto produzir.",
+            "Contraste: imposto " + azb("específico") + " (por unidade) desloca o CMg para cima (CMg + t); "
+            "imposto " + azb("ad valorem") + " sobre a receita reduz a RMg para (1 − t)·RMg — ambos alteram q e P.",
+            "Ressalvas (fora do modelo estático): se a base for o lucro contábil, que inclui o retorno normal "
+            "do capital, o imposto afeta entrada, saída e investimento no longo prazo; há também elisão e "
+            "planejamento tributário.",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " O “em nenhuma estrutura de mercado” soa como "
+                       "modulador absoluto, mas é exato: a neutralidade decorre da matemática da maximização, "
+                       "não da estrutura. A armadilha é tratar “imposto” como sinônimo de custo marginal maior."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto específico por unidade vendida não altera a quantidade ofertada pelo "
+            "monopolista.”</i> → ERRADO (desloca o CMg para cima e reduz q)",
+            "<i>“Um imposto sobre o lucro econômico reduz o lucro do monopolista sem alterar o preço "
+            "cobrado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": ["nenhuma"], "dificuldade": 2,
+        "comentario_fonte": "Imposto sobre o lucro não altera RMg nem CMg; a CPO continua RMg = CMg, só o lucro "
+                            "líquido diminui. Demonstração com (1 − t)·π, tabela por estrutura de mercado e "
+                            "contraste com impostos específico e ad valorem.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 267", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (demonstração formal no 📖)"},
+                          {"ref": "IMAGEM 268", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (validade por estrutura de mercado no 📖)"}],
+        "alertas": [],
+    },
 ]

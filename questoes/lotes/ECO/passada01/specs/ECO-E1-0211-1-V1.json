@@ -1,0 +1,91 @@
+{
+ "id": "ECO-E1-0211-1-V1",
+ "uso": "verso",
+ "legenda": "O progresso técnico só na informática gira a FPP para fora a partir do intercepto de automóveis, que não muda. Em todo o interior, FPP₂ fica acima de FPP₁: a economia pode sair de A para B, com mais computadores E mais automóveis.",
+ "eixos": {
+  "x": "comp",
+  "y": "auto",
+  "xmax": 11,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "F1",
+   "tipo": "funcao",
+   "expr": "sqrt(maximum(0, 64 - x**2))",
+   "dominio": [
+    0,
+    8
+   ],
+   "familia": "demanda",
+   "rotulo": "FPP₁",
+   "estado": "inicial",
+   "rotulo_em": 6.6,
+   "rotulo_desloc": [
+    -34,
+    -14
+   ]
+  },
+  {
+   "id": "F2",
+   "tipo": "funcao",
+   "expr": "sqrt(maximum(0, 64 - (0.8*x)**2))",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "FPP₂",
+   "rotulo_em": 8.6,
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "sobre": "F1",
+   "x": 5,
+   "rotulo": "A",
+   "projetar": true
+  },
+  {
+   "id": "B",
+   "sobre": "F2",
+   "x": 5.8,
+   "rotulo": "B",
+   "projetar": true
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "A.x+0.1",
+    "A.y+0.05"
+   ],
+   "para": [
+    "B.x-0.12",
+    "B.y-0.03"
+   ],
+   "cor": "vermelho"
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.3,
+    8.9
+   ],
+   "texto": "máximo de automóveis inalterado",
+   "cor": "cinza"
+  }
+ ],
+ "checar": [
+  "B.x > A.x",
+  "B.y > A.y",
+  "abs(F1(0) - F2(0)) < 0.01",
+  "F2(5) > F1(5)"
+ ]
+}

@@ -246,7 +246,7 @@ CARDS = [
                           {"ref": "00020.jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "irrecuperavel (Leontief com caminho de expansão, redesenhada em "
                                    "ECO-E1-0002-1-V1)"}],
-        "alertas": ["ocr: “exije” corrigido para “exige”",
+        "alertas": ["texto_corrigido: “exije” corrigido para “exige”",
                     "banca_provavel: CEBRASPE (não confirmada: a fonte só traz o ano, 2012)"],
     },
     # ------------------------------------------------------------------ E1-0220
@@ -467,8 +467,487 @@ CARDS = [
         "qualidade_fonte": "ausente",
         "figuras_fonte": [{"ref": "image (77).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "irrecuperavel"}],
-        "alertas": ["gabarito_resolvido: a fonte não traz gabarito (verso só com imagem perdida); resolvido como "
+        "alertas": ["nota_redacao: gabarito resolvido — a fonte não traz gabarito (verso só com imagem perdida); resolvido como "
                     "CERTO pelo conteúdo (substitutos perfeitos → isoquantas retas paralelas)",
                     "banca_provavel: CEBRASPE (não confirmada: a fonte só traz o ano, 2010)"],
+    },
+    # ------------------------------------------------------------------ E2-L00036
+    {
+        "id": "ECO-E2-L00036-1", "fonte_ref": "E2-L00036", "destino": "05", "subtema": H2["cp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("No curto prazo, a empresa pode aumentar sua produção aumentando proporcionalmente todos os "
+                      "seus fatores de produção, levando a um aumento proporcional na produção total, sem "
+                      "interferir nos rendimentos decrescentes."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No curto prazo, a empresa pode aumentar sua produção ")
+                   + vm("aumentando proporcionalmente todos os seus fatores de produção, levando a um aumento "
+                        "proporcional na produção total, sem interferir nos rendimentos decrescentes") + az("."),
+        "poucas": ("No " + azb("curto prazo") + " há ao menos um fator fixo: não dá para aumentar <b>todos</b> "
+                   "os fatores. A produção sobe só pelo fator variável, sujeita aos " + azb("rendimentos "
+                   "marginais decrescentes") + "."),
+        "destrinchando": [
+            "O item descreve um experimento de " + azb("longo prazo") + " — variar todos os fatores na mesma "
+            "proporção — e o situa no curto prazo, quando ao menos um insumo (em geral, o capital) está fixo.",
+            "No curto prazo, q = f(K̄, L): mais produto exige mais trabalho sobre a mesma planta. Cada "
+            "trabalhador adicional dispõe de menos capital, e, a partir de certo ponto, o " + azb("produto "
+            "marginal") + " do trabalho cai — é a lei dos rendimentos decrescentes, que existe justamente "
+            "<b>por causa</b> do fator fixo.",
+            "Mesmo no longo prazo, o “aumento proporcional na produção” não é automático: depende dos "
+            + azb("rendimentos de escala") + ", que podem ser crescentes, constantes ou decrescentes. O item "
+            "pressupõe, sem dizer, rendimentos constantes.",
+            vm("Regra-âncora: curto prazo → um fator varia, PMg decrescente; longo prazo → todos variam, "
+               "rendimentos de escala."),
+        ],
+        "dissecando": (cz("[troca de conceito · anacronismo]") + " O item transplanta para o curto prazo a "
+                       "definição de rendimentos de escala, que é de longo prazo. O fecho “sem interferir nos "
+                       "rendimentos decrescentes” é a pista: no curto prazo, eles são inevitáveis."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, a empresa pode aumentar proporcionalmente todos os seus fatores de "
+            "produção.”</i> → CERTO",
+            "<i>“No longo prazo, aumentar proporcionalmente todos os fatores leva sempre a aumento proporcional "
+            "da produção.”</i> → ERRADO (modulador absoluto: depende dos rendimentos de escala)",
+        ])],
+        "reescrita": ("No curto prazo, a empresa pode aumentar sua produção " + hl("apenas aumentando os fatores "
+                      "variáveis, pois ao menos um fator permanece fixo, o que a sujeita, a partir de certo "
+                      "ponto, aos rendimentos marginais decrescentes") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "ANACRONISMO"], "moduladores": ["todos", "proporcionalmente"],
+        "dificuldade": 1,
+        "comentario_fonte": ("No curto prazo um fator é fixo; não se aumentam proporcionalmente todos os fatores, "
+                             "e o fator variável enfrenta rendimentos decrescentes."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00037
+    {
+        "id": "ECO-E2-L00037-1", "fonte_ref": "E2-L00037", "destino": "05", "subtema": H2["pmg"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A lei dos rendimentos decrescentes, observada no curto prazo, implica que, adicionando mais "
+                      "unidades de um fator variável enquanto outros são mantidos fixos, a produtividade marginal "
+                      "desse fator diminui eventualmente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A lei dos rendimentos decrescentes, observada no curto prazo, implica que, adicionando mais "
+                      "unidades de um fator variável <u>enquanto outros são mantidos fixos</u>, a produtividade "
+                      "<u>marginal</u> desse fator diminui <u>eventualmente</u>."),
+        "poucas": ("É o enunciado da " + azb("lei dos rendimentos marginais decrescentes") + ": com fatores "
+                   "fixos, o " + azb("produto marginal") + " do fator variável cai <b>a partir de certo "
+                   "ponto</b>."),
+        "destrinchando": [
+            "Três condições no enunciado, todas presentes no item: (1) um fator varia; (2) os demais ficam "
+            "fixos (curto prazo); (3) é o produto <b>marginal</b> — o acréscimo de produção da última unidade — "
+            "que cai.",
+            "“Eventualmente” está no sentido técnico de “a partir de certo ponto”: o PMg pode <b>subir</b> no "
+            "início (especialização, melhor uso da planta ociosa) e só depois cair. A lei não diz que cai desde "
+            "a primeira unidade.",
+            "Rendimento marginal decrescente não significa produto total caindo: enquanto PMg > 0, a produção "
+            "total cresce, só que a taxas menores. O produto total só cai quando " + vd("PMg < 0") + ".",
+            "A ideia é antiga: " + oc("David Ricardo") + " (1817) a usou na teoria da renda da terra — cultivar "
+            "terras piores ou aplicar mais trabalho à mesma terra rende cada vez menos.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " O item é a definição de manual. O risco está "
+                       "no “eventualmente” (leia-se “a partir de certo ponto”) e em “marginal”: a banca costuma "
+                       "trocar por “total” ou “desde a primeira unidade” para fabricar o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a produção total desse fator diminui à medida que ele é adicionado.”</i> → ERRADO (troca de "
+            "conceito: cai o marginal, não o total)",
+            "<i>“…a produtividade marginal desse fator diminui desde a primeira unidade adicionada.”</i> → "
+            "ERRADO (o PMg pode crescer no início)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["eventualmente"], "dificuldade": 1,
+        "comentario_fonte": ("Com fatores fixos, adicionar unidades de um fator variável reduz, após certo ponto, "
+                             "sua produtividade marginal: cada unidade nova tem menos capital com que trabalhar."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00038
+    {
+        "id": "ECO-E2-L00038-1", "fonte_ref": "E2-L00038", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("As isoquantas, no longo prazo, representam combinações de fatores de produção que resultam "
+                      "no mesmo nível de produção, permitindo ao produtor variar capital e trabalho na busca de "
+                      "eficiência de custos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As isoquantas, no longo prazo, representam combinações de fatores de produção que resultam "
+                      "no <u>mesmo nível de produção</u>, permitindo ao produtor variar capital e trabalho na "
+                      "busca de eficiência de custos."),
+        "poucas": ("Isoquanta = combinações de K e L com o " + azb("mesmo produto") + ". No longo prazo, com os "
+                   "dois fatores livres, a firma escolhe, sobre ela, a combinação de " + azb("menor custo")
+                   + "."),
+        "destrinchando": [
+            "O mapa de isoquantas descreve a tecnologia inteira: cada curva é um nível de produto; curvas mais "
+            "afastadas da origem = mais produção; elas não se cruzam e, no caso usual, são convexas (TMST "
+            "decrescente).",
+            "No " + azb("longo prazo") + " "
+            "todos os fatores variam, então a firma pode deslizar ao longo da isoquanta trocando capital por "
+            "trabalho. No curto prazo, com K fixo, ela fica presa a uma linha horizontal desse mapa.",
+            azb("Minimização de custos") + ": entre as combinações que produzem q, escolhe-se a que toca a "
+            "isocusto mais baixa (C = wL + rK). No ótimo interior, " + vd("TMST = PMg<sub>L</sub>/PMg<sub>K</sub>"
+            " = w/r") + " — o último real gasto em cada fator rende o mesmo produto.",
+            "Ligando os pontos ótimos para níveis crescentes de q, obtém-se o " + azb("caminho de expansão")
+            + ", base da curva de custo total de longo prazo.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Junta a definição de isoquanta com sua função no longo prazo; "
+                       "nada a corrigir. A troca típica da banca é “mesmo custo” no lugar de “mesmo nível de "
+                       "produção” — aí seria a isocusto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As isoquantas representam combinações de fatores que resultam no mesmo custo de "
+            "produção.”</i> → ERRADO (troca de conceito: isso é a isocusto)",
+            "<i>“No ponto de mínimo custo, a TMST iguala a razão entre os preços dos fatores.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("No longo prazo todos os fatores variam; isoquantas mostram combinações de K e L com o "
+                             "mesmo nível de produção e auxiliam a otimização de custos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00039
+    {
+        "id": "ECO-E2-L00039-1", "fonte_ref": "E2-L00039", "destino": "05", "subtema": H2["escala"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Os rendimentos de escala crescentes no longo prazo indicam que o aumento proporcional de "
+                      "todos os fatores de produção leva a um aumento menos que proporcional na produção total."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os rendimentos de escala crescentes no longo prazo indicam que o aumento proporcional de "
+                      "todos os fatores de produção leva a um aumento ") + vm("menos que proporcional")
+                   + az(" na produção total."),
+        "poucas": ("Rendimentos " + azb("crescentes") + " de escala: dobrar todos os insumos <b>mais que "
+                   "dobra</b> o produto. “Menos que proporcional” define os " + azb("decrescentes") + "."),
+        "destrinchando": [
+            "Teste: multiplique todos os insumos por t > 1 e compare f(tK, tL) com t·f(K, L). "
+            + vd("Maior") + " → crescentes; " + vd("igual") + " → constantes; " + vd("menor")
+            + " → decrescentes.",
+            "Na Cobb-Douglas q = A·K<sup>α</sup>L<sup>β</sup>, basta somar os expoentes: α + β > 1, = 1 ou < 1. "
+            "Ex.: q = K<sup>0,6</sup>L<sup>0,6</sup> → dobrar K e L multiplica q por 2<sup>1,2</sup> ≈ "
+            + vd("2,3") + ".",
+            "Fontes de rendimentos crescentes: especialização e divisão do trabalho, indivisibilidades (uma "
+            "linha de montagem só compensa em grande escala), relações geométricas (dobrar o diâmetro de um "
+            "duto mais que dobra sua capacidade). Fontes de decrescentes: dificuldade de coordenar e "
+            "gerenciar organizações muito grandes.",
+            "Ponte com custos: com preços dos insumos constantes, rendimentos crescentes ↔ "
+            + azb("economias de escala") + " (custo médio de longo prazo decrescente) — raiz dos monopólios "
+            "naturais.",
+        ],
+        "dissecando": (cz("[inversão]") + " Troca a definição de crescentes pela de decrescentes, mantendo todo o "
+                       "resto correto (“longo prazo”, “aumento proporcional de todos os fatores”). Pista: "
+                       "“crescente” combina com “mais que proporcional”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os rendimentos de escala decrescentes indicam que o aumento proporcional de todos os fatores "
+            "leva a um aumento menos que proporcional na produção.”</i> → CERTO",
+            "<i>“Rendimentos de escala crescentes pressupõem que pelo menos um fator permaneça fixo.”</i> → "
+            "ERRADO (escala é longo prazo: todos variam)",
+        ])],
+        "reescrita": ("Os rendimentos de escala crescentes no longo prazo indicam que o aumento proporcional de "
+                      "todos os fatores de produção leva a um aumento " + hl("mais que proporcional")
+                      + " na produção total."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Rendimentos crescentes: aumento proporcional dos insumos gera aumento mais que "
+                             "proporcional do produto (economias de escala, automação, grandes operações)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00327
+    {
+        "id": "ECO-E2-L00327-1", "fonte_ref": "E2-L00327", "destino": "05", "subtema": H2["escala"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à teoria da produção.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma função de produção pode apresentar, simultaneamente, retornos crescentes de escala e "
+                      "produtividades marginais decrescentes para cada fator de produção isoladamente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma função de produção <u>pode</u> apresentar, simultaneamente, retornos crescentes de "
+                      "escala e produtividades marginais decrescentes para cada fator de produção "
+                      "<u>isoladamente</u>."),
+        "poucas": ("Escala e produtividade marginal medem experimentos diferentes (todos os fatores × um só). "
+                   "Ex.: q = K<sup>0,75</sup>L<sup>0,75</sup> tem " + vd("retornos crescentes") + " e "
+                   + vd("PMg decrescentes") + " ao mesmo tempo."),
+        "destrinchando": [
+            azb("Retornos de escala") + ": todos os insumos crescem na mesma proporção (longo prazo). "
+            + azb("Produtividade marginal") + ": um insumo cresce, os demais ficam fixos (curto prazo). Como "
+            "as perguntas são diferentes, as respostas são independentes.",
+            "Na Cobb-Douglas q = K<sup>α</sup>L<sup>β</sup>: a escala depende da " + vd("soma α + β")
+            + "; o PMg de cada fator é decrescente se o " + vd("expoente individual < 1") + " (PMg<sub>L</sub> "
+            "= β·K<sup>α</sup>L<sup>β−1</sup> cai com L quando β < 1).",
+            "Com α = β = 0,75: soma 1,5 > 1 → retornos crescentes; cada expoente < 1 → PMg decrescentes. "
+            "Dobrar K e L multiplica q por 2<sup>1,5</sup> ≈ " + vd("2,8") + ", mas dobrar só L multiplica q "
+            "por 2<sup>0,75</sup> ≈ " + vd("1,7") + ".",
+            "Intuição: quando só o trabalho aumenta, cada trabalhador tem menos máquina; quando tudo aumenta "
+            "junto, a proporção se mantém e entram os ganhos de especialização.",
+            vm("Regra-âncora: PMg olha um fator; escala olha todos — um não determina o outro."),
+        ],
+        "dissecando": (cz("[contraintuitivo · modulador relativo]") + " Parece contraditório “crescer com tudo” e "
+                       "“decrescer com cada um”, mas não é. O “pode” e o “isoladamente” são a pista. 🔥 Tema "
+                       "recorrente: a banca já cobrou as três combinações (crescentes, constantes e "
+                       "decrescentes de escala com PMg decrescente)."),
+        "modulos": [("📚 Autores e teses", [
+            oc("Pindyck e Rubinfeld") + " (<i>Microeconomia</i>, capítulo de produção) apresentam os dois "
+            "conceitos lado a lado justamente para separar o curto do longo prazo.",
+        ]), ("😈 Para dificultar", [
+            "<i>“Se a produtividade marginal de cada fator é decrescente, os retornos de escala são "
+            "necessariamente decrescentes.”</i> → ERRADO (nexo indevido: a escala depende da soma dos "
+            "expoentes)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "MODULADOR_RELATIVO"], "moduladores": ["pode", "simultaneamente"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Retornos de escala: todos os insumos variam; produtividade marginal: um só. Há "
+                             "retornos crescentes com fatores cuja “produtividade marginal individual é menor "
+                             "que 1” (critério impreciso: o que importa é o expoente de cada fator, não o valor do "
+                             "PMg). Referência: Pindyck e Rubinfeld."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: a fonte diz “produtividade marginal individual menor que 1”; o critério "
+                    "correto é o expoente de cada fator menor que 1 (PMg decrescente)"],
+    },
+    # ------------------------------------------------------------------ E2-L00813
+    {
+        "id": "ECO-E2-L00813-1", "fonte_ref": "E2-L00813", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação à teoria microeconômica, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Na função de produção do tipo Leontief, os fatores de produção são complementos perfeitos e "
+                      "não podem ser substituídos um pelo outro, independentemente do preço."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na função de produção do tipo Leontief, os fatores de produção são complementos perfeitos e "
+                      "não podem ser substituídos um pelo outro, <u>independentemente do preço</u>."),
+        "poucas": ("Leontief = " + azb("proporções fixas") + ": q = mín(K/a, L/b). Isoquantas em L, "
+                   + vd("elasticidade de substituição zero") + " — mudar preços relativos não muda a "
+                   "combinação usada."),
+        "destrinchando": [
+            "Na " + azb("função de Leontief") + " cada unidade de produto exige a unidades de capital e b de "
+            "trabalho. As proporções são fixas, mas não precisam ser 1 para 1: uma tecnologia pode exigir, por "
+            "exemplo, 20 de capital para cada 10 de trabalho.",
+            "Isoquantas em L com vértices sobre um raio a partir da origem. Fora do vértice, o insumo excedente "
+            "tem produto marginal zero.",
+            "“Independentemente do preço”: com isoquanta em L, a isocusto mais baixa sempre toca o vértice, "
+            "qualquer que seja w/r. Se o trabalho encarece, a firma <b>não</b> o troca por capital — só passa a "
+            "pagar mais pela mesma combinação. É isso que " + vd("σ = 0") + " significa.",
+            "Contraponto: nos " + azb("substitutos perfeitos") + " (isoquantas retas paralelas), σ = ∞ e a firma "
+            "troca totalmente de insumo quando os preços relativos cruzam a TMST.",
+            "O nome homenageia " + oc("Wassily Leontief") + " (Nobel de 1973), cuja matriz insumo-produto usa "
+            "coeficientes técnicos fixos.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta. O trecho final (“independentemente do preço”) "
+                       "parece exagero, mas é exatamente o que distingue a Leontief: nenhuma variação de preço "
+                       "relativo induz substituição."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na função de Leontief, os fatores devem ser usados sempre na proporção de um para um.”</i> → "
+            "ERRADO (restrição indevida: a proporção é fixa, mas qualquer)",
+            "<i>“Na função de Leontief, um aumento do salário leva a firma a substituir trabalho por capital ao "
+            "longo da isoquanta.”</i> → ERRADO (σ = 0: não há substituição)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["independentemente"], "dificuldade": 1,
+        "comentario_fonte": ("Leontief: isoquantas em L, proporções fixas (não necessariamente 1 para 1, ex.: 20 K e "
+                             "10 L); não há substituição entre fatores, que ocorre com substitutos perfeitos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 123", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (isoquantas em L descritas no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00861
+    {
+        "id": "ECO-E2-L00861-1", "fonte_ref": "E2-L00861", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("A taxa marginal de substituição técnica em cada ponto da isoquanta corresponde à quantidade "
+                      "de capital que pode ser substituída por determinada quantidade de trabalho com o objetivo "
+                      "de aumentar a produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A taxa marginal de substituição técnica em cada ponto da isoquanta corresponde à quantidade "
+                      "de capital que pode ser substituída por determinada quantidade de trabalho ")
+                   + vm("com o objetivo de aumentar a produção") + az("."),
+        "poucas": ("A " + azb("TMST") + " mede a troca entre insumos <b>mantendo a produção constante</b> — "
+                   "toda a isoquanta tem o mesmo nível de produto. Aumentar a produção exige mudar de "
+                   "isoquanta."),
+        "destrinchando": [
+            "TMST do trabalho pelo capital = quanto capital se pode retirar ao acrescentar uma unidade de "
+            "trabalho, de modo que q fique igual: " + vd("TMST = −ΔK/ΔL (q constante)") + ".",
+            "Ao longo da isoquanta, o ganho de produção do trabalho adicionado compensa exatamente a perda do "
+            "capital retirado: PMg<sub>L</sub>·ΔL + PMg<sub>K</sub>·ΔK = 0, de onde " + vd("TMST = "
+            "PMg<sub>L</sub>/PMg<sub>K</sub>") + ".",
+            "Na isoquanta convexa, a TMST é " + azb("decrescente") + ": quanto mais trabalho e menos capital a "
+            "firma usa, menos capital ela aceita ceder por trabalhador adicional (o trabalho fica relativamente "
+            "abundante e menos produtivo na margem).",
+            "É o análogo exato da " + azb("TMS") + " do consumidor, que troca bens mantendo a utilidade "
+            "constante.",
+            vm("Regra-âncora: “iso” = constante — sobre a isoquanta, o produto não muda."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A primeira parte é a definição correta; o "
+                       "erro foi enxertado no objetivo da troca. 🔥 O mesmo item reaparece em outro simulado "
+                       "Nabuco, com um gráfico de isoquantas retas — o gabarito não muda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…corresponde à quantidade de capital que pode ser substituída por determinada quantidade de "
+            "trabalho, mantendo-se constante a produção.”</i> → CERTO",
+            "<i>“A TMST é igual à razão entre os produtos médios do trabalho e do capital.”</i> → ERRADO "
+            "(troca de conceito: razão entre produtos marginais)",
+        ])],
+        "reescrita": ("A taxa marginal de substituição técnica em cada ponto da isoquanta corresponde à quantidade "
+                      "de capital que pode ser substituída por determinada quantidade de trabalho "
+                      + hl("mantendo-se constante a produção") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("TMST do trabalho por capital: quanto se reduz de capital com uma unidade extra de "
+                             "trabalho, mantendo a produção constante; análoga à TMS do consumidor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: assertiva idêntica à de ECO-E2-L01219-1 (outro bloco Nabuco, com figura); "
+                    "mantidos os dois"],
+    },
+    # ------------------------------------------------------------------ E2-L00862
+    {
+        "id": "ECO-E2-L00862-1", "fonte_ref": "E2-L00862", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("Considere que determinada firma tenha a função de produção de proporções fixas e que cada "
+                      "nível de produção exija uma combinação específica de trabalho e capital. Nessa situação, a "
+                      "taxa marginal de substituição técnica é constante em todos os pontos da isoquanta."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considere que determinada firma tenha a função de produção de proporções fixas e que cada "
+                      "nível de produção exija uma combinação específica de trabalho e capital. Nessa situação, a "
+                      "taxa marginal de substituição técnica ") + vm("é constante em todos os pontos")
+                   + az(" da isoquanta."),
+        "poucas": ("TMST constante em toda a isoquanta é marca dos " + azb("substitutos perfeitos")
+                   + " (retas). Em " + azb("proporções fixas") + " a isoquanta é um L: TMST nula num braço, "
+                   "infinita no outro e indefinida no vértice."),
+        "destrinchando": [
+            "Isoquanta de Leontief: trecho <b>horizontal</b> (sobra trabalho; mais L não substitui nenhum K → "
+            + vd("TMST = 0") + "), trecho <b>vertical</b> (sobra capital; mais L permitiria liberar capital "
+            "“infinito” → " + vd("TMST = ∞") + ") e o vértice, onde a TMST não é definida.",
+            "Logo, a TMST muda de valor de um ponto a outro da isoquanta — não é constante. O que é fixo na "
+            "Leontief é a <b>proporção</b> K/L no ponto eficiente, e não a taxa de troca.",
+            "TMST constante (mesma inclinação em todos os pontos) só ocorre quando a isoquanta é uma "
+            + azb("reta") + ": q = aK + bL, TMST = b/a.",
+            "Quadro-resumo: retas → TMST constante, σ = ∞; L → sem substituição, σ = 0; convexas (Cobb-"
+            "Douglas) → TMST decrescente, σ = 1.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item confunde “proporção fixa” com “taxa de "
+                       "substituição constante”: fixa é a combinação; a TMST nem existe no vértice. Pista: "
+                       "“constante em todos os pontos” descreve uma reta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na função de produção de proporções fixas, as isoquantas têm formato de L.”</i> → CERTO",
+            "<i>“Se os insumos são substitutos perfeitos, a TMST é constante em todos os pontos da "
+            "isoquanta.”</i> → CERTO",
+        ])],
+        "reescrita": ("Considere que determinada firma tenha a função de produção de proporções fixas e que cada "
+                      "nível de produção exija uma combinação específica de trabalho e capital. Nessa situação, a "
+                      "taxa marginal de substituição técnica " + hl("não é constante: é nula no trecho "
+                      "horizontal, infinita no trecho vertical e indefinida no vértice") + " da isoquanta."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["todos"], "dificuldade": 2,
+        "comentario_fonte": ("TMST constante em todos os pontos caracteriza substitutos perfeitos (isoquantas "
+                             "retas paralelas); proporções fixas geram isoquantas em L."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 131", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (isoquantas em L descritas no 📖)"},
+                          {"ref": "IMAGEM 132", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (isoquantas retas descritas no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00863
+    {
+        "id": "ECO-E2-L00863-1", "fonte_ref": "E2-L00863", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("Supondo-se que, na produção de serviços de proteção ao meio ambiente, funcionários e "
+                      "material de escritório sejam fatores complementares, então, as isoquantas entre esses dois "
+                      "insumos são formadas por ângulos retos paralelos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Supondo-se que, na produção de serviços de proteção ao meio ambiente, funcionários e "
+                      "material de escritório sejam fatores <u>complementares</u>, então, as isoquantas entre "
+                      "esses dois insumos são formadas por <u>ângulos retos</u> paralelos."),
+        "poucas": ("Fatores " + azb("complementares") + " (proporções fixas) → isoquantas em <b>L</b>, ou "
+                   "seja, ângulos retos, um para cada nível de produção, com vértices alinhados."),
+        "destrinchando": [
+            "Na " + azb("função de proporções fixas") + " (Leontief), cada nível de produção exige uma "
+            "combinação específica dos insumos. Produção adicional só vem com mais funcionários <b>e</b> mais "
+            "material, na proporção da tecnologia.",
+            "Acrescentar só um dos fatores não aumenta a produção: o excedente fica ocioso (produto marginal "
+            "zero). Graficamente, a isoquanta forma um " + azb("ângulo reto") + ", com vértice na combinação "
+            "eficiente.",
+            "“Paralelos”: os Ls de níveis crescentes são cópias deslocadas umas das outras, com braços "
+            "paralelos aos eixos e vértices sobre um mesmo raio que parte da origem — o " + azb("caminho de "
+            "expansão") + ".",
+            "Paralelo com o consumidor: bens complementares perfeitos (sapato esquerdo e direito) geram "
+            + azb("curvas de indiferença") + " também em L.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " A redação estranha (“ângulos retos paralelos”) assusta, mas "
+                       "descreve o mapa de Leontief. O contexto (serviços ambientais) é irrelevante: o que "
+                       "decide é “complementares”. 🔥 A banca alterna o exemplo (funcionário e computador, "
+                       "motorista e caminhão) e o formato (retas × L)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…as isoquantas entre esses dois insumos são formadas por retas paralelas negativamente "
+            "inclinadas.”</i> → ERRADO (troca de conceito: retas são substitutos perfeitos)",
+            "<i>“…um funcionário adicional, sem material de escritório adicional, eleva a produção.”</i> → "
+            "ERRADO (o PMg do fator isolado é zero)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Proporções fixas (Leontief): nenhuma substituição; mais produção só com mais dos dois "
+                             "insumos; isoquantas em L, como as curvas de indiferença de complementares."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 133", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (isoquantas em L descritas no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00864
+    {
+        "id": "ECO-E2-L00864-1", "fonte_ref": "E2-L00864", "destino": "05", "subtema": H2["escala"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("Se uma firma apresenta tecnologia de produção com rendimentos constantes de escala, então "
+                      "ela não poderá apresentar produto marginal decrescente para cada fator."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se uma firma apresenta tecnologia de produção com rendimentos constantes de escala, então "
+                      "ela ") + vm("não poderá") + az(" apresentar produto marginal decrescente para cada fator."),
+        "poucas": ("Escala (todos os fatores) e produto marginal (um fator) são independentes. A Cobb-Douglas "
+                   "q = K<sup>0,5</sup>L<sup>0,5</sup> tem " + vd("rendimentos constantes") + " e "
+                   + vd("PMg decrescente") + " em cada fator."),
+        "destrinchando": [
+            azb("Produto marginal") + " = acréscimo de produção com uma unidade a mais de um insumo, "
+            "<b>mantidos fixos</b> os demais. Ele cai porque o fator variável passa a dispor de menos do fator "
+            "fixo — fenômeno tão difundido que virou “lei”.",
+            azb("Rendimentos de escala") + " = efeito de aumentar <b>todos</b> os insumos na mesma proporção; "
+            "nenhum fica fixo, e a produção pode crescer em proporção igual, maior ou menor.",
+            "Exemplo: q = K<sup>0,5</sup>L<sup>0,5</sup>. Dobrar K e L dobra q (" + vd("α + β = 1") + "), "
+            "mas, com K fixo, PMg<sub>L</sub> = 0,5·K<sup>0,5</sup>/L<sup>0,5</sup> cai à medida que L "
+            "cresce. Esse é, aliás, o caso-padrão dos livros: constantes de escala com PMg decrescentes.",
+            "Na Cobb-Douglas, PMg decrescente de cada fator exige expoente individual < 1; a escala depende da "
+            "soma. Com α = β = 0,5, os dois critérios convivem.",
+            vm("Regra-âncora: PMg decrescente é compatível com qualquer tipo de rendimento de escala."),
+        ],
+        "dissecando": (cz("[nexo indevido]") + " Cria uma incompatibilidade inexistente entre dois conceitos "
+                       "de horizontes diferentes. O “não poderá” é a pista: basta um contraexemplo (Cobb-Douglas "
+                       "com α + β = 1) para derrubar o item."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma função com rendimentos constantes de escala pode apresentar produto marginal decrescente "
+            "para cada fator.”</i> → CERTO",
+            "<i>“Rendimentos constantes de escala implicam produto marginal constante de cada fator.”</i> → "
+            "ERRADO (confunde escala com rendimento marginal)",
+        ])],
+        "reescrita": ("Se uma firma apresenta tecnologia de produção com rendimentos constantes de escala, ela "
+                      + hl("pode") + " apresentar produto marginal decrescente para cada fator"
+                      + hl(", como na Cobb-Douglas com α + β = 1") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["não poderá"], "dificuldade": 2,
+        "comentario_fonte": ("Produto marginal decrescente decorre de manter os demais insumos fixos; rendimentos "
+                             "de escala aumentam todos os insumos na mesma proporção e podem ser constantes, "
+                             "crescentes ou decrescentes mesmo com PMg decrescente."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
     },
 ]

@@ -934,4 +934,346 @@ CARDS = [
                            "acao": "cortada (imagem do verso não preservada no caderno E1)"}],
         "alertas": ["banca_provavel: possivelmente CACD/2014 (CEBRASPE), não confirmado pela fonte"],
     },
+    # ------------------------------------------------------------------ E1-0238
+    {
+        "id": "ECO-E1-0238-1", "fonte_ref": "E1-0238", "destino": "07-A", "subtema": H2["ofcp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2012, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do comportamento da firma em mercados competitivos, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Nos mercados competitivos, a maximização dos lucros no curto prazo, que exige que o preço "
+                      "seja superior ao custo médio de produção, impede uma firma de operar com perdas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Nos mercados competitivos, a maximização dos lucros no curto prazo, ")
+                   + vm("que exige que o preço seja superior ao custo médio de produção, impede") + az(" uma "
+                   "firma de operar com perdas."),
+        "poucas": ("Maximizar lucro exige " + vd("P = CMg") + ", não P > CMe. No curto prazo a firma pode "
+                   "operar " + azb("com prejuízo") + ", desde que P cubra o " + azb("custo variável médio") + "."),
+        "destrinchando": [
+            "“Maximizar lucro” é escolher a melhor quantidade dado o preço — e a melhor pode ser a que "
+            + azb("minimiza o prejuízo") + ". A condição é P = CMg (com o CMg crescente), e ela não diz nada "
+            "sobre o sinal do lucro.",
+            "No curto prazo o custo fixo já está comprometido. Se " + vd("CVMe < P < CMe") + ", a firma perde "
+            "dinheiro produzindo, mas perderia mais parando (todo o custo fixo). Produzir é a melhor opção, e "
+            "ela opera com perdas. Só fecha se " + vd("P < CVMe mínimo") + ".",
+            "A comparação entre P e CMe decide outra coisa: a " + azb("permanência no longo prazo") + ". "
+            "P > CMe → lucro econômico, atrai entrantes; P = CMe → lucro normal; P < CMe → a firma sai do "
+            "mercado quando puder desfazer-se dos custos fixos.",
+            "Exemplo: um hotel de praia na baixa temporada cobra diárias que não pagam o aluguel do imóvel, "
+            "mas pagam faxina, energia e pessoal temporário. Fechar seria pior: o aluguel corre de qualquer "
+            "jeito.",
+            vm("Regra-âncora: P = CMg diz quanto produzir; P × CVMe diz se produz; P × CMe diz se fica no "
+               "longo prazo."),
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " O item cria uma condição falsa para a "
+                       "maximização (P > CMe, que é condição de lucro positivo) e daí deduz uma consequência "
+                       "falsa (impossibilidade de prejuízo). A pista é o “no curto prazo”: é justamente o "
+                       "horizonte em que operar com perdas é racional."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No curto prazo, uma firma competitiva continua produzindo, ainda que com prejuízo, se o preço "
+            "cobrir o custo variável médio.”</i> → CERTO",
+            "<i>“No longo prazo, uma firma competitiva permanece no mercado mesmo com preço inferior ao custo "
+            "médio total.”</i> → ERRADO (no longo prazo ela sai)",
+        ])],
+        "reescrita": ("Nos mercados competitivos, a maximização dos lucros no curto prazo, " + hl("que exige que "
+                      "o preço seja igual ao custo marginal, não impede") + " uma firma de operar com perdas"
+                      + hl(", desde que o preço cubra o custo variável médio") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Maximização exige RMg = CMg (= P), não P > CMe; a comparação P × CMe diz respeito "
+                             "à permanência no longo prazo; com P < CMe a firma sai no longo prazo, mas opera "
+                             "com perdas no curto."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: possivelmente CACD/2012 (CEBRASPE), não confirmado pela fonte"],
+    },
+    # ------------------------------------------------------------------ E1-0243
+    {
+        "id": "ECO-E1-0243-1", "fonte_ref": "E1-0243", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do modelo de concorrência perfeita, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A consequência direta dos pressupostos de produto homogêneo, informação completa e livre "
+                      "entrada e saída de agentes pequenos e numerosos em um mercado de concorrência perfeita é um "
+                      "único preço de equilíbrio por todo o mercado do produto em questão, a menos que haja "
+                      "choques que possam produzir abalos temporários."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A consequência direta dos pressupostos de produto homogêneo, informação completa e livre "
+                      "entrada e saída de agentes pequenos e numerosos em um mercado de concorrência perfeita é "
+                      "um <u>único preço de equilíbrio</u> por todo o mercado do produto em questão, a menos que "
+                      "haja choques que possam produzir abalos <u>temporários</u>."),
+        "poucas": ("Produto homogêneo + informação completa = ninguém paga mais caro por algo igual; muitos "
+                   "agentes pequenos = ninguém fixa preço. Resultado: " + azb("lei do preço único") + " no "
+                   "mercado, salvo desvios passageiros."),
+        "destrinchando": [
+            "Cada hipótese tem um papel: " + vd("homogeneidade") + " torna os produtos substitutos perfeitos; "
+            + vd("informação completa") + " faz todos saberem onde está o preço mais baixo; "
+            + vd("atomicidade") + " (agentes pequenos e numerosos) impede qualquer um de influenciar o preço; "
+            + vd("livre entrada e saída") + " elimina lucros extraordinários no longo prazo.",
+            "Juntas, elas produzem a " + azb("lei do preço único") + ": se um vendedor cobrar acima, perde "
+            "todos os clientes; se cobrar abaixo, abre mão de receita sem necessidade (ao preço de mercado ele "
+            "vende quanto quiser). O preço converge para um só valor.",
+            "Isso não quer dizer preço <b>imutável</b>: deslocamentos de oferta ou de demanda mudam o "
+            "equilíbrio. O que se mantém é a unicidade — em cada momento, um só preço para todo o mercado; "
+            "choques produzem dispersões temporárias, que a arbitragem desfaz.",
+            "Mesmo raciocínio, em escala internacional: a lei do preço único sustenta a " + azb("paridade do "
+            "poder de compra") + " (PPC) — e as violações reais (custos de transporte, barreiras, bens não "
+            "comercializáveis) mostram quão exigentes são essas hipóteses.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " A ressalva “a menos que haja choques … "
+                       "temporários” protege o item contra a objeção de que preços mudam. Redação longa e "
+                       "imprecisa (“consequência direta”), que convida a procurar um erro inexistente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, o preço de equilíbrio é invariável, pois nenhum agente tem poder "
+            "sobre ele.”</i> → ERRADO (choques de oferta e demanda alteram o equilíbrio)",
+            "<i>“A homogeneidade do produto é condição para a existência de preço único em concorrência "
+            "perfeita.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["a menos que", "temporários"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Os pressupostos levam a um preço de equilíbrio único e estável, do qual o mercado "
+                             "se afasta só com choques não antecipados e temporários; o equilíbrio pode mudar "
+                             "com oferta e demanda."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0246
+    {
+        "id": "ECO-E1-0246-1", "fonte_ref": "E1-0246", "destino": "07-A", "subtema": H2["lpcp"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2010, "cacd": False,
+        "errei": True,
+        "comando": "Acerca das economias de escala e da oferta de longo prazo da indústria, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A presença de substanciais economias externas de escala em determinada indústria é "
+                      "compatível com a existência de uma curva de oferta de longo prazo positivamente "
+                      "inclinada."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A presença de substanciais economias externas de escala em determinada indústria é "
+                      "compatível com a existência de uma curva de oferta de longo prazo ")
+                   + vm("positivamente inclinada") + az("."),
+        "poucas": ("Com " + azb("economias externas") + " substanciais, o custo de cada firma cai quando a "
+                   "<b>indústria</b> cresce: a oferta de longo prazo da indústria é " + vd("negativamente "
+                   "inclinada") + " (decrescente)."),
+        "destrinchando": [
+            "Oferta de longo prazo da indústria competitiva: com livre entrada, o preço tende ao CMe mínimo das "
+            "firmas. A inclinação depende do que acontece com esse mínimo quando a indústria se expande. "
+            "Três casos: " + azb("custos constantes") + " (horizontal), " + azb("custos crescentes") + " — "
+            "insumos encarecem (positiva), " + azb("custos decrescentes") + " — " + vd("economias externas")
+            + " (negativa).",
+            "Economias externas (" + oc("Marshall") + "): fornecedores especializados, mão de obra qualificada "
+            "concentrada, difusão de conhecimento. Quanto maior a indústria, menor o custo de cada firma — "
+            "ainda que todas continuem pequenas e competitivas.",
+            "Em " + oc("Krugman e Obstfeld") + ", isso aparece como a " + azb("curva de oferta "
+            "decrescente") + " (<i>forward-falling supply curve</i>): mais produção, preço menor. É a base para "
+            "explicar polos industriais e o peso da vantagem histórica no comércio internacional.",
+            "Correção do comentário de origem: economias de escala não são fenômeno de curto prazo nem "
+            "dependem de custo fixo; e rendimentos de escala da firma descrevem economias <b>internas</b>, não "
+            "externas.",
+            vm("Regra-âncora: economias externas substanciais → oferta de longo prazo da indústria "
+               "decrescente."),
+        ],
+        "dissecando": (cz("[inversão · troca de conceito]") + " O item inverte a inclinação típica e se "
+                       "apoia no reflexo “oferta sobe com o preço”. O “substanciais” é a pista: com economias "
+                       "externas fortes, o efeito de redução de custo domina. 🔥 Tema recorrente nas provas de "
+                       "comércio internacional do CACD (Krugman)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em indústria de custos crescentes, a curva de oferta de longo prazo é positivamente "
+            "inclinada.”</i> → CERTO",
+            "<i>“Economias externas de escala exigem que a indústria seja dominada por poucas firmas "
+            "grandes.”</i> → ERRADO (troca com economias internas)",
+        ])],
+        "reescrita": ("A presença de substanciais economias externas de escala em determinada indústria é "
+                      "compatível com a existência de uma curva de oferta de longo prazo " + hl("negativamente "
+                      "inclinada (decrescente)") + "."),
+        "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": ["substanciais"], "dificuldade": 3,
+        "comentario_fonte": ("Comentário de origem confunde economias de escala com diluição de custo fixo de "
+                             "curto prazo e discute retornos de escala da firma (CMg crescente, constante ou "
+                             "decrescente); conclusão ERRADO."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: possivelmente CACD/2010 (CEBRASPE), não confirmado pela fonte",
+                    "qualidade_fonte: o comentário de origem associa economias de escala ao curto prazo e ao "
+                    "custo fixo e não trata de economias externas — reescrito"],
+    },
+    # ------------------------------------------------------------------ E1-0249
+    {
+        "id": "ECO-E1-0249-1", "fonte_ref": "E1-0249", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simulado 07/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de concorrência perfeita, as empresas maximizam seus lucros ao produzir no ponto "
+                      "em que o preço é superior ao custo marginal de produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de concorrência perfeita, as empresas maximizam seus lucros ao produzir no "
+                      "ponto em que o preço é ") + vm("superior") + az(" ao custo marginal de produção."),
+        "poucas": ("Tomadora de preço, a firma tem " + vd("RMg = P") + "; o lucro é máximo em "
+                   + vd("P = CMg") + ". Se P > CMg, ainda vale produzir mais."),
+        "destrinchando": [
+            "Raciocínio na margem: se " + vd("P > CMg") + ", a próxima unidade traz mais receita do que custo "
+            "— produzir mais aumenta o lucro. Se " + vd("P < CMg") + ", a última unidade custou mais do que "
+            "rendeu — produzir menos aumenta o lucro. O máximo está na igualdade.",
+            "Por que P e não RMg genérica: na " + azb("concorrência perfeita") + " a firma vende quanto quiser "
+            "ao preço de mercado, então cada unidade adicional rende exatamente P (" + vd("RMg = RMe = P")
+            + "). A regra geral RMg = CMg vira P = CMg.",
+            "Onde P > CMg aparece: no " + azb("monopólio") + " e nas demais estruturas com poder de mercado, "
+            "porque lá RMg < P. A diferença P − CMg é o " + azb("markup") + " e gera peso morto; P = CMg é "
+            "a condição de " + azb("eficiência alocativa") + ".",
+            "No longo prazo competitivo, além de P = CMg, a livre entrada leva a P = CMe mínimo: lucro "
+            "econômico zero.",
+            vm("Regra-âncora: concorrência perfeita → P = CMg; poder de mercado → P > CMg."),
+        ],
+        "dissecando": (cz("[troca de conceito · troca de ator]") + " O item transplanta para a concorrência "
+                       "perfeita o resultado do monopólio (P > CMg). Uma só palavra — “superior” — decide o "
+                       "gabarito; o resto é definição correta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio, as empresas maximizam seus lucros produzindo onde o preço é superior ao custo "
+            "marginal.”</i> → CERTO",
+            "<i>“Em concorrência perfeita, a firma maximiza lucro onde o preço iguala o custo médio.”</i> → "
+            "ERRADO (P = CMe é lucro zero, não regra de máximo)",
+        ])],
+        "reescrita": ("No modelo de concorrência perfeita, as empresas maximizam seus lucros ao produzir no "
+                      "ponto em que o preço é " + hl("igual") + " ao custo marginal de produção."),
+        "tipo_erro": ["TROCA_CONCEITO", "TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Em concorrência perfeita o lucro é máximo onde P = RMg = CMg; firma tomadora de "
+                             "preço não vende acima do preço de mercado; no longo prazo, lucro econômico zero."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0250
+    {
+        "id": "ECO-E1-0250-1", "fonte_ref": "E1-0250", "destino": "07-A", "subtema": H2["lpcp"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simulado 07/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de concorrência perfeita, a entrada e saída de empresas é livre, o que significa "
+                      "que novas empresas podem entrar no mercado facilmente e as empresas existentes podem sair "
+                      "quando não estão obtendo lucro suficiente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de concorrência perfeita, a entrada e saída de empresas é <u>livre</u>, o que "
+                      "significa que novas empresas podem entrar no mercado facilmente e as empresas existentes "
+                      "podem sair quando não estão obtendo lucro suficiente."),
+        "poucas": (azb("Livre entrada e saída") + " é hipótese da concorrência perfeita: sem barreiras nem "
+                   "custos irrecuperáveis, firmas entram quando há lucro econômico e saem quando há prejuízo."),
+        "destrinchando": [
+            "Livre entrada e saída = ausência de " + azb("barreiras à entrada") + " (patentes, escala mínima "
+            "enorme, controle de insumos) e de " + azb("custos irrecuperáveis") + " (<i>sunk costs</i>) que "
+            "prendam a firma ao mercado.",
+            "É o motor do ajuste de longo prazo: " + vd("P > CMe") + " → lucro econômico → entrada → oferta "
+            "da indústria ↑ → preço ↓; " + vd("P < CMe") + " → prejuízo → saída → oferta ↓ → preço ↑. O "
+            "processo para em " + vd("P = CMe mínimo") + ", com lucro econômico zero.",
+            "“Lucro suficiente” deve ser lido em termos econômicos: a firma sai quando não cobre o "
+            + azb("custo de oportunidade") + " dos recursos (lucro econômico negativo), ainda que tenha lucro "
+            "contábil.",
+            "Contraste: no " + azb("monopólio") + " e em muitos oligopólios, barreiras bloqueiam a entrada e "
+            "permitem lucro persistente; na " + azb("concorrência monopolística") + ", a entrada também é "
+            "livre e o lucro de longo prazo também tende a zero.",
+        ],
+        "dissecando": (cz("[literalidade · paráfrase fiel]") + " Definição de manual, com linguagem coloquial "
+                       "(“facilmente”, “lucro suficiente”) que pode soar imprecisa e induzir ERRADO. A banca "
+                       "costuma errar o item trocando a estrutura (“no monopólio, a entrada é livre”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, a entrada de novas firmas é livre e o lucro de longo prazo tende a "
+            "zero.”</i> → ERRADO (economias de escala são barreira)",
+            "<i>“Com livre entrada, o lucro econômico das firmas competitivas tende a zero no longo "
+            "prazo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "PARAFRASE_FIEL"], "moduladores": ["podem"], "dificuldade": 1,
+        "comentario_fonte": "Verso apenas repete a assertiva com o gabarito CERTO.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0255
+    {
+        "id": "ECO-E1-0255-1", "fonte_ref": "E1-0255", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos conceitos de receita da firma, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": "A receita marginal é a mudança na receita total dividida pela mudança no produto total.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A receita marginal é a mudança na receita total <u>dividida pela mudança no produto "
+                      "total</u>."),
+        "poucas": (azb("Receita marginal") + " = " + vd("ΔRT/ΔQ") + " (no limite, dRT/dQ): quanto a receita "
+                   "total varia por unidade adicional vendida."),
+        "destrinchando": [
+            "Família de conceitos: " + azb("receita total") + " RT = P × Q; " + azb("receita média") + " RMe "
+            "= RT/Q = P (a curva de RMe é a própria demanda); " + azb("receita marginal") + " RMg = ΔRT/ΔQ.",
+            "Concorrência perfeita: P constante para a firma → RT é uma reta saindo da origem e "
+            + vd("RMg = RMe = P") + ".",
+            "Monopólio com demanda linear P = a − bQ: RT = aQ − bQ² e " + vd("RMg = a − 2bQ") + " — mesma "
+            "ordenada na origem da demanda, inclinação duas vezes maior. RMg < P porque, para vender mais uma "
+            "unidade, o monopolista baixa o preço de todas.",
+            "Ligação com elasticidade: " + vd("RMg = P(1 − 1/|ε|)") + ". No trecho elástico (|ε| > 1), RMg > "
+            "0; com |ε| = 1, RMg = 0 e a RT é máxima; no trecho inelástico, RMg < 0 — por isso o monopolista "
+            "nunca opera na parte inelástica da demanda.",
+            "Não confundir com o produto marginal (ΔQ/ΔL), em que o denominador é o insumo, não o produto.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição pura. A versão ERRADA costuma inverter a razão "
+                       "(“mudança no produto dividida pela mudança na receita”) ou trocar o numerador pela "
+                       "receita média."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A receita marginal é a receita total dividida pela quantidade vendida.”</i> → ERRADO (essa é "
+            "a receita média)",
+            "<i>“No monopólio com demanda linear, a curva de receita marginal tem o dobro da inclinação da "
+            "curva de demanda.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "RMg = acréscimo de receita por unidade adicional; RMg = dRT/dQ.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (52).jpeg", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "cortada (fórmula dRT/dQ absorvida no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0257
+    {
+        "id": "ECO-E1-0257-1", "fonte_ref": "E1-0257", "destino": "07-A", "subtema": H2["hip"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COMANDO_CP,
+        "rotulo_item": "Item",
+        "assertiva": ("Se a natureza do produto requer que produtores usem grandes quantidades de maquinário e "
+                      "equipamento especializado, então a indústria não se adequa às hipóteses de competição "
+                      "perfeita."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se a natureza do produto requer que produtores usem grandes quantidades de maquinário e "
+                      "<u>equipamento especializado</u>, então a indústria não se adequa às hipóteses de "
+                      "competição perfeita."),
+        "poucas": ("Capital fixo grande e específico cria " + azb("custos irrecuperáveis") + " e "
+                   + azb("economias de escala") + ": a entrada e a saída deixam de ser livres e o número de "
+                   "firmas tende a ser pequeno."),
+        "destrinchando": [
+            "Duas hipóteses da " + azb("concorrência perfeita") + " ficam ameaçadas: " + vd("livre entrada e "
+            "saída") + " e " + vd("atomicidade") + " (muitas firmas pequenas).",
+            "Entrada: exigir grande investimento inicial é uma das barreiras clássicas de " + oc("Joe Bain")
+            + " (exigência de capital). Poucos conseguem financiar a planta.",
+            "Saída: equipamento <b>especializado</b> não tem uso alternativo nem bom mercado de revenda — é "
+            + azb("custo afundado") + ". A firma não sai com facilidade, e o entrante sabe que, se der errado, "
+            "perde o investimento; isso também desestimula a entrada.",
+            "Escala: com custo fixo alto, o CMe cai por uma faixa longa de produção; a " + azb("escala mínima "
+            "eficiente") + " fica grande em relação ao mercado, e cabem poucas firmas — oligopólio ou até "
+            "monopólio natural (siderurgia, refino, aviação).",
+            "Contraste com mercados próximos da concorrência perfeita: agricultura de commodities, feiras "
+            "livres — capital pouco específico, muitas unidades pequenas.",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " O item não cita nenhuma das hipóteses pelo nome: "
+                       "exige que o candidato derive, do tipo de capital, a violação da livre entrada e da "
+                       "atomicidade. A palavra decisiva é “especializado” (custo afundado)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A necessidade de capital fixo elevado e específico favorece a livre entrada de novas "
+            "firmas.”</i> → ERRADO (inversão: é barreira à entrada)",
+            "<i>“Custos irrecuperáveis elevados dificultam tanto a entrada quanto a saída de firmas.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Altos investimentos em capital fixo dificultam a livre entrada e saída, violando "
+                             "condição básica da concorrência perfeita."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

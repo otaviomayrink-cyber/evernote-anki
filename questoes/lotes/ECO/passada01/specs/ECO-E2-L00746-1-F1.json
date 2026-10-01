@@ -1,0 +1,48 @@
+{
+ "id": "ECO-E2-L00746-1-F1",
+ "uso": "frente",
+ "legenda": "Gráfico 1 — curva de demanda do bem x, que se desloca no tempo de D1 para D2.",
+ "fidelidade": "conjectural",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D1",
+   "tipo": "reta",
+   "p1": [
+    1,
+    8.5
+   ],
+   "p2": [
+    6,
+    1.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D1"
+  },
+  {
+   "id": "D2",
+   "tipo": "reta",
+   "p1": [
+    3.5,
+    8.5
+   ],
+   "p2": [
+    8.5,
+    1.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D2"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D1",
+   "para": "D2",
+   "sentido": "direita",
+   "em_y": 5
+  }
+ ]
+}

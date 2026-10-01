@@ -1,0 +1,126 @@
+{
+ "id": "ECO-E2-L01189-1-V1",
+ "uso": "verso",
+ "legenda": "Com P = 120 — acima do mínimo do CVMe (30), abaixo do mínimo do CTMe (150) —, a firma produz q = 15, onde P = CMg, e perde (155 − 120) × 15 = 525: menos que os 1.200 de custo fixo que perderia parando. Lucro de curto prazo negativo, e mesmo assim ela produz.",
+ "eixos": {
+  "x": "q",
+  "y": "R$",
+  "xmax": 42,
+  "ymax": 300,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "30 + 6*x",
+   "dominio": [
+    0,
+    40
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg",
+   "rotulo_em": 38
+  },
+  {
+   "id": "CTMe",
+   "tipo": "funcao",
+   "expr": "1200/x + 30 + 3*x",
+   "dominio": [
+    5,
+    40
+   ],
+   "familia": "terceira",
+   "rotulo": "CTMe",
+   "rotulo_em": 7
+  },
+  {
+   "id": "CVMe",
+   "tipo": "funcao",
+   "expr": "30 + 3*x",
+   "dominio": [
+    0,
+    40
+   ],
+   "familia": "quarta",
+   "rotulo": "CVMe",
+   "rotulo_em": 38
+  },
+  {
+   "id": "P",
+   "tipo": "horizontal",
+   "y": 120,
+   "x": [
+    0,
+    40
+   ],
+   "familia": "demanda",
+   "rotulo": "P = RMg = 120",
+   "rotulo_xy": [
+    35.5,
+    106
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "CMg",
+    "P"
+   ],
+   "rotulo": "E",
+   "projetar": "x",
+   "rotulo_desloc": [
+    8,
+    -22
+   ]
+  },
+  {
+   "id": "C",
+   "sobre": "CTMe",
+   "x": 15,
+   "projetar": "y",
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     120
+    ],
+    [
+     15,
+     120
+    ],
+    [
+     15,
+     155
+    ],
+    [
+     0,
+     155
+    ]
+   ],
+   "papel": "perda",
+   "rotulo": "prejuízo 525",
+   "rotulo_xy": [
+    7.5,
+    137.5
+   ]
+  }
+ ],
+ "checar": [
+  "abs(E.x - 15) < 0.01",
+  "abs(CTMe(15) - 155) < 0.01",
+  "abs((CTMe(15) - 120) * E.x - 525) < 0.01",
+  "(CTMe(15) - 120) * E.x < 1200",
+  "120 > CVMe(15)"
+ ]
+}

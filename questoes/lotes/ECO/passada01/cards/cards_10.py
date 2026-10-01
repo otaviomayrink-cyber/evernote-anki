@@ -80,7 +80,7 @@ CARDS = [
                     "monotonicidade); mantido o gabarito CERTO da fonte",
                     "qualidade_fonte: o comentário de origem atribui a lei a Ricardo, que formulou os rendimentos "
                     "decrescentes da terra (produção), não a utilidade marginal decrescente (Gossen, marginalistas)",
-                    "fundido: comentário de E1-0213 (mesmo item, frente em imagem)"],
+                    "duplicata: fundido o comentário de E1-0213 (mesmo item, frente em imagem)"],
     },
     # ------------------------------------------------------------------ E1-0185
     {
@@ -174,7 +174,7 @@ CARDS = [
                              "de consumir."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["fundido: trecho do comentário de E1-0213 sobre o mesmo item"],
+        "alertas": ["duplicata: fundido o trecho do comentário de E1-0213 sobre o mesmo item"],
     },
     # ------------------------------------------------------------------ E1-0187
     {
@@ -938,7 +938,8 @@ CARDS = [
                              "tangencia a reta orçamentária (comentário idêntico na duplicata E1-0534)."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["fundido: comentário da duplicata E1-0534"],
+        "alertas": ["duplicata: fundido o comentário da duplicata E1-0534",
+                    "quase_duplicata: ECO-E1-0687-1 (mesma construção, Simuladão Clipping Março/2026)"],
     },
     # ------------------------------------------------------------------ E1-0433
     {
@@ -986,7 +987,7 @@ CARDS = [
                              "(comentário idêntico na duplicata E1-0535)."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["fundido: comentário da duplicata E1-0535"],
+        "alertas": ["duplicata: fundido o comentário da duplicata E1-0535"],
     },
     # ------------------------------------------------------------------ E1-0434
     {
@@ -1031,7 +1032,8 @@ CARDS = [
                              "permitem ordenar cestas (comentário idêntico na duplicata E1-0536)."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["fundido: comentário da duplicata E1-0536"],
+        "alertas": ["duplicata: fundido o comentário da duplicata E1-0536",
+                    "quase_duplicata: ECO-E1-0688-1 (mesmo conteúdo, Simuladão Clipping Março/2026)"],
     },
     # ------------------------------------------------------------------ E1-0632
     {
@@ -1126,5 +1128,284 @@ CARDS = [
         "alertas": ["texto_reconstruido: frente original era imagem (image (182).png); assertiva reconstruída a "
                     "partir do comentário, que a reafirma (utilidades diferentes ao longo da demanda, com renda e "
                     "outros preços constantes); redação exata não preservada"],
+    },
+    # ------------------------------------------------------------------ E1-0687
+    {
+        "id": "ECO-E1-0687-1", "fonte_ref": "E1-0687", "destino": "04", "subtema": H2["otimo"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Com base na teoria do consumidor, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A condição de equilíbrio do consumidor exige que a taxa marginal de substituição entre dois "
+                      "bens seja inferior ao preço relativo, pois apenas nesse ponto o consumidor terá esgotado "
+                      "todas as possibilidades de ganho de utilidade dentro da restrição orçamentária."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A condição de equilíbrio do consumidor exige que a taxa marginal de substituição entre dois "
+                      "bens seja ") + vm("inferior ao") + az(" preço relativo, pois apenas nesse ponto o "
+                      "consumidor terá esgotado todas as possibilidades de ganho de utilidade dentro da restrição "
+                      "orçamentária."),
+        "poucas": ("O equilíbrio exige " + vd("TMS = p₁/p₂") + ". Com TMS inferior ao preço relativo ainda há "
+                   "ganho a explorar (comprar menos x₁ e mais x₂) — o oposto de “esgotado”."),
+        "destrinchando": [
+            "A justificativa do item (“esgotar as possibilidades de ganho de utilidade”) está correta — é "
+            "exatamente a ideia de ótimo. O problema é que ela só vale na " + azb("igualdade") + ".",
+            "Teste numérico: TMS = 1 e p₁/p₂ = 2. O consumidor aceita trocar 1 unidade de x₁ por 1 de x₂; o "
+            "mercado paga 2 unidades de x₂ por 1 de x₁. Vendendo uma unidade de x₁ ele obtém 2 de x₂ e precisa "
+            "só de 1 para ficar igual: ganha 1 unidade de x₂ “de graça”. O ponto não é ótimo.",
+            "A trajetória de ajuste continua até que a TMS (que cresce à medida que x₁ fica escasso, pela "
+            "convexidade) alcance 2 = p₁/p₂ — a " + azb("tangência") + ".",
+            "Geometria: TMS ≠ p₁/p₂ significa que a curva de indiferença <b>corta</b> a reta orçamentária; "
+            "há cestas acessíveis em curvas mais altas. Só na tangência não há.",
+            vm("Regra-âncora: ótimo interior ⇔ TMS = p₁/p₂ ⇔ UMg₁/p₁ = UMg₂/p₂."),
+        ],
+        "dissecando": (cz("[dado alterado · meia-verdade]") + " Mesma construção de ECO-E1-0432-1 (Clipping, "
+                       "2025): troca “igual” por “inferior” e cola uma justificativa verdadeira para dar "
+                       "credibilidade. Pista: “esgotado todas as possibilidades” só combina com igualdade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A condição de equilíbrio do consumidor exige que a TMS seja igual ao preço relativo, pois apenas "
+            "nesse ponto o consumidor terá esgotado as possibilidades de ganho de utilidade dentro da "
+            "restrição orçamentária.”</i> → CERTO",
+            "<i>“Se a TMS for inferior ao preço relativo, o consumidor pode aumentar sua utilidade reduzindo o "
+            "consumo do bem 1.”</i> → CERTO",
+        ])],
+        "reescrita": ("A condição de equilíbrio do consumidor exige que a taxa marginal de substituição entre dois "
+                      "bens seja " + hl("igual ao") + " preço relativo, pois apenas nesse ponto o consumidor terá "
+                      "esgotado todas as possibilidades de ganho de utilidade dentro da restrição orçamentária."),
+        "tipo_erro": ["DADO_ALTERADO", "MEIA_VERDADE"], "moduladores": ["apenas"], "dificuldade": 1,
+        "comentario_fonte": ("Equilíbrio: TMS = Px/Py, inclinação da curva de indiferença igual à da reta "
+                             "orçamentária; com TMS inferior ou superior, o consumidor ainda poderia realocar."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0432-1 (mesma construção, Simuladão Clipping Julho/2025)"],
+    },
+    # ------------------------------------------------------------------ E1-0688
+    {
+        "id": "ECO-E1-0688-1", "fonte_ref": "E1-0688", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Com base na teoria do consumidor, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("O axioma da transitividade das preferências assegura coerência interna às escolhas do "
+                      "consumidor, pois, se ele prefere a cesta A à cesta B e prefere B à C, deverá "
+                      "necessariamente preferir A à C, sob pena de violar a racionalidade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O axioma da transitividade das preferências assegura coerência interna às escolhas do "
+                      "consumidor, pois, se ele prefere a cesta A à cesta B e prefere B à C, deverá "
+                      "<u>necessariamente</u> preferir A à C, sob pena de violar a racionalidade."),
+        "poucas": ("Na teoria, " + azb("racionalidade") + " = preferências completas e " + azb("transitivas")
+                   + ". Violar a transitividade é, por definição, ser irracional — daí o “necessariamente”."),
+        "destrinchando": [
+            "O “necessariamente” não é absoluto indevido: a transitividade é um <b>axioma</b>, logo a conclusão "
+            "A ≻ C decorre por definição. Fora do modelo pode haver violações; dentro dele, não.",
+            "Argumento da " + azb("bomba de dinheiro") + " (“money pump”): quem tem A ≻ B ≻ C ≻ A aceita pagar "
+            "um centavo para trocar C por B, outro para B por A e outro para A por C — e volta ao início mais "
+            "pobre, indefinidamente.",
+            "Manuais de referência — " + oc("Varian") + " (<i>Microeconomia intermediária</i>) e " + oc("Pindyck")
+            + " & " + oc("Rubinfeld") + " (<i>Microeconomia</i>) — listam completude e transitividade entre as "
+            "hipóteses básicas sobre preferências; Pindyck acrescenta “mais é melhor”.",
+            "Implicação gráfica: curvas de indiferença não se cruzam; e só preferências completas, transitivas "
+            "(e contínuas) podem ser representadas por uma função utilidade.",
+            "Contraponto empírico: violações de transitividade em escolhas sob incerteza e com enquadramentos "
+            "diferentes (" + oc("Tversky") + ", 1969) alimentam a economia comportamental.",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Quem decorou que “necessariamente” é sinal de "
+                       "ERRADO cai. Aqui o advérbio só explicita que a conclusão é lógica, dada a premissa do "
+                       "axioma. Item irmão: ECO-E1-0434-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O axioma da transitividade assegura que o consumidor sempre prefere mais a menos.”</i> → ERRADO "
+            "(troca de conceito: monotonicidade)",
+            "<i>“Se as preferências não forem transitivas, não é possível representá-las por uma função "
+            "utilidade.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": ["necessariamente"], "dificuldade": 1,
+        "comentario_fonte": ("Segundo Varian e Pindyck & Rubinfeld, a transitividade é pilar da teoria da "
+                             "preferência; impede ciclos (“bomba de dinheiro”) e é essencial à racionalidade."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0434-1 (mesmo conteúdo, Simuladão Clipping Julho/2025)"],
+    },
+    # ------------------------------------------------------------------ E1-0689
+    {
+        "id": "ECO-E1-0689-1", "fonte_ref": "E1-0689", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Com base na teoria do consumidor, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Curvas de indiferença mais elevadas no espaço de consumo representam níveis menores de "
+                      "utilidade quando se assume utilidade marginal decrescente, dado que o consumidor valoriza "
+                      "menos unidades adicionais de cada bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Curvas de indiferença mais elevadas no espaço de consumo representam níveis ")
+                   + vm("menores") + az(" de utilidade quando se assume utilidade marginal decrescente, dado que "
+                                         "o consumidor valoriza menos unidades adicionais de cada bem."),
+        "poucas": ("Pela " + azb("monotonicidade") + ", curvas mais afastadas da origem = " + vd("mais utilidade")
+                   + ". UMg decrescente só faz a utilidade crescer mais devagar; enquanto UMg > 0, ela cresce."),
+        "destrinchando": [
+            "Curvas mais altas contêm cestas com mais de ambos os bens (ou mais de um sem menos do outro). Com "
+            + azb("monotonicidade") + ", essas cestas são preferidas: o " + azb("mapa de indiferença") + " cresce "
+            "para nordeste.",
+            "O item confunde " + azb("utilidade marginal") + " com " + azb("utilidade total") + ". UMg "
+            "decrescente significa que cada unidade extra acrescenta menos, mas ainda acrescenta: a UT sobe, "
+            "a taxas decrescentes. UT só cairia com UMg negativa (além da saciedade).",
+            "Exemplo: U = √x — UMg = 1/(2√x) cai sempre, mas U(4) = 2 < U(9) = 3: mais consumo, mais utilidade.",
+            "Na abordagem ordinal, o que dá a curvatura das curvas é a " + azb("TMS decrescente") + " "
+            "(convexidade), não a UMg; e a ordem das curvas vem da monotonicidade.",
+            vm("Regra-âncora: UMg decrescente ≠ utilidade decrescente."),
+        ],
+        "dissecando": (cz("[nexo indevido · inversão]") + " A premissa (UMg decrescente) é verdadeira; a "
+                       "conclusão (curvas mais altas = menos utilidade) não decorre dela e inverte a ordem do "
+                       "mapa. O “dado que” costura o nexo falso."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Sob monotonicidade, curvas de indiferença mais afastadas da origem representam níveis maiores "
+            "de utilidade, ainda que a utilidade marginal seja decrescente.”</i> → CERTO",
+            "<i>“Utilidade marginal decrescente implica utilidade total decrescente.”</i> → ERRADO (troca UMg por "
+            "UT)",
+        ])],
+        "reescrita": ("Curvas de indiferença mais elevadas no espaço de consumo representam níveis "
+                      + hl("maiores") + " de utilidade " + hl("mesmo") + " quando se assume utilidade marginal "
+                      "decrescente, dado que o consumidor valoriza menos " + hl("— mas ainda positivamente —")
+                      + " unidades adicionais de cada bem."),
+        "tipo_erro": ["NEXO_INDEVIDO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Monotonicidade: curvas mais afastadas = maior utilidade; UMg decrescente só faz a "
+                             "utilidade total crescer a taxas menores, enquanto UMg > 0."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0807
+    {
+        "id": "ECO-E1-0807-1", "fonte_ref": "E1-0807", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True,
+        "errei": False,
+        "comando": COMANDO_TPS26,
+        "rotulo_item": "Item",
+        "assertiva": "A função em questão é do tipo Cobb-Douglas.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A função em questão é do tipo <u>Cobb-Douglas</u>."),
+        "poucas": ("U = x₁x₂ é o caso " + vd("A = 1, α = β = 1") + " da " + azb("Cobb-Douglas")
+                   + " U = A·x₁<sup>α</sup>x₂<sup>β</sup>."),
+        "destrinchando": [
+            "Forma geral: " + vd("U = A·x₁<sup>α</sup>·x₂<sup>β</sup>") + ", com A, α, β > 0. Nome herdado da "
+            "função de produção de " + oc("Charles Cobb") + " e " + oc("Paul Douglas") + " (1928).",
+            "Propriedades no consumo: curvas de indiferença " + azb("convexas") + " e assintóticas aos eixos "
+            "(nunca há solução de canto com preços positivos); " + vd("TMS₁₂ = (α/β)·(x₂/x₁)") + ", decrescente.",
+            "Demandas: o consumidor gasta frações fixas da renda — " + vd("x₁ = [α/(α+β)]·r/p₁") + " e "
+            + vd("x₂ = [β/(α+β)]·r/p₂") + ". Aqui, metade da renda em cada bem: x₁ = 40/10 = 4 e x₂ = 40/4 = 10 "
+            "(ver ECO-E1-0809-1).",
+            "Consequências: elasticidade-preço própria = −1 (gasto constante com o bem), elasticidade-renda = 1 "
+            "(bens normais) e elasticidade cruzada = 0 (bens independentes).",
+            "A soma α + β = 2 não importa no consumo: como a utilidade é ordinal, U = x₁x₂ e √(x₁x₂) "
+            "representam as mesmas preferências. Rendimentos de escala só têm sentido na produção.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item de reconhecimento de forma funcional, porta de entrada do "
+                       "bloco 191–193 do TPS 2026. A pegadinha possível seria confundir com substitutos "
+                       "perfeitos (soma) ou complementares perfeitos (mínimo)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Como os expoentes somam 2, a utilidade apresenta rendimentos crescentes de escala, o que altera "
+            "a escolha ótima do consumidor.”</i> → ERRADO (utilidade ordinal: transformação monotônica não muda "
+            "a escolha)",
+            "<i>“Com essa função, o consumidor gasta metade de sua renda em cada bem, quaisquer que sejam os "
+            "preços.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Apenas o gabarito (CERTO).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0808
+    {
+        "id": "ECO-E1-0808-1", "fonte_ref": "E1-0808", "destino": "04", "subtema": H2["ro"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True,
+        "errei": True,
+        "comando": COMANDO_TPS26,
+        "rotulo_item": "Item",
+        "assertiva": ("Se ambos os preços forem multiplicados por 2, passando-se a p'₁ = 20 e p'₂ = 8, com a renda "
+                      "mantida em r = 80, o vetor de demanda ótima (x₁*, x₂*) permanecerá o mesmo, pois a "
+                      "restrição orçamentária se deslocará paralelamente, sem alterar-se a solução de "
+                      "maximização de utilidade."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se ambos os preços forem multiplicados por 2, passando-se a p'₁ = 20 e p'₂ = 8, com a renda "
+                      "mantida em r = 80, o vetor de demanda ótima (x₁*, x₂*) ") + vm("permanecerá o mesmo")
+                   + az(", pois a restrição orçamentária se deslocará paralelamente, ")
+                   + vm("sem alterar-se a solução de maximização de utilidade") + az("."),
+        "poucas": ("Dobrar os preços com renda fixa = " + azb("cortar a renda real pela metade") + ": a reta se "
+                   "desloca paralelamente <b>para dentro</b> e o ótimo cai de " + vd("(4; 10)") + " para "
+                   + vd("(2; 5)") + "."),
+        "destrinchando": [
+            "Reta original: 10x₁ + 4x₂ = 80 (interceptos 8 e 20). Nova: 20x₁ + 8x₂ = 80, ou seja, "
+            "10x₁ + 4x₂ = 40 (interceptos 4 e 10). A inclinação p₁/p₂ = " + vd("2,5") + " não muda — o "
+            "deslocamento é de fato <b>paralelo</b>, mas para dentro.",
+            "Com Cobb-Douglas U = x₁x₂, gasta-se metade da renda em cada bem: x₁* = 40/20 = " + vd("2") + " e "
+            "x₂* = 40/8 = " + vd("5") + ". A utilidade cai de 40 para 10.",
+            "O que manteria o ótimo: multiplicar " + azb("preços e renda") + " pelo mesmo fator (p' = 2p e "
+            "r' = 160). É a " + azb("homogeneidade de grau zero") + " da demanda marshalliana — ausência de "
+            "ilusão monetária.",
+            "Generalização: mudar todos os preços na mesma proporção, com renda fixa, equivale a uma variação "
+            "da " + azb("renda real") + " (deslocamento paralelo); mudar preços relativos gira a reta.",
+            vm("Regra-âncora: deslocamento paralelo da reta = mudança de renda real → muda o ótimo; só p e r "
+               "juntos na mesma proporção o preservam."),
+        ],
+        "grafico_verso": "ECO-E1-0808-1-V1",
+        "dissecando": (cz("[meia-verdade · nexo indevido]") + " A premissa geométrica é verdadeira (deslocamento "
+                       "paralelo, preços relativos intactos); o erro é concluir que o ótimo não muda — confunde "
+                       "“mesma inclinação” com “mesma reta”. Quem lembra da homogeneidade de grau zero sem "
+                       "conferir se a renda também dobrou cai."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se os preços e a renda forem multiplicados por 2, o vetor de demanda ótima permanecerá "
+            "(4, 10).”</i> → CERTO",
+            "<i>“Com p'₁ = 20, p'₂ = 8 e r = 80, a restrição orçamentária gira em torno do intercepto do bem "
+            "2.”</i> → ERRADO (desloca-se paralelamente: os preços relativos não mudaram)",
+        ])],
+        "reescrita": ("Se ambos os preços forem multiplicados por 2, passando-se a p'₁ = 20 e p'₂ = 8, com a renda "
+                      "mantida em r = 80, o vetor de demanda ótima (x₁*, x₂*) " + hl("passará de (4, 10) para "
+                                                                                    "(2, 5)") + ", pois a "
+                      "restrição orçamentária se deslocará paralelamente" + hl(" para dentro, reduzindo-se a "
+                                                                             "renda real à metade") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Apenas o gabarito (ERRADO).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0809
+    {
+        "id": "ECO-E1-0809-1", "fonte_ref": "E1-0809", "destino": "04", "subtema": H2["otimo"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True,
+        "errei": False,
+        "comando": COMANDO_TPS26,
+        "rotulo_item": "Item",
+        "assertiva": ("O consumo ótimo é dado por (x₁*, x₂*) = (4, 10), obtido no ponto em que a TMS₁₂ é igual à "
+                      "razão entre os preços p₁/p₂, sujeito à restrição orçamentária."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O consumo ótimo é dado por (x₁*, x₂*) = <u>(4, 10)</u>, obtido no ponto em que a TMS₁₂ é "
+                      "igual à razão entre os preços p₁/p₂, sujeito à restrição orçamentária."),
+        "poucas": ("TMS₁₂ = x₂/x₁ = p₁/p₂ = 2,5 → " + vd("x₂ = 2,5x₁") + "; na restrição 10x₁ + 4(2,5x₁) = 80 "
+                   "→ " + vd("x₁ = 4, x₂ = 10") + "."),
+        "destrinchando": [
+            "Passo 1 — " + azb("TMS") + ": UMg₁ = x₂ e UMg₂ = x₁, logo TMS₁₂ = UMg₁/UMg₂ = " + vd("x₂/x₁") + ".",
+            "Passo 2 — " + azb("tangência") + ": x₂/x₁ = p₁/p₂ = 10/4 = 2,5 → x₂ = 2,5x₁.",
+            "Passo 3 — " + azb("restrição orçamentária") + ": 10x₁ + 4·(2,5x₁) = 80 → 20x₁ = 80 → "
+            + vd("x₁* = 4") + "; " + vd("x₂* = 10") + ". Confere: 10·4 + 4·10 = 80 ✓. Utilidade: U = 40.",
+            "Atalho Cobb-Douglas: com expoentes iguais, metade da renda em cada bem — x₁ = 40/p₁ = 4 e "
+            "x₂ = 40/p₂ = 10. Gasto: 40 em cada bem.",
+            "Por que a tangência basta: a Cobb-Douglas tem curvas convexas e assintóticas aos eixos, então o "
+            "ótimo é interior e único; a condição de primeira ordem é também suficiente.",
+            "Armadilha de ordem: (x₁, x₂) = (10, 4) inverteria os bens — custaria 10·10 + 4·4 = 116 > 80, fora "
+            "do orçamento.",
+        ],
+        "grafico_verso": "ECO-E1-0809-1-V1",
+        "dissecando": (cz("[literalidade · detalhe]") + " Item de cálculo com o método descrito corretamente. "
+                       "A banca poderia errar o par ordenado ((10, 4)), a razão (p₂/p₁) ou o método (TMS maior "
+                       "que a razão de preços). Conferir sempre a restrição: o ponto precisa esgotar a renda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O consumo ótimo é (x₁*, x₂*) = (10, 4).”</i> → ERRADO (bens invertidos: gasto de 116 > 80)",
+            "<i>“No ótimo, o consumidor gasta a mesma quantia com cada um dos bens.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Apenas o gabarito (CERTO).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": [],
     },
 ]

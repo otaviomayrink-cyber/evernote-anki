@@ -1,0 +1,63 @@
+{
+ "id": "ECO-E1-0007-1-V1",
+ "uso": "verso",
+ "legenda": "A publicidade bem-sucedida desloca a demanda para a direita (D₁ → D₂); a fidelização a deixa mais inclinada: ao mesmo preço, a quantidade reage menos a variações de preço (|ε| menor em D₂).",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D1",
+   "tipo": "reta",
+   "p1": [
+    0.8,
+    8.5
+   ],
+   "p2": [
+    6.5,
+    1.0
+   ],
+   "familia": "demanda",
+   "rotulo": "D₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "D2",
+   "tipo": "reta",
+   "p1": [
+    4.2,
+    9.6
+   ],
+   "p2": [
+    7.6,
+    1.0
+   ],
+   "familia": "demanda",
+   "rotulo": "D₂ (mais inelástica)"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D1",
+   "para": "D2",
+   "sentido": "direita",
+   "em_y": 5
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.6,
+    9.8
+   ],
+   "texto": "publicidade: desloca  ·  fidelização: inclina",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "D2.inv(5) > D1.inv(5)",
+  "abs(D2.inv(4.5) - D2.inv(5.5)) * 5 / D2.inv(5) < abs(D1.inv(4.5) - D1.inv(5.5)) * 5 / D1.inv(5)"
+ ]
+}

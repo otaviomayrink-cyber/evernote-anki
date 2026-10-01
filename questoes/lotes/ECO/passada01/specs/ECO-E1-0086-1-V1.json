@@ -1,0 +1,118 @@
+{
+ "id": "ECO-E1-0086-1-V1",
+ "uso": "verso",
+ "legenda": "Pelo mesmo ponto inicial A passam as duas demandas por eletricidade. Com a mesma alta de tarifa (p₁ → p₂), a cidade que tem gás (curva mais plana) reduz muito mais o consumo do que a cidade só com aquecimento elétrico.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "Dg",
+   "tipo": "reta",
+   "p1": [
+    0.8,
+    8.0
+   ],
+   "p2": [
+    9.5,
+    2.2
+   ],
+   "familia": "demanda",
+   "rotulo": "com gás (elástica)",
+   "rotulo_em": 8.2,
+   "rotulo_desloc": [
+    0,
+    14
+   ]
+  },
+  {
+   "id": "De",
+   "tipo": "reta",
+   "p1": [
+    4.4,
+    9.4
+   ],
+   "p2": [
+    6.4,
+    1.0
+   ],
+   "familia": "terceira",
+   "rotulo": "só elétrico (inelástica)",
+   "rotulo_em": 6.2,
+   "rotulo_desloc": [
+    6,
+    -6
+   ]
+  },
+  {
+   "id": "P2",
+   "tipo": "horizontal",
+   "y": 6.4,
+   "x": [
+    0,
+    6.8
+   ],
+   "familia": "referencia",
+   "rotulo": ""
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "Dg",
+    "De"
+   ],
+   "rotulo": "A",
+   "projetar": true,
+   "rotulo_y": "p₁",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  },
+  {
+   "id": "G",
+   "intersecao": [
+    "Dg",
+    "P2"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q gás",
+   "rotulo_y": "p₂"
+  },
+  {
+   "id": "E",
+   "intersecao": [
+    "De",
+    "P2"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q elét."
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "A.x",
+    0.9
+   ],
+   "para": [
+    "G.x",
+    0.9
+   ],
+   "estilo": "-|>",
+   "rotulo": "queda grande",
+   "rotulo_desloc": [
+    -40,
+    8
+   ]
+  }
+ ],
+ "checar": [
+  "G.x < E.x",
+  "E.x < A.x",
+  "(A.x - G.x) > 2*(A.x - E.x)"
+ ]
+}

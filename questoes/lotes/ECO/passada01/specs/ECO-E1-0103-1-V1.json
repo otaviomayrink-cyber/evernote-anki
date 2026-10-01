@@ -1,0 +1,174 @@
+{
+ "id": "ECO-E1-0103-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "À esquerda, a demanda linear: inclinação constante, mas |ε| cai à medida que se desce pela curva (4 em A, 1 em M, 0,25 em B). À direita, a exceção: na curva isoelástica P = 20/Q, os retângulos de gasto são iguais e ε = −1 em todos os pontos.",
+ "paineis": [
+  {
+   "titulo": "Linear: ε muda de ponto a ponto",
+   "eixos": {
+    "x": "Q",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      0,
+      10
+     ],
+     "p2": [
+      10,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "D",
+     "rotulo_em": 9.0,
+     "rotulo_desloc": [
+      6,
+      8
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "sobre": "D",
+     "x": 2,
+     "rotulo": "A: |ε| = 4",
+     "rotulo_desloc": [
+      10,
+      4
+     ]
+    },
+    {
+     "id": "M",
+     "sobre": "D",
+     "x": 5,
+     "rotulo": "M: |ε| = 1",
+     "rotulo_desloc": [
+      10,
+      4
+     ]
+    },
+    {
+     "id": "B",
+     "sobre": "D",
+     "x": 8,
+     "rotulo": "B: |ε| = 0,25",
+     "rotulo_desloc": [
+      -40,
+      -20
+     ]
+    }
+   ],
+   "checar": [
+    "abs(A.y/A.x - 4) < 0.01",
+    "abs(M.y/M.x - 1) < 0.01",
+    "abs(B.y/B.x - 0.25) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Isoelástica: ε constante",
+   "eixos": {
+    "x": "Q",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "H",
+     "tipo": "funcao",
+     "expr": "20/x",
+     "dominio": [
+      2.05,
+      10
+     ],
+     "familia": "demanda",
+     "rotulo": "P = 20/Q",
+     "rotulo_desloc": [
+      -30,
+      16
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "C",
+     "sobre": "H",
+     "x": 2.5,
+     "rotulo": "C",
+     "rotulo_desloc": [
+      8,
+      8
+     ]
+    },
+    {
+     "id": "F",
+     "sobre": "H",
+     "x": 8,
+     "rotulo": "F",
+     "rotulo_desloc": [
+      6,
+      12
+     ]
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       "C.y"
+      ],
+      "C",
+      [
+       "C.x",
+       0
+      ]
+     ],
+     "papel": "gasto",
+     "rotulo": "20",
+     "opacidade": 0.6,
+     "rotulo_xy": [
+      1.2,
+      5
+     ]
+    },
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       "F.y"
+      ],
+      "F",
+      [
+       "F.x",
+       0
+      ]
+     ],
+     "papel": "excedente_consumidor",
+     "rotulo": "20",
+     "opacidade": 0.5,
+     "rotulo_xy": [
+      5.2,
+      1.2
+     ]
+    }
+   ],
+   "checar": [
+    "abs(C.x*C.y - F.x*F.y) < 0.01"
+   ]
+  }
+ ]
+}

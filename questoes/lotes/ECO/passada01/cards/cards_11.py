@@ -723,4 +723,509 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00346
+    {
+        "id": "ECO-E2-L00346-1", "fonte_ref": "E2-L00346", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": "Acerca do formato das curvas de indiferença, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Quanto maior a facilidade de substituição entre dois bens, mais forte (isto é, maior) a "
+                      "convexidade das curvas de indiferença; já quando a substituição é difícil, as curvas tendem a "
+                      "ser menos convexas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Quanto maior a facilidade de substituição entre dois bens, ") + vm("mais forte (isto é, maior)")
+                    + az(" a convexidade das curvas de indiferença; já quando a substituição é difícil, as curvas "
+                         "tendem a ser ") + vm("menos") + az(" convexas.")),
+        "poucas": ("Relação invertida: substituição " + azb("fácil") + " → curva quase " + vd("reta") + " (pouca "
+                   "convexidade); substituição " + azb("difícil") + " → curva muito arqueada, no limite um "
+                   + vd("L") + " (convexidade máxima)."),
+        "destrinchando": [
+            "A curvatura mede quão depressa a " + azb("TMS") + " muda ao longo da curva. Se o consumidor troca um "
+            "bem pelo outro sem sofrimento, a taxa de troca quase não muda → curva achatada. Se a troca é difícil, "
+            "a taxa despenca à medida que ele fica com pouco de um bem → curva bem “barriguda”.",
+            "Extremos: " + azb("substitutos perfeitos") + " (duas marcas idênticas de água, notas de R$ 5 e de "
+            "R$ 10) → retas, TMS constante, convexidade nula. " + azb("Complementares perfeitos") + " (sapato "
+            "esquerdo e direito) → L, curvatura concentrada no vértice, máxima.",
+            "Medida formal: a " + azb("elasticidade de substituição") + " σ (variação % de x₂/x₁ diante de "
+            "variação % da TMS). σ → ∞ nos substitutos perfeitos; " + vd("σ = 1") + " na Cobb-Douglas; σ = 0 nos "
+            "complementares perfeitos. " + vm("Quanto maior σ, menos convexa a curva.") ,
+            "A família " + azb("CES") + " U = (ax₁<sup>ρ</sup> + bx₂<sup>ρ</sup>)<sup>1/ρ</sup> cobre todos os casos: "
+            "σ = 1/(1 − ρ); ρ = 1 dá a reta, ρ → 0 a Cobb-Douglas, ρ → −∞ o L.",
+        ],
+        "grafico_verso": "ECO-E2-L00346-1-V1",
+        "dissecando": (cz("[inversão]") + " Troca simétrica dos dois polos: tudo o que é dito de um extremo vale "
+                       "para o outro. O “isto é, maior” reforça a inversão para parecer definição. Teste rápido: "
+                       "imagine os substitutos perfeitos — reta — e veja se “mais convexa” faz sentido."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto maior a elasticidade de substituição entre dois bens, menos convexas são as curvas de "
+            "indiferença.”</i> → CERTO",
+            "<i>“Complementares perfeitos apresentam elasticidade de substituição infinita.”</i> → ERRADO "
+            "(inversão: σ = 0; infinita é a dos substitutos perfeitos)",
+        ]), ("🧠 Mnemônico", ["<b>Reta</b> = troca <b>r</b>ápida; <b>L</b> = <b>l</b>igados para sempre."])],
+        "reescrita": ("Quanto maior a facilidade de substituição entre dois bens, " + hl("mais fraca (isto é, menor)")
+                      + " a convexidade das curvas de indiferença; já quando a substituição é difícil, as curvas "
+                      "tendem a ser " + hl("mais") + " convexas."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tendem"], "dificuldade": 2,
+        "comentario_fonte": "Substituição fácil → menos convexidade (reta); difícil → mais convexidade (L). Vários "
+                            "comentários didáticos repetidos, com exemplos (sapatos, notas de dinheiro) e mnemônico "
+                            "gráfico.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 048", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00346-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00601
+    {
+        "id": "ECO-E2-L00601-1", "fonte_ref": "E2-L00601", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_NAB_MICRO,
+        "rotulo_item": "Item",
+        "assertiva": ("As curvas de indiferença ilustram as diferentes combinações de bens que um consumidor pode "
+                      "adquirir, dada sua renda e os preços dos bens."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As curvas de indiferença ilustram as diferentes combinações de bens ") + vm("que um "
+                    "consumidor pode adquirir, dada sua renda e os preços dos bens") + az(".")),
+        "poucas": ("O item define a " + azb("restrição orçamentária") + " (o que o consumidor <b>pode</b> comprar). "
+                   "A " + azb("curva de indiferença") + " reúne as cestas de " + vd("mesma utilidade") + " (o que ele "
+                   "<b>quer</b>)."),
+        "destrinchando": [
+            "Os dois pilares da escolha do consumidor são independentes: " + azb("preferências") + " (curvas de "
+            "indiferença — dependem só dos gostos) e " + azb("possibilidades") + " (restrição orçamentária — "
+            "dependem só da renda e dos preços).",
+            "Curva de indiferença: lugar das cestas que deixam o consumidor igualmente satisfeito. Não muda quando "
+            "a renda ou os preços mudam; muda se mudarem os gostos.",
+            "Restrição orçamentária: p₁x₁ + p₂x₂ = R; o conjunto orçamentário inclui também as cestas abaixo da "
+            "reta. Muda com renda (deslocamento paralelo) e preços (rotação).",
+            "O ótimo junta os dois: a curva de indiferença mais alta que ainda toca o conjunto orçamentário "
+            "(tangência, no caso usual: TMS = p₁/p₂).",
+            vm("Regra-âncora: indiferença = querer (gostos); orçamento = poder (renda e preços)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Clássica troca de definições entre os dois instrumentos do "
+                       "modelo. Pista: qualquer menção a <b>renda</b> ou <b>preços</b> na definição denuncia a "
+                       "restrição orçamentária, nunca a curva de indiferença."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um aumento da renda do consumidor desloca suas curvas de indiferença para a direita.”</i> → ERRADO "
+            "(renda desloca a restrição orçamentária; as curvas de indiferença só dependem dos gostos)",
+            "<i>“A restrição orçamentária representa as combinações de bens que esgotam a renda do consumidor, "
+            "dados os preços.”</i> → CERTO",
+        ])],
+        "reescrita": ("As curvas de indiferença ilustram as diferentes combinações de bens " + hl("que proporcionam "
+                      "ao consumidor o mesmo nível de satisfação") + hl("; as que ele pode adquirir, dada sua renda e "
+                      "os preços dos bens, formam a restrição orçamentária") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O item descreve a restrição orçamentária; curvas de indiferença reúnem cestas de mesma "
+                            "utilidade, independentemente de preços e renda (comentários de E2-L00601 e da "
+                            "duplicata E2-L00653 fundidos).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata fundida: E2-L00653 (mesmo item, comentário incorporado)"],
+    },
+    # ------------------------------------------------------------------ E2-L00616
+    {
+        "id": "ECO-E2-L00616-1", "fonte_ref": "E2-L00616", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": COM_NAB_MICRO,
+        "rotulo_item": "Item",
+        "assertiva": ("O pressuposto de que “quanto mais de um bem, melhor” é formalizado pelo axioma da "
+                      "monotonicidade das preferências, que implica que as curvas de indiferença são positivamente "
+                      "inclinadas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O pressuposto de que “quanto mais de um bem, melhor” é formalizado pelo axioma da "
+                       "monotonicidade das preferências, que implica que as curvas de indiferença são ")
+                    + vm("positivamente") + az(" inclinadas.")),
+        "poucas": ("Monotonicidade → curvas " + vd("negativamente") + " inclinadas: para manter a utilidade ao ganhar "
+                   "mais de um bem, é preciso " + azb("abrir mão") + " do outro."),
+        "destrinchando": [
+            "Raciocínio em duas linhas: parta de uma cesta e aumente x₁. Pela monotonicidade, a utilidade sobe. "
+            "Para voltar à mesma curva, x₂ tem de " + vd("cair") + ". Logo, ao longo da curva, x₁ ↑ ⇔ x₂ ↓: "
+            "inclinação negativa.",
+            "Se a curva fosse positivamente inclinada, haveria duas cestas indiferentes, uma com mais dos dois bens "
+            "— absurdo sob “mais é melhor”.",
+            "Outras consequências da monotonicidade: curvas mais afastadas da origem representam utilidade "
+            "maior, e as curvas são “finas” (não há faixas de indiferença).",
+            "Curvas positivamente inclinadas existem, mas com um " + azb("mal") + ": se x₂ é poluição, mais x₁ só "
+            "compensa com mais x₂. Já curvas verticais ou horizontais indicam um " + azb("bem neutro") + ".",
+            vm("Regra-âncora: dois bens → inclinação negativa; um bem e um mal → inclinação positiva."),
+        ],
+        "dissecando": (cz("[inversão]") + " A 1ª parte (monotonicidade = “mais é melhor”) é exata; o erro é só o "
+                       "sinal da inclinação. Itens desse tipo testam se o candidato deduz a forma da curva a "
+                       "partir do axioma, em vez de decorá-la."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se um dos bens for um mal, as curvas de indiferença serão positivamente inclinadas.”</i> → CERTO",
+            "<i>“A monotonicidade implica que as curvas de indiferença sejam convexas em relação à origem.”</i> → "
+            "ERRADO (troca de axioma: convexidade é outra hipótese)",
+        ])],
+        "reescrita": ("O pressuposto de que “quanto mais de um bem, melhor” é formalizado pelo axioma da "
+                      "monotonicidade das preferências, que implica que as curvas de indiferença são "
+                      + hl("negativamente") + " inclinadas."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Monotonicidade implica inclinação negativa: para manter a utilidade ao ganhar mais de "
+                            "um bem é preciso abrir mão do outro.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00671
+    {
+        "id": "ECO-E2-L00671-1", "fonte_ref": "E2-L00671", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "A respeito da teoria do consumidor e dos conceitos de elasticidade, julgue (C ou E) os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("A convexidade das curvas de indiferença reflete a hipótese de taxa marginal de substituição "
+                      "decrescente, indicando que os consumidores preferem cestas de consumo balanceadas a cestas "
+                      "extremas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A convexidade das curvas de indiferença <u>reflete</u> a hipótese de taxa marginal de "
+                      "substituição decrescente, indicando que os consumidores preferem cestas de consumo "
+                      "balanceadas a cestas extremas."),
+        "poucas": ("Curva convexa = " + azb("TMS decrescente") + " = " + azb("“médias são preferidas a extremos”")
+                   + ": três leituras (geométrica, marginal e de preferência) da mesma hipótese."),
+        "destrinchando": [
+            "Leitura geométrica: a curva é “curvada para a origem”; a inclinação, em módulo, cai da esquerda para a "
+            "direita.",
+            "Leitura marginal: com muito x₂ e pouco x₁, o consumidor cede muito x₂ por uma unidade de x₁; com "
+            "muito x₁, cede pouco. A " + azb("TMS") + " = UMg₁/UMg₂ " + vd("decresce") + " ao longo da curva.",
+            "Leitura de preferências: se A e B estão na mesma curva, a cesta média fica <b>acima</b> dela "
+            "(convexidade estrita) — a cesta balanceada é estritamente preferida aos extremos.",
+            "Limites: nos " + azb("substitutos perfeitos") + " (retas) a média está na mesma curva — convexidade "
+            "fraca, TMS constante; em preferências " + azb("côncavas") + ", o consumidor prefere extremos e "
+            "especializa-se.",
+            "Rigor: convexidade com curvas suaves equivale a TMS <b>não crescente</b>; por isso um item que diga "
+            "“equivale” a TMS decrescente pode ser dado como ERRADO (ver ECO-E1-0841-1). O verbo “reflete” é seguro.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Junta as duas leituras clássicas da convexidade (TMS decrescente "
+                       "e preferência por diversificação). A armadilha seria estranhar o verbo “reflete” ou achar "
+                       "que “balanceadas” contradiz algo; não contradiz."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A convexidade das curvas de indiferença indica que os consumidores preferem cestas extremas a "
+            "cestas balanceadas.”</i> → ERRADO (inversão: isso é concavidade)",
+            "<i>“Preferências por substitutos perfeitos são estritamente convexas.”</i> → ERRADO (são convexas, mas "
+            "não estritamente: a média fica na mesma reta)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Convexidade = representação geométrica da TMS decrescente; médias preferidas a "
+                            "extremos (estritamente, salvo substitutos perfeitos).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00810
+    {
+        "id": "ECO-E2-L00810-1", "fonte_ref": "E2-L00810", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação à teoria microeconômica, julgue (C ou E) os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("A utilidade marginal diminui à medida que mais unidades são produzidas, segundo a lei da "
+                      "utilidade marginal decrescente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A utilidade marginal diminui à medida que mais unidades são ") + vm("produzidas")
+                    + az(", segundo a lei da utilidade marginal decrescente.")),
+        "poucas": ("Utilidade é conceito do " + azb("consumo") + ": a UMg cai à medida que mais unidades são "
+                   + vd("consumidas") + ". O equivalente na produção é o " + azb("produto marginal decrescente") + "."),
+        "destrinchando": [
+            azb("Utilidade marginal") + " = satisfação extra da última unidade <b>consumida</b>. A lei diz que, "
+            "mantido o resto constante, cada unidade adicional consumida acrescenta menos satisfação.",
+            "Do lado da firma, o paralelo é a " + azb("lei dos rendimentos marginais decrescentes") + ": com um "
+            "fator fixo, cada unidade adicional do fator variável acrescenta cada vez menos produto (PMg "
+            "decrescente). Dela decorre o custo marginal crescente no curto prazo.",
+            "Paralelos úteis para não confundir: consumidor — utilidade, UMg, curva de indiferença, TMS; produtor — "
+            "produto, PMg, isoquanta, " + azb("TMST") + ".",
+            "A UMg decrescente sustenta a demanda negativamente inclinada na abordagem cardinal (UMg/p igualada "
+            "entre bens); o PMg decrescente sustenta a oferta positivamente inclinada.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Uma palavra trocada leva o conceito do consumo para a "
+                       "produção. Itens de uma palavra só exigem leitura lenta: “produzidas” ao lado de "
+                       "“utilidade” é o sinal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O produto marginal do trabalho diminui à medida que mais trabalhadores são empregados, mantido o "
+            "capital fixo.”</i> → CERTO",
+            "<i>“A utilidade total diminui à medida que mais unidades são consumidas.”</i> → ERRADO (troca total × "
+            "marginal: a UT cresce enquanto UMg > 0)",
+        ])],
+        "reescrita": ("A utilidade marginal diminui à medida que mais unidades são " + hl("consumidas") + ", segundo "
+                      "a lei da utilidade marginal decrescente."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A UMg diminui à medida que mais unidades são consumidas, não produzidas.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00882
+    {
+        "id": "ECO-E2-L00882-1", "fonte_ref": "E2-L00882", "destino": "04", "subtema": H2["pref"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_TEORIA,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a teoria ordinal do consumidor, as preferências do consumidor serão transitivas "
+                      "quando ele puder decidir se prefere a cesta A à B, se prefere a cesta B à A ou se é "
+                      "indiferente às cestas A e B."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com a teoria ordinal do consumidor, as preferências do consumidor serão ")
+                    + vm("transitivas") + az(" quando ele puder decidir se prefere a cesta A à B, se prefere a "
+                                             "cesta B à A ou se é indiferente às cestas A e B.")),
+        "poucas": ("Poder comparar " + vd("quaisquer duas cestas") + " é a " + azb("completude") + ". A "
+                   + azb("transitividade") + " envolve " + vd("três cestas") + ": A ≿ B e B ≿ C ⇒ A ≿ C."),
+        "destrinchando": [
+            azb("Completude") + ": para quaisquer A e B, vale A ≿ B, B ≿ A ou ambos (indiferença). O consumidor "
+            "nunca diz “não sei comparar”.",
+            azb("Transitividade") + ": se A ≿ B e B ≿ C, então A ≿ C. Garante consistência entre comparações e "
+            "impede ciclos (A ≻ B ≻ C ≻ A), que tornariam impossível escolher a “melhor” cesta.",
+            azb("Reflexividade") + ": A ≿ A. Trivial, mas completa o trio que define a " + azb("preferência "
+            "racional") + ".",
+            "Na " + azb("teoria ordinal") + " (" + oc("Hicks") + " e " + oc("Allen") + ", 1934; " + oc("Pareto")
+            + " antes deles) importa só a ordenação, não a intensidade: a utilidade é um índice, e qualquer "
+            "transformação monotônica crescente representa as mesmas preferências.",
+            vm("Regra-âncora: dois elementos → completude; três elementos → transitividade."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A definição está correta; o rótulo é o do axioma vizinho. "
+                       "Pista: a definição só menciona <b>duas</b> cestas (A e B) — transitividade sempre precisa "
+                       "de uma terceira."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o consumidor prefere A a B e B a C, mas prefere C a A, suas preferências violam a "
+            "transitividade.”</i> → CERTO",
+            "<i>“A completude garante que as curvas de indiferença não se cruzem.”</i> → ERRADO (troca de axioma: "
+            "é a transitividade)",
+        ])],
+        "reescrita": ("De acordo com a teoria ordinal do consumidor, as preferências do consumidor serão "
+                      + hl("completas") + " quando ele puder decidir se prefere a cesta A à B, se prefere a cesta B "
+                      "à A ou se é indiferente às cestas A e B."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Poder ordenar quaisquer duas cestas é completude (integralidade); transitividade é "
+                            "A ≻ B e B ≻ C ⇒ A ≻ C.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00883
+    {
+        "id": "ECO-E2-L00883-1", "fonte_ref": "E2-L00883", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_TEORIA,
+        "rotulo_item": "Item",
+        "assertiva": "A inclinação das curvas de indiferença é representada pela razão entre os preços dos bens considerados.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A inclinação das curvas de indiferença é representada pela ") + vm("razão entre os preços dos "
+                    "bens considerados") + az(".")),
+        "poucas": ("Inclinação da curva de indiferença = " + azb("TMS") + " = UMg₁/UMg₂ (preferências). Razão de "
+                   "preços = inclinação da " + azb("restrição orçamentária") + " (mercado). Elas só " + vd("coincidem "
+                   "no ótimo") + "."),
+        "destrinchando": [
+            azb("TMS") + " = quanto de x₂ o consumidor aceita ceder por uma unidade de x₁ mantendo a utilidade; "
+            "algebricamente, " + vd("TMS = UMg₁/UMg₂") + ". Depende só dos gostos e da cesta em que ele está.",
+            "Inclinação da restrição p₁x₁ + p₂x₂ = R: " + vd("−p₁/p₂") + ". É a taxa a que o <b>mercado</b> permite "
+            "trocar um bem pelo outro.",
+            "Escolha ótima (caso usual): TMS = p₁/p₂ — a taxa subjetiva iguala a taxa de mercado. Fora do ótimo, "
+            "a diferença mostra para onde realocar: se TMS > p₁/p₂, o consumidor valoriza x₁ mais do que o mercado "
+            "cobra e deve comprar mais x₁.",
+            "Ao longo de uma mesma curva de indiferença a TMS varia (decrescente, no caso usual), enquanto a razão "
+            "de preços é uma só — mais uma razão para não confundir as duas.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Mistura a condição de equilíbrio (TMS = p₁/p₂) com a definição "
+                       "da inclinação. Quem decorou “TMS = razão de preços” sem o contexto do ótimo cai. Pista: "
+                       "o item não fala em ótimo nem em equilíbrio."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No equilíbrio do consumidor, a inclinação da curva de indiferença é igual à razão entre os preços "
+            "dos bens.”</i> → CERTO",
+            "<i>“A inclinação da restrição orçamentária é dada pela razão entre as utilidades marginais dos "
+            "bens.”</i> → ERRADO (é a razão de preços)",
+        ])],
+        "reescrita": ("A inclinação das curvas de indiferença é representada pela " + hl("taxa marginal de "
+                      "substituição (razão entre as utilidades marginais dos bens), que só se iguala à razão entre os "
+                      "preços no ponto ótimo") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Inclinação da curva de indiferença = TMS (razão das UMg); razão de preços = inclinação "
+                            "da reta orçamentária; iguais no equilíbrio.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00884
+    {
+        "id": "ECO-E2-L00884-1", "fonte_ref": "E2-L00884", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NAB_TEORIA,
+        "rotulo_item": "Item",
+        "assertiva": ("Dois bens são considerados complementos perfeitos quando a curva de indiferença apresenta taxa "
+                      "marginal de substituição crescente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Dois bens são considerados complementos perfeitos quando a curva de indiferença apresenta ")
+                    + vm("taxa marginal de substituição crescente") + az(".")),
+        "poucas": ("Complementos perfeitos são consumidos em " + azb("proporção fixa") + ": curva em " + vd("L")
+                   + ", com TMS " + vd("infinita") + " no trecho vertical, " + vd("nula") + " no horizontal e "
+                   "indefinida no vértice. TMS crescente é sinal de preferências côncavas."),
+        "destrinchando": [
+            "Função típica: " + vd("U = mín{ax₁, bx₂}") + " (ex.: sapato esquerdo e direito, U = mín{x₁, x₂}). Os "
+            "vértices ficam sobre o raio x₂/x₁ = a/b; unidades fora da proporção não acrescentam utilidade.",
+            "Trecho vertical: mais x₂ sem x₁ não vale nada, então o consumidor cederia “qualquer quantidade” de x₂ "
+            "por um pouco de x₁ → TMS infinita. Trecho horizontal: o inverso → TMS nula. Vértice: a inclinação "
+            "salta de ∞ para 0, e a TMS não está definida.",
+            "Da esquerda para a direita a TMS cai (de ∞ a 0): se algo, é “decrescente” em sentido extremo — "
+            "nunca crescente.",
+            azb("TMS crescente") + " ao longo da curva significa curva " + azb("côncava") + ": preferência por "
+            "extremos e escolha de canto.",
+            "Escolha ótima dos complementos: no vértice, x₁ = x₂ (para a = b = 1) e x₁ = R/(p₁ + p₂). Variação de "
+            "preço não gera " + azb("efeito substituição") + " — só efeito renda.",
+        ],
+        "grafico_verso": "ECO-E2-L00884-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " O item associa complementos perfeitos a um comportamento da "
+                       "TMS que pertence às preferências côncavas. Pista visual: desenhe o L e percorra-o — a TMS "
+                       "só cai (∞ → 0)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para complementos perfeitos, a variação do preço de um dos bens não gera efeito "
+            "substituição.”</i> → CERTO",
+            "<i>“Substitutos perfeitos apresentam taxa marginal de substituição decrescente.”</i> → ERRADO (é "
+            "constante: curvas retas)",
+        ])],
+        "reescrita": ("Dois bens são considerados complementos perfeitos quando a curva de indiferença apresenta "
+                      + hl("formato de L (proporção fixa), com TMS infinita no trecho vertical, nula no horizontal e "
+                           "indefinida no vértice") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Complementos perfeitos: proporção fixa, curva em L; TMS infinita acima da quina, zero à "
+                            "direita, indefinida no vértice.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 141", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00884-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00992
+    {
+        "id": "ECO-E2-L00992-1", "fonte_ref": "E2-L00992", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_MICRO,
+        "rotulo_item": "Item",
+        "assertiva": ("Considerando preferências racionais e bem comportadas, uma das propriedades das curvas de "
+                      "indiferença é que a taxa marginal de substituição é decrescente ao longo da curva de "
+                      "indiferença."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considerando preferências racionais e <u>bem comportadas</u>, uma das propriedades das curvas "
+                      "de indiferença é que a taxa marginal de substituição é <u>decrescente</u> ao longo da curva de "
+                      "indiferença."),
+        "poucas": ("Preferências " + azb("bem comportadas") + " = monotônicas + convexas → curvas negativamente "
+                   "inclinadas e convexas, com " + vd("|TMS| decrescente") + " da esquerda para a direita."),
+        "destrinchando": [
+            azb("Racionais") + ": completas, reflexivas e transitivas (permitem ordenar as cestas). " + azb("Bem "
+            "comportadas") + " (" + oc("Varian") + "): monotônicas (mais é melhor) e convexas (médias preferidas "
+            "a extremos).",
+            "Cada hipótese, um traço: monotonicidade → inclinação negativa e curvas mais altas melhores; "
+            "convexidade → " + azb("TMS decrescente") + " em módulo.",
+            "Intuição: com muito x₂ e pouco x₁ (ponto A), uma unidade de x₁ vale muito em termos de x₂; com muito "
+            "x₁ e pouco x₂ (ponto B), vale pouco. A inclinação, em módulo, diminui ao andar para a direita.",
+            "Rigor: com convexidade apenas fraca, a TMS é “não crescente” (pode ser constante, como nos "
+            "substitutos perfeitos); a convexidade estrita é que garante a queda estrita. Em itens C/E sobre "
+            "preferências bem comportadas, “TMS decrescente” é a resposta padrão.",
+        ],
+        "grafico_verso": "ECO-E2-L00992-1-V1",
+        "dissecando": (cz("[literalidade]") + " Reproduz a propriedade de manual. A dúvida possível — “decrescente” "
+                       "ou “crescente”? — se resolve lembrando que o sinal é negativo e o que cai é o módulo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Preferências bem comportadas apresentam taxa marginal de substituição crescente ao longo da curva "
+            "de indiferença.”</i> → ERRADO (inversão: crescente indica preferências côncavas)",
+            "<i>“Preferências racionais são, necessariamente, bem comportadas.”</i> → ERRADO (racionalidade não "
+            "implica monotonicidade nem convexidade)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Racionais: completas, transitivas, reflexivas; bem comportadas: monotônicas e "
+                            "convexas (Varian), com |TMS| não crescente da esquerda para a direita.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 164", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00992-1-V1, com foco na TMS)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01010
+    {
+        "id": "ECO-E2-L01010-1", "fonte_ref": "E2-L01010", "destino": "04", "subtema": H2["util"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma das propriedades das curvas de indiferença é que as curvas em formato de “L” representam "
+                      "bens substitutos perfeitos."),
+        "gabarito": "ERRADO", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": (az("Uma das propriedades das curvas de indiferença é que as curvas em formato de “L” representam "
+                       "bens ") + vm("substitutos perfeitos") + az(".")),
+        "poucas": ("Curva em " + vd("L") + " = " + azb("complementares perfeitos") + " (proporção fixa). "
+                   + azb("Substitutos perfeitos") + " têm curvas " + vd("retas") + ", com TMS constante."),
+        "destrinchando": [
+            azb("Substitutos perfeitos") + ": U = ax₁ + bx₂. O consumidor troca um bem pelo outro sempre à mesma "
+            "taxa (ex.: suco de maçã × suco de laranja para quem é indiferente, TMS = −1). Curvas: retas paralelas.",
+            azb("Complementares perfeitos") + ": U = mín{ax₁, bx₂}. Só a combinação na proporção certa gera "
+            "utilidade (sapato esquerdo × direito). Curvas: L, com vértice sobre o raio da proporção fixa.",
+            "Entre os dois extremos está o caso usual (Cobb-Douglas): curva convexa suave. A " + azb("elasticidade "
+            "de substituição") + " ordena os três: ∞ (reta), 1 (Cobb-Douglas), 0 (L).",
+            "Consequências para a escolha: substitutos → canto (só o bem relativamente mais barato); "
+            "complementares → vértice, sem efeito substituição quando um preço muda.",
+            vm("Regra-âncora: reta = substitutos; L = complementares."),
+        ],
+        "grafico_verso": "ECO-E2-L01010-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " Troca direta dos dois casos-limite. 🔥 Muito frequente: a "
+                       "banca alterna “reta”, “L”, “substitutos” e “complementares” em itens irmãos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Curvas de indiferença lineares indicam bens substitutos perfeitos.”</i> → CERTO",
+            "<i>“Para complementares perfeitos, a TMS é constante e igual à proporção de consumo.”</i> → ERRADO "
+            "(TMS infinita, nula ou indefinida; constante é a dos substitutos)",
+        ])],
+        "reescrita": ("Uma das propriedades das curvas de indiferença é que as curvas em formato de “L” representam "
+                      "bens " + hl("complementares perfeitos") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Verso só com duas imagens: retas paralelas de substitutos perfeitos (suco de maçã × "
+                            "laranja, TMS = −1) e curvas em L de complementos perfeitos (sapatos).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "IMAGEM 169", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (painel 1 de ECO-E2-L01010-1-V1)"},
+                          {"ref": "IMAGEM 170", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (painel 2 de ECO-E2-L01010-1-V1)"}],
+        "alertas": ["gabarito_resolvido: o verso da fonte traz só imagens, sem a palavra ERRADO; gabarito deduzido "
+                    "das figuras e do conteúdo"],
+    },
+    # ------------------------------------------------------------------ E2-L01012
+    {
+        "id": "ECO-E2-L01012-1", "fonte_ref": "E2-L01012", "destino": "04", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_NAB_FALHAS,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo a teoria do consumidor, a escolha ótima do consumidor é sempre caracterizada pela "
+                      "igualdade entre a taxa marginal de substituição dos bens e a razão entre os seus respectivos "
+                      "preços."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo a teoria do consumidor, a escolha ótima do consumidor é ") + vm("sempre")
+                    + az(" caracterizada pela igualdade entre a taxa marginal de substituição dos bens e a razão "
+                         "entre os seus respectivos preços.")),
+        "poucas": ("A " + azb("tangência") + " (TMS = p₁/p₂) vale para ótimos interiores de preferências bem "
+                   "comportadas. Falha nas " + vd("soluções de canto") + " (substitutos perfeitos, preferências "
+                   "côncavas) e no " + vd("vértice") + " dos complementares perfeitos."),
+        "destrinchando": [
+            "Caso usual: o consumidor sobe de curva de indiferença até a última que toca a restrição — e a toca "
+            "tangenciando, com " + vd("TMS = p₁/p₂") + ". É a condição de primeira ordem do problema com curvas "
+            "suaves e convexas.",
+            "Substitutos perfeitos (TMS constante): se |TMS| > p₁/p₂, vale mais comprar só x₁; se menor, só x₂. "
+            "O ótimo é um " + azb("canto") + " em que a curva de indiferença corta a restrição sem tangenciá-la. "
+            "Ex.: U = x₁ + x₂ e p₁ < p₂ → toda a renda em x₁.",
+            "Complementares perfeitos: o ótimo é o vértice do L, onde a TMS não está definida — não há como "
+            "igualá-la a nada.",
+            "Preferências côncavas: a tangência seria ponto de <b>mínimo</b>; o ótimo é um canto.",
+            "Formulação geral (Kuhn-Tucker): no ótimo com os dois bens, TMS = p₁/p₂; com só x₁, |TMS| ≥ p₁/p₂.",
+        ],
+        "grafico_verso": "ECO-E2-L01012-1-V1",
+        "dissecando": (cz("[modulador absoluto]") + " A condição é a de manual; o erro é o “sempre”, que apaga as "
+                       "exceções. 🔥 Itens sobre a escolha ótima com “sempre” ou “necessariamente” quase sempre "
+                       "esperam a lembrança da solução de canto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em ótimos interiores de preferências bem comportadas, a TMS é igual à razão entre os preços.”</i> → "
+            "CERTO",
+            "<i>“Com substitutos perfeitos, a escolha ótima nunca é uma solução de canto.”</i> → ERRADO (o canto "
+            "é a regra quando a TMS difere de p₁/p₂)",
+        ])],
+        "reescrita": ("De acordo a teoria do consumidor, a escolha ótima do consumidor é <s>sempre</s> caracterizada "
+                      "pela igualdade entre a taxa marginal de substituição dos bens e a razão entre os seus "
+                      "respectivos preços " + hl("apenas nos ótimos interiores de preferências bem comportadas; em "
+                      "soluções de canto e no vértice dos complementares perfeitos, essa igualdade não vale") + "."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": "TMS = p₁/p₂ só em preferências bem comportadas; com substitutos perfeitos o consumidor "
+                            "se especializa (solução de canto), sem tangência.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 171", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (painel 1 de ECO-E2-L01012-1-V1)"},
+                          {"ref": "IMAGEM 172", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "redesenhada (painel 2 de ECO-E2-L01012-1-V1)"}],
+        "alertas": [],
+    },
 ]

@@ -1,0 +1,162 @@
+{
+ "id": "ECO-E1-0085-1-V1",
+ "uso": "verso",
+ "legenda": "Com demanda inelástica, a contração da oferta (O₁ → O₂) leva o preço de 8 a 16 e a quantidade de 10 a 7: a receita passa de 80 para 112. O ganho no preço (verde, +56) supera a perda na quantidade (vermelho, −24).",
+ "eixos": {
+  "x": "Q",
+  "y": "P",
+  "xmax": 14,
+  "ymax": 22,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "8 + (10 - x)*8/3",
+   "dominio": [
+    4.9,
+    12.6
+   ],
+   "familia": "demanda",
+   "rotulo": "D (inelástica)",
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  },
+  {
+   "id": "S1",
+   "tipo": "funcao",
+   "expr": "1.2*x - 4",
+   "dominio": [
+    3.4,
+    13.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "S2",
+   "tipo": "funcao",
+   "expr": "1.2*x + 7.6",
+   "dominio": [
+    0.5,
+    11.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O₂"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "S1",
+   "para": "S2",
+   "sentido": "esquerda",
+   "em_y": 11
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "D",
+    "S1"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_desloc": [
+    10,
+    -12
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "D",
+    "S2"
+   ],
+   "rotulo": "E₂",
+   "projetar": true,
+   "rotulo_desloc": [
+    -30,
+    10
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     "E1.y"
+    ],
+    [
+     0,
+     "E2.y"
+    ],
+    "E2",
+    [
+     "E2.x",
+     "E1.y"
+    ]
+   ],
+   "papel": "ganho",
+   "rotulo": "+56"
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     "E1.y"
+    ],
+    [
+     "E2.x",
+     "E1.y"
+    ],
+    [
+     "E2.x",
+     0
+    ]
+   ],
+   "papel": "neutro",
+   "rotulo": "mantido: 56"
+  },
+  {
+   "tipo": "poligono",
+   "vertices": [
+    [
+     "E2.x",
+     0
+    ],
+    [
+     "E2.x",
+     "E1.y"
+    ],
+    "E1",
+    [
+     "E1.x",
+     0
+    ]
+   ],
+   "papel": "perda",
+   "rotulo": "−24"
+  }
+ ],
+ "checar": [
+  "abs(E1.x - 10) < 0.01",
+  "abs(E1.y - 8) < 0.01",
+  "abs(E2.x - 7) < 0.01",
+  "abs(E2.y - 16) < 0.01",
+  "abs(E1.x*E1.y - 80) < 0.1",
+  "abs(E2.x*E2.y - 112) < 0.1",
+  "E2.x*E2.y > E1.x*E1.y"
+ ]
+}

@@ -1,0 +1,118 @@
+{
+ "id": "ECO-E1-0234-4-V1",
+ "uso": "verso",
+ "legenda": "A epidemia desloca a demanda para a esquerda (D₁ → D₂); livre, o preço cairia (E₂). Com o preço fixado em 5, compram-se só 6 unidades (eram 10) e os produtores seguem ofertando 10: excesso de oferta de 4.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 21,
+  "ymax": 11,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D1",
+   "tipo": "funcao",
+   "expr": "10 - x/2",
+   "dominio": [
+    0,
+    20
+   ],
+   "familia": "demanda",
+   "rotulo": "D₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "D2",
+   "tipo": "funcao",
+   "expr": "10 - x/1.2",
+   "dominio": [
+    0,
+    12
+   ],
+   "familia": "demanda",
+   "rotulo": "D₂"
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "x/2",
+   "dominio": [
+    0,
+    20
+   ],
+   "familia": "oferta",
+   "rotulo": "O"
+  },
+  {
+   "id": "Pmin",
+   "tipo": "horizontal",
+   "y": 5,
+   "x": [
+    0,
+    19
+   ],
+   "familia": "destaque",
+   "rotulo": "preço fixado = 5",
+   "tracejada": true
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D1",
+   "para": "D2",
+   "sentido": "esquerda",
+   "em_y": 8
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "D1",
+    "S"
+   ],
+   "rotulo": "E₁",
+   "projetar": "x"
+  },
+  {
+   "id": "Qd",
+   "intersecao": [
+    "D2",
+    "Pmin"
+   ],
+   "projetar": "x",
+   "marcar": true
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "D2",
+    "S"
+   ],
+   "rotulo": "E₂"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Qd.x",
+    1.0
+   ],
+   "para": [
+    "E1.x",
+    1.0
+   ],
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "excesso de oferta = 4"
+  }
+ ],
+ "checar": [
+  "abs(Qd.x - 6) < 0.01",
+  "abs(E1.x - 10) < 0.01",
+  "abs(E1.y - 5) < 0.01",
+  "E2.y < 5",
+  "E1.x - Qd.x > 0"
+ ]
+}

@@ -1102,7 +1102,7 @@ CARDS = [
         "id": "ECO-E2-L01395-1", "fonte_ref": "E2-L01395", "destino": "07-A", "subtema": CP,
         "tipo": "C/E", "banca": "FCC", "prova": "Prefeitura de Santos/2005", "ano": 2005, "cacd": False,
         "errei": False,
-        "comando": CMD_FCC + " (Item adaptado.)",
+        "comando": CMD_FCC,
         "rotulo_item": "Item",
         "assertiva": ("Uma empresa com rendimentos constantes de escala necessariamente apresenta uma curva de "
                       "oferta de curto prazo horizontal."),
@@ -1143,14 +1143,14 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 290-292", "tipo_fonte": "GRÁFICO/TEXTO", "lado": "verso",
                            "acao": "cortadas (quadrinhos; texto dos balões absorvido no 📖)"}],
-        "alertas": [],
+        "alertas": ["item_adaptado: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
     },
     # ------------------------------------------------------------------ E2-L01396
     {
         "id": "ECO-E2-L01396-1", "fonte_ref": "E2-L01396", "destino": "07-A", "subtema": CP,
         "tipo": "C/E", "banca": "FCC", "prova": "Prefeitura de Santos/2005", "ano": 2005, "cacd": False,
         "errei": False,
-        "comando": CMD_FCC + " (Item adaptado.)",
+        "comando": CMD_FCC,
         "rotulo_item": "Item",
         "assertiva": "Uma firma nunca deve operar caso o preço de seu produto seja inferior ao seu custo médio de produção.",
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
@@ -1183,14 +1183,14 @@ CARDS = [
         "comentario_fonte": "A firma não deve operar caso o preço seja inferior ao custo variável médio.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["item_adaptado: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
     },
     # ------------------------------------------------------------------ E2-L01397
     {
         "id": "ECO-E2-L01397-1", "fonte_ref": "E2-L01397", "destino": "07-A", "subtema": CP,
         "tipo": "C/E", "banca": "FCC", "prova": "Prefeitura de Santos/2005", "ano": 2005, "cacd": False,
         "errei": False,
-        "comando": CMD_FCC + " (Item adaptado.)",
+        "comando": CMD_FCC,
         "rotulo_item": "Item",
         "assertiva": ("A curva de oferta da firma é dada pelo ramo ascendente da curva de custo variável médio "
                       "acima do ponto de cruzamento dessa curva com a curva de custo marginal."),
@@ -1230,7 +1230,7 @@ CARDS = [
                             "(curto prazo) e com o CTMe (longo prazo).",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [],
+        "alertas": ["item_adaptado: a fonte marca o item como adaptado de FCC, Prefeitura de Santos, 2005"],
     },
     # ------------------------------------------------------------------ E2-L01399
     {
@@ -1347,7 +1347,7 @@ CARDS = [
             "variável total.",
             "No mundo real da pandemia, o delivery serviu para manter RT ≥ CV com custos variáveis menores.",
         ],
-        "dissecando": (cz("[troca de conceito · contraintuitivo]") + " O item aplica a regra do “opera com "
+        "dissecando": (cz("[troca de conceito]") + " O item aplica a regra do “opera com "
                        "prejuízo” fora da faixa em que ela vale (CVMe ≤ P < CTMe). O contexto (pandemia, "
                        "restaurante) tenta induzir a resposta por empatia. A pista é “custo variável”: abaixo "
                        "dele, para."),
@@ -1360,7 +1360,7 @@ CARDS = [
         "reescrita": ("Se durante a pandemia a queda das vendas fez a receita de um restaurante cair abaixo do "
                       "custo variável médio, este restaurante vai " + hl("paralisar as atividades no curto "
                       "prazo, limitando o prejuízo ao custo fixo") + "."),
-        "tipo_erro": ["TROCA_CONCEITO", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "Receita abaixo do CVMe: firma fecha no curto prazo; opera com prejuízo só se RT ≥ CV "
                             "(P ≥ CVM); operando, perderia mais que o custo fixo. Trecho errado: “vai seguir "
                             "operando”.",

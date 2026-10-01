@@ -1,0 +1,97 @@
+{
+ "id": "ECO-E2-L00848-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "O mercado (à direita) tem demanda negativamente inclinada e fixa o preço P* no cruzamento com a oferta. A firma (à esquerda) toma P* como dado: sua demanda é a reta horizontal d = RMe = RMg = P*.",
+ "paineis": [
+  {
+   "titulo": "Firma",
+   "eixos": {
+    "x": "q",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "d",
+     "tipo": "horizontal",
+     "y": 4,
+     "x": [
+      0,
+      9
+     ],
+     "familia": "demanda",
+     "rotulo": "d = RMe = RMg",
+     "rotulo_xy": [
+      4.5,
+      4.6
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "xy": [
+      0,
+      4
+     ],
+     "rotulo_y": "P*",
+     "marcar": false
+    }
+   ]
+  },
+  {
+   "titulo": "Mercado",
+   "eixos": {
+    "x": "Q",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      1,
+      7.5
+     ],
+     "p2": [
+      9,
+      0.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "O",
+     "tipo": "reta",
+     "p1": [
+      1,
+      1.5
+     ],
+     "p2": [
+      9,
+      6.5
+     ],
+     "familia": "oferta",
+     "rotulo": "O"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E",
+     "intersecao": [
+      "D",
+      "O"
+     ],
+     "rotulo": "E",
+     "projetar": true,
+     "rotulo_y": "P*",
+     "rotulo_x": "Q*"
+    }
+   ],
+   "checar": [
+    "abs(E.y - 4) < 0.01",
+    "abs(E.x - 5) < 0.01"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "id": "ECO-E3-L00009-1-V1",
+ "uso": "verso",
+ "legenda": "Cada 2 unidades adicionais de X custam cada vez mais Y (0,3 → 0,8 → 1,6 → 5,3): custo de oportunidade crescente, que dá à FPP o formato côncavo.",
+ "eixos": {
+  "x": "X",
+  "y": "Y",
+  "xmax": 9.5,
+  "ymax": 9.5,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "F",
+   "tipo": "funcao",
+   "expr": "sqrt(maximum(0, 64 - x**2))",
+   "dominio": [
+    0,
+    8
+   ],
+   "familia": "demanda",
+   "rotulo": "FPP",
+   "rotulo_em": 7.2,
+   "rotulo_desloc": [
+    8,
+    8
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "xy": [
+    0,
+    8
+   ],
+   "rotulo": "A"
+  },
+  {
+   "id": "B",
+   "sobre": "F",
+   "x": 2,
+   "rotulo": "B"
+  },
+  {
+   "id": "C",
+   "sobre": "F",
+   "x": 4,
+   "rotulo": "C"
+  },
+  {
+   "id": "D",
+   "sobre": "F",
+   "x": 6,
+   "rotulo": "D"
+  },
+  {
+   "id": "E",
+   "xy": [
+    8,
+    0
+   ],
+   "rotulo": "E"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    2,
+    8
+   ],
+   "para": [
+    2,
+    "B.y"
+   ],
+   "cor": "vermelho",
+   "rotulo": "−0,3"
+  },
+  {
+   "de": [
+    4,
+    "B.y"
+   ],
+   "para": [
+    4,
+    "C.y"
+   ],
+   "cor": "vermelho",
+   "rotulo": "−0,8"
+  },
+  {
+   "de": [
+    6,
+    "C.y"
+   ],
+   "para": [
+    6,
+    "D.y"
+   ],
+   "cor": "vermelho",
+   "rotulo": "−1,6"
+  },
+  {
+   "de": [
+    8,
+    "D.y"
+   ],
+   "para": [
+    8,
+    0.15
+   ],
+   "cor": "vermelho",
+   "rotulo": "−5,3"
+  }
+ ],
+ "checar": [
+  "(C.y - D.y) > (B.y - C.y)",
+  "(B.y - C.y) > (A.y - B.y)",
+  "D.y > 5",
+  "abs((A.y - B.y) - 0.254) < 0.01"
+ ]
+}

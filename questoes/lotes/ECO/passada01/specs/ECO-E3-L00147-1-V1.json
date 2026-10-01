@@ -1,0 +1,176 @@
+{
+ "id": "ECO-E3-L00147-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Com u = x + y (curvas de indiferença retas de inclinação −1): à esquerda, pₓ = 2pᵧ e a reta orçamentária é mais íngreme que as curvas; a mais alta, U₂, só é tocada no eixo y (canto C). À direita, pₓ = pᵧ e a reta coincide com U₂: todas as cestas do segmento são ótimas, inclusive as interiores.",
+ "paineis": [
+  {
+   "titulo": "pₓ = 2pᵧ → canto",
+   "eixos": {
+    "x": "x",
+    "y": "y",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "U1",
+     "tipo": "reta",
+     "p1": [
+      0,
+      6
+     ],
+     "p2": [
+      6,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₁",
+     "estado": "inicial",
+     "rotulo_em": 5.2,
+     "rotulo_desloc": [
+      6,
+      10
+     ]
+    },
+    {
+     "id": "U2",
+     "tipo": "reta",
+     "p1": [
+      0,
+      8
+     ],
+     "p2": [
+      8,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₂",
+     "rotulo_em": 7.2,
+     "rotulo_desloc": [
+      6,
+      10
+     ]
+    },
+    {
+     "id": "RO",
+     "tipo": "reta",
+     "p1": [
+      0,
+      8
+     ],
+     "p2": [
+      4,
+      0
+     ],
+     "familia": "terceira",
+     "rotulo": "RO",
+     "rotulo_xy": [
+      1.9,
+      1.6
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "C",
+     "xy": [
+      0,
+      8
+     ],
+     "rotulo": "C (só y)",
+     "rotulo_desloc": [
+      12,
+      12
+     ]
+    }
+   ],
+   "checar": [
+    "abs(RO(0) - U2(0)) < 0.01",
+    "RO(1) < U2(1)",
+    "RO(3) < U2(3)"
+   ]
+  },
+  {
+   "titulo": "pₓ = pᵧ → segmento de ótimos",
+   "eixos": {
+    "x": "x",
+    "y": "y",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "U1",
+     "tipo": "reta",
+     "p1": [
+      0,
+      5
+     ],
+     "p2": [
+      5,
+      0
+     ],
+     "familia": "demanda",
+     "rotulo": "U₁",
+     "estado": "inicial",
+     "rotulo_xy": [
+      0.7,
+      3.5
+     ]
+    },
+    {
+     "id": "RO",
+     "tipo": "reta",
+     "p1": [
+      0,
+      8
+     ],
+     "p2": [
+      8,
+      0
+     ],
+     "familia": "destaque",
+     "rotulo": "RO = U₂",
+     "rotulo_xy": [
+      5.75,
+      1.0
+     ]
+    },
+    {
+     "id": "U3",
+     "tipo": "reta",
+     "p1": [
+      1.5,
+      9.5
+     ],
+     "p2": [
+      9.5,
+      1.5
+     ],
+     "familia": "demanda",
+     "rotulo": "U₃",
+     "estado": "inicial"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "P",
+     "xy": [
+      3,
+      5
+     ],
+     "rotulo": "ótimo",
+     "rotulo_desloc": [
+      10,
+      10
+     ]
+    }
+   ],
+   "checar": [
+    "abs(RO(3) - P.y) < 0.01",
+    "abs((RO(1) - RO(3))/2 - (U1(1) - U1(3))/2) < 0.01"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "id": "ECO-E2-L00747-1-V1",
+ "uso": "verso",
+ "legenda": "Se y é complementar de x, o aumento do preço de y desloca a demanda de x para a ESQUERDA (D1 → D0) — o contrário do Gráfico 1. Para ir de D1 a D2, y teria de ser substituto.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "D1",
+   "tipo": "reta",
+   "p1": [
+    3.5,
+    8.5
+   ],
+   "p2": [
+    8.5,
+    1.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "D0",
+   "tipo": "reta",
+   "p1": [
+    1,
+    8.5
+   ],
+   "p2": [
+    6,
+    1.5
+   ],
+   "familia": "destaque",
+   "rotulo": "D₀"
+  },
+  {
+   "id": "D2",
+   "tipo": "reta",
+   "p1": [
+    6,
+    8.5
+   ],
+   "p2": [
+    9.5,
+    3.6
+   ],
+   "familia": "referencia",
+   "rotulo": "D₂",
+   "tracejada": true
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D1",
+   "para": "D0",
+   "sentido": "esquerda",
+   "em_y": 5
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    1.2,
+    9.6
+   ],
+   "texto": "↑ preço de y (complementar) → D de x ←",
+   "cor": "vermelho",
+   "negrito": true
+  },
+  {
+   "xy": [
+    6.3,
+    9.0
+   ],
+   "texto": "y substituto →",
+   "cor": "cinza"
+  }
+ ]
+}

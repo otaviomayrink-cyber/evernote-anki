@@ -1,0 +1,93 @@
+{
+ "id": "ECO-E1-0105-1-V1",
+ "uso": "verso",
+ "legenda": "Na reta Q = 10 − P, a inclinação é a mesma em todos os pontos, mas |ε| = P/Q muda: elástica acima do ponto médio M, unitária em M (P = 5, Q = 5) e inelástica abaixo dele.",
+ "eixos": {
+  "x": "Q",
+  "y": "P",
+  "xmax": 10.5,
+  "ymax": 10.5,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    0,
+    10
+   ],
+   "p2": [
+    10,
+    0
+   ],
+   "familia": "demanda",
+   "rotulo": "Q = 10 − P",
+   "rotulo_em": 9.2,
+   "rotulo_desloc": [
+    4,
+    14
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "sobre": "D",
+   "x": 2,
+   "rotulo": "|ε| = 4",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  },
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": 5,
+   "rotulo": "M: |ε| = 1",
+   "projetar": true,
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  },
+  {
+   "id": "B",
+   "sobre": "D",
+   "x": 8,
+   "rotulo": "|ε| = 0,25",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    3.6,
+    9.2
+   ],
+   "texto": "trecho elástico (|ε| > 1)",
+   "cor": "azul",
+   "negrito": true
+  },
+  {
+   "xy": [
+    6.2,
+    4.0
+   ],
+   "texto": "trecho inelástico (|ε| < 1)",
+   "cor": "ocre",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs(M.x - 5) < 0.01",
+  "abs(M.y - 5) < 0.01",
+  "A.y/A.x > 1",
+  "B.y/B.x < 1",
+  "abs(A.y/A.x - 4) < 0.01"
+ ]
+}

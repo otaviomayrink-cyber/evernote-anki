@@ -1,0 +1,12 @@
+{
+ "id": "ECO-E1-0205-1-V1",
+ "uso": "verso",
+ "legenda": "Energia mais cara desloca a OFERTA para a esquerda (O₁ → O₂): o preço sobe de p₁ para p₂ e a quantidade cai. Quem se move ao longo de uma curva é o mercado sobre a DEMANDA, de E₁ para E₂.",
+ "modelo": "oferta_demanda",
+ "params": {
+  "deslocar": {
+   "S": "esquerda"
+  },
+  "passo": 2.5
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "id": "ECO-E2-L00849-1-V1",
+ "uso": "verso",
+ "legenda": "Com CT = 1.200 + 30q + 3q², a oferta é o CMg (P = 30 + 6q), que parte do mínimo do CVMe (R$ 30). Dividir CT por q dá o CTMe, que só encontra o CMg no seu mínimo (q = 20; R$ 150): igualar P ao CTMe dá lucro zero, não a oferta.",
+ "eixos": {
+  "x": "q",
+  "y": "R$",
+  "xmax": 42,
+  "ymax": 300,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "CMg",
+   "tipo": "funcao",
+   "expr": "30 + 6*x",
+   "dominio": [
+    0,
+    40
+   ],
+   "familia": "oferta",
+   "rotulo": "CMg = oferta",
+   "rotulo_em": 36
+  },
+  {
+   "id": "CTMe",
+   "tipo": "funcao",
+   "expr": "1200/x + 30 + 3*x",
+   "dominio": [
+    5,
+    40
+   ],
+   "familia": "terceira",
+   "rotulo": "CTMe = C/q",
+   "rotulo_em": 7
+  },
+  {
+   "id": "CVMe",
+   "tipo": "funcao",
+   "expr": "30 + 3*x",
+   "dominio": [
+    0,
+    40
+   ],
+   "familia": "quarta",
+   "rotulo": "CVMe",
+   "rotulo_em": 38
+  }
+ ],
+ "pontos": [
+  {
+   "id": "M",
+   "intersecao": [
+    "CMg",
+    "CTMe"
+   ],
+   "rotulo": "mín. CTMe",
+   "projetar": true,
+   "rotulo_desloc": [
+    10,
+    -18
+   ]
+  },
+  {
+   "id": "F",
+   "xy": [
+    0,
+    30
+   ],
+   "rotulo": "mín. CVMe = 30",
+   "rotulo_desloc": [
+    14,
+    -30
+   ]
+  }
+ ],
+ "checar": [
+  "abs(M.x - 20) < 0.01",
+  "abs(M.y - 150) < 0.01",
+  "CTMe(20) <= CTMe(15)",
+  "CTMe(20) <= CTMe(25)"
+ ]
+}

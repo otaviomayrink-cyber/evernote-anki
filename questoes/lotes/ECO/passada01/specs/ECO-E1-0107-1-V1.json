@@ -1,0 +1,139 @@
+{
+ "id": "ECO-E1-0107-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Os dois extremos da elasticidade-preço: com ε = 0 (perfeitamente inelástica), a quantidade não reage ao preço — curva vertical; com |ε| infinita (perfeitamente elástica), o preço é um só e a quantidade pode ser qualquer — curva horizontal.",
+ "paineis": [
+  {
+   "titulo": "ε = 0: perfeitamente inelástica",
+   "eixos": {
+    "x": "Q",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "vertical",
+     "x": 5,
+     "y": [
+      0.5,
+      9.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D",
+     "rotulo_desloc": [
+      8,
+      -6
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "sobre": "D",
+     "y": 3,
+     "rotulo": "p baixo",
+     "rotulo_desloc": [
+      10,
+      0
+     ],
+     "projetar": "y"
+    },
+    {
+     "id": "B",
+     "sobre": "D",
+     "y": 7.5,
+     "rotulo": "p alto",
+     "rotulo_desloc": [
+      10,
+      0
+     ],
+     "projetar": "y"
+    },
+    {
+     "id": "Q",
+     "xy": [
+      5,
+      0
+     ],
+     "marcar": false,
+     "rotulo_x": "mesma Q"
+    }
+   ],
+   "checar": [
+    "abs(A.x - B.x) < 1e-6",
+    "B.y > A.y"
+   ]
+  },
+  {
+   "titulo": "|ε| → ∞: perfeitamente elástica",
+   "eixos": {
+    "x": "Q",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "horizontal",
+     "y": 5,
+     "x": [
+      0.3,
+      9.3
+     ],
+     "familia": "demanda",
+     "rotulo": "D",
+     "rotulo_desloc": [
+      6,
+      10
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "C",
+     "sobre": "D",
+     "x": 2.5,
+     "rotulo": "Q pequena",
+     "rotulo_desloc": [
+      -30,
+      -18
+     ]
+    },
+    {
+     "id": "F",
+     "sobre": "D",
+     "x": 7.5,
+     "rotulo": "Q grande",
+     "rotulo_desloc": [
+      -30,
+      -18
+     ]
+    },
+    {
+     "id": "P",
+     "xy": [
+      0,
+      5
+     ],
+     "marcar": false,
+     "rotulo_y": "p*"
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      1.0,
+      7.6
+     ],
+     "texto": "acima de p*: Q = 0",
+     "cor": "vermelho",
+     "negrito": true
+    }
+   ],
+   "checar": [
+    "abs(C.y - F.y) < 1e-6",
+    "F.x > C.x"
+   ]
+  }
+ ]
+}

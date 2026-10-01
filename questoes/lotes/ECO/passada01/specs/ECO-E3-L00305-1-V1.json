@@ -1,0 +1,91 @@
+{
+ "id": "ECO-E3-L00305-1-V1",
+ "uso": "verso",
+ "legenda": "Soma horizontal: ao preço 8, a firma A oferta 6 e a firma B, 8; o mercado oferta 14. Abaixo de p = 4 só a firma A produz — daí a quebra na oferta de mercado.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 21,
+  "ymax": 11,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "A",
+   "tipo": "funcao",
+   "expr": "2 + x",
+   "dominio": [
+    0,
+    8.6
+   ],
+   "familia": "quarta",
+   "rotulo": "firma A"
+  },
+  {
+   "id": "B",
+   "tipo": "funcao",
+   "expr": "4 + x/2",
+   "dominio": [
+    0,
+    12
+   ],
+   "familia": "terceira",
+   "rotulo": "firma B"
+  },
+  {
+   "id": "M",
+   "tipo": "funcao",
+   "expr": "minimum(x + 2, (x + 10)/3)",
+   "dominio": [
+    0,
+    20
+   ],
+   "familia": "oferta",
+   "rotulo": "mercado"
+  },
+  {
+   "id": "R",
+   "tipo": "horizontal",
+   "y": 8,
+   "x": [
+    0,
+    16
+   ],
+   "familia": "referencia",
+   "rotulo": "p = 8",
+   "tracejada": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "PA",
+   "intersecao": [
+    "A",
+    "R"
+   ],
+   "projetar": "x"
+  },
+  {
+   "id": "PB",
+   "intersecao": [
+    "B",
+    "R"
+   ],
+   "projetar": "x"
+  },
+  {
+   "id": "PM",
+   "intersecao": [
+    "M",
+    "R"
+   ],
+   "projetar": "x"
+  }
+ ],
+ "checar": [
+  "abs(PA.x - 6) < 0.01",
+  "abs(PB.x - 8) < 0.01",
+  "abs(PM.x - 14) < 0.01",
+  "abs(PM.x - PA.x - PB.x) < 0.01"
+ ]
+}

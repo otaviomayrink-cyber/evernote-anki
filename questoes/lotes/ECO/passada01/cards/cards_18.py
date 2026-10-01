@@ -666,5 +666,261 @@ CARDS = [
                           {"ref": "IMAGEM 486", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0181
+    {
+        "id": "ECO-E1-0181-1", "fonte_ref": "E1-0181", "destino": "08", "subtema": H2["mono"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos efeitos de um imposto específico em um mercado monopolista, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Suponha que o governo impõe um imposto específico (por unidade) sobre o produto do "
+                      "monopolista. Esse imposto aumenta o custo marginal de cada unidade produzida."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Suponha que o governo impõe um imposto específico (por unidade) sobre o produto do "
+                      "monopolista. Esse imposto <u>aumenta o custo marginal</u> de cada unidade produzida."),
+        "poucas": ("Imposto específico = valor fixo " + vd("t por unidade") + ": cada unidade a mais passa a "
+                   "custar CMg + t. A curva de custo marginal do monopolista sobe paralelamente em t."),
+        "destrinchando": [
+            azb("Imposto específico") + " (R$ por unidade) × " + azb("imposto ad valorem") + " (% do preço). O "
+            "específico soma t ao custo de cada unidade: CT passa a CT + t·q, logo " + vd("CMg' = CMg + t") + ". "
+            "O custo fixo não muda.",
+            "Novo ótimo: RMg = CMg + t. Como a RMg é decrescente, a quantidade " + vd("cai") + " e o preço, "
+            "lido na demanda, " + vd("sobe") + ".",
+            "Repasse: com demanda linear e CMg constante, o monopolista repassa só " + vd("metade do imposto")
+            + " ao preço (P = (a + c)/2 vira (a + c + t)/2). Na concorrência perfeita com custo constante, o "
+            "repasse seria integral. Com demanda de elasticidade constante, o repasse do monopolista pode até "
+            "superar t, porque o preço é um markup sobre o custo.",
+            "Contraste: um imposto sobre o " + azb("lucro") + " (ou um valor fixo, independente de q) não altera "
+            "o CMg nem a RMg e, por isso, não muda a quantidade nem o preço do monopolista — só reduz seu lucro.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item conceitual direto: específico → custo marginal. A banca "
+                       "costuma testar o vizinho — imposto sobre o lucro ou de valor fixo —, que não mexe no CMg "
+                       "e não altera a decisão de produção."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto sobre o lucro do monopolista eleva seu custo marginal e reduz a quantidade "
+            "produzida.”</i> → ERRADO (imposto sobre o lucro não altera CMg nem RMg)",
+            "<i>“Com demanda linear e custo marginal constante, o monopolista repassa integralmente o imposto "
+            "específico ao preço.”</i> → ERRADO (repassa metade)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O imposto específico eleva o custo marginal em valor constante; no monopólio, "
+                             "reduz a quantidade ótima e aumenta o preço."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (49).jpeg", "tipo_fonte": "não preservada", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0182
+    {
+        "id": "ECO-E1-0182-1", "fonte_ref": "E1-0182", "destino": "08", "subtema": H2["mono"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos efeitos de um imposto específico em um mercado monopolista, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em monopólio, a perda de bem-estar adicional do imposto pode ser menor do que na "
+                      "concorrência perfeita, porque o mercado já operava com preço acima do ótimo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("Em monopólio, a perda de bem-estar adicional do imposto <u>pode</u> ser menor do que na "
+                      "concorrência perfeita, <u>porque o mercado já operava com preço acima do ótimo</u>."),
+        "poucas": ("A fonte dá CERTO, mas a justificativa está invertida: como o monopólio já opera com "
+                   + vd("P > CMg") + ", cada unidade que o imposto elimina custa à sociedade P − CMg > 0, o que "
+                   "tende a tornar a perda adicional " + azb("maior") + ", não menor."),
+        "condicionais": [("⚠️ Gabarito contestável", "O gabarito da fonte é CERTO e foi mantido. O “pode” só se "
+                          "sustenta para impostos muito altos: com demanda linear e CMg constante, a perda "
+                          "adicional no monopólio é menor que a da concorrência apenas se t > 2/3 da distância "
+                          "entre o intercepto da demanda e o custo. Para impostos usuais ela é maior, e a razão "
+                          "dada no item (preço já acima do ótimo) é justamente o motivo de a perda ser maior. A "
+                          "resposta mais defensável seria ERRADO; formulação correta: “em monopólio, a perda "
+                          "adicional do imposto <b>tende a ser maior</b> do que na concorrência perfeita, porque "
+                          "o mercado já operava com preço acima do custo marginal”.")],
+        "destrinchando": [
+            "Na concorrência perfeita, o mercado parte do ótimo (P = CMg): as primeiras unidades eliminadas pelo "
+            "imposto valem quase o mesmo que custam, e a perda é um triângulo — de " + azb("segunda ordem") + ", "
+            "proporcional a t² (" + oc("Harberger") + ").",
+            "No monopólio, o mercado já parte de P > CMg. Cada unidade eliminada tinha valor (P) acima do custo "
+            "(CMg): a perda adicional é um trapézio, de " + azb("primeira ordem") + " em t. É a lógica do "
+            + azb("segundo melhor") + " (" + oc("Lipsey e Lancaster") + "): uma nova distorção sobre um mercado "
+            "já distorcido custa mais, não menos.",
+            "Conta com D: P = 10 − Q, CMg = 2, t = 2. Concorrência: Q cai de 8 para 6, perda = "
+            + vd("2") + ". Monopólio: Q cai de 4 para 3, mas a perda adicional é a área entre a demanda e o "
+            "CMg nessa faixa, (6 + 5)/2 × 1 = " + vd("5,5") + ". Só com t muito alto (acima de 16/3 ≈ "
+            + vd("5,3") + ") a desigualdade se inverte.",
+            "O que é verdade, e talvez inspirou o item: o monopolista repassa só parte do imposto e reduz menos "
+            "a quantidade (metade, no caso linear). Menor ΔQ não significa menor perda, porque cada unidade "
+            "perdida vale mais.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " O “pode” protege a afirmação principal — e só ele sustenta o "
+                       "CERTO —, mas o nexo causal (“porque já operava com preço acima do ótimo”) é o oposto do resultado da "
+                       "teoria do segundo melhor. Em prova, desconfie de item que usa uma distorção prévia para "
+                       "concluir que a nova distorção custa menos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em monopólio, um imposto específico reduz a quantidade produzida em proporção menor que em "
+            "concorrência perfeita, no caso de demanda linear e custo marginal constante.”</i> → CERTO",
+            "<i>“Como o monopólio já gera peso morto, a introdução de um imposto específico não acarreta perda "
+            "adicional de bem-estar.”</i> → ERRADO (há perda adicional, em regra maior)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode", "porque"], "dificuldade": 3,
+        "comentario_fonte": ("No monopólio já há ineficiência alocativa; a perda adicional do imposto pode ser "
+                             "menor do que na concorrência perfeita, pois parte da ineficiência já existia."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: gabarito da fonte CERTO mantido; pela teoria do segundo melhor a perda "
+                    "adicional no monopólio é maior para impostos usuais (menor só se t > 2/3 de (a − c) no caso "
+                    "linear) e o nexo causal do item é invertido; resposta mais defensável: ERRADO"],
+    },
+    # ------------------------------------------------------------------ E1-0239
+    {
+        "id": "ECO-E1-0239-1", "fonte_ref": "E1-0239", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2012", "ano": 2012, "cacd": False,
+        "errei": True,
+        "comando": "Acerca das estruturas de mercado e da discriminação de preços, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("O fato de as passagens aéreas compradas com antecedência serem, em geral, mais baratas que "
+                      "as compradas de última hora é compatível com a suposição de que as companhias aéreas atuam "
+                      "como monopólios que praticam discriminação de preços."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O fato de as passagens aéreas compradas com antecedência serem, em geral, mais baratas que "
+                      "as compradas de última hora é <u>compatível</u> com a suposição de que as companhias aéreas "
+                      "atuam como monopólios que praticam discriminação de preços."),
+        "poucas": ("Preço por antecedência separa grupos de " + azb("elasticidades diferentes") + ": o turista, "
+                   "que planeja e é sensível a preço, paga menos; o executivo, que decide em cima da hora e é "
+                   "pouco sensível, paga mais. Só quem tem " + azb("poder de mercado") + " consegue fazer isso."),
+        "destrinchando": [
+            azb("Discriminação de preços") + " = cobrar preços diferentes pelo mesmo bem, por razões que não são "
+            "diferenças de custo. Condições: (1) " + vd("poder de mercado") + "; (2) capacidade de separar os "
+            "grupos; (3) impossibilidade de revenda (arbitragem) — a passagem é nominal.",
+            "Regra do 3º grau: o monopolista iguala RMg em cada mercado ao CMg comum e cobra " + vd("mais") + " "
+            "do grupo de demanda " + vd("menos elástica") + " (P = CMg / (1 − 1/|ε|) em cada segmento).",
+            "Antecedência funciona como critério de separação: quem viaja a lazer compra cedo e tem "
+            "alternativas (outro destino, outra data); quem viaja a trabalho decide tarde e não pode esperar. "
+            "Restrições como “estadia no sábado” e tarifas não reembolsáveis reforçam a triagem. "
+            + oc("Pindyck e Rubinfeld") + " usam as tarifas aéreas como exemplo de discriminação de 3º grau.",
+            "Num mercado perfeitamente competitivo isso não se sustentaria: o preço tenderia ao custo marginal "
+            "e o cliente de última hora iria ao concorrente. Por isso o item fala em “compatível”: o padrão de "
+            "preços é indício de poder de mercado, não prova de monopólio puro (oligopólios também "
+            "discriminam).",
+        ],
+        "dissecando": (cz("[modulador relativo · contraintuitivo]") + " O item é salvo pelo “compatível com a "
+                       "suposição”: não afirma que as aéreas são monopólios, só que o fato não contradiz o "
+                       "modelo. Quem pensa “aéreas competem entre si” marca ERRADO; a banca quer que se reconheça "
+                       "a discriminação por elasticidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A diferença de preço entre passagens compradas com antecedência e de última hora decorre "
+            "exclusivamente de diferenças de custo do serviço.”</i> → ERRADO (modulador absoluto; o motivo é a "
+            "elasticidade)",
+            "<i>“Na discriminação de terceiro grau, o monopolista cobra preço maior do grupo de demanda mais "
+            "elástica.”</i> → ERRADO (inversão: cobra mais do menos elástico)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "CONTRAINTUITIVO"], "moduladores": ["em geral", "compatível"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Discriminação por antecedência: turistas, mais sensíveis ao preço, compram cedo e "
+                             "pagam menos; executivos, menos sensíveis, compram de última hora e pagam mais; "
+                             "mercado competitivo impediria essa prática."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (CACD 2012), não confirmada: a fonte traz só o ano"],
+    },
+    # ------------------------------------------------------------------ E1-0240
+    {
+        "id": "ECO-E1-0240-1", "fonte_ref": "E1-0240", "destino": "08", "subtema": H2["disc"],
+        "tipo": "DISC", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Responda à questão a seguir, sobre estratégias de preço de firmas com poder de mercado.",
+        "rotulo_item": "Questão",
+        "assertiva": "O que é “discriminação de preços”?",
+        "gabarito": "RESPOSTA", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("É a prática de cobrar preços diferentes pelo mesmo bem ou serviço, de consumidores "
+                      "diferentes ou por unidades diferentes, sem que a diferença reflita custos. Exige poder de "
+                      "mercado, capacidade de separar os consumidores e impossibilidade de revenda. Graus: 1º — "
+                      "cada unidade ao preço de reserva do comprador; 2º — preço varia com a quantidade ou a "
+                      "versão, e o consumidor se autosseleciona; 3º — preços diferentes por grupo, conforme a "
+                      "elasticidade da demanda."),
+        "poucas": ("Discriminar preço é cobrar de cada um conforme sua " + azb("disposição a pagar") + ", e não "
+                   "conforme o custo, para transformar " + azb("excedente do consumidor") + " em lucro."),
+        "destrinchando": [
+            "Condições: " + vd("poder de mercado") + " (o tomador de preço não discrimina), " + vd("informação "
+            "ou mecanismo para separar") + " os consumidores e " + vd("ausência de arbitragem") + " (quem "
+            "comprou barato não pode revender caro).",
+            azb("1º grau (perfeita)") + ": cada unidade ao preço de reserva. O monopolista se apropria de todo o "
+            "excedente e produz a quantidade eficiente (P = CMg na última unidade) — não há peso morto. Raro na "
+            "prática; aproximações: leilões, negociação caso a caso, preços personalizados por algoritmo.",
+            azb("2º grau") + ": o preço depende da quantidade ou do pacote, e cada consumidor escolhe a opção "
+            "que lhe convém (autosseleção): descontos por volume, “leve 3, pague 2”, tarifas em blocos de "
+            "energia, versões básica e premium.",
+            azb("3º grau") + ": o vendedor identifica grupos e cobra mais do menos elástico: meia-entrada para "
+            "estudantes, tarifas de lazer × executivas, remédios mais baratos em países pobres. Regra: RMg "
+            "igual em todos os mercados.",
+            "Efeito sobre o bem-estar: o 1º grau elimina o peso morto, mas zera o excedente do consumidor; no "
+            "3º grau o efeito é ambíguo — melhora se permitir atender grupos que, com preço único, ficariam de "
+            "fora.",
+        ],
+        "dissecando": (cz("[discursiva curta]") + " Em C/E, o tema vira itens como “na discriminação perfeita há "
+                       "peso morto” (ERRADO) ou “descontos por quantidade são discriminação de 2º grau” (CERTO). "
+                       "Atenção a exemplos de fronteira: preço maior na sexta à noite (como no cinema) também "
+                       "reflete pico de demanda e capacidade — é discriminação intertemporal, não o exemplo "
+                       "típico de 3º grau."),
+        "modulos": [("🃏 Carta na manga", [
+            "Discriminação de preços pode ampliar o acesso: o preço diferenciado de medicamentos e vacinas "
+            "entre países ricos e pobres (preços escalonados) é defendido justamente por permitir vender aos "
+            "mais pobres sem destruir o retorno da inovação.",
+        ])],
+        "tipo_erro": [], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Prática de cobrar preços diferentes pelo mesmo produto conforme tipo, quantidade "
+                             "ou disposição a pagar; três graus: preço de reserva por unidade; preço por lotes ou "
+                             "quantidades; preço por grupos de consumidores."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0241
+    {
+        "id": "ECO-E1-0241-1", "fonte_ref": "E1-0241", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2018", "ano": 2018, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do monopólio natural e de sua regulação, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("O serviço de fornecimento de água e saneamento em uma cidade não constitui monopólio "
+                      "natural, uma vez que a atuação exclusiva da empresa em sua área é definida por lei ou "
+                      "contrato de concessão."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O serviço de fornecimento de água e saneamento em uma cidade ") + vm("não constitui")
+                    + az(" monopólio natural, ") + vm("uma vez que") + az(" a atuação exclusiva da empresa em "
+                    "sua área é definida por lei ou contrato de concessão.")),
+        "poucas": ("O que define o " + azb("monopólio natural") + " é a " + azb("estrutura de custos") + " (uma "
+                   "rede só atende a cidade mais barato que duas), não a origem jurídica da exclusividade. "
+                   "Saneamento é o exemplo clássico."),
+        "destrinchando": [
+            azb("Monopólio natural") + ": a função custo é " + azb("subaditiva") + " — uma única firma produz a "
+            "quantidade do mercado a custo menor que qualquer divisão entre várias. Típico de setores com "
+            "custo fixo enorme (redes de dutos, adutoras, estações de tratamento) e custo marginal baixo.",
+            azb("Monopólio legal") + ": a exclusividade decorre de lei, patente ou concessão. As duas coisas "
+            "costumam andar juntas — o Estado concede e regula <b>porque</b> o setor é monopólio natural —, mas "
+            "a lei não cria nem desfaz a natureza do custo.",
+            "Duplicar a rede de água de uma cidade dobraria o custo fixo para dividir a mesma demanda: cada "
+            "operadora teria custo médio mais alto. Daí a solução usual: um operador por área e "
+            + azb("regulação") + " de tarifa e qualidade.",
+            rx("No Brasil") + ", o " + vd("novo Marco Legal do Saneamento (Lei 14.026/2020)") + " manteve a "
+            "lógica de operador único por área, mas exige licitação dos contratos de concessão e dá à "
+            + rx("ANA") + " a edição de normas de referência para a regulação. ⏳ (out/2026)",
+        ],
+        "dissecando": (cz("[nexo indevido · troca de conceito]") + " O fato citado é verdadeiro (a exclusividade "
+                       "vem de lei ou contrato), mas a conclusão não decorre dele: confunde monopólio legal com "
+                       "natural. Pista: o critério do monopólio natural é econômico (custos), nunca jurídico."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O fornecimento de água e saneamento em uma cidade constitui monopólio natural, em razão das "
+            "economias de escala associadas à rede de distribuição.”</i> → CERTO",
+            "<i>“Todo monopólio legal é também monopólio natural.”</i> → ERRADO (modulador absoluto: patentes "
+            "criam monopólios legais sem custos subaditivos)",
+        ])],
+        "reescrita": ("O serviço de fornecimento de água e saneamento em uma cidade " + hl("constitui") + " "
+                      "monopólio natural, " + hl("em razão de sua estrutura de custos, ainda que") + " a atuação "
+                      "exclusiva da empresa em sua área seja definida por lei ou contrato de concessão."),
+        "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": ["uma vez que"], "dificuldade": 1,
+        "comentario_fonte": ("Saneamento é monopólio natural pela estrutura física não compartilhável da rede; a "
+                             "definição legal apenas reconhece e permite regular a concessionária."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (CACD 2018), não confirmada: a fonte traz só o ano"],
+    },
     # FIM
 ]

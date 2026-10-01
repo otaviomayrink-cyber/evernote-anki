@@ -537,9 +537,9 @@ CARDS = [
                        "Cobb-Douglas. O erro típico seria inverter os preços (x₁ = r/8) e chegar a (20, 8), ou "
                        "achar que “confirmar” exigiria mais pontos — para a Cobb-Douglas, basta a forma funcional."),
         "modulos": [("😈 Para dificultar", [
-            "<i>“Com r = 80, o consumo ótimo é (x₁, x₂) = (10, 4).”</i> → ERRADO (preços invertidos: é (4, 10))",
+            "<i>“Com r = 80, o consumo ótimo é (x₁, x₂) = (10, 4).”</i> → ERRADO (preços invertidos: o ótimo é 4 e 10)",
             "<i>“No ótimo, a TMS é igual a 2,5.”</i> → CERTO",
-            "<i>“Se p₁ cair para 5, o consumo de x₂ aumenta.”</i> → ERRADO (na Cobb-Douglas, x₂ = r/(2p₂) não "
+            "<i>“Se p₁ cair para 5, o consumo de x₂ aumenta.”</i> → ERRADO (na Cobb-Douglas, x₂ = r ÷ 2p₂ não "
             "depende de p₁)",
         ])],
         "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
@@ -604,7 +604,7 @@ CARDS = [
                            "acao": "irrecuperavel"}],
         "alertas": ["qualidade_fonte: um dos comentários diz que a convexidade da curva de indiferença "
                     "“representa” um bem inferior — falso (convexidade não define inferioridade); descartado",
-                    "item quase igual: ECO-E1-0836-1 (Nidi/2026), mesma assertiva em prova diferente"],
+                    "quase_duplicata: ECO-E1-0836-1 (Nidi/2026), mesma assertiva em prova diferente"],
     },
     # ------------------------------------------------------------------ E1-0836
     {
@@ -649,7 +649,7 @@ CARDS = [
                             "for inferior, o consumo dele cai.",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["item quase igual: ECO-E1-0188-1 (prova de 2018), mesma assertiva"],
+        "alertas": ["quase_duplicata: ECO-E1-0188-1 (prova de 2018), mesma assertiva"],
     },
     # ------------------------------------------------------------------ E1-0192
     {
@@ -717,6 +717,8 @@ CARDS = [
             "(preferências homotéticas).",
             "A Engel se obtém da " + azb("curva renda-consumo") + " projetando-se as quantidades de cada bem; "
             "a curva de demanda, da preço-consumo.",
+            "Mudança de preço <b>desloca</b> a curva de Engel (outro nível de q para cada renda); mudança de "
+            "renda é movimento <b>ao longo</b> dela — o espelho do que ocorre com a curva de demanda.",
         ],
         "dissecando": (cz("[paráfrase fiel]") + " Definição direta. O item poderia confundir quem associa "
                        "“equilíbrio” a preço de mercado, mas a variável independente é a renda, o que basta "

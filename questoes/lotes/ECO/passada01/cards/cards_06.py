@@ -166,7 +166,7 @@ CARDS = [
         "comentario_fonte": "A elasticidade-preço cruzada indica se um bem é complementar ou substituto.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": ["item adaptado na fonte (FGV, DPE/RS, Analista – Área de Apoio Especializado, Economia, "
+        "alertas": ["nota_redacao: item adaptado na fonte (FGV, DPE/RS, Analista – Área de Apoio Especializado, Economia, "
                     "2023, adaptada)"],
     },
     # ------------------------------------------------------------------ E2-L01377
@@ -269,7 +269,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 253", "tipo_fonte": "DECORATIVA", "lado": "verso",
                            "acao": "cortada (foto ilustrativa de café com bolinho)"}],
-        "alertas": ["item adaptado na fonte (FGV, BADESC, Economista, 2010, adaptada)"],
+        "alertas": ["nota_redacao: item adaptado na fonte (FGV, BADESC, Economista, 2010, adaptada)"],
     },
     # ------------------------------------------------------------------ E2-L01688
     {
@@ -315,5 +315,307 @@ CARDS = [
                            "acao": "absorvida (esquema da fórmula da elasticidade cruzada)"}],
         "alertas": ["qualidade_fonte: um dos comentários empilhados diz que “este gabarito está incorreto”, em "
                     "contradição com a própria explicação; o gabarito ERRADO está correto"],
+    },
+    # ------------------------------------------------------------------ E2-L01762
+    {
+        "id": "ECO-E2-L01762-1", "fonte_ref": "E2-L01762", "destino": "02", "subtema": H2["det"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": ("A teoria da firma permite analisar a relação entre os custos de produção e as estruturas de "
+                    "mercado. A respeito desse tema, julgue as afirmações a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Pode-se dizer que a introdução da lei dos medicamentos genéricos no Brasil, ao ampliar o "
+                      "número de produtos substitutos à disposição dos consumidores neste mercado, promoveu uma "
+                      "redução da elasticidade-preço da demanda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Pode-se dizer que a introdução da lei dos medicamentos genéricos no Brasil, ao ampliar o "
+                      "número de produtos substitutos à disposição dos consumidores neste mercado, promoveu ")
+                   + vm("uma redução") + az(" da elasticidade-preço da demanda."),
+        "poucas": ("Mais " + azb("substitutos") + " = consumidor com mais rotas de fuga quando o preço sobe = "
+                   "demanda " + vd("mais elástica") + ". O item inverte o sentido."),
+        "destrinchando": [
+            "O principal determinante da " + azb("elasticidade-preço da demanda") + " é a disponibilidade de "
+            "substitutos próximos. Se o remédio de marca encarece e existe um genérico com o mesmo princípio "
+            "ativo, o consumidor troca de produto: a quantidade demandada da marca cai muito.",
+            rx("Brasil") + ": a " + vd("Lei nº 9.787/1999") + " (Lei dos Genéricos) criou o medicamento "
+            "genérico, intercambiável com o de referência e vendido mais barato. O efeito econômico foi "
+            "justamente aumentar a sensibilidade da demanda de cada marca ao preço e disciplinar os preços dos "
+            "laboratórios.",
+            "Nuance útil: o que fica mais elástico é a demanda dirigida a <b>cada produto</b> (a marca de "
+            "referência). A demanda pelo <b>tratamento</b> em si (o princípio ativo, como categoria) continua "
+            "pouco elástica — quem precisa do remédio não deixa de tomá-lo. Elasticidade depende de como se "
+            "define o mercado.",
+            "Ligação com poder de mercado: demanda mais elástica → menor margem sobre o custo (índice de "
+            + oc("Lerner") + ": (p − CMg)/p = 1/|ε|). Genéricos reduziram o poder de preço das marcas.",
+            vm("Regra-âncora: mais substitutos → demanda mais elástica → menos poder de preço."),
+        ],
+        "dissecando": (cz("[inversão]") + " Premissa verdadeira (genéricos ampliaram os substitutos) e "
+                       "conclusão invertida (redução da elasticidade). O “ao ampliar…” é a pista que entrega o "
+                       "gabarito: substituto a mais só pode <b>aumentar</b> a elasticidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A entrada dos genéricos tornou mais elástica a demanda pelos medicamentos de referência, "
+            "reduzindo o poder de mercado de seus fabricantes.”</i> → CERTO",
+            "<i>“Ao ampliar os substitutos, os genéricos tornaram perfeitamente elástica a demanda por "
+            "medicamentos.”</i> → ERRADO (modulador absoluto: mais elástica não é infinitamente elástica)",
+        ])],
+        "reescrita": ("Pode-se dizer que a introdução da lei dos medicamentos genéricos no Brasil, ao ampliar o "
+                      "número de produtos substitutos à disposição dos consumidores neste mercado, promoveu "
+                      + hl("um aumento") + " da elasticidade-preço da demanda."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["pode-se dizer"], "dificuldade": 1,
+        "comentario_fonte": ("Genéricos ampliaram os substitutos; mais substitutos tornam o consumidor mais "
+                             "sensível ao preço e aumentam a elasticidade-preço da demanda."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00012
+    {
+        "id": "ECO-E3-L00012-1", "fonte_ref": "E3-L00012", "destino": "02", "subtema": H2["cruz"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": ("Julgue os itens a seguir, a respeito de determinação das curvas de procura, elasticidade, "
+                    "produtividade e custos de produção."),
+        "rotulo_item": "Item",
+        "assertiva": ("A elasticidade-preço cruzada da demanda é negativa para bens substitutos e positiva para "
+                      "bens complementares."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A elasticidade-preço cruzada da demanda é ") + vm("negativa") + az(" para bens substitutos "
+                                                                                          "e ") + vm("positiva")
+                   + az(" para bens complementares."),
+        "poucas": ("Sinais invertidos: " + azb("substitutos") + " → cruzada " + vd("positiva") + "; "
+                   + azb("complementares") + " → cruzada " + vd("negativa") + "."),
+        "destrinchando": [
+            "ε<sub>XY</sub> = %Δq<sub>X</sub> / %Δp<sub>Y</sub>. Substitutos (carne bovina × frango): o boi "
+            "encarece 10%, o consumo de frango sobe, digamos, 4% → ε = +0,4. Complementares (carro × "
+            "gasolina): a gasolina encarece 10%, a venda de carros cai 2% → ε = −0,2.",
+            "Bens " + azb("independentes") + " (sal × sapato) têm cruzada próxima de zero.",
+            "Uso prático: a cruzada é a ferramenta para delimitar o " + azb("mercado relevante") + " em defesa "
+            "da concorrência. O " + rx("CADE") + " pergunta se, diante de um pequeno aumento de preço "
+            "(teste do monopolista hipotético), os consumidores migrariam para outro produto — se sim, os dois "
+            "estão no mesmo mercado.",
+            "Atenção ao objeto: a cruzada fala de <b>dois</b> bens; a elasticidade-preço própria e a "
+            "elasticidade-renda falam de um bem só.",
+            vm("Regra-âncora: substituto sobe junto (+); complementar cai junto (−)."),
+        ],
+        "dissecando": (cz("[inversão]") + " Os dois sinais trocados ao mesmo tempo deixam a frase "
+                       "internamente coerente, o que engana quem lê rápido. Basta checar <b>um</b> dos pares "
+                       "com um exemplo concreto para derrubar o item. 🔥 Variante do mesmo ponto em simulados: "
+                       "“cruzada negativa → substitutos” (só um rótulo trocado)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A elasticidade-preço cruzada da demanda é positiva para bens substitutos e negativa para bens "
+            "complementares.”</i> → CERTO",
+            "<i>“A elasticidade-preço cruzada negativa indica que os bens são inferiores.”</i> → ERRADO (troca "
+            "de conceito: bem inferior se mede pela elasticidade-renda)",
+        ])],
+        "reescrita": ("A elasticidade-preço cruzada da demanda é " + hl("positiva") + " para bens substitutos e "
+                      + hl("negativa") + " para bens complementares."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Seis comentários concordantes: a assertiva inverte os sinais; substitutos têm "
+                             "cruzada positiva e complementares, negativa (carne × frango; carro × gasolina)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00234
+    {
+        "id": "ECO-E3-L00234-1", "fonte_ref": "E3-L00234", "destino": "02", "subtema": H2["cruz"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Março/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_NIDI_MAR25,
+        "rotulo_item": "Item",
+        "assertiva": ("O sinal esperado da elasticidade-renda da demanda depende do tipo de bem que está sendo "
+                      "avaliado. Sendo assim, espera-se que, na avaliação de um bem normal, a elasticidade-renda "
+                      "da demanda apresente sinal positivo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O sinal esperado da elasticidade-renda da demanda depende do tipo de bem que está sendo "
+                      "avaliado. Sendo assim, espera-se que, na avaliação de um bem <u>normal</u>, a "
+                      "elasticidade-renda da demanda apresente sinal <u>positivo</u>."),
+        "poucas": ("Bem " + azb("normal") + " é, por definição, aquele cujo consumo sobe quando a renda sobe: "
+                   "renda e quantidade no mesmo sentido → " + vd("ε<sub>R</sub> > 0") + "."),
+        "destrinchando": [
+            azb("Elasticidade-renda") + ": ε<sub>R</sub> = %Δq / %ΔR. A classificação sai do sinal e do tamanho:",
+            vd("ε<sub>R</sub> < 0") + " → " + azb("bem inferior") + " (a renda sobe e o consumo cai: ônibus "
+            "lotado trocado por carro, carne de segunda trocada por cortes nobres).",
+            vd("ε<sub>R</sub> > 0") + " → " + azb("bem normal") + ", que se subdivide em " + azb("necessário")
+            + " (0 < ε<sub>R</sub> < 1: consumo cresce menos que a renda — alimentos básicos) e "
+            + azb("de luxo/superior") + " (ε<sub>R</sub> > 1: cresce mais que a renda — viagens internacionais).",
+            "Ser inferior não é atributo físico do bem, mas da relação com a renda <b>de quem consome</b> e da "
+            "faixa de renda: o mesmo bem pode ser normal para famílias pobres e inferior para as ricas.",
+            "Não confundir com o " + azb("bem de Giffen") + ": todo Giffen é inferior (efeito renda negativo e "
+            "forte o bastante para vencer o efeito substituição), mas quase nenhum inferior é Giffen.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta. A primeira frase (“depende do tipo de bem”) "
+                       "prepara o terreno e é verdadeira; o “espera-se” suaviza, mas para bem normal o sinal "
+                       "positivo é definicional. Risco: confundir normal com necessário e achar que o sinal "
+                       "dependeria de |ε| > 1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…na avaliação de um bem normal, a elasticidade-renda da demanda é necessariamente maior que "
+            "1.”</i> → ERRADO (só no bem de luxo; necessário fica entre 0 e 1)",
+            "<i>“Na avaliação de um bem inferior, espera-se elasticidade-renda negativa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["espera-se"], "dificuldade": 1,
+        "comentario_fonte": ("Bem normal: renda e consumo crescem juntos, sinal positivo; inferior: sinal "
+                             "negativo; necessário 0 < ε < 1; luxo ε > 1."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00235
+    {
+        "id": "ECO-E3-L00235-1", "fonte_ref": "E3-L00235", "destino": "02", "subtema": H2["cruz"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Março/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_NIDI_MAR25,
+        "rotulo_item": "Item",
+        "assertiva": ("Quanto menor for a elasticidade-preço cruzada da demanda entre um bem e seu substituto, "
+                      "maior será a capacidade da empresa ofertante deste bem controlar o preço prevalecente no "
+                      "mercado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quanto <u>menor</u> for a elasticidade-preço cruzada da demanda entre um bem e seu "
+                      "substituto, <u>maior</u> será a capacidade da empresa ofertante deste bem controlar o preço "
+                      "prevalecente no mercado."),
+        "poucas": ("Cruzada baixa = o substituto é <b>distante</b>: quando a empresa sobe o preço, o consumidor "
+                   "não migra. Isso é " + azb("poder de mercado") + "."),
+        "destrinchando": [
+            "A cruzada mede o grau de substituibilidade. Cruzada alta (substitutos próximos, como duas marcas de "
+            "açúcar refinado): um aumento de preço de uma desvia a clientela para a outra — a empresa é quase "
+            "tomadora de preço. Cruzada baixa: a clientela fica, e a empresa pode elevar o preço sem grande "
+            "perda de vendas.",
+            "Elo com a elasticidade própria: sem substitutos próximos, a demanda dirigida à empresa é menos "
+            "elástica. E o " + azb("índice de Lerner") + " (" + oc("Abba Lerner") + ") liga as duas coisas: "
+            + vd("(p − CMg)/p = 1/|ε|") + " — quanto menos elástica a demanda da firma, maior a margem.",
+            "Por isso as empresas investem em " + azb("diferenciação") + " (marca, design, ecossistema "
+            "fechado): reduzir a substituibilidade percebida é ganhar poder de preço — a lógica da concorrência "
+            "monopolística de " + oc("Chamberlin") + ".",
+            "Em defesa da concorrência, cruzadas altas entre produtos indicam que estão no mesmo "
+            + azb("mercado relevante") + "; cruzadas baixas, que a empresa pode ter posição dominante no seu "
+            "nicho.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " A relação é inversa (menor cruzada → maior "
+                       "controle), e itens com “quanto menor… maior…” costumam ser montados para pegar quem "
+                       "espera relação direta. Raciocine pelo extremo: cruzada zero = nenhum substituto de "
+                       "verdade = monopólio."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto maior for a elasticidade-preço cruzada entre um bem e seu substituto, maior será o poder "
+            "de mercado da empresa ofertante.”</i> → ERRADO (inversão)",
+            "<i>“Em concorrência perfeita, a elasticidade cruzada entre os produtos das diferentes firmas tende "
+            "ao infinito.”</i> → CERTO (produtos homogêneos: substitutos perfeitos)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": ["quanto menor", "maior"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Cruzada baixa: consumidor não migra para o substituto; empresa tem mais poder de "
+                             "mercado (marcas diferenciadas). Um dos comentários marca ERRADO, mas a explicação e a "
+                             "reescrita dele confirmam o item."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: um dos comentários empilhados diz ERRADO, mas a própria justificativa "
+                    "dele sustenta o CERTO; mantido o gabarito da fonte"],
+    },
+    # ------------------------------------------------------------------ E3-L00272
+    {
+        "id": "ECO-E3-L00272-1", "fonte_ref": "E3-L00272", "destino": "02", "subtema": H2["rec"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": True,
+        "comando": ("Segundo a teoria microeconômica e os seus axiomas da racionalidade, julgue o item a seguir, "
+                    "relativo ao comportamento do consumidor."),
+        "rotulo_item": "Item",
+        "assertiva": ("Ao se deparar com a redução de preço do quilo de arroz, o consumidor percebe que realiza "
+                      "uma economia de gastos em relação à quantidade que usualmente comprava ao preço inicial. Se "
+                      "esse consumidor decide usar parte dessa economia para comprar mais unidades desse bem, mas "
+                      "também aproveita outra parte dela para comprar outros bens para sua cesta básica de "
+                      "alimentação, então, para esse consumidor, a demanda por arroz é preço-elástica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Ao se deparar com a redução de preço do quilo de arroz, […] Se esse consumidor decide usar "
+                      "parte dessa economia para comprar mais unidades desse bem, mas também aproveita outra parte "
+                      "dela para comprar outros bens […], então, para esse consumidor, a demanda por arroz é ")
+                   + vm("preço-elástica") + az("."),
+        "poucas": ("Se só <b>parte</b> da economia volta para o arroz, o " + azb("gasto com arroz cai") + " "
+                   "quando o preço cai. Gasto e preço no mesmo sentido = demanda " + vd("inelástica") + "."),
+        "destrinchando": [
+            "Conta do gasto. Antes: p₀q₀. A queda do preço gera a economia (p₀ − p₁)q₀. O consumidor devolve ao "
+            "arroz só uma parte dela: p₁(q₁ − q₀) < (p₀ − p₁)q₀. Rearranjando: " + vd("p₁q₁ < p₀q₀") + " — o "
+            "gasto com arroz <b>diminuiu</b>.",
+            "Pela relação elasticidade × gasto: preço cai e gasto cai ⇔ a quantidade subiu proporcionalmente "
+            "<b>menos</b> que a queda do preço ⇔ " + azb("|ε| < 1") + ". Se toda a economia (ou mais) voltasse "
+            "para o arroz, o gasto ficaria igual (|ε| = 1) ou subiria (|ε| > 1).",
+            "Exemplo numérico: arroz a R$ 2 o quilo, 10 kg (gasto " + vd("R$ 20") + "). O preço cai 20%, para "
+            "R$ 1,60: economia de R$ 4. Metade (R$ 2) vai para mais arroz → 1,25 kg a mais → 11,25 kg (+12,5%). "
+            "Gasto novo: " + vd("R$ 18") + ". ε ≈ 12,5% ÷ 20% = " + vd("0,625") + " → inelástica.",
+            "O enunciado descreve também um " + azb("efeito renda") + " (a queda do preço aumenta o poder de "
+            "compra e parte dele vai para outros bens). Isso não impede a conclusão: o que decide é para onde vai "
+            "a economia, e ela foi repartida.",
+            vm("Regra-âncora: preço ↓ e gasto ↓ → inelástica; preço ↓ e gasto ↑ → elástica."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item narra uma situação que caracteriza demanda "
+                       "inelástica e conclui “elástica”. A narrativa longa (economia, cesta básica) disfarça um "
+                       "teste simples de gasto. Pista: “<b>parte</b> dessa economia” — é o que garante que o gasto "
+                       "com arroz caiu."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…se o consumidor gastasse toda a economia, e ainda mais, em arroz, sua demanda por arroz seria "
+            "preço-elástica.”</i> → CERTO",
+            "<i>“…se o consumidor gastasse exatamente toda a economia em arroz, a demanda seria "
+            "preço-inelástica.”</i> → ERRADO (gasto constante: elasticidade unitária)",
+        ])],
+        "reescrita": ("Ao se deparar com a redução de preço do quilo de arroz, […] então, para esse consumidor, a "
+                      "demanda por arroz é " + hl("preço-inelástica") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["parte"], "dificuldade": 3,
+        "comentario_fonte": ("Professora: é preço-inelástica — a economia é usada só em parte para mais arroz, "
+                             "aumento do consumo menos que proporcional à queda do preço (exemplo 20 + 80 = 100 → "
+                             "15 + 85 = 100). Comentários de IA divergem: alguns dizem que a elasticidade não "
+                             "poderia ser determinada pelo enunciado."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 377", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 378", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["qualidade_fonte: parte dos comentários empilhados afirma que o enunciado não permitiria "
+                    "determinar a elasticidade; está errado — se só parte da economia volta ao arroz, o gasto "
+                    "com arroz cai, logo |ε| < 1",
+                    "texto_parcial: comando truncado na fonte (“os indivíduos buscam m…”): completado de forma neutra"],
+    },
+    # ------------------------------------------------------------------ E3-L00452
+    {
+        "id": "ECO-E3-L00452-1", "fonte_ref": "E3-L00452", "destino": "02", "subtema": H2["of"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Com base na teoria microeconômica, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se a oferta de um bem tiver elasticidade zero em relação ao preço, a demanda determinará "
+                      "unicamente o preço de equilíbrio da transação."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se a oferta de um bem tiver elasticidade zero em relação ao preço, a demanda determinará "
+                      "<u>unicamente</u> o preço de equilíbrio da transação."),
+        "poucas": ("Oferta com " + vd("ε = 0") + " é " + azb("vertical") + ": a quantidade está fixada. Onde a "
+                   "demanda cortar essa vertical, ali estará o preço — a demanda o determina sozinha."),
+        "destrinchando": [
+            "Oferta " + azb("perfeitamente inelástica") + ": a quantidade ofertada não reage ao preço (um quadro "
+            "de Leonardo, os lugares de um estádio num dia de jogo, a terra numa localização específica, no curto "
+            "prazo a safra já colhida).",
+            "Divisão de tarefas no equilíbrio: a oferta fixa a <b>quantidade</b>; a demanda, ao se posicionar, "
+            "fixa o <b>preço</b>. Deslocamentos da demanda mexem só no preço; a quantidade não muda.",
+            "Leitura do “unicamente”: refere-se ao preço. Dada a quantidade, nenhuma condição de custo do "
+            "ofertante interfere — o preço é o que os consumidores se dispõem a pagar por aquela quantidade.",
+            "Aplicações: (1) " + azb("renda da terra") + " — " + oc("David Ricardo") + ": o trigo não é caro "
+            "porque se paga renda; paga-se renda porque o trigo é caro; (2) " + azb("tributação") + ": imposto "
+            "sobre bem de oferta vertical recai inteiro sobre o ofertante e não gera peso morto (a quantidade "
+            "não muda) — base da proposta de imposto único sobre a terra de " + oc("Henry George") + ".",
+            "Espelho: oferta " + azb("perfeitamente elástica") + " (horizontal) faz o contrário — fixa o preço, "
+            "e a demanda determina só a quantidade.",
+        ],
+        "grafico_verso": "ECO-E3-L00452-1-V1",
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " O “unicamente” parece modulador absoluto e induz "
+                       "o candidato a marcar ERRADO por reflexo; aqui ele é verdadeiro, porque a oferta vertical "
+                       "não tem papel nenhum na formação do preço. Lição: modulador absoluto não é erro "
+                       "automático — teste-o no caso extremo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a oferta tiver elasticidade zero, um aumento da demanda elevará o preço e a quantidade "
+            "transacionada.”</i> → ERRADO (a quantidade não muda)",
+            "<i>“Se a oferta for perfeitamente elástica, a demanda determinará unicamente a quantidade "
+            "transacionada.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": ["unicamente"], "dificuldade": 2,
+        "comentario_fonte": ("Gabarito preliminar CERTO. Oferta com elasticidade zero é vertical; quantidade "
+                             "fixa; deslocamentos da demanda alteram só o preço (obras de arte, estádio, terra)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 655", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00452-1-V1)"}],
+        "alertas": ["nota_redacao: gabarito preliminar — a fonte indica “gabarito preliminar: CERTO”"],
     },
 ]

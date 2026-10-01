@@ -1,0 +1,95 @@
+{
+ "id": "ECO-E1-0108-1-V1",
+ "uso": "verso",
+ "legenda": "Pelo mesmo ponto inicial A passam a demanda de curto prazo (íngreme) e a de longo prazo (mais plana). A mesma alta de preço (p₁ → p₂) reduz pouco a quantidade no curto prazo e muito no longo prazo.",
+ "eixos": {
+  "x": "q",
+  "y": "p"
+ },
+ "curvas": [
+  {
+   "id": "DLP",
+   "tipo": "reta",
+   "p1": [
+    0.8,
+    7.6
+   ],
+   "p2": [
+    9.6,
+    2.4
+   ],
+   "familia": "demanda",
+   "rotulo": "D longo prazo"
+  },
+  {
+   "id": "DCP",
+   "tipo": "reta",
+   "p1": [
+    4.3,
+    9.6
+   ],
+   "p2": [
+    6.2,
+    1.0
+   ],
+   "familia": "terceira",
+   "rotulo": "D curto prazo",
+   "rotulo_desloc": [
+    8,
+    4
+   ]
+  },
+  {
+   "id": "P2",
+   "tipo": "horizontal",
+   "y": 6.6,
+   "x": [
+    0,
+    6.6
+   ],
+   "familia": "referencia",
+   "rotulo": ""
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "DLP",
+    "DCP"
+   ],
+   "rotulo": "A",
+   "projetar": true,
+   "rotulo_x": "q₁",
+   "rotulo_y": "p₁",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  },
+  {
+   "id": "L",
+   "intersecao": [
+    "DLP",
+    "P2"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q LP",
+   "rotulo_y": "p₂"
+  },
+  {
+   "id": "C",
+   "intersecao": [
+    "DCP",
+    "P2"
+   ],
+   "projetar": "x",
+   "rotulo_x": "q CP"
+  }
+ ],
+ "checar": [
+  "L.x < C.x",
+  "C.x < A.x",
+  "(A.x - L.x) > 2*(A.x - C.x)"
+ ]
+}

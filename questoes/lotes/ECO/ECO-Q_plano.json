@@ -1,0 +1,621 @@
+{
+ "materia": "ECO",
+ "versao_folha": "Q-v3",
+ "notas": [
+  {
+   "id": "01",
+   "titulo": "🦋 Microeconomia: fundamentos, CPP, demanda e oferta, bens, equilíbrio",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "01-1 - Obj.",
+   "h2": [
+    "🧭 Fundamentos e escassez",
+    "📐 Curva de possibilidades de produção",
+    "📈 Demanda: determinantes e deslocamentos",
+    "🏭 Oferta: determinantes e deslocamentos",
+    "🏷️ Classificação dos bens",
+    "⚖️ Equilíbrio e estática comparativa"
+   ]
+  },
+  {
+   "id": "02",
+   "titulo": "🍰 Elasticidades",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "02-1 - Obj.",
+   "h2": [
+    "📐 Elasticidade-preço da demanda",
+    "💰 Elasticidade, receita e gasto",
+    "🔗 Elasticidade-renda e cruzada",
+    "🏭 Elasticidade da oferta",
+    "⏳ Determinantes e prazos"
+   ]
+  },
+  {
+   "id": "03",
+   "titulo": "🍫 Intervenções do Estado na economia e economia do bem-estar",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "03-1 - Obj.",
+   "h2": [
+    "😊 Excedentes e eficiência",
+    "💸 Tributos: incidência e peso morto",
+    "🧾 Subsídios",
+    "🚧 Preços máximos e mínimos",
+    "🧮 Cotas e outras intervenções"
+   ]
+  },
+  {
+   "id": "04",
+   "titulo": "🍇 Teoria do consumidor, curvas preço-consumo e Engel, efeitos renda e substituição",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "04-1 - Obj.",
+   "h2": [
+    "🧠 Preferências e axiomas",
+    "🎯 Utilidade e curvas de indiferença",
+    "💵 Restrição orçamentária",
+    "⚖️ Escolha ótima do consumidor",
+    "📊 Demanda individual e de mercado"
+   ]
+  },
+  {
+   "id": "04-A",
+   "titulo": "🤑 Preço-consumo, Engel e efeitos renda/substituição",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "04-A-1 - Obj.",
+   "h2": [
+    "📈 Curva preço-consumo",
+    "📉 Curva renda-consumo e Engel",
+    "🔀 Efeitos renda e substituição",
+    "🥔 Bens inferiores e de Giffen",
+    "🧮 Slutsky e Hicks"
+   ]
+  },
+  {
+   "id": "05",
+   "titulo": "☂️ Teoria da firma I (produção — isoquanta)",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "05-1 - Obj.",
+   "h2": [
+    "🏭 Função de produção e curto prazo",
+    "📉 Produto marginal e rendimentos",
+    "🗺️ Isoquantas e TMST",
+    "📏 Rendimentos de escala"
+   ]
+  },
+  {
+   "id": "06",
+   "titulo": "💧 Teoria da firma II (custos — isocusto)",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "06-1 - Obj.",
+   "h2": [
+    "💰 Custos de curto prazo",
+    "📈 Custos de longo prazo e escala",
+    "⚖️ Isocusto e combinação ótima",
+    "🧾 Custo econômico × contábil"
+   ]
+  },
+  {
+   "id": "07",
+   "titulo": "🌈 Estruturas de mercado (panorama)",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "07-1 - Obj.",
+   "h2": [
+    "🗺️ Comparação entre estruturas"
+   ]
+  },
+  {
+   "id": "07-A",
+   "titulo": "🌈 Concorrência perfeita",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "07-A-1 - Obj.",
+   "h2": [
+    "📐 Hipóteses e maximização de lucro",
+    "⏱️ Curto prazo: oferta da firma",
+    "⏳ Longo prazo e entrada/saída"
+   ]
+  },
+  {
+   "id": "08",
+   "titulo": "🍒 Monopólio e monopsônio",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "08-1 - Obj.",
+   "h2": [
+    "👑 Equilíbrio do monopólio",
+    "📊 Markup, elasticidade e poder de mercado",
+    "🎟️ Discriminação de preços",
+    "🏛️ Monopólio natural e regulação",
+    "🛒 Monopsônio"
+   ]
+  },
+  {
+   "id": "09",
+   "titulo": "⚔️ Concorrência monopolística",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "09-1 - Obj.",
+   "h2": [
+    "🧩 Modelo de Chamberlin"
+   ]
+  },
+  {
+   "id": "10",
+   "titulo": "🦑 Oligopólios",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "10-1 - Obj.",
+   "h2": [
+    "🧮 Cournot e Bertrand",
+    "🥇 Stackelberg e liderança",
+    "🤝 Cartel e conluio",
+    "📏 Concentração e outras teorias"
+   ]
+  },
+  {
+   "id": "11",
+   "titulo": "🎲 Teoria dos jogos",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "11-1 - Obj.",
+   "h2": [
+    "♟️ Equilíbrio de Nash e dominância",
+    "🔁 Jogos sequenciais e repetidos"
+   ]
+  },
+  {
+   "id": "12",
+   "titulo": "⚖️ Falhas de mercado, externalidades, tipos de bens e informações assimétricas",
+   "bloco": "I. MICROECONOMIA",
+   "titulo_q": "12-1 - Obj.",
+   "h2": [
+    "🌫️ Externalidades e Coase",
+    "🏞️ Bens públicos e comuns",
+    "🕵️ Informação assimétrica",
+    "🏛️ Falhas de governo e regulação"
+   ]
+  },
+  {
+   "id": "15",
+   "titulo": "⚡ Macroeconomia: panorama histórico (genealogia das ideias)",
+   "bloco": "II. MACROECONOMIA E CONTAS NACIONAIS",
+   "titulo_q": "15-1 - Obj.",
+   "h2": [
+    "📜 Escolas do pensamento macroeconômico"
+   ]
+  },
+  {
+   "id": "16",
+   "titulo": "🌅 Conceitos básicos da teoria macroeconômica",
+   "bloco": "II. MACROECONOMIA E CONTAS NACIONAIS",
+   "titulo_q": "16-1 - Obj.",
+   "h2": [
+    "🧭 Agregados e conceitos básicos"
+   ]
+  },
+  {
+   "id": "17",
+   "titulo": "🏺 Contas Nacionais",
+   "bloco": "II. MACROECONOMIA E CONTAS NACIONAIS",
+   "titulo_q": "17-1 - Obj.",
+   "h2": [
+    "🔄 Identidades e óticas do produto",
+    "📏 PIB, PNB, RNB e conceitos derivados",
+    "💲 Preços de mercado × custo de fatores",
+    "📊 Nominal × real e deflator",
+    "🧾 SCN e tabelas"
+   ]
+  },
+  {
+   "id": "18",
+   "titulo": "🌊 Balanço de Pagamentos: estrutura e lançamentos",
+   "bloco": "II. MACROECONOMIA E CONTAS NACIONAIS",
+   "titulo_q": "18-1 - Obj.",
+   "h2": [
+    "🏗️ Estrutura do BP (BPM6)",
+    "✍️ Lançamentos",
+    "🔗 BP e contas nacionais"
+   ]
+  },
+  {
+   "id": "19",
+   "titulo": "📿 Indicadores fiscais e de liquidez/solvência externa",
+   "bloco": "II. MACROECONOMIA E CONTAS NACIONAIS",
+   "titulo_q": "19-1 - Obj.",
+   "h2": [
+    "💰 Resultados fiscais (NFSP)",
+    "🌐 Indicadores externos"
+   ]
+  },
+  {
+   "id": "25",
+   "titulo": "❄️ Modelo clássico de determinação da renda + TQM clássica (moeda e preços no longo prazo)",
+   "bloco": "III. MODELOS MACROECONÔMICOS E FLUTUAÇÕES",
+   "titulo_q": "25-1 - Obj.",
+   "h2": [
+    "⚙️ Modelo clássico",
+    "💵 Teoria quantitativa da moeda"
+   ]
+  },
+  {
+   "id": "26",
+   "titulo": "🏔️ Modelo keynesiano simples: demanda efetiva, multiplicador",
+   "bloco": "III. MODELOS MACROECONÔMICOS E FLUTUAÇÕES",
+   "titulo_q": "26-1 - Obj.",
+   "h2": [
+    "📈 Demanda efetiva e cruz keynesiana",
+    "✖️ Multiplicadores"
+   ]
+  },
+  {
+   "id": "27",
+   "titulo": "🎭 Modelo IS-LM (keynesiano generalizado / Hicks-Hansen)",
+   "bloco": "III. MODELOS MACROECONÔMICOS E FLUTUAÇÕES",
+   "titulo_q": "27-1 - Obj.",
+   "h2": [
+    "📉 Curva IS",
+    "📈 Curva LM",
+    "🏦 Política fiscal e monetária",
+    "🕳️ Casos extremos"
+   ]
+  },
+  {
+   "id": "28",
+   "titulo": "🌍 Modelo OA-DA",
+   "bloco": "III. MODELOS MACROECONÔMICOS E FLUTUAÇÕES",
+   "titulo_q": "28-1 - Obj.",
+   "h2": [
+    "📈 Demanda agregada",
+    "🏭 Oferta agregada e choques"
+   ]
+  },
+  {
+   "id": "29",
+   "titulo": "🐦 Curva de Phillips: inflação × desemprego, expectativas (adaptativas × racionais)",
+   "bloco": "III. MODELOS MACROECONÔMICOS E FLUTUAÇÕES",
+   "titulo_q": "29-1 - Obj.",
+   "h2": [
+    "📉 Phillips original e aceleracionista",
+    "🔮 Expectativas e NAIRU"
+   ]
+  },
+  {
+   "id": "30",
+   "titulo": "🧵 Síntese neoclássica e o debate macroeconômico contemporâneo",
+   "bloco": "III. MODELOS MACROECONÔMICOS E FLUTUAÇÕES",
+   "titulo_q": "30-1 - Obj.",
+   "h2": [
+    "🗣️ Debate contemporâneo"
+   ]
+  },
+  {
+   "id": "35",
+   "titulo": "🎵 Economia monetária: moeda, criação, multiplicador, demanda por moeda",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "35-1 - Obj.",
+   "h2": [
+    "🪙 Funções e agregados monetários",
+    "🏦 Criação de moeda e multiplicador",
+    "📊 Demanda por moeda"
+   ]
+  },
+  {
+   "id": "36",
+   "titulo": "🌀 Banco Central e política monetária: funções, instrumentos, TQM operacional, senhoriagem e imposto inflacionário",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "36-1 - Obj.",
+   "h2": [
+    "🏛️ Funções do Banco Central",
+    "🛠️ Instrumentos de política monetária",
+    "💸 Senhoriagem e imposto inflacionário"
+   ]
+  },
+  {
+   "id": "37",
+   "titulo": "💥 Inflação: conceitos e correntes",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "37-1 - Obj.",
+   "h2": [
+    "🔥 Tipos e teorias da inflação"
+   ]
+  },
+  {
+   "id": "38",
+   "titulo": "🎯 Sistema de metas, ancoragem, forward guidance, regra de Taylor",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "38-1 - Obj.",
+   "h2": [
+    "🎯 Metas de inflação e regras"
+   ]
+  },
+  {
+   "id": "39",
+   "titulo": "🐉 Dominância fiscal, TFNP, coordenação fiscal-monetária",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "39-1 - Obj.",
+   "h2": [
+    "🐉 Dominância fiscal"
+   ]
+  },
+  {
+   "id": "40",
+   "titulo": "🚀 Políticas monetárias não convencionais: QE, tapering, QT, crises de 2008 e 2023",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "40-1 - Obj.",
+   "h2": [
+    "🖨️ QE, tapering e QT",
+    "💥 Crises financeiras"
+   ]
+  },
+  {
+   "id": "41",
+   "titulo": "🏛️ Regulação do sistema bancário, financeiro e mercado de capitais, Basileia",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "41-1 - Obj.",
+   "h2": [
+    "🏛️ Regulação e Basileia"
+   ]
+  },
+  {
+   "id": "42",
+   "titulo": "💳 Bancos digitais, meios de pagamento, economia digital",
+   "bloco": "IV. ECONOMIA MONETÁRIA E SISTEMA FINANCEIRO",
+   "titulo_q": "42-1 - Obj.",
+   "h2": [
+    "💳 Pagamentos e economia digital"
+   ]
+  },
+  {
+   "id": "47",
+   "titulo": "🌱 Setor público e funções do Estado, política fiscal, equivalência ricardiana",
+   "bloco": "V. SETOR PÚBLICO E POLÍTICA FISCAL",
+   "titulo_q": "47-1 - Obj.",
+   "h2": [
+    "🏛️ Funções do Estado",
+    "💸 Tributação: princípios e incidência",
+    "📊 Política fiscal e multiplicadores",
+    "🔮 Equivalência ricardiana"
+   ]
+  },
+  {
+   "id": "48",
+   "titulo": "🐘 Déficit e dívida públicos: financiamento, Wagner, Laffer, sustentabilidade, dívida/PIB",
+   "bloco": "V. SETOR PÚBLICO E POLÍTICA FISCAL",
+   "titulo_q": "48-1 - Obj.",
+   "h2": [
+    "📏 Conceitos de déficit e dívida",
+    "🧮 Financiamento e sustentabilidade",
+    "📈 Wagner e Laffer"
+   ]
+  },
+  {
+   "id": "49",
+   "titulo": "🌕 Orçamento público: PPA/LDO/LOA, responsabilidade fiscal",
+   "bloco": "V. SETOR PÚBLICO E POLÍTICA FISCAL",
+   "titulo_q": "49-1 - Obj.",
+   "h2": [
+    "📒 Ciclo orçamentário",
+    "⚖️ Responsabilidade fiscal"
+   ]
+  },
+  {
+   "id": "50",
+   "titulo": "🌶️ Trajetória da dívida pública, teto de gastos, novo arcabouço fiscal",
+   "bloco": "V. SETOR PÚBLICO E POLÍTICA FISCAL",
+   "titulo_q": "50-1 - Obj.",
+   "h2": [
+    "📈 Trajetória da dívida",
+    "🧱 Regras fiscais: teto e arcabouço"
+   ]
+  },
+  {
+   "id": "55",
+   "titulo": "⭐ Teorias do consumo e investimento",
+   "bloco": "VI. CRESCIMENTO, DESENVOLVIMENTO E MERCADO DE TRABALHO",
+   "titulo_q": "55-1 - Obj.",
+   "h2": [
+    "🛒 Teorias do consumo",
+    "🏗️ Teorias do investimento"
+   ]
+  },
+  {
+   "id": "56",
+   "titulo": "📈 Modelo de Solow: estado estacionário, regra de ouro, população e tecnologia",
+   "bloco": "VI. CRESCIMENTO, DESENVOLVIMENTO E MERCADO DE TRABALHO",
+   "titulo_q": "56-1 - Obj.",
+   "h2": [
+    "⚙️ Estado estacionário",
+    "🥇 Regra de ouro",
+    "👥 População, tecnologia e convergência"
+   ]
+  },
+  {
+   "id": "57",
+   "titulo": "💡 Crescimento endógeno (Romer, Lucas, Arrow), Schumpeter, Harrod-Domar",
+   "bloco": "VI. CRESCIMENTO, DESENVOLVIMENTO E MERCADO DE TRABALHO",
+   "titulo_q": "57-1 - Obj.",
+   "h2": [
+    "💡 Teorias do crescimento"
+   ]
+  },
+  {
+   "id": "58",
+   "titulo": "🌾 Desenvolvimento econômico",
+   "bloco": "VI. CRESCIMENTO, DESENVOLVIMENTO E MERCADO DE TRABALHO",
+   "titulo_q": "58-1 - Obj.",
+   "h2": [
+    "🌾 Teorias do desenvolvimento"
+   ]
+  },
+  {
+   "id": "59",
+   "titulo": "🐎 Mercado de trabalho, Lei de Okun",
+   "bloco": "VI. CRESCIMENTO, DESENVOLVIMENTO E MERCADO DE TRABALHO",
+   "titulo_q": "59-1 - Obj.",
+   "h2": [
+    "👷 Desemprego e mercado de trabalho",
+    "📏 Lei de Okun"
+   ]
+  },
+  {
+   "id": "60",
+   "titulo": "🏭 Precarização, reforma trabalhista de 2017, conjuntura do trabalho",
+   "bloco": "VI. CRESCIMENTO, DESENVOLVIMENTO E MERCADO DE TRABALHO",
+   "titulo_q": "60-1 - Obj.",
+   "h2": [
+    "🏭 Conjuntura do trabalho"
+   ]
+  },
+  {
+   "id": "65",
+   "titulo": "🕰️ Sistema Financeiro Internacional: padrão-ouro, Bretton Woods, crises",
+   "bloco": "VII. MACROECONOMIA ABERTA E FINANÇAS INTERNACIONAIS",
+   "titulo_q": "65-1 - Obj.",
+   "h2": [
+    "🥇 Padrão-ouro",
+    "🏦 Bretton Woods",
+    "💥 Crises e pós-Bretton Woods"
+   ]
+  },
+  {
+   "id": "66",
+   "titulo": "💱 Câmbio e política cambial: regimes, nominal × real, PPC",
+   "bloco": "VII. MACROECONOMIA ABERTA E FINANÇAS INTERNACIONAIS",
+   "titulo_q": "66-1 - Obj.",
+   "h2": [
+    "💱 Regimes cambiais",
+    "📏 Câmbio nominal × real e PPC",
+    "📈 Determinantes do câmbio"
+   ]
+  },
+  {
+   "id": "67",
+   "titulo": "📘 Reservas internacionais e política cambial ativa",
+   "bloco": "VII. MACROECONOMIA ABERTA E FINANÇAS INTERNACIONAIS",
+   "titulo_q": "67-1 - Obj.",
+   "h2": [
+    "📘 Reservas e intervenção"
+   ]
+  },
+  {
+   "id": "68",
+   "titulo": "🧂 Poupança externa e crescimento econômico",
+   "bloco": "VII. MACROECONOMIA ABERTA E FINANÇAS INTERNACIONAIS",
+   "titulo_q": "68-1 - Obj.",
+   "h2": [
+    "🧂 Poupança externa",
+    "🔗 Hiatos e restrição externa"
+   ]
+  },
+  {
+   "id": "69",
+   "titulo": "🔗 Relação câmbio-juros-inflação",
+   "bloco": "VII. MACROECONOMIA ABERTA E FINANÇAS INTERNACIONAIS",
+   "titulo_q": "69-1 - Obj.",
+   "h2": [
+    "🔗 Paridades e repasse cambial"
+   ]
+  },
+  {
+   "id": "70",
+   "titulo": "📍 Modelo IS-LM-BP (Mundell-Fleming)",
+   "bloco": "VII. MACROECONOMIA ABERTA E FINANÇAS INTERNACIONAIS",
+   "titulo_q": "70-1 - Obj.",
+   "h2": [
+    "📍 Curva BP e mobilidade de capital",
+    "🔒 Câmbio fixo",
+    "🌊 Câmbio flutuante"
+   ]
+  },
+  {
+   "id": "73",
+   "titulo": "⛵ Teorias clássicas e neoclássicas do comércio: Smith, Ricardo, Heckscher-Ohlin (H-O), teoremas, Leontief",
+   "bloco": "VIII. COMÉRCIO E ECONOMIA INTERNACIONAL",
+   "titulo_q": "73-1 - Obj.",
+   "h2": [
+    "⛵ Vantagens absolutas e comparativas",
+    "🧪 Heckscher-Ohlin e teoremas",
+    "❓ Paradoxo de Leontief e termos de troca"
+   ]
+  },
+  {
+   "id": "74",
+   "titulo": "🌎 Crítica da CEPAL: Prebisch, deterioração dos termos de troca",
+   "bloco": "VIII. COMÉRCIO E ECONOMIA INTERNACIONAL",
+   "titulo_q": "74-1 - Obj.",
+   "h2": [
+    "🌎 CEPAL e termos de troca"
+   ]
+  },
+  {
+   "id": "75",
+   "titulo": "🔬 Novas teorias do comércio: escala, concorrência imperfeita, comércio intraindustrial, intrafirma",
+   "bloco": "VIII. COMÉRCIO E ECONOMIA INTERNACIONAL",
+   "titulo_q": "75-1 - Obj.",
+   "h2": [
+    "🔬 Novas teorias do comércio"
+   ]
+  },
+  {
+   "id": "76",
+   "titulo": "⭐ Cadeias globais de valor: fluxos internacionais de bens e serviços",
+   "bloco": "VIII. COMÉRCIO E ECONOMIA INTERNACIONAL",
+   "titulo_q": "76-1 - Obj.",
+   "h2": [
+    "⭐ Cadeias globais de valor"
+   ]
+  },
+  {
+   "id": "77",
+   "titulo": "💼 Investimento internacional: portfólio × IED, internacionalização da produção",
+   "bloco": "VIII. COMÉRCIO E ECONOMIA INTERNACIONAL",
+   "titulo_q": "77-1 - Obj.",
+   "h2": [
+    "💼 IED e portfólio"
+   ]
+  },
+  {
+   "id": "78",
+   "titulo": "🌐 Globalização financeira e produtiva: volatilidade, riscos e vulnerabilidade externa",
+   "bloco": "VIII. COMÉRCIO E ECONOMIA INTERNACIONAL",
+   "titulo_q": "78-1 - Obj.",
+   "h2": [
+    "🌐 Globalização e vulnerabilidade"
+   ]
+  },
+  {
+   "id": "79",
+   "titulo": "🎪 Políticas comerciais e de comércio exterior: tarifas, cotas, subsídios",
+   "bloco": "VIII. COMÉRCIO E ECONOMIA INTERNACIONAL",
+   "titulo_q": "79-1 - Obj.",
+   "h2": [
+    "🧾 Tarifas",
+    "🚫 Cotas e barreiras não tarifárias",
+    "💰 Subsídios e defesa comercial",
+    "🏛️ Política comercial e OMC"
+   ]
+  },
+  {
+   "id": "83",
+   "titulo": "🌋 Conjuntura econômica do Brasil",
+   "bloco": "IX. CONJUNTURA E ECONOMIA BRASILEIRA CONTEMPORÂNEA",
+   "titulo_q": "83-1 - Obj.",
+   "h2": [
+    "🌋 Conjuntura brasileira"
+   ]
+  },
+  {
+   "id": "84",
+   "titulo": "🌐 Conjuntura econômica internacional",
+   "bloco": "IX. CONJUNTURA E ECONOMIA BRASILEIRA CONTEMPORÂNEA",
+   "titulo_q": "84-1 - Obj.",
+   "h2": [
+    "🌐 Conjuntura internacional"
+   ]
+  },
+  {
+   "id": "85",
+   "titulo": "🧭 Raio-X e diagnósticos da economia brasileira: perspectivas em disputa",
+   "bloco": "IX. CONJUNTURA E ECONOMIA BRASILEIRA CONTEMPORÂNEA",
+   "titulo_q": "85-1 - Obj.",
+   "h2": [
+    "🧭 Diagnósticos em disputa"
+   ]
+  }
+ ],
+ "passadas": [],
+ "teste_importacao": "pendente"
+}

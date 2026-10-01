@@ -24,6 +24,7 @@ import sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(AQUI, "graficos"))
+sys.path.insert(0, AQUI)  # marcacao.py, para os arquivos de cards
 import qgraf  # noqa: E402
 
 LARGURA = 1400
@@ -242,7 +243,8 @@ def corpo_nota(cards, figs, modo):
     return sanear("".join(p))
 
 
-def enex(titulo, corpo, figs_usadas):
+def nota_xml(titulo, corpo, figs_usadas):
+    """Um <note> do ENEX, com os <resource> das figuras que o corpo usa."""
     agora = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     conteudo = ('<?xml version="1.0" encoding="UTF-8" standalone="no"?>'
                 '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">'
@@ -250,7 +252,7 @@ def enex(titulo, corpo, figs_usadas):
     rec = []
     vistos = set()
     for info in figs_usadas:
-        if info["md5"] in vistos:
+        if info["md5"] in vistos or f'hash="{info["md5"]}"' not in corpo:
             continue
         vistos.add(info["md5"])
         b64 = base64.encodebytes(info["dados"]).decode("ascii")
@@ -258,11 +260,20 @@ def enex(titulo, corpo, figs_usadas):
                    f'<width>{info["w"]}</width><height>{info["h"]}</height>'
                    f'<resource-attributes><file-name>{info["id"]}.png</file-name></resource-attributes>'
                    f"</resource>")
+    return (f"<note><title>{esc(titulo)}</title><created>{agora}</created><updated>{agora}</updated>"
+            f"<content><![CDATA[{conteudo}]]></content>{''.join(rec)}</note>")
+
+
+def enex_export(notas):
+    agora = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">\n'
             f'<en-export export-date="{agora}" application="montar_nota_q" version="1">\n'
-            f"<note><title>{esc(titulo)}</title><created>{agora}</created><updated>{agora}</updated>"
-            f"<content><![CDATA[{conteudo}]]></content>{''.join(rec)}</note>\n</en-export>\n")
+            + "\n".join(notas) + "\n</en-export>\n")
+
+
+def enex(titulo, corpo, figs_usadas):
+    return enex_export([nota_xml(titulo, corpo, figs_usadas)])
 
 
 def html_preview(titulo, corpo):

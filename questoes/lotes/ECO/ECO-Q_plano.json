@@ -637,7 +637,12 @@
     "15",
     "16"
    ],
-   "itens": 787
+   "itens": 787,
+   "status": "entregue",
+   "cards": 774,
+   "nao_convertidos": 37,
+   "figuras": 146,
+   "data": "2026-10-01"
   },
   {
    "n": 2,

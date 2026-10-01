@@ -22,7 +22,8 @@ notas = {n["id"]: n for n in plano["notas"]}
 C = collections.Counter
 L = [f"# 📋 ECO-Q — Passada {a.passada:02d}: mini-relatório", ""]
 L += [f"**Cards: {len(R)}** em {len(set(r['nota_destino'] for r in R))} notas · "
-      f"figuras: {sum(len(r.get('figuras', [])) for r in R)} "
+      f"figuras: {len({f['md5'] for r in R for f in r.get('figuras', [])})} únicas, "
+      f"{sum(len(r.get('figuras', [])) for r in R)} usos "
       f"(frente {sum(1 for r in R for f in r.get('figuras', []) if f['lado']=='frente')}, "
       f"verso {sum(1 for r in R for f in r.get('figuras', []) if f['lado']=='verso')}) · "
       f"itens não convertidos: {len(P)}", ""]

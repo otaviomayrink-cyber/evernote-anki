@@ -110,7 +110,7 @@ CARDS = [
             "ERRADO (só no ponto de custo mínimo)",
         ])],
         "reescrita": ("A taxa marginal de substituição técnica entre dois " + hl("fatores de produção")
-                      + " é igual " + hl("à") + " razão de suas produtividades marginais."),
+                      + " é igual à razão de suas produtividades marginais."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "O item trocou “fatores de produção” por “bens”; TMST = ΔK/ΔL = PMgL/PMgK, taxa de "
                             "substituição de um insumo por outro mantida a produção.",
@@ -1232,5 +1232,309 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: mesma tese de ECO-E2-L00535-1 (outro simulado Nabuco, com preâmbulo); "
                     "mantidos os dois (Folha -Q §8.6)"],
+    },
+    # ------------------------------------------------------------------ E2-L01388
+    {
+        "id": "ECO-E2-L01388-1", "fonte_ref": "E2-L01388", "destino": "06", "subtema": H2["clp"],
+        "tipo": "DISC", "banca": "Intensivo MM", "prova": "Intensivo Pré-TPS/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": "Responda à questão a seguir, sobre produção e custos no longo prazo.",
+        "rotulo_item": "Questão",
+        "assertiva": "Qual a diferença entre economias de escala e rendimentos de escala?",
+        "gabarito": "RESPOSTA", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": az("Rendimentos de escala são um conceito tecnológico, da função de produção: o que acontece com "
+                      "a quantidade produzida quando todos os insumos aumentam na mesma proporção (dobrar os "
+                      "insumos mais que dobra, dobra ou menos que dobra o produto). Economias de escala são um "
+                      "conceito de custos: o custo médio de longo prazo cai quando a produção aumenta (dobrar a "
+                      "produção menos que dobra o custo total), admitindo-se mudar a proporção dos insumos e obter "
+                      "insumos mais baratos. Com preços dos fatores dados, rendimentos crescentes geram economias de "
+                      "escala, mas estas podem ter também outras fontes."),
+        "poucas": (azb("Rendimentos de escala") + " olham para a <b>quantidade produzida</b> (tecnologia); "
+                   + azb("economias de escala") + ", para o <b>custo médio</b> (custos). Os primeiros são uma das "
+                   "causas das segundas, não a única."),
+        "destrinchando": [
+            "Rendimentos: experimento físico com <b>proporções fixas</b> — multiplicar K e L por 2 e medir Q. "
+            "Crescentes (Q mais que dobra), constantes (dobra) ou decrescentes (menos que dobra).",
+            "Economias: experimento de custo — dobrar Q escolhendo a forma mais barata de fazê-lo (a proporção "
+            "dos insumos pode mudar) e medir o custo total. Se ele " + vd("menos que dobra") + ", há economias "
+            "de escala (CMeLP decrescente); se mais que dobra, deseconomias.",
+            "Fontes de economias que não são rendimentos técnicos: " + azb("economias pecuniárias") + " (descontos "
+            "por volume na compra de insumos, crédito mais barato para firmas grandes), diluição de custos de "
+            "P&amp;D e de marketing. Do mesmo modo, a expansão pode encarecer insumos e gerar deseconomias mesmo "
+            "com rendimentos constantes.",
+            "Medida usual: elasticidade do custo em relação ao produto, %ΔCT/%ΔQ = CMg/CMe. Menor que 1 → "
+            "economias; maior que 1 → deseconomias.",
+            "Vizinho que a banca mistura: " + azb("economias de escopo") + " — produzir dois bens juntos sai mais "
+            "barato que separadamente (uma empresa aérea que transporta passageiros e carga).",
+        ],
+        "dissecando": (cz("[discursiva curta]") + " Em C/E, a banca transforma essa distinção em itens como "
+                       "“economias de escala pressupõem rendimentos crescentes de escala” (ERRADO: há outras "
+                       "fontes) ou “rendimentos de escala referem-se ao comportamento do custo médio” (ERRADO: "
+                       "referem-se à produção)."),
+        "modulos": [
+            ("😈 Para dificultar", [
+                "<i>“Com preços dos fatores constantes, rendimentos crescentes de escala implicam economias de "
+                "escala.”</i> → CERTO",
+                "<i>“Economias de escala só existem quando a função de produção apresenta rendimentos crescentes "
+                "de escala.”</i> → ERRADO (restrição indevida: há economias pecuniárias e de mudança de "
+                "proporções)",
+            ]),
+            ("🃏 Carta na manga", [
+                "Economias de escala sustentam a “nova teoria do comércio” de " + oc("Paul Krugman") + " (Nobel "
+                "de 2008): países semelhantes comerciam entre si porque cada um se especializa em variedades "
+                "produzidas em grande escala — explicação do comércio intraindústria que as vantagens "
+                "comparativas não dão.",
+            ]),
+        ],
+        "tipo_erro": [], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Verso só com três imagens: um meme (“não confunda economias de escala com "
+                            "rendimentos de escala!”) e dois quadros — economias ligadas a custos (dobrar a "
+                            "produção aumenta os custos em menos que o dobro) e rendimentos ligados à quantidade "
+                            "produzida.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 278", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (decorativa: meme com a frase de alerta)"},
+                          {"ref": "IMAGEM 279-280", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01390
+    {
+        "id": "ECO-E2-L01390-1", "fonte_ref": "E2-L01390", "destino": "06", "subtema": H2["ccp"],
+        "tipo": "C/E", "banca": "FEPESE", "prova": "Celesc/Economista/2019", "ano": 2019, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos custos de produção da firma (questão adaptada).",
+        "rotulo_item": "Item",
+        "assertiva": "O custo fixo médio apresenta a mesma magnitude para qualquer quantidade produzida pela firma.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O custo fixo médio ") + vm("apresenta a mesma magnitude para qualquer quantidade produzida")
+                    + az(" pela firma.")),
+        "poucas": ("Constante é o custo fixo <b>total</b>. O " + azb("custo fixo médio") + " = CF/q "
+                   + vd("diminui") + " à medida que a produção aumenta: o mesmo CF se reparte por mais unidades."),
+        "destrinchando": [
+            "Com CF = R$ 1.000: q = 10 → CFMe = " + vd("100") + "; q = 100 → " + vd("10") + "; q = 1.000 → "
+            + vd("1") + ". O produto CFMe × q é sempre 1.000: a curva é uma " + azb("hipérbole") + " decrescente, "
+            "que se aproxima do eixo horizontal sem tocá-lo.",
+            "Curvas de curto prazo: CF (horizontal), CV (crescente), CT = CF + CV; CFMe (sempre decrescente), "
+            "CVMe e CTMe (em U), CMg (em U, cortando os mínimos das médias).",
+            "O CF não afeta o " + azb("custo marginal") + " (ΔCT = ΔCV) nem a decisão de quanto produzir no "
+            "curto prazo: a firma produz se P ≥ mínimo do CVMe, mesmo com prejuízo, porque o CF é pago de "
+            "qualquer jeito.",
+            "Diluição do custo fixo é o que explica o trecho inicial descendente do CTMe.",
+            vm("Regra-âncora: CF total constante; CF médio sempre decrescente."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A propriedade do custo fixo total (constância) foi atribuída "
+                       "ao custo fixo médio. Pista: “médio” significa dividido por q — se q muda, ele muda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No curto prazo, o custo fixo total tem a mesma magnitude para qualquer quantidade "
+            "produzida.”</i> → CERTO",
+            "<i>“Por ser decrescente, o custo fixo médio faz o custo marginal decrescer.”</i> → ERRADO (o CMg "
+            "independe do custo fixo)",
+        ])],
+        "reescrita": ("O custo fixo médio " + hl("diminui à medida que aumenta a quantidade produzida") + " pela "
+                      "firma."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["qualquer"], "dificuldade": 1,
+        "comentario_fonte": "O custo fixo médio vai diminuindo conforme aumenta a produção (dilui).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01391
+    {
+        "id": "ECO-E2-L01391-1", "fonte_ref": "E2-L01391", "destino": "06", "subtema": H2["clp"],
+        "tipo": "C/E", "banca": "FEPESE", "prova": "Celesc/Economista/2019", "ano": 2019, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos custos de produção da firma (questão adaptada).",
+        "rotulo_item": "Item",
+        "assertiva": ("A curva de custo médio de longo prazo de uma empresa tem formato de “U”. A parte crescente da "
+                      "curva deve-se à presença de economias de escala."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A curva de custo médio de longo prazo de uma empresa tem formato de “U”. A parte crescente "
+                       "da curva deve-se à presença de ") + vm("economias") + az(" de escala.")),
+        "poucas": ("Trecho " + vd("descendente") + " da CMeLP = economias de escala; trecho " + vd("ascendente")
+                   + " = " + azb("deseconomias de escala") + "."),
+        "destrinchando": [
+            azb("Economias de escala") + ": ao crescer, a firma reduz o custo médio — especialização do trabalho, "
+            "indivisibilidades (equipamentos que só compensam em grande volume), descontos em compras. "
+            + azb("Deseconomias") + ": acima de certo tamanho, o custo médio sobe — dificuldade de coordenar e "
+            "monitorar, burocracia interna, custos de transporte e distribuição, escassez de insumos "
+            "especializados.",
+            "O U de <b>longo prazo</b> vem da escala; o U de <b>curto prazo</b> vem de outra coisa: diluição do "
+            "custo fixo (descida) e rendimentos marginais decrescentes do fator variável (subida).",
+            "O fundo do U é a " + azb("escala mínima eficiente") + ": o menor nível de produção em que o custo "
+            "médio de longo prazo atinge o mínimo. Se é grande em relação ao mercado, tende a haver poucas "
+            "firmas (no limite, monopólio natural).",
+            "A CMeLP é a envoltória das curvas de curto prazo; muitas indústrias, empiricamente, têm CMeLP em "
+            "forma de L (descida e depois um longo trecho plano).",
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " A 1ª frase é verdadeira e dá credibilidade; o "
+                       "erro está no rótulo do trecho, que pertence às <b>des</b>economias. Pista: economia = "
+                       "custo cai, e a parte crescente é custo subindo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A parte decrescente da curva de custo médio de curto prazo deve-se a economias de escala.”</i> → "
+            "ERRADO (no curto prazo a escala está fixa: a descida vem da diluição do custo fixo)",
+            "<i>“O ponto em que a CMeLP atinge seu mínimo pela primeira vez define a escala mínima "
+            "eficiente.”</i> → CERTO",
+        ])],
+        "reescrita": ("A curva de custo médio de longo prazo de uma empresa tem formato de “U”. A parte crescente da "
+                      "curva deve-se à presença de " + hl("deseconomias") + " de escala."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Verso com gabarito (ERRADO) e imagens: curva de custo total médio em U (soma de CFMe e "
+                            "CVMe), quatro afirmações sobre CMg e CTMe e a envoltória de longo prazo sobre as "
+                            "curvas de curto prazo.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 286", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (curvas de curto prazo; absorvida no 📖)"},
+                          {"ref": "IMAGEM 287", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 288", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (envoltória de longo prazo; mecanismo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01464
+    {
+        "id": "ECO-E2-L01464-1", "fonte_ref": "E2-L01464", "destino": "06", "subtema": H2["isc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("A maximização dos lucros para uma dada empresa com 2 fatores de produção variáveis requer que "
+                      "ela utilize a combinação de fatores da curva de isoquanta mais alta alcançada pela linha de "
+                      "isocusto."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A maximização dos lucros para uma dada empresa com 2 fatores de produção variáveis "
+                      "<u>requer</u> que ela utilize a combinação de fatores da curva de isoquanta mais alta "
+                      "alcançada pela linha de isocusto."),
+        "poucas": ("Lucro máximo exige " + azb("eficiência de custo") + ": para o gasto escolhido, a firma tem de "
+                   "estar na isoquanta mais alta que a isocusto toca — a tangência, onde " + vd("TMST = w/r")
+                   + "."),
+        "destrinchando": [
+            "Se a firma lucra o máximo, ela não pode estar desperdiçando: qualquer combinação que, com o mesmo "
+            "gasto, produzisse mais (ou que produzisse o mesmo com menos gasto) daria lucro maior. Daí a "
+            "condição <b>necessária</b>: estar na tangência entre isocusto e isoquanta.",
+            "Dois problemas duais com a mesma resposta: " + azb("maximizar Q dado o custo") + " (a isoquanta mais "
+            "alta que a isocusto alcança) e " + azb("minimizar o custo dado Q") + " (a isocusto mais baixa que "
+            "toca a isoquanta). Em ambos, TMST = PMg<sub>L</sub>/PMg<sub>K</sub> = w/r.",
+            "Mas não é condição <b>suficiente</b>: falta escolher a escala — o nível de custo (e de produção) em "
+            "que a receita marginal iguala o custo marginal. Ligando as tangências para cada nível de custo, "
+            "obtém-se o caminho de expansão; sobre ele, a firma escolhe o ponto de lucro máximo.",
+            "Formulação equivalente: no lucro máximo, cada fator é contratado até que o valor do seu produto "
+            "marginal iguale seu preço (P·PMg<sub>L</sub> = w; P·PMg<sub>K</sub> = r) — o que implica TMST = w/r.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " O verbo “requer” é o ponto: a tangência é condição "
+                       "necessária do lucro máximo. O item só seria ERRADO se dissesse que ela <b>basta</b>, ou "
+                       "se trocasse isoquanta por curva de indiferença."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Basta à firma situar-se na isoquanta mais alta alcançada pela isocusto para que o lucro seja "
+            "máximo, qualquer que seja o nível de custo escolhido.”</i> → ERRADO (condição necessária, não "
+            "suficiente: falta a escala com RMg = CMg)",
+            "<i>“No ponto escolhido, a isocusto é tangente à isoquanta, e a TMST iguala a razão w/r.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["requer"], "dificuldade": 2,
+        "comentario_fonte": "A combinação ótima é a tangência entre a isoquanta mais alta alcançável e a isocusto, "
+                            "onde a TMST iguala a razão dos preços dos fatores (três respostas concordantes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 359", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (minimização de custo para q₁ dado; mecanismo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01467
+    {
+        "id": "ECO-E2-L01467-1", "fonte_ref": "E2-L01467", "destino": "06", "subtema": H2["isc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_FIRMA,
+        "rotulo_item": "Item",
+        "assertiva": ("A minimização do custo de produção ocorre quando a taxa marginal de substituição técnica para "
+                      "os diferentes fatores for inferior ao preço relativo desses fatores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A minimização do custo de produção ocorre quando a taxa marginal de substituição técnica "
+                       "para os diferentes fatores for ") + vm("inferior") + az(" ao preço relativo desses "
+                       "fatores.")),
+        "poucas": ("O custo mínimo exige " + vd("TMST = w/r") + " (tangência). Se a TMST for menor que w/r, ainda "
+                   "dá para baratear a produção trocando trabalho por capital."),
+        "destrinchando": [
+            "Tradução de TMST &lt; w/r: PMg<sub>L</sub>/PMg<sub>K</sub> &lt; w/r ⇔ " + vd("PMg<sub>L</sub>/w "
+            "&lt; PMg<sub>K</sub>/r") + ". O último real gasto em trabalho rende menos produto que o último real "
+            "gasto em capital: vale deslocar gasto do trabalho para o capital.",
+            "No gráfico (Q fixo, w = r = 1): em B = (8; 2), a TMST é " + vd("1/4") + " e o custo é " + vd("10")
+            + ". Andando sobre a mesma isoquanta até A = (4; 4), a TMST sobe para 1 = w/r e o custo cai para "
+            + vd("8") + ", o mínimo.",
+            "Simetricamente, se TMST > w/r, a firma deve usar mais trabalho e menos capital. Só a igualdade "
+            "elimina o ganho de rearranjar os insumos.",
+            "Formas equivalentes do ótimo: tangência entre isocusto e isoquanta; TMST = w/r; PMg<sub>L</sub>/w = "
+            "PMg<sub>K</sub>/r.",
+            vm("Regra-âncora: custo mínimo é igualdade (TMST = w/r); desigualdade sinaliza para que lado "
+               "substituir."),
+        ],
+        "grafico_verso": "ECO-E2-L01467-1-V1",
+        "dissecando": (cz("[dado alterado]") + " O item troca o sinal da relação (“igual” → “inferior”). Itens de "
+                       "condição de ótimo quase sempre são fabricados assim: o candidato reconhece a fórmula "
+                       "e não confere o operador."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a TMST de trabalho por capital for superior a w/r, a firma reduz custos usando mais trabalho e "
+            "menos capital.”</i> → CERTO",
+            "<i>“Se a TMST for inferior a w/r, a firma reduz custos usando mais trabalho e menos capital.”</i> → "
+            "ERRADO (sentido trocado: deve usar mais capital)",
+        ])],
+        "reescrita": ("A minimização do custo de produção ocorre quando a taxa marginal de substituição técnica "
+                      "para os diferentes fatores for " + hl("igual") + " ao preço relativo desses fatores."),
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A minimização ocorre com TMST igual ao preço relativo (w/r), na tangência; se TMST > "
+                            "w/r, usar mais trabalho; se menor, mais capital (respostas concordantes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 364", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 365", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01467-1-V1, com ponto fora do ótimo)"},
+                          {"ref": "IMAGEM 366", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01723
+    {
+        "id": "ECO-E2-L01723-1", "fonte_ref": "E2-L01723", "destino": "06", "subtema": H2["isc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_PROD,
+        "rotulo_item": "Item",
+        "assertiva": ("O caminho de expansão é dado pelos pontos de minimização de custos da firma, conforme se "
+                      "amplia o custo total de produção que é dado pelas linhas de isocusto."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O caminho de expansão é dado pelos <u>pontos de minimização de custos</u> da firma, conforme "
+                      "se amplia o custo total de produção que é dado pelas linhas de isocusto."),
+        "poucas": ("O " + azb("caminho de expansão") + " liga as tangências entre isocustos cada vez mais altas e "
+                   "isoquantas cada vez mais altas: para cada nível de custo (ou de produção), a combinação de "
+                   "insumos de custo mínimo."),
+        "destrinchando": [
+            "Com preços dos fatores fixos, as isocustos de custo crescente são retas paralelas (mesma inclinação "
+            "w/r) cada vez mais afastadas da origem. Cada uma tangencia uma isoquanta: os pontos A, B e C do "
+            "gráfico.",
+            "Unindo as tangências, obtém-se o caminho de expansão, que é uma trajetória de <b>longo prazo</b> "
+            "(todos os fatores variáveis). Com função homotética (Cobb-Douglas, por exemplo), é uma " + vd("reta "
+            "que parte da origem") + ": a proporção K/L ótima não muda com a escala.",
+            "Dele se tira a " + azb("curva de custo total de longo prazo") + ": cada ponto informa um nível de "
+            "produção e o menor custo de obtê-lo.",
+            "Se o preço relativo w/r muda, as isocustos mudam de inclinação e o caminho gira (juros maiores → "
+            "caminho mais próximo do eixo do trabalho).",
+            "No curto prazo, com K fixo em K̄, a firma só se move na horizontal K = K̄; esse trajeto coincide com "
+            "o caminho de expansão em um único ponto — por isso o custo de curto prazo é, em geral, maior que o "
+            "de longo.",
+        ],
+        "grafico_verso": "ECO-E2-L01723-1-V1",
+        "dissecando": (cz("[literalidade]") + " Definição de manual com redação pesada (“custo total de produção "
+                       "que é dado pelas linhas de isocusto”), que faz parecer haver uma inversão. Não há: "
+                       "isocustos mais altas = custos maiores, e cada uma contribui com um ponto de mínimo "
+                       "custo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com função de produção Cobb-Douglas e preços dos fatores constantes, o caminho de expansão é uma "
+            "reta que parte da origem.”</i> → CERTO",
+            "<i>“No curto prazo, com o capital fixo, a firma expande a produção ao longo do caminho de expansão de "
+            "longo prazo.”</i> → ERRADO (no curto prazo ela anda na horizontal K = K̄)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "O caminho de expansão une os pontos de tangência entre isoquantas e isocustos "
+                            "sucessivas: as combinações de custo mínimo para cada nível de produção.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 512", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01723-1-V1)"}],
+        "alertas": [],
     },
 ]

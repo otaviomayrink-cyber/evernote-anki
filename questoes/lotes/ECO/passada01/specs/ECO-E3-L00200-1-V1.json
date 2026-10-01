@@ -1,0 +1,13 @@
+{"id": "ECO-E3-L00200-1-V1", "uso": "verso",
+ "legenda": "O imposto de 30% sobre o lucro achata a curva de lucro (π vira 0,7·π), mas não muda onde fica o topo: a quantidade que maximiza o lucro antes do imposto, q*, é a mesma que maximiza o lucro depois dele. Preço e quantidade não mudam; só o lucro líquido cai.",
+ "eixos": {"x": "q", "y": "lucro", "xmax": 10.5, "ymax": 11},
+ "curvas": [
+  {"id": "L", "tipo": "funcao", "expr": "10 - 0.4*(x-5)**2", "dominio": [0.3, 10], "familia": "demanda", "rotulo": "π(q): antes do imposto", "rotulo_em": 8.2, "rotulo_desloc": [10, 6]},
+  {"id": "Lt", "tipo": "funcao", "expr": "0.7*(10 - 0.4*(x-5)**2)", "dominio": [0.3, 10], "familia": "destaque", "rotulo": "0,7·π(q): após o imposto", "rotulo_em": 8.6, "rotulo_desloc": [10, -2]}
+ ],
+ "pontos": [
+  {"id": "A", "sobre": "L", "x": 5, "rotulo": "máx.", "projetar": "x", "rotulo_x": "q*", "rotulo_desloc": [-14, 14]},
+  {"id": "B", "sobre": "Lt", "x": 5, "rotulo": "máx.", "rotulo_desloc": [10, -16]}
+ ],
+ "setas": [{"de": [5, "A.y - 0.2"], "para": [5, "B.y + 0.25"], "rotulo": "imposto = 30% do lucro", "rotulo_desloc": [8, 2]}],
+ "checar": ["L(5) > L(4.5)", "L(5) > L(5.5)", "Lt(5) > Lt(4.5)", "Lt(5) > Lt(5.5)", "abs(Lt(5) - 0.7*L(5)) < 0.01", "abs(A.x - B.x) < 0.01"]}

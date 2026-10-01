@@ -483,4 +483,169 @@ CARDS = [
         "alertas": ["contestavel: item de simulado anulado (gabarito preliminar CERTO) por não especificar o prazo; "
                     "a anulação consta só da anotação da fonte"],
     },
+    # ------------------------------------------------------------------ E1-0236
+    {
+        "id": "ECO-E1-0236-1", "fonte_ref": "E1-0236", "destino": "10", "subtema": H2["cartel"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2012, "cacd": False, "errei": True,
+        "comando": "Acerca dos cartéis e das condições que favorecem a colusão, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A cartelização de determinado mercado é facilitada quando as firmas que o compõem são do mesmo "
+                      "tamanho e se confrontam com demandas elásticas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A cartelização de determinado mercado é facilitada quando as firmas que o compõem são do mesmo "
+                      "tamanho e se confrontam com demandas ") + vm("elásticas") + az("."),
+        "poucas": ("Firmas de porte semelhante facilitam o acordo (certo), mas o cartel só compensa se puder subir o "
+                   "preço sem perder muitas vendas: precisa de demanda " + vd("inelástica") + "."),
+        "destrinchando": [
+            "Um " + azb("cartel") + " tenta reproduzir o monopólio: restringe a produção conjunta para elevar o "
+            "preço. O ganho dessa estratégia depende de quanto a quantidade cai quando o preço sobe — isto é, da "
+            + azb("elasticidade-preço da demanda de mercado") + ".",
+            "Demanda " + vd("inelástica") + " (|ε| < 1): subir o preço aumenta a receita e reduz custos — o "
+            "lucro conjunto cresce muito. Demanda elástica: os consumidores fogem para substitutos e o ganho do "
+            "conluio é pequeno; sem ganho grande, cada membro tem pouco a perder trapaceando.",
+            "Condições que facilitam o cartel (" + oc("Pindyck e Rubinfeld") + "): " + azb("poucas firmas")
+            + "; " + azb("porte e custos semelhantes") + " (interesses parecidos na cota e no preço); "
+            + azb("produto homogêneo") + " (fácil monitorar preços); demanda estável e pouco elástica; barreiras "
+            "à entrada; e controle da maior parte da oferta (ou oferta inelástica das firmas de fora).",
+            "Exemplo clássico: a " + azb("OPEP") + " nos anos 1970 — petróleo com demanda de curto prazo muito "
+            "inelástica permitiu quadruplicar o preço em 1973–1974.",
+            vm("Regra-âncora: cartel prospera com demanda inelástica; demanda elástica corrói o ganho do conluio."),
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " A 1ª condição (firmas do mesmo tamanho) é verdadeira; "
+                       "o erro está numa palavra: “elásticas” no lugar de “inelásticas”. Itens de cartel quase sempre "
+                       "testam o sentido da elasticidade. Mesmo item, com a forma correta, aparece em "
+                       "ECO-E1-0303-1; com variação, em ECO-E1-0247-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A cartelização é facilitada quando as firmas têm custos semelhantes e enfrentam demanda pouco "
+            "elástica.”</i> → CERTO",
+            "<i>“Produtos fortemente diferenciados facilitam a manutenção do cartel.”</i> → ERRADO (dificultam "
+            "monitorar preços e fixar cotas)",
+        ])],
+        "reescrita": ("A cartelização de determinado mercado é facilitada quando as firmas que o compõem são do mesmo "
+                      "tamanho e se confrontam com demandas " + hl("inelásticas") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Poder de mercado depende de baixa substituição, isto é, demanda pouco elástica; o "
+                             "cartel depende da baixa elasticidade para elevar o preço acima do competitivo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (estilo do item; a fonte traz só o ano, 2012, sem órgão)",
+                    "quase_duplicata: ECO-E1-0247-1 e ECO-E1-0303-1 cobram a mesma condição (elasticidade da "
+                    "demanda do cartel) com redação diferente"],
+    },
+    # ------------------------------------------------------------------ E1-0242
+    {
+        "id": "ECO-E1-0242-1", "fonte_ref": "E1-0242", "destino": "10", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": False,
+        "comando": COM_E1_OLIG,
+        "rotulo_item": "Item",
+        "assertiva": ("Órgãos de defesa da concorrência veem de forma positiva a prática costumeira de venda de "
+                      "produtos a preços abaixo do custo de produção sob um mercado oligopolista, pois isso favorece "
+                      "os consumidores e a competição entre as empresas do setor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Órgãos de defesa da concorrência ") + vm("veem de forma positiva") + az(" a prática "
+                      "costumeira de venda de produtos a preços abaixo do custo de produção sob um mercado "
+                      "oligopolista, ") + vm("pois isso favorece os consumidores e a competição entre as empresas do "
+                                             "setor") + az("."),
+        "poucas": ("Vender sistematicamente abaixo do custo é o padrão do " + azb("preço predatório") + ": sacrifica "
+                   "lucro hoje para eliminar rivais e cobrar caro depois. As autoridades antitruste o reprimem."),
+        "destrinchando": [
+            azb("Preço predatório") + ": a firma (em geral com fôlego financeiro e poder de mercado) fixa preços "
+            "abaixo do custo — o teste usual é o " + azb("custo variável médio") + ", critério de "
+            + oc("Areeda e Turner") + " (1975) — para expulsar concorrentes ou desestimular entrantes. "
+            "Eliminada a rivalidade, recupera as perdas com preços de monopólio (" + azb("recoupment") + ").",
+            "O ganho do consumidor é só de curto prazo; no longo prazo o mercado fica mais concentrado e o "
+            + azb("excedente do consumidor") + " é capturado pela firma vencedora. Por isso a prática é tratada "
+            "como infração à ordem econômica, e não como “competição saudável”.",
+            "Em oligopólio, a conduta é ainda mais suspeita: poucas firmas grandes, interdependência estratégica e "
+            "barreiras à entrada tornam crível a recuperação do prejuízo.",
+            "Nuance: preço baixo não é ilícito em si. Promoções pontuais, liquidação de estoques, lançamento de "
+            "produto ou custos menores por eficiência são legítimos; o que se reprime é o preço abaixo do custo "
+            "<b>injustificado</b>, com potencial de excluir rivais.",
+            vm("Regra-âncora: preço abaixo do custo + poder de mercado + possibilidade de recuperação = preço "
+               "predatório (infração)."),
+        ],
+        "dissecando": (cz("[juízo indevido · nexo indevido]") + " O item atribui às autoridades uma avaliação "
+                       "positiva e a justifica com o efeito imediato (preço baixo ao consumidor), ignorando o efeito "
+                       "de longo prazo. Pistas: “prática costumeira” (sistemática, não pontual) e “abaixo do custo” "
+                       "em mercado oligopolista."),
+        "modulos": [("⚖️ Base normativa", [
+            rx("Brasil") + ": a " + vd("Lei 12.529/2011") + " (Lei de Defesa da Concorrência), art. 36, § 3º, "
+            "inciso XV, lista como infração “vender mercadoria ou prestar serviços injustificadamente abaixo do "
+            "preço de custo”, desde que a conduta possa produzir os efeitos do caput (limitar a concorrência, "
+            "dominar mercado, aumentar lucros arbitrariamente, abusar de posição dominante). Quem julga é o "
+            + rx("CADE") + ".",
+        ]), ("😈 Para dificultar", [
+            "<i>“A fixação de preços abaixo do custo com o objetivo de eliminar concorrentes caracteriza prática "
+            "predatória, passível de punição pelos órgãos de defesa da concorrência.”</i> → CERTO",
+            "<i>“Toda venda abaixo do custo de produção configura, por si só, infração à ordem econômica.”</i> → "
+            "ERRADO (modulador absoluto: exige ausência de justificativa e potencial anticompetitivo)",
+        ])],
+        "reescrita": ("Órgãos de defesa da concorrência veem " + hl("com desconfiança") + " a prática costumeira de "
+                      "venda de produtos a preços abaixo do custo de produção sob um mercado oligopolista, pois "
+                      + hl("ela pode configurar preço predatório, destinado a eliminar concorrentes e a elevar "
+                           "preços depois") + "."),
+        "tipo_erro": ["JUIZO_INDEVIDO", "NEXO_INDEVIDO"], "moduladores": ["costumeira"], "dificuldade": 1,
+        "comentario_fonte": ("Guerra de preços para remover concorrentes leva a maior concentração; agências "
+                             "tentam inibir a prática porque, no longo prazo, as vencedoras capturam o excedente do "
+                             "consumidor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (estilo do item; a fonte traz só o ano, 2018, sem órgão)"],
+    },
+    # ------------------------------------------------------------------ E1-0244
+    {
+        "id": "ECO-E1-0244-1", "fonte_ref": "E1-0244", "destino": "10", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": False,
+        "comando": COM_E1_OLIG,
+        "rotulo_item": "Item",
+        "assertiva": ("Um mercado com apenas dois ofertantes que seja contestável com base nos pressupostos de Baumol "
+                      "tem, apesar do pequeno número e grande tamanho das firmas, eficiência e preço de equilíbrio "
+                      "iguais aos do mercado sob concorrência perfeita."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um mercado com apenas dois ofertantes que seja <u>contestável</u> com base nos pressupostos de "
+                      "Baumol tem, <u>apesar do pequeno número e grande tamanho das firmas</u>, eficiência e preço de "
+                      "equilíbrio iguais aos do mercado sob concorrência perfeita."),
+        "poucas": ("Num " + azb("mercado perfeitamente contestável") + " (entrada e saída livres, sem custos "
+                   "irrecuperáveis), a " + azb("ameaça de entrada") + " disciplina os incumbentes: mesmo um "
+                   "duopólio cobra preço competitivo e não tem lucro extraordinário."),
+        "destrinchando": [
+            "Teoria de " + oc("Baumol, Panzar e Willig") + " (<i>Contestable Markets and the Theory of Industry "
+            "Structure</i>, 1982): o que disciplina o preço não é o número de firmas, mas a " + azb("concorrência "
+            "potencial") + ". Se entrar e sair não custa nada, qualquer lucro extraordinário atrai uma entrada "
+            "relâmpago (" + azb("hit-and-run") + "): o entrante vende um pouco abaixo, embolsa o lucro e sai "
+            "antes que o incumbente reaja.",
+            "Pressupostos: entrantes com a mesma tecnologia e acesso aos mesmos custos; " + vd("ausência de custos "
+            "irrecuperáveis (sunk costs)") + "; preços dos incumbentes que não se ajustam instantaneamente à "
+            "entrada.",
+            "Resultado: preço igual ao custo médio (lucro zero) e, com duas ou mais firmas, " + vd("P = CMg")
+            + " — o desempenho de concorrência perfeita, mesmo com firmas grandes e economias de escala.",
+            "Implicação de política: o foco regulatório passa da estrutura (concentração) para as "
+            + azb("barreiras à entrada e à saída") + ". Foi argumento para desregulamentar setores como a aviação "
+            "nos EUA — e a experiência mostrou que custos irrecuperáveis (slots, frota, marca) tornam poucos "
+            "mercados realmente contestáveis.",
+            vm("Regra-âncora: contestabilidade perfeita = entrada e saída sem custo → resultado competitivo com "
+               "poucas firmas."),
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " O item aposta no reflexo “duopólio = poder de mercado” e reforça "
+                       "com “pequeno número e grande tamanho”. A palavra-chave é “contestável”: com ela, a estrutura "
+                       "deixa de determinar o resultado. Variantes do mesmo tema em ECO-E1-0256-1, ECO-E2-L00291-1 e "
+                       "ECO-E2-L00533-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um mercado contestável exige a presença de grande número de firmas para alcançar o resultado "
+            "competitivo.”</i> → ERRADO (o número de firmas é irrelevante; importa a ameaça de entrada)",
+            "<i>“Custos irrecuperáveis elevados tornam um mercado contestável.”</i> → ERRADO (inversão: são a "
+            "principal barreira à contestabilidade)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["apesar de"], "dificuldade": 2,
+        "comentario_fonte": ("Duas respostas: teoria de Baumol, Panzar e Willig (1982); competição potencial leva "
+                             "a comportamento de concorrência perfeita mesmo com poucas firmas; mercado concentrado "
+                             "que tende ao preço e custo de equilíbrio competitivo por ameaça externa."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: a fonte diz que tais mercados podem ser desregulamentados “na medida em que a "
+                    "entrada envolver elevados custos perdidos”; é o contrário — a contestabilidade exige ausência "
+                    "de custos irrecuperáveis",
+                    "banca_provavel: CEBRASPE (estilo do item; a fonte traz só o ano, 2018, sem órgão)",
+                    "duplicata: comentário da linha E1-0283 (mesmo item) fundido neste card"],
+    },
 ]

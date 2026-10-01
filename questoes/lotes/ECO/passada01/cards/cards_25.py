@@ -359,4 +359,203 @@ CARDS = [
         "alertas": ["quase_duplicata: ECO-E2-L00517-1 e ECO-E2-L00680-1 cobram o mesmo enunciado do teorema, "
                     "sem o adendo distributivo (outra fonte)"],
     },
+    # ------------------------------------------------------------------ E2-L00515
+    {
+        "id": "ECO-E2-L00515-1", "fonte_ref": "E2-L00515", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26A,
+        "rotulo_item": "Item",
+        "assertiva": ("Um subsídio pigouviano é o instrumento correto para internalizar uma externalidade "
+                      "negativa, pois ao subsidiar o produtor, o governo o incentiva a reduzir a atividade que "
+                      "gera o dano social."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um ") + vm("subsídio") + az(" pigouviano é o instrumento correto para internalizar uma "
+                                                    "externalidade negativa, pois ao ")
+                    + vm("subsidiar") + az(" o produtor, o governo o incentiva a reduzir a atividade que gera o "
+                                           "dano social.")),
+        "poucas": ("Externalidade negativa pede " + azb("imposto pigouviano") + " (encarece a atividade "
+                   "danosa); o " + azb("subsídio pigouviano") + " é o remédio da externalidade "
+                   "<b>positiva</b> (barateia a atividade benéfica)."),
+        "destrinchando": [
+            "Lógica de " + oc("Pigou") + ": aproximar o custo ou benefício privado do social. Externalidade "
+            "negativa → CMg social > CMg privado → o mercado produz demais → " + vd("imposto = custo externo "
+            "marginal") + " no ótimo. Externalidade positiva → benefício social > privado → produz de menos → "
+            + vd("subsídio = benefício externo marginal") + ".",
+            "Subsidiar o produtor reduz o seu custo e o estimula a produzir <b>mais</b> — exatamente o "
+            "contrário do que se quer com uma atividade poluidora. Subsídio pigouviano típico: vacinação, "
+            "pesquisa e desenvolvimento, educação básica, reflorestamento.",
+            "Nuance de finanças públicas: pagar ao poluidor <b>por unidade de poluição evitada</b> (subsídio ao "
+            "abatimento) cria o mesmo incentivo marginal que o imposto. Mas, como eleva os lucros do setor, "
+            "atrai novas firmas e pode aumentar a poluição total no longo prazo (" + oc("Baumol e Oates")
+            + "). Por isso o manual associa externalidade negativa a imposto, e não a subsídio.",
+            "Outros instrumentos para a negativa: padrões e limites (regulação de comando e controle), "
+            + azb("licenças negociáveis") + " de emissão (sistema europeu de comércio de emissões; "
+            + rx("no Brasil, o SBCE, criado pela Lei 15.042/2024") + ") e a negociação coasiana.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item troca o instrumento (subsídio no lugar de imposto) e "
+                       "constrói uma justificativa que não fecha: subsidiar não incentiva a reduzir. Pista: o "
+                       "verbo “reduzir” combina com “encarecer”, não com “subsidiar”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um subsídio pigouviano é instrumento adequado para corrigir a subprodução de bens com "
+            "externalidades positivas, como a vacinação.”</i> → CERTO",
+            "<i>“O imposto pigouviano ótimo iguala o custo externo marginal no nível de produção de "
+            "mercado.”</i> → ERRADO (é no nível socialmente ótimo)",
+        ])],
+        "reescrita": ("Um " + hl("imposto") + " pigouviano é o instrumento correto para internalizar uma "
+                      "externalidade negativa, pois ao " + hl("tributar") + " o produtor, o governo o incentiva "
+                      "a reduzir a atividade que gera o dano social."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Para externalidade negativa, imposto pigouviano, não subsídio; subsídio pigouviano "
+                             "serve à externalidade positiva (ex.: P&amp;D)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00516
+    {
+        "id": "ECO-E2-L00516-1", "fonte_ref": "E2-L00516", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26A,
+        "rotulo_item": "Item",
+        "assertiva": ("A vacinação em massa gera uma externalidade positiva, pois além de proteger o indivíduo "
+                      "vacinado, reduz a probabilidade de contágio para toda a comunidade. Devido a essa "
+                      "externalidade, a provisão de vacinas pelo mercado privado tende a ser inferior à "
+                      "socialmente ótima."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A vacinação em massa gera uma externalidade <u>positiva</u>, pois além de proteger o "
+                      "indivíduo vacinado, reduz a probabilidade de contágio para toda a comunidade. Devido a "
+                      "essa externalidade, a provisão de vacinas pelo mercado privado tende a ser "
+                      "<u>inferior</u> à socialmente ótima."),
+        "poucas": ("Quem se vacina considera só o " + azb("benefício privado") + "; o benefício para os outros "
+                   "(menos contágio) fica fora da decisão. Com benefício social > privado, o mercado "
+                   + vd("subprovê") + " vacinas."),
+        "destrinchando": [
+            azb("Externalidade positiva no consumo") + ": benefício marginal social (BMgS) = benefício "
+            "marginal privado (BMgP, a demanda) + benefício externo marginal. O mercado iguala BMgP ao custo "
+            "marginal e para em Qₘ; o ótimo social está em Q*, onde BMgS = CMg, com " + vd("Q* > Qₘ") + ".",
+            "Entre Qₘ e Q*, cada dose a mais gera benefício social acima do custo, mas ninguém a compra: é o "
+            + azb("peso morto") + " da subprovisão.",
+            "Vacinação tem ainda o efeito de " + azb("imunidade de rebanho") + ": acima de certa cobertura, até "
+            "os não vacinados ficam protegidos — o que estimula o comportamento de carona (“se todos se "
+            "vacinam, eu não preciso”).",
+            "Correções: " + azb("subsídio pigouviano") + " igual ao benefício externo marginal, provisão "
+            "pública gratuita, obrigatoriedade. " + rx("O Programa Nacional de Imunizações (PNI, 1973) e a "
+            "vacinação gratuita pelo SUS") + " são a resposta brasileira.",
+            vm("Regra-âncora: externalidade positiva → mercado produz de menos → subsídio; negativa → produz "
+               "demais → imposto."),
+        ],
+        "grafico_verso": "ECO-E2-L00516-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " Item de manual (é o exemplo de " + oc("Mankiw") + "), com "
+                       "causa e efeito na ordem certa. A banca costuma inverter o sentido do desvio (“superior "
+                       "à socialmente ótima”) ou o sinal da externalidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Por gerar externalidade positiva, a vacinação tende a ser ofertada pelo mercado em quantidade "
+            "superior à socialmente ótima.”</i> → ERRADO (inversão: subprovisão)",
+            "<i>“O subsídio ótimo à vacinação corresponde ao benefício externo marginal no nível socialmente "
+            "ótimo de vacinas.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": ("Benefício da vacina se estende à comunidade; o mercado só precifica o benefício "
+                             "privado; quantidade de mercado menor que a socialmente ótima."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00517
+    {
+        "id": "ECO-E2-L00517-1", "fonte_ref": "E2-L00517", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26A,
+        "rotulo_item": "Item",
+        "assertiva": ("O Teorema de Coase postula que, na ausência de custos de transação e com direitos de "
+                      "propriedade bem definidos, as partes envolvidas em uma externalidade podem negociar "
+                      "privadamente e alcançar uma solução eficiente, independentemente de a quem o direito de "
+                      "propriedade foi inicialmente alocado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O Teorema de Coase postula que, <u>na ausência de custos de transação e com direitos de "
+                      "propriedade bem definidos</u>, as partes envolvidas em uma externalidade podem negociar "
+                      "privadamente e alcançar uma solução eficiente, <u>independentemente</u> de a quem o "
+                      "direito de propriedade foi inicialmente alocado."),
+        "poucas": ("Enunciado-padrão do " + azb("teorema de Coase") + ", com as duas condições (custos de "
+                   "transação nulos, direitos definidos) e a conclusão (eficiência qualquer que seja o titular "
+                   "do direito)."),
+        "destrinchando": [
+            oc("Ronald Coase") + " (“The Problem of Social Cost”, " + vd("1960") + ") mostrou que a "
+            "externalidade é um problema <b>recíproco</b>: o vizinho que reclama da fumaça também “impõe” "
+            "custo à fábrica ao exigir que ela pare. Definido quem tem o direito, os dois negociam.",
+            "As duas condições, uma a uma: (1) " + azb("direitos de propriedade bem definidos") + " — sem "
+            "saber quem tem o direito, não há o que negociar; (2) " + azb("custos de transação nulos") + " — "
+            "localizar as partes, medir o dano, redigir e fiscalizar o acordo não custam nada.",
+            "O que o teorema <b>não</b> diz: que a distribuição de renda é a mesma (quem tem o direito recebe "
+            "o pagamento), nem que funciona com muitas partes ou com informação assimétrica. O próprio Coase "
+            "usou o teorema para mostrar o contrário: como os custos de transação são positivos no mundo real, "
+            "as <b>instituições</b> (direito, firmas, contratos) importam.",
+            "Aplicação: o comércio de licenças de emissão cria direitos de poluir negociáveis — a lógica "
+            "coasiana operando com o Estado apenas definindo o teto e os direitos.",
+            vm("Regra-âncora: Coase = direitos definidos + custo de transação zero → eficiência, seja quem for o "
+               "titular."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Enunciado completo, sem enxerto. As versões erradas costumam "
+                       "tirar uma das condições, trocar “independentemente” por “desde que o direito seja de "
+                       "X” (ECO-E2-L00852-1) ou fazer a eficiência “depender apenas” da distribuição "
+                       "(ECO-E2-L01179-1)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…as partes podem negociar e alcançar uma solução eficiente, desde que o direito de "
+            "propriedade seja atribuído a quem sofre a externalidade.”</i> → ERRADO (restrição indevida)",
+            "<i>“O teorema de Coase supõe custos de transação positivos, porém baixos.”</i> → ERRADO (supõe "
+            "custos nulos)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["podem"], "dificuldade": 1,
+        "comentario_fonte": ("Sem custos de transação, com informação perfeita e direitos claros, a negociação "
+                             "privada alcança a alocação eficiente, independentemente do titular inicial."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00680-1 (mesmo curso, outra lista) e ECO-E2-L00333-1 cobram o "
+                    "mesmo enunciado com outra redação"],
+    },
+    # ------------------------------------------------------------------ E2-L00518
+    {
+        "id": "ECO-E2-L00518-1", "fonte_ref": "E2-L00518", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB26A,
+        "rotulo_item": "Item",
+        "assertiva": ("Recursos comuns, como os cardumes de peixes em alto-mar, são bens rivais mas não "
+                      "excludentes, o que pode levar à sua superexploração no fenômeno conhecido como “Tragédia "
+                      "dos Comuns”."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Recursos comuns, como os cardumes de peixes em alto-mar, são bens <u>rivais mas não "
+                      "excludentes</u>, o que pode levar à sua superexploração no fenômeno conhecido como "
+                      "“Tragédia dos Comuns”."),
+        "poucas": (azb("Recurso comum") + " = rival + não excludente. Ninguém pode ser impedido de pescar, mas "
+                   "cada peixe pescado é um peixe a menos para os outros: o incentivo é pescar demais."),
+        "destrinchando": [
+            "Na matriz exclusão × rivalidade, o recurso comum divide com o bem público a " + azb("não "
+            "exclusão") + " e com o bem privado a " + azb("rivalidade") + ". Exemplos: peixes em alto-mar, "
+            "pastagens abertas, aquíferos, ar limpo, estradas congestionadas sem pedágio.",
+            oc("Garrett Hardin") + ", “The Tragedy of the Commons” (<i>Science</i>, " + vd("1968") + "): cada "
+            "pastor acrescenta ovelhas ao pasto comum porque fica com todo o ganho e divide a perda com os "
+            "demais. Racional para cada um, ruinoso para o conjunto: o pasto se esgota.",
+            "Em termos econômicos, é uma " + azb("externalidade negativa") + ": quem pesca reduz o estoque "
+            "disponível para os outros e não paga por isso; o custo marginal privado fica abaixo do social.",
+            "Saídas: cotas de captura (inclusive cotas individuais transferíveis), defeso, licenças, "
+            "privatização ou definição de direitos. " + oc("Elinor Ostrom") + " (<i>Governing the Commons</i>, "
+            + vd("1990") + "; Nobel de " + vd("2009") + ") mostrou que comunidades também gerem bem os comuns "
+            "com regras próprias, sem Estado nem mercado.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição correta, exemplo correto e consequência com "
+                       "modulador relativo (“pode levar”). A troca habitual da banca é chamar o recurso comum "
+                       "de “não rival” ou de “excludente”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os cardumes de peixes em alto-mar são bens não rivais e não excludentes, o que caracteriza "
+            "bens públicos puros.”</i> → ERRADO (troca de conceito: são rivais)",
+            "<i>“A fixação de cotas de pesca é uma forma de mitigar a tragédia dos comuns.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Recursos comuns: rivais e não excludentes; cada indivíduo explora em excesso porque "
+                             "os custos são dispersos e os benefícios, privados."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00682-1 cobra a mesma definição de tragédia dos comuns (mesmo "
+                    "curso, outra lista)"],
+    },
 ]

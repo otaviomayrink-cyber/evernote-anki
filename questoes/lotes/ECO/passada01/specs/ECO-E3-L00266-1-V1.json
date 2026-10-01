@@ -2,14 +2,14 @@
  "legenda": "Bem público: a curva social ΣBMg é a soma VERTICAL das curvas individuais (em cada quantidade, somam-se as disposições a pagar). O nível eficiente q* = 2 está onde ΣBMg = CMg: 3,50 (pessoa 1) + 2,00 (pessoa 2) = 5,50.",
  "eixos": {"x": "q", "y": "R$", "xmax": 11, "ymax": 8, "numeros": true},
  "curvas": [
-  {"id": "B1", "tipo": "funcao", "expr": "4.5 - 0.5*x", "dominio": [0, 9], "familia": "demanda", "estado": "inicial", "rotulo": "BMg₁"},
-  {"id": "B2", "tipo": "funcao", "expr": "2.5 - 0.25*x", "dominio": [0, 10], "familia": "quarta", "rotulo": "BMg₂"},
-  {"id": "BS", "tipo": "funcao", "expr": "maximum(0, 4.5 - 0.5*x) + maximum(0, 2.5 - 0.25*x)", "dominio": [0, 10], "familia": "demanda", "rotulo": "ΣBMg"},
+  {"id": "B1", "tipo": "funcao", "expr": "4.5 - 0.5*x", "dominio": [0, 9], "familia": "demanda", "estado": "inicial", "rotulo": "BMg₁", "rotulo_em": 0.5, "rotulo_desloc": [4, 16]},
+  {"id": "B2", "tipo": "funcao", "expr": "2.5 - 0.25*x", "dominio": [0, 10], "familia": "quarta", "rotulo": "BMg₂", "rotulo_em": 3.5, "rotulo_desloc": [0, -22]},
+  {"id": "BS", "tipo": "funcao", "expr": "maximum(0, 4.5 - 0.5*x) + maximum(0, 2.5 - 0.25*x)", "dominio": [0, 10], "familia": "demanda", "rotulo": "ΣBMg", "rotulo_em": 5.0, "rotulo_desloc": [10, 12]},
   {"id": "CMg", "tipo": "horizontal", "y": 5.5, "x": [0, 10.5], "familia": "oferta", "rotulo": "CMg"}
  ],
  "pontos": [
-  {"id": "E", "intersecao": ["BS", "CMg"], "rotulo": "E", "projetar": true, "rotulo_x": "q* = 2"},
-  {"id": "P1", "sobre": "B1", "x": "E.x", "rotulo": "3,50", "rotulo_desloc": [10, 6]},
-  {"id": "P2", "sobre": "B2", "x": "E.x", "rotulo": "2,00", "rotulo_desloc": [10, -12]}
+  {"id": "E", "intersecao": ["BS", "CMg"], "rotulo": "E (q* = 2)", "projetar": "x", "rotulo_desloc": [10, 16]},
+  {"id": "P1", "sobre": "B1", "x": "E.x", "rotulo": "3,50", "rotulo_desloc": [10, 8]},
+  {"id": "P2", "sobre": "B2", "x": "E.x", "rotulo": "2,00", "rotulo_desloc": [-52, -16]}
  ],
  "checar": ["abs(E.x - 2) < 0.01", "abs(P1.y + P2.y - E.y) < 0.01", "abs(E.y - 5.5) < 0.01"]}

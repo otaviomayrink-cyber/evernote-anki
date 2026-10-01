@@ -1,0 +1,19 @@
+{"id": "ECO-E3-L00176-1-V1", "uso": "verso",
+ "legenda": "Com CMe decrescente, o CMg fica sempre abaixo dele. Preço = CMg (ponto C) dá a quantidade eficiente, mas a receita não cobre o custo médio: o retângulo vermelho é o prejuízo. Preço = CMe (ponto R) zera o lucro e torna o serviço viável, com quantidade entre a de monopólio (M) e a eficiente.",
+ "eixos": {"x": "q", "y": "p", "xmax": 105, "ymax": 13},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "12 - 0.12*x", "dominio": [0, 100], "familia": "demanda", "rotulo": "D", "rotulo_em": 96, "rotulo_desloc": [4, 10]},
+  {"id": "RMg", "tipo": "funcao", "expr": "12 - 0.24*x", "dominio": [0, 50], "familia": "quarta", "rotulo": "RMg", "rotulo_em": 47, "rotulo_desloc": [6, 6]},
+  {"id": "CMe", "tipo": "funcao", "expr": "3 + 120/x", "dominio": [13, 100], "familia": "terceira", "rotulo": "CMe", "rotulo_em": 100, "rotulo_desloc": [4, 8]},
+  {"id": "CMg", "tipo": "horizontal", "y": 3, "x": [0, 100], "familia": "oferta", "rotulo": "CMg"}
+ ],
+ "pontos": [
+  {"id": "Q", "intersecao": ["RMg", "CMg"], "projetar": "x", "rotulo_x": "qm", "marcar": false},
+  {"id": "M", "sobre": "D", "x": "Q.x", "rotulo": "M", "projetar": "y", "rotulo_y": "pm"},
+  {"id": "R", "intersecao": ["D", "CMe"], "indice": 1, "rotulo": "R", "projetar": true, "rotulo_x": "qr", "rotulo_y": "pr", "rotulo_desloc": [6, 10]},
+  {"id": "C", "intersecao": ["D", "CMg"], "rotulo": "C", "projetar": "x", "rotulo_x": "qc", "rotulo_desloc": [6, 12]}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": [[0, 3], [0, "CMe(C.x)"], ["C.x", "CMe(C.x)"], "C"], "papel": "perda", "rotulo": "prejuízo", "rotulo_xy": [20, 3.8]}
+ ],
+ "checar": ["CMe(C.x) > C.y", "abs(R.y - CMe(R.x)) < 0.01", "R.x > Q.x", "C.x > R.x", "M.y > R.y", "abs(C.x - 75) < 0.01"]}

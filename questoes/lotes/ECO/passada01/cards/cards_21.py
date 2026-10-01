@@ -550,4 +550,471 @@ CARDS = [
                     "permissão do governo (barreira legal ≠ monopólio natural) e troca rodovia por ferrovia — "
                     "corrigido"],
     },
+    # ------------------------------------------------------------------ E3-L00176
+    {
+        "id": "ECO-E3-L00176-1", "fonte_ref": "E3-L00176", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": True,
+        "comando": "Acerca da teoria da regulação e das estruturas de mercado, julgue o item subsequente.",
+        "rotulo_item": "Item",
+        "assertiva": ("Na regulação de um monopólio natural relativo à prestação de um serviço público, a eficiência "
+                      "econômica pode ser obtida por meio da fixação do preço da prestação do serviço em patamar "
+                      "equivalente ao seu custo marginal de produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("Na regulação de um monopólio natural relativo à prestação de um serviço público, ")
+                   + vm("a eficiência econômica") + az(" pode ser obtida por meio da fixação do preço da prestação "
+                   "do serviço em patamar equivalente ao seu ") + vm("custo marginal") + az(" de produção."),
+        "poucas": ("No monopólio natural " + vd("CMg < CMe") + ": com P = CMg a firma tem " + azb("prejuízo")
+                   + " e, sem subsídio, sai do mercado. A regulação viável fixa o preço no " + azb("custo médio")
+                   + " (lucro zero) — foi essa a leitura da banca."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "No sentido estrito, P = CMg é a condição de " + azb("eficiência alocativa") + " (o "
+                          "“primeiro melhor”), e o “pode ser obtida” admitiria essa solução se acompanhada de "
+                          "subsídio ou de tarifa em duas partes. O ERRADO se sustenta na leitura de “eficiência "
+                          "econômica” como resultado sustentável da regulação: sem cobrir o custo médio, o serviço "
+                          "não se mantém. Em prova, siga a banca: monopólio natural + P = CMg → prejuízo → ERRADO.")],
+        "destrinchando": [
+            azb("Monopólio natural") + ": custo fixo altíssimo e custo marginal baixo fazem o " + vd("CMe cair") + " "
+            "em toda a faixa relevante. Se a média cai, a unidade marginal custa menos que a média: "
+            + vd("CMg < CMe") + ".",
+            "Três regimes possíveis: (1) " + azb("sem regulação") + " — RMg = CMg, preço alto, quantidade baixa, "
+            "peso morto; (2) " + azb("P = CMg") + " — quantidade eficiente, mas P &lt; CMe: prejuízo igual a "
+            "(CMe − CMg) × q, que exige subsídio público; (3) " + azb("P = CMe") + " — lucro econômico zero, "
+            "firma viável, quantidade menor que a eficiente e algum peso morto (" + azb("segundo melhor") + ").",
+            "Por isso a regulação de serviços públicos em monopólio natural costuma ancorar a tarifa no custo "
+            "médio (custo de serviço, com remuneração do capital) ou em " + azb("price cap") + " revisto "
+            "periodicamente. Outras saídas para chegar perto do CMg sem prejuízo: " + azb("tarifa em duas partes")
+            + " (assinatura cobre o custo fixo, tarifa por uso = CMg) e " + azb("preços de Ramsey") + " (margens "
+            "maiores onde a demanda é menos elástica).",
+            "No " + rx("Brasil") + ", agências como " + rx("ANTT") + ", ANEEL e ANTAQ fazem esse papel em concessões "
+            "de rodovias, ferrovias, energia e portos; a competição se dá " + azb("pelo mercado") + " (leilão pela "
+            "menor tarifa ou maior outorga).",
+            vm("Regra-âncora: monopólio natural → P = CMg dá prejuízo; regulação viável → P = CMe."),
+        ],
+        "grafico_verso": "ECO-E3-L00176-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " O item aplica ao monopólio natural a regra de eficiência válida "
+                       "para firmas com custos crescentes (P = CMg), ignorando que ali o CMg está abaixo do CMe. A "
+                       "palavra-gatilho é “monopólio natural”: ela anuncia custo médio decrescente. 🔥 A CEBRASPE "
+                       "cobra o dilema P = CMg × P = CMe com frequência em provas de agências reguladoras."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, a fixação do preço no custo marginal exige subsídio para que a firma "
+            "permaneça no mercado.”</i> → CERTO",
+            "<i>“No monopólio natural, a fixação do preço no custo médio elimina o peso morto.”</i> → ERRADO "
+            "(reduz, mas P = CMe > CMg mantém algum peso morto)",
+        ])],
+        "reescrita": ("Na regulação de um monopólio natural relativo à prestação de um serviço público, "
+                      + hl("a solução viável, com lucro econômico nulo e sem subsídio,") + " pode ser obtida por meio "
+                      "da fixação do preço da prestação do serviço em patamar equivalente ao seu "
+                      + hl("custo médio") + " de produção."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 2,
+        "comentario_fonte": "Várias respostas convergentes: em monopólio natural CMg < CMe; com P = CMg a firma "
+                            "opera com prejuízo e precisaria de subsídio; regulação usual pelo custo médio. Gráfico "
+                            "com LRAC, LRMC, MR e demanda (Pu, Qu, Pc, Qe).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 222", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00176-1-V1)"},
+                          {"ref": "IMAGEM 223", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (regulação P = CMg em monopólio comum; absorvida no 📖)"},
+                          {"ref": "IMAGEM 230", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mesmo mecanismo de ECO-E3-L00176-1-V1)"},
+                          {"ref": "IMAGEM 224-229, 231-236", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvidas"}],
+        "alertas": ["contestavel: P = CMg é a condição de eficiência alocativa (primeiro melhor) e o “pode” "
+                    "admitiria a solução com subsídio; gabarito ERRADO da fonte mantido pela leitura de viabilidade "
+                    "(CMg < CMe gera prejuízo)"],
+    },
+    # ------------------------------------------------------------------ E3-L00200
+    {
+        "id": "ECO-E3-L00200-1", "fonte_ref": "E3-L00200", "destino": "08", "subtema": H2["eq"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Abril/2025", "ano": 2025,
+        "cacd": False, "errei": True,
+        "comando": "No que se refere à intervenção pública no equilíbrio dos mercados, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em condições de monopólio, a imposição de um imposto sobre os lucros irá acarretar aumento "
+                      "do preço e queda da quantidade produzida pela firma monopolista."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em condições de monopólio, a imposição de um imposto sobre os lucros ")
+                   + vm("irá acarretar aumento do preço e queda da quantidade produzida") + az(" pela firma "
+                   "monopolista."),
+        "poucas": ("Um imposto proporcional sobre o " + azb("lucro econômico") + " não muda RMg nem CMg: o q que "
+                   "maximiza π também maximiza (1 − t)·π. " + vd("Preço e quantidade não mudam") + "; só cai o "
+                   "lucro líquido."),
+        "destrinchando": [
+            "O monopolista escolhe q onde " + azb("RMg = CMg") + " e lê o preço na demanda. Um imposto à alíquota t "
+            "sobre o lucro transforma o objetivo em (1 − t)·π(q). Multiplicar uma função por uma constante "
+            "positiva não muda o ponto de máximo: a condição de primeira ordem continua (1 − t)·(RMg − CMg) = 0.",
+            "Por isso o imposto sobre lucro puro é " + azb("neutro") + " (não distorce a decisão marginal) e "
+            "transfere renda de monopólio para o governo " + vd("sem peso morto adicional") + ". É um argumento "
+            "clássico a favor de tributar rendas econômicas.",
+            "Contraste com " + azb("impostos sobre a produção ou as vendas") + " (específico por unidade ou ad "
+            "valorem): eles entram no custo marginal (ou reduzem a RMg líquida), o ótimo se desloca para "
+            + vd("q menor e P maior") + " — o efeito que o item atribui ao imposto sobre lucro. Um "
+            + azb("imposto fixo") + " (lump-sum) também não altera P e q no curto prazo, desde que a firma "
+            "continue operando.",
+            "Ressalva de manual: a neutralidade vale para o lucro <b>econômico</b>. Tributos sobre o lucro "
+            "<b>contábil</b>, que não deduzem o custo de oportunidade do capital, podem afetar decisões de "
+            "investimento e de longo prazo (como IRPJ e CSLL na prática).",
+            vm("Regra-âncora: imposto sobre lucro → P e q inalterados; imposto por unidade → P ↑ e q ↓."),
+        ],
+        "grafico_verso": "ECO-E3-L00200-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " O item atribui ao imposto sobre o lucro o efeito típico do "
+                       "imposto sobre a quantidade. O “irá acarretar” dá tom de certeza a um resultado que só vale "
+                       "para tributos que mexem na margem. Pista: pergunte se o imposto altera RMg ou CMg; se não "
+                       "altera, nada muda no ponto ótimo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em condições de monopólio, um imposto específico por unidade vendida tende a elevar o preço e "
+            "reduzir a quantidade produzida.”</i> → CERTO",
+            "<i>“Um imposto de montante fixo sobre o monopolista reduz a quantidade ofertada no curto prazo.”</i> → "
+            "ERRADO (custo fixo não altera o CMg)",
+        ])],
+        "reescrita": ("Em condições de monopólio, a imposição de um imposto sobre os lucros " + hl("não altera o "
+                      "preço nem a quantidade produzida") + " pela firma monopolista" + hl(", reduzindo apenas o "
+                      "lucro líquido") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["irá"], "dificuldade": 2,
+        "comentario_fonte": "Imposto sobre lucro econômico puro é neutro: o Q que maximiza 100% do lucro maximiza "
+                            "70% dele; impostos sobre vendas aumentam o CMg e elevam P; gráfico de monopólio com "
+                            "área de lucro.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 260", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repete a assertiva)"},
+                          {"ref": "IMAGEM 261", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mecanismo redesenhado em ECO-E3-L00200-1-V1)"},
+                          {"ref": "IMAGEM 262", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (condição de primeira ordem no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00230
+    {
+        "id": "ECO-E3-L00230-1", "fonte_ref": "E3-L00230", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Março/2025", "ano": 2025,
+        "cacd": False, "errei": True,
+        "comando": COM_DISCRIM,
+        "rotulo_item": "Item",
+        "assertiva": ("Diferente da discriminação perfeita de primeiro grau, a aplicação da discriminação de preços "
+                      "de segundo grau pressupõe que a empresa não consiga identificar diretamente as demandas "
+                      "individuais dos consumidores antes das compras."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Diferente da discriminação perfeita de primeiro grau, a aplicação da discriminação de preços "
+                      "de segundo grau pressupõe que a empresa <u>não consiga identificar diretamente</u> as "
+                      "demandas individuais dos consumidores antes das compras."),
+        "poucas": ("No 2º grau a firma " + azb("não observa") + " quem é quem: oferece um menu (preços por "
+                   "quantidade, pacotes, versões) e deixa o consumidor se " + azb("autosselecionar") + ". No 1º "
+                   "grau, ela conhece a disposição a pagar de cada um."),
+        "destrinchando": [
+            "Classificação de " + oc("Pigou") + " (1920) pelo tipo de informação: " + azb("1º grau") + " — a firma "
+            "conhece o preço de reserva de cada consumidor e cobra exatamente esse valor; " + azb("2º grau")
+            + " — a firma não distingue os consumidores e cobra preços diferentes por " + vd("quantidade ou "
+            "versão") + "; " + azb("3º grau") + " — a firma identifica " + vd("grupos") + " por característica "
+            "observável (idade, estudante, região) e cobra um preço por grupo.",
+            "No 2º grau o preço depende do <b>que</b> se compra, não de <b>quem</b> compra: todos enfrentam o "
+            "mesmo menu (“pague 2, leve 3”, tarifa em blocos de energia, plano básico × premium, primeira classe × "
+            "econômica). Quem valoriza mais escolhe a opção desenhada para ele.",
+            "É um problema de " + azb("informação assimétrica") + " (" + azb("screening") + "): o menu precisa ser "
+            "compatível com incentivos — cada tipo deve preferir o pacote pensado para si. Por isso a firma deixa "
+            "algum excedente com os consumidores de alta disposição a pagar (renda informacional) e distorce a "
+            "oferta ao tipo baixo.",
+            "Consequência: o 2º grau captura apenas parte do excedente; o 1º grau, todo ele.",
+            vm("Regra-âncora: 1º grau = sabe quem é cada um; 2º grau = não sabe e oferece menu; 3º grau = sabe o "
+               "grupo."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item define o 2º grau pelo contraste informacional com o 1º, "
+                       "sem citar o mecanismo (menu, quantidade). O risco é confundir com o 3º grau, em que a firma "
+                       "identifica grupos — mas nem ali enxerga a demanda individual."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na discriminação de terceiro grau, a empresa identifica diretamente a disposição a pagar de cada "
+            "consumidor.”</i> → ERRADO (identifica grupos, não indivíduos)",
+            "<i>“Descontos por quantidade e tarifas em blocos são exemplos de discriminação de segundo grau.”</i> "
+            "→ CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Várias respostas convergentes: 1º grau = preço de reserva individual; 2º grau = "
+                            "autosseleção por menu (quantidade, versões) porque a firma não observa o tipo; 3º grau "
+                            "= segmentação por grupos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 318", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00231
+    {
+        "id": "ECO-E3-L00231-1", "fonte_ref": "E3-L00231", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Março/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_DISCRIM,
+        "rotulo_item": "Item",
+        "assertiva": ("A condição para o sucesso da discriminação de preços de segundo grau, por meio de descontos "
+                      "de acordo com a quantidade adquirida, é a de que os consumidores que compram grandes "
+                      "quantidades tenham demandas relativamente mais elásticas do que os consumidores que compram "
+                      "pequenas quantidades."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("A condição para o sucesso da discriminação de preços de segundo grau, por meio de descontos "
+                      "de acordo com a quantidade adquirida, é a de que os consumidores que compram grandes "
+                      "quantidades tenham demandas relativamente <u>mais elásticas</u> do que os consumidores que "
+                      "compram pequenas quantidades."),
+        "poucas": ("Pela lógica do markup inverso, preço unitário menor (desconto) vai para quem é " + azb("mais "
+                   "sensível ao preço") + ". Se os grandes compradores fossem inelásticos, dar-lhes desconto só "
+                   "reduziria a receita."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "A justificativa é a da regra de " + oc("Lerner") + " aplicada a segmentos; na teoria do "
+                          + azb("preço não linear") + " (menus de autosseleção), o grande comprador costuma ser o "
+                          "de <b>maior</b> disposição a pagar, e o desconto marginal serve para induzir a "
+                          "autosseleção, não por ele ser “mais elástico”. Uma das respostas da fonte marca ERRADO "
+                          "por isso. Mantido o CERTO da fonte, que segue a formulação dos manuais introdutórios.")],
+        "destrinchando": [
+            "Princípio geral da discriminação: " + vd("(P − CMg)/P = 1/|ε|") + " em cada segmento. Preço mais alto "
+            "onde a demanda é menos elástica; mais baixo onde é mais elástica.",
+            "No desconto por quantidade (" + azb("2º grau") + "), o preço por unidade cai nas unidades adicionais. "
+            "Faz sentido oferecer esse desconto quando quem compra muito reage ao preço: revendedores, empresas, "
+            "consumidores que planejam e comparam. A redução de preço é compensada pelo aumento do volume.",
+            "Quem compra pouco (compra por conveniência, urgência, sem comparar) tende a ser menos sensível ao "
+            "preço e paga o preço cheio por unidade.",
+            "Outra forma de ver o 2º grau: a firma não sabe quem é cada consumidor e desenha um " + azb("menu")
+            + " (tarifa em blocos, embalagem família × individual) para que cada tipo escolha a opção pensada "
+            "para ele (" + azb("compatibilidade de incentivos") + ").",
+            vm("Regra-âncora: desconto (preço menor) vai para a demanda mais elástica; preço cheio para a menos "
+               "elástica."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item aplica a regra do markup inverso ao desconto por "
+                       "quantidade. A armadilha está em pensar que quem compra muito “precisa” do bem (inelástico) "
+                       "e por isso pagaria mais. 🔥 Itens de discriminação quase sempre se decidem pela relação "
+                       "preço maior ↔ demanda menos elástica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na discriminação de terceiro grau, o preço mais alto é cobrado do grupo com demanda mais "
+            "elástica.”</i> → ERRADO (inversão: vai para o menos elástico)",
+            "<i>“Na discriminação de segundo grau, o preço unitário depende da quantidade adquirida, e não da "
+            "identidade do comprador.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 3,
+        "comentario_fonte": "Quatro respostas CERTO (desconto para quem é mais sensível ao preço; volume compensa a "
+                            "redução) e uma ERRADO (grandes compradores teriam demanda menos elástica, com maior "
+                            "valorização das unidades adicionais).",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 319", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["contestavel: respostas da fonte divergem (4 CERTO × 1 ERRADO); na teoria do preço não linear o "
+                    "grande comprador costuma ter maior disposição a pagar — mantido o CERTO da fonte"],
+    },
+    # ------------------------------------------------------------------ E3-L00232
+    {
+        "id": "ECO-E3-L00232-1", "fonte_ref": "E3-L00232", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Março/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_DISCRIM,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando o monopolista faz discriminação de preços de primeiro grau, a alocação final de mercado "
+                      "não é uma solução ótima no sentido de Pareto, pois os consumidores perdem todo seu excedente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quando o monopolista faz discriminação de preços de primeiro grau, a alocação final de mercado ")
+                   + vm("não é") + az(" uma solução ótima no sentido de Pareto, ") + vm("pois")
+                   + az(" os consumidores perdem todo seu excedente."),
+        "poucas": ("A discriminação perfeita leva a produção até " + vd("P = CMg") + ": sem peso morto, a alocação "
+                   "<b>é</b> " + azb("Pareto-ótima") + ". Os consumidores perdem o excedente, mas isso é questão de "
+                   "distribuição, não de eficiência."),
+        "destrinchando": [
+            azb("Ótimo de Pareto") + ": alocação em que não se pode melhorar ninguém sem piorar alguém. O critério "
+            "é cego à distribuição — uma alocação em que um agente fica com tudo pode ser Pareto-ótima.",
+            "Na " + azb("discriminação de 1º grau") + ", cada unidade é vendida pelo preço de reserva do comprador. "
+            "A RMg coincide com a demanda, e o monopolista produz até o CMg cruzar a demanda: a "
+            + vd("quantidade de concorrência perfeita") + ", maior que a do monopólio de preço único.",
+            "Toda troca que gera valor acima do custo acontece: " + vd("peso morto = 0") + ", excedente total "
+            "máximo. Há uma transferência integral (" + vd("EC = 0") + ", lucro = excedente total), mas nenhuma "
+            "perda líquida.",
+            "Paradoxo útil: em termos de eficiência, a discriminação perfeita é <b>melhor</b> que o monopólio de "
+            "preço único; em termos distributivos, é pior para o consumidor.",
+            vm("Regra-âncora: perder excedente (distribuição) ≠ alocação ineficiente (Pareto)."),
+        ],
+        "dissecando": (cz("[nexo indevido · inversão]") + " O fato citado é verdadeiro (EC = 0), mas não sustenta a "
+                       "conclusão: o “pois” cria um nexo entre distribuição e eficiência que não existe. Pista: "
+                       "sempre que o item justificar ineficiência com “o consumidor perde excedente”, verifique se há "
+                       "peso morto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na discriminação de primeiro grau, a alocação é Pareto-ótima, embora os consumidores percam todo o "
+            "excedente.”</i> → CERTO",
+            "<i>“A discriminação de terceiro grau sempre elimina o peso morto do monopólio.”</i> → ERRADO "
+            "(efeito ambíguo; só o 1º grau garante)",
+        ])],
+        "reescrita": ("Quando o monopolista faz discriminação de preços de primeiro grau, a alocação final de mercado "
+                      + hl("é") + " uma solução ótima no sentido de Pareto, " + hl("embora") + " os consumidores "
+                      "percam todo seu excedente."),
+        "tipo_erro": ["NEXO_INDEVIDO", "INVERSAO"], "moduladores": ["pois"], "dificuldade": 2,
+        "comentario_fonte": "Mini-aula: eficiência de Pareto não se confunde com equidade; na discriminação perfeita "
+                            "cada unidade é vendida ao preço de reserva, q vai até CMg = demanda, sem peso morto; "
+                            "a alocação é Pareto-eficiente.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 320", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (texto sobre Pareto absorvido no 📖)"},
+                          {"ref": "IMAGEM 321", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (texto absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00233
+    {
+        "id": "ECO-E3-L00233-1", "fonte_ref": "E3-L00233", "destino": "08", "subtema": H2["disc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Março/2025", "ano": 2025,
+        "cacd": False, "errei": False,
+        "comando": COM_DISCRIM,
+        "rotulo_item": "Item",
+        "assertiva": ("Na discriminação de preços de terceiro grau, o preço mais elevado será cobrado dos "
+                      "consumidores com demanda mais elástica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na discriminação de preços de terceiro grau, o preço mais elevado será cobrado dos "
+                      "consumidores com demanda ") + vm("mais elástica") + az("."),
+        "poucas": ("O monopolista iguala a RMg dos grupos e aplica " + vd("(P − CMg)/P = 1/|ε|") + " em cada um: "
+                   "o " + azb("preço mais alto") + " vai para o grupo de demanda " + azb("menos elástica") + "."),
+        "destrinchando": [
+            azb("3º grau") + ": a firma separa o mercado em grupos identificáveis (estudantes × demais, turistas × "
+            "executivos, mercado interno × externo) e cobra um preço por grupo.",
+            "Condição de ótimo: " + vd("RMg₁ = RMg₂ = CMg") + ". Se a RMg de um grupo fosse maior, valeria a pena "
+            "deslocar vendas para ele. Como RMg = P·(1 − 1/|ε|), igualar as RMg exige " + vd("P₁·(1 − 1/|ε₁|) = "
+            "P₂·(1 − 1/|ε₂|)") + ": o grupo com |ε| menor tem de ter P maior.",
+            "Intuição: quem tem poucas alternativas (executivo que precisa viajar amanhã) aceita pagar mais; quem "
+            "pode desistir ou trocar (turista com datas flexíveis, estudante) só compra com preço baixo. Exemplo "
+            "numérico: CMg = 10, |ε₁| = 2 → P₁ = 20; |ε₂| = 4 → P₂ ≈ 13,3.",
+            "Requisitos: segmentação observável e ausência de revenda entre os grupos (meia-entrada exige "
+            "carteirinha; passagem é nominal).",
+            vm("Regra-âncora: preço alto ↔ demanda inelástica; preço baixo ↔ demanda elástica."),
+        ],
+        "dissecando": (cz("[inversão]") + " O item inverte a regra do markup inverso. A armadilha é associar "
+                       "“elástica” a “aguenta variação” e, daí, a “aguenta preço alto”. Pista: elasticidade alta = "
+                       "consumidor que foge do aumento."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na discriminação de terceiro grau, o monopolista iguala as receitas marginais dos diferentes "
+            "grupos ao custo marginal.”</i> → CERTO",
+            "<i>“Na discriminação de terceiro grau, o monopolista iguala os preços dos grupos ao custo "
+            "marginal.”</i> → ERRADO (iguala as RMg, não os preços)",
+        ])],
+        "reescrita": ("Na discriminação de preços de terceiro grau, o preço mais elevado será cobrado dos "
+                      "consumidores com demanda " + hl("menos elástica") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Várias respostas convergentes: regra da elasticidade inversa; preço maior para a "
+                            "demanda mais inelástica (executivos), menor para a elástica (turistas, estudantes); "
+                            "RMg iguais entre mercados.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00304
+    {
+        "id": "ECO-E3-L00304-1", "fonte_ref": "E3-L00304", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": ("Sobre os diferentes tipos de bens, as falhas de mercado e o papel do Estado no ajuste da oferta "
+                    "e correções de problemas decorrentes da livre flutuação dos mercados, julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Numa situação de monopólio natural, caso a empresa opere em um nível em que o preço de mercado "
+                      "se iguale ao custo marginal, ela poderia ofertar uma quantidade eficiente de bens, mas não "
+                      "seria capaz de cobrir seus custos médios. Por isso, argumenta-se em favor da estatização dos "
+                      "bens e serviços que apresentam esta característica, uma vez que a privatização envolve um "
+                      "custo de negociação e regulamentação que pode ser evitado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Numa situação de monopólio natural, caso a empresa opere em um nível em que o preço de "
+                      "mercado se iguale ao custo marginal, ela poderia ofertar uma quantidade eficiente de bens, mas "
+                      "<u>não seria capaz de cobrir seus custos médios</u>. Por isso, <u>argumenta-se</u> em favor da "
+                      "estatização dos bens e serviços que apresentam esta característica, uma vez que a "
+                      "privatização envolve um custo de negociação e regulamentação que pode ser evitado."),
+        "poucas": ("Com " + vd("CMg < CMe") + ", P = CMg é eficiente mas dá prejuízo. Uma das respostas ao dilema é "
+                   "a " + azb("provisão estatal") + " (o Estado absorve o prejuízo e evita custos de contratar e "
+                   "regular um operador privado). O item diz “argumenta-se”: descreve um argumento, não o "
+                   "endossa como único."),
+        "destrinchando": [
+            "1ª frase — o dilema: no " + azb("monopólio natural") + " o CMe é decrescente, logo o CMg fica abaixo "
+            "dele. P = CMg gera a quantidade eficiente (" + azb("eficiência alocativa") + "), mas a receita "
+            "(P × q) não cobre o custo total (CMe × q).",
+            "Respostas possíveis: (i) " + azb("P = CMe") + " — empresa viável, lucro zero, algum peso morto; "
+            "(ii) " + azb("P = CMg com subsídio") + " — eficiente, mas financiado por tributos que também "
+            "distorcem; (iii) " + azb("tarifa em duas partes") + "; (iv) " + azb("estatização") + " — o Estado "
+            "produz, pode praticar P = CMg e cobre o déficit pelo orçamento.",
+            "2ª frase — o argumento a favor da estatização vem da " + azb("economia dos custos de transação") + " ("
+            + oc("Coase") + ", " + oc("Williamson") + "): concessões exigem contratos complexos, agências, "
+            "fiscalização, revisões tarifárias; há " + azb("assimetria de informação") + " sobre custos, risco de "
+            + azb("captura") + " do regulador e de " + azb("hold-up") + ". Internalizar a atividade no Estado "
+            "evitaria esses custos.",
+            "Contrapontos (por isso o “argumenta-se”): estatais têm problemas de agência, uso político de tarifas "
+            "e " + azb("restrição orçamentária branda") + " (" + oc("Kornai") + "). O " + rx("Brasil") + " "
+            "alternou os modelos: estatais no setor elétrico e de telecomunicações até os anos 1990, depois "
+            "privatizações e concessões reguladas (ANEEL, Anatel, ANTT).",
+            vm("Regra-âncora: monopólio natural → P = CMg dá prejuízo → subsídio, P = CMe, tarifa em duas partes "
+               "ou estatização."),
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " A 1ª frase é a definição técnica do dilema; a "
+                       "2ª apresenta um argumento com “argumenta-se”, que protege o item de ser lido como "
+                       "prescrição. Quem acha que “privatizar é sempre melhor” marca ERRADO por ideologia. O que se "
+                       "julga é se o argumento existe e é coerente — e é."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio natural, a fixação do preço no custo marginal permite à empresa cobrir integralmente "
+            "seus custos médios.”</i> → ERRADO (CMg &lt; CMe gera prejuízo)",
+            "<i>“A teoria econômica demonstra que a estatização é sempre a solução mais eficiente para monopólios "
+            "naturais.”</i> → ERRADO (modulador absoluto: há custos de agência na estatal)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["argumenta-se", "poderia"],
+        "dificuldade": 2,
+        "comentario_fonte": "Respostas extensas e convergentes: CMe decrescente, CMg < CMe, P = CMg gera prejuízo; "
+                            "soluções (P = CMe, subsídio, estatização); argumento de custos de transação "
+                            "(Coase, Williamson) a favor da estatização e contrapontos (agência, captura, Kornai).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 407", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (definição e características do monopólio natural)"},
+                          {"ref": "IMAGEM 408", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (gráfico de monopólio natural; mecanismo descrito no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00411
+    {
+        "id": "ECO-E3-L00411-1", "fonte_ref": "E3-L00411", "destino": "08", "subtema": H2["nat"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": ("Considerando a relação entre o Estado e diferentes estruturas de mercado existentes numa "
+                    "economia mista, julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("O monopólio natural é uma situação onde um único fornecedor pode atender toda a demanda de "
+                      "mercado a um custo inferior do que dois ou mais concorrentes e, portanto, é capaz de "
+                      "maximizar a eficiência econômica cobrando baixos preços sem que haja necessidade de "
+                      "intervenção estatal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O monopólio natural é uma situação onde um único fornecedor pode atender toda a demanda de "
+                      "mercado a um custo inferior do que dois ou mais concorrentes e, portanto, ")
+                   + vm("é capaz de maximizar a eficiência econômica cobrando baixos preços sem que haja "
+                        "necessidade de intervenção estatal") + az("."),
+        "poucas": ("A definição está certa; a conclusão, não. Custo baixo não vira preço baixo: o monopolista "
+                   "natural " + azb("maximiza lucro") + " (RMg = CMg, P > CMg) e gera peso morto. Daí a "
+                   + azb("regulação") + "."),
+        "destrinchando": [
+            "1ª parte, correta: no " + azb("monopólio natural") + " há " + azb("economias de escala") + " em toda "
+            "a faixa relevante; um só produtor atende o mercado a custo médio menor que vários "
+            "(" + azb("eficiência produtiva") + ").",
+            "O salto indevido: eficiência produtiva (produzir barato) não implica " + azb("eficiência alocativa")
+            + " (produzir a quantidade em que P = CMg). Sem concorrência nem regulação, a firma escolhe a "
+            "quantidade de monopólio: preço alto, produção restrita, " + azb("peso morto") + ". O ganho de custo "
+            "fica com o produtor como lucro.",
+            "Por isso monopólios naturais são, em regra, " + azb("regulados") + " (tarifa, metas de qualidade e "
+            "investimento, revisão periódica) ou providos pelo Estado. A intervenção não elimina o monopólio — "
+            "que é desejável pela escala —, mas disciplina o preço.",
+            "Exceção teórica: a " + azb("teoria dos mercados contestáveis") + " (" + oc("Baumol, Panzar e Willig")
+            + ", 1982) mostra que, sem custos irrecuperáveis, a ameaça de entrada levaria o monopolista a cobrar "
+            "P = CMe. Mas infraestrutura de rede tem custos afundados enormes — justamente o que torna esses "
+            "mercados pouco contestáveis.",
+            vm("Regra-âncora: monopólio natural = eficiência produtiva + necessidade de regulação."),
+        ],
+        "dissecando": (cz("[nexo indevido · meia-verdade]") + " A definição da 1ª oração é literal e verdadeira; o "
+                       "“e, portanto,” cria um nexo falso entre custo baixo e preço baixo, e o “sem necessidade de "
+                       "intervenção estatal” nega a principal implicação de política. 🔥 Padrão recorrente: "
+                       "definição correta + conclusão de política invertida."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O monopólio natural ocorre quando um único fornecedor atende toda a demanda a custo inferior ao "
+            "de dois ou mais concorrentes, o que justifica, em geral, a regulação estatal de seus preços.”</i> → "
+            "CERTO",
+            "<i>“No monopólio natural, a eficiência produtiva recomenda a fragmentação do mercado entre várias "
+            "empresas.”</i> → ERRADO (inversão: dividir o mercado eleva o custo médio)",
+        ])],
+        "reescrita": ("O monopólio natural é uma situação onde um único fornecedor pode atender toda a demanda de "
+                      "mercado a um custo inferior do que dois ou mais concorrentes e, portanto, " + hl("tende a "
+                      "exigir regulação estatal, pois, livre, cobraria preços acima do custo marginal e geraria peso "
+                      "morto") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "MEIA_VERDADE"], "moduladores": ["portanto", "sem que haja"],
+        "dificuldade": 1,
+        "comentario_fonte": "Primeira parte correta (CMe decrescente, um produtor mais barato); erro na conclusão: o "
+                            "monopolista privado maximiza lucro, cobra acima do CMg e gera peso morto; monopólios "
+                            "naturais exigem regulação ou provisão pública.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 577", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (gráfico de monopólio natural com a assertiva sobreposta)"}],
+        "alertas": [],
+    },
 ]

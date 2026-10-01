@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E2-L00516-1-V1",
+ "uso": "verso",
+ "legenda": "A demanda de mercado reflete só o benefício privado (BMgP); somado o benefício externo, a curva social (BMgS) fica acima. O mercado para em Qₘ, abaixo do ótimo Q*: o triângulo vermelho é o bem-estar perdido pela subvacinação.",
+ "eixos": {"x": "Q", "y": "p", "xmax": 12, "ymax": 12},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "9 - 0.7*x", "dominio": [0, 12], "familia": "demanda", "rotulo": "BMgP = D"},
+  {"id": "BS", "tipo": "funcao", "expr": "11.5 - 0.7*x", "dominio": [0, 12], "familia": "terceira", "rotulo": "BMgS"},
+  {"id": "S", "tipo": "funcao", "expr": "1 + 0.6*x", "dominio": [0, 11.5], "familia": "oferta", "rotulo": "CMg = O"}
+ ],
+ "pontos": [
+  {"id": "Em", "intersecao": ["D", "S"], "projetar": "x", "rotulo_x": "Qₘ"},
+  {"id": "Es", "intersecao": ["BS", "S"], "projetar": "x", "rotulo_x": "Q*"},
+  {"id": "Bm", "sobre": "BS", "x": "Em.x"}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": ["Bm", "Es", "Em"], "papel": "peso_morto"}
+ ],
+ "checar": ["Es.x > Em.x", "BS(Em.x) > S(Em.x)"]
+}

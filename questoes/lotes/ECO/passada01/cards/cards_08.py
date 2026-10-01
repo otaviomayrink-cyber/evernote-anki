@@ -453,8 +453,8 @@ CARDS = [
                       "consumidores, visto que as firmas tomam o preço como dado."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A introdução de um imposto específico em um mercado competitivo afeta ")
-                    + vm("exclusivamente os consumidores") + az(", visto que ")
-                    + vm("as firmas tomam o preço como dado") + az(".")),
+                    + vm("exclusivamente os consumidores") + az(", ")
+                    + vm("visto que as firmas tomam o preço como dado") + az(".")),
         "poucas": ("O ônus se reparte conforme as " + azb("elasticidades") + " da oferta e da demanda "
                    + azb("de mercado") + ". Ser tomadora de preço é atributo da firma individual e não garante "
                    "repasse integral."),
@@ -532,8 +532,8 @@ CARDS = [
             "compradas.”</i> → ERRADO (restrição indevida: também ganha nas unidades que já comprava)",
         ])],
         "reescrita": ("O aumento no preço de um bem normal provoca " + hl("uma redução") + " no excedente dos "
-                      "consumidores, que se refere à área abaixo da curva da demanda " + hl("e acima da linha do "
-                      "preço") + "."),
+                      "consumidores, que se refere " + hl("à área entre a curva da demanda e a linha do preço")
+                      + "."),
         "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": ["toda"], "dificuldade": 1,
         "comentario_fonte": "EC é a área abaixo da demanda; com aumento de preço o bem-estar do consumidor "
                             "diminui; as áreas novas seriam pesos mortos.",
@@ -1104,5 +1104,362 @@ CARDS = [
         "alertas": ["qualidade_fonte: a tabela da fonte diz que oferta de elasticidade unitária implica ônus "
                     "“dividido proporcionalmente”, como se bastasse a oferta; a divisão depende também da "
                     "demanda — corrigido"],
+    },
+    # ------------------------------------------------------------------ E2-L00618
+    {
+        "id": "ECO-E2-L00618-1", "fonte_ref": "E2-L00618", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à microeconomia, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considerando a imposição de um tributo sobre um bem, quanto mais elástica a demanda pelo bem, "
+                      "maior será o peso morto e a arrecadação decorrente do imposto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Considerando a imposição de um tributo sobre um bem, quanto mais elástica a demanda pelo "
+                       "bem, maior será o peso morto ") + vm("e a arrecadação") + az(" decorrente do imposto.")),
+        "poucas": ("Demanda mais elástica → a quantidade cai mais com o imposto: " + vd("peso morto maior") + " "
+                   "e " + vd("arrecadação menor") + " (a base tributável encolhe). Os dois andam em sentidos "
+                   "opostos."),
+        "destrinchando": [
+            "Arrecadação = " + vd("t × qₜ") + ". Com demanda elástica, o aumento de preço afugenta muitos "
+            "compradores, qₜ cai bastante e o retângulo da receita diminui.",
+            azb("Peso morto") + " ≈ ½ × t × (q₀ − qₜ): cresce justamente com a queda da quantidade. Mais "
+            "elasticidade → triângulo maior.",
+            "No gráfico (mesma oferta, mesmo t): com demanda inelástica, receita ≈ " + vd("8,5") + " e peso "
+            "morto quase nulo; com demanda elástica, receita = " + vd("7") + " e peso morto bem maior. O "
+            "excedente “sai” do mercado sem passar pelo caixa do governo.",
+            "É a base da " + azb("regra de Ramsey") + ": tributar bens de demanda inelástica arrecada mais e "
+            "distorce menos. Ligada a ela, a curva de " + oc("Laffer") + ": a partir de certa alíquota, a "
+            "queda da base supera o aumento da alíquota e a arrecadação cai — mais cedo quanto mais elástica a "
+            "base.",
+            vm("Regra-âncora: base elástica → muito peso morto e pouca receita; base inelástica → pouca "
+               "distorção e muita receita."),
+        ],
+        "grafico_verso": "ECO-E2-L00618-1-V1",
+        "dissecando": (cz("[meia-verdade]") + " A primeira metade (peso morto maior) é verdadeira; a segunda foi "
+                       "colada pela conjunção “e”, que estende o “maior” à arrecadação. 🔥 Itens que juntam duas "
+                       "grandezas num só “maior” pedem que se teste cada uma separadamente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto mais elástica a demanda, maior o peso morto e menor a arrecadação do imposto.”</i> → "
+            "CERTO",
+            "<i>“Quanto menos elástica a demanda, maior o peso morto do imposto.”</i> → ERRADO (inversão)",
+        ])],
+        "reescrita": ("Considerando a imposição de um tributo sobre um bem, quanto mais elástica a demanda pelo "
+                      "bem, maior será o peso morto " + hl("e menor a arrecadação") + " decorrente do imposto."),
+        "tipo_erro": ["MEIA_VERDADE"], "moduladores": ["quanto mais… maior"], "dificuldade": 1,
+        "comentario_fonte": "Parte certa (peso morto maior) e parte errada: a arrecadação tende a ser menor, "
+                            "pois a quantidade transacionada cai muito.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00673
+    {
+        "id": "ECO-E2-L00673-1", "fonte_ref": "E2-L00673", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "A respeito da teoria do consumidor e dos conceitos de elasticidade, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em um mercado onde a curva de oferta é perfeitamente inelástica, a introdução de um imposto "
+                      "sobre as vendas recairá integralmente sobre o produtor, não havendo peso morto associado à "
+                      "tributação."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um mercado onde a curva de <u>oferta</u> é <u>perfeitamente inelástica</u>, a "
+                      "introdução de um imposto sobre as vendas recairá integralmente sobre o produtor, não havendo "
+                      "peso morto associado à tributação."),
+        "poucas": ("Oferta vertical: a quantidade é fixa e os compradores não aceitam pagar mais por ela. O "
+                   "preço ao consumidor fica igual, o produtor recebe " + vd("p₀ − t") + " e, sem queda de "
+                   "quantidade, " + vd("não há peso morto") + "."),
+        "destrinchando": [
+            "Oferta perfeitamente inelástica = o produtor oferta q₀ a qualquer preço (terra, safra já colhida, "
+            "ingressos de um show, imóveis no curtíssimo prazo).",
+            "Com o imposto, a quantidade não muda; logo o preço ao consumidor, dado pela demanda em q₀, também "
+            "não muda: " + vd("pc = p₀") + ". A cunha inteira sai do preço líquido do vendedor: "
+            + vd("pv = p₀ − t") + ".",
+            "Fórmula: parcela do produtor = |εᴰ| / (εˢ + |εᴰ|) = |εᴰ| / |εᴰ| = " + vd("1") + ".",
+            "Peso morto nulo: nenhuma troca deixa de ocorrer. A receita do governo (t × q₀) sai inteira do "
+            "excedente do produtor — por isso o imposto sobre a terra (" + oc("Henry George") + ") é o exemplo "
+            "clássico de tributo sem distorção.",
+            "Espelho: com demanda perfeitamente inelástica, também não há peso morto, mas quem paga tudo é o "
+            "consumidor.",
+        ],
+        "grafico_verso": "ECO-E2-L00673-1-V1",
+        "dissecando": (cz("[literalidade · detalhe]") + " Duas conclusões corretas do mesmo caso-limite. O "
+                       "candidato que decorou “demanda inelástica → consumidor paga” e não lê de qual curva se "
+                       "trata marca ERRADO. Leia sempre <b>qual</b> curva é inelástica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com oferta perfeitamente inelástica, o imposto sobre vendas é repassado integralmente aos "
+            "consumidores.”</i> → ERRADO (troca de ator: recai sobre o produtor)",
+            "<i>“Com oferta perfeitamente inelástica, a quantidade transacionada não se altera com o "
+            "imposto.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["integralmente"], "dificuldade": 1,
+        "comentario_fonte": "Oferta vertical: quantidade fixa; ônus recai sobre o lado mais inelástico; produtor "
+                            "absorve todo o imposto; quantidade inalterada, peso morto zero.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00729
+    {
+        "id": "ECO-E2-L00729-1", "fonte_ref": "E2-L00729", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_4,
+        "rotulo_item": "Item",
+        "assertiva": ("No equilíbrio de mercado, o excedente do consumidor é maximizado apenas quando a "
+                      "elasticidade-preço da demanda é igual à elasticidade-preço da oferta."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No equilíbrio de mercado, o excedente ") + vm("do consumidor") + az(" é maximizado ")
+                    + vm("apenas quando a elasticidade-preço da demanda é igual à elasticidade-preço da oferta")
+                    + az(".")),
+        "poucas": ("O equilíbrio competitivo maximiza o " + azb("excedente total") + " (consumidor + produtor), "
+                   "quaisquer que sejam as elasticidades. Elas só definem como esse total se reparte."),
+        "destrinchando": [
+            azb("Excedente total") + " = valor para os compradores − custo dos vendedores, somado sobre as "
+            "unidades trocadas. Ele é máximo quando se produzem todas as unidades cujo valor (altura da "
+            "demanda) supera o custo (altura da oferta) e nenhuma outra: exatamente em q*, onde as curvas se "
+            "cruzam.",
+            "É o " + azb("primeiro teorema do bem-estar") + " em versão de equilíbrio parcial: mercado "
+            "competitivo, sem externalidades nem falhas, chega à alocação eficiente.",
+            "O excedente <b>do consumidor isoladamente</b> não é maximizado no equilíbrio: um preço mais baixo "
+            "(teto) poderia aumentá-lo em parte, à custa do produtor e com peso morto.",
+            "As elasticidades decidem a <b>divisão</b>: demanda inelástica e oferta elástica → EC grande e EP "
+            "pequeno; o inverso também vale. Igualdade de elasticidades não tem papel especial.",
+        ],
+        "dissecando": (cz("[troca de conceito · restrição indevida]") + " Troca o excedente total pelo do "
+                       "consumidor e inventa uma condição (“apenas quando…”) sem base no modelo. Itens com "
+                       "“apenas quando” amarrado a uma igualdade arbitrária costumam ser fabricados."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O equilíbrio competitivo maximiza a soma dos excedentes do consumidor e do produtor.”</i> → "
+            "CERTO",
+            "<i>“Um preço máximo abaixo do equilíbrio sempre aumenta o excedente do consumidor.”</i> → ERRADO "
+            "(modulador absoluto: depende de quanto a quantidade cai)",
+        ])],
+        "reescrita": ("No equilíbrio de mercado, o excedente " + hl("total (do consumidor e do produtor)") + " é "
+                      "maximizado, " + hl("quaisquer que sejam as elasticidades-preço da demanda e da oferta")
+                      + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "RESTRICAO"], "moduladores": ["apenas"], "dificuldade": 1,
+        "comentario_fonte": "O excedente total é maximizado no equilíbrio competitivo; elasticidades definem o "
+                            "tamanho relativo dos excedentes; não há condição de igualdade.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E2-L00784 (mesmo item e mesmo comentário) fundida neste card"],
+    },
+    # ------------------------------------------------------------------ E2-L00732
+    {
+        "id": "ECO-E2-L00732-1", "fonte_ref": "E2-L00732", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_4,
+        "rotulo_item": "Item",
+        "assertiva": ("Suponha que exista um mercado de um determinado bem em equilíbrio e que o governo, por algum "
+                      "motivo, resolva tributar o consumo desse bem. A intervenção geraria um “peso morto”, ou "
+                      "seja, o tributo reduz o excedente do consumidor e amplia o excedente do produtor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Suponha que exista um mercado de um determinado bem em equilíbrio e que o governo, por "
+                       "algum motivo, resolva tributar o consumo desse bem. A intervenção geraria um “peso morto”, "
+                       "ou seja, o tributo reduz o excedente do consumidor e ") + vm("amplia") + az(" o "
+                       "excedente do produtor.")),
+        "poucas": ("O tributo reduz " + vd("os dois") + " excedentes: o consumidor paga mais, o produtor recebe "
+                   "menos. Parte da perda vira receita; o resto é o " + azb("peso morto") + " — que, aliás, não "
+                   "é definido pela redistribuição entre os dois."),
+        "destrinchando": [
+            "Com o imposto: " + vd("pc ↑") + " (EC cai), " + vd("pv ↓") + " (EP cai), " + vd("q ↓") + ". Quem "
+            "ganha é o governo (receita t × qₜ).",
+            "Contabilidade: (perda de EC) + (perda de EP) = receita + " + azb("peso morto") + ". O peso morto é "
+            "a parte das perdas que ninguém recebe — as trocas que deixaram de ocorrer.",
+            "O “ou seja” do item define mal o peso morto: redução de um excedente com aumento do outro seria "
+            "uma <b>transferência</b>, não perda de eficiência.",
+            "Casos-limite: com oferta perfeitamente elástica, o EP não muda (o consumidor arca com tudo); com "
+            "demanda perfeitamente elástica, o EC não muda. Em nenhum caso o EP <b>aumenta</b> com o imposto.",
+            "Quem pode ampliar o EP é o " + azb("preço mínimo") + " (piso) ou a tarifa de importação — "
+            "intervenções que elevam o preço recebido pelo produtor, não o reduzem.",
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " O começo é certo (gera peso morto, reduz o "
+                       "EC); o final transforma o imposto numa transferência consumidor → produtor, como num "
+                       "preço mínimo. Pista: tributo tira dos dois lados; quem ganha é o fisco."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O tributo reduz os excedentes do consumidor e do produtor, e parte dessa redução não é "
+            "compensada pela arrecadação.”</i> → CERTO",
+            "<i>“O peso morto do tributo é igual à soma das perdas de excedente do consumidor e do "
+            "produtor.”</i> → ERRADO (falta descontar a receita)",
+        ])],
+        "reescrita": ("Suponha que exista um mercado de um determinado bem em equilíbrio e que o governo, por algum "
+                      "motivo, resolva tributar o consumo desse bem. A intervenção geraria um “peso morto”, ou seja, o "
+                      "tributo reduz o excedente do consumidor e " + hl("também reduz") + " o excedente do "
+                      "produtor."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O tributo gera peso morto; reduz o EC (preço maior) e o EP (preço líquido menor); "
+                            "não amplia o EP.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E2-L00787 (mesmo item e mesmo comentário) fundida neste card"],
+    },
+    # ------------------------------------------------------------------ E2-L00878
+    {
+        "id": "ECO-E2-L00878-1", "fonte_ref": "E2-L00878", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": ("Com relação às intervenções governamentais no equilíbrio de mercado e ao conceito de "
+                    "elasticidade, julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Quando a demanda de um bem é elástica, um imposto adotado pelo governo implicará maior perda "
+                      "de excedente do consumidor em relação à perda de excedente do produtor do referido bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Quando a demanda de um bem é ") + vm("elástica") + az(", um imposto adotado pelo governo "
+                       "implicará ") + vm("maior") + az(" perda de excedente do consumidor em relação à perda de "
+                       "excedente do produtor do referido bem.")),
+        "poucas": ("Quem perde mais é o lado " + azb("menos elástico") + ", e isso exige comparar "
+                   "<b>as duas</b> elasticidades. Demanda elástica, por si só, tende a deixar o consumidor com a "
+                   "<b>menor</b> parte, não a maior."),
+        "destrinchando": [
+            "A repartição depende da elasticidade <b>relativa</b>: parcela do consumidor = " + vd("εˢ / (εˢ + "
+            "|εᴰ|)") + ". Saber só que a demanda é elástica (|εᴰ| > 1) não basta; é preciso compará-la à da "
+            "oferta.",
+            "Se a oferta for menos elástica que a demanda (εˢ < |εᴰ|), o produtor arca com a maior parte e perde "
+            "mais excedente. Para o consumidor perder mais, a oferta teria de ser <b>ainda mais elástica</b> que "
+            "a demanda.",
+            "No gráfico: à esquerda, oferta elástica e demanda inelástica — pc sobe quase t inteiro e o "
+            "consumidor arca com mais; à direita, oferta inelástica e demanda elástica — pv cai quase t inteiro "
+            "e o produtor arca com mais.",
+            "Intuição: consumidor com muitos substitutos (demanda elástica) “foge” do aumento de preço; o "
+            "produtor, sem para onde ir, aceita receber menos.",
+        ],
+        "grafico_verso": "ECO-E2-L00878-1-V1",
+        "dissecando": (cz("[inversão · nexo indevido]") + " O item tira uma conclusão sobre a <b>divisão</b> do "
+                       "ônus a partir de uma só elasticidade e, ainda, no sentido contrário ao intuitivo. 🔥 "
+                       "Incidência sempre compara as duas curvas; item que informa só uma deve ser lido com "
+                       "desconfiança."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quando a demanda é mais elástica que a oferta, o imposto implica maior perda de excedente do "
+            "produtor que do consumidor.”</i> → CERTO",
+            "<i>“Quando a oferta é mais elástica que a demanda, o produtor arca com a maior parte do "
+            "imposto.”</i> → ERRADO (inversão: arca o consumidor)",
+        ])],
+        "reescrita": ("Quando a demanda de um bem é " + hl("mais elástica que a oferta") + ", um imposto adotado "
+                      "pelo governo implicará " + hl("menor") + " perda de excedente do consumidor em relação à "
+                      "perda de excedente do produtor do referido bem."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Para o consumidor perder mais, a oferta teria de ser mais elástica que a demanda; o "
+                            "maior ônus recai sobre o lado menos elástico; o enunciado não informa a oferta.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 137", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00878-1-V1, dois painéis)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01036
+    {
+        "id": "ECO-E2-L01036-1", "fonte_ref": "E2-L01036", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EQ,
+        "rotulo_item": "Item",
+        "assertiva": "O consumidor tem um excedente no valor de R$ 135,00.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O consumidor tem um excedente no valor de <u>R$ 135,00</u>."),
+        "poucas": ("Equilíbrio em " + vd("p = 7, Q = 90") + "; o preço de reserva (Qᴰ = 0) é " + vd("10")
+                   + ". Excedente do consumidor = (10 − 7) × 90 ÷ 2 = " + vd("135") + "."),
+        "destrinchando": [
+            "Roteiro de três passos para mercado linear: (1) igualar Qᴰ = Qˢ → 300 − 30p = 10p + 20 → "
+            + vd("p* = 7") + "; (2) substituir → " + vd("Q* = 90") + "; (3) achar o intercepto da demanda no "
+            "eixo do preço: Qᴰ = 0 ⇒ " + vd("p = 10") + ".",
+            azb("Excedente do consumidor") + " = área entre a demanda e a linha do preço, de 0 a Q*: triângulo de "
+            "base 90 e altura 10 − 7 = 3 → " + vd("135") + ".",
+            azb("Excedente do produtor") + ", para comparar: a oferta corta o eixo das quantidades em Q = 20 "
+            "(p = 0), então a área é um retângulo 20 × 7 mais um triângulo 70 × 7 ÷ 2 = " + vd("385") + ".",
+            "Erro clássico: usar o 300 (intercepto no eixo das quantidades) como altura, ou esquecer o ÷ 2. "
+            "Reescreva sempre a demanda em forma inversa (p = 10 − Q/30) antes de medir áreas.",
+        ],
+        "grafico_verso": "ECO-E2-L01036-1-V1",
+        "dissecando": (cz("[detalhe]") + " Item de cálculo puro: a banca dá o valor exato e aposta no intercepto "
+                       "errado ou na falta da divisão por 2 (resultado 270)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O consumidor tem um excedente no valor de R$ 270,00.”</i> → ERRADO (esqueceu o ÷ 2)",
+            "<i>“O excedente do produtor é inferior ao do consumidor.”</i> → ERRADO (385 > 135)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "p = 7, Q = 90; demanda zera em p = 10; EC = 90 × 3 ÷ 2 = 135.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 174", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "texto (equações transcritas no comando)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01037
+    {
+        "id": "ECO-E2-L01037-1", "fonte_ref": "E2-L01037", "destino": "03", "subtema": H2["piso"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EQ,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o governo tabelar o preço do produto em R$ 6,00, haverá um excesso de oferta de 50 "
+                      "unidades."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se o governo tabelar o preço do produto em R$ 6,00, haverá um excesso de ")
+                    + vm("oferta de 50") + az(" unidades.")),
+        "poucas": ("Teto abaixo do equilíbrio (6 < 7) gera " + azb("excesso de demanda") + ": Qᴰ = " + vd("120")
+                   + " e Qˢ = " + vd("80") + " — faltam " + vd("40") + " unidades."),
+        "destrinchando": [
+            "Com p = 6: Qᴰ = 300 − 180 = " + vd("120") + "; Qˢ = 60 + 20 = " + vd("80") + ". Diferença: "
+            + vd("40") + " unidades de <b>escassez</b>.",
+            "Um " + azb("preço máximo") + " (teto) só “morde” se ficar <b>abaixo</b> do equilíbrio: gera filas, "
+            "racionamento, mercado paralelo e queda de qualidade. Um " + azb("preço mínimo") + " (piso) só morde "
+            "<b>acima</b> do equilíbrio e gera excesso de oferta.",
+            "Teto acima do equilíbrio ou piso abaixo dele são inócuos: o mercado continua em (90; 7).",
+            "Bem-estar com o teto: transaciona-se só o que os produtores aceitam vender (80); surge peso morto "
+            "entre 80 e 90, e parte do excedente passa do produtor ao consumidor que consegue comprar.",
+        ],
+        "grafico_verso": "ECO-E2-L01037-1-V1",
+        "dissecando": (cz("[troca de conceito · dado alterado]") + " Duas falhas empilhadas: o sentido do "
+                       "desequilíbrio (oferta × demanda) e o tamanho (50 × 40). Basta a primeira para marcar "
+                       "ERRADO: preço tabelado abaixo do equilíbrio nunca gera sobra."),
+        "modulos": [("🧠 Mnemônico", ["<b>Teto</b> baixo → <b>t</b>odo mundo quer comprar (escassez); <b>piso</b> "
+                                      "alto → <b>p</b>roduto sobrando."])],
+        "reescrita": ("Se o governo tabelar o preço do produto em R$ 6,00, haverá um excesso de " + hl("demanda")
+                      + " de " + hl("40") + " unidades."),
+        "tipo_erro": ["TROCA_CONCEITO", "DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "P = 6 < 7 gera excesso de demanda, não de oferta.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 174", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "texto (equações transcritas no comando)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01038
+    {
+        "id": "ECO-E2-L01038-1", "fonte_ref": "E2-L01038", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EQ,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o governo estabelecer um imposto de R$ 1,00 por unidade vendida, o novo preço pago pelo "
+                      "consumidor será de R$ 8,00."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se o governo estabelecer um imposto de R$ 1,00 por unidade vendida, o novo preço pago "
+                       "pelo consumidor será de ") + vm("R$ 8,00") + az(".")),
+        "poucas": ("O imposto se reparte: o consumidor passa a pagar " + vd("R$ 7,25") + " (+0,25) e o produtor "
+                   "a receber " + vd("R$ 6,25") + " (−0,75). R$ 8,00 suporia repasse integral."),
+        "destrinchando": [
+            "Imposto no vendedor: ele só oferta se o preço líquido p − 1 for compatível com a oferta, então "
+            "Qˢ = 10(p − 1) + 20 = 10p + 10. Equilíbrio: 300 − 30p = 10p + 10 → " + vd("pc = 7,25") + "; "
+            + vd("Q = 82,5") + "; " + vd("pv = 6,25") + ".",
+            "Repartição: consumidor arca com " + vd("0,25 (25%)") + "; produtor, com " + vd("0,75 (75%)")
+            + ". Atalho para retas: parcela do consumidor = inclinação da oferta em Q ÷ soma das inclinações = "
+            "10 ÷ (10 + 30) = 1/4.",
+            "Conferência pelas elasticidades no ponto (90; 7): |εᴰ| = 30 × 7/90 ≈ " + vd("2,33") + "; εˢ = 10 × "
+            "7/90 ≈ " + vd("0,78") + ". A demanda é mais elástica, então o produtor paga mais: εˢ / (εˢ + |εᴰ|) "
+            "≈ 0,25.",
+            "Receita do governo = 1 × 82,5 = " + vd("82,5") + "; peso morto = ½ × 1 × (90 − 82,5) = "
+            + vd("3,75") + ".",
+        ],
+        "grafico_verso": "ECO-E2-L01038-1-V1",
+        "dissecando": (cz("[dado alterado · modulador absoluto]") + " O valor 8 = 7 + 1 pressupõe repasse "
+                       "integral, só possível com demanda vertical ou oferta horizontal — o que as equações "
+                       "dadas não são. O item testa se o candidato recalcula o equilíbrio ou apenas soma o "
+                       "imposto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com o imposto de R$ 1,00, o preço recebido pelo produtor cairá para R$ 6,25.”</i> → CERTO",
+            "<i>“Com o imposto de R$ 1,00, a arrecadação será de R$ 90,00.”</i> → ERRADO (a quantidade cai para "
+            "82,5)",
+        ])],
+        "reescrita": ("Se o governo estabelecer um imposto de R$ 1,00 por unidade vendida, o novo preço pago pelo "
+                      "consumidor será de " + hl("R$ 7,25") + "."),
+        "tipo_erro": ["DADO_ALTERADO", "GENERALIZACAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Fora dos casos extremos, o ônus se distribui; o preço não sobe o valor total do "
+                            "imposto (de 7 para 8).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
     },
 ]

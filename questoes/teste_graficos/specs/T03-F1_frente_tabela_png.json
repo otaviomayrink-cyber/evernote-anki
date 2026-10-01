@@ -1,0 +1,5 @@
+{"id": "ECO-T03-F1", "uso": "frente", "tipo": "tabela", "tamanho": "baixo",
+ "legenda": "Coeficientes técnicos de produção (horas de trabalho por unidade).",
+ "cabecalho": ["Produto", "Brasil", "México"],
+ "linhas": [["Calçados", "1/7", "1"], ["Vestuário", "1/3", "1/2"]]
+}

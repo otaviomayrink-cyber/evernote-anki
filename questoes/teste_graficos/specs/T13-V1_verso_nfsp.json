@@ -1,0 +1,35 @@
+{
+ "id": "ECO-T13-V1",
+ "uso": "verso",
+ "tipo": "dados",
+ "grafico": "barras",
+ "legenda": "Nas NFSP, valor positivo = déficit (necessidade de financiamento) e negativo = superávit. Em 2022 houve superávit primário (−1,2% do PIB); em 2023, déficit primário (2,3%). Nominal = primário + juros nominais.",
+ "titulo": "NFSP do setor público consolidado (% do PIB)",
+ "categorias": [
+  "Primário",
+  "Juros nominais",
+  "Nominal"
+ ],
+ "series": [
+  {
+   "nome": "2022",
+   "valores": [
+    -1.2,
+    5.8,
+    4.6
+   ]
+  },
+  {
+   "nome": "2023",
+   "valores": [
+    2.3,
+    6.6,
+    8.9
+   ]
+  }
+ ],
+ "unidade": "% do PIB",
+ "sufixo": "%",
+ "legenda_pos": "upper left",
+ "fonte": "Banco Central do Brasil, 2024 (dados da tabela do enunciado)"
+}

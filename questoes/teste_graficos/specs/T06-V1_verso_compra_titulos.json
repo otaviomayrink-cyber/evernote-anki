@@ -1,0 +1,20 @@
+{
+ "id": "ECO-T06-V1",
+ "uso": "verso",
+ "legenda": "Compra de títulos pelo Banco Central = expansão monetária: a LM desce para a direita (LM1 → LM2), os juros caem (i1 → i2) e a renda sobe (Y1 → Y2).",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "LM": "direita"
+  }
+ },
+ "substituir": {
+  "IS1": {
+   "rotulo": "IS"
+  }
+ },
+ "checar": [
+  "E2.y < E1.y",
+  "E2.x > E1.x"
+ ]
+}

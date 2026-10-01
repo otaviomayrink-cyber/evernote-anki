@@ -72,3 +72,9 @@ O `.apkg` sai compactado (cerca de 5x menor). Se mesmo assim passar do limite de
 com `--numeros 01-39` e `--numeros 40-99`: os baralhos têm o mesmo nome e se juntam no Anki.
 
 Arquivos `.7z` podem ser extraídos com `pip install py7zr` e `python3 -c "import py7zr; py7zr.SevenZipFile('arq.7z').extractall('entrada/x')"`.
+
+## Notas de questões (-Q) e gráficos
+
+A pasta [`questoes/`](questoes/README.md) traz o protocolo de consolidação das notas de questões objetivas
+(prompt, Folha -Q v3, Especificação do JSONL v2, Protocolo de Gráficos v1) e os scripts que geram os gráficos,
+montam as notas em ENEX com as figuras embutidas e conferem o contrato.

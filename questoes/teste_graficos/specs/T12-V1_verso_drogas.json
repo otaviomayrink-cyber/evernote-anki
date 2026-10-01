@@ -1,0 +1,196 @@
+{
+ "id": "ECO-T12-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Demanda inelástica (quase vertical): a repressão ao tráfico desloca a oferta para a esquerda (O1 → O2); o preço sobe muito, a quantidade cai pouco — e o gasto total (retângulo p × q) aumenta.",
+ "paineis": [
+  {
+   "titulo": "Antes da repressão",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      4.2,
+      9.6
+     ],
+     "p2": [
+      5.6,
+      0.4
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S1",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      0.8
+     ],
+     "p2": [
+      8.5,
+      5.6
+     ],
+     "familia": "oferta",
+     "rotulo": "O₁"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "D",
+      "S1"
+     ],
+     "rotulo": "E₁",
+     "projetar": true,
+     "rotulo_x": "q₁",
+     "rotulo_y": "p₁"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       "E1.y"
+      ],
+      "E1",
+      [
+       "E1.x",
+       0
+      ]
+     ],
+     "papel": "gasto",
+     "rotulo": "gasto",
+     "rotulo_xy": [
+      "E1.x*0.3",
+      "E1.y*0.8"
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Depois da repressão",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      4.2,
+      9.6
+     ],
+     "p2": [
+      5.6,
+      0.4
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    },
+    {
+     "id": "S1",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      0.8
+     ],
+     "p2": [
+      8.5,
+      5.6
+     ],
+     "familia": "oferta",
+     "rotulo": "O₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "S2",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      3.8
+     ],
+     "p2": [
+      8.0,
+      8.3
+     ],
+     "familia": "oferta",
+     "rotulo": "O₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "S1",
+     "para": "S2",
+     "sentido": "cima",
+     "em_x": 7.5
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "D",
+      "S1"
+     ],
+     "marcar": false
+    },
+    {
+     "id": "E2",
+     "intersecao": [
+      "D",
+      "S2"
+     ],
+     "rotulo": "E₂",
+     "projetar": true,
+     "rotulo_x": "q₂",
+     "rotulo_y": "p₂"
+    }
+   ],
+   "areas": [
+    {
+     "tipo": "poligono",
+     "vertices": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       "E2.y"
+      ],
+      "E2",
+      [
+       "E2.x",
+       0
+      ]
+     ],
+     "papel": "gasto",
+     "rotulo": "gasto maior",
+     "rotulo_xy": [
+      "E2.x*0.5",
+      "E2.y*0.33"
+     ]
+    }
+   ],
+   "checar": [
+    "E2.y > E1.y",
+    "E2.x < E1.x",
+    "E2.x*E2.y > E1.x*E1.y"
+   ]
+  }
+ ]
+}

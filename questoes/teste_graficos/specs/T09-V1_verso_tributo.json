@@ -1,0 +1,9 @@
+{
+ "id": "ECO-T09-V1",
+ "uso": "verso",
+ "legenda": "O imposto t abre uma cunha entre o preço pago pelo comprador (pc) e o recebido pelo vendedor (pv). O retângulo verde é a receita do governo (t × qt); o triângulo vermelho é o peso morto — trocas que deixam de acontecer entre qt e q0.",
+ "modelo": "tributo",
+ "params": {
+  "t": 2
+ }
+}

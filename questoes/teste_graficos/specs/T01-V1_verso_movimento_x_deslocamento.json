@@ -1,0 +1,130 @@
+{
+ "id": "ECO-T01-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "À esquerda, o preço do próprio bem cai e o consumidor anda AO LONGO da mesma curva (A → B). À direita, muda outro determinante da demanda e a CURVA INTEIRA se desloca (D1 → D2).",
+ "paineis": [
+  {
+   "titulo": "Cai o preço do próprio bem x",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D",
+     "tipo": "reta",
+     "p1": [
+      1,
+      9
+     ],
+     "p2": [
+      9,
+      1
+     ],
+     "familia": "demanda",
+     "rotulo": "D"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "sobre": "D",
+     "x": 3,
+     "rotulo": "A",
+     "projetar": true,
+     "rotulo_x": "q₁",
+     "rotulo_y": "p₁"
+    },
+    {
+     "id": "B",
+     "sobre": "D",
+     "x": 6,
+     "rotulo": "B",
+     "projetar": true,
+     "rotulo_x": "q₂",
+     "rotulo_y": "p₂"
+    }
+   ],
+   "setas": [
+    {
+     "de": [
+      "A.x+0.35",
+      "A.y-0.05"
+     ],
+     "para": [
+      "B.x-0.35",
+      "B.y+0.05"
+     ],
+     "cor": "vermelho",
+     "rotulo": "movimento ao longo",
+     "rotulo_desloc": [
+      8,
+      10
+     ]
+    }
+   ],
+   "checar": [
+    "B.y < A.y",
+    "B.x > A.x"
+   ]
+  },
+  {
+   "titulo": "Muda renda, gostos, preço de y…",
+   "eixos": {
+    "x": "q",
+    "y": "p"
+   },
+   "curvas": [
+    {
+     "id": "D1",
+     "tipo": "reta",
+     "p1": [
+      1,
+      8.5
+     ],
+     "p2": [
+      6,
+      1.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "D2",
+     "tipo": "reta",
+     "p1": [
+      3.5,
+      8.5
+     ],
+     "p2": [
+      8.5,
+      1.5
+     ],
+     "familia": "demanda",
+     "rotulo": "D₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "D1",
+     "para": "D2",
+     "sentido": "direita",
+     "em_y": 5
+    }
+   ],
+   "textos": [
+    {
+     "xy": [
+      5.6,
+      7.6
+     ],
+     "texto": "deslocamento\nda curva",
+     "cor": "vermelho",
+     "negrito": true
+    }
+   ]
+  }
+ ]
+}

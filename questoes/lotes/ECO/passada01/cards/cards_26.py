@@ -855,5 +855,330 @@ CARDS = [
                            "acao": "texto (absorvido no 📖)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00175
+    {
+        "id": "ECO-E3-L00175-1", "fonte_ref": "E3-L00175", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_ANTT_REG,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com o teorema de Coase, desde que atribuído o direito de propriedade em favor do "
+                      "agente que sofre os efeitos de uma externalidade negativa, a negociação privada entre quem "
+                      "produz e quem sofre os efeitos da externalidade resultará em uma alocação socialmente "
+                      "eficiente na ausência de custos de transação."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com o teorema de Coase, ")
+                    + vm("desde que atribuído o direito de propriedade em favor do agente que sofre os efeitos de "
+                         "uma externalidade negativa")
+                    + az(", a negociação privada entre quem produz e quem sofre os efeitos da externalidade "
+                         "resultará em uma alocação socialmente eficiente na ausência de custos de transação.")),
+        "poucas": ("Para " + oc("Coase") + ", basta que o direito esteja " + azb("bem definido") + " — a favor "
+                   "de " + vm("qualquer") + " das partes. A atribuição muda quem paga a quem (distribuição), não a "
+                   "eficiência."),
+        "destrinchando": [
+            "Enunciado do teorema: com direitos de propriedade bem definidos e custos de transação nulos, a "
+            "barganha leva à alocação eficiente " + azb("independentemente de a quem o direito é atribuído")
+            + ".",
+            "O exemplo do próprio " + oc("Coase") + " (<i>The Problem of Social Cost</i>, 1960): o gado do "
+            "criador invade a lavoura vizinha. Se o direito é do criador, o agricultor paga a cerca quando o "
+            "dano supera o custo dela. Se o direito é do agricultor, o criador constrói a cerca (ou indeniza, "
+            "se a cerca custar mais que o dano). Em ambos os casos a cerca sai <b>se e somente se</b> é "
+            "eficiente que saia.",
+            "O que muda com a atribuição é a " + azb("distribuição") + " da renda: quem tem o direito recebe; "
+            "quem não tem paga. A " + azb("eficiência") + " (quanto de externalidade sobra) é a mesma.",
+            "Ressalvas da literatura: efeitos renda grandes podem alterar o resultado; informação assimétrica "
+            "e custos de transação positivos fazem a atribuição voltar a importar (aí o direito deve ir para "
+            "quem tem menor custo de evitar o dano).",
+            vm("Regra-âncora: Coase exige direito DEFINIDO, não direito da VÍTIMA."),
+        ],
+        "dissecando": (cz("[restrição indevida]") + " A expressão “desde que” transforma uma das atribuições "
+                       "possíveis em condição necessária. O resto (negociação privada, custos de transação "
+                       "nulos, eficiência) está certo, o que induz a marcar CERTO. 🔥 Variante frequente: “o "
+                       "resultado depende de quem detém o direito” (ERRADO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pelo teorema de Coase, a atribuição inicial dos direitos de propriedade afeta a distribuição "
+            "da renda entre as partes, mas não a eficiência da alocação.”</i> → CERTO",
+            "<i>“O teorema de Coase dispensa a definição de direitos de propriedade.”</i> → ERRADO (os "
+            "direitos precisam estar definidos)",
+        ])],
+        "reescrita": ("De acordo com o teorema de Coase, " + hl("qualquer que seja o agente em favor do qual se "
+                      "atribua o direito de propriedade — quem produz ou quem sofre a externalidade —") + ", a "
+                      "negociação privada entre quem produz e quem sofre os efeitos da externalidade resultará em "
+                      "uma alocação socialmente eficiente na ausência de custos de transação."),
+        "tipo_erro": ["RESTRICAO"], "moduladores": ["desde que"], "dificuldade": 2,
+        "comentario_fonte": "Coase: sem custos de transação e com direitos bem definidos, a alocação é eficiente "
+                            "independentemente de quem detém o direito; não é preciso atribuí-lo à vítima. Exemplo "
+                            "das fazendas (gado × lavoura).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 221", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖 (exemplo das fazendas)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00177
+    {
+        "id": "ECO-E3-L00177-1", "fonte_ref": "E3-L00177", "destino": "12", "subtema": H2["reg"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": COM_ANTT_REG,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a teoria da competição entre grupos de interesse, a regulação se prestaria a "
+                      "atender às necessidades dos grupos de interesse que são capazes de exercer maior pressão "
+                      "sobre os reguladores, uma vez que esses grupos são mais capazes de contribuir com os "
+                      "objetivos individuais desses agentes e de manter ou ampliar seu <i>status</i> político."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo com a teoria da competição entre grupos de interesse, a regulação se prestaria a "
+                      "atender às necessidades dos grupos de interesse que são capazes de exercer <u>maior "
+                      "pressão</u> sobre os reguladores, uma vez que esses grupos são mais capazes de contribuir "
+                      "com os <u>objetivos individuais</u> desses agentes e de manter ou ampliar seu <i>status</i> "
+                      "político."),
+        "poucas": ("Na " + azb("teoria econômica da regulação") + ", o regulador maximiza o próprio apoio "
+                   "político; a regra resultante favorece quem pressiona mais, não necessariamente o interesse "
+                   "público nem só a indústria."),
+        "destrinchando": [
+            "Três estágios das teorias da regulação (taxonomia de " + oc("Viscusi, Vernon e Harrington")
+            + "):",
+            azb("Interesse público") + ": a regulação corrige falhas de mercado (monopólio natural, "
+            "externalidades); o regulador é um agente técnico e benevolente. Visão normativa — não explica por "
+            "que tantas regras beneficiam os regulados.",
+            azb("Captura") + ": a agência acaba servindo ao setor regulado, que é concentrado, organizado e "
+            "detém a informação técnica. " + oc("George Stigler") + " (<i>The Theory of Economic Regulation</i>, "
+            + vd("1971") + ") deu-lhe forma econômica: a regulação é “comprada” pela indústria (barreiras à "
+            "entrada, preços mínimos, subsídios).",
+            azb("Competição entre grupos de interesse") + ": " + oc("Sam Peltzman") + " (" + vd("1976")
+            + ") modela o regulador como maximizador de apoio político, que pondera produtores e consumidores e "
+            "escolhe um meio-termo; " + oc("Gary Becker") + " (" + vd("1983") + ") modela a disputa entre "
+            "grupos de pressão: vence quem converte recursos em influência com mais eficiência, e o peso morto "
+            "da regra limita as transferências.",
+            "Por que grupos pequenos ganham: " + oc("Mancur Olson") + " (<i>A Lógica da Ação Coletiva</i>, "
+            + vd("1965") + ") — benefícios concentrados e custos difusos; em grupos grandes, cada membro "
+            "ganha pouco e prefere pegar carona.",
+            "Antídotos institucionais (no " + rx("Brasil") + ", a Lei 13.848/2019): mandatos fixos, "
+            "transparência, consultas públicas e Análise de Impacto Regulatório.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item reescreve a definição da teoria (regulador "
+                       "preocupado com o próprio poder; regra desenhada para o grupo de maior pressão "
+                       "relativa). A armadilha seria confundi-la com a teoria do interesse público, que "
+                       "pressupõe regulador benevolente."),
+        "modulos": [("📚 Autores e teses", [
+            oc("Stigler") + " (1971) → a regulação é adquirida pela indústria e desenhada em seu benefício.",
+            oc("Peltzman") + " (1976) → o regulador equilibra ganhos de produtores e consumidores para "
+            "maximizar votos/apoio.",
+            oc("Becker") + " (1983) → competição entre grupos de pressão; ineficiência das transferências "
+            "como freio.",
+        ]), ("😈 Para dificultar", [
+            "<i>“Segundo a teoria do interesse público, a regulação atende aos grupos capazes de exercer maior "
+            "pressão sobre os reguladores.”</i> → ERRADO (troca de conceito: essa é a teoria dos grupos de "
+            "interesse)",
+            "<i>“A teoria da captura sustenta que a agência tende a agir em favor do setor regulado.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["se prestaria"], "dificuldade": 2,
+        "comentario_fonte": "Três teorias: interesse público, captura e competição entre grupos de interesse "
+                            "(regulador quer se perpetuar; regra atende ao grupo de maior pressão). Stigler, "
+                            "Peltzman, Becker, Olson; tabelas comparativas.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 237-239", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvidas no 📖 (síntese comparativa das teorias)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00266
+    {
+        "id": "ECO-E3-L00266-1", "fonte_ref": "E3-L00266", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": True,
+        "comando": COM_NIDI_59,
+        "rotulo_item": "Item",
+        "assertiva": ("Para determinar o nível eficiente de oferta de um bem público é necessário igualar a soma dos "
+                      "benefícios marginais dos usuários do bem público ao custo marginal de sua produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Para determinar o nível eficiente de oferta de um bem público é necessário igualar a "
+                      "<u>soma dos benefícios marginais</u> dos usuários do bem público ao custo marginal de sua "
+                      "produção."),
+        "poucas": ("É a " + azb("condição de Samuelson") + ": " + vd("ΣBMg = CMg") + ". Como todos consomem a "
+                   "mesma unidade, o benefício social de produzi-la é a soma do que ela vale para cada um."),
+        "destrinchando": [
+            "Bem privado: eficiência quando o benefício marginal de <b>cada</b> consumidor iguala o custo "
+            "marginal (BMg<sub>i</sub> = CMg). Cada um consome a sua unidade.",
+            "Bem público: a unidade adicional serve a todos ao mesmo tempo (não rivalidade). Logo o benefício "
+            "social dela é " + vd("BMg₁ + BMg₂ + … + BMgₙ") + ", e o nível eficiente está onde essa soma iguala "
+            "o CMg. " + oc("Paul Samuelson") + " formalizou a regra em <i>The Pure Theory of Public "
+            "Expenditure</i> (" + vd("1954") + ").",
+            "Graficamente: soma " + azb("vertical") + " das curvas individuais de benefício marginal (no bem "
+            "privado, a demanda de mercado é soma " + azb("horizontal") + "). No gráfico abaixo, em q* = 2: "
+            "3,50 + 2,00 = 5,50 = CMg. Note que, isoladamente, nenhuma pessoa pagaria 5,50 pela unidade.",
+            "O mercado não chega lá: como ninguém é excluído, cada um subdeclara a disposição a pagar "
+            "(" + azb("carona") + ") e a provisão voluntária fica abaixo de q*, quando existe.",
+            "Contraste com Pindyck: a mesma lógica vale para bens privados (BMg = CMg); o que muda no bem "
+            "público é <b>como</b> se mede o benefício marginal.",
+        ],
+        "grafico_verso": "ECO-E3-L00266-1-V1",
+        "dissecando": (cz("[literalidade]") + " Item extraído quase palavra por palavra do " + oc("Pindyck")
+                       + " (capítulo de externalidades e bens públicos). A armadilha seria trocar “soma dos "
+                       "benefícios marginais” por “média” ou por “benefício marginal do usuário que mais "
+                       "valoriza o bem”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O nível eficiente de um bem público é aquele em que o benefício marginal de cada usuário "
+            "iguala o custo marginal.”</i> → ERRADO (troca de conceito: essa é a regra do bem privado)",
+            "<i>“A curva de benefício marginal social de um bem público resulta da soma vertical das curvas "
+            "individuais.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["é necessário"], "dificuldade": 1,
+        "comentario_fonte": "Condição de Samuelson: ΣBMg = CMg; soma vertical por não rivalidade; gráfico de "
+                            "Pindyck (p. 683) com duas pessoas e CMg; exemplos numéricos; carona.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 369", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00266-1-V1, valores próprios)"},
+                          {"ref": "IMAGEM 370", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": ["texto_parcial: o enunciado da Questão 59 vem truncado na fonte (“…especi...”)"],
+    },
+    # ------------------------------------------------------------------ E3-L00267
+    {
+        "id": "ECO-E3-L00267-1", "fonte_ref": "E3-L00267", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COM_NIDI_59,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma forma de reduzir o problema do caronista, ou free-rider, no caso da oferta de bens "
+                      "públicos é o estabelecimento de tributos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("<u>Uma forma de reduzir</u> o problema do caronista, ou free-rider, no caso da oferta de "
+                      "bens públicos é o estabelecimento de tributos."),
+        "poucas": ("O carona nasce da " + azb("não exclusão") + ": quem não paga usufrui igual. O " + azb("tributo "
+                   "compulsório") + " elimina a opção de não pagar e permite financiar a provisão pública."),
+        "destrinchando": [
+            azb("Caronista") + " (<i>free-rider</i>): quem se beneficia do bem sem contribuir. Se a contribuição "
+            "é voluntária, cada um tem incentivo a esconder quanto valoriza o bem, esperando que os outros "
+            "paguem. Resultado: subprovisão ou provisão nula — um dilema do prisioneiro com muitos jogadores.",
+            "O Estado contorna o problema pelo poder de " + azb("tributar") + ": a contribuição deixa de ser "
+            "escolha. É a justificativa clássica da provisão pública de defesa, iluminação, segurança, pesquisa "
+            "básica — a " + azb("função alocativa") + " de " + oc("Musgrave") + ".",
+            "Limites (por isso “reduzir”, e não “eliminar”): sonegação (o carona fiscal); o governo continua "
+            "sem conhecer a verdadeira soma das disposições a pagar, e pode errar a quantidade; a repartição do "
+            "ônus raramente corresponde ao benefício de cada um.",
+            "Outras saídas: tornar o bem excludente (pedágio, assinatura, clube); vendê-lo junto com um bem "
+            "privado (TV aberta financiada por publicidade); grupos pequenos com pressão social; mecanismos de "
+            "revelação de preferências; contribuições condicionadas (<i>matching funds</i>).",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " “Uma forma de reduzir” é modesto o bastante para ser "
+                       "verdadeiro. A versão ERRADA típica troca por “a única forma” ou “elimina "
+                       "completamente” o problema."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O estabelecimento de tributos elimina completamente o problema do caronista na oferta de bens "
+            "públicos.”</i> → ERRADO (modulador absoluto: há sonegação e falta de revelação de preferências)",
+            "<i>“O problema do caronista decorre da não exclusão no consumo dos bens públicos.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["uma forma", "reduzir"], "dificuldade": 1,
+        "comentario_fonte": "Tributos tornam o pagamento compulsório e financiam o bem público; problemas: evasão, "
+                            "valor e repartição do tributo; outras alternativas (clubes, pedágios, doações).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 371", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖 (limites dos tributos)"}],
+        "alertas": ["texto_parcial: o enunciado da Questão 59 vem truncado na fonte (“…especi...”)"],
+    },
+    # ------------------------------------------------------------------ E3-L00268
+    {
+        "id": "ECO-E3-L00268-1", "fonte_ref": "E3-L00268", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COM_NIDI_59,
+        "rotulo_item": "Item",
+        "assertiva": ("Se empresas que produzem externalidade negativa, ao executarem uma atividade produtiva "
+                      "poluidora, possuem processos produtivos distintos e diferentes níveis de custo para reduzir "
+                      "as emissões poluentes, a imposição de uma taxa sobre a quantidade de poluente emitido pode "
+                      "ser preferível ao estabelecimento de um limite permitido de emissão."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se empresas que produzem externalidade negativa, ao executarem uma atividade produtiva "
+                      "poluidora, possuem processos produtivos distintos e <u>diferentes níveis de custo para "
+                      "reduzir as emissões</u> poluentes, a imposição de uma taxa sobre a quantidade de poluente "
+                      "emitido <u>pode ser preferível</u> ao estabelecimento de um limite permitido de emissão."),
+        "poucas": ("Taxa = preço único da poluição; cada firma abate até " + vd("CMgA = taxa") + ". Quem abate "
+                   "barato abate mais e a meta sai ao " + azb("menor custo total") + " — o limite uniforme não "
+                   "faz essa triagem."),
+        "destrinchando": [
+            "Instrumentos de " + azb("comando e controle") + " (padrão, limite por firma) fixam a quantidade "
+            "de cada um; " + azb("instrumentos econômicos") + " (taxa pigouviana, licenças negociáveis) fixam "
+            "um preço e deixam cada firma escolher quanto abater.",
+            "Com custos de abatimento heterogêneos, a taxa produz a " + azb("equalização dos custos "
+            "marginais") + " entre firmas, condição de custo mínimo. No gráfico: meta de 16; com taxa 6, a "
+            "firma barata abate 12 e a cara abate 4 (custo " + vd("48") + "); limite de 8 para cada custa "
+            + vd("64") + ".",
+            "Quem abate menos não “escapa”: paga a taxa sobre tudo o que continua emitindo. A firma de "
+            "abatimento barato, ao contrário, abate muito e paga <b>menos</b> taxa.",
+            "Vantagem dinâmica: cada tonelada evitada poupa a taxa, então há incentivo permanente a inovar; "
+            "sob o limite, depois de cumpri-lo, o incentivo some.",
+            "O “pode ser” protege o item: com incerteza sobre os custos e dano que dispara acima de um limiar, "
+            "o controle por quantidade pode ser preferível (" + oc("Weitzman") + ", 1974).",
+        ],
+        "grafico_verso": "ECO-E3-L00070-1-V1",
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " Versão ampliada de um item clássico "
+                       "(“taxas podem ser preferíveis a limites com custos diferentes”). As expressões "
+                       "“diferentes níveis de custo” e “pode ser” são as chaves do CERTO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com uma taxa sobre emissões, as firmas de menor custo de abatimento reduzem menos a poluição e "
+            "pagam mais taxa.”</i> → ERRADO (inversão: reduzem mais e pagam menos)",
+            "<i>“Um sistema de licenças de emissão negociáveis também tende a igualar os custos marginais de "
+            "abatimento entre as firmas.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["pode ser"], "dificuldade": 2,
+        "comentario_fonte": "Taxa pigouviana permite que quem abate barato reduza mais e quem abate caro pague a "
+                            "taxa; meta ao menor custo; incentivo contínuo à inovação.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 372", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": ["quase_duplicata: ECO-E3-L00070-1 (Nidi, Simulado Julho/2025) traz a mesma assertiva em "
+                    "redação mais curta; os dois cards foram mantidos e usam o mesmo gráfico",
+                    "qualidade_fonte: um dos comentários de origem diz que as firmas de baixo custo de "
+                    "abatimento “pagam mais imposto” e que o caso “ilustra o teorema de Coase”; ambos corrigidos",
+                    "texto_parcial: o enunciado da Questão 59 vem truncado na fonte (“…especi...”)"],
+    },
+    # ------------------------------------------------------------------ E3-L00269
+    {
+        "id": "ECO-E3-L00269-1", "fonte_ref": "E3-L00269", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": COM_NIDI_59,
+        "rotulo_item": "Item",
+        "assertiva": ("Mesmo que não haja intervenção governamental para a reciclagem do lixo, alguma reciclagem "
+                      "poderá ocorrer se os preços dos materiais novos forem muito elevados em relação ao material "
+                      "reciclado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Mesmo que não haja intervenção governamental para a reciclagem do lixo, <u>alguma</u> "
+                      "reciclagem <u>poderá</u> ocorrer se os preços dos materiais novos forem muito elevados em "
+                      "relação ao material reciclado."),
+        "poucas": ("Material reciclado e virgem são " + azb("insumos substitutos") + ": se o virgem encarece, "
+                   "reciclar passa a dar lucro e o mercado recicla sozinho — embora, em geral, menos que o "
+                   "socialmente ótimo."),
+        "destrinchando": [
+            "A firma escolhe o insumo mais barato por unidade de produto. Quando o preço da matéria-prima "
+            "virgem sobe em relação ao custo de coletar, separar e processar a sucata, a demanda pelo reciclado "
+            "cresce — " + azb("substituição de insumos") + " movida por preços relativos.",
+            "Exemplos: latas de alumínio e sucata de cobre (o alumínio reciclado poupa grande parte da energia "
+            "da produção primária); papelão e embalagens. No " + rx("Brasil") + ", a reciclagem de latas é "
+            "altíssima sem obrigação legal específica, sustentada pelo preço da sucata e por catadores e "
+            "cooperativas.",
+            "Por que ainda há espaço para política: a reciclagem gera " + azb("externalidade positiva") + " "
+            "(menos aterro, menos extração, menos emissões) que o preço não remunera, e o descarte em lixão "
+            "tem custo social que o consumidor não paga. O mercado recicla, mas " + azb("menos que o ótimo")
+            + ".",
+            "Instrumentos para aproximar do ótimo: depósito-retorno, taxa sobre o lixo não separado, "
+            "logística reversa (no Brasil, a Política Nacional de Resíduos Sólidos, " + vd("Lei 12.305/2010")
+            + "), subsídio à coleta seletiva.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " “Alguma” e “poderá” fazem do item uma afirmação de "
+                       "possibilidade, e o mecanismo (preço relativo) é sólido. A versão ERRADA diria que, sem "
+                       "intervenção, a reciclagem atinge o nível socialmente ótimo ou que nunca ocorre."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Sem intervenção governamental, o mercado leva a reciclagem ao nível socialmente ótimo.”</i> → "
+            "ERRADO (ignora a externalidade positiva da reciclagem)",
+            "<i>“Uma queda acentuada do preço da matéria-prima virgem tende a reduzir a reciclagem "
+            "espontânea.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["alguma", "poderá"], "dificuldade": 1,
+        "comentario_fonte": "Substituição de insumos por preços relativos: material virgem caro torna o reciclado "
+                            "competitivo; exemplos de alumínio, cobre, embalagens; intervenção pode ampliar.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 373", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖 (exemplos)"}],
+        "alertas": ["texto_parcial: o enunciado da Questão 59 vem truncado na fonte (“…especi...”)"],
+    },
     # ---- fim
 ]

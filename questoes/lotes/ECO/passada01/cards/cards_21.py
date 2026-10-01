@@ -1063,8 +1063,8 @@ CARDS = [
             "(P > CMg: mantém markup)",
         ])],
         "reescrita": ("Em um mercado de concorrência monopolística " + hl("ocorre ineficiência") + " no cenário de "
-                      "longo prazo: " + hl("embora") + " o preço se iguale ao custo médio, " + hl("isso ocorre "
-                      "acima do custo médio mínimo, e") + " as empresas " + hl("operam") + " com excesso de "
+                      "longo prazo, " + hl("embora") + " o preço se iguale ao custo médio" + hl(": essa igualdade "
+                      "ocorre acima do custo médio mínimo, e") + " as empresas " + hl("operam") + " com excesso de "
                       "capacidade ociosa."),
         "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": ["portanto"], "dificuldade": 2,
         "comentario_fonte": "P = CMe só é eficiente com custo médio mínimo; na concorrência monopolística a "

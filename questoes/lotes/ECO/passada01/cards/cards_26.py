@@ -1180,5 +1180,440 @@ CARDS = [
                            "acao": "absorvida no 📖 (exemplos)"}],
         "alertas": ["texto_parcial: o enunciado da Questão 59 vem truncado na fonte (“…especi...”)"],
     },
-    # ---- fim
+    # ------------------------------------------------------------------ E3-L00301
+    {
+        "id": "ECO-E3-L00301-1", "fonte_ref": "E3-L00301", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NIDI_BENS,
+        "rotulo_item": "Item",
+        "assertiva": ("Como os bens públicos são de uso não exclusivo, a presença de caronistas geralmente faz com "
+                      "que mercados competitivos deixem de prover a quantidade eficiente desses bens. Por causa "
+                      "deste problema, sem a intervenção pública, em alguns casos, pode não ocorrer a oferta "
+                      "privada do bem."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Como os bens públicos são de uso <u>não exclusivo</u>, a presença de caronistas "
+                      "<u>geralmente</u> faz com que mercados competitivos deixem de prover a quantidade eficiente "
+                      "desses bens. Por causa deste problema, sem a intervenção pública, <u>em alguns casos, pode "
+                      "não ocorrer</u> a oferta privada do bem."),
+        "poucas": ("Não exclusão → " + azb("carona") + " → ninguém revela quanto valoriza o bem → o mercado "
+                   "provê " + azb("menos que o eficiente") + " e, no limite, nada. É a justificativa clássica da "
+                   "provisão pública."),
+        "destrinchando": [
+            "A cadeia lógica: se não dá para excluir quem não paga, cada consumidor prefere esperar que os "
+            "outros financiem o bem (" + azb("free-rider") + "). O produtor privado não consegue cobrar de quem "
+            "usa; a receita fica abaixo do valor social do bem e, muitas vezes, abaixo do custo.",
+            "Resultado: " + azb("subprovisão") + " (quantidade abaixo do nível de Samuelson, ΣBMg = CMg) ou "
+            "ausência total de oferta — defesa nacional, sirene contra enchentes, pesquisa básica, controle de "
+            "vetores de doenças.",
+            "Por que “geralmente” e “em alguns casos”: há provisão privada parcial quando o bem é vendido junto "
+            "com um bem privado (TV aberta paga por publicidade), quando o grupo é pequeno e a pressão social "
+            "funciona (moradores que rateiam a segurança da rua), ou por altruísmo e prestígio (doações, "
+            "<i>software</i> livre). Mesmo aí, a quantidade tende a ficar abaixo do ótimo.",
+            "A correção típica é o financiamento por " + azb("tributos") + " (contribuição compulsória) com "
+            "provisão direta ou contratação de empresas privadas. Atenção: “provisão pública” não exige "
+            "“produção pública”.",
+            "Não confundir com bens que o Estado oferece por equidade ou por serem " + azb("meritórios")
+            + " (escola, hospital): são rivais e excludentes, logo não são bens públicos no sentido econômico.",
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " Três moduladores relativos "
+                       "(“geralmente”, “em alguns casos”, “pode não ocorrer”) blindam o item. Um detalhe que "
+                       "derruba candidatos: o carona decorre da <b>não exclusão</b>, não da não rivalidade — o "
+                       "item atribuiu a causa certa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O problema do carona decorre da não rivalidade no consumo dos bens públicos.”</i> → ERRADO "
+            "(troca de conceito: decorre da não exclusão)",
+            "<i>“Sem intervenção pública, a oferta privada de bens públicos é sempre nula.”</i> → ERRADO "
+            "(modulador absoluto: pode haver provisão privada parcial)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["geralmente", "em alguns casos",
+                                                                              "pode"], "dificuldade": 1,
+        "comentario_fonte": "Não exclusividade gera carona, subprovisão ou oferta zero; tributação e provisão "
+                            "pública; “em alguns casos” porque há provisão privada parcial (publicidade, grupos "
+                            "pequenos, altruísmo); matriz de Mankiw dos tipos de bens.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 402", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "cortada (matriz de tipos de bens, já explicada em outros cards da nota)"},
+                          {"ref": "IMAGEM 403", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖 (exemplos)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00302
+    {
+        "id": "ECO-E3-L00302-1", "fonte_ref": "E3-L00302", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": COM_NIDI_BENS,
+        "rotulo_item": "Item",
+        "assertiva": ("Por causa da rivalidade no uso de recursos comuns, um problema de eficiência recorrente é o "
+                      "uso excessivo do bem, que em alguns casos pode gerar externalidades negativas como "
+                      "escassez, desequilíbrios naturais, além de conflitos e disputas políticas pelo uso do "
+                      "recurso."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Por causa da <u>rivalidade</u> no uso de recursos comuns, um problema de eficiência "
+                      "recorrente é o <u>uso excessivo</u> do bem, que em alguns casos pode gerar externalidades "
+                      "negativas como escassez, desequilíbrios naturais, além de conflitos e disputas políticas "
+                      "pelo uso do recurso."),
+        "poucas": ("Recurso comum (rival e não excludente): cada usuário colhe todo o benefício do uso e divide o "
+                   "custo do esgotamento com os demais → " + azb("sobreuso") + " (tragédia dos comuns)."),
+        "destrinchando": [
+            "Os dois problemas clássicos de bens não excludentes são espelhados: no " + azb("bem público")
+            + " (não rival) falta financiamento — subprovisão pelo carona; no " + azb("recurso comum")
+            + " (rival) sobra uso — " + azb("sobre-exploração") + ".",
+            "Mecanismo: o pescador que captura mais um peixe embolsa todo o valor; a redução do estoque (menos "
+            "peixe amanhã, para ele e para os outros) é dividida entre todos. Cada um compara benefício "
+            "privado com custo privado e ignora o custo imposto aos demais — uma " + azb("externalidade "
+            "negativa") + " entre usuários.",
+            "Consequências citadas no item, todas documentadas: escassez e colapso (bacalhau da Terra Nova, "
+            "anos 1990; mar de Aral); desequilíbrio ecológico (sobrepesca de predadores de topo, "
+            "desmatamento); conflitos pelo recurso (água de rios compartilhados, como a disputa entre Etiópia, "
+            "Sudão e Egito sobre a barragem do Nilo Azul; zonas de pesca).",
+            "Soluções: cotas, defeso e licenças; direitos de propriedade ou cotas individuais transferíveis; "
+            "tributos sobre o uso; " + azb("gestão comunitária") + " com regras de acesso, monitoramento e "
+            "sanções graduais (" + oc("Elinor Ostrom") + ", Nobel de " + vd("2009") + ").",
+            vm("Regra-âncora: bem público → falta (carona); recurso comum → excesso (tragédia dos comuns)."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Descrição correta da tragédia dos "
+                       "comuns, com o cuidado de “em alguns casos pode gerar”. O que poderia assustar é a lista "
+                       "ampla de consequências (políticas, ecológicas), mas todas decorrem do sobreuso."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Por causa da não rivalidade dos recursos comuns, o problema típico é a sua subprovisão.”</i> "
+            "→ ERRADO (troca de conceito: recursos comuns são rivais; subprovisão é problema de bem público)",
+            "<i>“Cotas individuais transferíveis de pesca são uma forma de enfrentar a tragédia dos "
+            "comuns.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["em alguns casos", "pode"],
+        "dificuldade": 1,
+        "comentario_fonte": "Tragédia dos comuns (Hardin): rival + não excludente → sobreuso; escassez, "
+                            "desequilíbrios, conflitos (Nilo, mar do Sul da China); soluções: privatização, "
+                            "regulação, gestão comunitária (Ostrom).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 404", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida no 📖 (bem público × recurso comum)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00303
+    {
+        "id": "ECO-E3-L00303-1", "fonte_ref": "E3-L00303", "destino": "12", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False, "errei": True,
+        "comando": COM_NIDI_BENS,
+        "rotulo_item": "Item",
+        "assertiva": ("A utilização dos serviços de saúde pública pode ser considerada uso de recurso comum, uma vez "
+                      "que, sendo ofertado, o serviço está à disposição de todos os indivíduos sem restrições; mas, "
+                      "a expansão da oferta gera custos marginais maiores do que zero. O uso excessivo desse "
+                      "recurso poderia ser reduzido por meio de incentivos à prevenção de doenças graves ou "
+                      "evitáveis."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A utilização dos serviços de saúde pública <u>pode ser considerada</u> uso de recurso comum, "
+                      "uma vez que, sendo ofertado, o serviço está à disposição de todos os indivíduos <u>sem "
+                      "restrições</u>; mas, a expansão da oferta gera <u>custos marginais maiores do que zero</u>. "
+                      "O uso excessivo desse recurso poderia ser reduzido por meio de incentivos à prevenção de "
+                      "doenças graves ou evitáveis."),
+        "poucas": ("Acesso universal = " + azb("não exclusão") + "; leito, consulta e remédio usados por um não "
+                   "servem a outro e custam (CMg > 0) = " + azb("rivalidade") + ". Rival e não excludente → "
+                   "recurso comum, sujeito a uso excessivo."),
+        "destrinchando": [
+            "Classificação: a saúde pública de acesso universal (no " + rx("Brasil") + ", o " + rx("SUS")
+            + ", com o acesso “universal e igualitário” do art. 196 da Constituição) não exclui ninguém. Mas "
+            "os serviços são rivais: um leito de UTI ocupado ou a hora do médico não atendem outro paciente "
+            "ao mesmo tempo.",
+            "O CMg > 0 é a marca da rivalidade: no bem público puro, atender mais uma pessoa custa zero "
+            "(a defesa protege o novo morador sem custo extra); na saúde, cada atendimento adicional consome "
+            "insumos, pessoal e infraestrutura.",
+            "Com preço zero no ponto de uso e custo social positivo, a quantidade demandada tende a superar o "
+            "ótimo e a capacidade se congestiona: filas, sobrecarga das emergências com casos simples, menos "
+            "recursos para casos graves — a lógica da " + azb("tragédia dos comuns") + ".",
+            "A prevenção reduz a demanda futura de serviços caros: vacinação, saneamento, atenção básica "
+            "(a Estratégia Saúde da Família), acompanhamento de hipertensão e diabetes. Outras ferramentas: "
+            "triagem e regulação do acesso (classificação de risco), porta de entrada pela atenção primária.",
+            "Ressalva conceitual: muitos manuais tratam a saúde como " + azb("bem meritório") + " (privado "
+            "no sentido econômico, mas provido pelo Estado por equidade e externalidades). O item se salva "
+            "pelo “pode ser considerada”, apoiado na universalidade do acesso.",
+        ],
+        "dissecando": (cz("[modulador relativo · contraintuitivo]") + " Quem associa “saúde pública” a "
+                       "“bem público” erra duas vezes. O item constrói a classificação com as duas pistas "
+                       "certas — “à disposição de todos sem restrições” (não exclusão) e “custos marginais "
+                       "maiores do que zero” (rivalidade) — e fecha com uma política coerente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os serviços de saúde pública são bens públicos puros, pois seu custo marginal de provisão é "
+            "nulo.”</i> → ERRADO (dado alterado: CMg > 0, há rivalidade)",
+            "<i>“Em sistemas de acesso universal, o preço zero no ponto de uso tende a elevar a quantidade "
+            "demandada de serviços.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "CONTRAINTUITIVO"], "moduladores": ["pode ser considerada",
+                                                                               "poderia"],
+        "dificuldade": 2,
+        "comentario_fonte": "Saúde pública como recurso comum: não excludente (acesso universal, art. 196 da "
+                            "CF) e rival (leito, dose); CMg > 0; uso excessivo; prevenção (ESF, vacinação, "
+                            "saneamento) reduz a demanda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 405", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida no 📖"},
+                          {"ref": "IMAGEM 406", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00410
+    {
+        "id": "ECO-E3-L00410-1", "fonte_ref": "E3-L00410", "destino": "12", "subtema": H2["reg"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": COM_JB_ESTADO,
+        "rotulo_item": "Item",
+        "assertiva": ("Politicas públicas, como regulamentações e incentivos fiscais, podem ser utilizadas pelo "
+                      "Estado para corrigir falhas de mercado e promover a concorrência, garantindo uma alocação "
+                      "mais eficiente dos recursos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Politicas públicas, como regulamentações e incentivos fiscais, <u>podem ser</u> utilizadas "
+                      "pelo Estado para corrigir falhas de mercado e promover a concorrência, garantindo uma "
+                      "alocação mais eficiente dos recursos."),
+        "poucas": ("É a " + azb("função alocativa") + " do Estado (" + oc("Musgrave") + "): diante de falhas de "
+                   "mercado, regulação, tributos e subsídios podem aproximar a economia da eficiência."),
+        "destrinchando": [
+            "As três funções clássicas do governo em " + oc("Richard Musgrave") + " (<i>The Theory of Public "
+            "Finance</i>, 1959): " + azb("alocativa") + " (corrigir falhas de mercado), " + azb("distributiva")
+            + " (reduzir desigualdades) e " + azb("estabilizadora") + " (emprego e preços).",
+            "Falhas de mercado e instrumentos típicos: poder de mercado → defesa da concorrência e regulação "
+            "de monopólios naturais (no " + rx("Brasil") + ", o " + rx("CADE") + " e as agências); "
+            "externalidades → impostos e subsídios de Pigou, padrões, licenças; bens públicos → provisão "
+            "financiada por tributos; informação assimétrica → regulação de qualidade, rotulagem, seguro "
+            "obrigatório.",
+            "Incentivos fiscais servem tanto para corrigir externalidades positivas (pesquisa e "
+            "desenvolvimento, energia renovável) quanto para reduzir barreiras à entrada de novos "
+            "concorrentes.",
+            "Contraponto que a banca pode cobrar: a intervenção também pode falhar — " + azb("falhas de "
+            "governo") + " (captura regulatória, busca de renda, informação insuficiente do regulador, "
+            "incentivos fiscais capturados por grupos de interesse). Por isso o “podem ser utilizadas”.",
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " Definição padrão da função alocativa, "
+                       "com “podem” a protegê-la. O “garantindo” poderia soar absoluto, mas está ligado a "
+                       "“mais eficiente” (comparativo), não a “eficiência plena”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em uma economia mista, a intervenção estatal sempre resulta em alocação mais eficiente do que "
+            "a de mercado.”</i> → ERRADO (modulador absoluto: há falhas de governo)",
+            "<i>“A correção de externalidades por meio de tributos insere-se na função alocativa do "
+            "Estado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["podem", "garantindo"],
+        "dificuldade": 1,
+        "comentario_fonte": "Função alocativa (Musgrave): falhas de mercado (monopólio, externalidades, bens "
+                            "públicos, assimetria) justificam regulação (CADE, agências) e tributos/subsídios "
+                            "pigouvianos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_parcial: o comando vem resumido na fonte (“…estruturas de mercado...”)"],
+    },
+    # ------------------------------------------------------------------ E2-L00076
+    {
+        "id": "ECO-E2-L00076-1", "fonte_ref": "E2-L00076", "destino": "15", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria ortodoxa advoga que se a economia estiver em crise, o ajuste se dará naturalmente, "
+                      "sem a necessidade de intervenção estatal, porque a economia alcança um equilíbrio natural a "
+                      "longo prazo, mesmo em presença de choques econômicos, com a demanda gerada automaticamente "
+                      "pela oferta."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria ortodoxa advoga que se a economia estiver em crise, o ajuste se dará "
+                      "<u>naturalmente</u>, sem a necessidade de intervenção estatal, porque a economia alcança um "
+                      "equilíbrio natural a <u>longo prazo</u>, mesmo em presença de choques econômicos, com a "
+                      "demanda gerada automaticamente pela oferta."),
+        "poucas": ("Visão " + azb("clássica") + ": preços e salários flexíveis + " + azb("Lei de Say") + " "
+                   "(“a oferta cria a sua própria procura”) → crises são transitórias e a economia volta sozinha "
+                   "ao pleno emprego."),
+        "destrinchando": [
+            azb("Lei de Say") + " (" + oc("Jean-Baptiste Say") + ", <i>Tratado de Economia Política</i>, 1803): "
+            "quem produz o faz para trocar; a renda gerada na produção é integralmente gasta, de modo que não "
+            "há insuficiência geral de demanda. A fórmula “a oferta cria a sua própria procura” é a síntese "
+            "que " + oc("Keynes") + " deu à ideia.",
+            "Mecanismos de ajuste no modelo clássico: a poupança não gasta vira investimento porque os "
+            + azb("juros") + " se ajustam (mercado de fundos emprestáveis); o desemprego some porque os "
+            + azb("salários reais") + " caem até equilibrar o mercado de trabalho; a moeda é neutra (teoria "
+            "quantitativa).",
+            "Logo, o produto é determinado pela oferta (trabalho, capital, tecnologia), e a política "
+            "econômica ativa é desnecessária ou nociva: no máximo, acelera um ajuste que viria de qualquer "
+            "modo. É a base do " + azb("laissez-faire") + ".",
+            "Herdeiros modernos dessa visão: monetaristas (" + oc("Friedman") + "), novos clássicos (expectativas "
+            "racionais, " + oc("Lucas") + ") e a teoria dos ciclos reais, que reforçam a autorregulação no "
+            "longo prazo.",
+            vm("Regra-âncora: clássicos → oferta determina o produto, ajuste automático; Keynes → demanda "
+               "efetiva determina o produto, desemprego pode persistir."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item resume corretamente a ortodoxia e termina com a Lei de "
+                       "Say parafraseada. Os itens irmãos do bloco testam o contraste com Keynes — às vezes "
+                       "trocando o autor de cada tese."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para a teoria clássica, a demanda agregada determina o nível de produto no longo "
+            "prazo.”</i> → ERRADO (inversão: é a oferta)",
+            "<i>“Na visão clássica, a flexibilidade de preços e salários garante o retorno ao pleno "
+            "emprego.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["naturalmente", "automaticamente"], "dificuldade": 1,
+        "comentario_fonte": "A ortodoxia defende equilíbrio natural e autoajuste no longo prazo; crises seriam "
+                            "eventuais e corrigidas pela flexibilidade das variáveis.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00077
+    {
+        "id": "ECO-E2-L00077-1", "fonte_ref": "E2-L00077", "destino": "15", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria keynesiana critica a visão ortodoxa de que o equilíbrio natural ocorre sem "
+                      "intervenção, apontando que crises econômicas podem se perpetuar devido à inércia da demanda, "
+                      "e que intervenções governamentais são fundamentais para estimular a produção e evitar o "
+                      "desemprego prolongado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria keynesiana critica a visão ortodoxa de que o equilíbrio natural ocorre sem "
+                      "intervenção, apontando que crises econômicas <u>podem se perpetuar</u> devido à inércia da "
+                      "demanda, e que intervenções governamentais são fundamentais para estimular a produção e "
+                      "evitar o desemprego prolongado."),
+        "poucas": ("Para " + oc("Keynes") + ", o produto é fixado pela " + azb("demanda efetiva") + "; com "
+                   "demanda fraca, a economia pode ficar presa num " + azb("equilíbrio com desemprego "
+                   "involuntário") + ", e cabe ao Estado sustentar o gasto."),
+        "destrinchando": [
+            "Na <i>Teoria Geral do Emprego, do Juro e da Moeda</i> (" + vd("1936") + "), " + oc("Keynes")
+            + " rejeita a Lei de Say: a renda não gasta (poupança) não vira automaticamente investimento, "
+            "porque o investimento depende das " + azb("expectativas") + " dos empresários (os “espíritos "
+            "animais”) e da eficiência marginal do capital, não só dos juros.",
+            "Com demanda insuficiente, as firmas produzem só o que esperam vender e empregam menos: o "
+            "equilíbrio pode ocorrer abaixo do pleno emprego e persistir. Cortar salários não resolve, pois "
+            "reduz a renda e o consumo (o paradoxo dos custos).",
+            "Pelo " + azb("multiplicador") + ", um aumento do gasto autônomo (público ou privado) eleva a renda "
+            "mais que proporcionalmente. Daí o papel ativo da política fiscal, sobretudo quando a política "
+            "monetária perde força (armadilha da liquidez).",
+            "Frase emblemática, de <i>A Tract on Monetary Reform</i> (1923): “no longo prazo, estaremos todos "
+            "mortos” — esperar o ajuste natural tem custo social alto demais.",
+            "Desdobramentos: a síntese neoclássica (" + oc("Hicks") + ", IS-LM) acomodou Keynes ao curto "
+            "prazo; os pós-keynesianos enfatizam incerteza radical e moeda não neutra.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Síntese correta da crítica keynesiana, "
+                       "com “podem se perpetuar” (possibilidade, não certeza). “Fundamentais” poderia parecer "
+                       "excessivo, mas reflete a posição de Keynes diante de crises de demanda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Keynes, a economia em crise retorna rapidamente ao pleno emprego graças à flexibilidade "
+            "dos salários.”</i> → ERRADO (troca de ator: é a tese clássica)",
+            "<i>“Para Keynes, o investimento depende das expectativas empresariais, o que pode manter a "
+            "demanda efetiva insuficiente.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["podem"], "dificuldade": 1,
+        "comentario_fonte": "Crises não se resolvem sozinhas porque as empresas não investem com demanda fraca; o "
+                            "governo deve aumentar gastos para estimular consumo e produção.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00078
+    {
+        "id": "ECO-E2-L00078-1", "fonte_ref": "E2-L00078", "destino": "15", "subtema": H2["esc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": COM_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo Keynes, durante crises econômicas, a queda dos salários naturalmente leva a um aumento "
+                      "na quantidade de empregos, pois as empresas reagem contratando mais devido à redução nos "
+                      "custos de produção, restaurando o equilíbrio econômico sem a necessidade de intervenções "
+                      "externas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Segundo ") + vm("Keynes") + az(", durante crises econômicas, a queda dos salários "
+                                                       "naturalmente leva a um aumento na quantidade de empregos, "
+                                                       "pois as empresas reagem contratando mais devido à redução "
+                                                       "nos custos de produção, restaurando o equilíbrio "
+                                                       "econômico sem a necessidade de intervenções externas.")),
+        "poucas": ("O raciocínio é o dos " + azb("clássicos") + ". " + oc("Keynes") + " o rejeitou: salário "
+                   "também é " + azb("renda") + "; cortá-lo reduz o consumo e a demanda efetiva, e as firmas não "
+                   "contratam sem perspectiva de venda."),
+        "destrinchando": [
+            "Visão clássica: desemprego = salário real acima do equilíbrio. Basta o salário cair para a "
+            "quantidade demandada de trabalho subir até o pleno emprego. Qualquer desemprego que persista é "
+            "voluntário ou fruto de rigidez imposta (sindicatos, salário mínimo).",
+            "Crítica de " + oc("Keynes") + " (<i>Teoria Geral</i>, " + vd("1936") + ", cap. 19): (1) os "
+            "trabalhadores negociam salários <b>nominais</b>, não reais; se os preços caem junto, o salário "
+            "real não muda; (2) o salário é componente da demanda: o corte reduz consumo e vendas, e o "
+            "empresário, olhando a " + azb("demanda efetiva") + ", não contrata; (3) a deflação aumenta o "
+            "peso real das dívidas e pode piorar a crise.",
+            "Para Keynes, o emprego é determinado pela demanda agregada, e a saída da crise passa pelo "
+            "estímulo ao gasto — política fiscal ativa, sobretudo quando juros baixos já não estimulam o "
+            "investimento.",
+            "Resposta clássica posterior: o " + azb("efeito Pigou") + " (efeito saldos reais) — a queda de "
+            "preços eleva a riqueza real e o consumo. Mesmo aceito na teoria, é considerado lento e fraco "
+            "diante de crises profundas.",
+            vm("Regra-âncora: “corte de salário restaura o emprego sozinho” = clássicos; Keynes diz o "
+               "contrário."),
+        ],
+        "dissecando": (cz("[troca de ator]") + " Todo o raciocínio é coerente — e clássico. O erro está só "
+                       "na autoria. 🔥 Itens de escolas de pensamento adoram atribuir a um autor a tese que ele "
+                       "combateu; pergunte sempre “quem diria isso?”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Keynes, cortes de salários nominais podem reduzir a demanda efetiva e não garantem a "
+            "elevação do emprego.”</i> → CERTO",
+            "<i>“Para os clássicos, o desemprego involuntário persistente resulta de insuficiência de demanda "
+            "efetiva.”</i> → ERRADO (troca de ator: tese keynesiana)",
+        ])],
+        "reescrita": ("Segundo " + hl("os clássicos — visão rejeitada por Keynes") + ", durante crises econômicas, "
+                      "a queda dos salários naturalmente leva a um aumento na quantidade de empregos, pois as "
+                      "empresas reagem contratando mais devido à redução nos custos de produção, restaurando o "
+                      "equilíbrio econômico sem a necessidade de intervenções externas."),
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": ["naturalmente"], "dificuldade": 1,
+        "comentario_fonte": "Keynes discordava: mesmo com salários menores, os empresários não contratam se a "
+                            "expectativa de vendas é baixa; a saída é o estímulo fiscal.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0384
+    {
+        "id": "ECO-E1-0384-1", "fonte_ref": "E1-0384", "destino": "16", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simulado Clipping", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos conceitos básicos da teoria macroeconômica, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em nível macroeconômico, a taxa de poupança de um país é importante para determinar a "
+                      "capacidade do país de financiar seus investimentos internos e externos. Países com altas "
+                      "taxas de poupança tendem a ter mais recursos disponíveis para investir em infraestrutura, "
+                      "educação e tecnologia."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em nível macroeconômico, a taxa de poupança de um país é importante para determinar a "
+                      "capacidade do país de financiar seus investimentos <u>internos e externos</u>. Países com "
+                      "altas taxas de poupança <u>tendem a</u> ter mais recursos disponíveis para investir em "
+                      "infraestrutura, educação e tecnologia."),
+        "poucas": ("Pela identidade " + vd("S = I + (X − M)") + " (economia aberta), a poupança doméstica "
+                   "financia o investimento interno e, se sobra, empresta ao exterior (investimento externo "
+                   "líquido)."),
+        "destrinchando": [
+            "Identidade macroeconômica básica: em economia fechada, " + vd("S = I") + " — tudo o que se investe "
+            "foi poupado por alguém (famílias, empresas ou governo). Em economia aberta, " + vd("S = I + "
+            "(X − M)") + " (mais exatamente, I + saldo em transações correntes).",
+            "Leitura: se S > I, o país tem superávit em transações correntes e acumula ativos no exterior "
+            "(financia “investimentos externos”); se S < I, recorre à " + azb("poupança externa") + " "
+            "(déficit em transações correntes) para fechar a conta.",
+            "Por que importa: poupança doméstica alta permite investir mais sem depender de capital externo, "
+            "volátil e sujeito a crises de balanço de pagamentos. No modelo de " + oc("Solow") + ", maior "
+            "taxa de poupança eleva o capital e a renda per capita de estado estacionário (efeito de nível, "
+            "não de crescimento de longo prazo).",
+            rx("Brasil") + ": a taxa de poupança bruta oscila em torno de " + vd("14% a 17% do PIB") + " nos "
+            "anos recentes ⏳ (out/2026), bem abaixo das economias do Leste Asiático (a da China passa de 40% "
+            "do PIB) — um dos limites estruturais ao investimento no país.",
+            "Ressalva: poupança é condição de financiamento, não garantia de investimento — para "
+            + oc("Keynes") + ", é o investimento que, pela renda, gera a poupança (paradoxo da parcimônia). "
+            "Por isso o item fala em “capacidade” e “tendem a”.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Afirmação de manual, protegida por "
+                       "“tendem a”. O ponto que poderia gerar dúvida — “investimentos externos” — é coberto pela "
+                       "identidade da economia aberta: o excesso de poupança vira ativo no exterior."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em uma economia aberta, o investimento doméstico não pode superar a poupança "
+            "doméstica.”</i> → ERRADO (a poupança externa cobre a diferença)",
+            "<i>“Um déficit em transações correntes indica que o investimento doméstico supera a poupança "
+            "doméstica.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["tendem a"], "dificuldade": 1,
+        "comentario_fonte": "Repete a assertiva; mais poupança = mais possibilidade de investimento.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["dado_aproximado: taxa de poupança bruta do Brasil indicada como faixa (14%–17% do PIB) nos "
+                    "anos recentes; conferir a série das Contas Nacionais do IBGE"],
+    },
 ]

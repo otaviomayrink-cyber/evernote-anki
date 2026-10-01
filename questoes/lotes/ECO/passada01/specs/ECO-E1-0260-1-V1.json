@@ -1,0 +1,5 @@
+{"id": "ECO-E1-0260-1-V1", "uso": "verso",
+ "legenda": "Com a demanda parada, a redução da oferta (O₁ → O₂) leva o mercado de E₁ a E₂: o preço sobe (p₁ → p₂) e a quantidade cai — o preço “acusa” a maior escassez.",
+ "modelo": "oferta_demanda", "params": {"deslocar": {"S": "esquerda"}},
+ "substituir": {"D1": {"rotulo": "D"}}
+}

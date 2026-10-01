@@ -1309,4 +1309,153 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L01371
+    {
+        "id": "ECO-E2-L01371-1", "fonte_ref": "E2-L01371", "destino": "05", "subtema": H2["cp"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANA/Especialista em Regulação/2024", "ano": 2024,
+        "cacd": False, "errei": True,
+        "comando": ("Considerando a figura a seguir, que representa duas funções de produção, y* e y**, que "
+                    "relacionam a quantidade de insumo (x) à quantidade produzida (y), julgue o item."),
+        "frente_figuras": ["ECO-E2-L01371-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("A produtividade no ponto B é maior que no ponto C, pois o ponto B encontra-se em um padrão "
+                      "tecnológico superior."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A produtividade no ponto B é maior que no ponto C, pois o ponto B encontra-se em um "
+                      "<u>padrão tecnológico superior</u>."),
+        "poucas": ("B e C usam a mesma quantidade de insumo (x1), mas B produz mais: " + vd("y/x maior")
+                   + ". Isso porque B está sobre y**, a função de produção de " + azb("tecnologia superior")
+                   + "."),
+        "destrinchando": [
+            "Uma " + azb("função de produção") + " dá o máximo de produto obtenível com cada quantidade de "
+            "insumo, dada a tecnologia. " + azb("Progresso técnico") + " desloca a curva para cima: com o "
+            "mesmo insumo, produz-se mais. Na figura, y** está acima de y* em todo o domínio.",
+            azb("Produtividade") + " (média) = produto ÷ insumo. Em x1, y<sub>B</sub> > y<sub>C</sub>, logo "
+            + vd("y<sub>B</sub>/x1 > y<sub>C</sub>/x1") + ". A diferença decorre só da tecnologia, pois o "
+            "insumo é o mesmo.",
+            "Ao longo de uma mesma função côncava, a produtividade média cai à medida que x aumenta "
+            "(rendimentos decrescentes): em y**, o ponto E produz mais que B, mas com produtividade média "
+            "menor. Produção maior não é produtividade maior.",
+            "Pontos acima da função mais alta (como A) não são alcançáveis com nenhuma das duas tecnologias "
+            "representadas.",
+            "Na macroeconomia, esse deslocamento é o que o modelo de " + oc("Solow") + " chama de progresso "
+            "técnico: a função de produção por trabalhador sobe, e a produtividade cresce sem acumulação de "
+            "insumo.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Comparação na mesma vertical (mesmo x): a única diferença "
+                       "entre B e C é a curva, isto é, a tecnologia. O risco é confundir produção com "
+                       "produtividade quando a banca compara pontos com insumos diferentes."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A produtividade no ponto E é maior que no ponto B, pois E corresponde a um nível de produção "
+            "mais elevado.”</i> → ERRADO (confunde produção com produtividade: y/x cai ao longo da curva "
+            "côncava)",
+            "<i>“A passagem do ponto C para o ponto B representa progresso técnico.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Verso só com o gabarito e o gráfico completo: B sobre y** e C sobre y*, ambos em x1; "
+                             "E sobre y** em x2."),
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "IMAGEM 241", "tipo_fonte": "GRÁFICO", "lado": "frente",
+                           "acao": "redesenhada (ECO-E2-L01371-1-F1)"},
+                          {"ref": "IMAGEM 242", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvida (posição dos pontos B, C e E usada no redesenho da frente)"}],
+        "alertas": ["figura_conjectural: ECO-E2-L01371-1-F1 redesenhada pelas descrições da frente e do verso "
+                    "(y** acima de y*; A acima das curvas em x1; B em y** e C em y*, ambos em x1; E em y** em "
+                    "x2); a posição de D (em y*, em x2) e o formato côncavo das curvas foram deduzidos",
+                    "nota_redacao: comando neutro redigido; a frente da fonte traz só o item e a figura"],
+    },
+    # ------------------------------------------------------------------ E2-L01384
+    {
+        "id": "ECO-E2-L01384-1", "fonte_ref": "E2-L01384", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "IADES", "prova": "GDF/SEEC/Gestor/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à teoria da produção.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma função de produção de proporções fixas apresenta elasticidade de substituição nula entre "
+                      "os insumos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma função de produção de proporções fixas apresenta elasticidade de substituição "
+                      "<u>nula</u> entre os insumos."),
+        "poucas": ("Em " + azb("proporções fixas") + " (Leontief), a razão K/L não muda, por mais que mudem os "
+                   "preços relativos: " + vd("σ = 0") + "."),
+        "destrinchando": [
+            azb("Elasticidade de substituição") + " (σ) = variação percentual da razão K/L dividida pela "
+            "variação percentual da TMST (ou, no ótimo, de w/r). Mede a facilidade de trocar um insumo pelo "
+            "outro quando os preços relativos mudam.",
+            "Na Leontief q = mín(aK, bL), a firma usa sempre a combinação do vértice do L: se o salário sobe, "
+            "ela não troca trabalho por máquina, só paga mais. K/L não varia → " + vd("σ = 0") + ".",
+            "Escala de referência: " + vd("σ = 0") + " → complementares perfeitos (isoquanta em L); "
+            + vd("σ = 1") + " → Cobb-Douglas; " + vd("σ = ∞") + " → substitutos perfeitos (isoquanta reta). "
+            "A função " + azb("CES") + " (elasticidade de substituição constante) engloba os três casos.",
+            "A CES foi apresentada por " + oc("Arrow, Chenery, Minhas e Solow") + " (1961), justamente para "
+            "não fixar σ de antemão.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta. A banca troca “nula” por “infinita” (que é a "
+                       "dos substitutos perfeitos) ou por “unitária” (Cobb-Douglas)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma função de produção com insumos substitutos perfeitos apresenta elasticidade de "
+            "substituição nula.”</i> → ERRADO (troca de conceito: é infinita)",
+            "<i>“A função Cobb-Douglas apresenta elasticidade de substituição unitária.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Verso com gabarito, duas ilustrações decorativas e um gráfico de isoquantas de "
+                             "Leontief."),
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "IMAGEM 269", "tipo_fonte": "DECORATIVA", "lado": "verso", "acao": "cortada"},
+                          {"ref": "IMAGEM 270", "tipo_fonte": "DECORATIVA", "lado": "verso", "acao": "cortada"},
+                          {"ref": "IMAGEM 271", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (isoquantas de Leontief descritas no 📖)"}],
+        "alertas": ["nota_redacao: item adaptado pela fonte a partir da prova da IADES"],
+    },
+    # ------------------------------------------------------------------ E2-L01385
+    {
+        "id": "ECO-E2-L01385-1", "fonte_ref": "E2-L01385", "destino": "05", "subtema": H2["iso"],
+        "tipo": "C/E", "banca": "IADES", "prova": "GDF/SEEC/Gestor/2023", "ano": 2023, "cacd": False,
+        "errei": True,
+        "comando": "Julgue o item a seguir, relativo à teoria da produção.",
+        "rotulo_item": "Item",
+        "assertiva": ("Caso o mapa de isoquantas seja composto por isoquantas lineares, a produção ótima ocorrerá "
+                      "com o uso combinado de todos os insumos necessariamente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Caso o mapa de isoquantas seja composto por isoquantas lineares, a produção ótima ")
+                   + vm("ocorrerá com o uso combinado de todos os insumos necessariamente") + az("."),
+        "poucas": ("Com isoquantas lineares (" + azb("substitutos perfeitos") + "), o ótimo costuma ser uma "
+                   + azb("solução de canto") + ": a firma usa só o insumo que rende mais produto por real "
+                   "gasto."),
+        "destrinchando": [
+            "Isoquanta reta: TMST constante = PMg<sub>L</sub>/PMg<sub>K</sub>. Isocusto: inclinação w/r. Como "
+            "as duas são retas, raramente há tangência; compara-se uma inclinação com a outra.",
+            vd("TMST > w/r") + " (PMg<sub>L</sub>/w > PMg<sub>K</sub>/r): o trabalho rende mais por real → "
+            "usa-se <b>só trabalho</b>. " + vd("TMST < w/r") + ": <b>só capital</b>. " + vd("TMST = w/r")
+            + ": a isoquanta coincide com a isocusto e qualquer combinação dela é ótima — inclusive as de "
+            "canto.",
+            "Logo, o uso combinado nunca é <b>necessário</b>: no máximo, é uma das soluções possíveis no caso "
+            "de igualdade.",
+            "Contraste: com isoquantas convexas (Cobb-Douglas), a solução é interior, com os dois insumos "
+            "(tangência TMST = w/r); com isoquantas em L, é o vértice, sempre com os dois insumos.",
+        ],
+        "grafico_verso": "ECO-E2-L01385-1-V1",
+        "dissecando": (cz("[modulador absoluto]") + " A palavra que derruba o item é “necessariamente”. Quem "
+                       "decorou “ótimo = tangência com os dois insumos” (o caso convexo) cai. 🔥 Isoquanta reta "
+                       "quase sempre vem acompanhada de pergunta sobre solução de canto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com isoquantas lineares, a produção ótima pode ocorrer com o uso de um único insumo.”</i> → "
+            "CERTO",
+            "<i>“Com isoquantas em L, a produção ótima pode ocorrer com o uso de um único insumo.”</i> → "
+            "ERRADO (proporções fixas exigem os dois insumos)",
+        ])],
+        "reescrita": ("Caso o mapa de isoquantas seja composto por isoquantas lineares, a produção ótima "
+                      + hl("poderá ocorrer com o uso de um único insumo (solução de canto), e não necessariamente "
+                           "com o uso combinado de todos os insumos") + "."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["necessariamente"], "dificuldade": 2,
+        "comentario_fonte": ("Verso com gabarito, uma ilustração decorativa (“a produção pode ocorrer com um único "
+                             "insumo”) e um diagrama de isoquantas lineares de substitutos perfeitos, descrito na "
+                             "transcrição como “isocusto”."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 272", "tipo_fonte": "DECORATIVA", "lado": "verso",
+                           "acao": "cortada (texto absorvido no 📖)"},
+                          {"ref": "IMAGEM 273", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01385-1-V1, com isocusto e solução de canto)"}],
+        "alertas": ["nota_redacao: item adaptado pela fonte a partir da prova da IADES"],
+    },
 ]

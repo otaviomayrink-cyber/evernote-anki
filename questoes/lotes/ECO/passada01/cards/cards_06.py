@@ -1008,4 +1008,477 @@ CARDS = [
                            "acao": "cortada (não preservada)"}],
         "alertas": ["banca_provavel: possível CACD 2023; a fonte só traz o ano"],
     },
+    # ------------------------------------------------------------------ E1-0124
+    {
+        "id": "ECO-E1-0124-1", "fonte_ref": "E1-0124", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A4,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo o primeiro teorema do bem-estar, o mercado sempre leva a alocações eficientes de "
+                      "Pareto, mesmo se houver externalidades."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo o primeiro teorema do bem-estar, o mercado sempre leva a alocações eficientes de "
+                      "Pareto") + vm(", mesmo se houver externalidades") + az("."),
+        "poucas": ("O " + azb("1º teorema do bem-estar") + " garante eficiência de Pareto do equilíbrio "
+                   "competitivo <b>sob hipóteses</b> — entre elas, a " + vd("ausência de externalidades")
+                   + ". Externalidade é falha de mercado."),
+        "destrinchando": [
+            azb("Primeiro teorema") + ": todo equilíbrio de mercados competitivos é eficiente no sentido de "
+            "Pareto. Formalização de " + oc("Arrow") + " e " + oc("Debreu") + " (anos 1950) para a “mão "
+            "invisível” de " + oc("Adam Smith") + ".",
+            "Hipóteses: mercados completos e competitivos (agentes tomadores de preço), informação perfeita, "
+            "preferências não saciadas localmente e <b>nenhuma externalidade nem bem público</b>. Quebrou "
+            "uma, quebrou a garantia.",
+            "Com " + azb("externalidade") + ", o custo (ou benefício) privado difere do social: a fábrica que "
+            "polui não paga o dano e produz demais; quem se vacina não é remunerado pela proteção que dá aos "
+            "outros, e há vacinação de menos. O equilíbrio de mercado deixa de ser ótimo.",
+            "Correções clássicas: imposto ou subsídio de " + oc("Pigou") + " (internaliza a diferença entre "
+            "custo privado e social) e negociação de " + oc("Coase") + " (com direitos de propriedade bem "
+            "definidos e custos de transação baixos, as partes chegam ao ótimo).",
+            azb("Segundo teorema") + ": qualquer alocação eficiente pode ser alcançada como equilíbrio "
+            "competitivo, com redistribuição prévia da renda por transferências lump-sum (exige convexidade).",
+        ],
+        "dissecando": (cz("[meia-verdade · modulador absoluto]") + " A primeira parte é o enunciado do teorema; "
+                       "o erro foi enxertado na ressalva final, que anula uma de suas hipóteses. 🔥 Banca adora "
+                       "o padrão “teorema + mesmo se houver [falha de mercado]”: externalidade, bem público, "
+                       "poder de mercado, informação assimétrica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o primeiro teorema do bem-estar, o equilíbrio competitivo é eficiente de Pareto, desde "
+            "que não haja externalidades nem bens públicos.”</i> → CERTO",
+            "<i>“O primeiro teorema do bem-estar garante que o equilíbrio competitivo é justo do ponto de vista "
+            "distributivo.”</i> → ERRADO (eficiência não é equidade)",
+        ])],
+        "reescrita": ("Segundo o primeiro teorema do bem-estar, o mercado " + hl("competitivo") + " leva a "
+                      "alocações eficientes de Pareto, " + hl("desde que não haja externalidades") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "GENERALIZACAO"], "moduladores": ["sempre", "mesmo se"], "dificuldade": 1,
+        "comentario_fonte": ("O erro está no final: externalidades são falha de mercado e rompem os pressupostos "
+                             "da eficiência de Pareto."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0125
+    {
+        "id": "ECO-E1-0125-1", "fonte_ref": "E1-0125", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A4,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo a teoria do bem-estar, tirar dos pobres para dar aos ricos não gera uma melhora no "
+                      "sentido de Pareto."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo a teoria do bem-estar, tirar dos pobres para dar aos ricos <u>não</u> gera uma "
+                      "melhora no sentido de Pareto."),
+        "poucas": ("" + azb("Melhoria de Pareto") + " exige melhorar alguém <b>sem piorar ninguém</b>. Tirar de "
+                   "um grupo piora esse grupo — não é melhoria de Pareto, em qualquer direção."),
+        "destrinchando": [
+            "Critério de " + oc("Vilfredo Pareto") + ": uma mudança é " + azb("melhoria de Pareto") + " se "
+            "ao menos um agente melhora e nenhum piora. Uma alocação é " + azb("eficiente de Pareto") + " quando "
+            "não resta nenhuma melhoria desse tipo.",
+            "Transferência pura (tirar de A para dar a B) sempre piora A. Logo, nem “tirar dos pobres para dar "
+            "aos ricos” nem “tirar dos ricos para dar aos pobres” é melhoria de Pareto. O critério é "
+            + vd("neutro") + " quanto à distribuição.",
+            "Consequência: há infinitas alocações eficientes de Pareto, inclusive muito desiguais (um agente "
+            "com tudo, os demais com nada, é eficiente). Eficiência não é justiça.",
+            "Para comparar mudanças com ganhadores e perdedores, usa-se o critério de " + azb("Kaldor-Hicks")
+            + " (melhoria potencial): os ganhadores <b>poderiam</b> compensar os perdedores e ainda ficar "
+            "melhor. É a base da análise custo-benefício.",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Item verdadeiro por definição. O “pobres → "
+                       "ricos” provoca rejeição moral e leva a pensar em julgamento distributivo; mas o critério "
+                       "de Pareto nem entra nesse mérito — ele só não aprova transferências."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o critério de Pareto, tirar dos ricos para dar aos pobres gera melhora, pois a utilidade "
+            "marginal da renda dos pobres é maior.”</i> → ERRADO (Pareto não compara utilidades entre pessoas)",
+            "<i>“Uma alocação em que um único indivíduo detém todos os bens pode ser eficiente de Pareto.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Melhoria de Pareto só se melhora alguém sem piorar ninguém; a transferência piora "
+                             "o rico (ou o pobre). O texto da fonte diz, por lapso, “se piorou para alguém, então "
+                             "foi uma melhora no sentido de Pareto”."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: lapso no comentário de origem (“se piorou pra alguém então foi uma "
+                    "melhora”); o correto é “não foi”"],
+    },
+    # ------------------------------------------------------------------ E1-0126
+    {
+        "id": "ECO-E1-0126-1", "fonte_ref": "E1-0126", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A4,
+        "rotulo_item": "Item",
+        "assertiva": ("O imposto traz receita para o governo, mas esta receita não supera a perda de bem-estar de "
+                      "consumidores e ofertantes."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O imposto traz receita para o governo, mas esta receita <u>não supera</u> a perda de "
+                      "bem-estar de consumidores e ofertantes."),
+        "poucas": ("Perda de excedentes = " + vd("receita + peso morto") + ". Como o " + azb("peso morto")
+                   + " é ≥ 0, a receita nunca supera a perda dos agentes privados."),
+        "destrinchando": [
+            "Com o imposto t, o consumidor paga pc > p₀ e o produtor recebe pv < p₀; a quantidade cai de q₀ "
+            "para qₜ. Perda conjunta de excedentes = faixa entre pc e pv, de 0 até q₀.",
+            "Parte dessa faixa (o retângulo " + vd("t × qₜ") + ") vai para o governo: é " + azb("transferência")
+            + ", não destruição. O restante — o triângulo entre qₜ e q₀ — não vai para ninguém: são trocas que "
+            "geravam valor e deixaram de ocorrer. É o " + azb("peso morto") + " (ou perda de eficiência).",
+            "Caso-limite: com oferta ou demanda perfeitamente inelástica, a quantidade não muda e o peso morto "
+            "é zero — receita = perda. Mesmo aí a receita <b>não supera</b> a perda; por isso o item se mantém.",
+            "O peso morto cresce com as elasticidades e com o quadrado da alíquota (triângulo de "
+            + oc("Harberger") + "). Daí a recomendação de bases amplas e alíquotas baixas.",
+        ],
+        "grafico_verso": "ECO-E1-0126-1-V1",
+        "dissecando": (cz("[literalidade · detalhe]") + " A formulação “não supera” (em vez de “é menor que”) "
+                       "deixa o item verdadeiro inclusive nos casos sem peso morto. Variante perigosa: trocar por "
+                       "“é sempre inferior” — aí o caso-limite derrubaria o item."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A receita do imposto é sempre estritamente inferior à perda de excedentes, qualquer que seja a "
+            "elasticidade das curvas.”</i> → ERRADO (modulador absoluto: com curva perfeitamente inelástica, são "
+            "iguais)",
+            "<i>“A receita tributária representa uma perda líquida de bem-estar para a sociedade.”</i> → ERRADO "
+            "(é transferência; a perda líquida é o peso morto)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["não supera"], "dificuldade": 1,
+        "comentario_fonte": "A receita não supera a perda de bem-estar; é daí que vem o peso morto.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0127
+    {
+        "id": "ECO-E1-0127-1", "fonte_ref": "E1-0127", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A4,
+        "rotulo_item": "Item",
+        "assertiva": "O peso morto cresce com o aumento do imposto, mas menos que proporcionalmente.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O peso morto cresce com o aumento do imposto, ") + vm("mas menos que proporcionalmente")
+                   + az("."),
+        "poucas": ("O peso morto é um triângulo cuja base e altura crescem com t: ele cresce com o "
+                   + azb("quadrado") + " do imposto — " + vd("dobrar t quadruplica o peso morto") + "."),
+        "destrinchando": [
+            "Geometria: altura do triângulo = t (a cunha pc − pv); base = queda da quantidade, que, com curvas "
+            "lineares, é proporcional a t. Área = ½ × base × altura ∝ " + vd("t²") + ".",
+            "Fórmula aproximada (" + oc("Harberger") + "): PM ≈ ½ · t² · " + "(dq/dp) — em proporção ao "
+            "mercado, cresce com o quadrado da alíquota e com as elasticidades de oferta e demanda.",
+            "Receita, ao contrário, cresce <b>menos</b> que proporcionalmente (t sobe, mas a base qₜ encolhe) e, "
+            "a partir de certo ponto, cai — é a lógica da " + azb("curva de Laffer") + ". Impostos altos "
+            "arrecadam relativamente pouco e distorcem muito.",
+            "Lição de política tributária: muitas alíquotas baixas sobre bases amplas geram menos peso morto do "
+            "que poucas alíquotas altas sobre bases estreitas, para a mesma arrecadação.",
+            vm("Regra-âncora: peso morto ∝ t² — mais que proporcional."),
+        ],
+        "grafico_verso": "ECO-E1-0127-1-V1",
+        "dissecando": (cz("[inversão]") + " A 1ª parte (cresce com o imposto) é verdadeira; o erro está na "
+                       "forma do crescimento, que é a oposta. O item pode confundir quem pensa na "
+                       "<b>receita</b>, que, essa sim, cresce menos que proporcionalmente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Dobrar a alíquota de um imposto quadruplica, aproximadamente, o peso morto.”</i> → CERTO",
+            "<i>“Dobrar a alíquota de um imposto dobra a receita tributária.”</i> → ERRADO (a base encolhe: a "
+            "receita cresce menos que o dobro)",
+        ])],
+        "reescrita": ("O peso morto cresce com o aumento do imposto, " + hl("e mais que proporcionalmente (com "
+                      "o quadrado da alíquota)") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["menos que proporcionalmente"], "dificuldade": 1,
+        "comentario_fonte": "O peso morto cresce “exponencialmente” (mais do que proporcionalmente) com o imposto.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: a fonte diz que o peso morto cresce “exponencialmente”; o crescimento é "
+                    "quadrático"],
+    },
+    # ------------------------------------------------------------------ E1-0129
+    {
+        "id": "ECO-E1-0129-1", "fonte_ref": "E1-0129", "destino": "03", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A4,
+        "rotulo_item": "Item",
+        "assertiva": ("A incidência jurídica do imposto, se é sobre consumidores ou ofertantes, pode mudar o "
+                      "resultado da distribuição do ônus do imposto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A incidência jurídica do imposto, se é sobre consumidores ou ofertantes, ") + vm("pode mudar")
+                   + az(" o resultado da distribuição do ônus do imposto."),
+        "poucas": ("A " + azb("incidência econômica") + " depende só das " + vd("elasticidades") + ". Cobrar do "
+                   "comprador ou do vendedor leva ao mesmo pc, ao mesmo pv e à mesma divisão do ônus."),
+        "destrinchando": [
+            azb("Incidência legal (jurídica)") + ": quem a lei manda recolher. " + azb("Incidência econômica")
+            + ": quem efetivamente perde renda. Elas não coincidem, e a segunda não depende da primeira.",
+            "No gráfico: imposto sobre o vendedor desloca a oferta para cima em t; imposto sobre o comprador "
+            "desloca a demanda para baixo em t. Nos dois casos abre-se a mesma cunha t entre pc e pv, na "
+            "mesma quantidade qₜ — resultado idêntico.",
+            "Quem paga mais é o lado " + azb("menos elástico") + ": parcela do consumidor ≈ ε<sub>O</sub> / "
+            "(ε<sub>O</sub> + |ε<sub>D</sub>|).",
+            rx("Brasil") + ": a distinção aparece como " + azb("contribuinte de direito") + " (quem recolhe, "
+            "como o comerciante no ICMS) × " + azb("contribuinte de fato") + " (quem suporta o encargo). E na "
+            "folha de pagamentos: dividir a contribuição previdenciária entre empregador e empregado, em tese, "
+            "não altera quem a suporta.",
+            "Ressalva acadêmica: o resultado supõe mercado competitivo, sem custos de cumprimento e com "
+            "consumidores atentos ao imposto; evidências de saliência tributária mostram que, na prática, a "
+            "forma de cobrança pode influenciar o comportamento.",
+        ],
+        "dissecando": (cz("[nexo indevido]") + " O “pode” (modulador relativo) costuma salvar itens; aqui não "
+                       "salva, porque na teoria padrão a incidência legal <b>não tem</b> efeito algum sobre a "
+                       "divisão do ônus. 🔥 Clássico de Mankiw cobrado em toda banca."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto cobrado dos compradores e um cobrado dos vendedores são equivalentes quanto à "
+            "divisão do ônus.”</i> → CERTO",
+            "<i>“O ônus de um imposto recai integralmente sobre quem tem a obrigação legal de recolhê-lo.”</i> → "
+            "ERRADO (incidência legal ≠ econômica)",
+        ])],
+        "reescrita": ("A incidência jurídica do imposto, se é sobre consumidores ou ofertantes, "
+                      + hl("não muda") + " o resultado da distribuição do ônus do imposto" + hl(", que depende "
+                      "das elasticidades da oferta e da demanda") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Não faz diferença se o imposto é sobre o consumidor ou o vendedor; o que afeta a "
+                             "distribuição do ônus é a elasticidade; quem é mais inelástico paga a conta."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0130
+    {
+        "id": "ECO-E1-0130-1", "fonte_ref": "E1-0130", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A5,
+        "rotulo_item": "Item",
+        "assertiva": ("O governo decide impor um preço máximo para certo medicamento, por julgar que o preço ao "
+                      "qual era vendido no equilíbrio de livre mercado era muito alto. Isto terá como resultado um "
+                      "excedente de produção deste medicamento no mercado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O governo decide impor um preço máximo para certo medicamento, por julgar que o preço ao "
+                      "qual era vendido no equilíbrio de livre mercado era muito alto. Isto terá como resultado ")
+                   + vm("um excedente de produção") + az(" deste medicamento no mercado."),
+        "poucas": ("Teto fixado " + azb("abaixo do equilíbrio") + " (o objetivo era baixar o preço): a quantidade "
+                   "demandada sobe, a ofertada cai — " + vd("escassez") + " (excesso de demanda), não excedente."),
+        "destrinchando": [
+            "Primeira pergunta em todo controle de preços: ele está acima ou abaixo do equilíbrio? Aqui, o "
+            "governo achou o preço de mercado “muito alto” — logo, o teto é <b>inferior</b> ao equilíbrio e "
+            "efetivo.",
+            "Ao preço tabelado, os consumidores querem comprar mais e os produtores querem vender menos: "
+            + vd("Qᴰ > Qˢ") + ". O mercado não fecha pelo preço e passa a fechar por outros mecanismos: filas, "
+            "racionamento, critérios de favorecimento, mercado paralelo (ágio), queda da qualidade.",
+            "Bem-estar: transaciona-se só Qˢ (o lado curto do mercado); surge " + azb("peso morto") + ". Parte "
+            "dos consumidores ganha (os que conseguem comprar mais barato); outros ficam sem o produto.",
+            rx("Brasil") + ": o congelamento do " + azb("Plano Cruzado") + " (1986) produziu desabastecimento e "
+            "cobrança de ágio. Em medicamentos, o Brasil regula preços-teto pela " + rx("CMED") + ", com "
+            "reajustes anuais — teto pensado para conter abusos, não para ficar abaixo do custo.",
+            vm("Regra-âncora: teto abaixo do equilíbrio → escassez; piso acima do equilíbrio → excedente."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item atribui ao preço máximo o efeito do preço mínimo. "
+                       "A motivação (“muito alto”) é a pista que posiciona o teto abaixo do equilíbrio — sem "
+                       "ela, um teto acima do equilíbrio seria apenas inócuo, e nunca geraria excedente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…Isto terá como resultado um excesso de demanda pelo medicamento.”</i> → CERTO",
+            "<i>“Se o preço máximo fosse fixado acima do preço de equilíbrio, haveria excedente de "
+            "produção.”</i> → ERRADO (teto acima do equilíbrio é inócuo)",
+        ])],
+        "reescrita": ("O governo decide impor um preço máximo para certo medicamento, […]. Isto terá como "
+                      "resultado " + hl("uma escassez (excesso de demanda)") + " deste medicamento no mercado."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Ver se o teto está acima ou abaixo do equilíbrio; pela redação, abaixo; há excesso "
+                             "de demanda e redução da oferta: escassez, não excedente."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0131
+    {
+        "id": "ECO-E1-0131-1", "fonte_ref": "E1-0131", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": True,
+        "comando": COM_RT_A5,
+        "rotulo_item": "Item",
+        "assertiva": ("Os efeitos de controles de preços sobre o equilíbrio de mercado tendem a ser maiores no "
+                      "curto prazo, mas se dissipam no longo prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os efeitos de controles de preços sobre o equilíbrio de mercado tendem a ser ")
+                   + vm("maiores no curto prazo, mas se dissipam no longo prazo") + az("."),
+        "poucas": ("No longo prazo, oferta e demanda ficam " + azb("mais elásticas") + ": as quantidades "
+                   "reagem mais ao preço controlado, e a escassez (ou o excedente) " + vd("aumenta") + "."),
+        "destrinchando": [
+            "O tamanho do desequilíbrio criado por um controle (Qᴰ − Qˢ no teto; Qˢ − Qᴰ no piso) depende de "
+            "quanto as quantidades reagem ao preço fixado — isto é, das elasticidades.",
+            "No curto prazo, curvas inelásticas: o estoque de imóveis é dado, os inquilinos não mudam de casa de "
+            "um dia para o outro. O teto de aluguel gera pouca falta. No longo prazo, os proprietários deixam de "
+            "construir e de manter imóveis para alugar, e mais famílias procuram aluguel barato: a falta "
+            "cresce.",
+            "Exemplo clássico de " + oc("Mankiw") + " (<i>Introdução à Economia</i>): o controle de aluguéis, "
+            "cujos danos — escassez, deterioração do estoque, filas e discriminação de inquilinos — se "
+            "acumulam com os anos. Ele cita o economista " + oc("Assar Lindbeck") + ", para quem o controle de "
+            "aluguéis seria a técnica mais eficiente para destruir uma cidade, depois do bombardeio.",
+            "Corolário político: controles de preço parecem funcionar logo após a adoção, o que estimula sua "
+            "manutenção; o custo aparece depois.",
+            vm("Regra-âncora: mais tempo → curvas mais elásticas → distorções maiores."),
+        ],
+        "grafico_verso": "ECO-E1-0131-1-V1",
+        "dissecando": (cz("[inversão]") + " Inverte a dinâmica temporal. A frase soa plausível porque “o "
+                       "mercado se ajusta no longo prazo” — mas o ajuste ocorre nas quantidades, e é justamente "
+                       "ele que amplia o desequilíbrio quando o preço está travado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A escassez provocada por um teto de aluguéis tende a se agravar com o tempo, à medida que oferta "
+            "e demanda se tornam mais elásticas.”</i> → CERTO",
+            "<i>“No longo prazo, a oferta se torna menos elástica, o que amplia os efeitos do controle.”</i> → "
+            "ERRADO (conclusão certa, mecanismo invertido)",
+        ])],
+        "reescrita": ("Os efeitos de controles de preços sobre o equilíbrio de mercado tendem a ser "
+                      + hl("menores no curto prazo e a se ampliar no longo prazo") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tendem"], "dificuldade": 2,
+        "comentario_fonte": ("No curto prazo, curvas menos elásticas, distorções menores; no longo prazo, "
+                             "elasticidade maior, distorções maiores."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0132
+    {
+        "id": "ECO-E1-0132-1", "fonte_ref": "E1-0132", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A5,
+        "rotulo_item": "Item",
+        "assertiva": ("A garantia, pelo governo, de um preço mínimo para o café, no início do século XX, era uma "
+                      "política eficaz para garantir uma oferta e demanda em equilíbrio no longo prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A garantia, pelo governo, de um preço mínimo para o café, no início do século XX, ")
+                   + vm("era uma política eficaz para garantir uma oferta e demanda em equilíbrio no longo prazo")
+                   + az("."),
+        "poucas": ("Preço mínimo " + azb("acima do equilíbrio") + " gera excesso de oferta — e, ao garantir "
+                   "rentabilidade, estimula ainda mais plantio. O resultado foi " + vd("superprodução crônica")
+                   + ", não equilíbrio."),
+        "destrinchando": [
+            "Mecânica do piso: para sustentar um preço acima do equilíbrio, o governo precisa comprar a sobra. "
+            "No longo prazo a oferta é mais elástica (o cafeeiro leva alguns anos para produzir, mas produz por "
+            "décadas): com o preço garantido, os fazendeiros plantam mais, e o excedente cresce.",
+            rx("Brasil") + ": o " + azb("Convênio de Taubaté") + " (" + vd("1906") + "), de São Paulo, Minas "
+            "Gerais e Rio de Janeiro, inaugurou a “valorização”: compra dos excedentes com empréstimos externos "
+            "e estocagem para sustentar o preço internacional. A defesa tornou-se permanente nos anos 1920.",
+            "Com a crise de 1929, a superprodução explodiu. O governo " + rx("Vargas") + " comprou e "
+            + vd("destruiu") + " estoques enormes de café ao longo dos anos 1930.",
+            oc("Celso Furtado") + " (<i>Formação Econômica do Brasil</i>, 1959): a defesa do café "
+            + azb("socializava as perdas") + " do setor e induzia novos investimentos na própria cultura, "
+            "perpetuando o desequilíbrio; nos anos 1930, porém, a compra e destruição dos estoques sustentou a "
+            "renda interna e funcionou, sem intenção, como política anticíclica.",
+            vm("Regra-âncora: preço mínimo efetivo nunca equilibra o mercado — ele cria um excedente que alguém "
+               "tem de absorver."),
+        ],
+        "dissecando": (cz("[juízo indevido · troca de conceito]") + " O item atribui ao preço mínimo uma "
+                       "função (equilibrar o mercado) que é o oposto do que ele faz. A expressão “eficaz para "
+                       "garantir… equilíbrio” é o juízo a desconfiar: piso efetivo existe <b>justamente</b> "
+                       "para manter o preço fora do equilíbrio."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política de valorização do café, ao sustentar preços elevados, estimulou a expansão do plantio "
+            "e agravou a superprodução.”</i> → CERTO",
+            "<i>“O Convênio de Taubaté previa a fixação de um preço máximo para o café, a fim de baratear o "
+            "produto no mercado interno.”</i> → ERRADO (troca de conceito: era sustentação de preço)",
+        ])],
+        "reescrita": ("A garantia, pelo governo, de um preço mínimo para o café, no início do século XX, "
+                      + hl("gerava excedentes crescentes de oferta, que o governo precisava comprar e estocar — "
+                      "e não um equilíbrio de longo prazo") + "."),
+        "tipo_erro": ["JUIZO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Os preços mínimos “abaixo do equilíbrio” geravam excedente de oferta, e o governo "
+                             "tinha de comprar e queimar o café."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: a fonte diz que os preços mínimos ficavam “abaixo do equilíbrio”; para "
+                    "gerar excedente, ficavam acima"],
+    },
+    # ------------------------------------------------------------------ E1-0133
+    {
+        "id": "ECO-E1-0133-1", "fonte_ref": "E1-0133", "destino": "03", "subtema": H2["teto"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": COM_RT_A5,
+        "rotulo_item": "Item",
+        "assertiva": "Uma elevação do salário mínimo sempre trará ganhos aos trabalhadores.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma elevação do salário mínimo ") + vm("sempre") + az(" trará ganhos aos trabalhadores."),
+        "poucas": ("No modelo competitivo, o " + azb("salário mínimo") + " acima do equilíbrio é um "
+                   + azb("preço mínimo") + " no mercado de trabalho: ganha quem segue empregado, perde quem fica "
+                   "" + vd("desempregado") + ". Nem sempre há ganho para todos."),
+        "destrinchando": [
+            "Mercado de trabalho competitivo: oferta de trabalho (famílias) × demanda (firmas). Um piso salarial "
+            "acima do equilíbrio eleva a quantidade ofertada de trabalho e reduz a demandada: "
+            + vd("desemprego involuntário") + " (excesso de oferta de trabalho).",
+            "Distribuição: os trabalhadores que mantêm o emprego ganham; os que perdem (ou não conseguem) o "
+            "emprego formal perdem — em geral os menos qualificados e os jovens. Parte migra para a "
+            "informalidade, onde o mínimo não alcança.",
+            "Exceção teórica: em " + azb("monopsônio") + " (empregador com poder de fixar salários, "
+            + oc("Joan Robinson") + "), um mínimo moderado pode elevar salário <b>e</b> emprego. A evidência de "
+            + oc("Card e Krueger") + " (1994), com redes de fast-food em Nova Jersey e na Pensilvânia, não "
+            "encontrou queda de emprego após um aumento do mínimo e reabriu o debate.",
+            rx("Brasil") + ": a política de valorização do salário mínimo (reajuste pela inflação mais o "
+            "crescimento do PIB) elevou o seu poder de compra desde os anos 2000 e é associada à queda da "
+            "desigualdade de renda; o efeito sobre o emprego formal depende do nível do mínimo em relação ao "
+            "salário mediano. ⏳ (out/2026)",
+        ],
+        "dissecando": (cz("[modulador absoluto]") + " O “sempre” é o erro: o efeito depende de onde o mínimo é "
+                       "fixado e da estrutura do mercado de trabalho. Mesmo em versões mais brandas, lembre que "
+                       "“trabalhadores” não é um grupo homogêneo: empregados × desempregados."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo competitivo, um salário mínimo fixado acima do salário de equilíbrio gera "
+            "desemprego.”</i> → CERTO",
+            "<i>“Em mercado de trabalho monopsonista, qualquer elevação do salário mínimo reduz o emprego.”</i> → "
+            "ERRADO (modulador absoluto: um mínimo moderado pode até elevá-lo)",
+        ])],
+        "reescrita": ("Uma elevação do salário mínimo " + hl("nem sempre") + " trará ganhos aos trabalhadores"
+                      + hl(": acima do equilíbrio, beneficia quem mantém o emprego e prejudica quem fica "
+                      "desempregado") + "."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": ("Se o salário mínimo estiver acima do equilíbrio, será bom para quem conseguir "
+                             "emprego e ruim para quem ficar desempregado."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0134
+    {
+        "id": "ECO-E1-0134-1", "fonte_ref": "E1-0134", "destino": "03", "subtema": H2["exc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca de excedentes, eficiência e estruturas de mercado, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": "Peso morto é um fenômeno exclusivo dos mercados em concorrência perfeita.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Peso morto é um fenômeno ") + vm("exclusivo dos mercados em concorrência perfeita")
+                   + az("."),
+        "poucas": ("É quase o contrário: a " + azb("concorrência perfeita") + " sem intervenção não gera peso "
+                   "morto (maximiza o excedente total). Peso morto é típico de " + vd("monopólio")
+                   + ", tributos, controles de preços e externalidades."),
+        "destrinchando": [
+            azb("Peso morto") + " = perda de excedente total que não é apropriada por ninguém: trocas "
+            "mutuamente vantajosas (valor para o comprador > custo do vendedor) que deixam de ocorrer.",
+            "Em concorrência perfeita, o equilíbrio ocorre onde p = CMg: toda unidade que vale mais do que custa "
+            "é produzida. Excedente total máximo, " + vd("peso morto zero") + ".",
+            "No " + azb("monopólio") + ", a firma produz onde RMg = CMg, com p > CMg: unidades que valeriam "
+            "mais do que custam deixam de ser produzidas. O triângulo entre a demanda e o CMg, da quantidade de "
+            "monopólio à competitiva, é o peso morto do monopólio.",
+            "Em mercados competitivos, o peso morto aparece quando há <b>distorção</b>: tributos (cunha entre "
+            "pc e pv), tetos e pisos efetivos, cotas, subsídios (produção além do ótimo) e externalidades não "
+            "corrigidas.",
+            vm("Regra-âncora: peso morto nasce de distorção — poder de mercado ou intervenção —, não da "
+               "concorrência."),
+        ],
+        "dissecando": (cz("[restrição indevida · inversão]") + " “Exclusivo” restringe o fenômeno ao único "
+                       "ambiente em que, sem intervenção, ele <b>não</b> ocorre. Dica: qualquer “exclusivo” "
+                       "colado a um conceito transversal (peso morto aparece em vários contextos) é forte "
+                       "candidato a ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O monopólio gera peso morto porque produz quantidade inferior à que igualaria preço e custo "
+            "marginal.”</i> → CERTO",
+            "<i>“Em concorrência perfeita, um imposto sobre o produto não gera peso morto.”</i> → ERRADO (só "
+            "não gera com oferta ou demanda perfeitamente inelástica)",
+        ])],
+        "reescrita": ("Peso morto " + hl("não") + " é um fenômeno exclusivo dos mercados em concorrência perfeita"
+                      + hl(": surge no monopólio e em mercados competitivos distorcidos por tributos, controles "
+                      "de preços ou externalidades") + "."),
+        "tipo_erro": ["RESTRICAO", "INVERSAO"], "moduladores": ["exclusivo"], "dificuldade": 1,
+        "comentario_fonte": ("O peso morto geralmente está ausente na concorrência perfeita, que tende ao ótimo de "
+                             "Pareto; é comum em estruturas não competitivas, como o monopólio."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

@@ -1,15 +1,149 @@
-{"id": "ECO-E3-L00104-1-V1", "uso": "verso",
+{
+ "id": "ECO-E3-L00104-1-V1",
+ "uso": "verso",
  "legenda": "Demanda de mercado Q = 120 − 10p e franja Qf = 2p. A líder enfrenta a demanda residual (D − Of), iguala RMg ao seu CMg = 4 e produz 36, ao preço 7. A esse preço o mercado pede 50: a franja supre os 14 restantes.",
- "eixos": {"x": "Q", "y": "p", "xmax": 130, "ymax": 13, "numeros": true},
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 130,
+  "ymax": 13,
+  "numeros": false
+ },
  "curvas": [
-  {"id": "D", "tipo": "funcao", "expr": "12 - x/10", "dominio": [0, 120], "familia": "demanda", "rotulo": "D (mercado)", "rotulo_em": 100, "rotulo_desloc": [6, 10]},
-  {"id": "Of", "tipo": "funcao", "expr": "x/2", "dominio": [0, 25], "familia": "oferta", "rotulo": "Of (franja)", "rotulo_em": 22, "rotulo_desloc": [8, 0]},
-  {"id": "Dr", "tipo": "funcao", "expr": "10 - x/12", "dominio": [0, 120], "familia": "terceira", "rotulo": "D residual", "rotulo_em": 108, "rotulo_desloc": [-10, 14]},
-  {"id": "RMg", "tipo": "funcao", "expr": "10 - x/6", "dominio": [0, 60], "familia": "quarta", "rotulo": "RMg", "rotulo_em": 56, "rotulo_desloc": [6, 6]},
-  {"id": "CMg", "tipo": "horizontal", "y": 4, "x": [0, 125], "familia": "referencia", "rotulo": "CMg líder", "rotulo_em": 118, "rotulo_desloc": [-30, 8]}],
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "12 - x/10",
+   "dominio": [
+    0,
+    120
+   ],
+   "familia": "demanda",
+   "rotulo": "D (mercado)",
+   "rotulo_em": 90,
+   "rotulo_desloc": [
+    8,
+    10
+   ]
+  },
+  {
+   "id": "Of",
+   "tipo": "funcao",
+   "expr": "x/2",
+   "dominio": [
+    0,
+    25
+   ],
+   "familia": "oferta",
+   "rotulo": "Of (franja)",
+   "rotulo_em": 22,
+   "rotulo_desloc": [
+    8,
+    0
+   ]
+  },
+  {
+   "id": "Dr",
+   "tipo": "funcao",
+   "expr": "10 - x/12",
+   "dominio": [
+    0,
+    120
+   ],
+   "familia": "terceira",
+   "rotulo": "D residual",
+   "rotulo_em": 72,
+   "rotulo_desloc": [
+    -20,
+    -30
+   ]
+  },
+  {
+   "id": "RMg",
+   "tipo": "funcao",
+   "expr": "10 - x/6",
+   "dominio": [
+    0,
+    60
+   ],
+   "familia": "quarta",
+   "rotulo": "RMg",
+   "rotulo_em": 56,
+   "rotulo_desloc": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "CMg",
+   "tipo": "horizontal",
+   "y": 4,
+   "x": [
+    0,
+    125
+   ],
+   "familia": "referencia",
+   "rotulo": "CMg líder = 4",
+   "rotulo_em": 118,
+   "rotulo_desloc": [
+    -30,
+    8
+   ]
+  }
+ ],
  "pontos": [
-  {"id": "QL", "intersecao": ["RMg", "CMg"], "projetar": "x", "rotulo_x": "36", "marcar": true},
-  {"id": "L", "sobre": "Dr", "x": "QL.x", "rotulo": "líder", "projetar": "y", "rotulo_y": "7", "rotulo_desloc": [6, 6]},
-  {"id": "F", "sobre": "Of", "x": 14, "rotulo": "franja", "rotulo_desloc": [-56, 6]},
-  {"id": "M", "sobre": "D", "x": 50, "rotulo": "mercado", "projetar": "x", "rotulo_x": "50", "rotulo_desloc": [6, 6]}],
- "checar": ["abs(QL.x - 36) < 0.01", "abs(L.y - 7) < 0.01", "abs(F.y - 7) < 0.01", "abs(M.y - 7) < 0.01", "abs(M.x - QL.x - F.x) < 0.01"]}
+  {
+   "id": "QL",
+   "intersecao": [
+    "RMg",
+    "CMg"
+   ],
+   "projetar": "x",
+   "rotulo_x": "36",
+   "marcar": true
+  },
+  {
+   "id": "L",
+   "sobre": "Dr",
+   "x": "QL.x",
+   "rotulo": "líder",
+   "projetar": "y",
+   "rotulo_y": "7",
+   "rotulo_desloc": [
+    6,
+    6
+   ]
+  },
+  {
+   "id": "F",
+   "sobre": "Of",
+   "x": 14,
+   "rotulo": "franja",
+   "rotulo_desloc": [
+    -20,
+    14
+   ],
+   "projetar": "x",
+   "rotulo_x": "14"
+  },
+  {
+   "id": "M",
+   "sobre": "D",
+   "x": 50,
+   "rotulo": "mercado",
+   "projetar": "x",
+   "rotulo_x": "50",
+   "rotulo_desloc": [
+    6,
+    6
+   ]
+  }
+ ],
+ "checar": [
+  "abs(QL.x - 36) < 0.01",
+  "abs(L.y - 7) < 0.01",
+  "abs(F.y - 7) < 0.01",
+  "abs(M.y - 7) < 0.01",
+  "abs(M.x - QL.x - F.x) < 0.01"
+ ]
+}

@@ -1116,4 +1116,195 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0218 (1)
+    {
+        "id": "ECO-E1-0218-1", "fonte_ref": "E1-0218", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": True,
+        "comando": CMD_COASE, "excerto": EXCERTO_COASE_1,
+        "rotulo_item": "Item",
+        "assertiva": ("O problema apresentado no primeiro trecho, que se refere ao julgamento do processo de Cooke "
+                      "contra Forbes, é conhecido como externalidade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O problema apresentado no primeiro trecho, que se refere ao julgamento do processo de Cooke "
+                      "contra Forbes, é conhecido como <u>externalidade</u>."),
+        "poucas": ("Os vapores de Forbes estragam os tapetes de Cooke, que não participa da produção nem é "
+                   "compensado: custo imposto a terceiro fora do mercado = " + azb("externalidade negativa")
+                   + "."),
+        "destrinchando": [
+            azb("Externalidade") + ": efeito da atividade de um agente sobre o bem-estar ou a produção de outro, "
+            "que não passa pelo sistema de preços. Negativa (poluição, ruído) ou positiva (vacina, pesquisa); "
+            "de produção ou de consumo.",
+            "No caso: o custo privado de Forbes não inclui o dano aos tapetes; o " + azb("custo marginal "
+            "social") + " supera o privado, e a fábrica produz (e polui) mais do que o socialmente ótimo.",
+            "O caso é um dos que " + oc("Ronald Coase") + " analisa em “O problema do custo social” (1960), "
+            "texto que reformulou o tema: em vez de perguntar “como impedir A de prejudicar B”, Coase propõe "
+            "ver o problema como <b>recíproco</b> — impedir o dano a B também impõe um custo a A. Os advogados "
+            "de Forbes usam exatamente esse argumento (o alvejante de Cooke é que seria atípico).",
+            "Soluções tradicionais: " + oc("Pigou") + " (tributo igual ao dano marginal) ou regulação; "
+            "solução coasiana: definir direitos de propriedade e deixar as partes negociarem.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item de reconhecimento: o texto descreve um dano a terceiro sem "
+                       "compensação de mercado, e o item dá o nome. A dificuldade está no texto longo, que "
+                       "distrai com detalhes jurídicos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O problema descrito constitui externalidade positiva, pois a decisão judicial gera benefícios "
+            "a terceiros.”</i> → ERRADO (sinal trocado: o dano é custo imposto a Cooke)",
+            "<i>“Para Coase, problemas como o descrito têm natureza recíproca.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Os trechos tratam de externalidades: a emissão do gás afeta quem não participa do "
+                             "ato original; externalidade negativa pela qual o juiz admite compensação."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_E1_CACD],
+    },
+    # ------------------------------------------------------------------ E1-0218 (2)
+    {
+        "id": "ECO-E1-0218-2", "fonte_ref": "E1-0218", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": True,
+        "comando": CMD_COASE, "excerto": EXCERTO_COASE_1,
+        "rotulo_item": "Item",
+        "assertiva": ("A solução para o problema apresentado no primeiro trecho, de acordo com o teorema de Coase, "
+                      "é a correta atribuição dos direitos de propriedade envolvidos no caso, desde que não haja "
+                      "custos de transação."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("A solução para o problema apresentado no primeiro trecho, de acordo com o teorema de Coase, "
+                      "é a <u>correta atribuição dos direitos de propriedade</u> envolvidos no caso, <u>desde que "
+                      "não haja custos de transação</u>."),
+        "poucas": ("Pelo " + azb("teorema de Coase") + ", com " + vd("custos de transação nulos") + " e direitos "
+                   "de propriedade bem definidos, a negociação privada leva à solução eficiente — a externalidade "
+                   "se resolve sem tributo nem regulação."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "pelo teorema, a eficiência é alcançada <b>qualquer que seja</b> a parte a quem se "
+                          "atribui o direito — não existe uma atribuição “correta” do ponto de vista da "
+                          "eficiência; o que importa é que o direito seja <b>claro</b>. O gabarito CERTO lê "
+                          "“correta atribuição” como “definição clara”; uma leitura literal (um titular "
+                          "específico seria o correto) tornaria o item ERRADO.")],
+        "destrinchando": [
+            "Enunciado usual: se os " + azb("direitos de propriedade") + " estão bem definidos e os "
+            + azb("custos de transação") + " são nulos, as partes negociam até a alocação eficiente, "
+            "<b>independentemente</b> de a quem o direito foi dado. A atribuição muda a <b>distribuição</b> "
+            "(quem paga a quem), não a eficiência.",
+            "No caso: se Cooke tem direito ao ar limpo, Forbes pode comprá-lo (pagar para poluir) quando o seu "
+            "lucro com a fábrica superar o dano; se Forbes tem direito de emitir, Cooke pode pagar para que ele "
+            "reduza as emissões quando o dano superar o lucro. Nos dois casos, prevalece o uso de maior valor.",
+            "Custos de transação = custos de identificar as partes, negociar, redigir e fazer cumprir o acordo. "
+            "Com muitas vítimas (poluição urbana), são altos e o teorema não se aplica: daí o papel do Estado e "
+            "das soluções pigouvianas.",
+            "Lição institucional de " + oc("Coase") + " (Nobel de 1991): como os custos de transação são "
+            "positivos no mundo real, a <b>forma</b> como o direito e o Judiciário alocam direitos importa — "
+            "deveriam atribuí-los a quem os valoriza mais. Origem da " + azb("análise econômica do direito") + ".",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Reproduz as duas condições do teorema (direitos "
+                       "definidos + custo de transação zero). O ponto sensível é o adjetivo “correta”: a banca "
+                       "costuma testar se o candidato sabe que a alocação inicial é irrelevante para a "
+                       "eficiência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o teorema de Coase, a eficiência só é alcançada se o direito for atribuído à parte "
+            "prejudicada pela externalidade.”</i> → ERRADO (restrição indevida: qualquer atribuição serve)",
+            "<i>“Com custos de transação elevados, a negociação privada pode não alcançar a solução "
+            "eficiente.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["desde que"], "dificuldade": 2,
+        "comentario_fonte": ("Afirma que, quando não se consegue definir claramente os direitos de propriedade, as "
+                             "partes devem negociar formas de compensação, internalizando a externalidade; o "
+                             "pleiteante busca o Judiciário para definir os direitos."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_E1_CACD,
+                    "contestavel: a classificação marcava o gabarito como incerto; a fonte dá “Correto”, mas o "
+                    "teorema dispensa uma atribuição “correta” (basta que seja clara) — gabarito da fonte mantido",
+                    "qualidade_fonte: o comentário de origem inverte a condição do teorema (fala em direitos que "
+                    "não se consegue definir claramente) — corrigido"],
+    },
+    # ------------------------------------------------------------------ E1-0218 (3)
+    {
+        "id": "ECO-E1-0218-3", "fonte_ref": "E1-0218", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": True,
+        "comando": CMD_COASE, "excerto": EXCERTO_COASE_1,
+        "rotulo_item": "Item",
+        "assertiva": ("O teorema de Coase permite inferir que, eliminados os custos de transação, seria possível "
+                      "Cooke vender para Forbes o seu direito a ter ar limpo, de modo que este pudesse emitir os "
+                      "vapores de sulfato de amônia."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O teorema de Coase permite inferir que, <u>eliminados os custos de transação</u>, seria "
+                      "<u>possível</u> Cooke vender para Forbes o seu direito a ter ar limpo, de modo que este "
+                      "pudesse emitir os vapores de sulfato de amônia."),
+        "poucas": ("Se o direito ao ar limpo é de Cooke (como sugere o juiz), ele pode " + azb("negociá-lo")
+                   + ": Forbes paga para poluir sempre que o seu ganho com a produção superar o dano aos "
+                   "tapetes. É a lógica de mercado do " + azb("teorema de Coase") + "."),
+        "destrinchando": [
+            "Direito de propriedade é transacionável. O juiz entende que o vizinho não pode “inundar o "
+            "ambiente com gás”: o direito inicial fica com Cooke. Com custos de transação nulos, as partes "
+            "trocam esse direito se isso aumentar o ganho conjunto.",
+            "Exemplo numérico: se emitir os vapores vale " + vd("100") + " para Forbes e o dano a Cooke é "
+            + vd("60") + ", qualquer pagamento entre 60 e 100 deixa ambos melhor — Cooke vende o direito, e a "
+            "fábrica opera. Se o dano fosse 150, nenhum acordo sairia, e o ar continuaria limpo.",
+            "O resultado eficiente (o uso de maior valor) seria o mesmo se o direito fosse de Forbes: aí Cooke "
+            "pagaria para que ele parasse, quando o dano superasse o lucro. Só a distribuição de renda muda.",
+            "Mercados de licenças de emissão negociáveis (<i>cap and trade</i>) são a aplicação de política "
+            "pública da mesma ideia: definir direitos de poluir e deixá-los ser comprados e vendidos.",
+        ],
+        "dissecando": (cz("[contraintuitivo · modulador relativo]") + " Soa estranho “vender o direito ao ar "
+                       "limpo”, e o candidato tende a ver nisso um absurdo ético; mas é exatamente a "
+                       "implicação do teorema. O “seria possível” e o “eliminados os custos de transação” "
+                       "protegem o item."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O teorema de Coase implica que Cooke jamais aceitaria vender o seu direito, pois o dano é "
+            "irreparável.”</i> → ERRADO (o acordo sai se o ganho de Forbes superar o dano)",
+            "<i>“Licenças de emissão negociáveis aplicam a lógica de Coase à política ambiental.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "MODULADOR_RELATIVO"], "moduladores": ["seria possível"],
+        "dificuldade": 2,
+        "comentario_fonte": ("A negociação direta entre as partes delimita os direitos e permite acordar uma "
+                             "compensação; o mercado atinge o equilíbrio ótimo."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_E1_CACD,
+                    "nota_redacao: a classificação marcava o gabarito como incerto; adotado o “Correto” do verso, "
+                    "coerente com o teorema"],
+    },
+    # ------------------------------------------------------------------ E1-0219
+    {
+        "id": "ECO-E1-0219-1", "fonte_ref": "E1-0219", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": True,
+        "comando": CMD_COASE, "excerto": EXCERTO_COASE_2,
+        "rotulo_item": "Item",
+        "assertiva": "No segundo trecho, faz-se referência ao tributo (ou imposto) Tobin.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No segundo trecho, faz-se referência ao tributo (ou imposto) ") + vm("Tobin") + az("."),
+        "poucas": ("O trecho critica o " + azb("imposto pigouviano") + " — tributar a fumaça pelo dano que causa —, "
+                   "não a taxa " + oc("Tobin") + ", que incide sobre transações cambiais."),
+        "destrinchando": [
+            oc("Arthur Pigou") + " (<i>The Economics of Welfare</i>, 1920): externalidade negativa → tributo "
+            "por unidade igual ao " + azb("dano marginal") + " no ponto ótimo. O imposto faz o custo privado "
+            "igualar o custo social e o poluidor internaliza o dano.",
+            "Crítica de " + oc("Coase") + " (1960), resumida no trecho: calcular esse tributo exige conhecer o "
+            "dano <b>marginal</b> (não o médio) e as interações entre danos a várias propriedades — informação "
+            "que o governo raramente tem. Além disso, o problema é recíproco, e o tributo pode induzir ajustes "
+            "ineficientes.",
+            azb("Taxa Tobin") + ": proposta de " + oc("James Tobin") + " (1972) de um imposto pequeno sobre "
+            "operações de câmbio para “jogar areia nas engrenagens” dos fluxos especulativos de curto prazo. "
+            "Nada a ver com poluição.",
+            "Outros nomes que a banca pode trocar: imposto " + azb("Ramsey") + " (tributação ótima com "
+            "alíquotas inversas à elasticidade), " + azb("taxa Pigou") + " (externalidades), " + azb("imposto "
+            "inflacionário") + " (senhoriagem).",
+        ],
+        "dissecando": (cz("[troca de ator]") + " Troca o autor associado ao instrumento. Pista no próprio texto: "
+                       "“tributação” como solução para a “poluição causada pela fumaça” é a assinatura de Pigou; "
+                       "Tobin é sempre câmbio e capital especulativo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No segundo trecho, Coase aponta dificuldades da tributação pigouviana, como a distinção entre "
+            "dano médio e dano marginal.”</i> → CERTO",
+            "<i>“O imposto pigouviano ótimo deve igualar o dano médio causado pela externalidade.”</i> → ERRADO "
+            "(dado alterado: dano marginal)",
+        ])],
+        "reescrita": "No segundo trecho, faz-se referência ao tributo (ou imposto) " + hl("pigouviano") + ".",
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Trata-se do imposto pigouviano, que busca compensar o custo social das "
+                             "externalidades negativas; o mercado produz em excesso o bem poluente."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_E1_CACD],
+    },
 ]

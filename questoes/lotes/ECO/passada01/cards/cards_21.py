@@ -1029,8 +1029,9 @@ CARDS = [
                       "excesso de capacidade ociosa."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Em um mercado de concorrência monopolística ") + vm("não ocorre ineficiência") + az(" no "
-                      "cenário de longo prazo, dado que o preço se iguala ao custo médio e, portanto, as empresas ")
-                   + vm("não operam") + az(" com excesso de capacidade ociosa."),
+                      "cenário de longo prazo, ") + vm("dado que") + az(" o preço se iguala ao custo médio")
+                   + vm(" e, portanto,") + az(" as empresas ") + vm("não operam") + az(" com excesso de capacidade "
+                   "ociosa."),
         "poucas": ("P = CMe no longo prazo é verdade, mas a igualdade se dá na " + azb("tangência") + " da demanda "
                    "com o CMe na parte <b>descendente</b>, antes do mínimo: há " + azb("capacidade ociosa")
                    + " e " + vd("P > CMg") + "."),

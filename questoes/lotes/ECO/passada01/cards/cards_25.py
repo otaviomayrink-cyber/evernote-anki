@@ -1155,4 +1155,383 @@ CARDS = [
                            "acao": "redesenhada (ECO-E2-L00872-1-V1, com a cunha do imposto em Q*)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00971
+    {
+        "id": "ECO-E2-L00971-1", "fonte_ref": "E2-L00971", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MICRO,
+        "rotulo_item": "Item",
+        "assertiva": ("A externalidade negativa implica que o custo marginal social da produção é menor que o "
+                      "custo marginal privado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A externalidade negativa implica que o custo marginal social da produção é ")
+                    + vm("menor") + az(" que o custo marginal privado.")),
+        "poucas": ("Externalidade negativa = custo que recai sobre terceiros, somado ao do produtor: "
+                   + vd("CMgS = CMgP + CE") + ", portanto CMgS é <b>maior</b> que CMgP."),
+        "destrinchando": [
+            "O " + azb("custo marginal social") + " é tudo o que a sociedade perde para produzir mais uma "
+            "unidade: o custo pago pela firma (insumos, salários — o " + azb("CMg privado") + ") mais o "
+            "custo imposto a terceiros sem compensação (o " + azb("custo externo marginal") + ", CE): poluição, "
+            "ruído, doenças respiratórias.",
+            "Como CE > 0, " + vd("CMgS > CMgP") + "; graficamente, a curva social fica acima da privada. O "
+            "mercado, que só enxerga CMgP, produz mais e cobra menos do que seria eficiente.",
+            "Quando o CMgS seria menor que o CMgP? Na " + azb("externalidade positiva na produção") + ": o "
+            "pomar cujas flores alimentam as abelhas do vizinho (exemplo de " + oc("James Meade") + ", 1952), "
+            "a firma que treina trabalhadores depois contratados por outras, a P&amp;D que transborda. Aí o "
+            "mercado produz de menos.",
+            "Quadro de sinais: negativa → CMgS > CMgP (ou BMgS < BMgP, no consumo) → sobreprodução → imposto. "
+            "Positiva → CMgS < CMgP (ou BMgS > BMgP) → subprodução → subsídio.",
+        ],
+        "dissecando": (cz("[inversão]") + " Inversão de sinal pura, sem enxerto. Mesma relação de "
+                       "ECO-E2-L00871-1 e ECO-E2-L00679-1. Pista: “negativa” para a sociedade significa custo "
+                       "<b>a mais</b>, nunca a menos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A externalidade positiva na produção implica que o custo marginal social é menor que o custo "
+            "marginal privado.”</i> → CERTO",
+            "<i>“Na externalidade negativa, o benefício marginal social do consumo supera o benefício marginal "
+            "privado.”</i> → ERRADO (é a positiva no consumo)",
+        ])],
+        "reescrita": ("A externalidade negativa implica que o custo marginal social da produção é "
+                      + hl("maior") + " que o custo marginal privado."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Custo externo torna o CMg social maior que o privado: CMgS = CMgP + CE.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00871-1 cobra a mesma relação CMgS × CMgP com outra redação "
+                    "(mesmo curso, outra lista)"],
+    },
+    # ------------------------------------------------------------------ E2-L01009
+    {
+        "id": "ECO-E2-L01009-1", "fonte_ref": "E2-L01009", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CONS,
+        "rotulo_item": "Item",
+        "assertiva": ("A partir de 2019, passou a ser cobrada uma taxa de entrada dos turistas que visitam certo "
+                      "parque nacional, visando-se à remuneração dos investimentos em infraestrutura feitos pela "
+                      "concessionária que administra o parque. Nesse caso, com o início da cobrança da taxa de "
+                      "acesso, o parque nacional deixou de ser um bem público - no sentido econômico e se tornou "
+                      "um bem quase público, em decorrência da possibilidade de exclusão de usuários que não "
+                      "possam pagar a taxa de acesso, apesar de ainda se caracterizar pela não rivalidade no "
+                      "consumo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A partir de 2019, passou a ser cobrada uma taxa de entrada dos turistas que visitam certo "
+                      "parque nacional, […]. Nesse caso, com o início da cobrança da taxa de acesso, o parque "
+                      "nacional deixou de ser um bem público - no sentido econômico e se tornou um <u>bem quase "
+                      "público</u>, em decorrência da <u>possibilidade de exclusão</u> de usuários que não possam "
+                      "pagar a taxa de acesso, apesar de ainda se caracterizar pela <u>não rivalidade</u> no "
+                      "consumo."),
+        "poucas": ("A taxa cria " + azb("exclusão") + "; a " + azb("não rivalidade") + " permanece (enquanto "
+                   "o parque não lota). Excludente + não rival = " + azb("bem de clube") + ", também chamado "
+                   "de bem quase público."),
+        "destrinchando": [
+            "Antes da cobrança: acesso livre (não excludente) e, sem lotação, um visitante a mais não reduz a "
+            "experiência dos outros (não rival) → bem público no sentido econômico.",
+            "Depois: quem não paga é barrado → passa a ser " + azb("excludente") + ". Como a rivalidade não "
+            "mudou, o parque vira " + azb("bem de clube") + " (" + oc("Buchanan") + ", “An Economic Theory of "
+            "Clubs”, 1965) — mesma família da TV a cabo, do cinema vazio, da rodovia livre com pedágio.",
+            "Ressalva da rivalidade: com lotação (feriados, trilhas estreitas), cada visitante a mais degrada "
+            "a visita dos outros e o bem passa a ser rival — aí o ingresso funciona também como "
+            "racionamento. Por isso alguns parques limitam o número diário de visitantes.",
+            "Bem quase público não significa privatizado: o parque continua público no sentido jurídico; o "
+            "que muda é a característica econômica do consumo. " + rx("No Brasil") + ", parques nacionais "
+            "com serviços concedidos à iniciativa privada (Iguaçu, Fernando de Noronha) cobram ingresso nesses "
+            "moldes.",
+        ],
+        "dissecando": (cz("[detalhe · paráfrase fiel]") + " O enunciado longo esconde uma pergunta simples: o "
+                       "que a taxa mudou? Só a exclusão. O “apesar de ainda se caracterizar pela não "
+                       "rivalidade” é o detalhe que confirma o bem de clube. Termo “quase público” é usado em "
+                       "manuais brasileiros como sinônimo de bem impuro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com a cobrança da taxa, o parque passou a ser rival no consumo, tornando-se bem "
+            "privado.”</i> → ERRADO (a taxa cria exclusão, não rivalidade)",
+            "<i>“Em feriados de lotação máxima, o parque com cobrança de ingresso se aproxima de um bem "
+            "privado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Bem público = não rival e não excludente; manteve-se só a não rivalidade (salvo "
+                             "lotação); a cobrança tornou o parque excludente."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01011
+    {
+        "id": "ECO-E2-L01011-1", "fonte_ref": "E2-L01011", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CONS,
+        "rotulo_item": "Item",
+        "assertiva": ("No problema da tragédia dos comuns, o custo da super exploração do bem comum que pode levar "
+                      "à sua extinção é um exemplo de externalidade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No problema da tragédia dos comuns, o custo da super exploração do bem comum que pode "
+                      "levar à sua extinção é um exemplo de <u>externalidade</u>."),
+        "poucas": ("Cada usuário do recurso comum impõe aos demais um custo (menos estoque, menor "
+                   "produtividade) que não paga: é uma " + azb("externalidade negativa") + ", e é ela que "
+                   "produz a superexploração."),
+        "destrinchando": [
+            "A parábola: numa cidade medieval, as famílias criam ovelhas no pasto comum. A população e o "
+            "rebanho crescem; a terra é fixa; a grama desaparece. Cada família ganha integralmente com a "
+            "ovelha a mais, mas o desgaste do pasto é dividido entre todos (" + oc("Hardin") + ", "
+            + vd("1968") + ").",
+            "Tradução econômica: o " + azb("custo marginal privado") + " do uso é menor que o "
+            + azb("custo marginal social") + ", porque não inclui a redução do recurso para os outros. Cada "
+            "um usa até onde benefício = custo privado; o uso total fica acima do eficiente.",
+            "Por isso a tragédia dos comuns é tratada como caso particular de externalidade negativa, com os "
+            "mesmos remédios: tributar o uso (estilo " + oc("Pigou") + "), fixar quantidades (cotas, "
+            "licenças), definir direitos de propriedade (estilo " + oc("Coase") + ") ou gestão comunitária "
+            "(" + oc("Ostrom") + ").",
+            "Conexão com temas atuais: a mudança climática é a tragédia dos comuns em escala global — a "
+            "atmosfera é rival como depósito de carbono e ninguém pode ser excluído de emitir.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item liga dois capítulos do manual (recursos comuns e "
+                       "externalidades). Quem os estuda separados hesita; a ligação é exatamente a que "
+                       + oc("Mankiw") + " faz. Mesmo tema de ECO-E2-L01175-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na tragédia dos comuns, o custo marginal privado de explorar o recurso supera o custo marginal "
+            "social.”</i> → ERRADO (inversão: o privado é menor)",
+            "<i>“A tragédia dos comuns decorre da não exclusão combinada com a rivalidade no uso do "
+            "recurso.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Recursos comuns usados em excesso quando não se cobra pelo uso; CMg privado menor "
+                             "que o social; resultado ineficiente: externalidade negativa; parábola das ovelhas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01175-1 cobra a tragédia dos comuns como externalidade com outra "
+                    "redação (mesmo curso, outra lista)"],
+    },
+    # ------------------------------------------------------------------ E2-L01175
+    {
+        "id": "ECO-E2-L01175-1", "fonte_ref": "E2-L01175", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EXT,
+        "rotulo_item": "Item",
+        "assertiva": ("O fenômeno econômico conhecido como Tragédia dos Comuns é um caso de externalidade "
+                      "associado à utilização excessiva de um recurso de produção, o qual pertence a toda a "
+                      "sociedade, e não a uma pessoa em particular."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O fenômeno econômico conhecido como Tragédia dos Comuns é um caso de externalidade "
+                      "associado à utilização excessiva de um recurso de produção, o qual <u>pertence a toda a "
+                      "sociedade, e não a uma pessoa em particular</u>."),
+        "poucas": ("A tragédia ocorre porque o recurso é de " + azb("acesso comum") + " (de todos e de "
+                   "ninguém): sem dono que cobre pelo uso, cada um ignora o custo que impõe aos outros — uma "
+                   + azb("externalidade negativa") + "."),
+        "destrinchando": [
+            "Recursos comuns compartilham com os bens públicos o " + azb("livre acesso") + " (não exclusão) e "
+            "por isso oferecem pouco incentivo a que empresas os produzam ou conservem. O problema adicional "
+            "é a " + azb("rivalidade") + ": o uso de cada um reduz o que sobra para os outros.",
+            "“Pertence a toda a sociedade, e não a uma pessoa” descreve a ausência de " + azb("direito de "
+            "propriedade individual") + ". Um proprietário único internalizaria o custo do esgotamento (o "
+            "pasto exaurido reduziria o valor do <b>seu</b> ativo) e racionaria o uso.",
+            "O papel do governo é garantir que o recurso não seja usado em excesso: limites de uso, tributação, "
+            "concessões ou atribuição de direitos.",
+            "Atenção ao vocabulário: “propriedade comum” aqui é o regime de acesso livre. " + oc("Ostrom")
+            + " distinguiu o acesso aberto (onde a tragédia ocorre) da propriedade comunal gerida por regras "
+            "locais, que muitas vezes evita a tragédia.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " A definição é ampla (“recurso de produção”), mas correta. "
+                       "Igual a ECO-E2-L01011-1 em conteúdo. A variante errada típica diria que o recurso "
+                       "“pertence a um particular” ou que a tragédia é falha de governo, e não de mercado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A atribuição de direitos de propriedade sobre o recurso comum tende a reduzir sua "
+            "superexploração.”</i> → CERTO",
+            "<i>“A tragédia dos comuns ocorre porque o recurso, sendo não rival, pode ser usado "
+            "indefinidamente.”</i> → ERRADO (troca de conceito: o recurso comum é rival)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Recursos comuns não excludentes e rivais; uso excessivo; papel do governo é evitar o "
+                             "sobreuso; parábola das ovelhas: a tragédia decorre de uma externalidade."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01011-1 cobra a tragédia dos comuns como externalidade com outra "
+                    "redação (mesmo curso, outra lista)"],
+    },
+    # ------------------------------------------------------------------ E2-L01176
+    {
+        "id": "ECO-E2-L01176-1", "fonte_ref": "E2-L01176", "destino": "12", "subtema": H2["bens"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EXT,
+        "rotulo_item": "Item",
+        "assertiva": ("Do ponto de vista econômico, governos cobram impostos para minimizarem as perdas com os "
+                      "“caronas” — que usufruem sem pagar — nas ofertas de bens públicos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Do ponto de vista econômico, governos cobram impostos para minimizarem as perdas com os "
+                      "“caronas” — que usufruem sem pagar — nas ofertas de bens públicos."),
+        "poucas": ("O " + azb("tributo") + " é contribuição <b>compulsória</b>: obriga todos a financiar o bem "
+                   "público, de que se beneficiariam de qualquer modo. É a resposta clássica ao "
+                   + azb("carona") + "."),
+        "destrinchando": [
+            "Sem exclusão, a contribuição voluntária fracassa: cada um prefere que os outros paguem. O bem não "
+            "é produzido, embora o conjunto dos usuários o valorize mais do que custa (" + oc("Mankiw")
+            + ": o exemplo da queima de fogos da cidade).",
+            "O Estado contorna o problema pela " + azb("coerção fiscal") + ": define a quantidade a ofertar e "
+            "a financia com impostos que ninguém pode recusar. Converte o comportamento voluntário em "
+            "obrigatório.",
+            "Limite: o governo também não observa as preferências individuais (ninguém declara quanto valoriza "
+            "a defesa nacional), então decide a quantidade por " + azb("análise custo-benefício") + " e "
+            "processo político — fontes de falhas de governo.",
+            "Nota técnica: os impostos são o meio de financiar a oferta; a provisão pode ser pública ou "
+            "contratada de empresas privadas. O que o mercado não resolve é o <b>financiamento</b>, não "
+            "necessariamente a produção.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " “Do ponto de vista econômico” delimita o item à "
+                       "justificativa alocativa do tributo (há outras: redistribuição, estabilização). A "
+                       "versão errada costuma dizer que os impostos “eliminam” os caronas ou que o carona "
+                       "decorre da rivalidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O problema do carona é resolvido pelo mercado, desde que os bens públicos sejam ofertados por "
+            "empresas privadas.”</i> → ERRADO (sem exclusão, a firma não consegue cobrar)",
+            "<i>“A tributação compulsória permite financiar bens públicos cuja provisão voluntária seria "
+            "insuficiente.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["minimizarem"], "dificuldade": 1,
+        "comentario_fonte": ("Carona recebe o benefício sem pagar; sem exclusão, o bem não é produzido mesmo que "
+                             "valorizado coletivamente; o governo financia a provisão com impostos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01177
+    {
+        "id": "ECO-E2-L01177-1", "fonte_ref": "E2-L01177", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EXT,
+        "rotulo_item": "Item",
+        "assertiva": ("Pode-se dizer que existe externalidade quando há conluio entre os produtores que operam em "
+                      "um mercado oligopolista."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Pode-se dizer que existe ") + vm("externalidade") + az(" quando há conluio entre os "
+                                                                              "produtores que operam em um "
+                                                                              "mercado oligopolista.")),
+        "poucas": ("Conluio é " + azb("poder de mercado") + " (outra falha de mercado): os produtores combinam "
+                   "preços via mercado. " + azb("Externalidade") + " é efeito sobre terceiros que <b>não "
+                   "passa</b> pelo preço."),
+        "destrinchando": [
+            "Falhas de mercado clássicas, cada uma com mecanismo próprio: " + azb("poder de mercado")
+            + " (monopólio, cartel), " + azb("externalidades") + ", " + azb("bens públicos") + ", "
+            + azb("informação assimétrica") + ". Todas afastam o mercado da eficiência de Pareto, mas não se "
+            "confundem.",
+            "No " + azb("conluio") + " (cartel), as firmas agem como monopolista: restringem a quantidade e "
+            "elevam o preço acima do custo marginal. O consumidor perde, mas a perda vem <b>pelo preço</b> que "
+            "ele paga na transação — não é efeito externo.",
+            "Externalidade exige que alguém fora da transação (ou um aspecto não precificado dela) seja "
+            "afetado: a fumaça da fábrica sobre o vizinho, e não o preço alto do produto sobre o comprador.",
+            "Remédio próprio do conluio: " + azb("defesa da concorrência") + ". " + rx("No Brasil") + ", o "
+            "cartel é infração da ordem econômica (Lei " + vd("12.529/2011") + ", art. 36) julgada pelo "
+            + rx("Cade") + ", e também crime (Lei " + vd("8.137/1990") + ").",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca uma falha de mercado por outra. O “pode-se dizer” "
+                       "tenta amaciar a afirmação, mas o conceito está errado em qualquer grau. Pista: "
+                       "pergunte se há terceiro afetado fora do preço."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O conluio entre oligopolistas é falha de mercado associada ao exercício de poder de "
+            "mercado.”</i> → CERTO",
+            "<i>“Toda falha de mercado é uma externalidade.”</i> → ERRADO (modulador absoluto: há poder de "
+            "mercado, bens públicos, assimetria)",
+        ])],
+        "reescrita": ("Pode-se dizer que existe " + hl("poder de mercado (falha distinta da externalidade)")
+                      + " quando há conluio entre os produtores que operam em um mercado oligopolista."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["pode-se dizer"], "dificuldade": 1,
+        "comentario_fonte": ("Externalidade: efeito de produção ou consumo que impõe custos ou benefícios a "
+                             "terceiros não refletidos nos preços."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01178
+    {
+        "id": "ECO-E2-L01178-1", "fonte_ref": "E2-L01178", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EXT,
+        "rotulo_item": "Item",
+        "assertiva": ("Um aumento no preço das passagens aéreas, ao provocar a redução da demanda por serviços "
+                      "aeroportuários, é um sinal da existência de externalidade negativa."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um aumento no preço das passagens aéreas, ao provocar a redução da demanda por serviços "
+                       "aeroportuários, ") + vm("é um sinal da existência de externalidade negativa") + az(".")),
+        "poucas": ("Passagem aérea e serviços aeroportuários são " + azb("bens complementares") + ": o efeito "
+                   "corre pelo sistema de preços. É o funcionamento normal do mercado (efeito pecuniário), não "
+                   "externalidade."),
+        "destrinchando": [
+            "A cadeia do item é a da " + azb("elasticidade-preço cruzada") + " negativa: passagem mais cara → "
+            "menos voos → menos demanda por serviços de aeroporto (estacionamento, lojas, táxis). Isso "
+            "desloca a demanda de um mercado vizinho; não há custo imposto fora do mercado.",
+            "Essas transmissões via preço são chamadas de " + azb("externalidades pecuniárias") + ": "
+            "redistribuem renda entre agentes, mas não geram ineficiência, porque os preços estão fazendo "
+            "exatamente o seu papel de sinalizar escassez.",
+            "Externalidade “de verdade” (tecnológica) no mesmo setor: o ruído das aeronaves sobre os "
+            "moradores do entorno, as emissões de carbono, o congestionamento das pistas — efeitos que ninguém "
+            "paga na passagem.",
+            vm("Regra-âncora: se o efeito passa pelo preço de mercado, não é externalidade; se fica fora dele, "
+               "é."),
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " A banca descreve uma relação "
+                       "correta entre mercados complementares e lhe cola o rótulo errado. A pista é o verbo "
+                       "“provocar” ligado a preço: o canal é o mercado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O ruído provocado pelos pousos e decolagens sobre os moradores próximos ao aeroporto é exemplo "
+            "de externalidade negativa.”</i> → CERTO",
+            "<i>“A queda da demanda por serviços aeroportuários após a alta das passagens indica que os dois "
+            "serviços são substitutos.”</i> → ERRADO (são complementares)",
+        ])],
+        "reescrita": ("Um aumento no preço das passagens aéreas, ao provocar a redução da demanda por serviços "
+                      "aeroportuários, " + hl("não é sinal de externalidade, mas de complementaridade entre os "
+                      "dois serviços, transmitida pelos preços") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Externalidade: efeito sobre terceiros não refletido nos preços dos bens e "
+                             "serviços."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01179
+    {
+        "id": "ECO-E2-L01179-1", "fonte_ref": "E2-L01179", "destino": "12", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_COASE,
+        "rotulo_item": "Item",
+        "assertiva": ("O chamado teorema de Coase assevera que os atores privados podem resolver, de forma "
+                      "eficiente, o problema das externalidades entre si, dependendo apenas da distribuição "
+                      "inicial de direitos entre esses atores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O chamado teorema de Coase assevera que os atores privados podem resolver, de forma "
+                       "eficiente, o problema das externalidades entre si, ")
+                    + vm("dependendo apenas da distribuição inicial de direitos") + az(" entre esses atores.")),
+        "poucas": ("No " + azb("teorema de Coase") + " a eficiência é <b>independente</b> da distribuição "
+                   "inicial dos direitos e depende de duas condições: " + vd("direitos bem definidos") + " e "
+                   + vd("custos de transação nulos") + "."),
+        "destrinchando": [
+            "O item comete dois erros numa só expressão: troca “independentemente” por “dependendo” e reduz as "
+            "condições do teorema a uma só (“apenas”), apagando os custos de transação.",
+            "Formulação correta (" + oc("Ronald Coase") + ", " + vd("1960") + "): se os agentes podem negociar "
+            "sem custo sobre a alocação dos recursos, e os direitos estão definidos, resolvem a externalidade "
+            "por conta própria, e chegam ao mesmo resultado eficiente seja quem for o titular.",
+            "O que depende da distribuição inicial é a <b>repartição dos ganhos</b> (quem paga a quem), não a "
+            "eficiência. E o que realmente decide se a solução privada funciona são os " + azb("custos de "
+            "transação") + ": com muitos afetados, negociar é caro ou impossível.",
+            "Por isso Coase é lido como argumento a favor de " + azb("instituições") + " que reduzam custos "
+            "de transação (direito claro, tribunais eficientes, registros), e não como receita de "
+            "laissez-faire.",
+        ],
+        "dissecando": (cz("[inversão · restrição indevida]") + " Inverte a relação central do teorema "
+                       "(independência → dependência) e acrescenta um “apenas” que apaga a outra condição. "
+                       "Mesma família de ECO-E2-L00852-1."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pelo teorema de Coase, na ausência de custos de transação, a solução privada é eficiente "
+            "qualquer que seja a distribuição inicial dos direitos de propriedade.”</i> → CERTO",
+            "<i>“Pelo teorema de Coase, a distribuição inicial dos direitos não afeta a riqueza final das "
+            "partes.”</i> → ERRADO (afeta a distribuição, não a eficiência)",
+        ])],
+        "reescrita": ("O chamado teorema de Coase assevera que os atores privados podem resolver, de forma "
+                      "eficiente, o problema das externalidades entre si, " + hl("independentemente da "
+                      "distribuição inicial de direitos, desde que bem definidos e sem custos de transação")
+                      + " entre esses atores."),
+        "tipo_erro": ["INVERSAO", "RESTRICAO"], "moduladores": ["apenas"], "dificuldade": 1,
+        "comentario_fonte": ("Direitos bem definidos, independentemente de quem os detenha, e ausência de custos "
+                             "de transação: os privados resolvem a externalidade; resultado eficiente "
+                             "independe da distribuição inicial (Coase, 1960)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

@@ -263,4 +263,118 @@ CARDS = [
                     "texto_corrigido: a frente vinha em forma de pergunta (“É correto afirmar que …?”); a "
                     "assertiva foi extraída das aspas"],
     },
+    # ------------------------------------------------------------------ E3-L00314
+    {
+        "id": "ECO-E3-L00314-1", "fonte_ref": "E3-L00314", "destino": "16", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("A taxa de juros nominal é diferente da taxa de juros real, na medida em que se desconta a "
+                      "taxa de inflação da primeira para chegarmos à segunda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A taxa de juros nominal é diferente da taxa de juros real, na medida em que <u>se desconta "
+                      "a taxa de inflação da primeira para chegarmos à segunda</u>."),
+        "poucas": ("Juro " + azb("real") + " = juro " + azb("nominal") + " descontada a inflação. Pela "
+                   + azb("equação de Fisher") + ", " + vd("i ≈ r + π") + ", logo " + vd("r ≈ i − π") + "."),
+        "destrinchando": [
+            "O " + azb("juro nominal") + " (i) é o contratado em moeda: quanto o credor recebe a mais em reais. "
+            "O " + azb("juro real") + " (r) mede o ganho de <b>poder de compra</b>: quanto a mais de bens o "
+            "credor poderá comprar.",
+            "Forma exata (" + oc("Irving Fisher") + "): " + vd("(1 + i) = (1 + r)(1 + π)") + ". A aproximação "
+            + vd("i ≈ r + π") + " só vale bem para taxas baixas. Ex.: i = 15% e π = 5% → r exato = 1,15/1,05 − 1 "
+            "≈ " + vd("9,5%") + " (a aproximação dá 10%).",
+            azb("Ex ante × ex post") + ": o juro real esperado usa a inflação esperada (i − π<sup>e</sup>) e "
+            "guia decisões de investimento e poupança; o realizado usa a inflação efetiva. Se a inflação "
+            "surpreende para cima, o devedor ganha e o credor perde.",
+            azb("Efeito Fisher") + ": no longo prazo, uma alta de 1 ponto na inflação esperada tende a elevar "
+            "o juro nominal em 1 ponto, deixando o real inalterado.",
+            "No " + rx("Brasil") + ", o juro real ex ante costuma ser medido pela taxa do swap pré-DI de 360 "
+            "dias deflacionada pela inflação esperada do Boletim Focus.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item descreve em palavras a equação de Fisher, sem se "
+                       "comprometer com a forma exata ou aproximada (“desconta” cobre as duas). O ERRADO "
+                       "viria invertendo o sentido (descontar a inflação do juro real para chegar ao nominal) "
+                       "ou somando a inflação ao nominal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para obter a taxa de juros nominal, desconta-se a inflação da taxa de juros real.”</i> → "
+            "ERRADO (inversão: o nominal é o real acrescido da inflação)",
+            "<i>“Se a inflação efetiva superar a esperada, os devedores com contratos prefixados são "
+            "beneficiados.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Fórmula em imagem: i = r + π (i = juros nominais; r = juros reais; π = inflação).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 442", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"}],
+        "alertas": ["texto_corrigido: a transcrição da IMAGEM 442 traz “i = r + 7” e “7 = inflação”; o “7” é "
+                    "erro de OCR para π"],
+    },
+    # ------------------------------------------------------------------ E3-L00315
+    {
+        "id": "ECO-E3-L00315-1", "fonte_ref": "E3-L00315", "destino": "16", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Ao avaliarmos a equação do PIB de uma economia com governo e comércio internacional, "
+                      "Y = C + I + G + (X - M), o principal efeito das variações taxa de câmbio é sentido na "
+                      "variável de investimento agregado (I) e nos gastos do governo (G)."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Ao avaliarmos a equação do PIB de uma economia com governo e comércio internacional, "
+                       "Y = C + I + G + (X - M), o principal efeito das variações taxa de câmbio é sentido ")
+                    + vm("na variável de investimento agregado (I) e nos gastos do governo (G)") + az(".")),
+        "poucas": ("O câmbio é o preço relativo entre bens nacionais e estrangeiros: seu efeito direto e "
+                   "principal recai sobre as " + azb("exportações líquidas (X − M)") + ". Em I e G, os efeitos "
+                   "são indiretos e secundários."),
+        "destrinchando": [
+            "No modelo de economia aberta, cada componente tem seu determinante principal: C depende da renda "
+            "disponível, " + vd("C = c₀ + c(Y − T)") + "; I, dos juros, " + vd("I = I₀ − b·i") + "; G é "
+            "decisão de política fiscal (exógeno); e as exportações líquidas dependem da renda doméstica, da "
+            "renda externa e do câmbio real: " + vd("NX = f(Y, Y*, e)") + ".",
+            azb("Depreciação real") + " (moeda nacional mais fraca): o produto nacional fica mais barato lá "
+            "fora (X ↑) e o importado fica mais caro aqui (M ↓) → NX ↑ → demanda agregada ↑ (a IS se desloca "
+            "para a direita). " + azb("Apreciação") + ": o inverso.",
+            "Duas ressalvas de prova: a " + azb("condição de Marshall-Lerner") + " (a desvalorização só "
+            "melhora o saldo se a soma das elasticidades-preço de exportações e importações, em módulo, for "
+            "maior que 1) e a " + azb("curva J") + " (no curtíssimo prazo o saldo piora, porque as quantidades "
+            "contratadas demoram a reagir enquanto o importado já ficou mais caro).",
+            "Os canais sobre I e G existem, mas são de segunda ordem: a depreciação encarece máquinas "
+            "importadas e pode levar o banco central a subir juros contra a inflação (afetando I); pode "
+            "encarecer a dívida pública em moeda estrangeira ou as compras externas do governo (afetando G "
+            "só se o orçamento reagir). Nenhum é automático como o efeito sobre X e M.",
+            vm("Regra-âncora: câmbio → exportações líquidas (X − M); juros → investimento (I); orçamento → G."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A identidade Y = C + I + G + (X − M) está certa; o item "
+                       "troca o canal de transmissão do câmbio, atribuindo a I e G o que pertence a X − M. A "
+                       "pista é a própria definição do comando: câmbio é “o preço da moeda nacional em termos "
+                       "de moedas estrangeiras”, ou seja, mexe no que se troca com o exterior."),
+        "modulos": [
+            ("😈 Para dificultar", [
+                "<i>“…o principal efeito das variações da taxa de câmbio é sentido nas exportações líquidas "
+                "(X − M).”</i> → CERTO",
+                "<i>“Uma depreciação cambial sempre melhora imediatamente o saldo comercial.”</i> → ERRADO "
+                "(modulador absoluto: curva J e condição de Marshall-Lerner)",
+            ]),
+            ("🃏 Carta na manga", [
+                "Em regime de câmbio flutuante (adotado pelo " + rx("Brasil") + " desde janeiro de 1999), o "
+                "câmbio é o principal mecanismo de ajuste externo: ao depreciar, desloca demanda para o "
+                "produto doméstico e corrige o saldo comercial.",
+            ]),
+        ],
+        "reescrita": ("Ao avaliarmos a equação do PIB de uma economia com governo e comércio internacional, "
+                      "Y = C + I + G + (X - M), o principal efeito das variações da taxa de câmbio é sentido "
+                      + hl("nas exportações líquidas (X − M)") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["principal"], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. Quatro respostas de IA concordantes: o câmbio altera preços relativos e "
+                             "afeta direta e principalmente X e M (exportações líquidas); efeitos em I e G são "
+                             "indiretos (custo de bens de capital importados, juros, dívida externa). Menções a "
+                             "Marshall-Lerner, curva J e Mundell-Fleming."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 443", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"}],
+        "alertas": ["qualidade_fonte: uma das respostas da fonte atribui a Harrod e Domar a adaptação de "
+                    "Y = C + I + G + (X − M) à economia aberta e traz percentuais do FMI e do BCB sem fonte "
+                    "verificável; descartados",
+                    "texto_corrigido: a transcrição da IMAGEM 443 está truncada (“Y=C+HI+G”, “J=] — bi”); "
+                    "lidas como Y = C + I + G + (X − M) e I = I₀ − b·i"],
+    },
 ]

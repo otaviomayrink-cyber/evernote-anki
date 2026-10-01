@@ -1,7 +1,7 @@
 {
  "id": "ECO-E1-0161-1-V1",
  "uso": "verso",
- "legenda": "O preço mínimo só tem efeito se fixado acima do equilíbrio (p* ): nesse preço os produtores querem vender Qˢ, mas os consumidores só compram Qᴰ — sobra produto (excedente de oferta), que o governo costuma comprar e estocar.",
+ "legenda": "O preço mínimo só tem efeito se fixado acima do equilíbrio (p*): nesse preço os produtores querem vender Qˢ, mas os consumidores só compram Qᴰ — sobra produto (excedente de oferta), que o governo costuma comprar e estocar.",
  "eixos": {
   "x": "q",
   "y": "p"

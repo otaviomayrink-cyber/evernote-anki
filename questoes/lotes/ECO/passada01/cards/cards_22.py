@@ -289,4 +289,198 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00103
+    {
+        "id": "ECO-E3-L00103-1", "fonte_ref": "E3-L00103", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Junho/2025", "ano": 2025,
+        "cacd": False, "errei": True,
+        "comando": ("A partir dos conceitos e das teorias usuais de concorrência perfeita, monopólio e oligopólio, "
+                    "julgue (C ou E) o item que se segue."),
+        "rotulo_item": "Item",
+        "assertiva": ("Quando uma nova empresa entra em um mercado monopolisticamente competitivo buscando lucros "
+                      "positivos, a curva de demanda para cada uma das empresas estabelecidas se desloca para dentro, "
+                      "reduzindo o preço e a quantidade recebida por essas empresas. Ou seja, o lançamento de um novo "
+                      "produto por uma empresa reduzirá o preço recebido e a quantidade vendida dos produtos já "
+                      "existentes."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quando uma nova empresa entra em um mercado monopolisticamente competitivo buscando lucros "
+                      "positivos, a curva de demanda para cada uma das empresas estabelecidas <u>se desloca para "
+                      "dentro</u>, reduzindo o preço e a quantidade recebida por essas empresas. Ou seja, o "
+                      "lançamento de um novo produto por uma empresa <u>reduzirá o preço recebido e a quantidade "
+                      "vendida</u> dos produtos já existentes."),
+        "poucas": ("O entrante tira clientes das firmas já instaladas: a demanda de cada uma " + azb("recua para a "
+                   "esquerda") + " e, no novo ótimo (RMg = CMg), elas vendem " + vd("menos e a preço menor")
+                   + " — é o ajuste que leva o lucro a zero."),
+        "destrinchando": [
+            "Na " + azb("concorrência monopolística") + ", a demanda de cada firma é uma fatia da demanda do "
+            "mercado. Um produto novo, substituto próximo, divide essa fatia com mais um concorrente: a cada "
+            "preço, a firma estabelecida vende menos — " + azb("deslocamento para dentro") + " (esquerda) da "
+            "sua curva.",
+            "Com a demanda menor (e, em geral, mais elástica, porque há mais substitutos), a receita marginal "
+            "também recua; o novo cruzamento RMg = CMg ocorre em quantidade menor, e o preço lido na nova "
+            "demanda é mais baixo.",
+            "O processo se repete enquanto houver " + azb("lucro econômico") + ": as entradas param quando a "
+            "demanda de cada firma apenas " + azb("tangencia o CMe") + " (" + vd("P = CMe") + ", lucro zero). "
+            "Se houvesse prejuízo, o movimento seria o inverso: saída de firmas e demanda das remanescentes "
+            "deslocando-se para fora.",
+            "Exemplo: uma nova hamburgueria no bairro reduz o movimento e a margem das que já existiam. Por isso "
+            "o equilíbrio de longo prazo tem preço acima do CMg, mas sem lucro extraordinário — e "
+            + azb("capacidade ociosa") + ".",
+            vm("Regra-âncora: entrada → demanda das incumbentes para dentro → p e q caem até P = CMe."),
+        ],
+        "grafico_verso": "ECO-E3-L00103-1-V1",
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " O item é uma descrição de manual (modelo de "
+                       + oc("Chamberlin") + ") com reformulação na 2ª frase. A dúvida que derruba o candidato: "
+                       "achar que só a quantidade cai, ou que o preço deveria subir para compensar. Como ambas as "
+                       "curvas (demanda e RMg) recuam, p e q caem juntos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A entrada de novas empresas desloca a demanda das empresas estabelecidas para fora, elevando "
+            "seus lucros no longo prazo.”</i> → ERRADO (inversão: desloca para dentro e zera o lucro)",
+            "<i>“O processo de entrada cessa quando a curva de demanda de cada firma tangencia sua curva de custo "
+            "médio.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Comentário do simulado (perda de market share com a mesma demanda dividida por mais "
+                             "uma firma) e respostas de IA: deslocamento da demanda para a esquerda, demanda mais "
+                             "elástica, queda de p e q até a tangência com o CTMe; exemplo do streaming."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 66", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (comentário do simulado levado ao 📖)"},
+                          {"ref": "IMAGEM 67", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (gráfico de terceiros; mecanismo redesenhado em ECO-E3-L00103-1-V1)"},
+                          {"ref": "IMAGEM 68", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (gráfico de terceiros, em inglês)"},
+                          {"ref": "IMAGEM 69", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00156
+    {
+        "id": "ECO-E3-L00156-1", "fonte_ref": "E3-L00156", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": ("Apesar de o modelo de concorrência perfeita ser o fundamento para os estudos de equilíbrio de "
+                    "mercado, o estudo de mercados reais apresenta outras estruturas, em geral envolvendo a fuga de "
+                    "um ou mais pressupostos da concorrência perfeita. Acerca dessas estruturas de mercado, julgue o "
+                    "item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("O mercado de calçados é um caso de concorrência imperfeita, podendo o diferencial de preços "
+                      "entre calçados ser motivado pela qualidade e pela marca."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O mercado de calçados é um caso de <u>concorrência imperfeita</u>, <u>podendo</u> o "
+                      "diferencial de preços entre calçados ser motivado pela qualidade e pela marca."),
+        "poucas": ("Calçados são " + azb("produtos diferenciados") + " (marca, qualidade, design): falha o "
+                   "pressuposto de homogeneidade, e o mercado é de " + azb("concorrência monopolística")
+                   + " — uma forma de concorrência imperfeita, com preços diferentes entre marcas."),
+        "destrinchando": [
+            azb("Concorrência imperfeita") + " é o gênero: toda estrutura em que falta ao menos um pressuposto "
+            "da perfeita (muitos agentes, produto homogêneo, informação completa, entrada livre). Espécies: "
+            + azb("concorrência monopolística") + ", " + azb("oligopólio") + " e " + azb("monopólio") + ".",
+            "O mercado de calçados tem muitos produtores e entrada relativamente fácil, mas cada marca vende uma "
+            "versão diferente do bem. A " + azb("diferenciação") + " (real — material, conforto — ou percebida — "
+            "marca, status, publicidade) faz o consumidor não ver os pares como substitutos perfeitos.",
+            "Consequência: cada firma enfrenta demanda inclinada e tem algum " + azb("poder de mercado")
+            + "; marcas fortes sustentam preços mais altos sem perder todos os clientes. Na concorrência perfeita, "
+            "haveria um único preço de mercado, e quem cobrasse acima dele não venderia nada.",
+            "Segmentos de grandes marcas globais podem ter traços de " + azb("oligopólio") + "; o item não exige "
+            "decidir isso — basta ser imperfeita, e o “podendo” deixa a motivação do diferencial em aberto.",
+            vm("Regra-âncora: diferencial de preço sustentado por marca ou qualidade = produto diferenciado = "
+               "concorrência imperfeita."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Item de classificação: a banca usa o "
+                       "termo genérico (“concorrência imperfeita”), que abrange monopolística e oligopólio, e o "
+                       "modulador “podendo”, que torna a segunda parte difícil de falsear. Quem procura erro em "
+                       "“imperfeita” por pensar em “muitas firmas” cai no ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O mercado de calçados é um caso de concorrência perfeita, pois há muitos produtores.”</i> → "
+            "ERRADO (muitos produtores não bastam: o produto é diferenciado)",
+            "<i>“Na concorrência monopolística, a diferenciação dá a cada firma algum poder sobre o preço do seu "
+            "produto.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["podendo"], "dificuldade": 1,
+        "comentario_fonte": ("Comentário em imagem e duas respostas: concorrência monopolística por diferenciação "
+                             "de qualidade, design e marca; diferencial de preço reflete a diferenciação; "
+                             "classificação das estruturas imperfeitas."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 165", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (comentário levado ao 📖)"},
+                          {"ref": "IMAGEM 166", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "absorvida (fluxograma perfeita → imperfeita → monopólio levado ao 📖)"}],
+        "alertas": ["qualidade_fonte: uma das respostas da fonte define concorrência imperfeita por “poucos "
+                    "vendedores” e “barreiras à entrada”, o que não vale para a concorrência monopolística; "
+                    "corrigido no 📖"],
+    },
+    # ------------------------------------------------------------------ E3-L00308
+    {
+        "id": "ECO-E3-L00308-1", "fonte_ref": "E3-L00308", "destino": "09", "subtema": H2["cham"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False, "errei": True,
+        "comando": ("Considerando as diversas estruturas de mercado, suas semelhanças e diferenças, julgue (C ou E) "
+                    "o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de competição monopolística está entre os dois modelos extremos: concorrência perfeita "
+                      "e monopólio. Isso porque os produtos são heterogêneos, mas são substitutos próximos; cada "
+                      "empresa tem o monopólio da sua marca ou sobre uma característica do seu produto, mas todos "
+                      "competem acirradamente. Assim, o equilíbrio não ocorre como no mercado de concorrência "
+                      "perfeita, no qual preço é igual a custo marginal, mas no ponto onde preço se iguala ao custo "
+                      "médio."),
+        "gabarito": "ANULADO", "gabarito_origem": "fonte", "status": "anulado",
+        "anotada": az("O modelo de competição monopolística está entre os dois modelos extremos: concorrência perfeita "
+                      "e monopólio. Isso porque os produtos são heterogêneos, mas são substitutos próximos; cada "
+                      "empresa tem o monopólio da sua marca ou sobre uma característica do seu produto, mas todos "
+                      "competem acirradamente. Assim, o equilíbrio não ocorre como no mercado de concorrência "
+                      "perfeita, no qual preço é igual a custo marginal, mas ")
+                   + vm("no ponto onde preço se iguala ao custo médio") + az("."),
+        "poucas": ("Tudo está certo, exceto que " + vd("P = CMe") + " só vale no " + azb("longo prazo")
+                   + "; no curto prazo a firma pode ter lucro ou prejuízo. Sem o horizonte temporal, o item foi "
+                   "anulado (gabarito preliminar: CERTO)."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "Anulação. O gabarito preliminar era CERTO; foi alterado para ANULADO porque o item não "
+                          "especifica o prazo: no curto prazo, a firma monopolisticamente competitiva produz onde "
+                          "RMg = CMg e pode cobrar P > CMe (lucro) ou P < CMe (prejuízo). Com “no longo prazo” "
+                          "inserido, o item seria " + vd("CERTO") + ".")],
+        "destrinchando": [
+            "A primeira parte é a caracterização de " + oc("Chamberlin") + " (1933) e de " + oc("Joan Robinson")
+            + " (<i>The Economics of Imperfect Competition</i>, 1933): produtos " + azb("diferenciados") + " mas "
+            "substitutos próximos; cada firma é “monopolista” da sua marca, mas disputa clientes com muitas "
+            "outras; entrada livre.",
+            "Curto prazo: como no monopólio, " + vd("RMg = CMg") + " e o preço é lido na demanda. P pode ficar "
+            "acima, igual ou abaixo do CMe — lucro, lucro normal ou prejuízo.",
+            "Longo prazo: lucro atrai entrantes (prejuízo expulsa firmas) até a demanda de cada firma "
+            + azb("tangenciar o CMe") + ". Aí " + vd("P = CMe") + " (lucro zero), mas " + vd("P > CMg")
+            + " — porque a demanda é inclinada e a tangência ocorre no trecho descendente do CMe (excesso de "
+            "capacidade).",
+            "Note que, mesmo no longo prazo, o “ponto de equilíbrio” continua sendo definido por RMg = CMg; "
+            "P = CMe é uma <b>propriedade</b> desse ponto, garantida pela livre entrada — não a regra de decisão "
+            "da firma.",
+            vm("Regra-âncora: P = CMe na monopolística é resultado de longo prazo; no curto prazo, só RMg = CMg."),
+        ],
+        "dissecando": (cz("[outro: omissão do horizonte temporal]") + " O item é uma paráfrase correta do manual "
+                       "que perdeu a qualificação “no longo prazo”. Ao julgar, desconfie de afirmações sobre "
+                       "lucro zero ou P = CMe sem prazo explícito: em C/E isso pode bastar para ERRADO ou, como "
+                       "aqui, para anulação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, o equilíbrio da competição monopolística ocorre no ponto em que o preço se iguala "
+            "ao custo médio, mas supera o custo marginal.”</i> → CERTO",
+            "<i>“No curto prazo, a firma em competição monopolística sempre obtém lucro econômico nulo.”</i> → "
+            "ERRADO (modulador absoluto: pode ter lucro ou prejuízo)",
+        ])],
+        "reescrita": ("[...] Assim, o equilíbrio " + hl("de longo prazo") + " não ocorre como no mercado de "
+                      "concorrência perfeita, no qual preço é igual a custo marginal, mas no ponto onde preço se "
+                      "iguala ao custo médio."),
+        "tipo_erro": ["OUTRO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Anotação “CERTO > ANULADO (não especificou curto/longo prazo)”, correção manuscrita "
+                             "“(no longo prazo)” e três respostas de IA sobre curto × longo prazo, tangência, markup "
+                             "e excesso de capacidade, com quadros-resumo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 419", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (correção “no longo prazo” levada à ⚠️)"},
+                          {"ref": "IMAGEM 420-422, 430", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (gráficos de terceiros; mecanismo já redesenhado em "
+                                   "ECO-E2-L01658-1-V1)"},
+                          {"ref": "IMAGEM 423-424", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvidas (quadros-resumo curto × longo prazo levados ao 📖)"},
+                          {"ref": "IMAGEM 425-429, 431", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvidas"}],
+        "alertas": ["contestavel: item de simulado anulado (gabarito preliminar CERTO) por não especificar o prazo; "
+                    "a anulação consta só da anotação da fonte"],
+    },
 ]

@@ -876,4 +876,361 @@ CARDS = [
         "alertas": ["banca_provavel: CEBRASPE/CACD 2012 (não confirmada: a fonte só traz o ano entre "
                     "parênteses)"],
     },
+    # ------------------------------------------------------------------ E2-L00020
+    {
+        "id": "ECO-E2-L00020-1", "fonte_ref": "E2-L00020", "destino": "06", "subtema": H2["ccp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_IDEG,
+        "rotulo_item": "Item",
+        "assertiva": ("O custo marginal é sempre inferior ao custo médio em todos os pontos de produção, o que "
+                      "implica que o custo médio continuará a cair conforme o volume de produção aumenta. Este "
+                      "fenômeno ocorre devido à capacidade das empresas de diluir seus custos fixos "
+                      "proporcionalmente à quantidade produzida, garantindo que a média de custos seja "
+                      "constantemente reduzida à medida que a produção se expande."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O custo marginal é ") + vm("sempre inferior ao custo médio em todos os pontos de produção")
+                    + az(", o que implica que o custo médio ") + vm("continuará a cair conforme o volume de "
+                    "produção aumenta") + az(". Este fenômeno ocorre devido à capacidade das empresas de diluir seus "
+                    "custos fixos proporcionalmente à quantidade produzida, ") + vm("garantindo que a média de "
+                    "custos seja constantemente reduzida à medida que a produção se expande") + az(".")),
+        "poucas": ("No curto prazo o custo médio tem formato de " + azb("U") + ": a diluição do custo fixo o "
+                   "puxa para baixo, mas os rendimentos decrescentes acabam puxando-o para cima. Depois do "
+                   "mínimo, " + vd("CMg > CMe") + "."),
+        "destrinchando": [
+            "CTMe = " + azb("CFMe") + " + " + azb("CVMe") + ". O CFMe = CF/q cai sempre (a diluição é real); o "
+            "CVMe, depois de certo ponto, sobe por causa da " + azb("lei dos rendimentos marginais "
+            "decrescentes") + " (CMg = w/PMg crescente).",
+            "Enquanto a queda do CFMe domina, o CTMe cai; quando a alta do CVMe passa a dominar, ele sobe. O "
+            "ponto de virada é exatamente onde " + vd("CMg = CMe") + " — o mínimo do custo médio.",
+            "A implicação lógica do item está certa (se o CMg fosse sempre menor, a média cairia sempre); o que "
+            "é falso é a premissa e a garantia de queda contínua.",
+            "Onde o item quase vale: no " + azb("monopólio natural") + " (custo fixo enorme e CMg baixo e "
+            "constante — redes de água, energia, ferrovias), o CMe é decrescente em toda a faixa relevante de "
+            "demanda. É um caso particular, não a regra de “todos os pontos de produção”.",
+            vm("Regra-âncora: CMg abaixo da média → média cai; acima → média sobe; igual → mínimo."),
+        ],
+        "dissecando": (cz("[modulador absoluto · meia-verdade]") + " O item embrulha um fato verdadeiro (a "
+                       "diluição do custo fixo) em generalizações: “sempre”, “em todos os pontos”, “continuará”, "
+                       "“constantemente”. Excesso de absolutos num item de custos é sinal forte de ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em um monopólio natural, com custo fixo elevado e custo marginal constante, o custo médio é "
+            "decrescente em toda a faixa relevante de produção.”</i> → CERTO",
+            "<i>“A diluição dos custos fixos faz o custo variável médio cair indefinidamente.”</i> → ERRADO "
+            "(a diluição atua no CFMe, não no CVMe)",
+        ])],
+        "reescrita": ("O custo marginal " + hl("fica abaixo do custo médio apenas até o ponto mínimo deste") + ", o "
+                      "que implica que o custo médio " + hl("cai até esse ponto e depois sobe") + ". Este fenômeno "
+                      "ocorre devido à capacidade das empresas de diluir seus custos fixos proporcionalmente à "
+                      "quantidade produzida, " + hl("efeito que acaba superado pelos rendimentos decrescentes, que "
+                      "fazem o custo médio voltar a subir") + "."),
+        "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"],
+        "moduladores": ["sempre", "em todos os pontos", "constantemente"], "dificuldade": 1,
+        "comentario_fonte": "O CMg pode ser inferior ou superior ao CMe conforme o ponto; abaixo, puxa a média para "
+                            "baixo; acima, para cima. A diluição dos custos fixos reduz o CMe só em certa medida.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00021
+    {
+        "id": "ECO-E2-L00021-1", "fonte_ref": "E2-L00021", "destino": "06", "subtema": H2["ccp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_IDEG,
+        "rotulo_item": "Item",
+        "assertiva": ("A curva de custo variável médio tende a se aproximar da curva de custo total médio conforme a "
+                      "produção aumenta, devido à diluição do custo marginal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A curva de custo variável médio tende a se aproximar da curva de custo total médio conforme "
+                       "a produção aumenta, devido à diluição do custo ") + vm("marginal") + az(".")),
+        "poucas": ("A distância entre CTMe e CVMe é o " + azb("custo fixo médio") + " (CF/q), que encolhe "
+                   "quando q cresce. O que se dilui é o custo <b>fixo</b>; o marginal não se dilui."),
+        "destrinchando": [
+            "Identidade: " + vd("CTMe − CVMe = CFMe = CF/q") + ". Com CF = R$ 1.000, a distância vertical é 100 "
+            "com q = 10 e 10 com q = 100.",
+            "As curvas se aproximam <b>assintoticamente</b>, mas nunca se tocam no curto prazo, porque CF > 0 "
+            "faz CFMe > 0 em qualquer q.",
+            "O " + azb("custo marginal") + " é ΔCV/Δq: não contém nenhuma parcela fixa, logo não há o que "
+            "“diluir”. Ele é o que determina se as médias sobem ou caem, não a distância entre elas.",
+            "Por causa dessa distância decrescente, o mínimo do CVMe ocorre em q menor que o mínimo do CTMe, e o "
+            "CMg corta os dois nos respectivos mínimos.",
+            "No longo prazo não existe custo fixo: CVMe e CTMe coincidem. A aproximação descrita no item é "
+            "fenômeno de <b>curto prazo</b>.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Uma palavra trocada: “marginal” no lugar de “fixo”. O resto "
+                       "do item (as curvas se aproximam) está certo, o que induz o CERTO na leitura rápida."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A distância vertical entre o CTMe e o CVMe diminui com a produção porque o custo fixo médio é "
+            "decrescente.”</i> → CERTO",
+            "<i>“O valor do custo fixo influencia o formato da curva de custo marginal.”</i> → ERRADO (o CMg só "
+            "depende do custo variável)",
+        ])],
+        "reescrita": ("A curva de custo variável médio tende a se aproximar da curva de custo total médio conforme "
+                      "a produção aumenta, devido à diluição do custo " + hl("fixo") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": "Os custos fixos é que se diluem, aproximando CVMe e CTMe; o comentário acrescenta "
+                            "“especialmente em uma análise de longo prazo”, o que é incorreto (no longo prazo não "
+                            "há custo fixo).",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem associa a diluição do custo fixo ao longo prazo; ela "
+                    "é fenômeno de curto prazo"],
+    },
+    # ------------------------------------------------------------------ E2-L00022
+    {
+        "id": "ECO-E2-L00022-1", "fonte_ref": "E2-L00022", "destino": "06", "subtema": H2["clp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_IDEG,
+        "rotulo_item": "Item",
+        "assertiva": ("No longo prazo, o custo fixo já não é relevante para a análise de custos, pois ele está "
+                      "diluído pela produção intensiva. Além disso, a longo prazo, os rendimentos de escala, sejam "
+                      "crescentes, decrescentes ou constantes, influenciam significativamente a modelagem dos "
+                      "custos da empresa, permitindo maior flexibilidade e adaptação conforme a estrutura de "
+                      "produção se estabiliza."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("No longo prazo, o custo fixo já não é relevante para a análise de custos, <u>pois ele está "
+                      "diluído pela produção intensiva</u>. Além disso, a longo prazo, os rendimentos de escala, "
+                      "sejam crescentes, decrescentes ou constantes, influenciam significativamente a modelagem "
+                      "dos custos da empresa, permitindo maior flexibilidade e adaptação conforme a estrutura de "
+                      "produção se estabiliza."),
+        "poucas": ("As duas conclusões valem: no longo prazo não há custo fixo, e a escala molda a curva de "
+                   "custo médio. Mas a <b>justificativa</b> está errada — não há custo fixo porque " + azb("todos "
+                   "os fatores são variáveis") + ", não porque ele “se diluiu”."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "o gabarito do simulado é CERTO, mas a oração causal “pois ele está diluído pela produção "
+                          "intensiva” é falsa: a diluição (CFMe = CF/q cada vez menor) é fenômeno de curto prazo e "
+                          "nunca zera o custo fixo. Numa banca rigorosa como o CEBRASPE, a justificativa errada "
+                          "tenderia a tornar o item ERRADO, resposta que parece mais defensável.")],
+        "destrinchando": [
+            azb("Longo prazo") + " não é um prazo de calendário: é o horizonte em que a firma pode ajustar "
+            "<b>todos</b> os fatores, inclusive o tamanho da planta. Por definição, não há custo fixo — todo "
+            "custo é variável (ou evitável).",
+            azb("Curto prazo") + ": ao menos um fator fixo, logo há custo fixo. O CFMe = CF/q cai com a "
+            "produção, mas nunca chega a zero — “diluir” não é “eliminar”.",
+            "No longo prazo, quem dá o formato da " + azb("CMeLP") + " são os rendimentos de escala (com preços "
+            "de fatores dados): crescentes → CMeLP decrescente; constantes → plana; decrescentes → crescente.",
+            "A CMeLP é a envoltória das curvas de curto prazo: para cada nível de produção, a firma escolhe a "
+            "planta que dá o menor custo médio.",
+            "Leitura de prova: um item cujo núcleo está certo e cuja justificativa (“pois…”) está errada é, em "
+            "regra, ERRADO no CEBRASPE. Simulados de curso nem sempre seguem esse rigor.",
+        ],
+        "dissecando": (cz("[detalhe]") + " A segunda frase é genérica e verdadeira; o ponto sensível é o "
+                       "conectivo causal “pois”, que amarra a conclusão certa a uma causa errada. Sempre teste a "
+                       "oração explicativa separadamente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No longo prazo, todos os custos são variáveis, porque a firma pode ajustar todos os fatores, "
+            "inclusive o tamanho da planta.”</i> → CERTO",
+            "<i>“No curto prazo, o custo fixo médio torna-se nulo quando a produção é suficientemente "
+            "grande.”</i> → ERRADO (o CFMe tende a zero, mas nunca se anula)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": ["pois"], "dificuldade": 2,
+        "comentario_fonte": "No longo prazo os custos fixos são irrelevantes por estarem diluídos; os fatores "
+                            "tornam-se variáveis e os rendimentos de escala influenciam os custos.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: a justificativa “pois ele está diluído pela produção intensiva” é falsa (no "
+                    "longo prazo não há custo fixo porque todos os fatores são variáveis); ERRADO seria mais "
+                    "defensável — mantido o gabarito CERTO da fonte"],
+    },
+    # ------------------------------------------------------------------ E2-L00329
+    {
+        "id": "ECO-E2-L00329-1", "fonte_ref": "E2-L00329", "destino": "06", "subtema": H2["clp"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo às curvas de custo de longo prazo.",
+        "rotulo_item": "Item",
+        "assertiva": ("A curva de Custo Médio de Longo Prazo (CMeLP) é formada pelo envelope inferior das curvas de "
+                      "Custo Médio de Curto Prazo (CMeCP). Geometricamente, a CMeLP tangencia o ponto mínimo de "
+                      "cada curva de CMeCP, independentemente do tipo de rendimentos de escala que a firma "
+                      "apresente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A curva de Custo Médio de Longo Prazo (CMeLP) é formada pelo envelope inferior das curvas "
+                       "de Custo Médio de Curto Prazo (CMeCP). Geometricamente, a CMeLP tangencia ")
+                    + vm("o ponto mínimo de cada curva") + az(" de CMeCP, ")
+                    + vm("independentemente do tipo de rendimentos de escala que a firma apresente") + az(".")),
+        "poucas": ("A " + azb("envoltória") + " está certa, mas a tangência só ocorre no mínimo da CMeCP onde há "
+                   "rendimentos constantes (fundo da CMeLP). Com economias de escala, ela fica no trecho "
+                   + vd("descendente") + " da CMeCP; com deseconomias, no " + vd("ascendente") + "."),
+        "destrinchando": [
+            "Duas curvas tangentes têm a mesma inclinação no ponto de contato. Onde a CMeLP é decrescente "
+            "(economias de escala), a CMeCP tangente também está descendo — seu mínimo fica à direita. Onde a "
+            "CMeLP é crescente, a CMeCP tangente está subindo — seu mínimo fica à esquerda.",
+            "No gráfico: T₁ (q = 5) está à esquerda do mínimo M₁ (q = 6,25); T₃ (q = 15), à direita de M₃ "
+            "(q = 13,75); só em T₂, no mínimo da CMeLP, a tangência coincide com o mínimo da CMeCP.",
+            "Intuição econômica: para produzir pouco quando há economias de escala, compensa usar uma planta "
+            "um pouco maior e operá-la abaixo do seu ponto de custo mínimo (subutilização); com deseconomias, "
+            "compensa uma planta menor operada acima dele (sobreutilização).",
+            "Única exceção que tornaria o item verdadeiro: rendimentos <b>constantes</b> em toda a extensão "
+            "(CMeLP horizontal), quando todas as tangências se dão nos mínimos.",
+            "No ponto de tangência, também os custos marginais de curto e longo prazo se igualam; o CMgLP corta "
+            "a CMeLP no mínimo desta.",
+        ],
+        "grafico_verso": "ECO-E2-L00329-1-V1",
+        "dissecando": (cz("[meia-verdade · modulador absoluto]") + " A 1ª frase (envoltória) é de manual; o erro "
+                       "foi enxertado na 2ª, com o absoluto “independentemente do tipo de rendimentos de "
+                       "escala”. 🔥 É o “erro de Viner”, clássico em provas de micro."),
+        "modulos": [
+            ("📚 Autores e teses", [
+                oc("Jacob Viner") + " (“Cost Curves and Supply Curves”, 1931) pediu ao desenhista que traçasse "
+                "a curva de longo prazo passando pelos mínimos de todas as curvas de curto prazo e por baixo "
+                "delas; o desenhista mostrou que as duas exigências são incompatíveis. O episódio virou o nome "
+                "do erro.",
+            ]),
+            ("😈 Para dificultar", [
+                "<i>“No ponto mínimo da CMeLP, a CMeCP tangente também está em seu mínimo.”</i> → CERTO",
+                "<i>“Com deseconomias de escala, a tangência entre a CMeLP e a CMeCP ocorre no trecho descendente "
+                "da CMeCP.”</i> → ERRADO (inversão: ocorre no trecho ascendente)",
+            ]),
+        ],
+        "reescrita": ("A curva de Custo Médio de Longo Prazo (CMeLP) é formada pelo envelope inferior das curvas de "
+                      "Custo Médio de Curto Prazo (CMeCP). Geometricamente, a CMeLP tangencia " + hl("cada curva")
+                      + " de CMeCP, " + hl("mas só no ponto mínimo desta onde há rendimentos constantes de escala; "
+                      "com economias de escala, a tangência ocorre no trecho descendente da CMeCP e, com "
+                      "deseconomias, no trecho ascendente") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "GENERALIZACAO"], "moduladores": ["independentemente"], "dificuldade": 2,
+        "comentario_fonte": "A CMeLP só tangencia os mínimos das CMeCP com retornos constantes; com economias de "
+                            "escala, na parte descendente; com deseconomias, na ascendente.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 045", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00329-1-V1, com as três situações de tangência)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00535
+    {
+        "id": "ECO-E2-L00535-1", "fonte_ref": "E2-L00535", "destino": "06", "subtema": H2["ccp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação às estruturas de mercado, julgue (C ou E) o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A concorrência perfeita e o monopólio são duas estruturas de mercado consideradas opostas em "
+                      "vários aspectos, todavia há pontos em comum na análise do comportamento da firma em um "
+                      "ambiente de concorrência perfeita e em um ambiente monopolista. Considerando firmas que "
+                      "produzem um único produto com custos marginais convexos, tanto no ambiente de concorrência "
+                      "perfeita quanto no monopólio, se o custo marginal se iguala ao custo médio, então a produção "
+                      "tem o menor custo médio possível."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A concorrência perfeita e o monopólio são duas estruturas de mercado consideradas opostas em "
+                      "vários aspectos, todavia há pontos em comum na análise do comportamento da firma em um "
+                      "ambiente de concorrência perfeita e em um ambiente monopolista. Considerando firmas que produzem um único "
+                      "produto com custos marginais convexos, <u>tanto</u> no ambiente de concorrência perfeita "
+                      "<u>quanto</u> no monopólio, se o custo marginal se iguala ao custo médio, então a produção "
+                      "tem o menor custo médio possível."),
+        "poucas": (vd("CMg = CMe") + " ocorre no mínimo do custo médio por uma propriedade matemática da função "
+                   "de custo. A estrutura de mercado não entra na conta: ela só decide se a firma produz ou não "
+                   "nesse ponto."),
+        "destrinchando": [
+            "Prova em uma linha: d(CT/q)/dq = (CMg − CMe)/q. A derivada do custo médio é zero exatamente quando "
+            + vd("CMg = CMe") + "; antes, negativa (CMg &lt; CMe); depois, positiva.",
+            "A hipótese de custos “bem-comportados” (CMg em U, CMe em U) garante que esse ponto é um "
+            + azb("mínimo") + ", e não um máximo, e que há um único cruzamento.",
+            "O que muda entre as estruturas é <b>onde a firma produz</b>: em " + azb("concorrência perfeita")
+            + ", no longo prazo, P = CMg = CMe mínimo (lucro econômico nulo, escala eficiente). O "
+            + azb("monopolista") + " produz onde RMg = CMg, em geral fora do mínimo do CMe.",
+            "Por isso o item é condicional: “<b>se</b> o CMg se iguala ao CMe, então…”. Não afirma que o "
+            "monopolista opera no custo mínimo — afirma que, se a igualdade ocorrer, ali está o mínimo.",
+            "Item quase idêntico, de outro simulado da mesma origem: ECO-E2-L00865-1.",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " O preâmbulo sobre estruturas “opostas” sugere que a resposta "
+                       "depende do mercado. Não depende: a relação marginal × média é propriedade dos custos. "
+                       "Pista: o “tanto… quanto” está protegido pelo “se… então”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Tanto em concorrência perfeita quanto em monopólio, a firma produz, no longo prazo, no ponto de "
+            "mínimo custo médio.”</i> → ERRADO (só a firma competitiva; o monopolista produz onde RMg = CMg)",
+            "<i>“Se o custo marginal for igual ao custo médio, o custo médio estará em seu ponto mínimo, qualquer "
+            "que seja a estrutura de mercado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["se… então"], "dificuldade": 1,
+        "comentario_fonte": "CMg = CTMe no mínimo do custo médio; a regra vale em qualquer estrutura de mercado.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: mesma tese de ECO-E2-L00865-1 (outro simulado Nabuco, com enunciado mais "
+                    "curto); mantidos os dois (Folha -Q §8.6)"],
+    },
+    # ------------------------------------------------------------------ E2-L00651
+    {
+        "id": "ECO-E2-L00651-1", "fonte_ref": "E2-L00651", "destino": "06", "subtema": H2["clp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à microeconomia, julgue (C ou E) o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma empresa pode ter economias de escala ao mudar sua tecnologia ou combinação de insumos, "
+                      "mesmo que seu processo produtivo demonstre rendimentos marginais decrescentes."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma empresa <u>pode</u> ter economias de escala ao mudar sua tecnologia ou combinação de "
+                      "insumos, <u>mesmo que</u> seu processo produtivo demonstre rendimentos marginais "
+                      "decrescentes."),
+        "poucas": ("Rendimentos marginais decrescentes são fenômeno de " + azb("curto prazo") + " (um fator "
+                   "varia, os outros fixos); economias de escala, de " + azb("longo prazo") + " (todos os insumos "
+                   "e até a tecnologia se ajustam). Um não exclui o outro."),
+        "destrinchando": [
+            azb("Rendimento marginal decrescente") + ": acrescentar trabalhadores a uma fábrica de tamanho fixo "
+            "rende cada vez menos. " + azb("Economias de escala") + ": ao ampliar a produção com liberdade para "
+            "ajustar tudo, o custo médio de longo prazo cai.",
+            "Exemplo: Q = K<sup>0,6</sup>·L<sup>0,6</sup> tem PMg decrescente em cada fator e, ao mesmo tempo, "
+            "retornos crescentes de escala (soma 1,2) — portanto custo médio de longo prazo decrescente com "
+            "preços de fatores dados.",
+            "Economias de escala são conceito mais amplo que rendimentos crescentes de escala: admitem " + azb(
+                "mudar a proporção dos insumos") + " e a técnica ao crescer (distinção feita, por exemplo, em "
+            + oc("Pindyck e Rubinfeld") + ", <i>Microeconomia</i>). Fontes típicas: especialização, "
+            "indivisibilidades, compras em grande volume, acesso a técnicas que só compensam em grande escala.",
+            "Logo, a frase do item reúne exatamente as duas dimensões: curto prazo com rendimentos decrescentes "
+            "e longo prazo com custo médio caindo.",
+            vm("Regra-âncora: rendimento marginal = um fator, curto prazo; economia de escala = custo médio, "
+               "longo prazo."),
+        ],
+        "dissecando": (cz("[modulador relativo]") + " “Pode” e “mesmo que” deixam o item no terreno da "
+                       "possibilidade: basta um caso para ser CERTO. A armadilha é achar que rendimentos "
+                       "decrescentes implicam custos médios sempre crescentes."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Rendimentos marginais decrescentes do trabalho no curto prazo implicam deseconomias de escala no "
+            "longo prazo.”</i> → ERRADO (nexo indevido: horizontes e conceitos distintos)",
+            "<i>“Uma firma pode ter rendimentos marginais decrescentes em cada fator e rendimentos crescentes de "
+            "escala.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode", "mesmo que"], "dificuldade": 1,
+        "comentario_fonte": "Horizontes distintos: rendimentos marginais decrescentes no curto prazo (um fator "
+                            "varia); economias de escala no longo prazo (todos variam). É possível ter os dois.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00865
+    {
+        "id": "ECO-E2-L00865-1", "fonte_ref": "E2-L00865", "destino": "06", "subtema": H2["ccp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação às estruturas de mercado, julgue (C ou E) o item que se segue.",
+        "rotulo_item": "Item",
+        "assertiva": ("Tanto no ambiente de concorrência perfeita quanto no monopólio, se o custo marginal se iguala "
+                      "ao custo médio, então a produção tem o menor custo médio possível."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("<u>Tanto</u> no ambiente de concorrência perfeita <u>quanto</u> no monopólio, se o custo "
+                      "marginal se iguala ao custo médio, então a produção tem o menor custo médio possível."),
+        "poucas": ("O CMg cruza o CMe no ponto mínimo deste em <b>qualquer</b> estrutura de mercado: é "
+                   "propriedade da " + azb("função de custo") + ", não da demanda nem do preço."),
+        "destrinchando": [
+            "Exemplo numérico: CT = 100 + q² → CMe = 100/q + q e CMg = 2q. Igualando: 2q = 100/q + q → "
+            + vd("q = 10") + ", com " + vd("CMe = CMg = 20") + ". Teste: em q = 9, CMe ≈ 20,1; em q = 11, "
+            "CMe ≈ 20,1 — o 20 é mesmo o mínimo.",
+            "A conta não usa preço, receita nem número de concorrentes: por isso vale igualmente para a firma "
+            "competitiva e para o monopolista.",
+            "Onde as estruturas diferem: a firma competitiva produz onde P = CMg e, no longo prazo, no mínimo "
+            "do CMe; o " + azb("monopolista") + " produz onde RMg = CMg, em geral com P > CMg e fora do mínimo "
+            "do CMe (ineficiência alocativa e, muitas vezes, produtiva).",
+            "A mesma lógica liga PMg e PMe na produção: o PMg corta o PMe no máximo deste.",
+            "Item quase idêntico, de outro simulado da mesma origem: ECO-E2-L00535-1.",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " A menção ao monopólio induz a pensar que, com poder de mercado, "
+                       "a regra mudaria. Não muda: o item fala de custos, e a relação marginal × média é "
+                       "geométrica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No monopólio, como o preço supera o custo marginal, a igualdade entre custo marginal e custo "
+            "médio não corresponde ao mínimo do custo médio.”</i> → ERRADO (a propriedade independe do preço)",
+            "<i>“Em concorrência perfeita, no equilíbrio de longo prazo, P = CMg = CMe mínimo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["se… então"], "dificuldade": 1,
+        "comentario_fonte": "Independentemente da estrutura de mercado, o CMg cruza o CMe no ponto mínimo deste.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: mesma tese de ECO-E2-L00535-1 (outro simulado Nabuco, com preâmbulo); "
+                    "mantidos os dois (Folha -Q §8.6)"],
+    },
 ]

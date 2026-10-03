@@ -1,8 +1,8 @@
 {"id": "ECO-E2-L01482-1-V1", "uso": "verso",
  "legenda": "A expansão fiscal financiada por dívida desloca a IS para a direita (IS₁ → IS₂). Se os juros ficassem em i₁, a renda iria até Y′; como a demanda por fundos eleva os juros a i₂, parte do investimento privado é deslocada e a renda só chega a Y₂ — a distância entre Y₂ e Y′ é o crowding out.",
  "modelo": "is_lm", "params": {"deslocar": {"IS": "direita"}, "passo": 2.5},
- "substituir": {"LM1": {"rotulo": "LM"}},
+ "substituir": {"LM1": {"rotulo": "LM"}, "E1": {"rotulo_desloc": [-6, -30]}},
  "curvas": [{"id": "ref", "tipo": "horizontal", "y": "E1.y", "x": ["E1.x", 8.4], "familia": "referencia", "rotulo": ""}],
  "pontos": [{"id": "F", "intersecao": ["IS2", "ref"], "rotulo": "", "projetar": "x", "rotulo_x": "Y′"}],
- "setas": [{"de": ["E2.x", 3.2], "para": ["F.x", 3.2], "estilo": "<|-|>", "rotulo": "crowding out"}],
+ "setas": [{"de": ["E2.x", 1.1], "para": ["F.x", 1.1], "estilo": "<|-|>", "rotulo": "crowding out"}],
  "checar": ["E2.y > E1.y", "E2.x > E1.x", "E2.x < F.x - 0.5"]}

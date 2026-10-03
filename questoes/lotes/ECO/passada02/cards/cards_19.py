@@ -1348,7 +1348,7 @@ CARDS = [
             "<i>“Uma elevação da taxa Selic, ao aumentar a despesa com juros, tende a elevar o déficit nominal "
             "do setor público.”</i> → CERTO",
             "<i>“A Constituição permite que o Banco Central conceda empréstimos diretos ao Tesouro Nacional "
-            "para financiar gastos.”</i> → ERRADO (norma violada: art. 164, § 1º, veda)",
+            "para financiar gastos.”</i> → ERRADO (contradição: o art. 164, § 1º, veda)",
         ])],
         "reescrita": ("A condução da política fiscal " + hl("depende de, e causa efeitos sobre")
                       + " a condução da política monetária, de modo que o Executivo " + hl("encontra")
@@ -1404,7 +1404,7 @@ CARDS = [
             vm("Regra-âncora: 1929 = BC omisso, depressão profunda; 2008 = BC emprestador maciço, recessão "
                "grave mas contida."),
         ],
-        "dissecando": (cz("[inversão · anacronismo]") + " A primeira frase (definição) está certa; o erro está "
+        "dissecando": (cz("[inversão · nexo indevido]") + " A primeira frase (definição) está certa; o erro está "
                        "na troca dos papéis entre 1929 e 2008, com um nexo causal montado em cima da troca. 🔥 "
                        "Itens que comparam respostas de política a 1929 e a 2008 cobram justamente essa "
                        "lição aprendida."),
@@ -1419,7 +1419,7 @@ CARDS = [
                       "financeiras severas. " + hl("Não exercida") + " pelo FED no enfrentamento da crise de "
                       "1929, essa função " + hl("foi amplamente adotada") + " no trato da crise financeira de "
                       "2008, que, por isso, teve sua dimensão sistêmica " + hl("contida") + "."),
-        "tipo_erro": ["INVERSAO", "ANACRONISMO"], "moduladores": [], "dificuldade": 1,
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Em 1929 o Fed não agiu como emprestador de última instância e contraiu a liquidez; "
                              "Bernanke estudou a Depressão e, em 2008, o Fed injetou liquidez maciça e comprou "
                              "ativos depreciados."),
@@ -1484,5 +1484,160 @@ CARDS = [
                     "manteve CERTO (caso sueco de 2009 sustenta a leitura)",
                     "nota_redacao: um dos comentários da fonte descreve o forward guidance como compra de "
                     "ativos; corrigido"],
+    },
+    # ------------------------------------------------------------------ E1-0667
+    {
+        "id": "ECO-E1-0667-1", "fonte_ref": "E1-0667", "destino": "40", "subtema": H2["qe"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2025", "ano": 2025, "cacd": True,
+        "errei": False,
+        "comando": CMD_TPS25,
+        "rotulo_item": "Item",
+        "assertiva": ("QE (Quantitative Easing) são operações de mercado aberto com objetivo de aumentar a taxa de "
+                      "juros a fim de alinhar as expectativas de mercado e, assim, evitar o aumento da inflação no "
+                      "longo prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("QE (Quantitative Easing) são operações de mercado aberto com objetivo de ")
+                    + vm("aumentar a taxa de juros") + az(" a fim de alinhar as expectativas de mercado e, assim, "
+                                                          "evitar ")
+                    + vm("o aumento da inflação no longo prazo") + az(".")),
+        "poucas": ("O " + azb("QE") + " é " + azb("expansionista") + ": compras maciças de ativos para "
+                   + vd("reduzir") + " os juros de longo prazo e estimular a economia quando a taxa básica já está "
+                   "perto de zero. O risco que ele combate é a deflação, não a inflação."),
+        "destrinchando": [
+            "Contexto: com a taxa básica no " + azb("limite inferior zero") + ", o BC não tem mais para onde "
+            "cortar. Passa então a comprar em larga escala títulos públicos longos e, às vezes, privados "
+            "(hipotecas securitizadas, debêntures).",
+            "Canais: (1) " + azb("prêmio de prazo") + " — o BC retira títulos longos do mercado, seus preços "
+            "sobem e os rendimentos caem; (2) " + azb("rebalanceamento de carteiras") + " — vendedores migram "
+            "para ativos de risco, barateando o crédito às empresas; (3) " + azb("sinalização") + " — reforça a "
+            "promessa de juros baixos por longo tempo; (4) " + azb("câmbio") + " — moeda mais fraca.",
+            "Casos: " + oc("Banco do Japão") + " (pioneiro, " + vd("2001–2006") + "); Fed (QE1 "
+            + vd("nov./2008") + ", QE2 " + vd("2010") + ", QE3 " + vd("2012") + "); Banco da Inglaterra "
+            "(" + vd("2009") + "); BCE (" + vd("2015") + "); e de novo na pandemia (" + vd("2020") + ").",
+            "Saída: " + azb("tapering") + " (redução do ritmo de compras — o “taper tantrum” de " + vd("2013")
+            + " abalou emergentes como o " + rx("Brasil") + ") e " + azb("QT") + " (encolhimento do balanço). "
+            "O QT é que tem efeito contracionista.",
+            vm("Regra-âncora: QE = comprar ativos para baixar juros longos e afastar a deflação; QT = o "
+               "contrário."),
+        ],
+        "dissecando": (cz("[inversão]") + " Descreve o QE com a finalidade de um aperto monetário: aumentar "
+                       "juros e conter inflação. A parte “alinhar expectativas” se salva (o QE tem canal de "
+                       "sinalização), mas o sentido da política está trocado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O quantitative tightening consiste na redução do balanço do banco central, com efeito "
+            "contracionista.”</i> → CERTO",
+            "<i>“O QE amplia a base monetária e, por isso, gerou necessariamente inflação elevada nos EUA após "
+            "2008.”</i> → ERRADO (nexo indevido: a inflação ficou baixa por anos; reservas ficaram paradas nos "
+            "bancos)",
+        ])],
+        "reescrita": ("QE (Quantitative Easing) são operações de mercado aberto com objetivo de "
+                      + hl("reduzir as taxas de juros de longo prazo")
+                      + " a fim de alinhar as expectativas de mercado e, assim, evitar "
+                      + hl("a deflação e a estagnação") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O QE busca estimular a economia aumentando a liquidez por compra de ativos, reduzindo "
+                             "juros longos, em cenário de juros perto de zero; o objetivo não é elevar juros nem "
+                             "conter inflação."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": img_e1("image (199).png"),
+        "alertas": [ALERTA_TPS25],
+    },
+    # ------------------------------------------------------------------ E1-0668
+    {
+        "id": "ECO-E1-0668-1", "fonte_ref": "E1-0668", "destino": "40", "subtema": H2["qe"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2025", "ano": 2025, "cacd": True,
+        "errei": False,
+        "comando": CMD_TPS25,
+        "rotulo_item": "Item",
+        "assertiva": ("A política monetária não convencional praticada pelos bancos centrais utiliza instrumentos "
+                      "de estimulo à economia voltados a melhorar as condições financeiras e de acesso ao crédito "
+                      "e, assim, resultar em aumento do gasto e do investimento."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A política monetária não convencional praticada pelos bancos centrais utiliza instrumentos "
+                      "de estimulo à economia voltados a <u>melhorar as condições financeiras e de acesso ao "
+                      "crédito</u> e, assim, resultar em aumento do gasto e do investimento."),
+        "poucas": ("Quando o corte da taxa básica se esgota, os BCs usam " + azb("QE") + ", " + azb("forward "
+                   "guidance") + ", " + azb("juros negativos") + " e " + azb("linhas de crédito") + " para "
+                   "baratear e destravar o crédito — e, por essa via, sustentar gasto e investimento."),
+        "destrinchando": [
+            "Quando surge: (1) taxa básica no " + azb("limite inferior zero") + "; (2) " + azb("canal de "
+            "transmissão entupido") + " — mesmo com juros baixos, bancos e mercados não repassam (aversão a "
+            "risco, crise bancária).",
+            "Instrumentos e alvo: QE (juros longos e prêmios de risco), FG (trajetória esperada dos juros), "
+            "juros negativos (custo de manter reservas paradas), " + azb("crédito direcionado") + " (TLTRO do "
+            "BCE, programas do Fed para papel comercial e empresas em 2008 e 2020) e compra de ativos "
+            "privados (" + azb("credit easing") + ").",
+            "O objetivo final é o de sempre — demanda agregada, emprego, inflação na meta; o que muda é o "
+            "<b>canal</b>: em vez do juro curto, as " + azb("condições financeiras") + " amplas (juros longos, "
+            "spreads, preços de ativos, câmbio).",
+            "No " + rx("Brasil") + ", a " + vd("EC 106/2020") + " (“orçamento de guerra”) autorizou "
+            "temporariamente o BC a comprar títulos públicos e privados no mercado secundário durante a "
+            "pandemia.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição genérica e correta. O “estimulo” (sem acento, como na "
+                       "prova) não muda nada; o item seria ERRADO se dissesse que esses instrumentos visam conter "
+                       "a demanda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política monetária não convencional dispensa a atuação sobre as condições de crédito, "
+            "concentrando-se exclusivamente na taxa básica de juros de curto prazo.”</i> → ERRADO (inversão: "
+            "atua justamente fora da taxa básica)",
+            "<i>“A compra de títulos privados pelo banco central é exemplo de política monetária não "
+            "convencional.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Usada quando cortes de juros se esgotam; QE, forward guidance, juros negativos e "
+                             "operações de crédito buscam melhorar liquidez e crédito e aumentar gasto e "
+                             "investimento."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_TPS25],
+    },
+    # ------------------------------------------------------------------ E2-L00315
+    {
+        "id": "ECO-E2-L00315-1", "fonte_ref": "E2-L00315", "destino": "40", "subtema": H2["qe"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das políticas monetárias não convencionais, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("O quantitative easing consiste na compra de ativos de longo prazo pelo banco central com o "
+                      "objetivo de expandir reservas bancárias, reduzir juros de longo prazo e evitar pressões "
+                      "deflacionárias, sobretudo em contexto de “zero lower bound”."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O quantitative easing consiste na compra de ativos de <u>longo prazo</u> pelo banco central "
+                      "com o objetivo de expandir reservas bancárias, <u>reduzir juros de longo prazo</u> e evitar "
+                      "pressões <u>deflacionárias</u>, sobretudo em contexto de “zero lower bound”."),
+        "poucas": ("Definição completa do " + azb("QE") + ": compra de ativos longos → mais " + azb("reservas")
+                   + " (balanço do BC maior) → juros longos menores → estímulo e afastamento da " + vd("deflação")
+                   + ", quando o juro curto já está em zero."),
+        "destrinchando": [
+            "Por que ativos <b>longos</b>: o juro curto já está no piso; a compra de títulos longos atinge a "
+            "parte da curva que ainda pode cair e que importa para hipotecas e investimento.",
+            "Contabilidade: o BC paga criando " + azb("reservas") + " — ativo (títulos) e passivo (reservas) "
+            "sobem juntos. Base monetária cresce muito, mas o crédito e M2 crescem bem menos: os bancos "
+            "seguram reservas (o multiplicador despenca).",
+            "Por que o “sobretudo em ZLB”: fora do limite inferior, cortar o juro curto é mais simples e "
+            "previsível; o QE vira ferramenta de exceção. Ele também foi usado para restaurar o funcionamento "
+            "de mercados (março de 2020).",
+            "Resultados e efeitos colaterais: juros longos menores e alta de ações e imóveis (efeito riqueza "
+            "concentrado), fluxo de capitais para emergentes e, na saída (" + azb("tapering") + ", " + vd("2013")
+            + "), turbulência cambial — no " + rx("Brasil") + ", o real depreciou com o “taper tantrum”.",
+            vm("Regra-âncora: QE = mais reservas e menos juros longos; tapering = compra mais lenta; QT = "
+               "balanço encolhendo."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Junta, numa frase, instrumento (ativos longos), meio (reservas), "
+                       "alvo (juros longos), objetivo (afastar deflação) e contexto (ZLB) — todos corretos. A "
+                       "banca costuma errar trocando “reduzir” por “elevar” ou “deflacionárias” por "
+                       "“inflacionárias”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O quantitative easing consiste na venda de ativos de longo prazo pelo banco central para conter "
+            "pressões inflacionárias.”</i> → ERRADO (inversão: isso se aproxima do QT)",
+            "<i>“O tapering corresponde à redução gradual do ritmo de compras de ativos pelo banco central.”</i> "
+            "→ CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["sobretudo"], "dificuldade": 1,
+        "comentario_fonte": "Corresponde ao mecanismo descrito pelo BCE, BoE e Fed após 2008.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
     },
 ]

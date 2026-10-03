@@ -1253,4 +1253,247 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0311
+    {
+        "id": "ECO-E1-0311-1", "fonte_ref": "E1-0311", "destino": "35", "subtema": H2["fun"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2014, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo às funções da moeda.",
+        "rotulo_item": "Item",
+        "assertiva": ("Meio de troca, medida de valor e reserva de valor são funções da moeda que em conjunto a "
+                      "diferenciam de outros ativos financeiros."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Meio de troca, medida de valor e reserva de valor são funções da moeda que <u>em conjunto</u> "
+                      "a diferenciam de outros ativos financeiros."),
+        "poucas": ("Outros ativos guardam valor; só a moeda reúne as " + vd("três funções") + " — meio de troca, "
+                   "unidade de conta e reserva de valor. É o <b>conjunto</b> que a distingue."),
+        "destrinchando": [
+            azb("Meio de troca") + ": aceita por todos em pagamento, elimina a dupla coincidência de desejos do "
+            "escambo. É a função que define a moeda e lhe dá " + vd("liquidez máxima") + ".",
+            azb("Unidade de conta") + " (medida de valor): denominador comum em que se expressam preços, contratos e "
+            "dívidas. Permite comparar valores sem calcular relações de troca entre todos os pares de bens.",
+            azb("Reserva de valor") + ": transfere poder de compra no tempo. Aqui a moeda é mais fraca que outros "
+            "ativos — não rende juros e perde valor com a inflação —, e por isso imóveis, ações e títulos competem "
+            "com ela nessa função.",
+            "O exemplo clássico: um imóvel é boa reserva de valor, mas ninguém mede preços em imóveis nem paga o "
+            "supermercado com eles. Ativos que cumprem só uma ou duas funções não são moeda.",
+            "Em " + azb("hiperinflação") + " a moeda perde primeiro a reserva de valor, depois a unidade de conta "
+            "(indexadores, dólar) e, no limite, o meio de troca. No " + rx("Brasil") + " da " + vd("URV (1994)")
+            + ", a unidade de conta foi separada do meio de troca de propósito, como passo para o real.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Definição de manual. O “em conjunto” salva o item: "
+                       "isoladamente, a reserva de valor não distingue a moeda; reunidas, as três funções sim."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A função de reserva de valor, isoladamente, distingue a moeda dos demais ativos financeiros.”</i> → "
+            "ERRADO (muitos ativos guardam valor, até melhor que a moeda)",
+            "<i>“Na hiperinflação, a moeda tende a perder primeiro a função de reserva de valor.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["em conjunto"], "dificuldade": 1,
+        "comentario_fonte": ("A moeda é o único ativo que reúne as três funções; um imóvel pode ser reserva de valor, "
+                             "mas não unidade de conta nem meio de troca."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE/CACD (a fonte traz só o ano 2014 e a marca ⌚) — não confirmada"],
+    },
+    # ------------------------------------------------------------------ E1-0316
+    {
+        "id": "ECO-E1-0316-1", "fonte_ref": "E1-0316", "destino": "35", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "IADES", "prova": "IRBr/CACD/2020", "ano": 2020, "cacd": True, "errei": False,
+        "comando": ("No início da pandemia do Sars-CoV-2 (novo Coronavírus), o Comitê de Política Monetária (COPOM), "
+                    "órgão do Banco Central, reduziu algumas vezes a taxa básica de juros da economia, a Selic. Essa "
+                    "taxa é um importante indicador para a economia como um todo e reflete a principal articulação "
+                    "da política monetária no Brasil. Acerca desse tema, no que se refere à moeda e à política "
+                    "monetária, julgue (C ou E) os itens a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Caso o encaixe monetário dos bancos comerciais seja nulo, a expansão monetária dependerá apenas "
+                      "da preferência do público por papel-moeda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Caso o encaixe monetário dos bancos comerciais seja <u>nulo</u>, a expansão monetária "
+                      "dependerá <u>apenas</u> da preferência do público por papel-moeda."),
+        "poucas": ("O multiplicador é " + vd("m = 1 / [1 − d(1 − R)]") + ". Com encaixe " + vd("R = 0")
+                   + ", m = 1/(1 − d) = " + vd("1/c") + ": só a fração dos meios de pagamento que o público guarda "
+                   "em papel-moeda (c) limita a expansão."),
+        "destrinchando": [
+            "Definições: meios de pagamento M = PMPP + DV; base monetária B = PMPP + reservas bancárias; "
+            + vd("c = PMPP/M") + " e " + vd("d = DV/M") + " (c + d = 1); " + vd("R = encaixes/DV") + " (em "
+            "caixa, voluntários e compulsórios). Multiplicador " + azb("m = M/B") + ".",
+            "Dedução: B = cM + R·dM ⇒ " + vd("m = 1 / [c + R·d] = 1 / [1 − d(1 − R)]") + ". Se R = 0, os bancos "
+            "emprestam todo depósito e o único “vazamento” do processo de multiplicação é o papel-moeda que o "
+            "público retém: m = 1/c.",
+            "Exemplo: com c = 0,25, m = 4 — cada real de base vira quatro de meios de pagamento. Se o público passa "
+            "a reter mais cédulas (c = 0,5), m cai para 2. Sem encaixe, o comportamento dos bancos sai da equação; "
+            "sobra a " + azb("preferência do público por papel-moeda") + ".",
+            "Relações de sinal que a banca cobra: m cresce com d (mais depósitos) e cai com c e com R (mais "
+            "compulsório ou mais reserva voluntária). Aumentar o compulsório é instrumento contracionista.",
+        ],
+        "dissecando": (cz("[detalhe · literalidade]") + " Item de fórmula: o “apenas” assusta, mas é exato quando "
+                       "R = 0. Quem não lembra que o multiplicador tem só dois parâmetros comportamentais (c ou d, e "
+                       "R) tende a desconfiar do modulador e errar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Caso o encaixe dos bancos seja nulo, o multiplicador monetário será infinito.”</i> → ERRADO (só "
+            "se também c = 0; com c > 0, m = 1/c)",
+            "<i>“Um aumento da preferência do público por depósitos à vista eleva o multiplicador monetário.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "LITERAL"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": ("Multiplicador m = 1/[1 − d(1 − R)]; com R = 0, depende só de d, isto é, da preferência "
+                             "do público por papel-moeda (Prof. Lucas Freiria, QC). Um segundo comentário empilhado "
+                             "mistura PMPP, PMC e PME e chega ao gabarito por raciocínio equivocado."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0362
+    {
+        "id": "ECO-E1-0362-1", "fonte_ref": "E1-0362", "destino": "35", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2012, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo à criação de moeda e ao multiplicador monetário.",
+        "rotulo_item": "Item",
+        "assertiva": ("Com o aumento dos depósitos à vista nos bancos comerciais, eleva-se o multiplicador monetário, o "
+                      "que contribui para a expansão da oferta de moeda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com o aumento dos <u>depósitos à vista</u> nos bancos comerciais, eleva-se o multiplicador "
+                      "monetário, o que contribui para a expansão da oferta de moeda."),
+        "poucas": ("Mais depósitos à vista (em proporção aos meios de pagamento) = " + vd("d ↑") + " e c ↓: os bancos "
+                   "têm mais recursos para emprestar, e " + vd("m = 1/[1 − d(1 − R)]") + " sobe."),
+        "destrinchando": [
+            "Meios de pagamento: M = PMPP + DV; dividindo por M, " + vd("1 = c + d") + ". Reserva bancária: "
+            "R = encaixes/DV. Multiplicador: " + azb("m = M/B = 1 / [1 − d(1 − R)]") + ". Quanto maior d (e menor "
+            "R), menor o denominador e maior m.",
+            "Mecanismo de " + azb("criação de moeda escritural") + ": o banco recebe um depósito, guarda a fração R "
+            "e empresta o resto; o tomador gasta, o dinheiro volta como novo depósito em outro banco, que empresta de "
+            "novo. Papel-moeda retido pelo público sai desse circuito; depósito à vista permanece nele.",
+            "Visão contábil: os bancos criam moeda quando ampliam operações ativas (empréstimos, desconto de "
+            "duplicatas) creditando depósitos à vista — aumento do passivo monetário. Resgates e amortizações "
+            "destroem moeda.",
+            "Sinais para memorizar: " + vd("m cresce com d") + "; " + vd("m cai com c e com R") + " (encaixe em "
+            "caixa, reservas voluntárias, compulsório). Pagamentos digitais (como o " + rx("Pix") + ") que reduzem "
+            "o uso de cédulas tendem a elevar d.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Relação de sinal direta do multiplicador. O implícito é "
+                       "que os depósitos crescem <b>em relação</b> ao papel-moeda (sobe d); é essa a leitura da "
+                       "banca."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com o aumento da preferência do público por papel-moeda, eleva-se o multiplicador monetário.”</i> → "
+            "ERRADO (inversão: c ↑ reduz m)",
+            "<i>“A elevação da alíquota do recolhimento compulsório sobre depósitos à vista reduz o multiplicador "
+            "monetário.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O multiplicador é tanto maior quanto maior a preferência por depósitos à vista e menor "
+                             "a proporção de reservas; explicação contábil da criação de moeda pelas operações ativas. "
+                             "Fórmula e balancetes em imagens não preservadas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (124)-(126).png", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (fórmula do multiplicador e lógica do balancete no 📖)"}],
+        "alertas": ["banca_provavel: CEBRASPE/CACD (a fonte traz só o ano 2012 e a marca ⌚) — não confirmada"],
+    },
+    # ------------------------------------------------------------------ E1-0510
+    {
+        "id": "ECO-E1-0510-1", "fonte_ref": "E1-0510", "destino": "35", "subtema": H2["fun"],
+        "tipo": "C/E", "banca": "Daniel – Economia CACD (Telegram)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_DANIEL,
+        "rotulo_item": "Item",
+        "assertiva": ("M3 refere-se à base monetária, M1, adicionada ao total de depósitos a prazo no sistema "
+                      "bancário, incluindo os Certificados de Depósito Bancário e Interbancário (CDB e CDI) e a parte "
+                      "dos títulos públicos (inclui apenas aqueles títulos que não estão em poder de bancos e de fundos "
+                      "de investimento)."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("M3 refere-se ") + vm("à base monetária, M1, adicionada ao total de depósitos a prazo no "
+                       "sistema bancário, incluindo os Certificados de Depósito Bancário e Interbancário (CDB e CDI) e "
+                       "a parte dos títulos públicos (inclui apenas aqueles títulos que não estão em poder de bancos e "
+                       "de fundos de investimento)") + az(".")),
+        "poucas": ("Duplo erro: " + azb("base monetária") + " não é M1, e a composição descrita (M1 + depósitos a "
+                   "prazo e títulos) é a de um agregado mais estreito, o " + vd("M2") + " da fonte. No BCB, "
+                   + vd("M3 = M2 + quotas de fundos de renda fixa + operações compromissadas com títulos "
+                        "federais") + "."),
+        "destrinchando": [
+            azb("Base monetária") + " (B) = papel-moeda emitido + reservas bancárias: é o passivo monetário do "
+            "Banco Central. " + azb("M1") + " = papel-moeda em poder do público + depósitos à vista: é o passivo "
+            "monetário de BC + bancos comerciais. A diferença entre os dois é a moeda criada pelos bancos (M1 = m·B).",
+            "Agregados pela metodologia do " + rx("BCB") + " reformulada em " + vd("2001") + " (por emissor, não "
+            "mais por liquidez): " + vd("M2") + " = M1 + depósitos especiais remunerados + depósitos de poupança + "
+            "títulos emitidos por instituições depositárias (CDB etc.); " + vd("M3") + " = M2 + quotas de fundos de "
+            "renda fixa + operações compromissadas com títulos federais registradas no Selic; " + vd("M4")
+            + " = M3 + títulos públicos de alta liquidez. ⏳ (out/2026) conferir revisões posteriores na nota "
+            "metodológica do BCB.",
+            "O " + azb("CDI") + " é título negociado entre bancos: transfere recursos dentro do sistema e não entra "
+            "nos meios de pagamento do público. Títulos públicos em poder do público aparecem no agregado mais "
+            "amplo (M4), não no M3.",
+            "A classificação antiga (anos 1990), seguida por apostilas, ordenava por liquidez e usava outras "
+            "combinações de depósitos a prazo, poupança e títulos — por isso o candidato encontra “M2” e “M3” "
+            "descritos de formas diferentes. Em qualquer versão, porém, M3 parte do M2, e não da base monetária.",
+            vm("Regra-âncora: base monetária ≠ M1; cada agregado é o anterior + ativos menos líquidos."),
+        ],
+        "dissecando": (cz("[troca de conceito · dado alterado]") + " Duas trocas: base monetária igualada a M1 e a "
+                       "composição de outro agregado rotulada como M3. A pista é o “à base monetária, M1”: os dois "
+                       "são conceitos distintos, e um item que os iguala já está errado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“M1 corresponde ao papel-moeda em poder do público somado aos depósitos à vista.”</i> → CERTO",
+            "<i>“A base monetária corresponde ao papel-moeda em poder do público somado aos depósitos à vista.”</i> → "
+            "ERRADO (troca de conceito: isso é M1; a base soma papel-moeda emitido e reservas bancárias)",
+        ])],
+        "reescrita": ("M3 refere-se " + hl("ao M2, adicionado às quotas de fundos de renda fixa e às operações "
+                                           "compromissadas com títulos federais") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "DADO_ALTERADO"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": ("Texto de site que chama M1 de “base monetária (conceito restrito)” e define M2 como M1 + "
+                             "depósitos a prazo, CDB/CDI e parte dos títulos públicos; M3 = M2 + poupança; M4 = M3 + "
+                             "demais títulos — classificação desatualizada e com confusão entre base e M1."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "image (164).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada; conteúdo absorvido no 📖)"}],
+        "alertas": ["qualidade_fonte: o comentário de origem iguala M1 à base monetária e usa composição de agregados "
+                    "anterior à reformulação de 2001 do BCB; card reescrito pela metodologia de 2001"],
+    },
+    # ------------------------------------------------------------------ E1-0511
+    {
+        "id": "ECO-E1-0511-1", "fonte_ref": "E1-0511", "destino": "35", "subtema": H2["fun"],
+        "tipo": "C/E", "banca": "Daniel – Economia CACD (Telegram)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_DANIEL,
+        "rotulo_item": "Item",
+        "assertiva": ("Moeda única é quando dois ou mais países escolhem usar uma mesma referência monetária em suas "
+                      "negociações comerciais. Ela funciona como uma referência para trocas financeiras, não como uma "
+                      "divisa circulante."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Moeda única é quando dois ou mais países escolhem usar ")
+                    + vm("uma mesma referência monetária em suas negociações comerciais") + az(". Ela funciona ")
+                    + vm("como uma referência para trocas financeiras, não como uma divisa circulante") + az(".")),
+        "poucas": ("O item define " + azb("moeda comum") + " (unidade de conta compartilhada). " + azb("Moeda única")
+                   + " substitui as moedas nacionais e " + vd("circula") + " — como o euro —, com banco central e "
+                   "política monetária comuns."),
+        "destrinchando": [
+            azb("Moeda única") + ": os países abrem mão das próprias moedas e adotam uma só, emitida por autoridade "
+            "comum. Exemplo: o " + vd("euro") + ", unidade de conta desde " + vd("1999") + " e em cédulas e moedas "
+            "desde " + vd("2002") + ", com o " + azb("Banco Central Europeu") + " fixando uma única política "
+            "monetária para a zona do euro.",
+            azb("Moeda comum") + " (ou unidade de conta comum): referência para precificar e liquidar trocas entre "
+            "países que <b>mantêm</b> suas moedas nacionais. Exemplo: o " + vd("ECU") + " (1979–1998), cesta de "
+            "moedas europeias usada como unidade de conta e convertida 1:1 em euro.",
+            "Mecanismos vizinhos, mais modestos: sistemas de pagamento em moeda local, como o " + rx("SML Brasil–"
+            "Argentina") + " (2008), em que cada lado paga e recebe na própria moeda, sem passar pelo dólar.",
+            "Custo da moeda única, pela teoria das " + azb("áreas monetárias ótimas") + " (" + oc("Mundell")
+            + ", 1961): perde-se a política monetária e cambial própria; funciona melhor com mobilidade de trabalho, "
+            "ciclos sincronizados e transferências fiscais entre os membros — o que faltou na crise do euro de "
+            "2010–2012.",
+            vm("Regra-âncora: moeda única circula e substitui; moeda comum só referencia."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Descreve com precisão o conceito vizinho (moeda comum) e o "
+                       "rotula como moeda única. A pista é o “não como uma divisa circulante”: o caso paradigmático "
+                       "de moeda única, o euro, circula em cédulas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na moeda única, os países participantes renunciam à política monetária autônoma.”</i> → CERTO",
+            "<i>“O ECU, criado em 1979, circulava em cédulas nos países da Comunidade Europeia.”</i> → ERRADO (era "
+            "só unidade de conta)",
+        ])],
+        "reescrita": ("Moeda única é quando dois ou mais países escolhem usar " + hl("uma mesma moeda, que substitui "
+                      "as moedas nacionais") + ". Ela funciona " + hl("como divisa circulante, e não apenas como "
+                      "referência para as trocas") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Só o gabarito ERRADO, uma imagem não preservada e um link para canal do Telegram.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (166).png", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada; comentário escrito do zero)"}],
+        "alertas": [],
+    },
 ]

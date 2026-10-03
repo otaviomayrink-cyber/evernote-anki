@@ -1055,4 +1055,429 @@ CARDS = [
         "figuras_fonte": FIG_E1("Untitled (97).jpeg"),
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00149
+    {
+        "id": "ECO-E2-L00149-1", "fonte_ref": "E2-L00149", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": ("Considere o modelo de demanda e oferta agregada, especialmente no contexto de choques de "
+                    "demanda e políticas econômicas. Julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("As expectativas adaptativas emergem através da observação das condições econômicas passadas. "
+                      "Portanto, tornam a inflação um fenômeno inercial, ainda que a curva de oferta agregada de "
+                      "longo prazo permaneça estática. Essa percepção gera um comportamento de ajuste gradual a "
+                      "qualquer mudança no cenário inflacionário."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As expectativas adaptativas emergem através da observação das condições econômicas "
+                      "<u>passadas</u>. Portanto, tornam a inflação um fenômeno <u>inercial</u>, ainda que a curva "
+                      "de oferta agregada de longo prazo permaneça estática. Essa percepção gera um comportamento "
+                      "de <u>ajuste gradual</u> a qualquer mudança no cenário inflacionário."),
+        "poucas": ("Se " + vd("πᵉₜ = πₜ₋₁") + " (ou uma média do passado), a inflação de ontem entra nos "
+                   "reajustes de hoje: a inflação se perpetua (" + azb("inércia") + ") e as expectativas só se "
+                   "ajustam aos poucos, mesmo com a OALP parada em Yₙ."),
+        "destrinchando": [
+            azb("Expectativas adaptativas") + ": πᵉₜ = πᵉₜ₋₁ + λ(πₜ₋₁ − πᵉₜ₋₁), com 0 < λ ≤ 1 — o agente "
+            "corrige a expectativa por uma fração do erro passado. Caso simples (λ = 1): πᵉₜ = πₜ₋₁.",
+            "Na curva aceleracionista π = πᵉ − β(u − uₙ), com πᵉ = πₜ₋₁: " + vd("π hoje = π ontem") + " se o "
+            "desemprego estiver na taxa natural. A inflação passada se reproduz sozinha — é a "
+            + azb("componente inercial") + ".",
+            "A OALP vertical em Yₙ não muda com isso: a inércia é fenômeno nominal. O custo aparece na "
+            + azb("desinflação") + ", que exige desemprego acima do natural por vários períodos, até as "
+            "expectativas cederem aos poucos.",
+            rx("Brasil") + ": a " + azb("inflação inercial") + " dos anos 1980, alimentada pela indexação "
+            "generalizada, foi diagnosticada por economistas como " + oc("Persio Arida") + ", " + oc("André Lara "
+            "Resende") + " (proposta Larida) e " + oc("Francisco Lopes") + "; o " + rx("Plano Real") + " "
+            "atacou a inércia com a " + rx("URV (1994)") + ", que sincronizou preços antes da troca de moeda.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Três frases corretas encadeadas; a do meio tenta assustar com a "
+                       "OALP “estática”, que é irrelevante para a inércia (fenômeno das expectativas, não do "
+                       "produto potencial). A palavra-chave é “passadas”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As expectativas racionais, por se basearem na inflação passada, tornam a inflação "
+            "inercial.”</i> → ERRADO (troca de conceito: isso é adaptativo)",
+            "<i>“Com expectativas adaptativas, uma política de desinflação crível reduz a inflação "
+            "imediatamente, sem custo em desemprego.”</i> → ERRADO (contradição: o ajuste é gradual e "
+            "custoso)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Expectativas adaptativas se formam pela observação do passado e dão caráter inercial "
+                             "à inflação; mudam apenas gradualmente."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00456
+    {
+        "id": "ECO-E2-L00456-1", "fonte_ref": "E2-L00456", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": True,
+        "comando": CMD_NAB_TEORIA,
+        "rotulo_item": "Item",
+        "assertiva": ("A Curva de Oferta Agregada de Lucas estabelece que variações antecipadas na quantidade de "
+                      "moeda afetam o produto no curto prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A Curva de Oferta Agregada de Lucas estabelece que variações ") + vm("antecipadas")
+                    + az(" na quantidade de moeda afetam o produto no curto prazo.")),
+        "poucas": ("Em " + oc("Lucas") + ", só a moeda " + azb("não antecipada") + " (surpresa) afeta o produto "
+                   "no curto prazo; a antecipada entra nas expectativas e nos preços e é " + azb("neutra") + " "
+                   "até no curto prazo."),
+        "destrinchando": [
+            "Curva de Lucas: " + vd("Y = Yₙ + α(P − Pᵉ)") + ". Se a expansão monetária é anunciada ou "
+            "previsível, Pᵉ sobe junto com P, o termo de surpresa é zero e " + vd("Y = Yₙ") + ": só os preços "
+            "sobem.",
+            "Mecanismo: " + azb("informação imperfeita") + " e " + azb("extração de sinal") + ". O produtor vê o "
+            "preço do seu bem subir e não sabe se é demanda pelo seu produto (preço relativo) ou inflação geral. "
+            "Se a expansão era esperada, ele sabe que é inflação geral e não produz mais; só a surpresa o "
+            "engana.",
+            "Daí a " + azb("proposição de ineficácia") + " de " + oc("Sargent") + " e " + oc("Wallace")
+            + " (1975): política monetária sistemática não estabiliza o produto.",
+            "Evolução, em quadro: <b>keynesianos</b> (expectativas estáticas) — antecipada e surpresa afetam Y; "
+            "<b>Friedman-Phelps</b> (adaptativas) — antecipada afeta Y no curto prazo; <b>Lucas</b> (racionais) — "
+            "só a surpresa afeta Y, no curto prazo; <b>novos-keynesianos</b> (racionais + rigidezes como custos "
+            "de menu e contratos escalonados de " + oc("Fischer") + " e " + oc("Taylor") + ") — a antecipada "
+            "volta a afetar Y no curto prazo.",
+            vm("Regra-âncora: Lucas = só a surpresa move o produto, e só temporariamente."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca “não antecipadas” por “antecipadas”. 🔥 Pegadinha recorrente "
+                       "em itens sobre Lucas: a banca alterna antecipada/não antecipada e curto/longo prazo; "
+                       "leia o adjetivo antes do prazo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A Curva de Oferta Agregada de Lucas estabelece que variações não antecipadas na quantidade de "
+            "moeda afetam o produto no curto prazo.”</i> → CERTO",
+            "<i>“Nos modelos novo-keynesianos com expectativas racionais, variações antecipadas da moeda são "
+            "neutras mesmo no curto prazo.”</i> → ERRADO (troca de ator: rigidezes dão efeito real)",
+        ])],
+        "reescrita": ("A Curva de Oferta Agregada de Lucas estabelece que variações " + hl("não antecipadas")
+                      + " na quantidade de moeda afetam o produto no curto prazo."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Só variações não antecipadas afetam o produto; as antecipadas entram nas "
+                             "expectativas e nos preços. Fórmula Y = Yₙ + α(P − Pᵉ); quadro comparativo das "
+                             "escolas; extração de sinal no modelo de ilhas."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 079", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (fórmula no 📖)"},
+                          {"ref": "IMAGEM 080", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida (quadro das escolas no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00633-1 (mesma curva de Lucas, versão com “apenas no curto prazo”)",
+                    "qualidade_fonte: um dos comentários de origem atribui à OA monetarista de curto prazo "
+                    "inclinação negativa e diz que Lucas supõe informação perfeita — ambos errados; omitidos"],
+    },
+    # ------------------------------------------------------------------ E2-L00582
+    {
+        "id": "ECO-E2-L00582-1", "fonte_ref": "E2-L00582", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MODELOS,
+        "rotulo_item": "Item",
+        "assertiva": ("A Hipótese da Taxa Natural de Friedman sugere que uma curva de Phillips estável e com "
+                      "inclinação descendente existe no longo prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A Hipótese da Taxa Natural de Friedman sugere que uma curva de Phillips ")
+                    + vm("estável e com inclinação descendente") + az(" existe no longo prazo.")),
+        "poucas": ("A " + azb("hipótese da taxa natural") + " diz o contrário: no longo prazo a curva de Phillips "
+                   "é " + vd("vertical em uₙ") + "; a inclinação descendente só existe no curto prazo, e a curva "
+                   "se desloca com as expectativas."),
+        "destrinchando": [
+            oc("Milton Friedman") + " (discurso presidencial à American Economic Association, 1967, publicado em "
+            "1968) e " + oc("Edmund Phelps") + " (1967-1968) argumentaram que o que importa para trabalhadores e "
+            "firmas é o " + azb("salário real") + ". Inflação plenamente esperada não muda decisões reais.",
+            "Curva aumentada por expectativas: " + vd("π = πᵉ − β(u − uₙ)") + ". No curto prazo, com πᵉ dado, "
+            "há trade-off. Se o governo mantém u < uₙ, π fica acima de πᵉ; as expectativas sobem e a curva de "
+            "curto prazo se desloca para cima — a inflação " + azb("acelera") + " (daí “aceleracionista”).",
+            "No longo prazo, π = πᵉ e " + vd("u = uₙ") + " a qualquer taxa de inflação: a curva de longo prazo é "
+            + azb("vertical") + ". A " + azb("taxa natural") + " depende de fatores reais (fricções, "
+            "instituições, seguro-desemprego), não da política monetária.",
+            "A estagflação dos anos 1970 confirmou a previsão e derrubou a ideia de um menu estável.",
+        ],
+        "grafico_verso": "ECO-E2-L00582-1-V1",
+        "dissecando": (cz("[troca de conceito · inversão]") + " Atribui a Friedman a visão que ele combateu (a "
+                       "curva estável de " + oc("Samuelson") + "-" + oc("Solow") + "). Pista: “taxa natural” já "
+                       "anuncia um ponto fixo de desemprego, incompatível com trade-off permanente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a hipótese da taxa natural, a curva de Phillips de longo prazo é vertical na taxa natural "
+            "de desemprego.”</i> → CERTO",
+            "<i>“Segundo Friedman, manter o desemprego abaixo da taxa natural exige inflação estável, porém "
+            "mais alta.”</i> → ERRADO (exige inflação acelerando)",
+        ])],
+        "reescrita": ("A Hipótese da Taxa Natural de Friedman sugere que uma curva de Phillips " + hl("vertical, na "
+                      "taxa natural de desemprego,") + " existe no longo prazo."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": ["estável"], "dificuldade": 1,
+        "comentario_fonte": ("No longo prazo a curva de Phillips é vertical na taxa natural; o trade-off "
+                             "(inclinação descendente) só existe no curto prazo."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00583
+    {
+        "id": "ECO-E2-L00583-1", "fonte_ref": "E2-L00583", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MODELOS,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com Friedman, as políticas expansionistas podem reduzir temporariamente o desemprego "
+                      "abaixo da taxa natural no curto prazo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo com Friedman, as políticas expansionistas podem reduzir <u>temporariamente</u> o "
+                      "desemprego abaixo da taxa natural <u>no curto prazo</u>."),
+        "poucas": ("Com " + azb("expectativas adaptativas") + ", a inflação não antecipada engana os trabalhadores "
+                   "por um tempo: o salário real cai sem que eles percebam, as firmas contratam mais e o "
+                   "desemprego fica " + vd("abaixo de uₙ") + " — até as expectativas se ajustarem."),
+        "destrinchando": [
+            "Mecanismo de " + oc("Friedman") + " (1968): a expansão eleva preços; os trabalhadores, com πᵉ "
+            "baseado no passado, veem o salário nominal subir e o tomam por aumento real — ofertam mais trabalho; "
+            "as firmas, que conhecem os próprios preços, veem o salário real cair e contratam mais.",
+            "Na curva " + vd("π = πᵉ − β(u − uₙ)") + ", a economia sobe ao longo da curva de curto prazo: π ↑ e "
+            "u ↓.",
+            "Com o tempo, πᵉ alcança π, o salário real volta ao nível de equilíbrio e o desemprego retorna a "
+            + vd("uₙ") + " com inflação mais alta. Para manter u < uₙ, seria preciso inflação sempre "
+            "<b>acelerando</b> — a hipótese aceleracionista.",
+            "Contraste com " + oc("Lucas") + ": com expectativas racionais, nem esse efeito temporário existe se "
+            "a política for antecipada; só a surpresa funciona.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Item redundante de propósito "
+                       "(“temporariamente … no curto prazo”) e protegido por “podem”. A dúvida plantada: achar que "
+                       "Friedman negava qualquer efeito da política — ele negava o efeito <b>permanente</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“De acordo com Friedman, as políticas expansionistas podem reduzir permanentemente o desemprego "
+            "abaixo da taxa natural.”</i> → ERRADO (generalização de prazo)",
+            "<i>“De acordo com Friedman, o efeito temporário decorre de as expectativas serem formadas com base "
+            "na inflação passada.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["podem", "temporariamente"],
+        "dificuldade": 1,
+        "comentario_fonte": ("No curto prazo, inflação não antecipada engana os trabalhadores, que ofertam mais "
+                             "trabalho e reduzem o desemprego temporariamente; expectativas adaptativas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00633
+    {
+        "id": "ECO-E2-L00633-1", "fonte_ref": "E2-L00633", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MACRO,
+        "rotulo_item": "Item",
+        "assertiva": ("A Curva de Oferta Agregada de Lucas estabelece que variações antecipadas na quantidade de "
+                      "moeda afetam o produto apenas no curto prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A Curva de Oferta Agregada de Lucas estabelece que variações antecipadas na quantidade de "
+                       "moeda ") + vm("afetam o produto apenas no curto prazo") + az(".")),
+        "poucas": ("Em " + oc("Lucas") + ", a moeda " + azb("antecipada") + " não afeta o produto " + vd("nem "
+                   "no curto prazo") + ": é incorporada às expectativas e só eleva os preços. Efeito de curto "
+                   "prazo é privilégio da " + azb("surpresa") + "."),
+        "destrinchando": [
+            "A frase “afeta apenas no curto prazo” descreve " + oc("Friedman") + " (expectativas adaptativas), "
+            "não Lucas. Em Friedman, até a política prevista pelo governo surte efeito real temporário, porque "
+            "as expectativas olham para trás.",
+            "Em Lucas, " + vd("Y = Yₙ + α(P − Pᵉ)") + ": política antecipada → Pᵉ = P → Y = Yₙ já no curto "
+            "prazo. É a " + azb("proposição de ineficácia da política") + " (" + oc("Sargent") + " e "
+            + oc("Wallace") + ", 1975).",
+            "O que afeta o produto em Lucas é a variação " + azb("não antecipada") + ", e mesmo ela só "
+            "temporariamente, até o erro de percepção ser corrigido.",
+            "Quadro de três linhas: <b>Friedman</b> — antecipada: efeito só no curto prazo; <b>Lucas</b> — "
+            "antecipada: nenhum efeito; surpresa: efeito temporário; <b>novos-keynesianos</b> — antecipada: "
+            "efeito no curto prazo, por rigidez de preços.",
+        ],
+        "dissecando": (cz("[troca de ator · restrição indevida]") + " Mais sutil que trocar “antecipada” por "
+                       "“não antecipada”: o “apenas no curto prazo” soa como cautela e faz o item parecer certo, "
+                       "mas descreve o resultado monetarista. 🔥 Itens sobre Lucas alternam antecipada × não "
+                       "antecipada e curto × longo prazo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A Curva de Oferta Agregada de Lucas estabelece que variações não antecipadas na quantidade de "
+            "moeda afetam o produto apenas no curto prazo.”</i> → CERTO",
+            "<i>“Na versão de Friedman, variações antecipadas da moeda afetam o produto apenas no curto "
+            "prazo.”</i> → CERTO",
+        ])],
+        "reescrita": ("A Curva de Oferta Agregada de Lucas estabelece que variações antecipadas na quantidade de "
+                      "moeda " + hl("não afetam o produto nem mesmo no curto prazo") + "."),
+        "tipo_erro": ["TROCA_ATOR", "RESTRICAO"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": ("Pela proposição de ineficácia, variações antecipadas afetam apenas o nível de preços, "
+                             "neutras mesmo no curto prazo; só surpresas afetam o produto no curto prazo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00456-1 (mesma curva de Lucas, versão sem “apenas”)"],
+    },
+    # ------------------------------------------------------------------ E2-L00636
+    {
+        "id": "ECO-E2-L00636-1", "fonte_ref": "E2-L00636", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MACRO,
+        "rotulo_item": "Item",
+        "assertiva": ("A versão aceleracionista da curva de Phillips difere substancialmente da chamada curva de "
+                      "oferta de Lucas, particularmente no que se refere ao trade-off entre inflação e desemprego."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A versão aceleracionista da curva de Phillips ") + vm("difere substancialmente da")
+                    + az(" chamada curva de oferta de Lucas, particularmente no que se refere ao trade-off entre "
+                         "inflação e desemprego.")),
+        "poucas": ("As duas têm a " + azb("mesma estrutura") + ": desvio do produto (ou do desemprego) só com "
+                   + azb("erro de expectativa") + " (π ≠ πᵉ), trade-off de curto prazo e nenhum trade-off de "
+                   "longo prazo. Diferem na formação das expectativas, não no trade-off."),
+        "destrinchando": [
+            azb("Phillips aceleracionista") + " (" + oc("Friedman") + "-" + oc("Phelps") + "): " + vd("u = uₙ − "
+            "β(π − πᵉ)") + ". " + azb("Oferta de Lucas") + ": " + vd("Y = Yₙ + α(P − Pᵉ)") + ". Pela "
+            + azb("lei de Okun") + " (Y acima de Yₙ ⇔ u abaixo de uₙ), uma é a outra escrita com outras "
+            "variáveis.",
+            "Em ambas: há trade-off no curto prazo enquanto houver surpresa; no longo prazo, π = πᵉ, u = uₙ, "
+            "Y = Yₙ — curva vertical. Os manuais (" + oc("Mankiw") + ") mostram que a curva de Phillips é "
+            "outra forma de expressar a OA de curto prazo.",
+            "A diferença real está em πᵉ: " + azb("adaptativa") + " em Friedman (o erro é sistemático e dura; a "
+            "política antecipada pelo governo funciona por um tempo) × " + azb("racional") + " em Lucas (erro "
+            "aleatório; só a surpresa funciona). Isso muda a eficácia da política e o custo da desinflação, não "
+            "a forma do trade-off.",
+            "A microfundamentação também difere: em Friedman, ilusão dos trabalhadores sobre o salário real; em "
+            "Lucas, confusão dos produtores entre preço relativo e nível geral (ilhas).",
+        ],
+        "dissecando": (cz("[contradição · extrapolação]") + " O “difere substancialmente” é forte demais, e o "
+                       "“particularmente no trade-off” aponta justamente o ponto em que as duas coincidem. Para "
+                       "acertar, separe estrutura da curva (igual) e formação de expectativas (diferente)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A curva de Phillips aceleracionista e a curva de oferta de Lucas diferem quanto à hipótese de "
+            "formação das expectativas.”</i> → CERTO",
+            "<i>“Na curva de oferta de Lucas, há trade-off permanente entre inflação e desemprego.”</i> → ERRADO "
+            "(generalização: só com surpresa e temporário)",
+        ])],
+        "reescrita": ("A versão aceleracionista da curva de Phillips " + hl("assemelha-se bastante à") + " chamada "
+                      "curva de oferta de Lucas, particularmente no que se refere ao trade-off entre inflação e "
+                      "desemprego."),
+        "tipo_erro": ["CONTRADICAO", "EXTRAPOLACAO"], "moduladores": ["substancialmente", "particularmente"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Embora a formação das expectativas difira, a estrutura da oferta e a dependência do "
+                             "erro de percepção (P − Pᵉ) aproximam os dois modelos; no longo prazo não há "
+                             "trade-off."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 098", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (texto do comentário incorporado ao 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00835
+    {
+        "id": "ECO-E2-L00835-1", "fonte_ref": "E2-L00835", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação às políticas monetárias e fiscais, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se as expectativas são formadas racionalmente, então a política monetária é necessariamente "
+                      "incapaz de afetar o produto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se as expectativas são formadas racionalmente, então a política monetária é ")
+                    + vm("necessariamente incapaz") + az(" de afetar o produto.")),
+        "poucas": ("Expectativas racionais tornam ineficaz só a política " + azb("antecipada") + ", e só com "
+                   "preços flexíveis. A " + azb("surpresa") + " afeta o produto no curto prazo, e, com "
+                   + azb("rigidez de preços") + ", até a antecipada afeta."),
+        "destrinchando": [
+            "Para a " + azb("ineficácia") + " da política monetária são necessárias <b>duas</b> hipóteses juntas: "
+            "expectativas racionais <b>e</b> mercados que se ajustam rápido (preços e salários flexíveis), como "
+            "no modelo de " + oc("Lucas") + " e na proposição de " + oc("Sargent") + " e " + oc("Wallace")
+            + " (1975).",
+            "Mesmo aí, a política " + azb("não antecipada") + " tem efeito real temporário: Y = Yₙ + α(P − Pᵉ) com "
+            "P > Pᵉ.",
+            azb("Novos-keynesianos") + " (" + oc("Stanley Fischer") + " e " + oc("John Taylor") + ", contratos "
+            "escalonados, 1977-1980; custos de menu de " + oc("Mankiw") + ", 1985) aceitam expectativas "
+            "racionais, mas mostram que contratos de vários períodos e preços rígidos fazem até a política "
+            "<b>antecipada</b> afetar o produto no curto prazo.",
+            "É o consenso dos modelos atuais usados por bancos centrais: expectativas racionais + rigidezes "
+            "nominais → política monetária afeta o produto no curto prazo e é neutra no longo.",
+            vm("Regra-âncora: expectativas racionais sozinhas não bastam para a ineficácia; é preciso também "
+               "flexibilidade de preços e política antecipada."),
+        ],
+        "dissecando": (cz("[modulador absoluto · nexo indevido]") + " O “necessariamente” transforma em "
+                       "consequência lógica algo que depende de hipóteses extras. Pista: “se … então … "
+                       "necessariamente” em economia quase sempre esconde uma condição omitida."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com expectativas racionais e preços flexíveis, a política monetária antecipada é incapaz de "
+            "afetar o produto.”</i> → CERTO",
+            "<i>“Com expectativas racionais, a política monetária não antecipada é neutra mesmo no curto "
+            "prazo.”</i> → ERRADO (inversão: a surpresa é justamente o que afeta)",
+        ])],
+        "reescrita": ("Se as expectativas são formadas racionalmente, então a política monetária é "
+                      + hl("incapaz, quando antecipada e com preços flexíveis,") + " de afetar o produto"
+                      + hl(", embora surpresas monetárias possam afetá-lo no curto prazo") + "."),
+        "tipo_erro": ["GENERALIZACAO", "NEXO_INDEVIDO"], "moduladores": ["necessariamente"], "dificuldade": 2,
+        "comentario_fonte": ("Mesmo com expectativas racionais, a política não antecipada afeta o produto no curto "
+                             "prazo; a antecipada tende a afetar só os preços."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00916
+    {
+        "id": "ECO-E2-L00916-1", "fonte_ref": "E2-L00916", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_PHILLIPS,
+        "rotulo_item": "Item",
+        "assertiva": ("A versão com expectativas adaptativas afirma que os agentes corrigem suas expectativas com "
+                      "base nos erros passados cometidos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A versão com expectativas adaptativas afirma que os agentes corrigem suas expectativas com "
+                      "base nos <u>erros passados</u> cometidos."),
+        "poucas": ("É a definição: " + vd("πᵉₜ = πᵉₜ₋₁ + λ(πₜ₋₁ − πᵉₜ₋₁)") + " — a nova expectativa é a "
+                   "anterior corrigida por uma fração λ do " + azb("erro de previsão") + " do período passado."),
+        "destrinchando": [
+            "Com λ = 1, a expectativa é simplesmente a inflação do período anterior: " + vd("πᵉₜ = πₜ₋₁") + ". "
+            "Com λ < 1, é uma média ponderada de toda a inflação passada, com pesos decrescentes.",
+            "Foi a hipótese da curva de Phillips de " + oc("Friedman") + " e " + oc("Phelps") + " (fim dos anos "
+            "1960): π = πᵉ − β(u − uₙ). Como as expectativas se ajustam com atraso, a política expansionista "
+            "engana por um tempo; o trade-off é só de curto prazo; no longo prazo a curva é vertical em uₙ.",
+            "A crítica: se a inflação está acelerando, quem forma expectativas assim erra <b>sempre para "
+            "baixo</b> — erro sistemático, que agentes racionais não cometeriam. Daí a substituição por "
+            + azb("expectativas racionais") + " (" + oc("Muth") + ", " + oc("Lucas") + "), que usam toda a "
+            "informação, inclusive a política anunciada.",
+            "Contexto: a " + azb("estagflação") + " dos anos 1970 desacreditou o trade-off estável e deu "
+            "prestígio ao monetarismo.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta. O risco é confundir com expectativas racionais "
+                       "(que não dependem só do passado) e marcar ERRADO por achar que “corrigir erros” é coisa "
+                       "de agente racional."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A versão com expectativas adaptativas afirma que os agentes usam toda a informação disponível, "
+            "inclusive a política anunciada.”</i> → ERRADO (troca de conceito: isso é racional)",
+            "<i>“Com expectativas adaptativas, os agentes podem cometer erros sistemáticos quando a inflação "
+            "acelera.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Expectativas adaptativas baseiam-se na inflação passada; versão Friedman-Phelps, "
+                             "taxa natural; no longo prazo a curva é vertical; estagflação dos anos 1970."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00917
+    {
+        "id": "ECO-E2-L00917-1", "fonte_ref": "E2-L00917", "destino": "29", "subtema": H2["ex"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_PHILLIPS,
+        "rotulo_item": "Item",
+        "assertiva": ("Na versão com expectativas racionais, os agentes levam em conta todas as informações "
+                      "disponíveis para formar suas expectativas inflacionárias."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na versão com expectativas racionais, os agentes levam em conta <u>todas as informações "
+                      "disponíveis</u> para formar suas expectativas inflacionárias."),
+        "poucas": ("É a definição de " + azb("expectativas racionais") + ": " + vd("πᵉ = E[π | toda a informação "
+                   "disponível]") + " — passado, presente, política anunciada e o modelo da economia."),
+        "destrinchando": [
+            "Formulada por " + oc("John Muth") + " (1961) e levada à macroeconomia por " + oc("Lucas") + ", "
+            + oc("Sargent") + " e " + oc("Wallace") + ". Os agentes são <b>prospectivos</b> (olham para a "
+            "frente), ao contrário das adaptativas, que só olham para trás.",
+            "“Todas as informações disponíveis” não significa informação perfeita nem acerto sempre: significa "
+            "uso eficiente do que se sabe. Os erros existem, mas são aleatórios, de média zero e não "
+            "sistemáticos.",
+            "Consequências na curva de Phillips: política <b>anunciada</b> e crível muda πᵉ imediatamente; o "
+            "trade-off só aparece com surpresa; e uma desinflação crível pode custar pouco desemprego (a "
+            "“desinflação sem dor”).",
+            "Por isso a " + azb("credibilidade") + " do banco central virou ativo central da política "
+            "monetária moderna — metas de inflação, comunicação e independência buscam ancorar πᵉ.",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Definição de manual. A palavra “todas” parece "
+                       "generalização exagerada, mas é o próprio conteúdo da hipótese: o erro seria lê-la como "
+                       "“previsão perfeita”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na versão com expectativas racionais, os agentes nunca erram as previsões de inflação.”</i> → "
+            "ERRADO (modulador absoluto: só não erram sistematicamente)",
+            "<i>“Na versão com expectativas racionais, um anúncio crível de desinflação reduz a inflação "
+            "esperada imediatamente.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": ["todas"], "dificuldade": 1,
+        "comentario_fonte": ("Agentes olham para o futuro e usam de forma eficiente toda a informação "
+                             "disponível."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

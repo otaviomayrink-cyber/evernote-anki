@@ -72,7 +72,11 @@
      ],
      "rotulo": "E₁",
      "projetar": "x",
-     "rotulo_x": "Y₁"
+     "rotulo_x": "Y₁",
+     "rotulo_desloc": [
+      11,
+      0
+     ]
     },
     {
      "id": "E2",
@@ -82,7 +86,11 @@
      ],
      "rotulo": "E₂",
      "projetar": "x",
-     "rotulo_x": "Y₂"
+     "rotulo_x": "Y₂",
+     "rotulo_desloc": [
+      11,
+      0
+     ]
     }
    ],
    "checar": [
@@ -158,7 +166,11 @@
      ],
      "rotulo": "E₁",
      "projetar": "x",
-     "rotulo_x": "Y₁"
+     "rotulo_x": "Y₁",
+     "rotulo_desloc": [
+      8,
+      -20
+     ]
     },
     {
      "id": "E2",
@@ -168,7 +180,11 @@
      ],
      "rotulo": "E₂",
      "projetar": "x",
-     "rotulo_x": "Y₂"
+     "rotulo_x": "Y₂",
+     "rotulo_desloc": [
+      -10,
+      20
+     ]
     }
    ],
    "checar": [

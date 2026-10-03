@@ -2,25 +2,111 @@
  "id": "ECO-E3-L00348-1-V1",
  "uso": "verso",
  "legenda": "Um dos cenários possíveis: G ↑ leva a IS para a direita e M ↓ leva a LM para a esquerda com a mesma força; os juros sobem com certeza (i₂ > i₁), mas a renda fica igual (Y₂ = Y₁). Com deslocamentos de tamanhos diferentes, Y subiria ou cairia.",
- "modelo": "is_lm",
- "params": {
-  "deslocar": {
-   "IS": "direita",
-   "LM": "esquerda"
-  }
+ "eixos": {
+  "x": "Y",
+  "y": "i"
  },
- "substituir": {
-  "E2": {
-   "rotulo_x": "",
-   "rotulo_desloc": [
-    10,
-    6
-   ]
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    1.0,
+    8.5
+   ],
+   "p2": [
+    8.0,
+    1.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial"
   },
-  "E1": {
-   "rotulo_x": "Y₁ = Y₂"
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    3.0,
+    8.5
+   ],
+   "p2": [
+    10.0,
+    1.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2.0,
+    1.5
+   ],
+   "p2": [
+    9.0,
+    8.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "LM2",
+   "tipo": "reta",
+   "p1": [
+    0.3,
+    1.8
+   ],
+   "p2": [
+    7.0,
+    8.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₂"
   }
- },
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 7.3
+  },
+  {
+   "de": "LM1",
+   "para": "LM2",
+   "sentido": "esquerda",
+   "em_y": 2.4
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_x": "Y₁ = Y₂",
+   "rotulo_y": "i₁"
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS2",
+    "LM2"
+   ],
+   "rotulo": "E₂",
+   "projetar": "y",
+   "rotulo_y": "i₂",
+   "rotulo_desloc": [
+    -10,
+    18
+   ]
+  }
+ ],
  "checar": [
   "abs(E2.x - E1.x) < 0.01",
   "E2.y > E1.y"

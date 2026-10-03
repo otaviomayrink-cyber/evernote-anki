@@ -1,7 +1,7 @@
 {
  "id": "ECO-E2-L01559-1-V1",
  "uso": "verso",
- "legenda": "O choque adverso leva a economia de A para B (OA₁ → OA₂): os preços sobem e o produto cai abaixo do potencial Y*. Acomodar é levar a DA para a direita (DA₁ → DA₂): o produto volta a Y* em C, mas com preços ainda mais altos (P_C > P_B > P_A).",
+ "legenda": "O choque adverso leva a economia de E₁ para E₂ (OA₁ → OA₂): os preços sobem e o produto cai abaixo do potencial Y*. Acomodar é levar a DA para a direita (DA₁ → DA₂): o produto volta a Y* em E₃, mas com preços ainda mais altos (P₃ > P₂ > P₁).",
  "eixos": {
   "x": "Y",
   "y": "P"
@@ -99,9 +99,9 @@
     "DA1",
     "OA1"
    ],
-   "rotulo": "A",
+   "rotulo": "E₁",
    "projetar": "y",
-   "rotulo_y": "P_A",
+   "rotulo_y": "P₁",
    "rotulo_desloc": [
     10,
     -14
@@ -113,13 +113,13 @@
     "DA1",
     "OA2"
    ],
-   "rotulo": "B",
+   "rotulo": "E₂",
    "projetar": true,
-   "rotulo_y": "P_B",
-   "rotulo_x": "Y_B",
+   "rotulo_y": "P₂",
+   "rotulo_x": "Y₂",
    "rotulo_desloc": [
-    -24,
-    6
+    -30,
+    8
    ]
   },
   {
@@ -128,9 +128,9 @@
     "DA2",
     "OA2"
    ],
-   "rotulo": "C",
+   "rotulo": "E₃",
    "projetar": "y",
-   "rotulo_y": "P_C",
+   "rotulo_y": "P₃",
    "rotulo_desloc": [
     10,
     -12

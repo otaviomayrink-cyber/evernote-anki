@@ -1262,3 +1262,377 @@ CARDS += [
         "alertas": [],
     },
 ]
+
+# ====================================================================== bloco 7 — Balanço de pagamentos (caderno E1)
+def ALERTA_ANO(ano):
+    return (f"banca_provavel: a fonte só traz o ano ({ano}), com marca de provável CACD; possivelmente CEBRASPE, "
+            "não confirmado")
+
+
+CMD_BACEN_2010 = ("Considere os dados relativos às contas brasileiras do setor externo em 2010, em bilhões de dólares, "
+                  "e responda à questão.")
+EXC_BACEN_2010 = ("<p>Dados relativos às contas brasileiras do setor externo em 2010 (em bilhões de dólares):</p><ul>"
+                  "<li>superávit do balanço de pagamentos: 49,1</li>"
+                  "<li>déficit em transações correntes: 47,5</li>"
+                  "<li>déficit na conta de serviços: 31,1</li>"
+                  "<li>remessa líquida de renda: 39,6</li>"
+                  "<li>investimentos estrangeiros diretos: 48,5</li>"
+                  "<li>investimentos brasileiros diretos no exterior: 11,5</li>"
+                  "<li>investimentos estrangeiros em carteira: 67,8</li>"
+                  "<li>saldo de outros investimentos brasileiros no exterior e outros investimentos estrangeiros no "
+                  "país: 2,3</li>"
+                  "<li>reservas internacionais (em 31/12/2010): 288,6</li>"
+                  "<li>dívida externa total (em 31/12/2010): 255,7</li></ul>")
+
+CARDS += [
+    # ------------------------------------------------------------------ E1-0312
+    {
+        "id": "ECO-E1-0312-1", "fonte_ref": "E1-0312", "destino": "18", "subtema": H2["bp_estr"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2014, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo à estrutura do balanço de pagamentos.",
+        "rotulo_item": "Item",
+        "assertiva": ("Para administrar a conta movimento de capitais compensatórios, a autoridade monetária dispõe "
+                      "das reservas de caixa e dos empréstimos de regularização, não sendo instrumento para essa "
+                      "finalidade a operação denominada atrasados, que é um mecanismo contábil usado para debitar "
+                      "amortizações e creditar movimentos de capitais compensatórios."),
+        "gabarito": "ANULADO", "gabarito_origem": "fonte", "status": "anulado",
+        "anotada": (az("Para administrar a conta movimento de capitais compensatórios, a autoridade monetária "
+                       "dispõe das reservas de caixa e dos empréstimos de regularização, ")
+                    + vm("não sendo instrumento para essa finalidade a operação denominada atrasados")
+                    + az(", que é um mecanismo contábil usado para debitar amortizações e creditar movimentos de "
+                         "capitais compensatórios.")),
+        "poucas": ("Item anulado. Na metodologia antiga do BP brasileiro, os " + azb("capitais compensatórios")
+                   + " incluíam reservas, operações de regularização <b>e atrasados</b>; dizer que os atrasados "
+                   "“não são instrumento” é, no mínimo, ambíguo — e o tema estava fora do conteúdo do edital."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "Anulação. Motivos prováveis: (1) a conta de capitais compensatórios pertence ao balanço "
+                          "de pagamentos, fora do escopo anunciado no enunciado original (contabilidade nacional e "
+                          "teoria monetária); (2) a redação é ambígua: os atrasados <b>integravam</b> os capitais "
+                          "compensatórios como forma de financiamento do resultado, ainda que não fossem uma "
+                          "operação voluntária da autoridade monetária. A descrição do mecanismo contábil está "
+                          "correta.")],
+        "destrinchando": [
+            "Na estrutura do BP brasileiro anterior a 2001 (antes da adoção do BPM5), o resultado do balanço "
+            "(TC + capitais autônomos + erros e omissões) era “financiado” pelos " + azb("capitais "
+            "compensatórios") + ": (i) variação de " + vd("haveres no exterior") + " (reservas); (ii) "
+            + vd("operações de regularização") + " (empréstimos do FMI e de outras fontes oficiais para cobrir "
+            "o déficit); (iii) " + vd("atrasados") + ".",
+            azb("Atrasados") + ": compromissos externos vencidos e não pagos (juros e amortizações). Contabilmente, "
+            "lança-se o pagamento como se tivesse ocorrido (débito em juros ou amortizações) e, em contrapartida, "
+            "credita-se “atrasados” nos compensatórios — um passivo que aumenta. Mostra que o déficit foi "
+            "“financiado” pelo calote.",
+            "Foi decisivo nos anos 1980, com a crise da dívida e a " + rx("moratória brasileira de 1987")
+            + ": os atrasados chegaram a ser a principal forma de fechar o balanço.",
+            "No " + azb("BPM6") + " (adotado pelo BCB em 2015), a lógica “acima × abaixo da linha” mudou: não há "
+            "conta de compensatórios; reservas são ativos de reserva na conta financeira, e atrasados aparecem "
+            "como itens de financiamento excepcional (outros investimentos — passivos).",
+        ],
+        "dissecando": (cz("[outro: escopo e ambiguidade]") + " A anulação não vem de erro factual na descrição do "
+                       "mecanismo, mas da afirmação de que os atrasados “não são instrumento”, que depende de "
+                       "como se entende “instrumento”, e do tema fora do programa. Lição: itens sobre a "
+                       "metodologia antiga do BP ainda aparecem; conheça a tripartição dos compensatórios."),
+        "modulos": [("🧭 Panorama", [
+            "Metodologia antiga (até 2000): TC + capitais autônomos + erros e omissões = resultado; financiado por "
+            "compensatórios (reservas, regularização, atrasados).",
+            "BPM5 (2001–2014): TC + conta capital e financeira + erros e omissões = variação de reservas.",
+            "BPM6 (desde 2015): TC + conta capital = conta financeira (com ativos de reserva) − erros e omissões; "
+            "sinais pela ótica de ativos e passivos.",
+        ])],
+        "tipo_erro": ["OUTRO"], "moduladores": [], "dificuldade": 3,
+        "comentario_fonte": ("Questão anulada: capitais compensatórios são conta do BP, fora do escopo do "
+                             "enunciado (contabilidade nacional e teoria monetária); a questão mistura conceitos do "
+                             "sistema financeiro com contas externas."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_ANO(2014),
+                    "texto_parcial: a fonte não traz o comando original; comando neutro (a referência ao escopo "
+                    "“contabilidade nacional e teoria monetária” vem do comentário de origem)"],
+    },
+    # ------------------------------------------------------------------ E1-0359
+    {
+        "id": "ECO-E1-0359-1", "fonte_ref": "E1-0359", "destino": "18", "subtema": H2["bp_lanc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2012, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo aos lançamentos no balanço de pagamentos brasileiro.",
+        "rotulo_item": "Item",
+        "assertiva": ("Os lucros das empresas estrangeiras reinvestidos no Brasil são contabilizados como crédito na "
+                      "conta capital e financeira do balanço de pagamentos brasileiro."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": (az("Os lucros das empresas estrangeiras reinvestidos no Brasil são contabilizados como crédito ")
+                    + vm("na conta capital e financeira") + az(" do balanço de pagamentos brasileiro.")),
+        "poucas": ("O " + azb("lucro reinvestido") + " gera <b>dois</b> lançamentos: débito em " + azb("rendas")
+                   + " (o lucro é tratado como remetido) e crédito na " + azb("conta financeira") + ", como novo "
+                   "investimento direto. O gabarito oficial ERRADO só se sustenta pela localização ou pela "
+                   "omissão do débito."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "Pela metodologia do BCB, o lucro reinvestido é creditado em investimento estrangeiro "
+                          "direto, que fica na conta financeira — subconta da “conta capital e financeira” do BPM5, "
+                          "vigente em 2012. A leitura mais defensável seria CERTO. O ERRADO se apoia em dois "
+                          "argumentos frágeis: a especificação (“conta financeira”, não “capital e financeira”) e a "
+                          "incompletude (o débito em rendas não é mencionado). Um comentário de origem chega a "
+                          "dizer que o crédito vai para “serviços e rendas”, o que inverte o lançamento: em rendas, "
+                          "o lucro de estrangeiros é <b>débito</b>.")],
+        "destrinchando": [
+            "Lucro de empresa estrangeira no Brasil é " + azb("renda de investimento direto") + " paga a não "
+            "residente (renda primária, débito), quer seja remetido, quer reinvestido. Se fosse remetido, a "
+            "contrapartida seria a saída de divisas.",
+            "No reinvestimento, a divisa não sai: o não residente “usa” o lucro para aumentar sua participação na "
+            "filial. Lança-se " + vd("D: renda primária (lucros)") + " e " + vd("C: conta financeira — "
+            "investimento direto no país (passivo)") + ". O efeito líquido no resultado do BP é nulo: piora o "
+            "saldo em transações correntes e melhora, na mesma medida, o financiamento.",
+            "No " + azb("BPM6") + " (BCB, desde 2015), o lucro reinvestido é imputado no período em que é gerado "
+            "e aparece em “participação no capital — lucros reinvestidos” dentro do " + azb("IDP") + " "
+            "(investimento direto no país).",
+            "Consequência analítica: o déficit em transações correntes do " + rx("Brasil") + " fica maior com a "
+            "imputação, mas é “automaticamente financiado” por IDP, sem pressão cambial.",
+            vm("Regra-âncora: lucro reinvestido = débito em renda + crédito em investimento direto (conta "
+               "financeira)."),
+        ],
+        "dissecando": (cz("[meia-verdade · outro: nomenclatura]") + " O item descreve só a metade “financeira” do "
+                       "lançamento duplo e usa o nome do agregado (“conta capital e financeira”) em vez da "
+                       "subconta. Em itens de lançamento, procure sempre as duas pernas — débito e crédito."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os lucros reinvestidos de empresas estrangeiras no Brasil são registrados a débito na conta de "
+            "renda primária e a crédito no investimento direto no país.”</i> → CERTO",
+            "<i>“O reinvestimento de lucros por filiais estrangeiras reduz o déficit em transações correntes.”</i> "
+            "→ ERRADO (o débito em renda o aumenta)",
+        ])],
+        "reescrita": ("Os lucros das empresas estrangeiras reinvestidos no Brasil são contabilizados como crédito "
+                      + hl("na conta financeira (investimento direto no país), com débito na conta de rendas das "
+                           "transações correntes,") + " do balanço de pagamentos brasileiro."),
+        "tipo_erro": ["MEIA_VERDADE", "OUTRO"], "moduladores": [], "dificuldade": 3,
+        "comentario_fonte": ("Comentários divergentes: um diz que o crédito vai para “serviços e rendas”; outro, "
+                             "que vai para a conta financeira e não para a “conta capital e financeira” (mudança de "
+                             "nomenclatura), com débito em rendas; outro aponta incompletude (falta o débito)."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_ANO(2012),
+                    "contestavel: pela metodologia do BCB o lucro reinvestido é creditado em investimento direto "
+                    "(conta financeira, parte da conta capital e financeira no BPM5); o ERRADO oficial só se apoia "
+                    "na nomenclatura ou na omissão do débito em rendas",
+                    "qualidade_fonte: um comentário de origem situa o crédito em “serviços e rendas”, o que inverte "
+                    "o lançamento — corrigido"],
+    },
+    # ------------------------------------------------------------------ E1-0364
+    {
+        "id": "ECO-E1-0364-1", "fonte_ref": "E1-0364", "destino": "18", "subtema": H2["bp_cn"],
+        "tipo": "ME", "banca": "CEBRASPE", "prova": "IRBr/CACD/2011", "ano": 2011, "cacd": True, "errei": True,
+        "comando": CMD_BACEN_2010,
+        "excerto": EXC_BACEN_2010,
+        "rotulo_item": "Questão",
+        "assertiva": ("A partir dos dados apresentados, divulgados pelo Banco Central do Brasil em 25/1/2011, "
+                      "assinale a opção correta."
+                      "</p><p>(A) A principal contribuição para o déficit na conta de serviços provém de lucros e "
+                      "dividendos e, para as remessas líquidas, de aluguel de equipamentos e viagens internacionais."
+                      "</p><p>(B) A dívida externa líquida brasileira é de US$ 32,9 bilhões."
+                      "</p><p>(C) A balança comercial apresentou déficit no período considerado."
+                      "</p><p>(D) Os investimentos estrangeiros diretos compreendem a formação e o aumento do capital "
+                      "de empresas, incluídas as aquisições de ações em bolsa."
+                      "</p><p>(E) O Brasil obteve poupança externa no valor de US$ 47,5 bilhões."),
+        "gabarito": "E", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": ("❌ " + az("(A) A principal contribuição para o déficit na conta de serviços provém de ")
+                    + vm("lucros e dividendos") + az(" e, para as remessas líquidas, de ")
+                    + vm("aluguel de equipamentos e viagens internacionais") + az(".")
+                    + "</p><p>❌ " + az("(B) A dívida externa líquida brasileira é ") + vm("de US$ 32,9 bilhões")
+                    + az(".")
+                    + "</p><p>❌ " + az("(C) A balança comercial apresentou ") + vm("déficit")
+                    + az(" no período considerado.")
+                    + "</p><p>❌ " + az("(D) Os investimentos estrangeiros diretos compreendem a formação e o "
+                                       "aumento do capital de empresas, ")
+                    + vm("incluídas as aquisições de ações em bolsa") + az(".")
+                    + "</p><p>✅ " + az("(E) O Brasil obteve poupança externa no valor de US$ 47,5 bilhões.")),
+        "poucas": ("" + azb("Poupança externa") + " = déficit em transações correntes = " + vd("US$ 47,5 bi")
+                   + ". É identidade: o resto do mundo financiou, em termos líquidos, esse excesso de absorção "
+                   "interna sobre a renda."),
+        "destrinchando": [
+            "(A) ❌ Inverte as contas: lucros e dividendos são " + azb("rendas") + " (remessa líquida de renda, "
+            "39,6); aluguel de equipamentos e viagens internacionais são " + azb("serviços") + " (déficit de "
+            "31,1). Além disso, a tabela não decompõe nenhuma das duas contas.",
+            "(B) ❌ " + vd("Dívida externa líquida = dívida total − reservas") + " (na definição do BCB, também "
+            "menos haveres de bancos e créditos no exterior): 255,7 − 288,6 = " + vd("−32,9") + ". O Brasil era "
+            + rx("credor externo líquido") + ", marco celebrado desde 2008 — o valor positivo é o erro.",
+            "(C) ❌ TC = balança comercial + serviços + rendas + transferências: −47,5 = BC − 31,1 − 39,6 + TU → "
+            + vd("BC + TU = +23,2") + ". Com transferências unilaterais modestas (poucos bilhões), a balança foi "
+            "superavitária — em 2010, cerca de US$ 20 bi.",
+            "(D) ❌ " + azb("Investimento direto") + " é participação no capital com influência duradoura (no "
+            "critério internacional, ≥ 10% do capital votante) e empréstimos intercompanhia. Ações compradas em "
+            "bolsa sem esse controle são " + azb("investimento em carteira") + " (os 67,8 da tabela).",
+            "(E) ✅ Pela identidade I = S<sub>interna</sub> + S<sub>externa</sub>, a poupança externa é o déficit "
+            "em transações correntes, com sinal trocado: " + vd("47,5") + ".",
+            "Contexto: em 2010 o " + rx("Brasil") + " combinava déficit corrente alto com entrada maciça de "
+            "capitais (IED 48,5 e carteira 67,8), superávit no BP (49,1) e acumulação de reservas — o cenário da "
+            "“guerra cambial” denunciada por " + oc("Guido Mantega") + ".",
+        ],
+        "dissecando": (cz("[troca de conceito · dado alterado]") + " Cada distrator explora uma confusão clássica: "
+                       "serviços × rendas (A), sinal da dívida líquida (B), balança comercial × transações "
+                       "correntes (C), direto × carteira (D). A correta é a identidade pura, sem conta além da "
+                       "leitura do dado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com os dados apresentados, o Brasil era, em 2010, credor externo líquido.”</i> → CERTO (reservas "
+            "superam a dívida)",
+            "<i>“O superávit do balanço de pagamentos de 49,1 indica poupança externa negativa.”</i> → ERRADO "
+            "(poupança externa se mede pelo saldo em transações correntes)",
+        ])],
+        "tipo_erro": ["TROCA_CONCEITO", "DADO_ALTERADO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A: tabela não decompõe serviços; B: dívida líquida = −32,9; C: sem transferências não "
+                             "se conclui (empiricamente, superávits desde 2000); D: IED é capital acionário, sem "
+                             "portfólio; E: déficit em TC = poupança externa de 47,5."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: “dados apresentados na tabela acima” → “dados apresentados” (a tabela foi "
+                    "transcrita como lista no excerto)",
+                    "dado_aproximado: saldo da balança comercial de 2010 citado como cerca de US$ 20 bi"],
+    },
+    # ------------------------------------------------------------------ E1-0365
+    {
+        "id": "ECO-E1-0365-1", "fonte_ref": "E1-0365", "destino": "18", "subtema": H2["bp_cn"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2010, "cacd": False, "errei": False,
+        "comando": CMD_BP,
+        "rotulo_item": "Item",
+        "assertiva": ("No caso de um superávit na conta de transações correntes de um país, o balanço de pagamentos "
+                      "registrará o aumento líquido dos direitos do exterior, ou seja, trata-se de situação em que os "
+                      "residentes no exterior financiam o endividamento desse país."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No caso de um ") + vm("superávit") + az(" na conta de transações correntes de um país, o "
+                    "balanço de pagamentos registrará o aumento líquido dos direitos do exterior, ou seja, trata-se "
+                    "de situação em que os residentes no exterior financiam o endividamento desse país.")),
+        "poucas": ("Quem é financiado pelo exterior é o país com " + azb("déficit") + " em transações correntes "
+                   "(poupança externa positiva). Com " + azb("superávit") + ", o país é que " + vd("empresta")
+                   + " ao resto do mundo."),
+        "destrinchando": [
+            "Transações correntes = bens + serviços + renda primária + renda secundária. Pela identidade do BP, "
+            "todo saldo corrente tem contrapartida na " + azb("conta financeira") + " (inclusive reservas): "
+            + vd("TC + conta capital = conta financeira") + " (BPM6, desconsiderando erros e omissões).",
+            azb("Déficit") + " em TC → o país absorve mais do que produz → precisa de recursos externos: aumentam "
+            "os passivos com não residentes (dívida, IED recebido, ações vendidas) ou caem os ativos (reservas). "
+            "Os “direitos do exterior” sobre o país crescem: é a " + azb("poupança externa positiva") + ".",
+            azb("Superávit") + " em TC → o país produz mais do que absorve → acumula ativos no exterior "
+            "(reservas, investimentos) ou reduz passivos: poupança externa " + vd("negativa") + ", capacidade de "
+            "financiamento perante o resto do mundo.",
+            "Exemplos: " + rx("Brasil") + " — deficitário em TC na maior parte das últimas décadas, financiado "
+            "sobretudo por IDP; China e Alemanha — superavitárias, credoras líquidas.",
+        ],
+        "dissecando": (cz("[inversão]") + " Todo o resto da frase descreve corretamente o caso de déficit; só o "
+                       "sinal inicial foi trocado. Em itens de BP, verifique primeiro o sinal do saldo e depois "
+                       "se a consequência combina com ele."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um superávit em transações correntes corresponde a poupança externa negativa.”</i> → CERTO",
+            "<i>“Todo déficit em transações correntes implica aumento da dívida externa.”</i> → ERRADO (modulador "
+            "absoluto: pode ser financiado por IED ou por reservas)",
+        ])],
+        "reescrita": ("No caso de um " + hl("déficit") + " na conta de transações correntes de um país, o balanço de "
+                      "pagamentos registrará o aumento líquido dos direitos do exterior, ou seja, trata-se de "
+                      "situação em que os residentes no exterior financiam o endividamento desse país."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Com superávit em TC não há endividamento; o item valeria com “déficit”; déficit em TC "
+                             "= poupança externa positiva; superávit = poupança externa negativa."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_ANO(2010)],
+    },
+    # ------------------------------------------------------------------ E1-0370
+    {
+        "id": "ECO-E1-0370-1", "fonte_ref": "E1-0370", "destino": "18", "subtema": H2["bp_estr"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": False,
+        "comando": CMD_BP,
+        "rotulo_item": "Item",
+        "assertiva": ("A estrutura do balanço de pagamentos permite compreender o movimento internacional de "
+                      "capitais. Nesse movimento, a conta de serviços registra os pagamentos (e os recebimentos) de "
+                      "serviços da dívida externa (juros) e o serviço do capital de risco (lucros e dividendos), "
+                      "doações e repatriações."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A estrutura do balanço de pagamentos permite compreender o movimento internacional de "
+                       "capitais. Nesse movimento, a conta de ") + vm("serviços")
+                    + az(" registra os pagamentos (e os recebimentos) de serviços da dívida externa (juros) e o "
+                         "serviço do capital de risco (lucros e dividendos)") + vm(", doações e repatriações")
+                    + az(".")),
+        "poucas": ("No BPM6, juros, lucros e dividendos vão para a " + azb("renda primária") + "; doações, para a "
+                   + azb("renda secundária") + "; repatriações de capital, para a " + azb("conta financeira")
+                   + ". A conta de serviços não abriga nenhum deles."),
+        "destrinchando": [
+            "Estrutura do BP no " + azb("BPM6") + ": transações correntes = (1) bens; (2) " + azb("serviços")
+            + " — transportes, viagens, seguros, serviços financeiros, propriedade intelectual, aluguel de "
+            "equipamentos; (3) " + azb("renda primária") + " — remuneração do trabalho e rendas de investimento "
+            "(juros, lucros, dividendos); (4) " + azb("renda secundária") + " — transferências sem contrapartida "
+            "(doações, remessas de migrantes). Depois, conta capital e conta financeira.",
+            "Por que juros e lucros não são serviço: remuneram a <b>propriedade</b> de ativos financeiros "
+            "(capital de empréstimo e capital de risco), não a prestação de um serviço. A expressão “serviço da "
+            "dívida” é de linguagem corrente, não de classificação.",
+            "Doações não têm contrapartida econômica → renda secundária (se correntes) ou conta capital (se "
+            "transferências de capital, como perdão de dívida). Repatriação de capital é desinvestimento → "
+            + azb("conta financeira") + " (redução de passivo ou de ativo).",
+            "Nota histórica: na metodologia brasileira antiga (até 2000), a “balança de serviços” incluía os "
+            "serviços de fatores — juros e lucros —; foi o BPM5 que separou “serviços” de “rendas”. Mesmo ali, "
+            "doações (transferências unilaterais) e repatriações (capitais) ficavam fora.",
+            vm("Regra-âncora: serviço = prestação; renda primária = remuneração de fator; renda secundária = "
+               "transferência; conta financeira = ativos e passivos."),
+        ],
+        "dissecando": (cz("[troca de conceito · meia-verdade]") + " O item junta numa conta só itens de três "
+                       "contas diferentes. A expressão “serviço da dívida” induz a associar juros a “serviços”; "
+                       "“doações e repatriações” no fim confirma a mistura."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No BPM6, os juros pagos sobre a dívida externa são registrados na conta de renda primária.”</i> "
+            "→ CERTO",
+            "<i>“As remessas de trabalhadores emigrados a suas famílias integram a conta de serviços.”</i> → "
+            "ERRADO (renda secundária)",
+        ])],
+        "reescrita": ("A estrutura do balanço de pagamentos permite compreender o movimento internacional de "
+                      "capitais. Nesse movimento, a conta de " + hl("renda primária") + " registra os pagamentos (e "
+                      "os recebimentos) de serviços da dívida externa (juros) e o serviço do capital de risco "
+                      "(lucros e dividendos)" + hl("; as doações vão para a renda secundária, e as repatriações, "
+                      "para a conta financeira") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Doações são transferências unilaterais e repatriações são capitais autônomos, fora da "
+                             "conta de serviços; comentários da linha duplicada (BPM6): juros, lucros e dividendos "
+                             "em renda primária, doações em renda secundária, repatriações na conta financeira."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 398 (linha duplicada E3-L00290)", "tipo_fonte": "TABELA",
+                           "lado": "verso", "acao": "absorvida (estrutura do BP levada ao 📖)"}],
+        "alertas": [ALERTA_ANO(2018),
+                    "duplicata: comentários da linha E3-L00290 (simulado Nidi/Jacqueline Bueno, Questão 65, item 1, "
+                    "mesma assertiva) fundidos neste card"],
+    },
+    # ------------------------------------------------------------------ E1-0382
+    {
+        "id": "ECO-E1-0382-1", "fonte_ref": "E1-0382", "destino": "18", "subtema": H2["bp_cn"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2013, "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir, relativo às relações entre o balanço de pagamentos e as contas nacionais.",
+        "rotulo_item": "Item",
+        "assertiva": "No cálculo da poupança externa, não se incluem aumentos ou diminuições das reservas cambiais do país.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No cálculo da poupança externa, <u>não se incluem</u> aumentos ou diminuições das reservas "
+                      "cambiais do país."),
+        "poucas": ("" + vd("Poupança externa = −saldo em transações correntes") + ". As reservas ficam na conta "
+                   "financeira: são o " + azb("financiamento") + " do saldo, não o saldo."),
+        "destrinchando": [
+            "Das contas nacionais: Y = C + S<sub>p</sub> + T e Y = C + I + G + X − M, com o PNB = PIB − RLEE. "
+            "Daí " + vd("I = S<sub>p</sub> + (T − G) + (M − X + RLEE)") + ": o último termo é a "
+            + azb("poupança externa") + " — o déficit em transações correntes (incluindo, em rigor, as "
+            "transferências unilaterais).",
+            "Os componentes do saldo em TC são todos fluxos de bens, serviços e rendas: balança comercial, "
+            "serviços, renda primária, renda secundária. As " + azb("reservas") + " são ativos financeiros do "
+            "Banco Central e se movem na " + azb("conta financeira") + " (ativos de reserva).",
+            "Leitura “acima × abaixo da linha”: acima, o saldo corrente (poupança externa); abaixo, como ele foi "
+            "coberto — entrada de capitais e/ou variação de reservas. Um mesmo déficit de 10 pode ser coberto "
+            "por 10 de IED (reservas estáveis) ou por 4 de IED e 6 de reservas: a poupança externa é " + vd("10")
+            + " nos dois casos.",
+            "Acumular reservas com superávit corrente significa, ao contrário, poupança externa negativa: o país "
+            "exporta poupança e aplica no exterior.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item de conceito puro. A pegadinha é a associação intuitiva "
+                       "“reservas = dinheiro de fora”; quem a faz marca ERRADO. A distinção saldo × financiamento "
+                       "resolve."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A poupança externa corresponde ao déficit do balanço de pagamentos, medido pela queda das "
+            "reservas internacionais.”</i> → ERRADO (troca de conceito: é o déficit em transações correntes)",
+            "<i>“Um país com superávit em transações correntes apresenta poupança externa negativa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Poupança externa = déficit em transações correntes; reservas resultam da soma dos "
+                             "saldos corrente e de capitais; derivação I = Sp + Sg + Se com RLEE."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (138).png", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada; conteúdo absorvido no 📖)"}],
+        "alertas": [ALERTA_ANO(2013),
+                    "quase_duplicata: ECO-E3-L00245-1 (mesma assertiva, reaproveitada em simulado de 2025)"],
+    },
+]

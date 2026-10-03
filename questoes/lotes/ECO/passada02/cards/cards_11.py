@@ -1233,4 +1233,320 @@ CARDS = [
                     "nota_redacao: mesmo item usado no card de teste ECO-T07-1 (teste de gráficos), fora das "
                     "notas definitivas"],
     },
+    # ------------------------------------------------------------------ E2-L01443
+    {
+        "id": "ECO-E2-L01443-1", "fonte_ref": "E2-L01443", "destino": "27", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("Numa situação de incerteza elevada durante a pandemia, com a redução das taxas de juros a um "
+                      "patamar muito baixo e com a curva LM se tornando horizontal, pode-se dizer que o aumento dos "
+                      "gastos do governo será mais eficaz que a política monetária em estimular a atividade "
+                      "econômica."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Numa situação de incerteza elevada durante a pandemia, com a redução das taxas de juros a um "
+                      "patamar muito baixo e com a curva LM se tornando <u>horizontal</u>, pode-se dizer que o "
+                      "aumento dos gastos do governo será <u>mais eficaz que a política monetária</u> em estimular "
+                      "a atividade econômica."),
+        "poucas": ("Juros no piso + LM horizontal = " + azb("armadilha da liquidez") + ": a política monetária "
+                   "não reduz mais o juro, e a fiscal eleva a renda " + vd("sem crowding-out") + "."),
+        "destrinchando": [
+            "A incerteza eleva a " + azb("preferência pela liquidez") + " (motivo precaução): famílias e "
+            "empresas querem reter moeda. Com o juro já muito baixo, a demanda por moeda fica extremamente "
+            "elástica e a LM, horizontal.",
+            "Política monetária: a moeda nova é entesourada; sem queda adicional do juro, o canal " + vd("i ↓ → "
+            "I ↑ → Y ↑") + " trava. Política fiscal: o gasto público entra direto na demanda agregada; a IS se "
+            "desloca sobre o trecho plano da LM, o juro não sobe e o multiplicador opera por inteiro.",
+            "Contexto: em 2020, bancos centrais levaram os juros a mínimas históricas — no " + rx("Brasil")
+            + ", a Selic chegou a " + vd("2% a.a.") + " (ago/2020) — e os governos adotaram pacotes fiscais "
+            "amplos; no Brasil, o auxílio emergencial foi o principal deles.",
+            "O item pede comparação (“mais eficaz que”), e não a ineficácia absoluta da política monetária — "
+            "formulação prudente, coerente com a teoria.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " O enunciado entrega as três pistas da "
+                       "armadilha (incerteza, juro muito baixo, LM horizontal) e pede só a comparação entre as "
+                       "políticas. O contexto da pandemia é moldura; o julgamento é o do caso extremo do "
+                       "IS-LM."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com a curva LM se tornando horizontal, a política monetária será mais eficaz que o aumento dos "
+            "gastos do governo.”</i> → ERRADO (inversão)",
+            "<i>“…com a curva LM se tornando vertical, o aumento dos gastos do governo será mais eficaz que a "
+            "política monetária.”</i> → ERRADO (troca de conceito: LM vertical é o caso clássico)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["mais eficaz que", "pode-se dizer"],
+        "dificuldade": 1,
+        "comentario_fonte": "Armadilha da liquidez com juros próximos de zero e LM horizontal: monetária ineficaz; "
+                            "fiscal com efeito pleno sobre a renda, sem crowding-out (vários comentários de IA "
+                            "convergentes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 342", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (LM horizontal × vertical; conteúdo absorvido no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01355-1"],
+    },
+    # ------------------------------------------------------------------ E2-L01444
+    {
+        "id": "ECO-E2-L01444-1", "fonte_ref": "E2-L01444", "destino": "27", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("Se a demanda por moeda é independente da taxa de juros, não haverá efeito crowding out e a "
+                      "política fiscal terá máxima eficácia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se a demanda por moeda é independente da taxa de juros, ") + vm("não haverá efeito "
+                                                                                       "crowding out")
+                    + az(" e a política fiscal terá ") + vm("máxima eficácia") + az(".")),
+        "poucas": ("Demanda por moeda insensível ao juro = " + azb("LM vertical") + " (caso clássico): a expansão "
+                   "fiscal só eleva o juro, com " + vd("crowding-out total") + " e eficácia fiscal " + vd("nula")
+                   + "."),
+        "destrinchando": [
+            "Se L = kY (sem termo de juro), dado M/P só existe uma renda que equilibra o mercado monetário: Y = "
+            "M/(kP). A LM é vertical nesse ponto, qualquer que seja o juro.",
+            "Expansão fiscal: a IS se desloca para a direita, mas a renda não pode sair da LM. O juro sobe até "
+            "que o investimento privado caia exatamente o que o gasto público aumentou: " + vd("ΔI = −ΔG") + ".",
+            "O item descreve o caso oposto: eficácia fiscal máxima e ausência de crowding-out ocorrem com "
+            "demanda por moeda " + azb("infinitamente elástica") + " ao juro (LM horizontal, armadilha da "
+            "liquidez).",
+            "No caso clássico, quem tem eficácia máxima é a " + azb("política monetária") + ": deslocar a LM "
+            "vertical move a renda por inteiro.",
+            vm("Regra-âncora: demanda por moeda insensível ao juro → LM vertical → fiscal nula; infinitamente "
+               "sensível → LM horizontal → fiscal máxima."),
+        ],
+        "grafico_verso": "ECO-E2-L01444-1-V1",
+        "dissecando": (cz("[inversão · troca de conceito]") + " A premissa (“independente da taxa de juros”) é "
+                       "a do caso clássico; as conclusões são as da armadilha da liquidez. Quem associa "
+                       "“independente” a “sem atrito” cai. Teste rápido: traduza a premissa em inclinação da LM "
+                       "antes de ler a conclusão."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a demanda por moeda é infinitamente elástica à taxa de juros, não haverá efeito crowding out "
+            "e a política fiscal terá máxima eficácia.”</i> → CERTO",
+            "<i>“Se a demanda por moeda é independente da taxa de juros, a política monetária será "
+            "ineficaz.”</i> → ERRADO (inversão: nesse caso ela tem eficácia máxima)",
+        ])],
+        "reescrita": ("Se a demanda por moeda é independente da taxa de juros, " + hl("haverá efeito crowding out "
+                                                                                     "total")
+                      + " e a política fiscal terá " + hl("eficácia nula") + "."),
+        "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": ["máxima"], "dificuldade": 1,
+        "comentario_fonte": "Demanda por moeda insensível a juros → LM vertical; crowding-out total; política "
+                            "fiscal sem efeito sobre a renda. Um dos comentários empilhados afirmava, "
+                            "incorretamente, que a política fiscal teria máxima eficácia nesse caso.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 342", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada em ECO-E2-L01444-1-V1 (só o painel da LM vertical)"}],
+        "alertas": ["qualidade_fonte: um dos comentários de IA do verso dava a política fiscal como de “máxima "
+                    "eficácia” com LM vertical e julgava o item “parcialmente correto”; descartado",
+                    "quase_duplicata: ECO-E2-L00684-1, ECO-E2-L00562-1"],
+    },
+    # ------------------------------------------------------------------ E2-L01485
+    {
+        "id": "ECO-E2-L01485-1", "fonte_ref": "E2-L01485", "destino": "27", "subtema": H2["pol"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": ("Durante a pandemia, o Banco Central conduziu as taxas de juros frente às mudanças da "
+                    "conjuntura da inflação, da atividade e da taxa de câmbio. Avalie a proposição a seguir como "
+                    "verdadeira ou falsa."),
+        "excerto": ("<p><i>Proposição anterior, à qual o item se refere: “A redução da taxa de juros no início da "
+                    "pandemia, bem como o déficit público elevando o risco, são fatores que atuaram em favor da "
+                    "desvalorização do real.”</i></p>"),
+        "rotulo_item": "Item",
+        "assertiva": ("A redução dos juros a que se refere o item anterior pode ser efetivada com aumento da base "
+                      "monetária da economia, por meio de compras de títulos no mercado aberto, o que desloca a "
+                      "curva LM para cima e para direita."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A redução dos juros a que se refere o item anterior pode ser efetivada com aumento da base "
+                       "monetária da economia, por meio de compras de títulos no mercado aberto, o que desloca a "
+                       "curva LM para ") + vm("cima") + az(" e para direita.")),
+        "poucas": ("O instrumento está certo (compra de títulos → base monetária ↑ → juros ↓), mas a LM se "
+                   "desloca para " + azb("baixo") + " e para a direita, não para cima."),
+        "destrinchando": [
+            "Na compra de títulos no mercado aberto, o Banco Central paga com reservas novas: a " + azb("base "
+            "monetária") + " cresce, a oferta de moeda aumenta e o juro de equilíbrio cai.",
+            "Na LM, mais moeda significa juro menor para cada renda (deslocamento " + vd("para baixo") + ") ou "
+            "renda maior para cada juro (" + vd("para a direita") + "). As duas descrições são o mesmo "
+            "deslocamento; “para cima e para a direita” combina direções incompatíveis numa curva crescente.",
+            "Resultado no IS-LM: " + vd("i ↓, I ↑, Y ↑") + ". Na economia aberta com câmbio flutuante, o juro "
+            "menor reduz a atração de capitais e deprecia o câmbio — como diz a proposição anterior.",
+            "Contexto ⏳ (out/2026): em 2020, o Copom cortou a Selic até " + vd("2% a.a.") + " (agosto), mínima "
+            "histórica; o real se depreciou fortemente no ano, com juro baixo e aumento do risco fiscal. A "
+            "operacionalização brasileira é por meta de Selic, com o Banco Central ajustando a liquidez por "
+            "operações compromissadas.",
+            vm("Regra-âncora: expansão monetária → LM para baixo/direita; contração → para cima/esquerda."),
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " Tudo está certo até a última palavra de direção: "
+                       "“para cima” pertence à contração. A pista é a incoerência interna: numa LM crescente, um "
+                       "deslocamento “para cima e para a direita” não reduz juros."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…por meio de vendas de títulos no mercado aberto, o que desloca a curva LM para baixo.”</i> → "
+            "ERRADO (troca de conceito: venda de títulos contrai a base)",
+            "<i>“…por meio de compras de títulos no mercado aberto, o que desloca a curva LM para baixo e para a "
+            "direita.”</i> → CERTO",
+        ])],
+        "reescrita": ("A redução dos juros a que se refere o item anterior pode ser efetivada com aumento da base "
+                      "monetária da economia, por meio de compras de títulos no mercado aberto, o que desloca a "
+                      "curva LM para " + hl("baixo") + " e para direita."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "Compra de títulos aumenta a base monetária e desloca a LM para baixo e para a "
+                            "direita, não para cima (vários comentários de IA convergentes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 379", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (expansão monetária LM → LM′; conteúdo absorvido no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01353-1, ECO-E1-0704-1"],
+    },
+    # ------------------------------------------------------------------ E2-L01579
+    {
+        "id": "ECO-E2-L01579-1", "fonte_ref": "E2-L01579", "destino": "27", "subtema": H2["pol"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": ("Recentemente o Banco Central iniciou um ciclo de alta dos juros, tendo em vista as pressões "
+                    "inflacionárias na economia brasileira. Sobre este tema, avalie a proposição a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("A elevação da taxa de juros pelo Banco Central pode ser vista como um deslocamento para baixo "
+                      "e para direita da Curva LM."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A elevação da taxa de juros pelo Banco Central pode ser vista como um deslocamento ")
+                    + vm("para baixo e para direita") + az(" da Curva LM.")),
+        "poucas": ("Alta de juros pelo Banco Central é " + azb("política monetária contracionista") + ": a LM vai "
+                   "para " + vd("cima e para a esquerda") + ", com juro maior e renda menor."),
+        "destrinchando": [
+            "Para elevar o juro, o Banco Central enxuga liquidez (vende títulos, reduz reservas disponíveis): "
+            "M/P cai. Com menos moeda, o mercado monetário só se equilibra com juro maior a cada renda — LM "
+            "para cima — ou renda menor a cada juro — LM para a esquerda.",
+            "Novo equilíbrio: " + vd("i ↑ → I ↓ → Y ↓") + ". É o canal pelo qual a alta de juros desaquece a "
+            "demanda e combate a inflação.",
+            "Para baixo e para a direita é o deslocamento da " + azb("expansão monetária") + " (compra de "
+            "títulos, corte de juros).",
+            "Contexto ⏳ (out/2026): o ciclo a que o enunciado alude é o aperto do Copom iniciado em março de "
+            "2021, que levou a Selic de " + vd("2%") + " a " + vd("13,75% a.a.") + " (agosto de 2022).",
+            vm("Regra-âncora: juro ↑ pelo Banco Central = LM para cima/esquerda; juro ↓ = LM para "
+               "baixo/direita."),
+        ],
+        "grafico_verso": "ECO-E2-L01579-1-V1",
+        "dissecando": (cz("[inversão]") + " Troca o sentido do deslocamento. A confusão nasce de pensar que “a LM "
+                       "se mexe junto com o juro” sem lembrar que a curva é crescente: para o juro subir a cada "
+                       "renda, a curva tem de subir."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A elevação da taxa de juros pelo Banco Central pode ser vista como um deslocamento para cima e "
+            "para a esquerda da curva LM.”</i> → CERTO",
+            "<i>“A elevação da taxa de juros pelo Banco Central desloca a curva IS para a esquerda.”</i> → ERRADO "
+            "(curva trocada: a IS não se desloca; há movimento ao longo dela)",
+        ])],
+        "reescrita": ("A elevação da taxa de juros pelo Banco Central pode ser vista como um deslocamento "
+                      + hl("para cima e para a esquerda") + " da Curva LM."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "Elevação de juros é política contracionista: LM para cima e para a esquerda. Um dos "
+                            "comentários empilhados sustentava, incorretamente, o deslocamento para baixo e para "
+                            "a direita.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 437", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada em ECO-E2-L01579-1-V1 (versão contracionista)"}],
+        "alertas": ["qualidade_fonte: um dos comentários de IA do verso defendia o deslocamento “para baixo e "
+                    "para a direita” na alta de juros; descartado"],
+    },
+    # ------------------------------------------------------------------ E2-L01707
+    {
+        "id": "ECO-E2-L01707-1", "fonte_ref": "E2-L01707", "destino": "27", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": "Avalie a afirmação a seguir, relativa ao modelo clássico e ao modelo IS-LM.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma curva LM vertical implica que a política fiscal é ineficiente e, portanto, que a curva de "
+                      "oferta agregada é igualmente vertical."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma curva LM vertical implica que a política fiscal é ineficiente")
+                    + vm(" e, portanto, que a curva de oferta agregada é igualmente vertical") + az(".")),
+        "poucas": ("LM vertical → política fiscal sem efeito sobre a renda: certo. Mas a inclinação da "
+                   + azb("oferta agregada") + " depende do mercado de trabalho e da rigidez de preços, não da "
+                   "demanda por moeda: o “portanto” é um " + vm("nexo falso") + "."),
+        "destrinchando": [
+            "A " + azb("LM vertical") + " vem de uma hipótese sobre a <b>demanda por moeda</b> (insensível ao "
+            "juro). Ela fala do lado da demanda: com M/P fixo, a demanda agregada nominal fica amarrada à oferta "
+            "de moeda, e a política fiscal só muda a composição do gasto.",
+            "A " + azb("oferta agregada vertical") + " vem de hipóteses sobre o <b>lado da oferta</b>: preços e "
+            "salários plenamente flexíveis, sem ilusão monetária, produto no pleno emprego. Uma coisa não "
+            "decorre da outra.",
+            "Prova de independência: com LM vertical, a " + azb("demanda agregada") + " (no plano P × Y) é "
+            "decrescente — pela teoria quantitativa, MV = PY dá uma hipérbole. Essa DA pode cruzar uma OA "
+            "positivamente inclinada (preços rígidos no curto prazo) ou vertical (clássico) — os dois casos são "
+            "possíveis.",
+            "No " + azb("modelo clássico") + " completo, as duas verticalidades aparecem juntas porque ele "
+            "adota as duas hipóteses ao mesmo tempo (teoria quantitativa + mercados que se ajustam). É "
+            "associação, não implicação.",
+        ],
+        "dissecando": (cz("[nexo indevido]") + " A primeira oração é verdadeira; o erro está no “portanto”, que "
+                       "transforma uma coincidência do modelo clássico em consequência lógica. 🔥 Conectivos "
+                       "conclusivos (“portanto”, “logo”, “o que implica”) entre dois fatos verdadeiros são o "
+                       "lugar preferido do nexo indevido."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma curva LM vertical implica que a política fiscal é ineficaz para alterar a renda.”</i> → "
+            "CERTO",
+            "<i>“No modelo clássico, a curva de oferta agregada é vertical porque a demanda por moeda é "
+            "insensível à taxa de juros.”</i> → ERRADO (nexo indevido: a OA vertical decorre da flexibilidade de "
+            "preços e salários)",
+        ])],
+        "reescrita": ("Uma curva LM vertical implica que a política fiscal é ineficiente"
+                      + hl(", mas não implica que a curva de oferta agregada seja igualmente vertical") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["portanto"], "dificuldade": 2,
+        "comentario_fonte": "LM vertical implica ineficácia fiscal no IS-LM, mas a inclinação da OA depende de "
+                            "flexibilidade de preços e salários; a ligação lógica afirmada é falsa.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 509", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (LM horizontal × vertical; conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00130
+    {
+        "id": "ECO-E3-L00130-1", "fonte_ref": "E3-L00130", "destino": "27", "subtema": H2["lm"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": True,
+        "comando": ("Considerando o modelo IS-LM, em que o Banco Central fixa a quantidade de moeda, julgue o item "
+                    "a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": "No modelo keynesiano, a taxa de juros é um fenômeno estritamente real.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No modelo keynesiano, a taxa de juros é um fenômeno ") + vm("estritamente real")
+                    + az(".")),
+        "poucas": ("Para " + oc("Keynes") + ", o juro é " + azb("fenômeno monetário") + ": o prêmio pela renúncia "
+                   "à liquidez, determinado pela demanda e pela oferta de moeda. “Fenômeno real” é a visão "
+                   + azb("clássica") + "."),
+        "destrinchando": [
+            azb("Visão clássica") + ": o juro equilibra poupança e investimento (fundos emprestáveis). Depende "
+            "da produtividade do capital e da parcimônia das famílias — fatores reais. A moeda é neutra, um "
+            "“véu” sobre as trocas.",
+            azb("Visão keynesiana") + " (" + oc("Keynes") + ", <i>Teoria Geral</i>, 1936): o juro é a "
+            "recompensa por abrir mão da liquidez. Determina-se no mercado monetário, pela "
+            + azb("preferência pela liquidez") + " (motivos transação, precaução e especulação) diante da "
+            "oferta de moeda fixada pela autoridade monetária.",
+            "Consequência prática: se o juro é monetário, o Banco Central pode alterá-lo mudando a oferta de "
+            "moeda, e por aí afetar investimento, renda e emprego — a base do canal monetário no IS-LM.",
+            "No IS-LM (síntese de " + oc("Hicks") + ", 1937), o juro de equilíbrio sai da interação dos dois "
+            "mercados: depende de fatores monetários (LM) e reais (IS). Mesmo nessa leitura, ele nunca é "
+            "“estritamente real”.",
+            vm("Regra-âncora: clássicos → juro real (poupança × investimento); Keynes → juro monetário "
+               "(preferência pela liquidez × oferta de moeda)."),
+        ],
+        "dissecando": (cz("[troca de conceito · modulador absoluto]") + " Atribui a Keynes a tese clássica, e o "
+                       "“estritamente” reforça o erro: nem no IS-LM, em que bens e moeda determinam juntos o "
+                       "juro, ele é puramente real. 🔥 O CEBRASPE cobra com frequência o contraste clássicos × "
+                       "Keynes sobre a natureza do juro."),
+        "modulos": [("📚 Autores e teses", [
+            "<b>Clássicos</b> (fundos emprestáveis): juro como preço que equilibra poupança e investimento.",
+            oc("Keynes") + " (<i>Teoria Geral</i>, 1936): juro como prêmio pela renúncia à liquidez; moeda não "
+            "neutra no curto prazo.",
+            oc("Hicks") + " (1937): o IS-LM sintetiza as duas visões, com o juro determinado simultaneamente "
+            "nos mercados de bens e de moeda.",
+        ]), ("😈 Para dificultar", [
+            "<i>“No modelo clássico, a taxa de juros é determinada pelo equilíbrio entre poupança e "
+            "investimento.”</i> → CERTO",
+            "<i>“Para Keynes, a taxa de juros é determinada exclusivamente pela produtividade marginal do "
+            "capital.”</i> → ERRADO (troca de ator: essa é a visão clássica)",
+        ])],
+        "reescrita": ("No modelo keynesiano, a taxa de juros é um fenômeno " + hl("essencialmente monetário")
+                      + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "GENERALIZACAO"], "moduladores": ["estritamente"], "dificuldade": 1,
+        "comentario_fonte": "Keynesianos: juro como fenômeno monetário (preferência pela liquidez × oferta de "
+                            "moeda); clássicos: juro como fenômeno real (poupança × investimento).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

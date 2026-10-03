@@ -1,0 +1,28 @@
+{
+ "id": "ECO-E3-L00348-1-V1",
+ "uso": "verso",
+ "legenda": "Um dos cenários possíveis: G ↑ leva a IS para a direita e M ↓ leva a LM para a esquerda com a mesma força; os juros sobem com certeza (i₂ > i₁), mas a renda fica igual (Y₂ = Y₁). Com deslocamentos de tamanhos diferentes, Y subiria ou cairia.",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "IS": "direita",
+   "LM": "esquerda"
+  }
+ },
+ "substituir": {
+  "E2": {
+   "rotulo_x": "",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  },
+  "E1": {
+   "rotulo_x": "Y₁ = Y₂"
+  }
+ },
+ "checar": [
+  "abs(E2.x - E1.x) < 0.01",
+  "E2.y > E1.y"
+ ]
+}

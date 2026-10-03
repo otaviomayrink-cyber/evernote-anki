@@ -1,0 +1,184 @@
+{
+ "id": "ECO-E2-L01449-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "A mesma expansão da demanda (DA₁ → DA₂) em dois cenários. Com capacidade ociosa, a OA de curto prazo é plana (elástica): o estímulo vira sobretudo produto. Perto do pleno emprego, a OA é íngreme: o estímulo vira sobretudo preços.",
+ "paineis": [
+  {
+   "titulo": "Com capacidade ociosa",
+   "eixos": {
+    "x": "Y",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "OA",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      3.6
+     ],
+     "p2": [
+      9.5,
+      5.0
+     ],
+     "familia": "oferta",
+     "rotulo": "OA"
+    },
+    {
+     "id": "DA1",
+     "tipo": "reta",
+     "p1": [
+      1.0,
+      8.5
+     ],
+     "p2": [
+      7.0,
+      1.0
+     ],
+     "familia": "demanda",
+     "rotulo": "DA₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "DA2",
+     "tipo": "reta",
+     "p1": [
+      3.0,
+      8.5
+     ],
+     "p2": [
+      9.0,
+      1.0
+     ],
+     "familia": "demanda",
+     "rotulo": "DA₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "DA1",
+     "para": "DA2",
+     "sentido": "direita",
+     "posicao": 0.2
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "DA1",
+      "OA"
+     ],
+     "rotulo": "E₁",
+     "projetar": true,
+     "rotulo_x": "Y₁",
+     "rotulo_y": "P₁"
+    },
+    {
+     "id": "E2",
+     "intersecao": [
+      "DA2",
+      "OA"
+     ],
+     "rotulo": "E₂",
+     "projetar": true,
+     "rotulo_x": "Y₂",
+     "rotulo_y": "P₂"
+    }
+   ],
+   "checar": [
+    "E2.x - E1.x > 1.2",
+    "E2.y - E1.y < 0.5"
+   ]
+  },
+  {
+   "titulo": "Perto do pleno emprego",
+   "eixos": {
+    "x": "Y",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "OA",
+     "tipo": "reta",
+     "p1": [
+      3.6,
+      0.5
+     ],
+     "p2": [
+      5.4,
+      9.0
+     ],
+     "familia": "oferta",
+     "rotulo": "OA"
+    },
+    {
+     "id": "DA1",
+     "tipo": "reta",
+     "p1": [
+      1.0,
+      8.5
+     ],
+     "p2": [
+      7.0,
+      1.0
+     ],
+     "familia": "demanda",
+     "rotulo": "DA₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "DA2",
+     "tipo": "reta",
+     "p1": [
+      3.0,
+      8.5
+     ],
+     "p2": [
+      9.0,
+      1.0
+     ],
+     "familia": "demanda",
+     "rotulo": "DA₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "DA1",
+     "para": "DA2",
+     "sentido": "direita",
+     "posicao": 0.2
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "DA1",
+      "OA"
+     ],
+     "rotulo": "E₁",
+     "projetar": true,
+     "rotulo_x": "Y₁",
+     "rotulo_y": "P₁"
+    },
+    {
+     "id": "E2",
+     "intersecao": [
+      "DA2",
+      "OA"
+     ],
+     "rotulo": "E₂",
+     "projetar": true,
+     "rotulo_x": "Y₂",
+     "rotulo_y": "P₂"
+    }
+   ],
+   "checar": [
+    "E2.x - E1.x < 0.6",
+    "E2.y - E1.y > 1.5"
+   ]
+  }
+ ]
+}

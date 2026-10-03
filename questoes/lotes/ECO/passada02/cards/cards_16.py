@@ -1239,4 +1239,139 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00027
+    {
+        "id": "ECO-E3-L00027-1", "fonte_ref": "E3-L00027", "destino": "35", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": CMD_TJPA_2,
+        "rotulo_item": "Item",
+        "assertiva": ("A base monetária será sempre maior que o M1, dado que esta inclui papel-moeda em poder do "
+                      "público, reservas bancárias e depósitos a prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A base monetária será ") + vm("sempre maior") + az(" que o M1, dado que esta inclui "
+                       "papel-moeda em poder do público, reservas bancárias") + vm(" e depósitos a prazo")
+                    + az(".")),
+        "poucas": ("Dois erros: a base " + azb("não inclui depósitos a prazo") + " (que estão em M2) e, em regra, é "
+                   + azb("menor") + " que o M1, porque os depósitos à vista são um múltiplo das reservas."),
+        "destrinchando": [
+            vd("B = PMPP + reservas bancárias") + " (passivo monetário do BC). " + vd("M1 = PMPP + depósitos à "
+                                                                                    "vista") + " (haveres "
+            "plenamente líquidos do público).",
+            "As duas partilham o PMPP; a comparação se decide entre reservas e depósitos à vista. Como os bancos "
+            "guardam só uma fração dos depósitos (r < 1), " + vd("DV > reservas") + " e, portanto, "
+            + vm("M1 > B") + " — o multiplicador é maior que 1.",
+            "Só haveria B = M1 no caso-limite de reservas de 100% (ou de público que retém tudo em papel-moeda); "
+            "B > M1 exigiria reservas superiores aos próprios depósitos — situação anômala.",
+            "Depósitos a prazo (CDB) são passivo dos bancos comerciais, não do BC, e têm liquidez menor: entram "
+            "em " + azb("M2") + ", nunca na base nem no M1.",
+            "Ordem habitual dos agregados: " + vd("B < M1 < M2 < M3 < M4") + ".",
+        ],
+        "dissecando": (cz("[modulador absoluto · troca de conceito]") + " O “sempre” inverte a relação usual, e a "
+                       "justificativa enxerta um componente (depósitos a prazo) de outro agregado. Itens com "
+                       "“dado que” e justificativa errada caem pela justificativa mesmo que a conclusão "
+                       "pareça plausível."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A base monetária inclui papel-moeda em poder do público e reservas bancárias.”</i> → CERTO",
+            "<i>“O M1 tende a superar a base monetária porque os depósitos à vista são um múltiplo das reservas "
+            "bancárias.”</i> → CERTO",
+        ])],
+        "reescrita": ("A base monetária será " + hl("em regra menor") + " que o M1, dado que esta inclui papel-moeda "
+                      "em poder do público, reservas bancárias" + hl(", mas não os depósitos à vista, que no M1 "
+                                                                     "são um múltiplo das reservas") + "."),
+        "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["sempre"], "dificuldade": 1,
+        "comentario_fonte": ("Seis respostas concordantes: base = PMPP + reservas; M1 = PMPP + DV, em geral maior "
+                             "que a base; depósitos a prazo integram M2/M3, não a base."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00065
+    {
+        "id": "ECO-E3-L00065-1", "fonte_ref": "E3-L00065", "destino": "35", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Julho/2025", "ano": 2025,
+        "cacd": False, "errei": True,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("Há destruição de meios de pagamento quando um indivíduo realiza um depósito à vista em um "
+                      "banco comercial."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (vm("Há destruição") + az(" de meios de pagamento quando um indivíduo realiza um depósito à vista "
+                                             "em um banco comercial.")),
+        "poucas": ("O depósito troca " + azb("moeda manual") + " (PMPP) por " + azb("moeda escritural")
+                   + " (DV), as duas dentro de M1: muda a composição, " + vm("não o total") + "."),
+        "destrinchando": [
+            "Quadro de " + oc("Paulani e Braga") + " (<i>A nova contabilidade social</i>): papel-moeda emitido = "
+            "moeda emitida com autorização do BC; papel-moeda em poder do público = papel-moeda emitido − caixa "
+            "das sociedades depositárias monetárias; " + vd("meios de pagamento = PMPP + depósitos à vista") + ".",
+            "Depósito de 100: PMPP " + vd("−100") + " (a cédula vai para o caixa do banco, que não é M1) e DV "
+            + vd("+100") + " → " + vd("ΔM1 = 0") + ".",
+            "Destruição exige que o público entregue um haver monetário ao setor bancário em troca de um haver "
+            "<b>não monetário</b>: quitar empréstimo, comprar título do banco, comprar dólares do BC.",
+            "Efeito de segunda ordem: com mais depósitos e mais caixa, o banco pode emprestar mais — o depósito "
+            "tende a <b>elevar</b> o multiplicador (c ↓) e, depois, M1. Destruição, nunca.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Chama de destruição o que é mudança de composição. A "
+                       "armadilha é contábil: o PMPP de fato cai, e quem olha só para ele vê “moeda sumindo”. "
+                       "Pista: o banco recebeu moeda e entregou moeda (depósito) — nada não monetário mudou de "
+                       "mãos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Há destruição de meios de pagamento quando um indivíduo quita, em espécie, um empréstimo junto a "
+            "um banco comercial.”</i> → CERTO",
+            "<i>“O depósito à vista de papel-moeda reduz o papel-moeda em poder do público sem alterar os meios "
+            "de pagamento.”</i> → CERTO",
+        ])],
+        "reescrita": (hl("Não há destruição nem criação") + " de meios de pagamento quando um indivíduo realiza um "
+                      "depósito à vista em um banco comercial."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Depósito converte PMPP em DV, ambos em M1; não há destruição, só mudança de "
+                             "composição (A nova contabilidade social, seção 8.2.3, Quadro 8.1)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 1", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "texto"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00066
+    {
+        "id": "ECO-E3-L00066-1", "fonte_ref": "E3-L00066", "destino": "35", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Julho/2025", "ano": 2025,
+        "cacd": False, "errei": True,
+        "comando": CMD_NIDI,
+        "rotulo_item": "Item",
+        "assertiva": ("O aumento da taxa de recolhimento compulsório dos bancos comerciais junto ao Banco Central não "
+                      "afeta a base monetária, mas reduz a quantidade de meios de pagamento na economia por meio de "
+                      "seu efeito sobre o multiplicador bancário."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O aumento da taxa de recolhimento compulsório dos bancos comerciais junto ao Banco Central "
+                      "<u>não afeta a base monetária</u>, mas reduz a quantidade de meios de pagamento na economia "
+                      "<u>por meio de seu efeito sobre o multiplicador</u> bancário."),
+        "poucas": ("O compulsório só reclassifica reservas que já estão na " + azb("base") + "; o que muda é o "
+                   + azb("multiplicador") + " (r ↑ → m ↓), e por ele cai o M1."),
+        "destrinchando": [
+            "Composição da base: " + vd("B = PMPP + caixa dos bancos + reservas no BC") + " (voluntárias + "
+            "compulsórias). É a " + azb("liquidez sob controle do BC") + ".",
+            "Elevar a alíquota obriga os bancos a transferir parte dos recursos de reservas livres (ou caixa) "
+            "para a conta de compulsório. Tudo continua dentro da base: " + vd("ΔB = 0") + ".",
+            "Mas a fração dos depósitos que fica imobilizada cresce: r ↑ em " + vd("m = (1 + c)/(c + r)")
+            + ", m ↓ e " + vd("M1 = m · B") + " cai.",
+            "Diferença entre instrumentos: " + azb("open market") + " e " + azb("redesconto") + " atuam sobre a "
+            "<b>base</b>; o " + azb("compulsório") + " atua sobre o <b>multiplicador</b>. É a distinção que a "
+            "banca mais cobra nesse tema.",
+            "Na prática, se faltarem reservas aos bancos para cumprir o novo compulsório, eles podem recorrer ao "
+            "redesconto — e aí a base cresce. O item trata do efeito direto, como nos livros-texto.",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Separa corretamente o canal (multiplicador) do "
+                       "agregado que não se altera (base). Engana quem associa todo instrumento do BC a mudança "
+                       "na base. Pista: compulsório = “quanto dos depósitos fica parado”, ou seja, parâmetro do "
+                       "multiplicador."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O aumento do compulsório reduz a base monetária e, por consequência, os meios de pagamento.”</i> "
+            "→ ERRADO (nexo indevido: a base não muda)",
+            "<i>“A venda de títulos pelo Banco Central no mercado aberto reduz a base monetária.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Compulsórios fazem parte da base (liquidez sob controle do BC); taxa maior reduz o "
+                             "multiplicador e os meios de pagamento; diagrama de composição de M1 e da base."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 2", "tipo_fonte": "DIAGRAMA", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
 ]

@@ -1,0 +1,145 @@
+{
+ "id": "ECO-E2-L01559-1-V1",
+ "uso": "verso",
+ "legenda": "O choque adverso leva a economia de A para B (OA₁ → OA₂: P sobe e Y cai abaixo do potencial Y*). Acomodar é levar a DA para a direita (DA₁ → DA₂): o produto volta a Y* em C, mas com o nível de preços ainda mais alto (P_C > P_B > P_A).",
+ "eixos": {
+  "x": "Y",
+  "y": "P"
+ },
+ "curvas": [
+  {
+   "id": "OALP",
+   "tipo": "vertical",
+   "x": 5.0,
+   "y": [
+    0.3,
+    9.3
+   ],
+   "familia": "referencia",
+   "rotulo": "OA de longo prazo",
+   "tracejada": true
+  },
+  {
+   "id": "DA1",
+   "tipo": "reta",
+   "p1": [
+    1.0,
+    8.0
+   ],
+   "p2": [
+    9.0,
+    0.8
+   ],
+   "familia": "demanda",
+   "rotulo": "DA₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "OA1",
+   "tipo": "reta",
+   "p1": [
+    1.0,
+    1.7
+   ],
+   "p2": [
+    9.0,
+    6.1
+   ],
+   "familia": "oferta",
+   "rotulo": "OA₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "OA2",
+   "tipo": "reta",
+   "p1": [
+    1.0,
+    3.3
+   ],
+   "p2": [
+    8.0,
+    7.15
+   ],
+   "familia": "oferta",
+   "rotulo": "OA₂"
+  },
+  {
+   "id": "DA2",
+   "tipo": "reta",
+   "p1": [
+    2.4,
+    9.0
+   ],
+   "p2": [
+    9.6,
+    2.52
+   ],
+   "familia": "demanda",
+   "rotulo": "DA₂"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "OA1",
+   "para": "OA2",
+   "sentido": "esquerda",
+   "posicao": 0.15
+  },
+  {
+   "de": "DA1",
+   "para": "DA2",
+   "sentido": "direita",
+   "posicao": 0.85
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "DA1",
+    "OA1"
+   ],
+   "rotulo": "A",
+   "projetar": "y",
+   "rotulo_y": "P_A"
+  },
+  {
+   "id": "B",
+   "intersecao": [
+    "DA1",
+    "OA2"
+   ],
+   "rotulo": "B",
+   "projetar": true,
+   "rotulo_y": "P_B",
+   "rotulo_x": "Y_B"
+  },
+  {
+   "id": "C",
+   "intersecao": [
+    "DA2",
+    "OA2"
+   ],
+   "rotulo": "C",
+   "projetar": "y",
+   "rotulo_y": "P_C"
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    5.1,
+    0.25
+   ],
+   "texto": "Y*",
+   "cor": "cinza"
+  }
+ ],
+ "checar": [
+  "B.y > A.y",
+  "B.x < A.x",
+  "C.y > B.y",
+  "abs(C.x - 5.0) < 0.05",
+  "abs(A.x - 5.0) < 0.05"
+ ]
+}

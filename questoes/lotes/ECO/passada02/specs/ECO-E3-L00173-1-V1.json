@@ -1,0 +1,180 @@
+{
+ "id": "ECO-E3-L00173-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "O mesmo aumento de G desloca as duas IS na mesma distância. Com investimento pouco sensível aos juros (IS íngreme, à esquerda), a renda sobe muito; com investimento muito sensível (IS plana, à direita), a alta dos juros expulsa investimento e Y quase não sai do lugar (crowding out).",
+ "paineis": [
+  {
+   "titulo": "Investimento pouco elástico",
+   "eixos": {
+    "x": "Y",
+    "y": "i"
+   },
+   "curvas": [
+    {
+     "id": "LM",
+     "tipo": "reta",
+     "p1": [
+      0.8,
+      1.0
+     ],
+     "p2": [
+      9.4,
+      7.5
+     ],
+     "familia": "oferta",
+     "rotulo": "LM"
+    },
+    {
+     "id": "IS1",
+     "tipo": "reta",
+     "p1": [
+      2.5,
+      9.0
+     ],
+     "p2": [
+      4.5,
+      1.0
+     ],
+     "familia": "demanda",
+     "rotulo": "IS₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "IS2",
+     "tipo": "reta",
+     "p1": [
+      4.5,
+      9.0
+     ],
+     "p2": [
+      6.5,
+      1.0
+     ],
+     "familia": "demanda",
+     "rotulo": "IS₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "IS1",
+     "para": "IS2",
+     "sentido": "direita",
+     "posicao": 0.25
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "IS1",
+      "LM"
+     ],
+     "rotulo": "E₁",
+     "projetar": "x",
+     "rotulo_x": "Y₁"
+    },
+    {
+     "id": "E2",
+     "intersecao": [
+      "IS2",
+      "LM"
+     ],
+     "rotulo": "E₂",
+     "projetar": "x",
+     "rotulo_x": "Y₂"
+    }
+   ],
+   "checar": [
+    "E2.x - E1.x > 1.5",
+    "E2.y > E1.y"
+   ]
+  },
+  {
+   "titulo": "Investimento muito elástico",
+   "eixos": {
+    "x": "Y",
+    "y": "i"
+   },
+   "curvas": [
+    {
+     "id": "LM",
+     "tipo": "reta",
+     "p1": [
+      0.8,
+      1.0
+     ],
+     "p2": [
+      9.4,
+      7.5
+     ],
+     "familia": "oferta",
+     "rotulo": "LM"
+    },
+    {
+     "id": "IS1",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      5.8
+     ],
+     "p2": [
+      8.5,
+      1.8
+     ],
+     "familia": "demanda",
+     "rotulo": "IS₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "IS2",
+     "tipo": "reta",
+     "p1": [
+      2.5,
+      5.8
+     ],
+     "p2": [
+      10.5,
+      1.8
+     ],
+     "familia": "demanda",
+     "rotulo": "IS₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "IS1",
+     "para": "IS2",
+     "sentido": "direita",
+     "posicao": 0.25
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "IS1",
+      "LM"
+     ],
+     "rotulo": "E₁",
+     "projetar": "x",
+     "rotulo_x": "Y₁"
+    },
+    {
+     "id": "E2",
+     "intersecao": [
+      "IS2",
+      "LM"
+     ],
+     "rotulo": "E₂",
+     "projetar": "x",
+     "rotulo_x": "Y₂"
+    }
+   ],
+   "checar": [
+    "E2.x - E1.x < 1.0",
+    "E2.y > E1.y"
+   ]
+  }
+ ]
+}

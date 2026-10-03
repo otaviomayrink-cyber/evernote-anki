@@ -1187,4 +1187,321 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["duplicata: E2-L00774 (mesmo item; comentários fundidos)"],
     },
+    # ------------------------------------------------------------------ E2-L00738
+    {
+        "id": "ECO-E2-L00738-1", "fonte_ref": "E2-L00738", "destino": "19", "subtema": H2["nfsp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NFSP_TAB,
+        "excerto_tabela": TAB_NFSP,
+        "rotulo_item": "Item",
+        "assertiva": ("Em 2022, observou-se um déficit primário de R$ 126 bilhões, o que foi compensado pelo bom "
+                      "desempenho das contas no ano seguinte, evidenciado pelo superávit primário de R$ 249,1 "
+                      "bilhões."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em 2022, observou-se um ") + vm("déficit") + az(" primário de R$ 126 bilhões, ")
+                   + vm("o que foi compensado pelo bom desempenho das contas no ano seguinte, evidenciado pelo "
+                        "superávit") + az(" primário de R$ 249,1 bilhões."),
+        "poucas": ("Nas " + azb("NFSP") + ", sinal positivo = <b>déficit</b>; negativo = <b>superávit</b>. Houve "
+                   + vd("superávit primário em 2022") + " (−126,0) e " + vd("déficit primário em 2023")
+                   + " (249,1): o item inverte os dois anos."),
+        "destrinchando": [
+            azb("Necessidades de financiamento") + " medem quanto o setor público precisa tomar emprestado. Por "
+            "isso o déficit entra com sinal <b>positivo</b> (há necessidade de financiamento) e o superávit com "
+            "sinal negativo. É a convenção do " + rx("Banco Central do Brasil") + " (critério abaixo da linha).",
+            "Conferência pela identidade " + vd("nominal = primário + juros nominais") + ": −126,0 + 586,4 = "
+            + vd("460,4") + " (4,6% do PIB) em 2022; 249,1 + 718,3 = " + vd("967,4") + " (8,9%) em 2023.",
+            "Leitura econômica: em 2022, o superávit primário (receitas infladas por commodities e inflação "
+            "alta) conviveu com déficit nominal de 4,6% do PIB, puxado pelos juros. Em 2023, a virada para "
+            "déficit primário, somada a juros maiores, levou o nominal a 8,9% do PIB.",
+            "Mesmo com superávit primário a dívida pode crescer: basta que o primário não cubra os juros. Por "
+            "isso a discussão de sustentabilidade gira em torno do primário <b>necessário</b> para estabilizar a "
+            "relação dívida/PIB.",
+            "⏳ (out/2026) Valores de 2022–2023 conforme a tabela; as séries atualizadas estão na Nota de "
+            "Estatísticas Fiscais do BCB.",
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " O item inverte a convenção de sinais das NFSP e, sobre "
+                       "a inversão, constrói uma relação (“compensado pelo bom desempenho”). Quem lê “−126” como "
+                       "déficit cai. 🔥 Tabela de NFSP em prova quase sempre testa o sinal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em 2022, o setor público apresentou superávit primário e déficit nominal.”</i> → CERTO",
+            "<i>“Em 2023, o déficit nominal decorreu exclusivamente da conta de juros.”</i> → ERRADO (modulador "
+            "absoluto: o primário também foi deficitário)",
+        ])],
+        "reescrita": ("Em 2022, observou-se um " + hl("superávit") + " primário de R$ 126 bilhões, "
+                      + hl("seguido, no ano seguinte, de déficit") + " primário de R$ 249,1 bilhões."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Valores positivos = déficit; negativos = superávit. 2022: superávit primário de 126; "
+                            "2023: déficit primário de 249 (2,3% do PIB).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_NFSP_TAB,
+        "alertas": list(ALERTAS_NFSP_TAB),
+    },
+    # ------------------------------------------------------------------ E2-L00739
+    {
+        "id": "ECO-E2-L00739-1", "fonte_ref": "E2-L00739", "destino": "19", "subtema": H2["nfsp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NFSP_TAB,
+        "excerto_tabela": TAB_NFSP,
+        "rotulo_item": "Item",
+        "assertiva": ("O resultado primário é composto pelo saldo entre as receitas e despesas, excluído o pagamento "
+                      "de juros da dívida."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O resultado primário é composto pelo saldo entre as receitas e despesas, <u>excluído o "
+                      "pagamento de juros</u> da dívida."),
+        "poucas": (azb("Resultado primário") + " = receitas primárias − despesas primárias: fica de fora a conta "
+                   "de " + vd("juros") + " (pagos e recebidos)."),
+        "destrinchando": [
+            "Mais precisamente, o primário exclui as receitas e despesas <b>financeiras</b>: juros pagos sobre "
+            "a dívida, juros recebidos sobre ativos do setor público, amortizações e concessões/retornos de "
+            "empréstimos. O item descreve a parte mais importante (juros pagos) e continua correto.",
+            "Na tabela: primário de " + vd("−126,0") + " (superávit, pelo sinal das NFSP) em 2022 e "
+            + vd("249,1") + " (déficit) em 2023. A diferença para o nominal é exatamente a linha dos juros "
+            "nominais: 586,4 e 718,3.",
+            "Por que separar: o primário mostra o resultado das decisões <b>correntes</b> de gasto e "
+            "arrecadação; os juros dependem do estoque herdado e da política monetária (Selic), sobre os quais "
+            "o governo do momento tem pouco controle.",
+            "É a variável-alvo das regras fiscais brasileiras: metas de primário desde " + vd("1999") + " e, "
+            "no arcabouço de 2023, metas com bandas de tolerância.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual, em versão simplificada. O candidato que sabe "
+                       "que o primário também exclui juros <b>recebidos</b> pode desconfiar por incompletude — "
+                       "mas incompleto não é errado para o CEBRASPE, e o mesmo vale nos simulados."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O resultado primário é o saldo entre receitas e despesas, excluídos apenas os juros reais da "
+            "dívida.”</i> → ERRADO (troca de conceito: isso se aproxima do operacional)",
+            "<i>“Na tabela, o resultado primário de 2022 foi superavitário.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Primário = receitas primárias − despesas primárias, sem receitas e despesas com juros; "
+                            "exclui também o recebimento de juros.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_NFSP_TAB,
+        "alertas": list(ALERTAS_NFSP_TAB),
+    },
+    # ------------------------------------------------------------------ E2-L00740
+    {
+        "id": "ECO-E2-L00740-1", "fonte_ref": "E2-L00740", "destino": "19", "subtema": H2["nfsp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NFSP_TAB,
+        "excerto_tabela": TAB_NFSP,
+        "rotulo_item": "Item",
+        "assertiva": ("Em 2022, o resultado primário negativo sinaliza que o governo não conseguiu arcar com o "
+                      "pagamento de juros da dívida naquele ano em específico."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em 2022, o resultado primário ") + vm("negativo sinaliza que o governo não conseguiu arcar "
+                      "com o pagamento de juros da dívida") + az(" naquele ano em específico."),
+        "poucas": ("O −126,0 das NFSP é " + vd("superávit") + " primário. E nem um déficit primário impediria o "
+                   "pagamento de juros: a diferença é coberta com " + azb("nova dívida") + "."),
+        "destrinchando": [
+            "Primeiro erro, de leitura: nas NFSP o sinal negativo indica " + azb("superávit") + ". Em 2022 o "
+            "setor público economizou R$ 126 bilhões antes dos juros.",
+            "Segundo erro, de conceito: o primário mede quanto o governo consegue pagar de juros <b>com recursos "
+            "próprios</b>. Se ele não cobre a conta (ou é deficitário), o governo paga os juros do mesmo jeito, "
+            "emitindo títulos — o resultado é o " + azb("déficit nominal") + " e o aumento da dívida, não o "
+            "calote.",
+            "Em 2022: superávit primário de 126 diante de juros de 586,4 → déficit nominal de " + vd("460,4")
+            + ". O governo pagou com recursos próprios só parte dos juros e financiou o resto com dívida.",
+            "Inadimplência de fato depende de perda de acesso ao financiamento (o mercado se recusa a rolar a "
+            "dívida), não do sinal do primário num único ano.",
+            vm("Regra-âncora: primário insuficiente → mais dívida (déficit nominal), não calote."),
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " Erra o sinal (superávit lido como déficit) e tira "
+                       "uma consequência que não decorre nem do déficit verdadeiro. O “naquele ano em específico” "
+                       "reforça a ideia falsa de que juros só se pagam com o saldo do próprio ano."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em 2022, o superávit primário foi insuficiente para cobrir os juros nominais, o que resultou em "
+            "déficit nominal.”</i> → CERTO",
+            "<i>“Em 2023, o déficit primário obrigou o governo a suspender o pagamento de juros.”</i> → ERRADO "
+            "(nexo indevido: os juros foram financiados com dívida)",
+        ])],
+        "reescrita": ("Em 2022, o resultado primário " + hl("superavitário (−126,0, pois nas NFSP o sinal negativo "
+                      "indica superávit) sinaliza que o governo pagou com recursos próprios parte dos juros da "
+                      "dívida") + " naquele ano em específico."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Em 2022 o primário foi positivo (superávit); mesmo um déficit primário não implicaria "
+                            "falta de pagamento de juros, financiados com aumento do endividamento.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_NFSP_TAB,
+        "alertas": list(ALERTAS_NFSP_TAB),
+    },
+    # ------------------------------------------------------------------ E2-L00741
+    {
+        "id": "ECO-E2-L00741-1", "fonte_ref": "E2-L00741", "destino": "19", "subtema": H2["nfsp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NFSP_TAB,
+        "excerto_tabela": TAB_NFSP,
+        "rotulo_item": "Item",
+        "assertiva": ("Déficit Nominal é a diferença entre todas as receitas e despesas do governo, incluindo as "
+                      "despesas com juros nominais da dívida e as receitas financeiras, e pode ser mensurado pelo "
+                      "método abaixo da linha, a partir do resultado da variação da dívida fiscal líquida."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Déficit Nominal é a diferença entre <u>todas</u> as receitas e despesas do governo, incluindo "
+                      "as despesas com juros nominais da dívida e as receitas financeiras, e <u>pode</u> ser "
+                      "mensurado pelo método abaixo da linha, a partir do resultado da variação da dívida fiscal "
+                      "líquida."),
+        "poucas": ("O " + azb("nominal") + " é o conceito mais amplo (inclui juros pagos e recebidos) e é "
+                   "justamente o que se apura " + azb("abaixo da linha") + ", pela variação da " + vd("dívida "
+                   "fiscal líquida") + "."),
+        "destrinchando": [
+            "Nominal = primário + juros nominais líquidos. Na tabela: 460,4 em 2022 e 967,4 em 2023 — os "
+            "números que as NFSP divulgam como déficit nominal.",
+            azb("Dívida fiscal líquida") + " é a dívida líquida do setor público descontados os ajustes que "
+            "não decorrem do resultado fiscal: variação cambial sobre dívida e ativos em moeda estrangeira, "
+            "reconhecimento de passivos antigos (“esqueletos”), privatizações. Sua variação isola o efeito do "
+            "déficit.",
+            "Por isso o BCB apura o nominal como " + vd("ΔDFL") + " (variação da dívida fiscal líquida) e o "
+            "primário como ΔDFL menos os juros nominais apropriados.",
+            "O “pode” é correto: o nominal também pode ser apurado acima da linha, somando receitas e "
+            "despesas (inclusive financeiras). No Brasil, o número oficial é o do BCB, abaixo da linha.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Junta duas definições corretas: a do "
+                       "nominal (tudo incluído) e a do método abaixo da linha (variação da dívida). O “todas” "
+                       "aqui não é generalização indevida — é o que distingue o nominal dos demais conceitos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O déficit nominal só pode ser mensurado pelo método acima da linha.”</i> → ERRADO (restrição "
+            "indevida e inversão)",
+            "<i>“A variação da dívida fiscal líquida inclui o efeito da desvalorização cambial sobre a dívida "
+            "externa.”</i> → ERRADO (a dívida fiscal líquida exclui esses ajustes)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["todas", "pode"], "dificuldade": 2,
+        "comentario_fonte": "Nominal inclui juros nominais e receitas financeiras; o método abaixo da linha observa a "
+                            "variação do endividamento líquido.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_NFSP_TAB,
+        "alertas": list(ALERTAS_NFSP_TAB),
+    },
+    # ------------------------------------------------------------------ E2-L00795
+    {
+        "id": "ECO-E2-L00795-1", "fonte_ref": "E2-L00795", "destino": "19", "subtema": H2["nfsp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação ao sistema monetário e ao conceito de déficit público, julgue o item seguinte.",
+        "rotulo_item": "Item",
+        "assertiva": ("Déficit Primário é a diferença entre as receitas totais do governo, incluindo receitas "
+                      "financeiras, e suas despesas totais, excluídas as despesas com juros da dívida."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Déficit Primário é a diferença entre as receitas ") + vm("totais do governo, incluindo "
+                      "receitas financeiras") + az(", e suas despesas totais, excluídas as despesas com juros da "
+                      "dívida."),
+        "poucas": ("O " + azb("primário") + " exclui o lado financeiro <b>dos dois lados</b>: sai a despesa com "
+                   "juros e saem também as " + vd("receitas financeiras") + "."),
+        "destrinchando": [
+            azb("Receitas primárias") + ": tributos, contribuições, receitas patrimoniais não financeiras "
+            "(royalties, dividendos de estatais, concessões). " + azb("Receitas financeiras") + ": juros sobre "
+            "aplicações e empréstimos concedidos, retorno de empréstimos, operações de crédito.",
+            "A simetria importa: se se excluem os juros pagos, é preciso excluir também os juros recebidos — "
+            "senão o resultado mistura gestão da dívida com esforço fiscal. O primário mede só o que o governo "
+            "arrecada e gasta com sua atividade não financeira.",
+            "Consequência para a análise: um governo com muitos ativos remunerados (reservas, créditos a bancos "
+            "públicos) teria um primário artificialmente melhor se as receitas financeiras entrassem na conta.",
+            "Nos conceitos acima: primário (sem financeiras) → operacional (+ juros reais líquidos) → nominal "
+            "(+ correção monetária).",
+            vm("Regra-âncora: primário = receitas não financeiras − despesas não financeiras."),
+        ],
+        "dissecando": (cz("[meia-verdade]") + " O lado da despesa está certo (exclui juros); o erro foi enxertado "
+                       "no lado da receita, com “totais” e “incluindo receitas financeiras”. Itens desse tipo "
+                       "testam a simetria do conceito."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Déficit primário é a diferença entre as despesas e as receitas não financeiras do governo.”</i> → "
+            "CERTO",
+            "<i>“O resultado primário inclui os juros recebidos pelo setor público sobre seus ativos.”</i> → "
+            "ERRADO (exclui as receitas financeiras)",
+        ])],
+        "reescrita": ("Déficit Primário é a diferença entre as receitas " + hl("não financeiras do governo, excluídas "
+                      "as receitas financeiras") + ", e suas despesas totais, excluídas as despesas com juros da "
+                      "dívida."),
+        "tipo_erro": ["MEIA_VERDADE"], "moduladores": ["totais"], "dificuldade": 1,
+        "comentario_fonte": "Primário = receitas primárias − despesas primárias; receitas e despesas financeiras "
+                            "(juros, privatizações) não entram.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 117", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00946
+    {
+        "id": "ECO-E2-L00946-1", "fonte_ref": "E2-L00946", "destino": "19", "subtema": H2["nfsp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_FISC,
+        "rotulo_item": "Item",
+        "assertiva": "O resultado fiscal denominado acima da linha mensura a variação da dívida líquida total, interna ou externa.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O resultado fiscal denominado ") + vm("acima") + az(" da linha mensura a variação da dívida "
+                      "líquida total, interna ou externa."),
+        "poucas": ("Medir pela " + azb("variação da dívida") + " é o critério " + vd("abaixo da linha") + ". "
+                   "Acima da linha, o resultado sai de receitas − despesas."),
+        "destrinchando": [
+            azb("Acima da linha") + ": fluxos de receita e despesa do período (no Brasil, apuração do Tesouro "
+            "para o governo central, em regime de caixa). Mostra a composição do resultado.",
+            azb("Abaixo da linha") + ": variação da dívida líquida (interna e externa) do setor público, "
+            "descontados ajustes patrimoniais e cambiais. É o critério do " + rx("Banco Central") + " para as "
+            "NFSP oficiais.",
+            "Os dois deveriam convergir, porque todo déficit precisa ser financiado; a diferença residual é a "
+            "discrepância estatística.",
+            "Truque para lembrar: a “linha” separa o resultado (em cima) do financiamento (embaixo); embaixo "
+            "está a dívida.",
+            vm("Regra-âncora: abaixo da linha = dívida; acima da linha = receitas e despesas."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca simples de rótulo entre os dois critérios. A descrição (“variação "
+                       "da dívida líquida total”) é perfeita — para o abaixo da linha. 🔥 Inversão recorrente em "
+                       "itens de contabilidade fiscal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O resultado fiscal denominado abaixo da linha mensura a variação da dívida líquida total, interna "
+            "ou externa.”</i> → CERTO",
+        ])],
+        "reescrita": ("O resultado fiscal denominado " + hl("abaixo") + " da linha mensura a variação da dívida "
+                      "líquida total, interna ou externa."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Acima da linha = receitas − despesas; abaixo da linha = variação da dívida líquida "
+                            "total, interna ou externa.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0357-1 e ECO-E2-L00446-1 (acima × abaixo da linha)"],
+    },
+    # ------------------------------------------------------------------ E2-L00947
+    {
+        "id": "ECO-E2-L00947-1", "fonte_ref": "E2-L00947", "destino": "19", "subtema": H2["nfsp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_FISC,
+        "rotulo_item": "Item",
+        "assertiva": ("Na hipótese de a inflação no Brasil ser nula em 2020, os conceitos ligados às necessidades de "
+                      "financiamento do setor público sofrerão alterações. Nesse caso, o valor do resultado "
+                      "primário será igual ao valor do resultado operacional."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na hipótese de a inflação no Brasil ser nula em 2020, os conceitos ligados às necessidades "
+                      "de financiamento do setor público sofrerão alterações. Nesse caso, o valor do resultado ")
+                   + vm("primário") + az(" será igual ao valor do resultado operacional."),
+        "poucas": ("Inflação zero elimina a " + azb("correção monetária") + ", que separa " + vd("nominal")
+                   + " de operacional. Primário e operacional seguem diferentes pelos " + azb("juros reais") + "."),
+        "destrinchando": [
+            "Escada: " + vd("nominal = primário + juros reais + correção monetária") + "; " + vd("operacional = "
+            "primário + juros reais") + ". O degrau entre nominal e operacional é a inflação; o degrau entre "
+            "operacional e primário são os juros reais.",
+            "Com π = 0, a correção some e " + azb("nominal = operacional") + ". O primário só igualaria o "
+            "operacional se os juros reais fossem zero — o que não depende da inflação.",
+            "Exemplo: dívida 1.000, juro real 4%, inflação 0, déficit primário 10. Operacional = 10 + 40 = "
+            + vd("50") + " = nominal; primário = " + vd("10") + ".",
+            "Observação técnica: no " + rx("Brasil") + ", parte da dívida é corrigida também pelo câmbio "
+            "(dívida externa e títulos cambiais); a rigor, nominal = operacional exige ausência de inflação "
+            "<b>e</b> de correção cambial. A banca ignora esse detalhe no item.",
+            vm("Regra-âncora: sem inflação, nominal = operacional; primário ≠ operacional enquanto houver juro real."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A primeira frase é verdadeira e prepara o terreno; o erro está "
+                       "no par escolhido: o conceito que coincide com o operacional sem inflação é o nominal. "
+                       "Pista: inflação só mexe na correção monetária."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com inflação nula, o resultado nominal será igual ao resultado operacional.”</i> → CERTO",
+            "<i>“Com juros reais nulos, o resultado primário será igual ao nominal, qualquer que seja a "
+            "inflação.”</i> → ERRADO (a correção monetária ainda separa os dois)",
+        ])],
+        "reescrita": ("Na hipótese de a inflação no Brasil ser nula em 2020, os conceitos ligados às necessidades de "
+                      "financiamento do setor público sofrerão alterações. Nesse caso, o valor do resultado "
+                      + hl("nominal") + " será igual ao valor do resultado operacional."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Primário = nominal − juros nominais; operacional = primário + juros reais = nominal − "
+                            "correção monetária; o que diferencia operacional de primário são os juros reais, "
+                            "não a inflação.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00596-1 (primário × operacional)"],
+    },
 ]

@@ -1362,12 +1362,12 @@ CARDS = [
         "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
         "comando": "Julgue o item a seguir, relativo ao modelo keynesiano simples.",
         "rotulo_item": "Item",
-        "assertiva": ("Assumindo C(Y) = Ca + cY, (I) e (G) autônomos e (0 &lt; c &lt; 1), a renda de equilíbrio é "
+        "assertiva": ("Assumindo C(Y) = Ca + cY, (I) e (G) autônomos e (0 < c < 1), a renda de equilíbrio é "
                       "Y = (Ca + I + G)/(1 − c). Logo, o multiplicador pode ser reescrito como 1/(1 − c). Sendo (c) "
                       "estável no curto prazo, as flutuações do nível de atividade decorrem primordialmente da "
                       "volatilidade do investimento, o que justifica estabilizadores automáticos."),
         "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": az("Assumindo C(Y) = Ca + cY, (I) e (G) autônomos e (0 &lt; c &lt; 1), a renda de equilíbrio é "
+        "anotada": az("Assumindo C(Y) = Ca + cY, (I) e (G) autônomos e (0 < c < 1), a renda de equilíbrio é "
                       "Y = (Ca + I + G)/(1 − c). Logo, o multiplicador pode ser reescrito como 1/(1 − c). Sendo (c) "
                       "estável no curto prazo, as flutuações do nível de atividade decorrem <u>primordialmente</u> "
                       "da <u>volatilidade do investimento</u>, o que justifica estabilizadores automáticos."),
@@ -1396,7 +1396,7 @@ CARDS = [
             "<i>“…as flutuações do nível de atividade decorrem primordialmente da volatilidade do consumo, dado "
             "que o investimento é estável.”</i> → ERRADO (inversão)",
             "<i>“A introdução de um imposto proporcional à renda aumenta o multiplicador keynesiano.”</i> → "
-            "ERRADO (reduz: 1/[1 − c(1 − t)])",
+            "ERRADO (inversão: o imposto reduz o multiplicador)",
         ])],
         "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["primordialmente"], "dificuldade": 2,
         "comentario_fonte": ("Resultado canônico Y = (Ca + I + G)/(1 − c) e multiplicador 1/(1 − c); volatilidade "

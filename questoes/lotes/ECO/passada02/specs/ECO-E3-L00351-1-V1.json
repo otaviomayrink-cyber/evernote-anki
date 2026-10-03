@@ -1,0 +1,180 @@
+{
+ "id": "ECO-E3-L00351-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "A mesma expansão monetária (LM₁ → LM₂) derruba os juros nos dois painéis. Com investimento pouco sensível (IS íngreme), a renda quase não reage; com investimento muito sensível (IS plana), a queda dos juros vira grande aumento de Y.",
+ "paineis": [
+  {
+   "titulo": "Investimento pouco sensível",
+   "eixos": {
+    "x": "Y",
+    "y": "i"
+   },
+   "curvas": [
+    {
+     "id": "IS",
+     "tipo": "reta",
+     "p1": [
+      3.3,
+      9.0
+     ],
+     "p2": [
+      5.3,
+      1.0
+     ],
+     "familia": "demanda",
+     "rotulo": "IS"
+    },
+    {
+     "id": "LM1",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      1.0
+     ],
+     "p2": [
+      7.5,
+      8.0
+     ],
+     "familia": "oferta",
+     "rotulo": "LM₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "LM2",
+     "tipo": "reta",
+     "p1": [
+      2.5,
+      1.0
+     ],
+     "p2": [
+      9.5,
+      8.0
+     ],
+     "familia": "oferta",
+     "rotulo": "LM₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "LM1",
+     "para": "LM2",
+     "sentido": "direita",
+     "posicao": 0.8
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "IS",
+      "LM1"
+     ],
+     "rotulo": "E₁",
+     "projetar": "x",
+     "rotulo_x": "Y₁"
+    },
+    {
+     "id": "E2",
+     "intersecao": [
+      "IS",
+      "LM2"
+     ],
+     "rotulo": "E₂",
+     "projetar": "x",
+     "rotulo_x": "Y₂"
+    }
+   ],
+   "checar": [
+    "E2.x - E1.x < 0.6",
+    "E2.y < E1.y"
+   ]
+  },
+  {
+   "titulo": "Investimento muito sensível",
+   "eixos": {
+    "x": "Y",
+    "y": "i"
+   },
+   "curvas": [
+    {
+     "id": "IS",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      6.5
+     ],
+     "p2": [
+      9.0,
+      2.2
+     ],
+     "familia": "demanda",
+     "rotulo": "IS"
+    },
+    {
+     "id": "LM1",
+     "tipo": "reta",
+     "p1": [
+      0.5,
+      1.0
+     ],
+     "p2": [
+      7.5,
+      8.0
+     ],
+     "familia": "oferta",
+     "rotulo": "LM₁",
+     "estado": "inicial"
+    },
+    {
+     "id": "LM2",
+     "tipo": "reta",
+     "p1": [
+      2.5,
+      1.0
+     ],
+     "p2": [
+      9.5,
+      8.0
+     ],
+     "familia": "oferta",
+     "rotulo": "LM₂"
+    }
+   ],
+   "deslocamentos": [
+    {
+     "de": "LM1",
+     "para": "LM2",
+     "sentido": "direita",
+     "posicao": 0.8
+    }
+   ],
+   "pontos": [
+    {
+     "id": "E1",
+     "intersecao": [
+      "IS",
+      "LM1"
+     ],
+     "rotulo": "E₁",
+     "projetar": "x",
+     "rotulo_x": "Y₁"
+    },
+    {
+     "id": "E2",
+     "intersecao": [
+      "IS",
+      "LM2"
+     ],
+     "rotulo": "E₂",
+     "projetar": "x",
+     "rotulo_x": "Y₂"
+    }
+   ],
+   "checar": [
+    "E2.x - E1.x > 1.0",
+    "E2.y < E1.y"
+   ]
+  }
+ ]
+}

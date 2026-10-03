@@ -1,0 +1,33 @@
+{
+ "id": "ECO-E2-L01447-1-V1",
+ "uso": "verso",
+ "legenda": "O choque adverso de oferta desloca a OA para cima/esquerda (OA₁ → OA₂) ao longo da mesma DA: o produto cai (Y₂ < Y₁) e o nível de preços sobe (P₂ > P₁) — estagflação, não desinflação.",
+ "modelo": "oferta_demanda",
+ "params": {
+  "deslocar": {
+   "S": "esquerda"
+  },
+  "nome_oferta": "OA",
+  "eixos": {
+   "x": "Y",
+   "y": "P"
+  }
+ },
+ "substituir": {
+  "D1": {
+   "rotulo": "DA"
+  },
+  "E1": {
+   "rotulo_x": "Y₁",
+   "rotulo_y": "P₁"
+  },
+  "E2": {
+   "rotulo_x": "Y₂",
+   "rotulo_y": "P₂"
+  }
+ },
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x < E1.x"
+ ]
+}

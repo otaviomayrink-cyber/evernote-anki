@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E3-L00133-1-V1",
+ "uso": "verso",
+ "legenda": "Com M fixo, a LM não se move; o corte de gastos leva a IS para a esquerda (IS₁ → IS₂) e o novo equilíbrio E₂ tem renda e juros menores (Y₂ < Y₁, i₂ < i₁).",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "IS": "esquerda"
+  }
+ },
+ "substituir": {
+  "LM1": {
+   "rotulo": "LM"
+  }
+ },
+ "checar": [
+  "E2.y < E1.y",
+  "E2.x < E1.x"
+ ]
+}

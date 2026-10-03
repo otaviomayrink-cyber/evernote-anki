@@ -1045,4 +1045,212 @@ CARDS = [
                            "acao": "absorvida (quadro curto × longo prazo no 📖)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00453 (+ E2-L01348)
+    {
+        "id": "ECO-E2-L00453-1", "fonte_ref": "E2-L00453", "destino": "30", "subtema": H2["deb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": True,
+        "comando": CMD_NAB_MACRO,
+        "rotulo_item": "Item",
+        "assertiva": ("Para os teóricos da síntese neoclássica, o produto e o emprego variam em função de choques "
+                      "tecnológicos, alterações nos preços relativos, mudanças tributárias e mudanças nas preferências "
+                      "dos indivíduos entre renda e lazer."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Para os teóricos ") + vm("da síntese neoclássica") + az(", o produto e o emprego variam em "
+                    "função de choques tecnológicos, alterações nos preços relativos, mudanças tributárias e mudanças "
+                    "nas preferências dos indivíduos entre renda e lazer.")),
+        "poucas": ("A lista de causas é a da teoria dos " + azb("ciclos reais de negócios") + " (" + oc("Kydland")
+                   + " e " + oc("Prescott") + "). Para a " + azb("síntese neoclássica") + ", no curto prazo o "
+                   "produto flutua com a " + vd("demanda agregada") + ", porque preços e salários se ajustam "
+                   "devagar."),
+        "destrinchando": [
+            azb("Síntese neoclássica") + " (anos 1950–1960; " + oc("Hicks") + ", " + oc("Samuelson") + ", "
+            + oc("Modigliani") + ", " + oc("Tobin") + "): Keynes no curto prazo, clássicos no longo. Núcleo: "
+            + vd("IS-LM + curva de Phillips") + ". Preços e salários rígidos fazem a demanda agregada determinar "
+            "produto e emprego no curto prazo; política fiscal e monetária servem para estabilizar. Samuelson, na "
+            "edição de " + vd("1955") + " de <i>Economics</i>, dizia que 90% dos economistas americanos já "
+            "trabalhavam nessa síntese.",
+            azb("Ciclos reais de negócios") + " (RBC, " + oc("Kydland") + " e " + oc("Prescott") + ", 1982): "
+            "preços flexíveis, agentes otimizadores, mercados sempre em equilíbrio. As flutuações são respostas "
+            "eficientes a " + vd("choques reais") + " — de produtividade (tecnologia), de preços relativos (petróleo), "
+            "de impostos — e a substituição " + azb("intertemporal") + " entre trabalho e lazer explica as "
+            "variações do emprego. Moeda é neutra; política de estabilização é inútil ou nociva.",
+            "Mapa das escolas: síntese (demanda + rigidez exógena) → monetaristas (moeda, expectativas "
+            "adaptativas) → novos clássicos (expectativas racionais, surpresas monetárias) → RBC (choques reais) → "
+            + azb("novos keynesianos") + " (rigidezes com microfundamentos: custos de menu, contratos escalonados, "
+            "salário-eficiência) → " + azb("novo consenso") + " (DSGE com rigidezes e regra de juros).",
+            "Fronteira útil: tecnologia é relevante para a síntese, mas como determinante do produto "
+            "<b>potencial</b> (longo prazo, Solow); para o RBC, ela explica também o <b>ciclo</b>.",
+            vm("Regra-âncora: choque tecnológico + escolha renda × lazer como motor do ciclo = RBC, não síntese."),
+        ],
+        "dissecando": (cz("[troca de ator]") + " A descrição é fiel — de outra escola. O item atribui à síntese "
+                       "neoclássica o programa dos ciclos reais. Pista: “preferências entre renda e lazer” como causa "
+                       "do emprego pressupõe desemprego voluntário, ideia estranha à tradição keynesiana. 🔥 A Nabuco "
+                       "repete este item em mais de um simulado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para os teóricos dos ciclos reais de negócios, a moeda é neutra e as flutuações refletem respostas "
+            "ótimas a choques de produtividade.”</i> → CERTO",
+            "<i>“Para os teóricos da síntese neoclássica, as flutuações de curto prazo decorrem sobretudo de choques "
+            "de demanda agregada, dada a rigidez de preços e salários.”</i> → CERTO",
+        ])],
+        "reescrita": ("Para os teóricos " + hl("dos ciclos reais de negócios") + ", o produto e o emprego variam em "
+                      "função de choques tecnológicos, alterações nos preços relativos, mudanças tributárias e "
+                      "mudanças nas preferências dos indivíduos entre renda e lazer."),
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A descrição é a dos ciclos reais (RBC); para a síntese neoclássica (IS-LM + Phillips), o "
+                             "produto varia no curto prazo com a demanda agregada, por rigidez de preços e salários. "
+                             "Respostas de IA empilhadas e tabela síntese × novos keynesianos; fundido com o "
+                             "comentário da linha E2-L01348 (citação de Samuelson, 1955)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 077", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida (comparação síntese × novos keynesianos no 📖)"}],
+        "alertas": ["duplicata: linha E2-L01348 (Nabuco Pré-TPS/2022, mesma assertiva e mesmo comando) fundida "
+                    "neste card"],
+    },
+    # ------------------------------------------------------------------ E2-L00584
+    {
+        "id": "ECO-E2-L00584-1", "fonte_ref": "E2-L00584", "destino": "30", "subtema": H2["deb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação aos modelos macroeconômicos, julgue (C ou E) os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("A Nova Economia Clássica argumenta que a política monetária sistemática pode gerenciar "
+                      "efetivamente a produção e o emprego reais apenas no curto prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A Nova Economia Clássica argumenta que a política monetária sistemática ") + vm("pode")
+                    + az(" gerenciar efetivamente a produção e o emprego reais ") + vm("apenas")
+                    + az(" no curto prazo.")),
+        "poucas": ("Para os " + oc("novos clássicos") + ", política " + azb("sistemática") + " é previsível, entra "
+                   "nas expectativas racionais e é neutra " + vd("já no curto prazo") + ". Efeito real, e "
+                   "passageiro, só a surpresa."),
+        "destrinchando": [
+            azb("Proposição da ineficácia da política") + " (" + oc("Sargent") + " e " + oc("Wallace") + ", "
+            "1975–1976): com expectativas racionais e preços flexíveis, uma regra monetária conhecida (por "
+            "exemplo, expandir a moeda quando o desemprego sobe) é antecipada; P e Pᵉ sobem juntos e Y = Ȳ.",
+            "Só a parte " + azb("não antecipada") + " da política gera surpresa de preços e, pela oferta de "
+            + oc("Lucas") + ", desvio transitório do produto. Mas uma política feita de surpresas aleatórias não "
+            "serve para gerenciar nada: aumenta a variância do produto sem melhorar sua média.",
+            "Quem diz “eficaz só no curto prazo” é " + oc("Friedman") + " (expectativas adaptativas): a política "
+            "sistemática funciona por algum tempo, até as expectativas se ajustarem. O item atribui aos novos "
+            "clássicos a conclusão monetarista.",
+            "Reação: os " + azb("novos keynesianos") + " (" + oc("Fischer") + " 1977, " + oc("Taylor")
+            + " 1980) mostraram que, com contratos salariais plurianuais, até a política antecipada tem efeito "
+            "real — rigidez, não irracionalidade, devolve espaço à estabilização.",
+            vm("Regra-âncora: novos clássicos — sistemática = neutra até no curto prazo; Friedman — eficaz só no "
+               "curto prazo."),
+        ],
+        "dissecando": (cz("[troca de ator · restrição indevida]") + " O “apenas no curto prazo” soa prudente e "
+                       "engana: é a tese de Friedman, não dos novos clássicos. A palavra “sistemática” é a pista — "
+                       "para os novos clássicos, sistemático é sinônimo de antecipado e, logo, de neutro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para a Nova Economia Clássica, apenas choques monetários não antecipados afetam a produção e o "
+            "emprego reais, e de forma transitória.”</i> → CERTO",
+            "<i>“Para os monetaristas, a política monetária sistemática afeta o emprego no curto prazo, mas não no "
+            "longo.”</i> → CERTO",
+        ])],
+        "reescrita": ("A Nova Economia Clássica argumenta que a política monetária sistemática " + hl("não pode")
+                      + " gerenciar efetivamente a produção e o emprego reais " + hl("nem mesmo") + " no curto "
+                      "prazo."),
+        "tipo_erro": ["TROCA_ATOR", "RESTRICAO"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": ("Com expectativas racionais, políticas sistemáticas e previsíveis são ineficazes até no "
+                             "curto prazo; só surpresas teriam efeito."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00838
+    {
+        "id": "ECO-E2-L00838-1", "fonte_ref": "E2-L00838", "destino": "30", "subtema": H2["deb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação às políticas monetárias e fiscais, julgue (C ou E) os itens que se seguem.",
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com os novos clássicos, a redução preanunciada na taxa de crescimento do estoque "
+                      "monetário é instrumento eficaz de combate à inflação, mas reduz a atividade econômica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com os novos clássicos, a redução preanunciada na taxa de crescimento do estoque "
+                       "monetário é instrumento eficaz de combate à inflação, ") + vm("mas reduz a atividade "
+                                                                                     "econômica") + az(".")),
+        "poucas": ("Anunciada e crível, a redução do crescimento monetário baixa a inflação esperada junto com a "
+                   "efetiva: " + azb("desinflação sem dor") + ", com " + vd("taxa de sacrifício zero")
+                   + ". A atividade não cai."),
+        "destrinchando": [
+            "Lógica novo-clássica: expectativas racionais + preços e salários flexíveis. O anúncio entra em πᵉ "
+            "imediatamente; salários e preços passam a subir menos já no período seguinte; a curva de Phillips de "
+            "curto prazo desce junto e a economia vai de inflação alta a baixa " + vd("sem sair de uₙ") + ".",
+            "Primeira metade do item é verdadeira: reduzir o crescimento da moeda combate a inflação (teoria "
+            "quantitativa, π ≈ gM − gY no longo prazo). O erro é o custo em atividade, que só existe com "
+            "<b>surpresa</b> ou expectativas adaptativas.",
+            "Condição decisiva: " + azb("credibilidade") + ". Se o público duvida do anúncio, πᵉ não cai e a "
+            "política vira, na prática, surpresa contracionista — com recessão. " + oc("Sargent") + " (“The Ends "
+            "of Four Big Inflations”, 1982) usou o fim das hiperinflações europeias dos anos 1920, obtido com "
+            "reformas fiscais e monetárias críveis, como evidência.",
+            "Contraste: monetaristas e keynesianos preveem desemprego temporário (taxa de sacrifício positiva); "
+            "novos keynesianos lembram que contratos já firmados impedem o ajuste instantâneo, de modo que até a "
+            "desinflação crível custa algo.",
+            vm("Regra-âncora: novos clássicos + anúncio crível = desinflação sem perda de produto."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de ator]") + " Primeira oração certa, segunda enxertada de outra "
+                       "escola. A pista está no “preanunciada”: para os novos clássicos, anunciar é justamente o "
+                       "que elimina o custo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“De acordo com os novos clássicos, uma redução não antecipada do crescimento monetário pode reduzir "
+            "temporariamente a atividade econômica.”</i> → CERTO",
+            "<i>“Para os monetaristas, a redução gradual do crescimento monetário combate a inflação com custo "
+            "temporário em desemprego.”</i> → CERTO",
+        ])],
+        "reescrita": ("De acordo com os novos clássicos, a redução preanunciada na taxa de crescimento do estoque "
+                      "monetário é instrumento eficaz de combate à inflação, " + hl("sem reduzir a atividade "
+                                                                                   "econômica") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Política antecipada afeta só os preços; redução preanunciada do crescimento da moeda "
+                             "reduz a inflação sem afetar a atividade — desinflação “sem dor”, sem taxa de sacrifício."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01005
+    {
+        "id": "ECO-E2-L01005-1", "fonte_ref": "E2-L01005", "destino": "30", "subtema": H2["deb"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TEORIAS,
+        "rotulo_item": "Item",
+        "assertiva": ("No Modelo Novo Clássico, a existência de rigidezes (nominal ou real) explica a não neutralidade "
+                      "da moeda no longo prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No Modelo ") + vm("Novo Clássico") + az(", a existência de rigidezes (nominal ou real) "
+                       "explica a não neutralidade da moeda no ") + vm("longo prazo") + az(".")),
+        "poucas": ("O modelo " + oc("novo clássico") + " supõe preços e salários " + vd("flexíveis") + " — não há "
+                   "rigidez. Rigidezes que explicam a não neutralidade são dos " + oc("novos keynesianos")
+                   + ", e valem para o " + vd("curto prazo") + "."),
+        "destrinchando": [
+            "Novos clássicos: agentes maximizadores, expectativas racionais e " + azb("market clearing")
+            + " contínuo. Moeda antecipada é neutra já no curto prazo; a não antecipada tem efeito transitório por "
+            "erro de percepção (confundir nível geral com preço relativo), e não por rigidez.",
+            "Novos keynesianos (" + oc("Mankiw") + ", " + oc("Akerlof") + " e " + oc("Yellen") + ", "
+            + oc("Blanchard") + ", " + oc("Stiglitz") + "): mantêm expectativas racionais, mas mostram por que "
+            "preços e salários não se ajustam de imediato. " + azb("Rigidez nominal") + ": custos de menu, "
+            "contratos escalonados (" + oc("Taylor") + ", " + oc("Calvo") + "). " + azb("Rigidez real") + ": "
+            "salário-eficiência, contratos implícitos, insiders × outsiders.",
+            "Mesmo para os novos keynesianos, rigidez é fenômeno de " + vd("curto prazo") + ": com o tempo, preços e "
+            "salários se ajustam e a moeda volta a ser neutra. Neutralidade de longo prazo é praticamente consenso "
+            "entre as escolas do mainstream.",
+            vm("Regra-âncora: rigidez → novos keynesianos → não neutralidade de curto prazo."),
+        ],
+        "dissecando": (cz("[troca de ator · troca de conceito]") + " Dois enxertos: a escola (novos clássicos no "
+                       "lugar de novos keynesianos) e o horizonte (longo no lugar de curto). Pista imediata: "
+                       "“novo clássico” e “rigidez” são termos que se excluem."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Nos modelos novo-keynesianos, rigidezes nominais e reais explicam a não neutralidade da moeda no "
+            "curto prazo.”</i> → CERTO",
+            "<i>“No modelo novo clássico, a moeda não antecipada é neutra mesmo no curto prazo.”</i> → ERRADO (a "
+            "não antecipada tem efeito transitório)",
+        ])],
+        "reescrita": ("No Modelo " + hl("Novo Keynesiano") + ", a existência de rigidezes (nominal ou real) explica a "
+                      "não neutralidade da moeda no " + hl("curto prazo") + "."),
+        "tipo_erro": ["TROCA_ATOR", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("No modelo novo clássico preços e salários são flexíveis e as expectativas racionais; "
+                             "política sistemática não afeta produção e emprego; só surpresas têm efeito de curto "
+                             "prazo."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

@@ -1,0 +1,15 @@
+{"id": "ECO-E2-L00580-1-V1", "uso": "verso",
+ "legenda": "No ciclo de vida, a renda (Y) existe só na fase ativa, mas o consumo (C) é plano: o trabalhador poupa enquanto trabalha (área verde) e despoupa na aposentadoria (área vermelha), consumindo o patrimônio acumulado. As duas áreas são iguais.",
+ "eixos": {"x": "idade", "y": "R$", "xmax": 10, "ymax": 8},
+ "curvas": [
+   {"id": "Y", "tipo": "horizontal", "y": 6, "x": [0, 6], "familia": "oferta", "rotulo": "renda (Y)", "rotulo_xy": [1.4, 6.55]},
+   {"id": "Yq", "tipo": "vertical", "x": 6, "y": [0, 6], "familia": "referencia"},
+   {"id": "C", "tipo": "horizontal", "y": 4, "x": [0, 9], "familia": "demanda", "rotulo": "consumo (C)", "rotulo_xy": [7.6, 4.55]},
+   {"id": "Fim", "tipo": "vertical", "x": 9, "y": [0, 4], "familia": "referencia"}],
+ "areas": [
+   {"tipo": "entre", "sup": 6, "inf": 4, "x": [0, 6], "papel": "ganho", "rotulo": "poupança (S > 0)"},
+   {"tipo": "entre", "sup": 4, "inf": 0, "x": [6, 9], "papel": "perda", "rotulo": "despoupança\n(S < 0)"}],
+ "textos": [
+   {"xy": [2.2, 2.0], "texto": "fase ativa (jovem/adulto)", "cor": "cinza"},
+   {"xy": [6.15, 7.2], "texto": "aposentadoria", "cor": "cinza"}],
+ "checar": ["Y(3) > C(3)", "abs((Y(3) - C(3)) * 6 - C(7.5) * 3) < 0.01"]}

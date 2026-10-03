@@ -1,0 +1,63 @@
+{
+ "id": "ECO-E3-L00385-1-V1",
+ "uso": "verso",
+ "legenda": "O gasto público desloca a IS para a direita (IS₁ → IS₂). Com juros constantes em i₁, a renda iria até Y′ (multiplicador pleno); como a LM não se move, os juros sobem para i₂, o investimento privado cai e a renda para em Y₂. A distância Y₂–Y′ é o crowding out.",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "IS": "direita"
+  },
+  "passo": 2.5
+ },
+ "curvas": [
+  {
+   "id": "H",
+   "tipo": "horizontal",
+   "y": "E1.y",
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "referencia",
+   "tracejada": true,
+   "rotulo": ""
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "IS2",
+    "H"
+   ],
+   "rotulo": "A",
+   "projetar": "x",
+   "rotulo_x": "Y′",
+   "marcar": true
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "A.x",
+    0.7
+   ],
+   "para": [
+    "E2.x",
+    0.7
+   ],
+   "cor": "vermelho",
+   "rotulo": "crowding out",
+   "rotulo_desloc": [
+    -30,
+    14
+   ]
+  }
+ ],
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x > E1.x",
+  "A.x > E2.x",
+  "abs(A.y - E1.y) < 0.01"
+ ]
+}

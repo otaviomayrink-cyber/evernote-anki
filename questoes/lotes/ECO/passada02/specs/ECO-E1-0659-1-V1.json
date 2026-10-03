@@ -1,0 +1,15 @@
+{"id": "ECO-E1-0659-1-V1", "uso": "verso",
+ "legenda": "A arrecadação R = t × base é zero com alíquota 0% e com 100%, e máxima em t*. À esquerda de t*, alíquota maior = arrecadação maior; só à direita (zona proibitiva) a relação fica inversa. Por isso a mesma receita R₁ pode ser obtida com uma alíquota baixa (t₁) ou alta (t₂).",
+ "eixos": {"x": "t (%)", "y": "R", "xmax": 110, "ymax": 120, "numeros": false},
+ "curvas": [
+   {"id": "L", "tipo": "funcao", "expr": "x*(100-x)/25", "dominio": [0, 100], "familia": "demanda", "rotulo": "curva de Laffer", "rotulo_em": 88, "rotulo_desloc": [12, 6]},
+   {"id": "R1", "tipo": "horizontal", "y": 84, "x": [0, 100], "familia": "referencia", "tracejada": true, "rotulo": "R₁"}],
+ "pontos": [
+   {"id": "M", "sobre": "L", "x": 50, "rotulo": "máximo", "rotulo_desloc": [14, 16], "projetar": "x", "rotulo_x": "t*", "marcar": true},
+   {"id": "A", "intersecao": ["L", "R1"], "indice": 0, "projetar": "x", "rotulo_x": "t₁", "marcar": true},
+   {"id": "B", "intersecao": ["L", "R1"], "indice": 1, "projetar": "x", "rotulo_x": "t₂", "marcar": true},
+   {"id": "Z", "xy": [100, 0], "rotulo_x": "100%"}],
+ "textos": [
+   {"xy": [8, 108], "texto": "t ↑ → R ↑", "cor": "azul", "negrito": true},
+   {"xy": [72, 108], "texto": "zona proibitiva:\nt ↑ → R ↓", "cor": "vermelho", "negrito": true}],
+ "checar": ["M.y > A.y", "abs(A.y - B.y) < 0.01", "A.x < 50", "B.x > 50", "abs(L(100)) < 0.01", "abs(L(0)) < 0.01"]}

@@ -1427,4 +1427,235 @@ CARDS = [
                            "acao": "absorvida no 📖"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00558
+    {
+        "id": "ECO-E2-L00558-1", "fonte_ref": "E2-L00558", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_BP,
+        "rotulo_item": "Item",
+        "assertiva": ("Os pagamentos de juros de empréstimos realizados por empresas privadas nacionais junto a "
+                      "instituições financeiras estrangeiras fazem parte da conta de transações correntes do "
+                      "balanço de pagamentos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os pagamentos de <u>juros</u> de empréstimos realizados por empresas privadas nacionais "
+                      "junto a instituições financeiras estrangeiras fazem parte da conta de transações correntes "
+                      "do balanço de pagamentos."),
+        "poucas": ("Juros são remuneração do capital: " + azb("renda primária") + " (renda de investimento), "
+                   "subconta das " + azb("transações correntes") + ". Quem paga — governo ou empresa privada — "
+                   "não muda a classificação."),
+        "destrinchando": [
+            azb("Renda primária") + " = remuneração de fatores entre residentes e não residentes: "
+            "<b>remuneração de empregados</b> (salários de trabalhadores fronteiriços e temporários) e "
+            "<b>renda de investimento</b> — juros, lucros e dividendos, lucros reinvestidos.",
+            "A renda de investimento se subdivide pela natureza do ativo que a gera: renda de investimento "
+            "direto, de carteira e de " + azb("outros investimentos") + " (juros de empréstimos bancários, como "
+            "no item) e de reservas.",
+            "O empréstimo em si (principal) é outra história: a entrada do dinheiro e cada " + azb("amortização")
+            + " são registradas na " + azb("conta financeira") + " (outros investimentos – passivos).",
+            "Para o " + rx("Brasil") + ", a renda primária é estruturalmente deficitária — lucros, dividendos e "
+            "juros pagos a não residentes superam os recebidos — e responde por boa parte do déficit em "
+            "transações correntes ⏳ (out/2026).",
+            vm("Regra-âncora: juros → renda primária (TC); principal → conta financeira."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Item direto; o detalhe “empresas privadas” tenta sugerir "
+                       "que só fluxos do governo entrariam no BP. A versão errada troca juros por amortização."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As amortizações desses empréstimos também integram a conta de transações correntes.”</i> → "
+            "ERRADO (troca de conceito: conta financeira)",
+            "<i>“Os juros recebidos de títulos estrangeiros mantidos como reservas pelo Banco Central integram a "
+            "renda primária.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Juros, dividendos, lucros e salários pagos a ou recebidos de não residentes são "
+                             "renda primária, componente das transações correntes."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00559
+    {
+        "id": "ECO-E2-L00559-1", "fonte_ref": "E2-L00559", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_BP,
+        "rotulo_item": "Item",
+        "assertiva": ("A conta Investimento Direto é composto por duas subcontas: participação no capital (equity) "
+                      "e dívida intercompanhia, que inclui todas as modalidades de crédito entre empresas de mesmo "
+                      "grupo econômico, em relação de investimento direto."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A conta Investimento Direto é composto por duas subcontas: <u>participação no capital "
+                      "(equity) e dívida intercompanhia</u>, que inclui todas as modalidades de crédito entre "
+                      "empresas de mesmo grupo econômico, em relação de investimento direto."),
+        "poucas": (azb("Investimento direto") + " = " + vd("participação no capital") + " (inclui lucros "
+                   "reinvestidos) + " + vd("operações intercompanhia") + " (empréstimos, títulos e créditos "
+                   "comerciais entre empresas do mesmo grupo)."),
+        "destrinchando": [
+            "Relação de investimento direto: um investidor detém " + vd("10% ou mais") + " do poder de voto de "
+            "uma empresa de outra economia (influência significativa ou controle). Daí em diante, os fluxos "
+            "entre as empresas do grupo vão para ID, não para carteira ou outros investimentos.",
+            azb("Participação no capital") + ": aportes em ações e cotas, aquisições de empresas e "
+            + azb("lucros reinvestidos") + " (registrados como renda primária paga e reaplicados como capital).",
+            azb("Operações intercompanhia") + ": qualquer instrumento de dívida entre partes relacionadas — "
+            "empréstimos da matriz à filial (o mais comum), títulos emitidos por uma e comprados pela outra, "
+            "créditos comerciais entre elas. Inclui empréstimos entre empresas irmãs (fellow enterprises).",
+            "Por que importa: a dívida intercompanhia é financiamento mais estável que o crédito bancário "
+            "comum, mas também é usada para planejamento tributário — e é financiamento externo, apesar do "
+            "rótulo de “investimento”.",
+            "No BPM6, ID aparece pelo princípio ativo/passivo: investimento direto no exterior (ativo) e no "
+            "país (passivo), cada um com as duas subcontas.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Reproduz a nota metodológica do BCB. O “todas as modalidades” é "
+                       "verdadeiro aqui (empréstimos, títulos, créditos comerciais); a versão errada costuma "
+                       "restringir a “apenas empréstimos” ou mandar a dívida intercompanhia para outros "
+                       "investimentos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os empréstimos da matriz estrangeira à filial brasileira são registrados em outros "
+            "investimentos.”</i> → ERRADO (troca de conceito: operação intercompanhia, em ID)",
+            "<i>“Os lucros reinvestidos integram a participação no capital do investimento direto.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["todas"], "dificuldade": 1,
+        "comentario_fonte": ("ID dividido em participação no capital (e cotas em fundo) e dívidas intercompanhia, "
+                             "com todas as modalidades de crédito entre empresas do grupo (empréstimos, títulos, "
+                             "créditos comerciais)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00560
+    {
+        "id": "ECO-E2-L00560-1", "fonte_ref": "E2-L00560", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_BP,
+        "rotulo_item": "Item",
+        "assertiva": ("O saldo da Conta Financeira é calculado pela diferença entre a aquisição líquida de Ativos "
+                      "Financeiros e a incidência líquida de Passivos Financeiros."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O saldo da Conta Financeira é calculado pela <u>diferença entre a aquisição líquida de "
+                      "Ativos Financeiros e a incidência líquida de Passivos Financeiros</u>."),
+        "poucas": ("Pelo " + azb("BPM6") + ", " + vd("CF = aquisição líquida de ativos − passivos incorridos "
+                   "líquidos") + ". Positivo: o país emprestou ao exterior; negativo: tomou recursos."),
+        "destrinchando": [
+            "Cada rubrica da conta financeira (ID, carteira, derivativos, outros investimentos, reservas) é "
+            "apresentada em dois lados: ativos (aplicações de residentes no exterior) e passivos (aplicações de "
+            "não residentes no país). Em cada lado, aumento = +.",
+            "O saldo líquido mede a " + azb("capacidade (+) ou necessidade (−) de financiamento") + " do país "
+            "no período e fecha a identidade " + vd("TC + KA = CF") + " (a menos de erros e omissões).",
+            "Leitura: CF = −80 significa que os passivos externos cresceram 80 a mais que os ativos — o país "
+            "absorveu 80 de recursos externos, exatamente o necessário para cobrir déficit de 80 em TC + KA.",
+            "Os ativos de reserva entram do lado dos ativos: acumular reservas aumenta a aquisição líquida de "
+            "ativos e, portanto, o saldo da CF.",
+            vm("Regra-âncora: saldo da CF = ativos − passivos = TC + KA."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição do BPM6 com vocabulário levemente alterado (“incidência” "
+                       "por “incorrência” de passivos). A versão errada inverte a ordem (passivos − ativos) ou "
+                       "exclui as reservas da conta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O saldo da conta financeira é obtido pela diferença entre os passivos incorridos e os ativos "
+            "adquiridos, e é positivo quando o país toma recursos do exterior.”</i> → ERRADO (inversão: ativos − "
+            "passivos; positivo = empresta)",
+            "<i>“Sem erros e omissões, o saldo da conta financeira iguala a soma dos saldos de transações "
+            "correntes e da conta capital.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "“É exatamente a nova definição do saldo da Conta Financeira.”",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00597
+    {
+        "id": "ECO-E2-L00597-1", "fonte_ref": "E2-L00597", "destino": "18", "subtema": H2["lanc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MACRO,
+        "rotulo_item": "Item",
+        "assertiva": ("Com base na sexta edição do Manual do Balanço de Pagamentos do Fundo Monetário "
+                      "Internacional, os pagamentos de juros e de amortizações de capital recebidos do exterior "
+                      "são registrados na conta de transações correntes do balanço de pagamentos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Com base na sexta edição do Manual do Balanço de Pagamentos do Fundo Monetário "
+                       "Internacional, os pagamentos de juros ") + vm("e de amortizações de capital")
+                    + az(" recebidos do exterior são registrados na conta de transações correntes do balanço de "
+                         "pagamentos.")),
+        "poucas": ("Juros são " + azb("renda primária") + " (transações correntes); " + azb("amortização")
+                   + " é devolução de principal e reduz um ativo financeiro — vai para a " + azb("conta "
+                   "financeira") + "."),
+        "destrinchando": [
+            "Um empréstimo concedido ao exterior gera dois fluxos de natureza diferente: os " + vd("juros")
+            + " (remuneração do capital: renda) e as " + vd("amortizações") + " (devolução do capital: troca "
+            "de ativo financeiro por moeda).",
+            "Lançamento da amortização recebida: o crédito do residente contra o não residente diminui "
+            "(redução de ativo em “outros investimentos”) e os depósitos ou reservas aumentam — tudo dentro da "
+            "conta financeira, sem passar pelas transações correntes.",
+            "Lançamento dos juros recebidos: crédito em renda primária (renda de investimento) e débito na conta "
+            "financeira (o dinheiro recebido).",
+            "Consequência analítica: um país muito endividado pode ter TC razoável e, ainda assim, grande "
+            "necessidade de refinanciamento — as amortizações não aparecem na TC, mas pesam na "
+            + azb("necessidade de financiamento externo") + " e nos indicadores de liquidez.",
+            vm("Regra-âncora: juros → TC (renda primária); principal → conta financeira."),
+        ],
+        "dissecando": (cz("[meia-verdade]") + " Metade verdadeira (juros) com um enxerto falso (amortizações). O "
+                       "par juros/amortização é o clássico da banca para testar fluxo de renda × fluxo de "
+                       "capital."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…os pagamentos de juros recebidos do exterior são registrados na conta de transações correntes, "
+            "e as amortizações, na conta financeira.”</i> → CERTO",
+            "<i>“…as amortizações recebidas são registradas na conta capital.”</i> → ERRADO (troca de conceito: "
+            "conta financeira)",
+        ])],
+        "reescrita": ("Com base na sexta edição do Manual do Balanço de Pagamentos do Fundo Monetário "
+                      "Internacional, os pagamentos de juros <s>e de amortizações de capital</s> recebidos do "
+                      "exterior são registrados na conta de transações correntes do balanço de pagamentos"
+                      + hl(", e as amortizações de capital, na conta financeira") + "."),
+        "tipo_erro": ["MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Juros são renda primária (TC); amortizações alteram o estoque de ativos e passivos e "
+                             "vão para a conta financeira."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00598
+    {
+        "id": "ECO-E2-L00598-1", "fonte_ref": "E2-L00598", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MACRO,
+        "rotulo_item": "Item",
+        "assertiva": ("Com base na sexta edição do Manual do Balanço de Pagamentos do Fundo Monetário "
+                      "Internacional, a variação nas reservas internacionais do país é registrada dentro da conta "
+                      "financeira do balanço de pagamentos como ativos de reservas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com base na sexta edição do Manual do Balanço de Pagamentos do Fundo Monetário "
+                      "Internacional, a variação nas reservas internacionais do país é registrada <u>dentro da "
+                      "conta financeira</u> do balanço de pagamentos como ativos de reservas."),
+        "poucas": ("No " + azb("BPM6") + ", " + azb("ativos de reserva") + " são a última categoria funcional "
+                   "da " + azb("conta financeira") + ", ao lado de ID, carteira, derivativos e outros "
+                   "investimentos."),
+        "destrinchando": [
+            "Categorias funcionais da conta financeira (BPM6): investimento direto, investimento em carteira, "
+            "derivativos financeiros, outros investimentos e " + vd("ativos de reserva") + ".",
+            azb("Ativos de reserva") + ": ativos externos líquidos e controlados pela autoridade monetária — "
+            "ouro monetário, direitos especiais de saque (DES), posição de reserva no FMI, moeda e depósitos, "
+            "títulos.",
+            "Sinal: aumento de reservas = " + vd("+") + " (aquisição líquida de ativos). Na apresentação "
+            "antiga, aumento de reservas era débito (−) e a conta ficava “abaixo da linha”, com sinal oposto "
+            "ao do resultado do BP.",
+            "Só entram <b>transações</b>: variações de reservas por câmbio ou preço do ouro (valorização) não "
+            "passam pelo BP — vão para a posição de investimento internacional como outras variações.",
+            "O " + rx("Brasil") + " mantém reservas elevadas desde meados dos anos 2000, o que reduziu a "
+            "vulnerabilidade a choques externos ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item de estrutura do BPM6. A versão errada põe as reservas fora da "
+                       "conta financeira (como conta própria “abaixo da linha”, típica da apresentação antiga) ou "
+                       "na conta capital."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No BPM6, a valorização cambial das reservas internacionais é registrada como aquisição de "
+            "ativos de reserva.”</i> → ERRADO (não é transação: vai para outras variações na PII)",
+            "<i>“No BPM6, um aumento das reservas internacionais é registrado com sinal positivo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A conta financeira registra transações com ativos e passivos financeiros; reservas "
+                             "são ativos externos sob controle da autoridade monetária, registrados em “Ativos de "
+                             "Reserva”."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

@@ -1,0 +1,32 @@
+{
+ "id": "ECO-E2-L01008-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "À esquerda, a teoria clássica: o juro real r é o preço que iguala poupança (S) e investimento (I) no mercado de fundos emprestáveis. À direita, Keynes: o juro i é fenômeno monetário, fixado pelo encontro da preferência pela liquidez (L) com a oferta de moeda (Mˢ).",
+ "paineis": [
+  {
+   "titulo": "Clássicos: S = I",
+   "eixos": {"x": "S,I", "y": "r", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "S", "tipo": "reta", "p1": [1, 1.5], "p2": [9, 8.5], "familia": "oferta", "rotulo": "S (poupança)"},
+    {"id": "I", "tipo": "reta", "p1": [1, 8.5], "p2": [9, 1.5], "familia": "demanda", "rotulo": "I (investimento)"}
+   ],
+   "pontos": [
+    {"id": "Ec", "intersecao": ["S", "I"], "rotulo": "E", "projetar": true, "rotulo_y": "r*", "rotulo_desloc": [12, -4]}
+   ],
+   "checar": ["abs(Ec.x - 5) < 1e-9", "abs(Ec.y - 5) < 1e-9"]
+  },
+  {
+   "titulo": "Keynes: L = Mˢ",
+   "eixos": {"x": "M", "y": "i", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "L", "tipo": "funcao", "expr": "0.6 + 24/(x + 0.8)", "dominio": [1.6, 9.4], "familia": "demanda", "rotulo": "L", "rotulo_em": 9.0, "rotulo_desloc": [0, 12]},
+    {"id": "Ms", "tipo": "vertical", "x": 5, "y": [0, 9.2], "familia": "oferta", "rotulo": "Mˢ"}
+   ],
+   "pontos": [
+    {"id": "Ek", "intersecao": ["L", "Ms"], "rotulo": "E", "projetar": "y", "rotulo_y": "i*", "rotulo_desloc": [10, 6]}
+   ],
+   "checar": ["abs(Ek.x - 5) < 1e-9"]
+  }
+ ]
+}

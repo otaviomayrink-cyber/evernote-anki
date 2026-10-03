@@ -1,0 +1,139 @@
+{
+ "id": "ECO-E2-L01677-1-V1",
+ "uso": "verso",
+ "legenda": "A contração da demanda (DA₁ → DA₂) leva a economia de A para B: produto abaixo de Yₙ (desemprego acima da taxa natural) e preços menores. Com salários nominais em queda, a OACP desce (OACP₁ → OACP₂) até C, de volta a Yₙ, com nível de preços mais baixo.",
+ "eixos": {
+  "x": "Y",
+  "y": "P"
+ },
+ "curvas": [
+  {
+   "id": "LP",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0,
+    9.6
+   ],
+   "familia": "referencia",
+   "rotulo": "OALP",
+   "rotulo_xy": [
+    5.9,
+    9.3
+   ]
+  },
+  {
+   "id": "DA1",
+   "tipo": "funcao",
+   "expr": "10.5 - x",
+   "dominio": [
+    1.2,
+    8.6
+   ],
+   "familia": "demanda",
+   "rotulo": "DA₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "DA2",
+   "tipo": "funcao",
+   "expr": "8.5 - x",
+   "dominio": [
+    0.6,
+    7.2
+   ],
+   "familia": "demanda",
+   "rotulo": "DA₂"
+  },
+  {
+   "id": "S1",
+   "tipo": "funcao",
+   "expr": "0.6*x + 2.5",
+   "dominio": [
+    0.8,
+    9.2
+   ],
+   "familia": "oferta",
+   "rotulo": "OACP₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "S2",
+   "tipo": "funcao",
+   "expr": "0.6*x + 0.5",
+   "dominio": [
+    0.8,
+    9.2
+   ],
+   "familia": "oferta",
+   "rotulo": "OACP₂"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "DA1",
+   "para": "DA2",
+   "sentido": "esquerda",
+   "em_y": 7.6
+  },
+  {
+   "de": "S1",
+   "para": "S2",
+   "sentido": "baixo",
+   "em_x": 7.8
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "DA1",
+    "S1"
+   ],
+   "rotulo": "A",
+   "rotulo_desloc": [
+    8,
+    18
+   ],
+   "projetar": "y",
+   "rotulo_y": "P₁"
+  },
+  {
+   "id": "B",
+   "intersecao": [
+    "DA2",
+    "S1"
+   ],
+   "rotulo": "B",
+   "rotulo_desloc": [
+    -6,
+    13
+   ],
+   "projetar": true,
+   "rotulo_x": "Y₂",
+   "rotulo_y": "P₂"
+  },
+  {
+   "id": "C",
+   "intersecao": [
+    "DA2",
+    "S2"
+   ],
+   "rotulo": "C",
+   "rotulo_desloc": [
+    8,
+    -22
+   ],
+   "projetar": true,
+   "rotulo_x": "Yₙ",
+   "rotulo_y": "P₃"
+  }
+ ],
+ "checar": [
+  "B.x < A.x",
+  "B.y < A.y",
+  "abs(A.x - 5) < 0.01",
+  "abs(C.x - 5) < 0.01",
+  "C.y < B.y"
+ ]
+}

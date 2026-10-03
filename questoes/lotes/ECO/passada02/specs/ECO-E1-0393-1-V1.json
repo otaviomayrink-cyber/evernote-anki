@@ -1,0 +1,116 @@
+{
+ "id": "ECO-E1-0393-1-V1",
+ "uso": "verso",
+ "legenda": "Com o teto de juros abaixo do equilíbrio, os tomadores querem Fᴰ, mas os poupadores só ofertam Fˢ: vale o lado curto do mercado, e o volume de crédito — logo, o investimento — CAI de F* para Fˢ, com racionamento do excesso de demanda.",
+ "eixos": {
+  "x": "F",
+  "y": "r",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    1,
+    9
+   ],
+   "p2": [
+    8.3,
+    1.7
+   ],
+   "familia": "demanda",
+   "rotulo": "D (investimento)"
+  },
+  {
+   "id": "S",
+   "tipo": "reta",
+   "p1": [
+    1.7,
+    1.7
+   ],
+   "p2": [
+    9,
+    9
+   ],
+   "familia": "oferta",
+   "rotulo": "O (poupança)"
+  },
+  {
+   "id": "Teto",
+   "tipo": "horizontal",
+   "y": 3.5,
+   "x": [
+    0,
+    9.3
+   ],
+   "familia": "destaque",
+   "rotulo": "teto",
+   "tracejada": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "F*",
+   "rotulo_y": "r*"
+  },
+  {
+   "id": "Qs",
+   "intersecao": [
+    "S",
+    "Teto"
+   ],
+   "projetar": "x",
+   "rotulo_x": "Fˢ",
+   "marcar": true
+  },
+  {
+   "id": "Qd",
+   "intersecao": [
+    "D",
+    "Teto"
+   ],
+   "projetar": "x",
+   "rotulo_x": "Fᴰ",
+   "marcar": true
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Qs.x",
+    0.9
+   ],
+   "para": [
+    "Qd.x",
+    0.9
+   ],
+   "cor": "vermelho",
+   "estilo": "<|-|>"
+  }
+ ],
+ "checar": [
+  "Qs.x < E.x",
+  "Qd.x > E.x",
+  "Teto(1) < E.y"
+ ],
+ "textos": [
+  {
+   "xy": [
+    6.75,
+    0.9
+   ],
+   "texto": "falta crédito",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ]
+}

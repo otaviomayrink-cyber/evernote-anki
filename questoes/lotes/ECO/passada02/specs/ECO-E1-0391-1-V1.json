@@ -1,0 +1,6 @@
+{"id": "ECO-E1-0391-1-V1", "uso": "verso",
+ "legenda": "O corte de gastos reduz o déficit (ou amplia o superávit) e eleva a poupança pública: a oferta de fundos se desloca para a direita (O₁ → O₂). Os juros caem e o investimento privado AUMENTA (F₁ → F₂) — é o crowding out ao contrário.",
+ "modelo": "oferta_demanda", "params": {"deslocar": {"S": "direita"}, "eixos": {"x": "F", "y": "r"}},
+ "substituir": {"D1": {"rotulo": "D (investimento)"}, "S1": {"rotulo": "O₁ (poupança nacional)"},
+                "E1": {"rotulo_x": "F₁", "rotulo_y": "r₁"}, "E2": {"rotulo_x": "F₂", "rotulo_y": "r₂"}},
+ "checar": ["E2.y < E1.y", "E2.x > E1.x"]}

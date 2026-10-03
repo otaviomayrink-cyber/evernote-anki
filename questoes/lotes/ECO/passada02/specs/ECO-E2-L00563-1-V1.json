@@ -1,0 +1,51 @@
+{
+ "id": "ECO-E2-L00563-1-V1",
+ "uso": "verso",
+ "legenda": "A expansão fiscal desloca a IS para a direita (IS₁ → IS₂). Com juros fixos em i₁, a renda iria até F (multiplicador pleno); como a renda maior eleva a demanda por moeda e os juros sobem para i₂, o investimento recua e a renda para em Y₂ — a distância E₂–F é o crowding out.",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "IS": "direita"
+  }
+ },
+ "substituir": {
+  "LM1": {
+   "rotulo": "LM"
+  },
+  "E1": {
+   "rotulo_desloc": [
+    8,
+    -30
+   ]
+  }
+ },
+ "curvas": [
+  {
+   "id": "ref",
+   "tipo": "horizontal",
+   "y": 5.25,
+   "x": [
+    5.25,
+    7.25
+   ],
+   "familia": "referencia",
+   "rotulo": ""
+  }
+ ],
+ "pontos": [
+  {
+   "id": "F",
+   "xy": [
+    7.25,
+    5.25
+   ],
+   "rotulo": "F",
+   "marcar": true
+  }
+ ],
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x > E1.x",
+  "E2.x < F.x"
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "ECO-E1-0158-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Mesmo imposto t e mesma oferta nos dois painéis. Com demanda inelástica (à esquerda), a quantidade quase não cai e o peso morto é um triângulo estreito; com demanda elástica (à direita), a quantidade despenca e o peso morto é bem maior.",
+ "paineis": [
+  {
+   "titulo": "Demanda inelástica",
+   "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "D", "tipo": "reta", "p1": [2.4, 9.7], "p2": [5.9, 0.95], "familia": "demanda", "rotulo": "D"},
+    {"id": "S", "tipo": "reta", "p1": [0.3, 1.3], "p2": [8.5, 9.5], "familia": "oferta", "rotulo": "O"},
+    {"id": "St", "tipo": "reta", "p1": [0.3, 3.3], "p2": [6.5, 9.5], "familia": "oferta", "rotulo": "O + t"}
+   ],
+   "pontos": [
+    {"id": "E0", "intersecao": ["D", "S"], "projetar": "x", "rotulo_x": "q₀"},
+    {"id": "Ec", "intersecao": ["D", "St"], "projetar": "x", "rotulo_x": "qₜ"},
+    {"id": "Ev", "sobre": "S", "x": "Ec.x"}
+   ],
+   "areas": [
+    {"tipo": "poligono", "vertices": ["Ec", "E0", "Ev"], "papel": "peso_morto"}
+   ],
+   "checar": ["Ec.x < E0.x", "E0.x - Ec.x < 0.6", "abs((Ec.y - Ev.y) - 2) < 0.01"]
+  },
+  {
+   "titulo": "Demanda elástica",
+   "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "D", "tipo": "reta", "p1": [0.3, 6.88], "p2": [9.6, 3.16], "familia": "demanda", "rotulo": "D"},
+    {"id": "S", "tipo": "reta", "p1": [0.3, 1.3], "p2": [8.5, 9.5], "familia": "oferta", "rotulo": "O"},
+    {"id": "St", "tipo": "reta", "p1": [0.3, 3.3], "p2": [6.5, 9.5], "familia": "oferta", "rotulo": "O + t"}
+   ],
+   "pontos": [
+    {"id": "E0", "intersecao": ["D", "S"], "projetar": "x", "rotulo_x": "q₀"},
+    {"id": "Ec", "intersecao": ["D", "St"], "projetar": "x", "rotulo_x": "qₜ"},
+    {"id": "Ev", "sobre": "S", "x": "Ec.x"}
+   ],
+   "areas": [
+    {"tipo": "poligono", "vertices": ["Ec", "E0", "Ev"], "papel": "peso_morto"}
+   ],
+   "checar": ["Ec.x < E0.x", "E0.x - Ec.x > 1.2", "abs((Ec.y - Ev.y) - 2) < 0.01"]
+  }
+ ]
+}

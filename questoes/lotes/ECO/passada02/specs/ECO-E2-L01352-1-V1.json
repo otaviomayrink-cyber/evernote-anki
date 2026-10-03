@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E2-L01352-1-V1",
+ "uso": "verso",
+ "legenda": "Mais gasto autônomo desloca a IS para cima e para a direita (IS₁ → IS₂); com a LM positivamente inclinada, o novo equilíbrio tem renda maior (Y₂ > Y₁) e juros maiores (i₂ > i₁).",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "IS": "direita"
+  }
+ },
+ "substituir": {
+  "LM1": {
+   "rotulo": "LM"
+  }
+ },
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x > E1.x"
+ ]
+}

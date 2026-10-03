@@ -1,0 +1,5 @@
+{"id": "ECO-E1-0469-1-V1", "uso": "verso",
+ "legenda": "Alta de impostos = política fiscal contracionista: a IS se desloca para a esquerda (IS₁ → IS₂) ao longo da LM fixa; no novo equilíbrio, os juros caem (i₁ → i₂) e a renda também cai (Y₁ → Y₂).",
+ "modelo": "is_lm", "params": {"deslocar": {"IS": "esquerda"}},
+ "substituir": {"LM1": {"rotulo": "LM"}},
+ "checar": ["E2.y < E1.y", "E2.x < E1.x"]}

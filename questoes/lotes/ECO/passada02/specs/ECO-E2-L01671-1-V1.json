@@ -1,0 +1,18 @@
+{
+ "id": "ECO-E2-L01671-1-V1",
+ "uso": "verso",
+ "legenda": "A expansão monetária leva a economia de A para B ao longo da curva de curto prazo CPCP₁. Com a inflação esperada revista para cima, quem se desloca é a CPCP (de CPCP₁ para CPCP₂); a CPLP fica parada, vertical em uₙ, e a economia volta ao desemprego natural em C, com inflação maior.",
+ "eixos": {"x": "u", "y": "π", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "CPLP", "tipo": "vertical", "x": 5, "y": [0, 9.6], "familia": "oferta", "rotulo": "CPLP", "rotulo_xy": [5.9, 9.4]},
+  {"id": "CP1", "tipo": "funcao", "expr": "2 + 0.8*(5 - x)", "dominio": [1, 7.4], "familia": "demanda", "estado": "inicial", "rotulo": "CPCP₁ (πᵉ baixa)", "rotulo_desloc": [6, 4]},
+  {"id": "CP2", "tipo": "funcao", "expr": "6 + 0.8*(5 - x)", "dominio": [1.6, 9.2], "familia": "demanda", "rotulo": "CPCP₂ (πᵉ alta)", "rotulo_desloc": [-40, 22]}
+ ],
+ "pontos": [
+  {"id": "A", "intersecao": ["CP1", "CPLP"], "rotulo": "A", "rotulo_desloc": [10, -14], "rotulo_x": "uₙ"},
+  {"id": "B", "sobre": "CP1", "x": 3, "rotulo": "B", "rotulo_desloc": [-22, -14], "projetar": "x", "rotulo_x": "u₁"},
+  {"id": "C", "intersecao": ["CP2", "CPLP"], "rotulo": "C", "rotulo_desloc": [10, -14]}
+ ],
+ "deslocamentos": [{"de": "CP1", "para": "CP2", "sentido": "cima", "em_x": 7}],
+ "checar": ["abs(C.x - A.x) < 1e-9", "C.y > A.y", "B.x < A.x", "B.y > A.y"]
+}

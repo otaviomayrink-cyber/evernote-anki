@@ -1,0 +1,96 @@
+{
+ "id": "ECO-E1-0473-1-V1",
+ "uso": "verso",
+ "legenda": "Com a IS vertical (investimento insensível aos juros), a expansão monetária desloca a LM para a direita (LM₁ → LM₂) e só derruba os juros (i₁ → i₂): a renda fica parada em Y* — eficácia nula da política monetária.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "IS",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0.6,
+    9.2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    1.5,
+    1.5
+   ],
+   "p2": [
+    9,
+    9
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "LM2",
+   "tipo": "reta",
+   "p1": [
+    3.5,
+    1.5
+   ],
+   "p2": [
+    9.5,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₂"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "LM1",
+   "para": "LM2",
+   "sentido": "direita",
+   "em_y": 6.5
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_x": "Y*",
+   "rotulo_y": "i₁",
+   "rotulo_desloc": [
+    -30,
+    8
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS",
+    "LM2"
+   ],
+   "rotulo": "E₂",
+   "projetar": "y",
+   "rotulo_y": "i₂",
+   "rotulo_desloc": [
+    8,
+    -22
+   ]
+  }
+ ],
+ "checar": [
+  "abs(E2.x - E1.x) < 1e-6",
+  "E2.y < E1.y"
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "id": "ECO-E2-L00936-1-V1",
+ "uso": "verso",
+ "legenda": "A demanda por moeda (preferência pela liquidez, L) é negativamente inclinada: em A, com juros altos, retém-se pouca moeda (M₁); em B, com juros baixos, muita (M₂). O juro de equilíbrio i* sai do cruzamento de L com a oferta de moeda Mˢ, fixada pelo Banco Central.",
+ "eixos": {
+  "x": "M",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "L",
+   "tipo": "funcao",
+   "expr": "0.6 + 24/(x + 0.8)",
+   "dominio": [
+    1.6,
+    9.4
+   ],
+   "familia": "demanda",
+   "rotulo": "L",
+   "rotulo_em": 9.2,
+   "rotulo_desloc": [
+    0,
+    12
+   ]
+  },
+  {
+   "id": "Ms",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0,
+    9.2
+   ],
+   "familia": "oferta",
+   "rotulo": "Mˢ"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "L",
+    "Ms"
+   ],
+   "rotulo": "E",
+   "projetar": "y",
+   "rotulo_y": "i*",
+   "rotulo_desloc": [
+    10,
+    6
+   ]
+  },
+  {
+   "id": "A",
+   "sobre": "L",
+   "x": 2.4,
+   "rotulo": "A",
+   "projetar": true,
+   "rotulo_x": "M₁",
+   "rotulo_desloc": [
+    10,
+    4
+   ]
+  },
+  {
+   "id": "B",
+   "sobre": "L",
+   "x": 8.0,
+   "rotulo": "B",
+   "projetar": true,
+   "rotulo_x": "M₂",
+   "rotulo_desloc": [
+    4,
+    10
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    5.6,
+    8.4
+   ],
+   "texto": "↑ i → ↓ demanda por moeda",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "A.y > B.y",
+  "A.x < B.x",
+  "abs(E.x - 5) < 1e-9"
+ ]
+}

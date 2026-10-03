@@ -1,0 +1,87 @@
+{
+ "id": "ECO-E3-L00138-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Conforme o horizonte e a flexibilidade de preços, a oferta agregada é horizontal (preços rígidos), positivamente inclinada (curto prazo, rigidez parcial) ou vertical (longo prazo, em Yₙ). Em nenhum caso ela é negativamente inclinada: inclinação negativa no plano (Y, P) é a da demanda agregada.",
+ "paineis": [
+  {
+   "titulo": "Preços rígidos",
+   "eixos": {
+    "x": "Y",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "OA",
+     "tipo": "horizontal",
+     "y": 5,
+     "x": [
+      0.5,
+      9.4
+     ],
+     "familia": "oferta",
+     "rotulo": "OA"
+    }
+   ],
+   "checar": [
+    "abs(OA(2) - OA(8)) < 1e-9"
+   ]
+  },
+  {
+   "titulo": "Preços flexíveis",
+   "eixos": {
+    "x": "Y",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "OA",
+     "tipo": "funcao",
+     "expr": "0.8*x + 1",
+     "dominio": [
+      0.5,
+      10
+     ],
+     "familia": "oferta",
+     "rotulo": "OACP"
+    }
+   ],
+   "checar": [
+    "OA(8) > OA(2)"
+   ]
+  },
+  {
+   "titulo": "Longo prazo",
+   "eixos": {
+    "x": "Y",
+    "y": "P"
+   },
+   "curvas": [
+    {
+     "id": "OA",
+     "tipo": "vertical",
+     "x": 5,
+     "y": [
+      0.5,
+      9.4
+     ],
+     "familia": "oferta",
+     "rotulo": "OALP"
+    }
+   ],
+   "pontos": [
+    {
+     "id": "N",
+     "xy": [
+      5,
+      0
+     ],
+     "rotulo_x": "Yₙ"
+    }
+   ],
+   "checar": [
+    "abs(N.x - 5) < 1e-9"
+   ]
+  }
+ ]
+}

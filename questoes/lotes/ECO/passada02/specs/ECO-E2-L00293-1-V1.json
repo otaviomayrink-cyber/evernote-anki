@@ -1,0 +1,12 @@
+{"id": "ECO-E2-L00293-1-V1", "uso": "verso",
+ "legenda": "Com o investimento autônomo dado, a alta da propensão a poupar gira a reta de poupança (S₁ → S₂): a renda de equilíbrio cai (Y₁ → Y₂) e a poupança realizada volta ao mesmo nível do investimento — ninguém consegue poupar mais no agregado.",
+ "eixos": {"x": "Y", "y": "S, I", "xmax": 13, "ymax": 4.5},
+ "curvas": [
+   {"id": "I", "tipo": "horizontal", "y": 2, "x": [0, 12.5], "familia": "demanda", "rotulo": "I"},
+   {"id": "S1", "tipo": "funcao", "expr": "0.25*x - 0.5", "dominio": [2, 12.5], "familia": "oferta", "rotulo": "S₁", "estado": "inicial"},
+   {"id": "S2", "tipo": "funcao", "expr": "0.4*x - 0.8", "dominio": [2, 12.5], "familia": "oferta", "rotulo": "S₂"}],
+ "pontos": [
+   {"id": "E1", "intersecao": ["S1", "I"], "rotulo": "E₁", "projetar": "x", "rotulo_x": "Y₁"},
+   {"id": "E2", "intersecao": ["S2", "I"], "rotulo": "E₂", "projetar": "x", "rotulo_x": "Y₂"}],
+ "setas": [{"de": ["E1.x", 1.0], "para": ["E2.x", 1.0], "cor": "vermelho", "rotulo": "renda cai"}],
+ "checar": ["E2.x < E1.x", "abs(E2.y - E1.y) < 0.01", "abs(E1.x - 10) < 0.01", "abs(E2.x - 7) < 0.01"]}

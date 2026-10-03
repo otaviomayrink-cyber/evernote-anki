@@ -1,0 +1,106 @@
+{
+ "id": "ECO-E1-0474-1-V1",
+ "uso": "verso",
+ "legenda": "Com a LM horizontal (armadilha da liquidez), a expansão fiscal leva a IS para a direita (IS₁ → IS₂) sem mexer nos juros: o investimento privado não é expulso, o crowding out é nulo e a renda sobe o efeito multiplicador inteiro (Y₁ → Y₂).",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "LM",
+   "tipo": "horizontal",
+   "y": 3.5,
+   "x": [
+    0.4,
+    9.6
+   ],
+   "familia": "oferta",
+   "rotulo": "LM"
+  },
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    0.6,
+    8.5
+   ],
+   "p2": [
+    5,
+    0.8
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    3.4,
+    8.5
+   ],
+   "p2": [
+    7.8,
+    0.8
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 6.5
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM"
+   ],
+   "rotulo": "E₁",
+   "projetar": "x",
+   "rotulo_x": "Y₁",
+   "rotulo_desloc": [
+    -30,
+    8
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS2",
+    "LM"
+   ],
+   "rotulo": "E₂",
+   "projetar": "x",
+   "rotulo_x": "Y₂",
+   "rotulo_desloc": [
+    8,
+    8
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    7.0,
+    4.4
+   ],
+   "texto": "crowding out nulo",
+   "cor": "cinza",
+   "tamanho": 11.5
+  }
+ ],
+ "checar": [
+  "abs(E2.y - E1.y) < 1e-6",
+  "E2.x > E1.x"
+ ]
+}

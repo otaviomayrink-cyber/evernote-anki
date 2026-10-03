@@ -1,0 +1,96 @@
+{
+ "id": "ECO-E1-0483-1-V1",
+ "uso": "verso",
+ "legenda": "Com a LM vertical (demanda por moeda insensível aos juros), a expansão fiscal leva a IS para a direita (IS₁ → IS₂), mas só eleva os juros (i₁ → i₂): a renda fica em Y* — crowding out total e política fiscal ineficaz.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "LM",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0.6,
+    9.4
+   ],
+   "familia": "oferta",
+   "rotulo": "LM"
+  },
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    0.8,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    0.8
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    2.6,
+    9.3
+   ],
+   "p2": [
+    9.3,
+    2.6
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 7.3
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_x": "Y*",
+   "rotulo_y": "i₁",
+   "rotulo_desloc": [
+    8,
+    -22
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS2",
+    "LM"
+   ],
+   "rotulo": "E₂",
+   "projetar": "y",
+   "rotulo_y": "i₂",
+   "rotulo_desloc": [
+    8,
+    6
+   ]
+  }
+ ],
+ "checar": [
+  "abs(E2.x - E1.x) < 1e-6",
+  "E2.y > E1.y"
+ ]
+}

@@ -1,0 +1,8 @@
+{"id": "ECO-E2-L01706-1-V1", "uso": "verso",
+ "legenda": "O imposto sobre os rendimentos das aplicações reduz o retorno líquido de poupar: a oferta de fundos (S) desloca-se para a ESQUERDA, os juros sobem (r₁ → r₂) e o investimento cai (F₁ → F₂).",
+ "modelo": "oferta_demanda",
+ "params": {"deslocar": {"S": "esquerda"}, "nome_oferta": "S", "eixos": {"x": "F", "y": "r"}},
+ "substituir": {"D1": {"rotulo": "I (demanda)"},
+                "E1": {"rotulo_x": "F₁", "rotulo_y": "r₁"},
+                "E2": {"rotulo_x": "F₂", "rotulo_y": "r₂"}},
+ "checar": ["E2.y > E1.y", "E2.x < E1.x"]}

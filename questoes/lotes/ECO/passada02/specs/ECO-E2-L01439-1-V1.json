@@ -1,0 +1,8 @@
+{"id": "ECO-E2-L01439-1-V1", "uso": "verso",
+ "legenda": "Superávit fiscal maior = mais poupança pública: a oferta de fundos (S) desloca-se para a direita, os juros caem (r₁ → r₂) e a quantidade de fundos que financia o investimento privado aumenta (F₁ → F₂) — crowding in.",
+ "modelo": "oferta_demanda",
+ "params": {"deslocar": {"S": "direita"}, "nome_oferta": "S", "eixos": {"x": "F", "y": "r"}},
+ "substituir": {"D1": {"rotulo": "I (demanda)"},
+                "E1": {"rotulo_x": "F₁", "rotulo_y": "r₁"},
+                "E2": {"rotulo_x": "F₂", "rotulo_y": "r₂"}},
+ "checar": ["E2.y < E1.y", "E2.x > E1.x"]}

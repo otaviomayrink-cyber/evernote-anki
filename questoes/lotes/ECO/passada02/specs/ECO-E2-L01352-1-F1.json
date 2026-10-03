@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E2-L01352-1-F1",
+ "uso": "frente",
+ "fidelidade": "conjectural",
+ "legenda": "Equilíbrio simultâneo nos mercados de bens (IS) e monetário (LM), com produto Y* e taxa de juros i*.",
+ "modelo": "is_lm",
+ "substituir": {
+  "IS1": {
+   "rotulo": "IS"
+  },
+  "LM1": {
+   "rotulo": "LM"
+  },
+  "E1": {
+   "rotulo": "",
+   "rotulo_x": "Y*",
+   "rotulo_y": "i*"
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E1-0704-1-V1",
+ "uso": "verso",
+ "legenda": "Expansão monetária: com mais moeda, a LM desce para a direita (LM₁ → LM₂); ao longo da IS, que não se move, os juros caem (i₁ → i₂) e o produto sobe (Y₁ → Y₂).",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "LM": "direita"
+  }
+ },
+ "substituir": {
+  "IS1": {
+   "rotulo": "IS"
+  }
+ },
+ "checar": [
+  "E2.y < E1.y",
+  "E2.x > E1.x"
+ ]
+}

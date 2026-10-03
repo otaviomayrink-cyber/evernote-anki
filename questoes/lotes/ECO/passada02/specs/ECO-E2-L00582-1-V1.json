@@ -1,0 +1,127 @@
+{
+ "id": "ECO-E2-L00582-1-V1",
+ "uso": "verso",
+ "legenda": "Partindo de A (u = uₙ, inflação esperada de 2%), a expansão leva a B: desemprego menor à custa de mais inflação, ao longo da CPCP₁. Quando as expectativas se ajustam, a curva de curto prazo sobe (CPCP₂) e o desemprego volta a uₙ em C, com inflação maior: no longo prazo só resta a vertical CPLP.",
+ "eixos": {
+  "x": "u",
+  "y": "π"
+ },
+ "curvas": [
+  {
+   "id": "LP",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0,
+    9.6
+   ],
+   "familia": "referencia",
+   "rotulo": "CPLP",
+   "rotulo_xy": [
+    5.8,
+    9.3
+   ]
+  },
+  {
+   "id": "C1",
+   "tipo": "funcao",
+   "expr": "8/(x-1)",
+   "dominio": [
+    2.1,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "CPCP₁ (πᵉ = 2%)",
+   "estado": "inicial"
+  },
+  {
+   "id": "C2",
+   "tipo": "funcao",
+   "expr": "2 + 8/(x-1)",
+   "dominio": [
+    2.1,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "CPCP₂ (πᵉ = 4%)"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "C1",
+   "para": "C2",
+   "sentido": "cima",
+   "em_x": 7.5
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "C1",
+    "LP"
+   ],
+   "rotulo": "A",
+   "rotulo_desloc": [
+    10,
+    -16
+   ],
+   "projetar": "y",
+   "rotulo_y": "2%"
+  },
+  {
+   "id": "B",
+   "sobre": "C1",
+   "x": 3,
+   "rotulo": "B",
+   "rotulo_desloc": [
+    -20,
+    -14
+   ],
+   "projetar": true,
+   "rotulo_x": "u₁",
+   "rotulo_y": "4%"
+  },
+  {
+   "id": "C",
+   "intersecao": [
+    "C2",
+    "LP"
+   ],
+   "rotulo": "C",
+   "rotulo_desloc": [
+    10,
+    4
+   ]
+  },
+  {
+   "id": "N",
+   "xy": [
+    5,
+    0
+   ],
+   "rotulo_x": "uₙ"
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "B.x + 0.25",
+    "B.y"
+   ],
+   "para": [
+    "C.x - 0.25",
+    "C.y"
+   ],
+   "estilo": "-|>",
+   "cor": "vermelho"
+  }
+ ],
+ "checar": [
+  "B.x < A.x",
+  "B.y > A.y",
+  "abs(C.x - A.x) < 0.01",
+  "abs(C.y - B.y) < 0.01",
+  "C.y > A.y"
+ ]
+}

@@ -1,0 +1,6 @@
+{"id": "ECO-E1-0392-1-V1", "uso": "verso",
+ "legenda": "O incentivo fiscal torna rentável investir mais a cada taxa de juros: a demanda por fundos se desloca para a DIREITA (D₁ → D₂). Os juros SOBEM (r₁ → r₂) e a quantidade de fundos poupados e investidos também sobe (F₁ → F₂).",
+ "modelo": "oferta_demanda", "params": {"deslocar": {"D": "direita"}, "eixos": {"x": "F", "y": "r"}},
+ "substituir": {"S1": {"rotulo": "O (poupança)"}, "E1": {"rotulo_x": "F₁", "rotulo_y": "r₁"},
+                "E2": {"rotulo_x": "F₂", "rotulo_y": "r₂"}},
+ "checar": ["E2.y > E1.y", "E2.x > E1.x"]}

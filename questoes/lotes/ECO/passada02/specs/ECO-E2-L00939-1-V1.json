@@ -1,0 +1,45 @@
+{
+ "id": "ECO-E2-L00939-1-V1",
+ "uso": "verso",
+ "legenda": "O aumento de impostos desloca a IS para a esquerda (IS₁ → IS₂). Se os juros ficassem em i₁, a renda cairia até F; como eles caem para i₂, parte do investimento volta e a renda para em Y₂ — a queda de i amortece, mas não anula, a contração.",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "IS": "esquerda"
+  }
+ },
+ "substituir": {
+  "LM1": {
+   "rotulo": "LM"
+  }
+ },
+ "curvas": [
+  {
+   "id": "ref",
+   "tipo": "horizontal",
+   "y": 5.25,
+   "x": [
+    3.25,
+    5.25
+   ],
+   "familia": "referencia",
+   "rotulo": ""
+  }
+ ],
+ "pontos": [
+  {
+   "id": "F",
+   "xy": [
+    3.25,
+    5.25
+   ],
+   "rotulo": "F",
+   "marcar": true
+  }
+ ],
+ "checar": [
+  "E2.y < E1.y",
+  "E2.x < E1.x",
+  "E2.x > F.x"
+ ]
+}

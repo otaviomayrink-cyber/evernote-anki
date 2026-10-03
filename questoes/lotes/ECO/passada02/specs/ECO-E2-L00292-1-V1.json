@@ -1,0 +1,12 @@
+{"id": "ECO-E2-L00292-1-V1", "uso": "verso",
+ "legenda": "Com a oferta agregada vertical no produto de pleno emprego, a expansão fiscal desloca a demanda agregada (DA₁ → DA₂) e todo o ajuste ocorre no nível de preços (P₁ → P₂): o produto continua em Yₚ.",
+ "eixos": {"x": "Y", "y": "P", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "OA", "tipo": "vertical", "x": 5, "y": [0.5, 9.3], "familia": "oferta", "rotulo": "OA"},
+  {"id": "DA1", "tipo": "reta", "p1": [1, 8], "p2": [8.5, 1.5], "familia": "demanda", "rotulo": "DA₁", "estado": "inicial"},
+  {"id": "DA2", "tipo": "reta", "p1": [2.5, 9.3], "p2": [9.5, 3.2], "familia": "demanda", "rotulo": "DA₂"}],
+ "pontos": [
+  {"id": "E1", "intersecao": ["DA1", "OA"], "rotulo": "E₁", "projetar": true, "rotulo_x": "Yₚ", "rotulo_y": "P₁"},
+  {"id": "E2", "intersecao": ["DA2", "OA"], "rotulo": "E₂", "projetar": "y", "rotulo_y": "P₂"}],
+ "deslocamentos": [{"de": "DA1", "para": "DA2", "sentido": "direita", "em_y": 6}],
+ "checar": ["E2.y > E1.y", "abs(E2.x - E1.x) < 0.01"]}

@@ -1,0 +1,36 @@
+{
+ "id": "ECO-E2-L01479-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Com a oferta agregada vertical (inelástica a preços), a expansão da demanda de DA₁ para DA₂ só eleva os preços: o produto fica em Yₚ e o desemprego não sai de uₙ. Traduzida para o plano inflação × desemprego, a mesma economia dá uma curva de Phillips vertical, sem trade-off.",
+ "paineis": [
+  {
+   "titulo": "OA vertical",
+   "eixos": {"x": "Y", "y": "P", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "OA", "tipo": "vertical", "x": 5, "y": [0, 9.6], "familia": "oferta", "rotulo": "OA", "rotulo_xy": [5.7, 9.4]},
+    {"id": "DA1", "tipo": "funcao", "expr": "8 - 0.8*x", "dominio": [0.5, 9.5], "familia": "demanda", "estado": "inicial", "rotulo": "DA₁"},
+    {"id": "DA2", "tipo": "funcao", "expr": "11 - 0.8*x", "dominio": [2.2, 9.9], "familia": "demanda", "rotulo": "DA₂"}
+   ],
+   "pontos": [
+    {"id": "E1", "intersecao": ["DA1", "OA"], "rotulo": "E₁", "rotulo_desloc": [-30, -16], "projetar": "y", "rotulo_y": "P₁", "rotulo_x": "Yₚ"},
+    {"id": "E2", "intersecao": ["DA2", "OA"], "rotulo": "E₂", "rotulo_desloc": [10, 14], "projetar": "y", "rotulo_y": "P₂"}
+   ],
+   "deslocamentos": [{"de": "DA1", "para": "DA2", "sentido": "direita", "em_y": 3.2}],
+   "checar": ["abs(E2.x - E1.x) < 1e-9", "E2.y > E1.y"]
+  },
+  {
+   "titulo": "Curva de Phillips vertical",
+   "eixos": {"x": "u", "y": "π", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "CP", "tipo": "vertical", "x": 5, "y": [0, 9.6], "familia": "destaque", "rotulo": "CP", "rotulo_xy": [5.7, 9.4]}
+   ],
+   "pontos": [
+    {"id": "A", "xy": [5, 2.5], "rotulo": "A", "rotulo_desloc": [10, 0], "projetar": "y", "rotulo_y": "π₁", "rotulo_x": "uₙ"},
+    {"id": "B", "xy": [5, 6.5], "rotulo": "B", "rotulo_desloc": [10, 0], "projetar": "y", "rotulo_y": "π₂"}
+   ],
+   "setas": [{"de": [6.6, 3.2], "para": [6.6, 5.8], "rotulo": "só π sobe", "rotulo_desloc": [8, 0]}],
+   "checar": ["abs(B.x - A.x) < 1e-9", "B.y > A.y"]
+  }
+ ]
+}

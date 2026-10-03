@@ -1,0 +1,91 @@
+{
+ "id": "ECO-E2-L00585-1-V1",
+ "uso": "verso",
+ "legenda": "Em Keynes, a taxa de juros se forma no mercado de moeda: a oferta de moeda (vertical, fixada pelo Banco Central) cruza a preferência pela liquidez L(i). Mais moeda (M₁ → M₂) reduz os juros de i₁ para i₂; poupança e investimento não aparecem no gráfico.",
+ "eixos": {
+  "x": "M/P",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 10,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "L",
+   "tipo": "funcao",
+   "expr": "0.6 + 18/(x+1)",
+   "dominio": [
+    0.9,
+    9.6
+   ],
+   "familia": "demanda",
+   "rotulo": "L(i)"
+  },
+  {
+   "id": "M1",
+   "tipo": "vertical",
+   "x": 4,
+   "y": [
+    0,
+    8.6
+   ],
+   "familia": "oferta",
+   "rotulo": "M₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "M2",
+   "tipo": "vertical",
+   "x": 6.5,
+   "y": [
+    0,
+    8.6
+   ],
+   "familia": "oferta",
+   "rotulo": "M₂"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "M1",
+   "para": "M2",
+   "sentido": "direita",
+   "em_y": 7.6
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "L",
+    "M1"
+   ],
+   "rotulo": "E₁",
+   "projetar": "y",
+   "rotulo_y": "i₁",
+   "rotulo_desloc": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "L",
+    "M2"
+   ],
+   "rotulo": "E₂",
+   "projetar": "y",
+   "rotulo_y": "i₂",
+   "rotulo_desloc": [
+    10,
+    14
+   ]
+  }
+ ],
+ "checar": [
+  "E2.y < E1.y",
+  "abs(E1.x - 4) < 0.01",
+  "abs(E2.x - 6.5) < 0.01"
+ ]
+}

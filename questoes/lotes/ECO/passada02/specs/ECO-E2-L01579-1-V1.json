@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E2-L01579-1-V1",
+ "uso": "verso",
+ "legenda": "Aperto monetário: para sustentar juros mais altos, o Banco Central enxuga liquidez e a LM sobe para a esquerda (LM₁ → LM₂); os juros sobem (i₁ → i₂) e o produto cai (Y₁ → Y₂).",
+ "modelo": "is_lm",
+ "params": {
+  "deslocar": {
+   "LM": "esquerda"
+  }
+ },
+ "substituir": {
+  "IS1": {
+   "rotulo": "IS"
+  }
+ },
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x < E1.x"
+ ]
+}

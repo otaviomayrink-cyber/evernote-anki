@@ -1,0 +1,18 @@
+{
+ "id": "ECO-E3-L00442-1-V1",
+ "uso": "verso",
+ "legenda": "A oferta de reservas é vertical na quantidade que o BC provê e vira horizontal na taxa de redesconto (rᵈ), porque ali o BC empresta quanto se pedir. Se a demanda por reservas sobe de D₁ para D₂, a taxa do mercado sobe de i₁ até rᵈ e para: o redesconto é o teto.",
+ "eixos": {"x": "R", "y": "i", "xmax": 10, "ymax": 9, "numeros": false},
+ "curvas": [
+  {"id": "Ov", "tipo": "vertical", "x": 4, "y": [0, 6], "familia": "oferta", "rotulo": "Oᴿ", "rotulo_xy": [3.55, 1.0]},
+  {"id": "Oh", "tipo": "horizontal", "y": 6, "x": [4, 9.4], "familia": "oferta", "rotulo": "rᵈ (redesconto)", "rotulo_xy": [8.0, 6.45]},
+  {"id": "D1", "tipo": "funcao", "expr": "8 - x", "dominio": [0.5, 7.5], "familia": "demanda", "estado": "inicial", "rotulo": "D₁", "rotulo_xy": [7.3, 1.0]},
+  {"id": "D2", "tipo": "funcao", "expr": "11 - x", "dominio": [2.2, 9.8], "familia": "demanda", "rotulo": "D₂", "rotulo_xy": [9.3, 2.1]}
+ ],
+ "pontos": [
+  {"id": "E1", "intersecao": ["D1", "Ov"], "rotulo": "E₁", "projetar": "y", "rotulo_y": "i₁", "rotulo_desloc": [10, 12]},
+  {"id": "E2", "intersecao": ["D2", "Oh"], "rotulo": "E₂", "projetar": "y", "rotulo_y": "i₂ = rᵈ", "rotulo_desloc": [8, 12]}
+ ],
+ "deslocamentos": [{"de": "D1", "para": "D2", "sentido": "direita", "em_y": 2.2}],
+ "checar": ["E2.y > E1.y", "abs(E2.y - 6) < 0.01", "E1.y < 6"]
+}

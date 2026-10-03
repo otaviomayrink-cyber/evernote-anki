@@ -1,0 +1,5 @@
+{"id": "ECO-E1-0318-1-V1", "uso": "verso",
+ "legenda": "Corte de juros pela via monetária: a oferta de moeda aumenta e a LM desce para a direita (LM₁ → LM₂); os juros caem (i₁ → i₂) e a renda sobe (Y₁ → Y₂). Uma LM para cima e para a esquerda faria o contrário: juros maiores.",
+ "modelo": "is_lm", "params": {"deslocar": {"LM": "direita"}},
+ "substituir": {"IS1": {"rotulo": "IS"}},
+ "checar": ["E2.y < E1.y", "E2.x > E1.x"]}

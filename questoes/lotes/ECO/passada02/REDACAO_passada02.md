@@ -10,17 +10,17 @@ CEBRASPE). Recebe um lote de itens já classificados e escreve os cards completo
    a densidade e o recheio. `questoes/teste_graficos/specs/*.json` — specs de figura-modelo.
 
 ## Entrada
-`questoes/lotes/ECO/passada01/lotes/redacao_XX.jsonl` — um registro por linha bruta da fonte:
+`questoes/lotes/ECO/passada02/lotes/redacao_XX.jsonl` — um registro por linha bruta da fonte:
 `rid`, `frente` e `verso` **completos** da fonte, `imgs`, `classif` (banca, prova, ano, cacd, errei, itens com
 `k`, `tipo`, `gabarito` sugerido, `destino`, `h2`, `resumo`, `figura_frente`) e, quando houver, `versos_duplicatas`
 (comentários de linhas duplicadas desta, para fundir).
 
 ## Saída
-1. `questoes/lotes/ECO/passada01/cards/cards_XX.py` — `from marcacao import az, vm, azb, vd, oc, rx, cz, hl` e uma
+1. `questoes/lotes/ECO/passada02/cards/cards_XX.py` — `from marcacao import az, vm, azb, vd, oc, rx, cz, hl` e uma
    lista `CARDS` (mesmos campos dos cards-modelo **mais** `"destino"`). Um card por item. Escreva o arquivo aos
    poucos (crie com os primeiros cards e vá acrescentando com Edit), nunca tudo de uma vez.
-2. Figuras: uma spec por figura em `questoes/lotes/ECO/passada01/specs/{id da figura}.json`.
-3. `questoes/lotes/ECO/passada01/pulados/pulados_XX.json` — lista de `{"rid", "k", "motivo"}` para todo item
+2. Figuras: uma spec por figura em `questoes/lotes/ECO/passada02/specs/{id da figura}.json`.
+3. `questoes/lotes/ECO/passada02/pulados/pulados_XX.json` — lista de `{"rid", "k", "motivo"}` para todo item
    **não** convertido: duplicata (`"duplicata de ECO-…"`), não-questão, irrecuperável (imagem perdida e
    impossível de deduzir), fora de ECO. Nenhum item some sem registro.
 
@@ -64,7 +64,7 @@ CEBRASPE). Recebe um lote de itens já classificados e escreve os cards completo
 - Figura da frente compartilhada por itens irmãos: uma spec só (id do 1º item, ex.: `ECO-E2-L00746-1-F1`),
   citada em `frente_figuras` de todos.
 - Ids de figura: `{id do card}-F1` (frente), `{id do card}-V1` (verso). Toda spec de verso tem `checar`.
-- Depois de escrever as specs: `python3 questoes/graficos/qgraf.py questoes/lotes/ECO/passada01/specs/<arquivos> -o /tmp/figXX`
+- Depois de escrever as specs: `python3 questoes/graficos/qgraf.py questoes/lotes/ECO/passada02/specs/<arquivos> -o /tmp/figXX`
   até zerar os erros e **abra cada PNG com a ferramenta Read** para a revisão visual (Protocolo §6).
 - `figuras_fonte`: registre o destino de cada imagem da fonte (redesenhada, transcrita_html, texto, absorvida,
   cortada, irrecuperavel).
@@ -72,7 +72,7 @@ CEBRASPE). Recebe um lote de itens já classificados e escreve os cards completo
 ## Verificação (até zerar)
 ```
 cd /home/user/evernote-anki/questoes
-python3 checar_lote.py lotes/ECO/passada01/cards/cards_XX.py --plano lotes/ECO/ECO-Q_plano.json --specs lotes/ECO/passada01/specs
+python3 checar_lote.py lotes/ECO/passada02/cards/cards_XX.py --plano lotes/ECO/ECO-Q_plano.json --specs lotes/ECO/passada02/specs
 ```
 Depois releia todas as `anotada` + `reescrita` dos ERRADO: o vermelho e o realce se correspondem?
 

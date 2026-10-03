@@ -413,4 +413,598 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0568
+    {
+        "id": "ECO-E1-0568-1", "fonte_ref": "E1-0568", "destino": "47", "subtema": H2["func"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2022", "ano": 2022, "cacd": False,
+        "errei": True,
+        "comando": CMD_FUNC,
+        "rotulo_item": "Item",
+        "assertiva": ("Por intermédio da política fiscal, pode-se dizer que o processo político surge como "
+                      "mecanismo substituto ao sistema de mercado, ao dispor em relação a alocações de bens "
+                      "públicos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Por intermédio da política fiscal, pode-se dizer que o <u>processo político</u> surge "
+                      "como <u>mecanismo substituto ao sistema de mercado</u>, ao dispor em relação a alocações "
+                      "de <u>bens públicos</u>."),
+        "poucas": ("Para " + azb("bens públicos") + ", o sistema de preços falha; quem decide o que e quanto "
+                   "ofertar é o " + azb("processo político") + " (orçamento votado), que faz as vezes do mercado "
+                   "na " + azb("função alocativa") + "."),
+        "destrinchando": [
+            "Em regra, o mercado aloca recursos pelos preços, que sinalizam escassez e preferências. Os "
+            + azb("bens públicos puros") + " têm duas propriedades que quebram esse mecanismo: "
+            + azb("não rivalidade") + " (o consumo de um não reduz o do outro) e " + azb("não exclusão")
+            + " (não se impede quem não paga de usufruir).",
+            "Consequência: cada um tende a esconder quanto valoriza o bem e a pegar " + azb("carona")
+            + " (<i>free rider</i>) no pagamento alheio. Sem preferências reveladas não há preço, e a provisão "
+            "privada fica abaixo do ótimo — defesa, iluminação pública, segurança.",
+            "Saída: a quantidade e o financiamento passam a ser definidos coletivamente — eleição de "
+            "representantes, proposta do Executivo, votação do orçamento pelo Legislativo. É nesse sentido que "
+            + oc("Musgrave") + " e, no Brasil, " + oc("Giambiagi e Além") + " tratam o processo político como "
+            "<b>substituto</b> do mercado na função alocativa.",
+            "Limite que a banca pode cobrar: a votação também falha (preferências agregadas imperfeitamente, "
+            "grupos de interesse, horizonte eleitoral). A escola da " + azb("escolha pública") + " ("
+            + oc("James Buchanan") + ") chama isso de <b>falhas de governo</b> — o substituto não é perfeito.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " A linguagem rebuscada (“ao dispor em "
+                       "relação a alocações”) e a palavra “substituto” assustam, mas a tese é a de manual. "
+                       "Pista: o item restringe o papel do processo político aos <b>bens públicos</b>, "
+                       "exatamente onde o mercado falha."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…o processo político surge como mecanismo substituto ao sistema de mercado na alocação de "
+            "todos os bens e serviços da economia.”</i> → ERRADO (modulador absoluto: só onde o mercado falha)",
+            "<i>“A não exclusão dos bens públicos estimula o comportamento de carona, o que dificulta sua "
+            "provisão pelo mercado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": ["pode-se dizer"], "dificuldade": 2,
+        "comentario_fonte": ("Certo: com bens públicos (falha de mercado), a alocação não se dá pelo mecanismo de "
+                             "preços, mas pelo processo político, inclusive pela aprovação do orçamento no "
+                             "Legislativo; o governo substitui o mercado na função alocativa."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0569
+    {
+        "id": "ECO-E1-0569-1", "fonte_ref": "E1-0569", "destino": "47", "subtema": H2["func"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2022", "ano": 2022, "cacd": False,
+        "errei": False,
+        "comando": CMD_FUNC,
+        "rotulo_item": "Item",
+        "assertiva": "A política fiscal é incapaz de alterar a distribuição funcional da renda de uma sociedade.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A política fiscal ") + vm("é incapaz") + az(" de alterar a distribuição funcional da "
+                                                                     "renda de uma sociedade.")),
+        "poucas": ("A " + azb("função distributiva") + " existe justamente porque tributos e gastos alteram a "
+                   "repartição da renda — entre pessoas e entre fatores (salários × lucros, juros e aluguéis)."),
+        "destrinchando": [
+            "Dois recortes da distribuição: " + azb("funcional") + " = como a renda nacional se divide entre os "
+            "fatores de produção (salários, lucros, juros, aluguéis) — por exemplo, a participação dos salários "
+            "no PIB; " + azb("pessoal") + " = como se divide entre indivíduos ou famílias, medida pelo "
+            + azb("índice de Gini") + " ou pela fatia dos 10% mais ricos.",
+            "A política fiscal mexe na funcional quando tributa de forma diferente o trabalho e o capital "
+            "(encargos sobre a folha × tributação de lucros e dividendos), quando desonera a folha, quando paga "
+            "juros da dívida pública (renda que vai para detentores de capital) ou quando o gasto público eleva "
+            "a demanda por trabalho.",
+            "Na pessoal, os instrumentos clássicos são a " + azb("tributação progressiva") + " (IR com "
+            "alíquotas crescentes), as " + azb("transferências") + " (Bolsa Família, BPC) e os subsídios a bens "
+            "consumidos pelos mais pobres.",
+            "Tríade de " + oc("Musgrave") + ", adotada pelo " + rx("Tesouro Nacional") + ": a política fiscal "
+            "arrecada e gasta para cumprir as funções " + vd("alocativa, distributiva e estabilizadora")
+            + ". Negar a capacidade distributiva é negar uma das três.",
+        ],
+        "dissecando": (cz("[modulador absoluto · contradição]") + " “Incapaz” é absoluto e contraria a "
+                       "doutrina. O adjetivo “funcional” tenta fazer o candidato hesitar (a distribuição entre "
+                       "fatores parece “do mercado”), mas tributar capital e trabalho de forma diferente já a "
+                       "altera. 🔥 Absolutos negativos (“incapaz”, “nunca”) em funções do governo são quase "
+                       "sempre ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A distribuição funcional da renda refere-se à repartição da renda entre os fatores de "
+            "produção.”</i> → CERTO",
+            "<i>“O índice de Gini mede a distribuição funcional da renda.”</i> → ERRADO (troca de conceito: "
+            "mede a pessoal)",
+        ])],
+        "reescrita": ("A política fiscal " + hl("é capaz") + " de alterar a distribuição funcional da renda de "
+                      "uma sociedade."),
+        "tipo_erro": ["GENERALIZACAO", "CONTRADICAO"], "moduladores": ["incapaz"], "dificuldade": 1,
+        "comentario_fonte": ("Errado: a distributiva é uma das três funções da política fiscal; tributos "
+                             "progressivos e transferências alteram a distribuição (citações do Tesouro Nacional e "
+                             "do Blog do IBRE). Nenhum comentário distingue distribuição funcional de pessoal."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0570
+    {
+        "id": "ECO-E1-0570-1", "fonte_ref": "E1-0570", "destino": "47", "subtema": H2["func"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2022", "ano": 2022, "cacd": False,
+        "errei": False,
+        "comando": CMD_FUNC,
+        "rotulo_item": "Item",
+        "assertiva": "Um dos principais instrumentos da função distributiva da política fiscal são os tributos.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("<u>Um dos</u> principais instrumentos da função distributiva da política fiscal são os "
+                      "<u>tributos</u>."),
+        "poucas": ("A " + azb("função distributiva") + " usa os dois lados do orçamento: " + azb("tributação "
+                   "progressiva") + " (arrecadar mais de quem ganha mais) e transferências e gastos focalizados. "
+                   "Os tributos são um dos instrumentos centrais."),
+        "destrinchando": [
+            "Na lista de " + oc("Giambiagi e Além") + ", os instrumentos da função distributiva são "
+            + vd("três") + ": transferências, impostos e subsídios. Por exemplo, imposto progressivo que "
+            "financia programas para a população de baixa renda; subsídio a bens consumidos sobretudo pelos "
+            "mais pobres.",
+            "Pelo lado da receita: alíquotas do IR crescentes com a renda, faixa de isenção mais alta, tributação "
+            "de grandes heranças e patrimônio, menor peso dos tributos sobre consumo (regressivos).",
+            "Pelo lado do gasto: transferências focalizadas (Bolsa Família, BPC), saúde e educação gratuitas. "
+            "No " + rx("Brasil") + ", estudos de incidência mostram que as transferências reduzem mais a "
+            "desigualdade do que os tributos, porque a carga recai muito sobre o consumo.",
+            "Exemplo recente: a reforma do IR aprovada em 2025 amplia a isenção para rendas de até "
+            + vd("R$ 5 mil mensais") + " a partir de 2026 e cria tributação mínima sobre altas rendas — medida "
+            "típica da função distributiva ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " “Um dos” protege o item: não afirma que os "
+                       "tributos sejam o único nem o principal instrumento. A troca perigosa seria por "
+                       "“o único” ou “exclusivamente”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O único instrumento da função distributiva da política fiscal são os tributos "
+            "progressivos.”</i> → ERRADO (restrição indevida: há transferências e subsídios)",
+            "<i>“A elevação da participação dos tributos indiretos na arrecadação tende a reforçar a função "
+            "distributiva.”</i> → ERRADO (inversão: tributos indiretos tendem a ser regressivos)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["um dos"], "dificuldade": 1,
+        "comentario_fonte": ("Certo: para distribuir renda o governo tributa e gasta de forma progressiva; o IR "
+                             "pode ter alíquotas maiores para rendas altas e faixa de isenção mais alta; citação "
+                             "do Tesouro Nacional sobre as três funções."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0571
+    {
+        "id": "ECO-E1-0571-1", "fonte_ref": "E1-0571", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo o princípio do benefício, uma tributação justa é aquela que faz com que o indivíduo "
+                      "pague o tributo de modo a igualar o preço do serviço recebido ao benefício marginal que ele "
+                      "aufere com sua utilização."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo o princípio do benefício, uma tributação justa é aquela que faz com que o indivíduo "
+                      "pague o tributo de modo a igualar o preço do serviço recebido ao <u>benefício "
+                      "marginal</u> que ele aufere com sua utilização."),
+        "poucas": ("No " + azb("princípio do benefício") + " o tributo funciona como um <b>preço</b>: cada um "
+                   "paga pelo serviço público o equivalente ao " + azb("benefício marginal") + " que obtém, como "
+                   "num mercado."),
+        "destrinchando": [
+            "Dois critérios clássicos de justiça tributária: o " + azb("princípio do benefício") + " (paga quem "
+            "usa, na medida do benefício) e o da " + azb("capacidade de pagamento") + " (paga quem pode, na "
+            "medida da renda ou da riqueza).",
+            "No do benefício, a referência é o mercado: lá, o consumidor compra até o ponto em que o preço iguala "
+            "o benefício marginal. Aplicado ao setor público, gera os " + azb("preços de Lindahl") + " (" + oc("Erik "
+            "Lindahl") + ", na tradição de " + oc("Wicksell") + "): cada um paga uma parcela do custo do bem "
+            "público igual à sua valoração marginal, e a soma das parcelas cobre o custo.",
+            "Onde ele funciona: serviços com usuário identificável e exclusão possível — " + azb("taxas")
+            + " (emissão de passaporte, coleta de lixo), pedágio, " + azb("contribuição de melhoria") + " "
+            "(valorização do imóvel por obra pública).",
+            "Onde ele falha: bens públicos puros, porque ninguém revela o benefício que tira (carona) — e ele "
+            "não tem vocação redistributiva: quem recebe mais do Estado pagaria mais, o que inviabilizaria "
+            "transferências aos pobres.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Definição de manual com um termo técnico decisivo: "
+                       "“benefício <b>marginal</b>”. A banca poderia trocar por “benefício total” ou “custo "
+                       "marginal de produção”, ou atribuir a definição à capacidade de pagamento."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o princípio da capacidade de pagamento, cada indivíduo deve pagar tributo igual ao "
+            "benefício marginal que aufere dos serviços públicos.”</i> → ERRADO (troca de conceito: é o "
+            "princípio do benefício)",
+            "<i>“O princípio do benefício é o fundamento usual das taxas cobradas por serviços públicos "
+            "divisíveis.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. O princípio do benefício defende que os indivíduos paguem tributos "
+                             "proporcionalmente ao benefício que recebem dos serviços públicos, como se fosse o "
+                             "preço desses serviços."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0572
+    {
+        "id": "ECO-E1-0572-1", "fonte_ref": "E1-0572", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Observa-se o princípio da neutralidade tributária quando as decisões alocativas dos "
+                      "diferentes agentes são afetadas por alterações dos preços relativos desencadeadas pela "
+                      "tributação."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Observa-se o princípio da neutralidade tributária quando as decisões alocativas dos "
+                       "diferentes agentes ") + vm("são afetadas") + az(" por alterações dos preços relativos "
+                                                                         "desencadeadas pela tributação.")),
+        "poucas": ("Tributo " + azb("neutro") + " é o que <b>não</b> altera preços relativos nem, portanto, as "
+                   "decisões de consumir, produzir e investir. O item descreve a quebra da neutralidade."),
+        "destrinchando": [
+            "Pelo " + azb("princípio da neutralidade") + ", o sistema tributário deve arrecadar sem distorcer a "
+            "alocação que o mercado faria: os agentes escolhem o que consumir, como produzir e onde investir "
+            "como se o tributo não existisse.",
+            "Quando o tributo muda preços relativos, os agentes trocam o bem tributado por outros, produzem "
+            "menos e deixam de fazer trocas vantajosas: surge o " + azb("excesso de carga")
+            + " (peso morto), custo de eficiência além do valor arrecadado.",
+            "Neutralidade perfeita só o " + azb("tributo lump-sum") + " (valor fixo, que não depende de nenhuma "
+            "decisão). Na prática, busca-se reduzir distorções: base ampla, alíquota uniforme, não "
+            "cumulatividade. O IVA dual (CBS e IBS) da reforma tributária do " + rx("Brasil") + " (" + vd("EC "
+            "132/2023") + ") foi justificado pela neutralidade, contra a cumulatividade e a guerra fiscal do "
+            "modelo antigo.",
+            "Exceção deliberada: tributos " + azb("extrafiscais") + " e " + azb("pigouvianos") + " (cigarro, "
+            "poluição) querem <b>mudar</b> comportamentos — abrem mão da neutralidade para corrigir "
+            "externalidades.",
+            vm("Regra-âncora: neutro = não altera preços relativos nem decisões; se altera, há distorção."),
+        ],
+        "dissecando": (cz("[inversão]") + " O item pega a descrição da distorção e a chama de neutralidade: "
+                       "trocou-se “não são afetadas” por “são afetadas”. O resto (decisões alocativas, preços "
+                       "relativos, tributação) é vocabulário correto, o que dá ar de verdade à frase."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto de valor fixo por pessoa, independente de renda ou consumo, aproxima-se da "
+            "neutralidade plena.”</i> → CERTO",
+            "<i>“Tributos cumulativos, em cascata, favorecem a neutralidade por incidirem em todas as etapas "
+            "da produção.”</i> → ERRADO (inversão: a cascata distorce e induz verticalização)",
+        ])],
+        "reescrita": ("Observa-se o princípio da neutralidade tributária quando as decisões alocativas dos "
+                      "diferentes agentes " + hl("não são afetadas") + " por alterações dos preços relativos "
+                      "desencadeadas pela tributação."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. A neutralidade exige que a tributação não afete as decisões alocativas; se "
+                             "os preços relativos mudam e as escolhas também, a neutralidade não é respeitada."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0573
+    {
+        "id": "ECO-E1-0573-1", "fonte_ref": "E1-0573", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("A adoção de um Imposto de Renda regressivo, embora contrarie orientações redistributivas, "
+                      "atende o princípio da capacidade de pagamento."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A adoção de um Imposto de Renda regressivo, ") + vm("embora contrarie")
+                    + az(" orientações redistributivas, ") + vm("atende") + az(" o princípio da capacidade de "
+                                                                              "pagamento.")),
+        "poucas": ("A " + azb("capacidade de pagamento") + " pede que quem tem mais renda contribua com "
+                   "<b>parcela maior</b>; um IR " + azb("regressivo") + " faz o contrário e viola o princípio, "
+                   "não o atende."),
+        "destrinchando": [
+            "O " + azb("princípio da capacidade de pagamento") + " (ou capacidade contributiva) gradua o tributo "
+            "pela renda ou riqueza de cada um. Tem duas faces: " + azb("equidade horizontal") + " (quem tem a "
+            "mesma capacidade paga o mesmo) e " + azb("equidade vertical") + " (quem tem mais capacidade paga "
+            "mais).",
+            "A equidade vertical é a base da " + azb("progressividade") + ": alíquota efetiva crescente com a "
+            "renda. No " + rx("Brasil") + ", a " + vd("CF/1988, art. 145, § 1º") + " manda graduar os impostos "
+            "“segundo a capacidade econômica do contribuinte”, e o art. 153, § 2º, I, exige que o IR seja "
+            "informado pela progressividade.",
+            "Imposto " + azb("regressivo") + " = alíquota efetiva que cai quando a renda sobe: o pobre "
+            "compromete fração maior da renda que o rico. Fere a equidade vertical e, logo, a capacidade de "
+            "pagamento.",
+            "Por isso não há o contraste sugerido pelo “embora”: capacidade de pagamento e orientação "
+            "redistributiva apontam no mesmo sentido. Quem se opõe à lógica redistributiva é o "
+            + azb("princípio do benefício") + ", que cobra pelo uso, não pela renda.",
+        ],
+        "dissecando": (cz("[contradição · nexo indevido]") + " O conector concessivo “embora” fabrica uma "
+                       "oposição falsa entre redistribuição e capacidade de pagamento, que andam juntas. Ao "
+                       "admitir que o tributo contraria a redistribuição, o próprio item entrega o erro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto de renda progressivo é a expressão típica do princípio da capacidade de "
+            "pagamento.”</i> → CERTO",
+            "<i>“O princípio da capacidade de pagamento concretiza-se apenas com alíquotas progressivas, sendo "
+            "incompatível com alíquotas proporcionais.”</i> → ERRADO (restrição indevida: a proporcional já "
+            "cobra mais, em valor, de quem ganha mais)",
+        ])],
+        "reescrita": ("A adoção de um Imposto de Renda regressivo, " + hl("além de contrariar") + " orientações "
+                      "redistributivas, " + hl("viola") + " o princípio da capacidade de pagamento."),
+        "tipo_erro": ["CONTRADICAO", "NEXO_INDEVIDO"], "moduladores": ["embora"], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. A capacidade de pagamento exige que quem tem mais pague mais "
+                             "proporcionalmente; o imposto regressivo onera proporcionalmente mais os de menor "
+                             "renda."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0574
+    {
+        "id": "ECO-E1-0574-1", "fonte_ref": "E1-0574", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("O princípio da equidade é observado quando o ônus da tributação é distribuído de maneira "
+                      "justa entre os indivíduos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O princípio da equidade é observado quando o ônus da tributação é distribuído de maneira "
+                      "<u>justa</u> entre os indivíduos."),
+        "poucas": ("É a definição de " + azb("equidade tributária") + ": repartir o ônus de forma justa. O "
+                   "debate está em <b>como</b> medir o justo — pelo benefício ou pela capacidade de pagamento."),
+        "destrinchando": [
+            "Os princípios clássicos de um bom sistema tributário: " + azb("equidade") + ", "
+            + azb("neutralidade") + " (eficiência), " + azb("simplicidade") + " e " + azb("progressividade")
+            + " — já presentes nos cânones de " + oc("Adam Smith") + " (<i>A Riqueza das Nações</i>, 1776), "
+            "cujo primeiro cânone pede que cada um contribua na proporção de sua capacidade.",
+            "Equidade = distribuição <b>justa</b> do ônus. Dois critérios para dizer o que é justo: o "
+            + azb("princípio do benefício") + " (paga mais quem mais usa os serviços públicos) e o da "
+            + azb("capacidade de pagamento") + " (paga mais quem tem mais renda ou riqueza).",
+            "Dentro da capacidade de pagamento: " + azb("equidade horizontal") + " — iguais pagam igual (duas "
+            "famílias com a mesma renda não podem pagar valores diferentes por causa da fonte da renda) — e "
+            + azb("equidade vertical") + " — desiguais pagam desigualmente, base da progressividade.",
+            "Conflito clássico: equidade × eficiência. Tributar mais as bases inelásticas reduz o peso morto "
+            "(regra de " + oc("Ramsey") + "), mas bens de demanda inelástica, como alimentos, pesam mais no "
+            "orçamento dos pobres — a tributação mais eficiente tende a ser menos equitativa.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição genérica, sem armadilha de modulador. A banca "
+                       "costuma fabricar o ERRADO trocando a equidade pela neutralidade (“não alterar decisões”) "
+                       "ou dizendo que a progressividade a contraria."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A equidade horizontal exige que contribuintes com maior capacidade econômica paguem mais "
+            "tributo.”</i> → ERRADO (troca de conceito: isso é equidade vertical)",
+            "<i>“O princípio da equidade é observado quando a tributação não altera os preços relativos da "
+            "economia.”</i> → ERRADO (troca de conceito: é a neutralidade)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. A equidade está ligada à justiça distributiva e busca que a carga recaia de "
+                             "forma justa, respeitando as diferenças de capacidade de pagamento."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0575
+    {
+        "id": "ECO-E1-0575-1", "fonte_ref": "E1-0575", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Nas relações entre tributação e atividade econômica: os impostos regressivos geram uma "
+                      "contribuição proporcionalmente maior que o incremento ocorrido na renda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Nas relações entre tributação e atividade econômica: os impostos ") + vm("regressivos")
+                    + az(" geram uma contribuição proporcionalmente maior que o incremento ocorrido na renda.")),
+        "poucas": ("Imposto cuja arrecadação cresce " + azb("mais que proporcionalmente") + " à renda é "
+                   + azb("progressivo") + " (elasticidade-renda > 1). No regressivo, o imposto cresce menos que "
+                   "a renda."),
+        "destrinchando": [
+            "Classificação pela relação entre o imposto (T) e a renda (Y), ou seja, pela " + azb("alíquota "
+            "média") + " T/Y: " + vd("progressivo") + " → T/Y sobe com Y (o imposto cresce mais que a renda); "
+            + vd("proporcional") + " → T/Y constante; " + vd("regressivo") + " → T/Y cai com Y (o imposto "
+            "cresce menos que a renda, ou nem cresce).",
+            "Em elasticidade: ε = %ΔT ÷ %ΔY. ε > 1 → progressivo; ε = 1 → proporcional; ε < 1 → regressivo. "
+            "O item descreve ε > 1 e dá o nome errado.",
+            "Exemplos: IR com alíquotas marginais crescentes (renda 10% maior → imposto mais de 10% maior) é "
+            "progressivo; um tributo de valor fixo por pessoa é o caso extremo de regressivo (a renda dobra e o "
+            "imposto fica igual, então T/Y cai pela metade); o ICMS sobre alimentos tende a ser regressivo, porque "
+            "o consumo cresce menos que a renda.",
+            "Consequência macro: tributos progressivos são " + azb("estabilizadores automáticos") + " mais "
+            "potentes — na expansão a arrecadação sobe mais que a renda e freia a demanda; na recessão, cai mais "
+            "que a renda e amortece a queda.",
+            vm("Regra-âncora: imposto cresce mais que a renda → progressivo; menos → regressivo."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A definição está correta, só o rótulo foi trocado. A "
+                       "redação indireta (“contribuição proporcionalmente maior que o incremento”) obriga a "
+                       "traduzir para T/Y antes de julgar — quem associa “maior” a “pior para o pobre” cai."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os impostos progressivos geram uma contribuição proporcionalmente maior que o incremento "
+            "ocorrido na renda.”</i> → CERTO",
+            "<i>“Um imposto de valor fixo por contribuinte é proporcional, pois todos pagam o mesmo "
+            "montante.”</i> → ERRADO (troca de conceito: T/Y cai com a renda — é regressivo)",
+        ])],
+        "reescrita": ("Nas relações entre tributação e atividade econômica: os impostos " + hl("progressivos")
+                      + " geram uma contribuição proporcionalmente maior que o incremento ocorrido na renda."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("ERRADO. Impostos regressivos oneram proporcionalmente mais os mais pobres, "
+                             "independentemente do crescimento da renda; a frase está mal formulada."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0576
+    {
+        "id": "ECO-E1-0576-1", "fonte_ref": "E1-0576", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Sobre a estrutura tributária de um país: a produtividade dos tributos em contribuir com a "
+                      "receita fiscal é medida pelos coeficientes de elasticidade de receita em relação à renda "
+                      "nacional para diferentes alternativas de tributação."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Sobre a estrutura tributária de um país: a produtividade dos tributos em contribuir com a "
+                      "receita fiscal é medida pelos coeficientes de <u>elasticidade de receita em relação à "
+                      "renda nacional</u> para diferentes alternativas de tributação."),
+        "poucas": ("A " + azb("produtividade") + " de um tributo é sua capacidade de gerar receita à medida que "
+                   "a economia cresce, medida pela " + azb("elasticidade-renda da arrecadação") + " (%ΔT ÷ "
+                   "%ΔY)."),
+        "destrinchando": [
+            "Coeficiente: ε = %Δarrecadação ÷ %Δrenda. Com " + vd("ε > 1") + ", a receita cresce mais que a "
+            "renda e a carga sobe sozinha com o crescimento; com " + vd("ε < 1") + ", a receita perde terreno e "
+            "o governo precisa de novos tributos ou de alíquotas maiores para manter a carga.",
+            "Comparar os coeficientes de várias alternativas (IR, tributos sobre consumo, sobre patrimônio, "
+            "sobre comércio exterior) diz quais bases acompanham melhor a expansão da economia — critério de "
+            "planejamento da estrutura tributária.",
+            "O que eleva a elasticidade: alíquotas progressivas (a renda sobe e o contribuinte salta de faixa), "
+            "bases que crescem mais que o PIB (renda urbana formal, consumo de bens duráveis). O que a reduz: "
+            "tributos específicos em valor fixo (não acompanham preços), bases estreitas, muitas isenções.",
+            "Ligação com a política fiscal: tributos de alta elasticidade são também " + azb("estabilizadores "
+            "automáticos") + " mais fortes, porque a arrecadação oscila mais que a renda ao longo do ciclo.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Formulação técnica e pouco intuitiva, típica de "
+                       "manual de finanças públicas. O risco é estranhar “produtividade” (palavra que lembra "
+                       "eficiência produtiva) e marcar ERRADO; aqui ela significa capacidade de arrecadar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um tributo com elasticidade-renda da receita inferior à unidade amplia sua participação na "
+            "arrecadação quando a economia cresce.”</i> → ERRADO (inversão: perde participação)",
+            "<i>“Alíquotas progressivas tendem a elevar a elasticidade-renda da arrecadação.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. A produtividade tributária é analisada pela elasticidade-receita, que mede "
+                             "quanto a arrecadação varia proporcionalmente em resposta a variações na renda "
+                             "nacional."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0577
+    {
+        "id": "ECO-E1-0577-1", "fonte_ref": "E1-0577", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("O sistema tributário brasileiro revela que a incidência de impostos indiretos é "
+                      "necessariamente regressiva em termos da equidade da distribuição pessoal da renda "
+                      "disponível."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("O sistema tributário brasileiro revela que a incidência de impostos indiretos é "
+                      "<u>necessariamente</u> regressiva em termos da equidade da distribuição pessoal da renda "
+                      "disponível."),
+        "poucas": ("Tributos indiretos incidem sobre o " + azb("consumo") + ", que pesa mais na renda dos pobres; "
+                   "no " + rx("Brasil") + ", onde eles dominam a arrecadação, o efeito agregado é "
+                   + azb("regressivo") + "."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "O “necessariamente” é forte demais para a teoria: com " + azb("seletividade")
+                          + " (alíquotas maiores sobre bens de luxo e menores ou nulas sobre a cesta básica), um "
+                          "imposto indireto pode ser neutro ou até progressivo em relação à renda. O CERTO se "
+                          "sustenta como leitura do caso brasileiro — em que a regressividade dos indiretos é "
+                          "achado empírico constante —, não como regra lógica. Numa prova CEBRASPE, o mesmo "
+                          "item formulado em abstrato tenderia a ser ERRADO.")],
+        "destrinchando": [
+            azb("Impostos indiretos") + " (ICMS, IPI, ISS, PIS/Cofins e, após a reforma, IBS e CBS) incidem "
+            "sobre bens e serviços e são repassados ao preço: o contribuinte de fato é o consumidor. "
+            + azb("Diretos") + " (IR, IPTU, IPVA) incidem sobre renda e patrimônio de quem os paga.",
+            "Por que tendem à regressividade: a família pobre consome quase toda a renda; a rica poupa uma "
+            "parte. Com a mesma alíquota sobre o consumo, o imposto representa fatia maior da renda disponível "
+            "de quem ganha menos.",
+            "No " + rx("Brasil") + ", a tributação sobre bens e serviços responde por perto de " + vd("40% da "
+            "arrecadação") + " ⏳ (out/2026), bem acima da média da OCDE, e os estudos de incidência com dados "
+            "da POF (IBGE) mostram que o peso dos indiretos na renda das famílias mais pobres é várias vezes o "
+            "peso nas mais ricas.",
+            "Instrumentos que atenuam: " + azb("seletividade") + " (IPI e ICMS por essencialidade), alíquota "
+            "zero da cesta básica e o " + azb("cashback") + " para famílias de baixa renda previsto na reforma "
+            "tributária (" + vd("EC 132/2023") + ").",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " O item mistura uma constatação empírica (o caso "
+                       "brasileiro) com um modulador absoluto (“necessariamente”), que normalmente sinaliza "
+                       "ERRADO. O gabarito da fonte privilegiou a constatação; em itens assim, o 🔥 padrão "
+                       "CEBRASPE é punir o absoluto quando há exceção teórica (seletividade)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No Brasil, os tributos indiretos tendem a ser regressivos, pois as famílias de menor renda "
+            "destinam ao consumo maior parcela de seus rendimentos.”</i> → CERTO",
+            "<i>“A seletividade das alíquotas impede, por definição, que tributos indiretos sejam "
+            "regressivos.”</i> → ERRADO (modulador absoluto: atenua, não impede)",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": ["necessariamente"], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. Impostos indiretos (ICMS, IPI, PIS/Cofins) incidem sobre o consumo e afetam "
+                             "proporcionalmente mais os pobres, que gastam maior parcela da renda em bens "
+                             "tributados."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: “necessariamente” é absoluto; com seletividade, tributos indiretos podem não "
+                    "ser regressivos — o CERTO da fonte vale como constatação do caso brasileiro"],
+    },
+    # ------------------------------------------------------------------ E1-0578
+    {
+        "id": "ECO-E1-0578-1", "fonte_ref": "E1-0578", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma estrutura tributária com maior parcela de impostos diretos será obrigatoriamente mais "
+                      "progressiva."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma estrutura tributária com maior parcela de impostos diretos ")
+                    + vm("será obrigatoriamente") + az(" mais progressiva.")),
+        "poucas": ("Impostos diretos " + azb("tendem") + " a ser mais progressivos, mas não "
+                   "<b>obrigatoriamente</b>: isenções, alíquotas planas e brechas podem anular a "
+                   "progressividade."),
+        "destrinchando": [
+            "Direto × indireto diz respeito à <b>base</b> (renda e patrimônio × consumo); progressivo × "
+            "regressivo diz respeito ao <b>perfil da alíquota efetiva</b> ao longo da renda. São classificações "
+            "independentes: o vínculo entre elas é tendência, não regra.",
+            "Por que tendem: a renda e o patrimônio permitem alíquotas graduadas e personalizadas (faixas, "
+            "deduções, isenção dos mais pobres), o que o imposto sobre consumo não permite.",
+            "Por que não é obrigatório: um IR de " + azb("alíquota única") + " (<i>flat tax</i>, adotado em "
+            "países do Leste Europeu) é proporcional; contribuições sobre a folha com teto são regressivas no "
+            "topo; e isenções concentradas nas rendas altas quebram a progressividade.",
+            "Caso " + rx("brasileiro") + ": a isenção de lucros e dividendos distribuídos (desde 1995) e a "
+            "tributação de rendas de capital em alíquotas exclusivas faziam a alíquota efetiva do IRPF "
+            + vd("cair") + " no topo da distribuição — o IR, imposto direto por excelência, tornava-se "
+            "regressivo para os mais ricos. A reforma de 2025 criou tributação mínima das altas rendas para "
+            "atacar esse ponto ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[modulador absoluto]") + " O núcleo é verdadeiro como tendência; o "
+                       "“obrigatoriamente” o transforma em lei. 🔥 Em tributação, “necessariamente”, "
+                       "“obrigatoriamente” e “sempre” ligando direto/indireto a progressivo/regressivo são o "
+                       "erro mais comum."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma estrutura tributária com maior parcela de impostos diretos tende a ser mais "
+            "progressiva.”</i> → CERTO",
+            "<i>“Todo imposto sobre a renda é progressivo, por incidir sobre a capacidade contributiva.”</i> → "
+            "ERRADO (modulador absoluto: há IR de alíquota única)",
+        ])],
+        "reescrita": ("Uma estrutura tributária com maior parcela de impostos diretos " + hl("tende a ser")
+                      + " mais progressiva."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["obrigatoriamente"], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. Impostos diretos tendem a ser mais progressivos (IRPF), mas a "
+                             "progressividade pode ser anulada por brechas, isenções ou alíquotas mal calibradas."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0579
+    {
+        "id": "ECO-E1-0579-1", "fonte_ref": "E1-0579", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("A carga tributária é definida como a parcela da renda das famílias destinada aos cofres do "
+                      "setor público."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A carga tributária é definida como a parcela ") + vm("da renda das famílias")
+                    + az(" destinada aos cofres do setor público.")),
+        "poucas": ("A " + azb("carga tributária") + " mede o total arrecadado em tributos (de famílias "
+                   "<b>e</b> empresas, nas três esferas) em proporção do " + vd("PIB") + ", não da renda das "
+                   "famílias."),
+        "destrinchando": [
+            "Definição: " + vd("CTB = arrecadação tributária total ÷ PIB") + ". O numerador soma impostos, "
+            "taxas e contribuições (inclusive previdenciárias) da União, dos estados e dos municípios.",
+            "Por que não “renda das famílias”: parte relevante dos tributos é recolhida pelas empresas (IRPJ, "
+            "CSLL, contribuições sobre a folha e o faturamento) e incide sobre lucros e transações, não só sobre "
+            "a renda pessoal. O denominador também é outro: o PIB mede toda a renda gerada no país, não só a "
+            "das famílias.",
+            "Mesmo que, ao fim, todo tributo seja pago por pessoas (consumidores, trabalhadores ou acionistas), "
+            "a <b>medida</b> de carga não acompanha esse caminho: ela relaciona arrecadação e produto agregado.",
+            "Medidas vizinhas: " + azb("carga tributária líquida") + " (bruta menos transferências, subsídios e "
+            "juros pagos pelo governo) e, para a família, a " + azb("alíquota efetiva") + " (tributos pagos ÷ "
+            "renda), usada nos estudos de progressividade. No " + rx("Brasil") + ", a CTB fica perto de "
+            + vd("um terço do PIB") + " ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[troca de conceito · restrição indevida]") + " Troca a base da medida (PIB) por um "
+                       "agregado menor (renda das famílias), restringindo quem paga. A frase soa intuitiva — "
+                       "“quanto do que ganho vai para o governo” —, e é por isso que engana."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A carga tributária bruta corresponde à razão entre a arrecadação total de tributos das três "
+            "esferas de governo e o produto interno bruto.”</i> → CERTO",
+            "<i>“A carga tributária líquida é sempre superior à bruta.”</i> → ERRADO (inversão: a líquida "
+            "desconta as transferências)",
+        ])],
+        "reescrita": ("A carga tributária é definida como a parcela " + hl("do produto interno bruto (PIB)")
+                      + " destinada aos cofres do setor público."),
+        "tipo_erro": ["TROCA_CONCEITO", "RESTRICAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. A carga tributária é a relação entre o total arrecadado pelo Estado "
+                             "(impostos, contribuições e taxas) e o PIB, não apenas a renda das famílias."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0380-1 (outro item sobre a definição de carga tributária)"],
+    },
 ]

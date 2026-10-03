@@ -1145,7 +1145,8 @@ CARDS = [
             "pela autoridade monetária × demanda (transação, precaução, especulação).",
             "Na ótica keynesiana, poupança e investimento se igualam pela variação da " + vd("renda") + ", não "
             "dos juros: se o investimento cai, a renda cai até que a poupança gerada iguale o novo "
-            "investimento (paradoxo da parcimônia).",
+            "investimento; pela mesma lógica, a tentativa de poupar mais reduz a renda sem elevar a poupança "
+            "agregada (paradoxo da parcimônia).",
             "Os juros entram no lado real como " + azb("variável de transmissão") + ": comparados à "
             "eficiência marginal do capital, determinam o investimento. No IS-LM de " + oc("Hicks") + ", os "
             "dois mercados se resolvem juntos — a síntese, não Keynes puro.",

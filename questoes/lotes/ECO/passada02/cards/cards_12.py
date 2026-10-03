@@ -1044,7 +1044,7 @@ CARDS = [
             "produção.”</i> → ERRADO (sentido trocado)",
         ])],
         "reescrita": ("O fenômeno da estagflação ocorre quando a " + hl("oferta") + " agregada sofre um "
-                      "significativo impacto " + hl("adverso") + ", que acarreta aumento de preços e redução da "
+                      "significativo impacto" + hl(" adverso") + ", que acarreta aumento de preços e redução da "
                       "produção."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Estagflação: choque adverso na oferta agregada (choque do petróleo), custos maiores, "

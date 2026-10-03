@@ -583,4 +583,385 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0603
+    {
+        "id": "ECO-E1-0603-1", "fonte_ref": "E1-0603", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ESTAB,
+        "rotulo_item": "Item",
+        "assertiva": ("O aumento dos gastos do governo quando a economia está em depressão e a diminuição desses mesmos "
+                      "gastos quando a economia está em crescimento acelerado, pressionando a taxa de inflação, são "
+                      "medidas de política de estabilização da economia."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O <u>aumento</u> dos gastos do governo quando a economia está em <u>depressão</u> e a "
+                      "<u>diminuição</u> desses mesmos gastos quando a economia está em <u>crescimento acelerado</u>, "
+                      "pressionando a taxa de inflação, são medidas de política de estabilização da economia."),
+        "poucas": ("É a " + azb("política fiscal anticíclica") + ": gastar mais na recessão e menos no "
+                   "superaquecimento suaviza o ciclo — o núcleo da " + azb("função estabilizadora") + " do Estado."),
+        "destrinchando": [
+            "Lógica keynesiana: na depressão, a " + azb("demanda agregada") + " é insuficiente e há capacidade "
+            "ociosa e desemprego; o gasto público adicional ocupa esse espaço e, via " + azb("multiplicador")
+            + ", eleva a renda mais do que o próprio gasto. No boom, a demanda supera a capacidade e pressiona os "
+            "preços; cortar gasto esfria a economia e contém a inflação.",
+            "No modelo IS-LM, o aumento de G desloca a IS para a direita (Y↑, i↑); o corte a desloca para a esquerda "
+            "(Y↓, i↓). No OA-DA, a DA se desloca no mesmo sentido.",
+            "Há ainda os " + azb("estabilizadores automáticos") + ": seguro-desemprego e impostos progressivos "
+            "variam sozinhos com o ciclo (gasto sobe e receita cai na recessão), sem nova decisão do governo.",
+            "Limites: " + azb("defasagens") + " (reconhecer, aprovar e executar leva tempo), " + azb("efeito "
+            "deslocamento") + " (crowding out) via juros e o viés político de gastar na recessão e não cortar na "
+            "expansão — o que transforma a política anticíclica em déficit permanente.",
+            vm("Regra-âncora: anticíclica = remar contra o ciclo; pró-cíclica = acompanhar o ciclo e ampliar a "
+               "oscilação."),
+        ],
+        "dissecando": (cz("[literalidade]") + " O item descreve corretamente os dois lados da política anticíclica. "
+                       "A pegadinha possível seria inverter um dos lados (cortar gasto na depressão), o que tornaria a "
+                       "política pró-cíclica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A redução dos gastos do governo durante uma depressão é medida típica de política anticíclica.”</i> "
+            "→ ERRADO (inversão: isso é pró-cíclico)",
+            "<i>“O seguro-desemprego atua como estabilizador automático.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Política fiscal anticíclica, instrumento de estabilização: estimula a economia em "
+                            "recessões e contém pressões inflacionárias no superaquecimento.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0604
+    {
+        "id": "ECO-E1-0604-1", "fonte_ref": "E1-0604", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_CONTR,
+        "rotulo_item": "Item",
+        "assertiva": "Na política fiscal contracionista ocorre aumento de taxa de juros.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na política ") + vm("fiscal") + az(" contracionista ocorre aumento de taxa de juros."),
+        "poucas": ("Elevar juros é instrumento de política " + azb("monetária") + " contracionista. A política "
+                   + azb("fiscal") + " mexe em gastos e tributos — e, no IS-LM, sua versão contracionista até "
+                   + "<b>reduz</b> os juros."),
+        "destrinchando": [
+            "Divisão de instrumentos: " + azb("política fiscal") + " = gasto público, tributos e transferências "
+            "(Tesouro, Congresso); " + azb("política monetária") + " = taxa básica de juros, oferta de moeda, "
+            "compulsório, redesconto, open market (Banco Central).",
+            "Política fiscal contracionista: corte de gastos ou alta de impostos. No " + azb("IS-LM") + ", a IS se "
+            "desloca para a esquerda: a renda cai, a demanda por moeda cai e a taxa de juros de equilíbrio "
+            + vd("cai") + " — o oposto do que o item afirma.",
+            "Política monetária contracionista: o BC eleva a taxa básica (no " + rx("Brasil") + ", a Selic) ou "
+            "reduz a oferta de moeda; a LM se desloca para a esquerda, com " + vd("i↑") + " e " + vd("Y↓") + ".",
+            "Combinação clássica de ajuste: fiscal contracionista + monetária expansionista permite derrubar o "
+            "déficit e os juros sem derrubar tanto a renda — o chamado " + azb("policy mix") + ".",
+            vm("Regra-âncora: juros e moeda → monetária (LM); gastos e tributos → fiscal (IS)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item atribui à política fiscal um efeito/instrumento da "
+                       "monetária. Itens da série “Na política fiscal contracionista ocorre…” se resolvem "
+                       "perguntando: isto é gasto ou tributo? Se for juros ou moeda, é outra política."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na política monetária contracionista ocorre aumento da taxa de juros.”</i> → CERTO",
+            "<i>“No modelo IS-LM, a política fiscal contracionista reduz a renda e a taxa de juros.”</i> → CERTO",
+        ])],
+        "reescrita": "Na política " + hl("monetária") + " contracionista ocorre aumento de taxa de juros.",
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. O aumento da taxa de juros é instrumento de política monetária contracionista, "
+                            "não fiscal; a política fiscal atua sobre gastos e tributos.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0605
+    {
+        "id": "ECO-E1-0605-1", "fonte_ref": "E1-0605", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_CONTR,
+        "rotulo_item": "Item",
+        "assertiva": "Na política fiscal contracionista ocorre emissão de moeda.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na política ") + vm("fiscal contracionista") + az(" ocorre emissão de moeda."),
+        "poucas": ("Emitir moeda é política " + azb("monetária expansionista") + ". O item erra duas vezes: o tipo "
+                   "de política (fiscal × monetária) e o sentido (contracionista × expansionista)."),
+        "destrinchando": [
+            "Emissão de moeda amplia a base monetária e a liquidez: é medida " + azb("expansionista") + ", conduzida "
+            "pelo " + azb("Banco Central") + " (no open market, comprando títulos; no redesconto, emprestando aos "
+            "bancos). No IS-LM, desloca a LM para a direita: i↓, Y↑.",
+            "Política fiscal contracionista é corte de gastos ou alta de tributos: <b>tira</b> dinheiro de "
+            "circulação na economia real, em vez de pôr.",
+            "A única ponte entre fiscal e emissão é o " + azb("financiamento monetário do déficit") + " "
+            "(senhoriagem): o governo gasta mais do que arrecada e o BC cobre a diferença imprimindo moeda — "
+            "situação de política fiscal <b>expansionista</b>, associada a inflação alta. No " + rx("Brasil")
+            + ", a CF/1988 proíbe o BC de financiar diretamente o Tesouro (" + vd("art. 164, § 1º") + ").",
+            vm("Regra-âncora: emissão de moeda = monetária expansionista; política fiscal não emite moeda."),
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " Duplo erro empilhado: troca o tipo de política e o "
+                       "sentido da medida. Na série de itens sobre política fiscal contracionista, só “aumento de "
+                       "impostos” e “redução de gastos públicos” são CERTO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na política monetária expansionista ocorre emissão de moeda.”</i> → CERTO",
+            "<i>“O financiamento do déficit público por emissão de moeda caracteriza política fiscal "
+            "contracionista.”</i> → ERRADO (inversão: o déficit é expansionista)",
+        ])],
+        "reescrita": "Na política " + hl("monetária expansionista") + " ocorre emissão de moeda.",
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. A emissão de moeda está ligada à política monetária expansionista, realizada "
+                            "pelo Banco Central; política fiscal não envolve emissão de moeda diretamente.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [FIG_PERDIDA("Untitled (113).jpeg")],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0606
+    {
+        "id": "ECO-E1-0606-1", "fonte_ref": "E1-0606", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_CONTR,
+        "rotulo_item": "Item",
+        "assertiva": "Na política fiscal contracionista ocorre aumento de impostos.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na política fiscal contracionista ocorre <u>aumento de impostos</u>."),
+        "poucas": ("Política fiscal contracionista = " + azb("alta de tributos") + " e/ou " + azb("corte de gastos")
+                   + " públicos: reduz a demanda agregada e a renda."),
+        "destrinchando": [
+            "Aumento de impostos reduz a " + azb("renda disponível") + " (Y − T); as famílias consomem menos e a "
+            "demanda agregada cai. Pela cruz keynesiana, o efeito sobre a renda é dado pelo multiplicador dos "
+            "tributos: " + vd("ΔY = −c/(1 − c) · ΔT") + ", menor em módulo que o do gasto (" + vd("1/(1 − c)")
+            + "), porque parte do imposto teria sido poupada.",
+            "No " + azb("IS-LM") + ", alta de impostos ou corte de gastos desloca a " + azb("IS para a esquerda")
+            + ": a renda cai e, com menos demanda por moeda, os juros de equilíbrio também caem.",
+            "No " + azb("OA-DA") + ", a DA se desloca para a esquerda: menos produto e menos pressão inflacionária "
+            "no curto prazo — por isso a contração fiscal é receita de combate a superaquecimento e de ajuste das "
+            "contas públicas.",
+            "Os instrumentos fiscais são três: gasto, tributo e transferência. Contracionista é qualquer combinação "
+            "que reduza a demanda: ↑T, ↓G, ↓transferências.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Único item CERTO da série sobre o que “ocorre” na política fiscal "
+                       "contracionista ao lado do corte de gastos públicos. Os distratores costumam ser juros, "
+                       "emissão de moeda, aumento de gastos públicos ou privados."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na política fiscal contracionista, o aumento de impostos desloca a IS para a esquerda e eleva a "
+            "taxa de juros.”</i> → ERRADO (inversão: os juros caem)",
+            "<i>“O multiplicador dos tributos é, em módulo, maior que o multiplicador dos gastos.”</i> → ERRADO "
+            "(inversão: é menor)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. A política fiscal contracionista reduz a demanda agregada por aumento de impostos "
+                            "ou redução de gastos; no IS-LM, desloca a IS para a esquerda, reduzindo renda e juros.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [FIG_PERDIDA("Untitled (101).jpeg")],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0607
+    {
+        "id": "ECO-E1-0607-1", "fonte_ref": "E1-0607", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_CONTR,
+        "rotulo_item": "Item",
+        "assertiva": "Na política fiscal contracionista ocorre aumento de gastos privados.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na política fiscal contracionista ocorre ") + vm("aumento") + az(" de gastos privados."),
+        "poucas": ("A contração fiscal reduz a " + azb("renda disponível") + " e a renda agregada; com isso, o "
+                   "consumo das famílias cai. O efeito típico sobre os gastos privados é de " + azb("redução") + "."),
+        "destrinchando": [
+            "Canal direto: alta de impostos corta a renda disponível (Y − T) → o " + azb("consumo") + " cai pela "
+            "propensão marginal a consumir. Canal indireto: corte de gasto público reduz a renda de fornecedores e "
+            "trabalhadores → menos consumo, pelo " + azb("multiplicador") + ".",
+            "Na cruz keynesiana (investimento autônomo), o único efeito sobre o gasto privado é a queda do consumo. "
+            "O gasto privado não “ocupa” o espaço deixado pelo governo.",
+            "Nuance de IS-LM: como os juros caem com a contração fiscal, o " + azb("investimento") + " pode subir "
+            "(o inverso do " + azb("crowding out") + ", às vezes chamado de crowding in). Mas isso só atenua a "
+            "queda da renda; o efeito dominante sobre consumo e demanda é contracionista.",
+            "Tese oposta — a " + azb("contração fiscal expansionista") + " — sustenta que um ajuste crível pode "
+            "elevar a confiança e o gasto privado. É hipótese controversa, não o efeito padrão cobrado em prova.",
+        ],
+        "dissecando": (cz("[inversão]") + " O item inverte o sentido do efeito: contração gera redução da demanda "
+                       "privada, não aumento. Na série “ocorre…”, só aumento de impostos e corte de gastos públicos "
+                       "descrevem a política contracionista."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na política fiscal contracionista ocorre redução da renda disponível das famílias.”</i> → CERTO",
+            "<i>“No IS-LM, a política fiscal contracionista, ao reduzir os juros, pode estimular o investimento "
+            "privado.”</i> → CERTO",
+        ])],
+        "reescrita": "Na política fiscal contracionista ocorre " + hl("redução") + " de gastos privados.",
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. A política fiscal contracionista reduz a renda disponível e a demanda agregada, "
+                            "o que tende a reduzir os gastos privados.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0608
+    {
+        "id": "ECO-E1-0608-1", "fonte_ref": "E1-0608", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_CONTR,
+        "rotulo_item": "Item",
+        "assertiva": "Na política fiscal contracionista ocorre aumento de gastos públicos.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na política fiscal contracionista ocorre ") + vm("aumento") + az(" de gastos públicos."),
+        "poucas": ("Aumentar gasto público é política fiscal " + azb("expansionista") + ". A contracionista "
+                   + azb("reduz") + " gastos e/ou eleva tributos."),
+        "destrinchando": [
+            "O gasto do governo (G) é componente direto da demanda agregada (Y = C + I + G + NX). Elevá-lo aumenta a "
+            "demanda e, pelo " + azb("multiplicador keynesiano") + " " + vd("1/(1 − c)") + ", a renda cresce mais "
+            "que o próprio gasto.",
+            "No " + azb("IS-LM") + ", ↑G desloca a IS para a direita (Y↑, i↑); ↓G desloca para a esquerda "
+            "(Y↓, i↓).",
+            "Classificação de bolso: " + azb("expansionista") + " = ↑G, ↓T, ↑transferências; "
+            + azb("contracionista") + " = ↓G, ↑T, ↓transferências.",
+            "Caso especial: aumentar G e T no mesmo valor ainda é expansionista — pelo " + azb("teorema do "
+            "orçamento equilibrado") + " de " + oc("Haavelmo") + ", a renda sobe exatamente o valor do gasto "
+            "(multiplicador igual a 1).",
+        ],
+        "dissecando": (cz("[inversão]") + " Troca o sentido do instrumento: aumento de gasto é a ferramenta "
+                       "expansionista por excelência. Item fácil, mas aparece em série com distratores parecidos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na política fiscal contracionista ocorre redução de gastos públicos.”</i> → CERTO",
+            "<i>“Um aumento simultâneo e de igual valor de gastos e impostos não altera a renda.”</i> → ERRADO "
+            "(contradição com Haavelmo: a renda sobe ΔG)",
+        ])],
+        "reescrita": "Na política fiscal contracionista ocorre " + hl("redução") + " de gastos públicos.",
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. O aumento de gastos públicos caracteriza política fiscal expansionista; a "
+                            "contracionista reduz os gastos públicos.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0609
+    {
+        "id": "ECO-E1-0609-1", "fonte_ref": "E1-0609", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_EXP,
+        "rotulo_item": "Item",
+        "assertiva": ("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política fiscal que "
+                      "aumente o gasto do governo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política fiscal que "
+                      "<u>aumente o gasto do governo</u>."),
+        "poucas": ("↑G eleva diretamente a " + azb("demanda agregada") + " e, pelo " + azb("multiplicador")
+                   + ", a renda e o emprego: é a política fiscal expansionista típica."),
+        "destrinchando": [
+            "Na " + azb("cruz keynesiana") + ", ΔY = ΔG / (1 − c). Com propensão marginal a consumir de "
+            + vd("0,8") + ", o multiplicador é " + vd("5") + ": cada R$ 1 de gasto gera até R$ 5 de renda, porque "
+            "a renda de quem recebe o gasto vira consumo de outros, em rodadas sucessivas.",
+            "No " + azb("IS-LM") + ", ↑G desloca a IS para a direita; a renda sobe menos que na cruz porque os juros "
+            "também sobem e deslocam parte do investimento privado (" + azb("crowding out") + ").",
+            "Casos-limite: LM vertical (clássico) → crowding out total, a política fiscal não altera a renda; LM "
+            "horizontal (" + azb("armadilha da liquidez") + ") → crowding out nulo, efeito máximo.",
+            "O “tudo mais constante” isola o efeito: sem reação do Banco Central, sem mudança de expectativas, sem "
+            "aumento simultâneo de impostos.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " O “pode” e o “tudo mais constante” protegem o "
+                       "item contra as exceções (crowding out total, equivalência ricardiana). Itens da série sobre "
+                       "objetivo expansionista pedem só o sentido correto de cada instrumento."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um aumento do gasto do governo eleva a renda sempre no valor do multiplicador simples, qualquer que "
+            "seja a inclinação da LM.”</i> → ERRADO (modulador absoluto: há crowding out)",
+            "<i>“Na armadilha da liquidez, a política fiscal expansionista tem efeito máximo sobre a renda.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["pode", "tudo mais constante"],
+        "dificuldade": 1,
+        "comentario_fonte": "CERTO. Aumentar os gastos públicos é política fiscal expansionista, que eleva a demanda "
+                            "agregada, o nível de atividade e pode reduzir o desemprego.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0610
+    {
+        "id": "ECO-E1-0610-1", "fonte_ref": "E1-0610", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_EXP,
+        "rotulo_item": "Item",
+        "assertiva": ("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política fiscal que "
+                      "altere alíquotas de tributos, mantendo a arrecadação constante."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": (az("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política fiscal "
+                       "que ") + vm("altere") + az(" alíquotas de tributos, ")
+                    + vm("mantendo a arrecadação constante") + az(".")),
+        "poucas": ("No modelo agregado, se a " + azb("arrecadação não muda") + ", a renda disponível total não muda "
+                   "e não há impulso à demanda. O estímulo exige " + azb("reduzir") + " a carga."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "Mantido o ERRADO da fonte, que segue o modelo de propensão a consumir única. Com "
+                          "propensões diferentes entre grupos, porém, trocar alíquotas com arrecadação constante "
+                          "<b>pode</b> expandir a demanda: tirar carga de quem consome quase toda a renda e pô-la em "
+                          "quem poupa mais eleva o consumo agregado. O “pode” do item torna o CERTO defensável; em "
+                          "prova, siga a leitura do modelo simples.")],
+        "destrinchando": [
+            "Na " + azb("cruz keynesiana") + ", o que move a demanda é a renda disponível agregada (Y − T). Se o "
+            "total arrecadado T é o mesmo, mudar só a distribuição das alíquotas deixa Y − T igual e o consumo "
+            "agregado, com uma única propensão c, não se altera: " + vd("ΔT = 0 → ΔY = 0") + ".",
+            "Instrumentos fiscais expansionistas: " + azb("↑G") + " (multiplicador 1/(1 − c)), " + azb("↓T")
+            + " (multiplicador −c/(1 − c)) e " + azb("↑transferências") + ". Todos alteram o saldo orçamentário "
+            "na direção do déficit — exceto o caso de " + oc("Haavelmo") + " (↑G = ↑T), que expande com orçamento "
+            "equilibrado porque o gasto entra inteiro na demanda.",
+            "Por que a ressalva do ⚠️ importa: o consumo das famílias de baixa renda reage mais à renda disponível "
+            "(propensão marginal a consumir maior). Uma reforma neutra em arrecadação, mas mais progressiva, pode "
+            "elevar o consumo agregado — argumento usado a favor de isenções na base com compensação no topo.",
+            "Também podem gerar efeito real mudanças que alterem incentivos (alíquotas sobre investimento, "
+            "trabalho), mas isso é lado da oferta, não estímulo de demanda.",
+        ],
+        "dissecando": (cz("[restrição indevida · contradição]") + " A ressalva “mantendo a arrecadação constante” "
+                       "anula o canal pelo qual o tributo expande a demanda no modelo de manual. A série de itens "
+                       "pede a direção de cada instrumento: ↑G e ↓T expandem; ↓agregados monetários contraem."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um objetivo expansionista pode ser alcançado por um aumento do gasto financiado por aumento "
+            "equivalente de impostos.”</i> → CERTO (teorema do orçamento equilibrado)",
+            "<i>“Um objetivo expansionista pode ser alcançado por uma política fiscal que eleve alíquotas e "
+            "arrecadação.”</i> → ERRADO (inversão: é contracionista)",
+        ])],
+        "reescrita": ("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política fiscal que "
+                      + hl("reduza") + " alíquotas de tributos, " + hl("reduzindo a arrecadação") + "."),
+        "tipo_erro": ["RESTRICAO", "CONTRADICAO"], "moduladores": ["pode", "tudo mais constante"],
+        "dificuldade": 2,
+        "comentario_fonte": "ERRADO. Se a arrecadação permanece constante, não há efeito líquido expansionista "
+                            "relevante; alterar alíquotas sem mudar a carga não garante estímulo.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: com propensões a consumir distintas entre grupos, recompor alíquotas com "
+                    "arrecadação constante pode expandir o consumo agregado; mantido o ERRADO da fonte (modelo "
+                    "agregado)"],
+    },
+    # ------------------------------------------------------------------ E1-0611
+    {
+        "id": "ECO-E1-0611-1", "fonte_ref": "E1-0611", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_EXP,
+        "rotulo_item": "Item",
+        "assertiva": ("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política monetária "
+                      "que reduza os agregados monetários."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política monetária "
+                       "que ") + vm("reduza") + az(" os agregados monetários.")),
+        "poucas": ("Reduzir os " + azb("agregados monetários") + " (M1, M2…) enxuga liquidez, eleva juros e contrai "
+                   "a demanda. Para expandir, a política monetária precisa " + azb("ampliar") + " a oferta de moeda."),
+        "destrinchando": [
+            azb("Agregados monetários") + " medem os meios de pagamento em ordem decrescente de liquidez: "
+            + vd("M1") + " (papel-moeda em poder do público + depósitos à vista), M2, M3, M4 (incluem depósitos de "
+            "poupança, títulos e fundos).",
+            "Política monetária " + azb("contracionista") + " — venda de títulos no open market, alta do "
+            "compulsório, alta da taxa básica — reduz os agregados; no IS-LM, a LM vai para a esquerda: " + vd("i↑")
+            + ", " + vd("Y↓") + ".",
+            "Política monetária " + azb("expansionista") + " — compra de títulos, corte do compulsório, queda dos "
+            "juros — amplia os agregados; a LM vai para a direita: " + vd("i↓") + ", " + vd("Y↑") + ", via mais "
+            "investimento e consumo a crédito.",
+            "Limite: na " + azb("armadilha da liquidez") + " (LM horizontal), ampliar a moeda não reduz os juros e "
+            "a política monetária perde eficácia.",
+            vm("Regra-âncora: mais moeda = expansionista; menos moeda = contracionista."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca o sentido do instrumento monetário. Note que a banca mudou de "
+                       "política (fiscal → monetária) dentro da mesma série: o que decide é a direção, não o tipo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um objetivo expansionista pode ser alcançado por uma política monetária que eleve os agregados "
+            "monetários.”</i> → CERTO",
+            "<i>“A venda de títulos públicos pelo Banco Central amplia os agregados monetários.”</i> → ERRADO "
+            "(inversão: a venda enxuga moeda)",
+        ])],
+        "reescrita": ("Um objetivo expansionista, tudo mais constante, pode ser alcançado por uma política monetária "
+                      "que " + hl("amplie") + " os agregados monetários."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["pode", "tudo mais constante"], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. Reduzir os agregados monetários é medida contracionista: restringe liquidez e "
+                            "crédito, desestimulando consumo e investimento.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

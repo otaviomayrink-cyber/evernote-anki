@@ -1148,7 +1148,7 @@ CARDS = [
                       + " indica poupança externa."),
         "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("Superávit em TC indica envio de recursos ao exterior, não poupança externa; duas "
-                             "respostas de IA com S<sub>ext</sub> = −TC e I = Sp + Sg + Sext (fórmulas em imagem). "
+                             "respostas de IA com Sext = −TC e I = Sp + Sg + Sext (fórmulas em imagem). "
                              "O comentário inicial diz que, no déficit, o país “transfere suas reservas para o "
                              "exterior”."),
         "qualidade_fonte": "com_erro",
@@ -1159,5 +1159,272 @@ CARDS = [
         "alertas": ["quase_duplicata: ECO-E1-0818-1 (CACD 2026, poupança externa positiva × superávit em TC)",
                     "qualidade_fonte: o comentário inicial confunde déficit em TC com transferência de reservas "
                     "ao exterior; corrigido pelas respostas seguintes da própria fonte"],
+    },
+    # ------------------------------------------------------------------ E2-L00101
+    {
+        "id": "ECO-E2-L00101-1", "fonte_ref": "E2-L00101", "destino": "18", "subtema": H2["cn"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_TC,
+        "rotulo_item": "Item",
+        "assertiva": ("Ao ocorrer uma transferência líquida para o exterior, observa-se que a economia exporta "
+                      "muito mais do que importa, gerando acumulação de reservas internacionais no Banco Central."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Ao ocorrer uma transferência líquida para o exterior, observa-se que a economia exporta ")
+                    + vm("muito") + az(" mais do que importa, ") + vm("gerando") + az(" acumulação de reservas "
+                                                                                     "internacionais no Banco "
+                                                                                     "Central.")),
+        "poucas": ("Transferir recursos líquidos ao exterior é <b>pagar</b> ao resto do mundo — renda enviada, ou "
+                   "saldo comercial usado para pagar essa renda. Isso não gera, por si, " + azb("acumulação de "
+                   "reservas") + ": o saldo sai do país."),
+        "destrinchando": [
+            "Duas leituras da expressão, e o item falha nas duas. (1) Sentido da fonte: " + azb("renda líquida "
+            "enviada ao exterior") + " — o país paga mais renda primária e secundária (juros, lucros, remessas) "
+            "do que recebe. Isso piora a conta corrente e nada diz sobre exportar mais do que importar.",
+            "(2) Sentido clássico da literatura brasileira: " + azb("transferência líquida de recursos (reais) "
+            "ao exterior") + " = saldo positivo de bens e serviços não fatores. Foi o caso do " + rx("Brasil")
+            + " nos anos 1980: superávits comerciais gerados para pagar os juros da dívida externa.",
+            "Em ambos os casos, o saldo comercial positivo (quando existe) é <b>consumido</b> pelo pagamento de "
+            "rendas: o resultado do BP pode ser nulo ou negativo, e as reservas podem cair. Acumular reservas "
+            "exige resultado global positivo (TC + conta capital e financeira).",
+            "Por isso a transferência de recursos foi, na crise da dívida, sinal de " + azb("restrição "
+            "externa") + ", não de folga: o país exportava poupança real para servir passivos.",
+            vm("Regra-âncora: reservas sobem com resultado global positivo do BP, não com um saldo parcial."),
+        ],
+        "dissecando": (cz("[nexo indevido · extrapolação]") + " O item encadeia três afirmações (transferência → "
+                       "exporta “muito mais” → acumula reservas). O exagero (“muito”) e o efeito (“gerando”) são "
+                       "inventados: quem transfere recursos ao exterior está pagando, não acumulando."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A transferência líquida de recursos ao exterior corresponde a um superávit na balança de bens "
+            "e serviços não fatores, usado para remunerar fatores externos.”</i> → CERTO",
+            "<i>“Renda líquida enviada ao exterior positiva eleva o saldo em transações correntes.”</i> → "
+            "ERRADO (inversão: reduz)",
+        ])],
+        "reescrita": ("Ao ocorrer uma transferência líquida para o exterior, observa-se que a economia exporta "
+                      "<s>muito</s> mais " + hl("bens e serviços não fatores") + " do que importa, "
+                      + hl("mas esse saldo serve para pagar a renda enviada ao exterior, sem gerar "
+                           "necessariamente") + " acumulação de reservas internacionais no Banco Central."),
+        "tipo_erro": ["NEXO_INDEVIDO", "EXTRAPOLACAO"], "moduladores": ["muito"], "dificuldade": 2,
+        "comentario_fonte": ("Transferência líquida para o exterior = pagar mais renda primária e secundária do "
+                             "que receber; não implica exportação excessiva; pode indicar dependência de capital "
+                             "estrangeiro."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: a expressão tem dois sentidos (renda líquida enviada; transferência de "
+                    "recursos reais = saldo de bens e serviços não fatores); o comentário cobre os dois e a "
+                    "reescrita usa o segundo, que preserva a frase do item"],
+    },
+    # ------------------------------------------------------------------ E2-L00226
+    {
+        "id": "ECO-E2-L00226-1", "fonte_ref": "E2-L00226", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": ("Julgue as afirmativas a seguir sobre investimentos internacionais e fluxos de capitais, "
+                    "considerando o entendimento técnico de paridades de juros e riscos associados."),
+        "rotulo_item": "Item",
+        "assertiva": ("Capitais compensatórios são movidos por taxas de câmbio favoráveis e influenciam fortemente "
+                      "a decisão de investidores que buscam ganhos especulativos rápidos em mercados voláteis."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Capitais ") + vm("compensatórios") + az(" são movidos por taxas de câmbio favoráveis e "
+                                                                 "influenciam fortemente a decisão de investidores "
+                                                                 "que buscam ganhos especulativos rápidos em "
+                                                                 "mercados voláteis.")),
+        "poucas": ("O item descreve " + azb("capitais especulativos") + " (autônomos de curto prazo). "
+                   + azb("Capitais compensatórios") + " são movidos pela autoridade monetária para cobrir o "
+                   "resultado do BP: uso de reservas e empréstimos de regularização."),
+        "destrinchando": [
+            azb("Autônomos") + ": movidos por motivação própria dos agentes — lucro, juros, câmbio, comércio. "
+            "Incluem investimento direto, carteira, empréstimos voluntários, créditos comerciais (compras a "
+            "prazo) e o " + azb("hot money") + ", que busca diferencial de juros e ganho cambial "
+            "(arbitragem, paridade descoberta).",
+            azb("Compensatórios") + ": ocorrem <b>por causa</b> do saldo das autônomas, para fechá-lo — variação "
+            "de reservas internacionais, empréstimos de regularização do FMI, atrasados. Quem decide é o "
+            "governo ou o BC, não o investidor privado.",
+            "Os compensatórios até reagem ao câmbio indiretamente (o BC vende reservas quando falta divisa), "
+            "mas não buscam lucro: são " + azb("ajuste de liquidez") + " de última instância.",
+            "No " + azb("BPM6") + ", a distinção ficou na apresentação analítica: os ativos de reserva estão "
+            "dentro da conta financeira, separados dos demais fluxos.",
+            vm("Regra-âncora: autônomo = decisão privada (inclui especulação); compensatório = fechamento "
+               "oficial do BP."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A descrição é boa — de outro conceito. O item cola o rótulo "
+                       "“compensatórios” na definição de capital especulativo; o comando sobre “paridades de "
+                       "juros” empurra o leitor para o lado da especulação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Capitais especulativos de curto prazo são classificados como autônomos.”</i> → CERTO",
+            "<i>“O financiamento de importações por fornecedores estrangeiros é exemplo de capital "
+            "compensatório.”</i> → ERRADO (troca de conceito: crédito comercial é autônomo)",
+        ])],
+        "reescrita": ("Capitais " + hl("especulativos") + " são movidos por taxas de câmbio favoráveis e "
+                      "influenciam fortemente a decisão de investidores que buscam ganhos especulativos rápidos em "
+                      "mercados voláteis."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["fortemente"], "dificuldade": 1,
+        "comentario_fonte": ("Primeiro comentário: compensatórios cobririam “financiamentos comuns como compras a "
+                             "prazo”, independentes do câmbio. Resposta de IA corrige: compras a prazo são "
+                             "autônomas; compensatórios são reservas e empréstimos de regularização, ex post; "
+                             "quadro autônomos × compensatórios em imagem."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 023", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida no 📖 (autônomos × compensatórios)"}],
+        "alertas": ["qualidade_fonte: o comentário inicial classifica compras a prazo como capital compensatório; "
+                    "são autônomas (crédito comercial)"],
+    },
+    # ------------------------------------------------------------------ E2-L00402
+    {
+        "id": "ECO-E2-L00402-1", "fonte_ref": "E2-L00402", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo ao balanço de pagamentos segundo o BPM6.",
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo o BPM6, a conta financeira passou a adotar uma nova convenção de sinais pautada "
+                      "pela lógica de estoques. Nesse padrão, tanto o aumento de ativos de residentes no exterior "
+                      "quanto o aumento de passivos junto a não residentes (como a entrada de Investimento Direto "
+                      "no Brasil) são registrados com sinal positivo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo o BPM6, a conta financeira passou a adotar uma nova convenção de sinais pautada "
+                      "pela lógica de estoques. Nesse padrão, <u>tanto o aumento de ativos</u> de residentes no "
+                      "exterior <u>quanto o aumento de passivos</u> junto a não residentes (como a entrada de "
+                      "Investimento Direto no Brasil) são registrados com sinal positivo."),
+        "poucas": ("No " + azb("BPM6") + ", a conta financeira se apresenta em " + azb("aquisição líquida de "
+                   "ativos") + " e " + azb("passivos incorridos líquidos") + ": aumento de qualquer um é "
+                   + vd("+") + ", redução é " + vd("−") + ". O saldo é ativos − passivos."),
+        "destrinchando": [
+            "Convenção antiga (BPM5): crédito/débito pelo fluxo de divisas — entrada de IDP = crédito (+); "
+            "saída de capital brasileiro = débito (−); aumento de reservas = débito (−).",
+            "Convenção do BPM6: cada rubrica mede a variação do <b>estoque</b>. Brasileiro investe no exterior "
+            "→ ativo ↑ → " + vd("+") + "; estrangeiro investe no Brasil → passivo ↑ → " + vd("+") + "; "
+            "reservas ↑ → " + vd("+") + " em ativos de reserva.",
+            "Saldo: " + vd("CF = ativos − passivos") + ". CF negativo = o país aumentou passivos mais do que "
+            "ativos = " + azb("captação líquida") + " (necessidade de financiamento). Identidade: "
+            + vd("TC + KA − CF + erros e omissões = 0") + ".",
+            "Exemplo: TC = −50, KA = 0 → CF = −50 (sem erros e omissões). Se o IDP foi +70 e não houve outros "
+            "fluxos de passivo, a aquisição líquida de ativos foi +20 (inclui reservas).",
+            "O " + rx("Banco Central do Brasil") + " publica as estatísticas pelo BPM6 desde 2015.",
+            vm("Regra-âncora: no BPM6, + = estoque aumentou (ativo ou passivo); saldo = ativos − passivos."),
+        ],
+        "dissecando": (cz("[contraintuitivo · literalidade]") + " Parece estranho que entrada e saída de capital "
+                       "tenham o mesmo sinal — e é esse estranhamento que a banca explora. Pista: o item fala em "
+                       "“lógica de estoques” e mede cada lado separadamente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No BPM6, um saldo negativo da conta financeira indica que o país é credor líquido do resto do "
+            "mundo no período.”</i> → ERRADO (inversão: indica captação líquida)",
+            "<i>“No BPM6, o aumento das reservas internacionais é registrado com sinal positivo nos ativos de "
+            "reserva.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "LITERAL"], "moduladores": ["tanto … quanto"], "dificuldade": 2,
+        "comentario_fonte": ("No BPM6, as rubricas refletem aquisição líquida de ativos e passivos líquidos "
+                             "incorridos; sinal positivo indica aumento de estoques nos dois lados."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00447
+    {
+        "id": "ECO-E2-L00447-1", "fonte_ref": "E2-L00447", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": ("A respeito das contas nacionais, balanço de pagamentos, contas públicas e sistema monetário, "
+                    "julgue (C ou E) os itens seguintes."),
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com o BPM6, a Conta Capital registra as transferências de capital, como o perdão "
+                      "de dívidas ou a transferência de patrimônio de migrantes, e a aquisição/alienação de ativos "
+                      "não financeiros não produzidos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com o BPM6, a Conta Capital registra as transferências de capital, como o perdão "
+                       "de dívidas ou ") + vm("a transferência de patrimônio de migrantes")
+                    + az(", e a aquisição/alienação de ativos não financeiros não produzidos.")),
+        "poucas": ("No " + azb("BPM6") + ", a mudança de residência de um migrante não é transação entre "
+                   "residente e não residente: seu patrimônio deixou de ser registrado no BP (vai para "
+                   + azb("outras variações de volume") + " na posição de investimento internacional)."),
+        "destrinchando": [
+            "A " + azb("conta capital") + " do BPM6 tem duas partes, e essa moldura do item está certa: (1) "
+            + azb("transferências de capital") + " — perdão de dívidas, doações para investimento (ajuda a "
+            "projetos de infraestrutura), indenizações de grande porte; (2) aquisição e alienação de "
+            + azb("ativos não financeiros não produzidos") + " — recursos naturais, contratos e licenças, "
+            "marcas e domínios.",
+            "No " + azb("BPM5") + ", as “transferências de migrantes” (patrimônio levado por quem muda de país) "
+            "eram transferências de capital. O BPM6 as eliminou: quando a pessoa muda de residência, ela "
+            "própria deixa de ser residente — não há transação com não residente, só " + azb("reclassificação")
+            + ".",
+            "Atenção para não confundir com " + azb("remessas pessoais") + " de trabalhadores emigrados às "
+            "famílias: essas continuam sendo transações, registradas na renda secundária (transações "
+            "correntes).",
+            vm("Regra-âncora: BPM6 — patrimônio de migrante não é transação; remessa de trabalhador é renda "
+               "secundária."),
+        ],
+        "dissecando": (cz("[anacronismo · meia-verdade]") + " O item cita o BPM6, mas inclui um exemplo que só "
+                       "valia no BPM5. 🔥 Itens que começam com “de acordo com o BPM6” costumam testar exatamente "
+                       "as mudanças em relação ao BPM5."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“De acordo com o BPM6, a conta capital registra o perdão de dívidas e a aquisição de ativos não "
+            "financeiros não produzidos.”</i> → CERTO",
+            "<i>“No BPM6, as remessas de trabalhadores emigrados são registradas na conta capital.”</i> → ERRADO "
+            "(troca de conceito: renda secundária)",
+        ])],
+        "reescrita": ("De acordo com o BPM6, a Conta Capital registra as transferências de capital, como o perdão "
+                      "de dívidas ou <s>a transferência de patrimônio de migrantes</s> " + hl("as doações para "
+                                                                                              "investimento")
+                      + ", e a aquisição/alienação de ativos não financeiros não produzidos."),
+        "tipo_erro": ["ANACRONISMO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A conta capital registra transferências de capital e ativos não financeiros não "
+                             "produzidos, mas a transferência de patrimônio de migrantes não é transação entre "
+                             "residentes e não residentes e não é registrada no BP pelo BPM6."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00557
+    {
+        "id": "ECO-E2-L00557-1", "fonte_ref": "E2-L00557", "destino": "18", "subtema": H2["est"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_BP,
+        "rotulo_item": "Item",
+        "assertiva": ("Todas as transações econômico-financeiras realizadas internamente pelos residentes de um "
+                      "país constituem o balanço de pagamentos, o qual contém a conta de transações correntes, que, "
+                      "por sua vez, é constituída por investimentos e empréstimos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Todas as transações econômico-financeiras realizadas ") + vm("internamente pelos residentes "
+                                                                                    "de um país")
+                    + az(" constituem o balanço de pagamentos, o qual contém a conta de transações correntes, que, "
+                         "por sua vez, é constituída por ") + vm("investimentos e empréstimos") + az(".")),
+        "poucas": ("O BP registra transações " + azb("entre residentes e não residentes") + ", não as internas. E "
+                   "as transações correntes são bens, serviços e rendas; " + azb("investimentos e empréstimos")
+                   + " estão na conta financeira."),
+        "destrinchando": [
+            "Definição: o " + azb("balanço de pagamentos") + " resume, num período, as transações econômicas "
+            "entre <b>residentes</b> e <b>não residentes</b> (BPM6 §2.2). Uma compra entre duas empresas "
+            "brasileiras não aparece no BP, ainda que em dólar.",
+            azb("Residência") + " ≠ nacionalidade: é residente quem tem centro de interesse econômico "
+            "predominante no território (em regra, um ano ou mais). Filial de multinacional instalada no Brasil "
+            "é residente; turista estrangeiro, não.",
+            azb("Transações correntes") + ": balança comercial (bens), serviços, renda primária (rendas do "
+            "trabalho e de investimento) e renda secundária (transferências pessoais e doações).",
+            azb("Conta financeira") + ": investimento direto, carteira, derivativos, outros investimentos "
+            "(empréstimos, depósitos, créditos comerciais) e reservas. Só a <b>remuneração</b> desses ativos "
+            "(juros, lucros) vai para a conta corrente.",
+            vm("Regra-âncora: estoque de ativos/passivos → conta financeira; fluxo de renda → transações "
+               "correntes."),
+        ],
+        "dissecando": (cz("[troca de conceito · troca de ator]") + " Dois enxertos: o âmbito (“internamente pelos "
+                       "residentes”) e o conteúdo da conta (“investimentos e empréstimos”). Cada um, sozinho, já "
+                       "torna o item ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O balanço de pagamentos registra as transações econômicas entre residentes e não residentes "
+            "de um país em determinado período.”</i> → CERTO",
+            "<i>“Os juros pagos sobre empréstimos externos são registrados na conta financeira.”</i> → ERRADO "
+            "(troca de conceito: renda primária)",
+        ])],
+        "reescrita": ("Todas as transações econômico-financeiras realizadas " + hl("entre os residentes de um país "
+                                                                                    "e os não residentes")
+                      + " constituem o balanço de pagamentos, o qual contém a conta de transações correntes, que, "
+                      "por sua vez, é constituída por " + hl("bens, serviços, renda primária e renda secundária")
+                      + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "TROCA_ATOR"], "moduladores": ["todas"], "dificuldade": 1,
+        "comentario_fonte": ("O BP inclui transações entre residentes e não residentes; TC = balança comercial, "
+                             "serviços, renda primária e secundária; investimentos e empréstimos estão na conta "
+                             "financeira (parte em imagem de texto)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 092", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖"}],
+        "alertas": [],
     },
 ]

@@ -180,7 +180,7 @@ CARDS = [
         "gabarito": "ANULADO", "gabarito_origem": "fonte", "status": "anulado",
         "anotada": (az("O investimento, no mercado de fundos emprestáveis, é determinado pela poupança, e a taxa de "
                        "juros é responsável pela igualdade entre poupança e investimento (S = I), no modelo "
-                       "clássico, ") + vm("de acordo com a Lei de Say") + az(".")),
+                       "clássico, ") + vm("de acordo com") + az(" a Lei de Say.")),
         "poucas": ("Até “modelo clássico” o item é correto; o problema é atribuir o mecanismo dos fundos "
                    "emprestáveis à " + azb("Lei de Say") + ", que não diz isso literalmente — daí a anulação."),
         "condicionais": [("⚠️ Gabarito contestável",

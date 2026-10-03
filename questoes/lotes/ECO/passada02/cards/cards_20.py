@@ -1227,4 +1227,350 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0158
+    {
+        "id": "ECO-E1-0158-1", "fonte_ref": "E1-0158", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Para reduzir as distorções e minimizar as perdas de eficiência, a teoria da tributação "
+                      "ótima propõe que os bens com menor elasticidade-preço da demanda devem ser mais "
+                      "tributados."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Para reduzir as distorções e minimizar as <u>perdas de eficiência</u>, a teoria da "
+                      "tributação ótima propõe que os bens com <u>menor</u> elasticidade-preço da demanda devem "
+                      "ser <u>mais</u> tributados."),
+        "poucas": ("É a " + azb("regra de Ramsey") + " (da elasticidade inversa): o " + azb("peso morto") + " "
+                   "vem da queda da quantidade; onde a demanda é " + vd("inelástica") + ", a quantidade quase "
+                   "não reage e o imposto distorce pouco."),
+        "destrinchando": [
+            "O imposto abre uma cunha entre o preço pago e o recebido; as trocas que deixam de acontecer são o "
+            + azb("peso morto") + " (excesso de carga). Quanto mais a quantidade responde ao preço, maior o "
+            "triângulo perdido.",
+            "Formulação de " + oc("Frank Ramsey") + " (1927): para arrecadar um dado montante com o menor peso "
+            "morto, as alíquotas devem ser " + vd("inversamente proporcionais à elasticidade-preço") + " da "
+            "demanda de cada bem — o que equivale a reduzir a quantidade de todos os bens na mesma proporção.",
+            "Exemplos de demanda inelástica: combustíveis, energia elétrica, cigarros, medicamentos. Por isso "
+            "esses bens costumam carregar alíquotas altas.",
+            "O conflito clássico: bens de demanda inelástica são, em geral, " + azb("bens de primeira "
+                                                                                    "necessidade") + ", com "
+            "peso maior no orçamento dos pobres. A regra de Ramsey é eficiente, mas tende a ser "
+            + vm("regressiva") + " — o trade-off " + azb("eficiência × equidade") + " da tributação ótima.",
+            vm("Regra-âncora: eficiência manda tributar o que é inelástico; equidade pode mandar o contrário."),
+        ],
+        "grafico_verso": "ECO-E1-0158-1-V1",
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " É a regra de manual, mas o senso comum de "
+                       "justiça (“não tributar o essencial”) empurra para ERRADO. O item fala só em "
+                       "<b>eficiência</b>: nesse critério, tributar o inelástico é o correto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela regra de Ramsey, os bens de maior elasticidade-preço da demanda devem receber as maiores "
+            "alíquotas.”</i> → ERRADO (inversão: menor elasticidade, maior alíquota)",
+            "<i>“A aplicação estrita da regra de Ramsey pode tornar o sistema tributário regressivo.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. Regra de Ramsey: impostos devem incidir mais sobre bens de demanda "
+                             "inelástica, cuja quantidade cai menos, reduzindo a distorção."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0178-1 (outra formulação da mesma regra: imposto eficiente "
+                    "recai sobre demanda ou oferta inelástica)"],
+    },
+    # ------------------------------------------------------------------ E1-0169
+    {
+        "id": "ECO-E1-0169-1", "fonte_ref": "E1-0169", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto do tipo lump-sum tax, em que os cidadãos pagam o mesmo montante de imposto "
+                      "independentemente de sua renda, é um imposto que influencia negativamente a eficiência "
+                      "alocativa do setor privado da economia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um imposto do tipo lump-sum tax, em que os cidadãos pagam o mesmo montante de imposto "
+                       "independentemente de sua renda, é um imposto que ") + vm("influencia negativamente")
+                    + az(" a eficiência alocativa do setor privado da economia.")),
+        "poucas": ("O " + azb("imposto lump-sum") + " (montante fixo) é o benchmark do imposto " + vd("neutro")
+                   + ": como o valor não depende de nenhuma decisão, não altera preços relativos e não gera "
+                   "peso morto. Seu problema é a " + vm("equidade") + ", não a eficiência."),
+        "destrinchando": [
+            "Um imposto distorce quando o valor devido muda com o comportamento: trabalhar mais, consumir certo "
+            "bem, poupar. Aí surge o " + azb("efeito substituição") + " — a pessoa troca a atividade tributada "
+            "por outra — e, com ele, o peso morto.",
+            "No lump-sum, nada do que o contribuinte faça altera o valor a pagar. Só existe " + azb("efeito "
+            "renda") + " (fica mais pobre), sem efeito substituição: as escolhas na margem continuam guiadas "
+            "pelos preços de mercado. Por isso é o " + vd("imposto mais eficiente") + " da teoria.",
+            "O custo é distributivo: cobrar o mesmo valor de todos é fortemente " + vm("regressivo") + " — "
+            "ignora a capacidade de pagamento. Exemplo histórico: a " + azb("poll tax") + " do governo "
+            "Thatcher (Reino Unido, 1989–1990), abandonada após protestos.",
+            "Na prática, impostos “quase lump-sum” incidem sobre bases que não reagem (terra, rendas "
+            "econômicas). A teoria do segundo ótimo parte justamente da impossibilidade de usar lump-sum "
+            "personalizados.",
+            vm("Regra-âncora: lump-sum = eficiente (sem efeito substituição) e iníquo (ignora a renda)."),
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " O item atribui ao lump-sum o defeito errado: "
+                       "ele falha em equidade, não em eficiência. O próprio enunciado entrega a pista — "
+                       "“independentemente de sua renda” descreve um imposto que não muda com escolha alguma."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O imposto lump-sum não gera peso morto, mas viola o princípio da capacidade contributiva.”</i> → "
+            "CERTO",
+            "<i>“O imposto lump-sum provoca efeito substituição entre trabalho e lazer.”</i> → ERRADO (só efeito "
+            "renda)",
+        ])],
+        "reescrita": ("Um imposto do tipo lump-sum tax, em que os cidadãos pagam o mesmo montante de imposto "
+                      "independentemente de sua renda, é um imposto que " + hl("não influencia") + " a "
+                      "eficiência alocativa do setor privado da economia."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. O lump-sum é o imposto mais eficiente: não distorce preços relativos nem "
+                             "decisões de consumo ou trabalho; falha em equidade, por ignorar a capacidade "
+                             "contributiva."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "Untitled (45).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada; conteúdo coberto pelo 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0170
+    {
+        "id": "ECO-E1-0170-1", "fonte_ref": "E1-0170", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Nas chamadas excise taxes, o Governo se afasta, deliberadamente, do objetivo de alterar o "
+                      "mínimo possível os preços relativos da economia, por se tratar de consumo de bens "
+                      "considerados nocivos à saúde pública ou de consumo supérfluo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Nas chamadas excise taxes, o Governo se afasta, <u>deliberadamente</u>, do objetivo de "
+                      "alterar o mínimo possível os preços relativos da economia, por se tratar de consumo de bens "
+                      "considerados nocivos à saúde pública ou de consumo supérfluo."),
+        "poucas": ("As " + azb("excise taxes") + " (impostos seletivos) existem justamente para " + vd("mudar "
+                   "preços relativos") + ": encarecer cigarro, álcool ou bens supérfluos e reduzir seu consumo — "
+                   "abrem mão da neutralidade de propósito."),
+        "destrinchando": [
+            "Princípio geral da tributação eficiente: " + azb("neutralidade") + " — interferir o mínimo nos "
+            "preços relativos, para não distorcer as escolhas. Excise taxes são a exceção deliberada.",
+            "Justificativa econômica: o consumo desses bens gera " + azb("externalidades negativas") + " (gastos "
+            "de saúde pública, acidentes, poluição). O imposto corretivo, ou " + azb("pigouviano") + " (de "
+            + oc("Arthur Pigou") + "), faz o preço refletir o custo social. Nesse caso, mudar o preço relativo "
+            "<b>melhora</b> a alocação.",
+            "Bônus arrecadatório: cigarro e álcool têm demanda inelástica — arrecadam muito com pouca queda da "
+            "base (regra de Ramsey). Mas a mesma inelasticidade limita o efeito sobre o consumo.",
+            rx("No Brasil") + ": a " + azb("seletividade") + " do IPI conforme a essencialidade do produto e, na "
+            "reforma tributária (" + vd("EC 132/2023") + "), o " + azb("Imposto Seletivo") + " sobre bens e "
+            "serviços prejudiciais à saúde ou ao meio ambiente, regulamentado pela " + vd("LC 214/2025") + ".",
+        ],
+        "dissecando": (cz("[literalidade · exceção]") + " O item cobra a exceção ao princípio da neutralidade. "
+                       "O advérbio “deliberadamente” é o ponto: o afastamento é intencional, não um efeito "
+                       "colateral."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As excise taxes seguem o princípio da neutralidade, pois incidem sobre bens de demanda "
+            "inelástica.”</i> → ERRADO (buscam alterar preços relativos de propósito)",
+            "<i>“Um imposto pigouviano sobre um bem que gera externalidade negativa pode aumentar a eficiência "
+            "alocativa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "EXCECAO"], "moduladores": ["deliberadamente"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. Excise taxes (impostos seletivos) incidem sobre bens específicos, como "
+                             "cigarros e bebidas, para desincentivar o consumo; o governo aceita alterar preços "
+                             "relativos por razões de saúde pública ou justiça social."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "Untitled (38).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada; conteúdo coberto pelo 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0171
+    {
+        "id": "ECO-E1-0171-1", "fonte_ref": "E1-0171", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto progressivo sobre a renda atende melhor ao princípio da equidade vertical na "
+                      "hipótese de que a utilidade marginal da renda seja decrescente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um imposto progressivo sobre a renda atende melhor ao princípio da <u>equidade "
+                      "vertical</u> na hipótese de que a utilidade marginal da renda seja <u>decrescente</u>."),
+        "poucas": ("Se cada real adicional vale menos para quem tem mais (" + azb("utilidade marginal "
+                   "decrescente") + "), tirar R$ 1 do rico custa menos bem-estar que tirá-lo do pobre: para "
+                   "igualar o " + azb("sacrifício") + ", o rico deve pagar proporcionalmente mais."),
+        "destrinchando": [
+            azb("Equidade horizontal") + ": iguais pagam igual. " + azb("Equidade vertical") + ": quem tem mais "
+            + azb("capacidade de pagamento") + " paga mais. A questão é quanto mais — e a resposta clássica "
+            "passa pela utilidade.",
+            "Teoria do " + azb("sacrifício") + ", que remonta a " + oc("John Stuart Mill") + ": o imposto deve "
+            "impor sacrifício igual. Com utilidade marginal da renda decrescente, R$ 1.000 pesam muito para quem "
+            "ganha pouco e quase nada para quem ganha muito; igualar o sacrifício exige alíquota crescente com "
+            "a renda.",
+            "Nuance técnica: “sacrifício igual absoluto” só gera progressividade se a utilidade marginal cair "
+            "rápido o bastante; “sacrifício marginal igual” leva a progressividade máxima. Daí o “atende "
+            "melhor” do item, comparativo e não absoluto.",
+            "Se a utilidade marginal fosse " + vd("constante") + ", o argumento utilitarista para a "
+            "progressividade desapareceria: um real valeria o mesmo para todos.",
+            rx("No Brasil") + ", a " + vd("CF, art. 145, §1º") + " manda graduar os impostos pela capacidade "
+            "econômica do contribuinte, e o IRPF é progressivo por faixas.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Relação de manual entre progressividade e "
+                       "utilidade marginal decrescente. A pegadinha mais comum é trocar “decrescente” por "
+                       "“crescente” ou “constante”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a utilidade marginal da renda for constante, o princípio do sacrifício igual justifica um "
+            "imposto fortemente progressivo.”</i> → ERRADO (com UMg constante, desaparece o argumento)",
+            "<i>“A equidade horizontal exige que contribuintes com a mesma capacidade de pagamento sejam "
+            "tributados de forma igual.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["atende melhor"], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. Equidade vertical: quem tem mais capacidade contributiva paga mais; com "
+                             "utilidade marginal decrescente, o imposto progressivo “reduz menos a utilidade de "
+                             "quem ganha mais” (formulação imprecisa)."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0172
+    {
+        "id": "ECO-E1-0172-1", "fonte_ref": "E1-0172", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto proporcional sobre a renda influencia menos as decisões de trabalho versus "
+                      "lazer das pessoas físicas que um imposto progressivo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um imposto <u>proporcional</u> sobre a renda influencia <u>menos</u> as decisões de "
+                      "trabalho versus lazer das pessoas físicas que um imposto <u>progressivo</u>."),
+        "poucas": ("A escolha trabalho × lazer responde à " + azb("alíquota marginal") + ". Para arrecadar o "
+                   "mesmo, o imposto progressivo precisa de alíquotas marginais " + vd("mais altas") + " no topo "
+                   "— e distorce mais a decisão de trabalhar a hora extra."),
+        "destrinchando": [
+            "O que distorce é a alíquota sobre o <b>último</b> real ganho: ela define quanto rende uma hora a "
+            "mais de trabalho (salário líquido = w × (1 − t" + "<sub>mg</sub>)). Esse é o " + azb("efeito "
+            "substituição") + ": lazer fica relativamente mais barato.",
+            "No " + azb("imposto proporcional") + ", alíquota média = marginal, constante. No "
+            + azb("progressivo") + ", a marginal supera a média e cresce com a renda. Para a mesma "
+            "arrecadação, o progressivo concentra alíquotas marginais altas justamente em quem mais trabalha "
+            "e ganha.",
+            "Como o peso morto cresce aproximadamente com o " + vd("quadrado da alíquota") + ", alíquotas "
+            "marginais desiguais geram mais perda que uma alíquota uniforme de mesma receita.",
+            "Ressalva: o efeito líquido sobre horas trabalhadas é ambíguo, porque o " + azb("efeito renda") + " "
+            "(ficar mais pobre leva a trabalhar mais) vai no sentido oposto. O item fala em “influenciar” as "
+            "decisões — a distorção na margem —, e nisso o proporcional é mais neutro.",
+            vm("Regra-âncora: progressividade compra equidade ao custo de mais distorção na margem."),
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Item comparativo de manual. Quem pensa em "
+                       "justiça tende a defender o progressivo e marcar ERRADO; o critério aqui é só a "
+                       "distorção da escolha trabalho × lazer."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No imposto proporcional, a alíquota marginal é igual à alíquota média.”</i> → CERTO",
+            "<i>“O imposto progressivo é mais eficiente que o proporcional porque onera menos os contribuintes de "
+            "baixa renda.”</i> → ERRADO (troca de conceito: isso é equidade, não eficiência)",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": ["menos"], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. O proporcional tem alíquota constante e distorce menos que o progressivo, "
+                             "cujas alíquotas marginais crescentes desincentivam o trabalho adicional."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0174
+    {
+        "id": "ECO-E1-0174-1", "fonte_ref": "E1-0174", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto sobre vendas com alíquota fixa onera os contribuintes de forma progressiva, ou "
+                      "seja, onera igualmente os contribuintes independentemente de sua capacidade de "
+                      "pagamento."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um imposto sobre vendas com alíquota fixa onera os contribuintes de forma ")
+                    + vm("progressiva, ou seja, onera igualmente os contribuintes independentemente de sua "
+                         "capacidade de pagamento") + az(".")),
+        "poucas": ("Imposto sobre vendas com alíquota fixa é " + vm("regressivo") + " em relação à renda: os "
+                   "pobres consomem quase toda a renda, os ricos poupam parte — o imposto pesa mais, em % da "
+                   "renda, para quem ganha menos."),
+        "destrinchando": [
+            "Classificação pela relação entre imposto pago e " + azb("renda") + ": " + azb("progressivo") + " — "
+            "a proporção da renda paga sobe com a renda; " + azb("proporcional") + " — proporção constante; "
+            + azb("regressivo") + " — proporção cai com a renda.",
+            "Exemplo: alíquota de " + vd("20%") + " sobre o consumo. Família A ganha 2.000 e consome tudo: paga "
+            "400 = " + vd("20% da renda") + ". Família B ganha 20.000 e consome 10.000: paga 2.000 = "
+            + vd("10% da renda") + ". A alíquota é a mesma; o ônus relativo é o dobro para A.",
+            "O item ainda se contradiz: “progressiva, ou seja, onera igualmente” — onerar igualmente seria "
+            "neutralidade (ou proporcionalidade), nunca progressividade.",
+            rx("No Brasil") + ", a alta participação de tributos sobre consumo na carga total é a principal "
+            "razão de o sistema ser considerado regressivo; a reforma de 2023 prevê mecanismos como o "
+            + azb("cashback") + " para famílias de baixa renda.",
+        ],
+        "dissecando": (cz("[troca de conceito · contradição]") + " Troca “regressiva” por “progressiva” e "
+                       "ainda define progressividade errado. Pista: a alíquota fixa engana — fixa sobre o "
+                       "<b>consumo</b> não é fixa sobre a <b>renda</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto sobre vendas com alíquota única tende a ser regressivo em relação à renda, porque a "
+            "propensão a consumir cai com a renda.”</i> → CERTO",
+            "<i>“Todo imposto de alíquota única é proporcional em relação à renda.”</i> → ERRADO (depende da "
+            "base: sobre consumo, é regressivo)",
+        ])],
+        "reescrita": ("Um imposto sobre vendas com alíquota fixa onera os contribuintes de forma "
+                      + hl("regressiva, ou seja, onera proporcionalmente mais os contribuintes de menor capacidade "
+                           "de pagamento") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "CONTRADICAO"], "moduladores": ["igualmente", "independentemente"],
+        "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. Imposto sobre vendas com alíquota fixa é regressivo, pois pesa "
+                             "proporcionalmente mais sobre quem tem menor renda; progressividade exige alíquota "
+                             "crescente com a base."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0175
+    {
+        "id": "ECO-E1-0175-1", "fonte_ref": "E1-0175", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("A carga tributária, segundo o princípio da equidade, deve onerar mais fortemente os "
+                      "contribuintes que obtêm mais benefícios provenientes da atuação do governo sobre a "
+                      "economia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A carga tributária, segundo o princípio ") + vm("da equidade") + az(", deve onerar mais "
+                    "fortemente os contribuintes que obtêm mais benefícios provenientes da atuação do governo "
+                    "sobre a economia.")),
+        "poucas": ("Cobrar conforme o benefício recebido é o " + vm("princípio do benefício") + ". O princípio "
+                   "da " + azb("equidade") + " (ou da " + azb("capacidade de pagamento") + ") manda cobrar "
+                   "conforme a capacidade contributiva."),
+        "destrinchando": [
+            "Os dois critérios clássicos de justiça tributária, sistematizados por " + oc("Richard Musgrave")
+            + ": " + azb("princípio do benefício") + " — cada um paga na proporção do que recebe do Estado, como "
+            "num preço (tradição de " + oc("Wicksell") + " e " + oc("Lindahl") + "); " + azb("princípio da "
+            "capacidade de pagamento") + " — cada um contribui conforme pode, independentemente do que recebe.",
+            "A " + azb("equidade") + " se desdobra a partir da capacidade de pagamento: " + azb("horizontal")
+            + " (iguais pagam igual) e " + azb("vertical") + " (desiguais pagam desigualmente).",
+            "Onde o benefício funciona: serviços divisíveis e mensuráveis — taxas, pedágios, contribuição de "
+            "melhoria. Onde falha: bens públicos puros (defesa, justiça), em que não se mede o benefício "
+            "individual, e políticas redistributivas, em que o beneficiário é justamente quem não pode pagar.",
+            rx("No Brasil") + ", a " + vd("CF, art. 145") + " acolhe os dois: §1º (impostos graduados pela "
+            "capacidade econômica) e incisos II e III (taxas e contribuição de melhoria, vinculadas a serviço "
+            "ou obra que beneficia o contribuinte).",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A definição é a do princípio do benefício com o rótulo do "
+                       "princípio da equidade. Pista: “mais benefícios provenientes da atuação do governo” — a "
+                       "palavra benefício está no próprio item."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o princípio do benefício, cada contribuinte deve pagar tributos em proporção aos "
+            "benefícios que recebe do governo.”</i> → CERTO",
+            "<i>“O princípio do benefício é o mais adequado para financiar programas de transferência de renda.”"
+            "</i> → ERRADO (o beneficiário é quem não pode pagar)",
+        ])],
+        "reescrita": ("A carga tributária, segundo o princípio " + hl("do benefício") + ", deve onerar mais "
+                      "fortemente os contribuintes que obtêm mais benefícios provenientes da atuação do governo "
+                      "sobre a economia."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["mais fortemente"], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. É a definição do princípio do benefício, não da equidade; a equidade "
+                             "vertical considera a capacidade de pagamento, e a horizontal, tratamento igual a "
+                             "iguais."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

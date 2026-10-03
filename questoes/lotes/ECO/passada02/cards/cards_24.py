@@ -840,4 +840,378 @@ CARDS = [
                            "acao": "cortada (imagem do verso não preservada; conteúdo absorvido no 📖)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00067
+    {
+        "id": "ECO-E2-L00067-1", "fonte_ref": "E2-L00067", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_MED,
+        "rotulo_item": "Item",
+        "assertiva": ("O déficit primário é uma medida essencial para determinar o tamanho real do governo porque ele "
+                      "exclui todos os pagamentos de juros, focando apenas no efeito das despesas não financeiras "
+                      "superando as receitas não financeiras."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("O déficit primário é uma medida essencial para determinar o <u>tamanho real do governo</u> "
+                      "porque ele exclui todos os pagamentos de juros, focando apenas no efeito das despesas não "
+                      "financeiras superando as receitas não financeiras."),
+        "poucas": ("A definição está certa: o " + azb("resultado primário") + " exclui todos os juros e compara "
+                   "receitas e despesas <b>não financeiras</b>. Por isso mede a política fiscal do governo atual, "
+                   "sem o peso da dívida herdada."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "A segunda parte (exclusão de todos os juros; despesas não financeiras maiores que as "
+                          "receitas não financeiras) é a definição exata. Já “determinar o tamanho real do "
+                          "governo” é impreciso: o tamanho do Estado se mede pelo gasto ou pela carga tributária "
+                          "em proporção do PIB, e o primário mede o <b>esforço fiscal</b>. A banca do simulado "
+                          "deu CERTO, lendo “tamanho real” como a dimensão das contas correntes do governo sem os "
+                          "juros; numa prova CEBRASPE, essa expressão abriria espaço para recurso.")],
+        "destrinchando": [
+            azb("Resultado primário") + " = receitas não financeiras (tributos, contribuições, concessões, "
+            "dividendos) − despesas não financeiras (pessoal, previdência, custeio, investimento, "
+            "transferências). " + vd("Déficit primário") + " = despesas não financeiras > receitas não "
+            "financeiras.",
+            "Por que excluir os juros: eles dependem do estoque de dívida herdado e da taxa de juros fixada pela "
+            "política monetária, não das escolhas fiscais do ano. O primário isola o que o governo de hoje "
+            "controla — por isso é o " + azb("indicador de esforço fiscal") + " e a base das metas fiscais no "
+            + rx("Brasil") + " desde 1999.",
+            "Relação com os outros conceitos: " + vd("nominal = primário + juros nominais") + "; "
+            + vd("operacional = primário + juros reais") + ". Só o nominal mostra quanto a dívida cresceu.",
+            "Tamanho do governo, a rigor, mede-se pela " + azb("despesa pública/PIB") + " ou pela "
+            + azb("carga tributária/PIB") + ". Um governo enorme pode ter primário zerado (gasta muito e "
+            "arrecada muito), e um governo pequeno pode ter déficit primário.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " A definição do primário está perfeita; o risco do item "
+                       "está na justificativa de abertura (“tamanho real do governo”), que a banca aceitou. "
+                       "Note também o “todos os pagamentos de juros”: correto aqui, porque só o primário exclui "
+                       "os juros por inteiro — o operacional exclui apenas a correção monetária."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O déficit primário exclui apenas a parcela dos juros correspondente à correção monetária.”</i> → "
+            "ERRADO (troca de conceito: isso é o operacional)",
+            "<i>“É possível haver superávit primário e déficit nominal no mesmo período.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["todos", "apenas"], "dificuldade": 2,
+        "comentario_fonte": ("O primário permite observar o tamanho do governo excluindo os juros, focando nas "
+                             "despesas e receitas não financeiras."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: “determinar o tamanho real do governo” não é a função do resultado primário "
+                    "(que mede o esforço fiscal); gabarito CERTO da fonte mantido",
+                    "quase_duplicata: ECO-E1-0438-1 (definição de primário × nominal)"],
+    },
+    # ------------------------------------------------------------------ E2-L00068
+    {
+        "id": "ECO-E2-L00068-1", "fonte_ref": "E2-L00068", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_MED,
+        "rotulo_item": "Item",
+        "assertiva": ("O déficit operacional é calculado adicionando a correção monetária sobre os juros nominais ao "
+                      "déficit primário. Isso ocorre porque o déficit operacional busca refletir o efeito da "
+                      "inflação nos juros pagos pelo governo, ajustando o déficit nominal e proporcionando uma "
+                      "representação mais precisa do impacto fiscal real sem as distorções inflacionárias nos "
+                      "cálculos de juros."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O déficit operacional é calculado ")
+                    + vm("adicionando a correção monetária sobre os juros nominais ao déficit primário")
+                    + az(". Isso ocorre porque o déficit operacional busca ") + vm("refletir")
+                    + az(" o efeito da inflação nos juros pagos pelo governo, ajustando o déficit nominal e "
+                         "proporcionando uma representação mais precisa do impacto fiscal real sem as distorções "
+                         "inflacionárias nos cálculos de juros.")),
+        "poucas": ("O " + azb("operacional") + " não <b>soma</b> a correção monetária: ele a <b>retira</b>. É o "
+                   "primário mais os " + vd("juros reais") + " — ou o nominal menos a correção monetária."),
+        "destrinchando": [
+            "Decomposição dos juros: " + vd("juros nominais = juros reais + correção monetária") + ". A correção "
+            "monetária é a parte dos juros que só repõe a perda de valor da dívida causada pela inflação; não é "
+            "custo real para o devedor.",
+            "As três medidas, em escada: " + azb("primário") + " (sem juros) → " + vd("+ juros reais") + " = "
+            + azb("operacional") + " → " + vd("+ correção monetária") + " = " + azb("nominal") + ". Logo, "
+            + vd("operacional = nominal − correção monetária") + ".",
+            "Por que o conceito foi criado: com inflação alta, os juros nominais incham e o déficit nominal "
+            "exagera a deterioração fiscal real. O operacional <b>expurga</b> essa distorção. Foi o indicador "
+            "de referência no " + rx("Brasil") + " até a estabilização do Real; com inflação baixa, perdeu "
+            "relevância diante do primário e do nominal.",
+            "Contas: primário = −1% do PIB (superávit), juros nominais = 7%, inflação explicando 4 pontos → "
+            "nominal = " + vd("6%") + "; operacional = −1 + 3 = " + vd("2%") + ".",
+            vm("Regra-âncora: Nominal = tudo; Operacional = tira a inflação dos juros; Primário = tira todos os "
+               "juros."),
+        ],
+        "dissecando": (cz("[inversão · meia-verdade]") + " O item junta duas verdades — o operacional lida com "
+                       "a inflação embutida nos juros; a correção monetária está nos juros nominais — e inverte "
+                       "a operação (soma em vez de subtrai). O “refletir” reforça a confusão: o objetivo é "
+                       "<b>eliminar</b> o efeito, como a própria frase admite no final (“sem as distorções”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O déficit operacional corresponde ao déficit primário acrescido dos juros reais da dívida.”</i> "
+            "→ CERTO",
+            "<i>“Em período de inflação elevada, o déficit operacional tende a superar o nominal.”</i> → ERRADO "
+            "(inversão: o operacional é o nominal sem a correção, logo menor)",
+        ])],
+        "reescrita": ("O déficit operacional é calculado " + hl("adicionando os juros reais ao déficit primário "
+                      "(ou subtraindo do déficit nominal a correção monetária)") + ". Isso ocorre porque o "
+                      "déficit operacional busca " + hl("expurgar") + " o efeito da inflação nos juros pagos "
+                      "pelo governo, ajustando o déficit nominal e proporcionando uma representação mais precisa "
+                      "do impacto fiscal real sem as distorções inflacionárias nos cálculos de juros."),
+        "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("O operacional exclui a correção monetária dos juros nominais; operacional = primário "
+                             "+ juros reais = nominal − correção monetária. Escada N-O-P."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 005", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (fórmulas transcritas no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00085-1 (versão CERTO do mesmo conceito)"],
+    },
+    # ------------------------------------------------------------------ E2-L00069
+    {
+        "id": "ECO-E2-L00069-1", "fonte_ref": "E2-L00069", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_MED,
+        "rotulo_item": "Item",
+        "assertiva": ("A inflação tem o efeito de diminuir os juros nominais pagos pelo governo, pois ela dilui o "
+                      "valor efetivo das obrigações financeiras, resultando em uma carga menor de juros no cálculo "
+                      "do déficit nominal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A inflação tem o efeito de ") + vm("diminuir") + az(" os juros nominais pagos pelo governo, "
+                                                                           "pois ")
+                    + vm("ela") + az(" dilui o valor efetivo das obrigações financeiras, resultando em uma carga ")
+                    + vm("menor") + az(" de juros no cálculo do déficit nominal.")),
+        "poucas": ("A inflação <b>aumenta</b> os " + azb("juros nominais") + ": como ela corrói o valor real da "
+                   "dívida, os credores exigem compensação (a correção monetária), e o déficit nominal "
+                   "<b>incha</b>."),
+        "destrinchando": [
+            vd("Juros nominais ≈ juros reais + inflação") + " (" + oc("Fisher") + "). Em títulos indexados à "
+            "inflação, a correção é automática; nos prefixados, os credores embutem a inflação esperada na "
+            "taxa. Mais inflação → mais juros nominais → " + vd("déficit nominal maior") + ".",
+            "A parte verdadeira do item: a inflação de fato <b>dilui</b> o valor real da dívida. Mas essa perda "
+            "do credor é justamente o que a correção monetária embutida nos juros nominais compensa — por isso "
+            "a diluição não reduz a conta de juros; ela a explica.",
+            "Foi por essa razão que se criou o " + azb("resultado operacional") + " (nominal menos correção "
+            "monetária): em inflação alta, o nominal superestima o desequilíbrio fiscal real.",
+            "Onde a inflação ajuda de verdade o governo: a " + azb("inflação surpresa") + " (acima da embutida "
+            "nos prefixados) transfere riqueza do credor para o devedor, e a inflação eleva a receita nominal "
+            "e pode corroer despesas não indexadas — efeitos sobre o primário e o valor real do estoque, não "
+            "redução dos juros nominais.",
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " Parte de uma verdade (a inflação dilui o valor real "
+                       "das obrigações) para tirar dela a conclusão oposta à correta. A pista está em “juros "
+                       "<b>nominais</b>”: tudo o que é nominal sobe com a inflação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em contexto de inflação elevada, o déficit nominal tende a superestimar o desequilíbrio fiscal "
+            "real.”</i> → CERTO",
+            "<i>“A inflação eleva os juros reais pagos pelo governo.”</i> → ERRADO (troca de conceito: eleva os "
+            "nominais; os reais não dependem dela)",
+        ])],
+        "reescrita": ("A inflação tem o efeito de " + hl("aumentar") + " os juros nominais pagos pelo governo, pois "
+                      + hl("os credores exigem compensação pela inflação, que") + " dilui o valor efetivo das "
+                      "obrigações financeiras, resultando em uma carga " + hl("maior") + " de juros no cálculo do "
+                      "déficit nominal."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A inflação tende a aumentar os juros nominais: obrigações indexadas e credores que "
+                             "ajustam as taxas para preservar o retorno real."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00085
+    {
+        "id": "ECO-E2-L00085-1", "fonte_ref": "E2-L00085", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_APR,
+        "rotulo_item": "Item",
+        "assertiva": ("O déficit operacional é obtido ao subtrair a correção monetária dos juros nominais do déficit "
+                      "nominal, sendo importante para calcular o impacto dos juros reais sobre as contas do "
+                      "governo, excluindo o impacto da inflação."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O déficit operacional é obtido ao <u>subtrair</u> a correção monetária dos juros nominais do "
+                      "déficit nominal, sendo importante para calcular o impacto dos <u>juros reais</u> sobre as "
+                      "contas do governo, excluindo o impacto da inflação."),
+        "poucas": (vd("Operacional = nominal − correção monetária") + " = primário + juros reais. Mostra o peso "
+                   "<b>real</b> da dívida nas contas, sem o inchaço inflacionário dos juros nominais."),
+        "destrinchando": [
+            "Juros nominais = " + vd("juros reais + correção monetária") + ". Tirando a correção do nominal, "
+            "sobram o primário e os juros reais: é o " + azb("resultado operacional") + ".",
+            "Por que importa: a correção monetária só repõe ao credor o valor que a inflação corroeu; não é "
+            "aumento real do endividamento. Com inflação alta, o nominal dá uma imagem exagerada do desequilíbrio "
+            "fiscal, e o operacional corrige isso.",
+            "Contexto: o operacional foi o indicador de referência no " + rx("Brasil") + " dos anos 1980 e início "
+            "dos 1990, de inflação crônica; com a estabilização, o acompanhamento passou a centrar-se no "
+            "primário (metas desde 1999) e no nominal.",
+            "Quadro-resumo: " + azb("primário") + " exclui todos os juros; " + azb("operacional") + " exclui só a "
+            "correção monetária; " + azb("nominal") + " não exclui nada. Com juros reais e inflação positivos, em termos de déficit: "
+            "primário < operacional < nominal.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição correta, com o verbo certo (“subtrair”) e o objetivo "
+                       "certo (juros reais, sem inflação). A banca costuma fabricar o ERRADO trocando "
+                       "“subtrair” por “adicionar” ou “nominal” por “primário” como ponto de partida."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O déficit operacional é obtido ao adicionar a correção monetária dos juros nominais ao déficit "
+            "primário.”</i> → ERRADO (inversão: soma juros reais, não a correção)",
+            "<i>“Com inflação nula, os déficits operacional e nominal coincidem.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O operacional subtrai do nominal a correção monetária dos juros; exclui a inflação e "
+                             "mostra o impacto dos juros reais."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00068-1 (versão ERRADO do mesmo conceito)"],
+    },
+    # ------------------------------------------------------------------ E2-L00086
+    {
+        "id": "ECO-E2-L00086-1", "fonte_ref": "E2-L00086", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_APR,
+        "rotulo_item": "Item",
+        "assertiva": ("A dívida fiscal líquida é a dívida total do setor público, incluindo ajustes patrimoniais "
+                      "(saldo de privatizações menos reconhecimento de dívidas), e reflete as obrigações que ainda "
+                      "precisam ser pagas para o setor financeiro, tanto público quanto privado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A dívida fiscal líquida é a dívida ") + vm("total") + az(" do setor público, ")
+                    + vm("incluindo") + az(" ajustes patrimoniais (saldo de privatizações menos reconhecimento de "
+                                           "dívidas), e reflete as obrigações que ainda precisam ser pagas ")
+                    + vm("para o setor financeiro, tanto público quanto privado") + az(".")),
+        "poucas": ("A " + azb("dívida fiscal líquida") + " é a " + azb("DLSP") + " <b>menos</b> os ajustes "
+                   "patrimoniais e metodológicos: ela os exclui, para isolar a dívida gerada pelos déficits."),
+        "destrinchando": [
+            azb("DLSP") + " = dívidas − créditos do setor público consolidado (governos, BC e estatais não "
+            "financeiras, salvo Petrobras e Eletrobras) junto ao " + azb("sistema financeiro") + " (público e "
+            "privado), ao " + azb("setor privado não financeiro") + " e ao " + azb("resto do mundo") + ". Não é "
+            "dívida “total”: é líquida de ativos, como as reservas internacionais.",
+            "A DLSP muda por dois motivos: os " + vd("fluxos fiscais") + " (o déficit nominal) e os "
+            + vd("ajustes") + " — patrimoniais (privatizações reduzem a dívida; reconhecimento de passivos "
+            "antigos, os “esqueletos”, a aumenta) e metodológicos (variação cambial sobre ativos e passivos em "
+            "moeda estrangeira, entre outros).",
+            vd("Dívida fiscal líquida = DLSP − ajustes patrimoniais e metodológicos") + ". Assim, a variação "
+            "da dívida fiscal é igual às " + azb("NFSP nominais") + ": é a dívida “explicada” pelos resultados "
+            "fiscais.",
+            "Por isso o item erra duas vezes no núcleo — “total” (é líquida) e “incluindo ajustes” (exclui) — e "
+            "ainda restringe a contraparte ao setor financeiro, quando a dívida líquida também é devida ao setor "
+            "privado não financeiro e ao exterior.",
+        ],
+        "dissecando": (cz("[inversão · restrição indevida]") + " O item inverte o tratamento dos ajustes "
+                       "(incluir × excluir) e encolhe a lista de credores. O próprio adjetivo “fiscal” é a "
+                       "pista: a dívida fiscal é a que vem dos <b>resultados fiscais</b>, sem o que não é "
+                       "fiscal (privatização, esqueletos, câmbio)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A variação da dívida fiscal líquida corresponde às necessidades de financiamento do setor "
+            "público no conceito nominal.”</i> → CERTO",
+            "<i>“Receitas de privatização reduzem a dívida fiscal líquida.”</i> → ERRADO (troca de conceito: "
+            "reduzem a DLSP; são ajuste patrimonial, fora da dívida fiscal)",
+        ])],
+        "reescrita": ("A dívida fiscal líquida é a dívida " + hl("líquida") + " do setor público, "
+                      + hl("excluídos os") + " ajustes patrimoniais (saldo de privatizações menos reconhecimento "
+                      "de dívidas), e reflete as obrigações que ainda precisam ser pagas " + hl("ao sistema "
+                      "financeiro (público e privado), ao setor privado não financeiro e ao resto do mundo")
+                      + "."),
+        "tipo_erro": ["INVERSAO", "RESTRICAO"], "moduladores": ["total", "tanto… quanto"], "dificuldade": 3,
+        "comentario_fonte": ("A dívida fiscal líquida é a DLSP menos os ajustes patrimoniais; os ajustes não a "
+                             "compõem; a DLSP é a dívida consolidada junto ao setor financeiro e não financeiro."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00425
+    {
+        "id": "ECO-E2-L00425-1", "fonte_ref": "E2-L00425", "destino": "48", "subtema": H2["laf"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_LAFFER,
+        "rotulo_item": "Item",
+        "assertiva": ("Qualquer elevação de alíquota a partir de níveis altos reduz a arrecadação, por definição da "
+                      "Curva de Laffer."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (vm("Qualquer") + az(" elevação de alíquota a partir de níveis altos ") + vm("reduz")
+                    + az(" a arrecadação, ") + vm("por definição da") + az(" Curva de Laffer.")),
+        "poucas": ("A curva de Laffer é uma " + azb("possibilidade teórica") + ": elevar a alíquota só reduz a "
+                   "receita <b>acima</b> da alíquota de receita máxima (t*), e “nível alto” não garante estar "
+                   "lá."),
+        "destrinchando": [
+            "Receita = alíquota × base. O efeito de subir a alíquota depende de quanto a base reage: se ela "
+            "encolhe menos que proporcionalmente, a receita ainda sobe; só na " + azb("zona proibitiva")
+            + " (acima de t*) a receita cai.",
+            "Onde fica t* não sai de definição nenhuma: depende das " + azb("elasticidades") + " da base "
+            "(oferta de trabalho, investimento, mobilidade do capital), da facilidade de evasão e elisão, da "
+            "fiscalização e do tipo de tributo. Um imposto sobre base rígida pode ter t* altíssimo.",
+            "Por isso, “níveis altos” é vago: uma alíquota pode ser alta para os padrões e ainda estar à "
+            "esquerda de t*, onde qualquer aumento eleva a arrecadação (com mais peso morto, é verdade).",
+            "A curva é associada a " + oc("Arthur Laffer") + " e à " + azb("economia do lado da oferta") + "; o "
+            "uso político — cortes de impostos que “se pagam” — dependia de as alíquotas estarem acima de t*, "
+            "o que a evidência raramente confirmou para alíquotas gerais.",
+        ],
+        "dissecando": (cz("[modulador absoluto · juízo indevido]") + " Três marcas de absoluto: “qualquer”, o "
+                       "presente categórico “reduz” e “por definição”. A curva não define a posição de t*; "
+                       "apenas mostra que ela existe."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a curva de Laffer, a elevação de alíquotas já elevadas pode reduzir a "
+            "arrecadação.”</i> → CERTO",
+            "<i>“Pela curva de Laffer, a redução de alíquotas sempre aumenta a arrecadação.”</i> → ERRADO "
+            "(modulador absoluto: só na zona proibitiva)",
+        ])],
+        "reescrita": (hl("Uma") + " elevação de alíquota a partir de níveis altos " + hl("pode reduzir")
+                      + " a arrecadação, " + hl("se a alíquota já estiver acima da que maximiza a receita, "
+                      "segundo a") + " Curva de Laffer."),
+        "tipo_erro": ["GENERALIZACAO", "JUIZO_INDEVIDO"], "moduladores": ["qualquer", "por definição"],
+        "dificuldade": 1,
+        "comentario_fonte": ("A curva é possibilidade teórica; o efeito depende do nível relativo da alíquota, da "
+                             "base tributável e das respostas comportamentais."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0657-1 (versão CERTO com “pode”)"],
+    },
+    # ------------------------------------------------------------------ E2-L00656
+    {
+        "id": "ECO-E2-L00656-1", "fonte_ref": "E2-L00656", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à macroeconomia, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("O financiamento do déficit primário por meio da emissão de dívida pública ocasiona, "
+                      "automaticamente, o aumento da dívida líquida do setor público."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": (az("O financiamento do déficit primário por meio da emissão de dívida pública ")
+                    + vm("ocasiona, automaticamente,") + az(" o aumento da dívida líquida do setor público.")),
+        "poucas": ("A " + azb("DLSP") + " é dívida bruta <b>menos ativos</b>: emitir título, em si, não a move "
+                   "(entra caixa no ativo). O que a eleva é o déficit — e, mesmo assim, ajustes patrimoniais e "
+                   "cambiais podem compensá-lo. Não há automatismo."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "O gabarito ERRADO se apoia no “automaticamente”. Mas, mantido o resto constante, um "
+                          "déficit primário <b>gasto</b> e coberto com dívida eleva a DLSP — é o que dizem as "
+                          "NFSP. A leitura da banca só se sustenta separando a emissão (neutra para a dívida "
+                          "líquida) do déficit, e lembrando que ajustes no mesmo período podem mais que "
+                          "compensá-lo. CERTO seria defensável numa leitura ceteris paribus.")],
+        "destrinchando": [
+            vd("DLSP = dívida bruta − ativos financeiros") + " do setor público (reservas internacionais, "
+            "caixa do Tesouro, créditos a bancos públicos e a fundos). Toda operação que aumenta passivo e ativo "
+            "na mesma medida é neutra para ela.",
+            "Emissão de título: no ato, sobe a dívida bruta e sobe o caixa do Tesouro (conta única no BC) — "
+            + vd("DLSP inalterada") + ". Só quando o dinheiro é gasto em despesa primária sem receita "
+            "correspondente o ativo cai e a dívida líquida aumenta.",
+            "Ou seja, quem eleva a DLSP é o " + azb("déficit") + ", seja qual for a forma de financiá-lo: "
+            "emissão de títulos, uso de caixa acumulado, venda de ativos ou emissão monetária (a base "
+            "monetária também é passivo na DLSP).",
+            "Além disso, a DLSP do período reflete " + azb("ajustes") + ": uma depreciação cambial valoriza as "
+            "reservas e reduz a DLSP; receitas de privatização também. O mesmo déficit pode conviver com DLSP "
+            "estável ou em queda.",
+            vm("Regra-âncora: emissão de dívida move a dívida BRUTA; o resultado fiscal e os ajustes movem a "
+               "LÍQUIDA."),
+        ],
+        "dissecando": (cz("[modulador absoluto · nexo indevido]") + " O “automaticamente” amarra a emissão à "
+                       "dívida líquida, ignorando que a contrapartida da emissão é um ativo e que há ajustes "
+                       "no período. Itens sobre DLSP quase sempre testam o efeito de ativos (reservas, caixa, "
+                       "créditos)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A emissão de títulos públicos para recompor o caixa do Tesouro eleva a dívida bruta, mas não a "
+            "dívida líquida do setor público.”</i> → CERTO",
+            "<i>“A compra de reservas internacionais pelo BC, esterilizada com compromissadas, eleva a DLSP.”</i> "
+            "→ ERRADO (passivo e ativo sobem juntos: muda a bruta, não a líquida)",
+        ])],
+        "reescrita": ("O financiamento do déficit primário por meio da emissão de dívida pública "
+                      + hl("não ocasiona, automaticamente,") + " o aumento da dívida líquida do setor público"
+                      + hl(", pois a emissão eleva também os ativos e a variação da DLSP depende ainda dos "
+                           "ajustes do período") + "."),
+        "tipo_erro": ["GENERALIZACAO", "NEXO_INDEVIDO"], "moduladores": ["automaticamente"], "dificuldade": 3,
+        "comentario_fonte": ("A DLSP é dívida bruta menos ativos financeiros; a emissão eleva a dívida bruta, mas "
+                             "pode elevar também os ativos, impedindo a alta imediata da DLSP."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: ceteris paribus, um déficit primário financiado por dívida eleva a DLSP; o "
+                    "ERRADO da fonte depende de separar a emissão (neutra) do déficit e dos ajustes"],
+    },
 ]

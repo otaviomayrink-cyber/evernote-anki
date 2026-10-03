@@ -1361,4 +1361,188 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00037
+    {
+        "id": "ECO-E3-L00037-1", "fonte_ref": "E3-L00037", "destino": "47", "subtema": H2["fun"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": True,
+        "comando": CMD_TJPA_FUN,
+        "rotulo_item": "Item",
+        "assertiva": ("A provisão de bens públicos é um exemplo de atuação do Estado no exercício de sua função "
+                      "alocativa."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A provisão de <u>bens públicos</u> é um exemplo de atuação do Estado no exercício de sua "
+                      "<u>função alocativa</u>."),
+        "poucas": ("Bens " + azb("não rivais e não excludentes") + " são subofertados pelo mercado por causa do "
+                   + azb("carona") + "; o Estado os provê para corrigir a alocação — é o exemplo-padrão da "
+                   + azb("função alocativa") + "."),
+        "destrinchando": [
+            MUSGRAVE,
+            azb("Bem público") + " puro: " + vd("não rival") + " (meu consumo não reduz o seu) e "
+            + vd("não excludente") + " (não dá para barrar quem não paga). Exemplos: defesa nacional, "
+            "iluminação pública, segurança, farol, sinal aberto de rádio.",
+            "Falha de mercado: cada um espera que o outro pague — o problema do " + azb("carona")
+            + " (<i>free rider</i>). A receita privada não cobre o custo e o bem é ofertado abaixo do "
+            "eficiente. Solução: financiamento compulsório por tributos.",
+            "Provisão ≠ produção: o Estado pode contratar a empresa privada que constrói e mantém a iluminação; "
+            "o que importa é quem decide e financia a quantidade ofertada.",
+            "Compare: oferecer educação gratuita (bem meritório) também é alocativa; transferir renda pelo "
+            + rx("Bolsa Família") + " é distributiva; reduzir juros e ampliar gasto na recessão é estabilizadora.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Exemplo canônico, sem modulador. O CEBRASPE costuma alternar, no "
+                       "mesmo bloco, itens com a função certa e itens em que troca alocativa por distributiva ou "
+                       "estabilizadora; o par “bens públicos ↔ alocativa” é o mais seguro de todos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A provisão de bens públicos é exemplo da função distributiva do Estado.”</i> → ERRADO (troca de "
+            "conceito)",
+            "<i>“Bens públicos caracterizam-se pela rivalidade no consumo e pela possibilidade de "
+            "exclusão.”</i> → ERRADO (inversão: são não rivais e não excludentes)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Na tripartição de Musgrave, a provisão de bens públicos (não rivais e não excludentes), "
+                            "subofertados pelo mercado por causa do carona, é o exemplo clássico da função alocativa.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0625-1 (função alocativa decorre da existência de bens públicos)"],
+    },
+    # ------------------------------------------------------------------ E3-L00038
+    {
+        "id": "ECO-E3-L00038-1", "fonte_ref": "E3-L00038", "destino": "47", "subtema": H2["fun"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": CMD_TJPA_FUN,
+        "rotulo_item": "Item",
+        "assertiva": ("A função econômica estabilizadora do Estado busca suavizar as flutuações do ciclo econômico, "
+                      "controlando a inflação e visando ao pleno emprego."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A função econômica estabilizadora do Estado busca <u>suavizar as flutuações do ciclo "
+                      "econômico</u>, controlando a <u>inflação</u> e visando ao <u>pleno emprego</u>."),
+        "poucas": ("A " + azb("função estabilizadora") + " usa as políticas fiscal e monetária para amortecer o "
+                   "ciclo: " + vd("inflação controlada") + " e " + vd("emprego perto do pleno") + "."),
+        "destrinchando": [
+            MUSGRAVE,
+            "Objetivos clássicos: " + vd("pleno emprego") + ", " + vd("estabilidade de preços") + ", "
+            "equilíbrio do balanço de pagamentos e crescimento sustentado. Os dois primeiros podem entrar em "
+            "conflito no curto prazo (curva de Phillips), o que exige dosar a política.",
+            "Instrumentos: " + azb("política fiscal") + " (gasto, tributos, estabilizadores automáticos como IR "
+            "progressivo e seguro-desemprego) e " + azb("política monetária") + " (juros, compulsório, mercado "
+            "aberto). No " + rx("Brasil") + ", a monetária cabe ao " + rx("Banco Central") + ", autônomo desde "
+            "a " + vd("LC 179/2021") + ", com mandato principal de estabilidade de preços e, como objetivos "
+            "acessórios, suavizar o nível de atividade e fomentar o pleno emprego.",
+            "Atuação simétrica: expansão na recessão, contenção no superaquecimento. Itens que restringem a "
+            "estabilizadora “apenas” às recessões são ERRADO.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual. O “visando ao” (objetivo, não garantia) e a "
+                       "ausência de “apenas” mantêm o item verdadeiro. 🔥 No mesmo bloco, o CEBRASPE cobrou "
+                       "“provisão de bens públicos = alocativa” (CERTO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A função estabilizadora do Estado busca corrigir a distribuição de renda resultante do "
+            "mercado.”</i> → ERRADO (troca de conceito: é a distributiva)",
+            "<i>“A função estabilizadora atua apenas em períodos recessivos.”</i> → ERRADO (restrição indevida)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["visando ao"], "dificuldade": 1,
+        "comentario_fonte": "A estabilizadora (Musgrave) usa políticas fiscal e monetária para suavizar ciclos, "
+                            "controlar a inflação e aproximar o emprego do pleno emprego.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00042
+    {
+        "id": "ECO-E3-L00042-1", "fonte_ref": "E3-L00042", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": CMD_TJPA_POL,
+        "rotulo_item": "Item",
+        "assertiva": ("A política fiscal, um dos principais instrumentos de atuação governamental, controla a oferta "
+                      "de moeda e os tributos na atividade econômica do país."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A política fiscal, um dos principais instrumentos de atuação governamental, controla ")
+                    + vm("a oferta de moeda") + az(" e os tributos na atividade econômica do país.")),
+        "poucas": ("Política " + azb("fiscal") + " = " + vd("gastos e tributos") + ". O controle da "
+                   + azb("oferta de moeda") + " é instrumento da política " + azb("monetária") + ", conduzida "
+                   "pelo Banco Central."),
+        "destrinchando": [
+            azb("Política fiscal") + ": decisões sobre receitas (tributos) e despesas do governo, e o resultado "
+            "que delas decorre (primário, nominal, dívida). No " + rx("Brasil") + ", é formulada pelo Executivo "
+            "(Fazenda e Planejamento) e aprovada pelo Congresso no ciclo orçamentário (PPA, LDO, LOA).",
+            azb("Política monetária") + ": controle da liquidez e dos juros — taxa básica (Selic), operações de "
+            "mercado aberto, depósito compulsório, redesconto. No " + rx("Brasil") + ", cabe ao "
+            + rx("Banco Central") + " sob o regime de metas de inflação definido pelo CMN.",
+            "Pontos de contato que confundem: o déficit pode ser financiado por emissão de moeda (hoje vedado: "
+            "o art. " + vd("164, § 1º, da Constituição") + " proíbe o BC de financiar o Tesouro), e a gestão da "
+            "dívida pública afeta a liquidez. Mas emitir títulos para financiar o déficit é operação fiscal; "
+            "comprá-los e vendê-los para regular a moeda é operação monetária.",
+            vm("Regra-âncora: fiscal mexe em G e T; monetária mexe em M e i."),
+        ],
+        "dissecando": (cz("[troca de conceito · meia-verdade]") + " O item junta um instrumento correto "
+                       "(tributos) a um da política vizinha (oferta de moeda). A meia-verdade é a pista: quando "
+                       "uma enumeração mistura instrumentos, confira cada um contra a política anunciada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política fiscal atua sobre a economia por meio dos gastos públicos e da tributação.”</i> → "
+            "CERTO",
+            "<i>“As operações de mercado aberto são instrumento da política fiscal.”</i> → ERRADO (troca de "
+            "conceito: são monetárias)",
+        ])],
+        "reescrita": ("A política fiscal, um dos principais instrumentos de atuação governamental, controla "
+                      + hl("os gastos públicos") + " e os tributos na atividade econômica do país."),
+        "tipo_erro": ["TROCA_CONCEITO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A assertiva mistura política fiscal (gastos e tributos) e monetária (oferta de moeda e "
+                            "juros, a cargo do Banco Central). Um dos comentários empilhados afirma, sem fonte, que o "
+                            "gabarito oficial seria CERTO.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: um dos seis comentários da fonte afirma que o gabarito oficial foi CERTO; os "
+                    "demais e a indicação principal dão ERRADO, coerente com o conteúdo — conferir no gabarito "
+                    "definitivo do CEBRASPE (TJ/PA 2025, item 86)"],
+    },
+    # ------------------------------------------------------------------ E3-L00050
+    {
+        "id": "ECO-E3-L00050-1", "fonte_ref": "E3-L00050", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": CMD_TJPA_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("A estrutura tributária brasileira é eminentemente progressiva, ou seja, a proporção da renda "
+                      "destinada aos impostos aumenta conforme a renda do contribuinte diminui."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A estrutura tributária brasileira é eminentemente ") + vm("progressiva") + az(", ou seja, a "
+                       "proporção da renda destinada aos impostos aumenta conforme a renda do contribuinte "
+                       "diminui.")),
+        "poucas": ("O sistema brasileiro é " + azb("regressivo") + " — e a própria explicação do item (a carga "
+                   "pesa mais conforme a renda diminui) é a definição de " + azb("regressividade") + ", não de "
+                   "progressividade."),
+        "destrinchando": [
+            "Definições, sempre pela " + azb("alíquota média") + " (imposto ÷ renda): " + azb("progressivo")
+            + " → a proporção cresce com a renda; " + azb("proporcional") + " → constante; "
+            + azb("regressivo") + " → cai com a renda (pesa mais nos pobres).",
+            "Por que o " + rx("Brasil") + " é regressivo: a carga se apoia em " + vd("tributos sobre bens e "
+                                                                                     "serviços") + " (ICMS, "
+            "PIS/Cofins, IPI, ISS), que respondem pela maior fatia da arrecadação. Como os mais pobres consomem "
+            "quase toda a renda, pagam proporcionalmente mais.",
+            "A parte progressiva (IRPF com faixas) pesa pouco: base estreita, isenção histórica de lucros e "
+            "dividendos distribuídos (desde " + vd("1995") + ") e tributação baixa sobre patrimônio e "
+            "herança. Estudos do " + rx("Ipea") + " e da Receita confirmam carga proporcionalmente maior nos "
+            "decis de menor renda.",
+            "⏳ (out/2026) Mudanças em curso: a " + vd("EC 132/2023") + " cria o IVA dual (CBS e IBS), com "
+            "transição a partir de 2026 e cashback para famílias de baixa renda; a reforma do IR aprovada em 2025 "
+            "isentou rendas mensais até R$ 5 mil e instituiu imposto mínimo sobre altas rendas. O efeito sobre a "
+            "regressividade ainda depende da implantação.",
+            vm("Regra-âncora: tributação indireta pesada → sistema regressivo."),
+        ],
+        "dissecando": (cz("[troca de conceito · contradição]") + " O item rotula o sistema como progressivo e, no "
+                       "“ou seja”, descreve a regressividade: a definição contradiz o rótulo. O conteúdo descrito "
+                       "é verdadeiro para o Brasil; o erro está só na palavra “progressiva”. 🔥 O CEBRASPE gosta "
+                       "de testar se o candidato confere a definição que o próprio item oferece."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A estrutura tributária brasileira é eminentemente regressiva, em razão do peso dos tributos "
+            "indiretos sobre o consumo.”</i> → CERTO",
+            "<i>“Um tributo é progressivo quando sua alíquota média cai à medida que a renda aumenta.”</i> → "
+            "ERRADO (inversão: isso é regressividade)",
+        ])],
+        "reescrita": ("A estrutura tributária brasileira é eminentemente " + hl("regressiva") + ", ou seja, a "
+                      "proporção da renda destinada aos impostos aumenta conforme a renda do contribuinte diminui."),
+        "tipo_erro": ["TROCA_CONCEITO", "CONTRADICAO"], "moduladores": ["eminentemente"], "dificuldade": 1,
+        "comentario_fonte": "O sistema brasileiro é regressivo: predomínio de tributos indiretos sobre o consumo, "
+                            "que pesam mais nos mais pobres; o IRPF progressivo não reverte o quadro.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

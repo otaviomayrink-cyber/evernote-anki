@@ -575,7 +575,7 @@ CARDS = [
                       "domínios, contribui para a análise do movimento de capitais."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A conta financeira do balanço de pagamentos, que registra todas as compras e vendas "
-                       "internacionais de ativos financeiros, ") + vm("direitos sobre recursos naturais, marcas, "
+                       "internacionais de ativos financeiros") + vm(", direitos sobre recursos naturais, marcas, "
                                                                       "logotipos e domínios")
                     + az(", contribui para a análise do movimento de capitais.")),
         "poucas": ("Direitos sobre recursos naturais, marcas, logotipos e domínios são " + azb("ativos não "

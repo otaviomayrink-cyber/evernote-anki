@@ -553,4 +553,291 @@ CARDS = [
         "alertas": ["duplicata: comentário fundido com o da linha E1-0540 (mesmo item e mesmo verso)",
                     "quase_duplicata: ECO-E2-L01775-1 (nominal × primário, outra prova)"],
     },
+    # ------------------------------------------------------------------ E1-0441
+    {
+        "id": "ECO-E1-0441-1", "fonte_ref": "E1-0441", "destino": "48", "subtema": H2["fin"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Clipping", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": CMD_CLIP,
+        "rotulo_item": "Item",
+        "assertiva": ("A existência de superávit primário garante, por definição, a redução do estoque da dívida "
+                      "pública líquida, independentemente da taxa de juros real e do crescimento do PIB."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A existência de superávit primário ") + vm("garante, por definição,")
+                    + az(" a redução do estoque da dívida pública líquida, ")
+                    + vm("independentemente da taxa de juros real e do crescimento do PIB") + az(".")),
+        "poucas": ("O superávit primário não paga juros por definição: se ele for <b>menor que os juros</b>, há "
+                   + azb("déficit nominal") + " e a dívida cresce. Para a razão dívida/PIB, contam ainda o juro "
+                   "real (r) e o crescimento (g)."),
+        "destrinchando": [
+            "Estoque: Δdívida ≈ juros nominais − superávit primário (+ ajustes). Superávit de 1% do PIB com "
+            "juros de 6% do PIB = " + vd("déficit nominal de 5%") + " — a dívida sobe, apesar do “esforço "
+            "fiscal”.",
+            "Razão dívida/PIB (b): " + vd("Δb ≈ (r − g)·b − s") + ", em que s é o superávit primário em % do "
+            "PIB. O primário que estabiliza a dívida é " + vd("s* = (r − g)·b") + ".",
+            "Exemplo: b = 80%, r = 5%, g = 2% → s* = 0,03 × 80 = " + vd("2,4% do PIB") + ". Um superávit de 1% "
+            "do PIB, nesse quadro, deixa a razão <b>subir</b> 1,4 ponto ao ano.",
+            "Ao contrário, se " + vd("r < g") + ", a razão pode cair mesmo com pequeno déficit primário — o "
+            "crescimento “dilui” a dívida. Por isso os dois parâmetros que o item manda ignorar são justamente "
+            "os decisivos.",
+            vm("Regra-âncora: superávit primário é necessário, não suficiente; o que decide é s frente a "
+               "(r − g)·b."),
+        ],
+        "dissecando": (cz("[modulador absoluto · contradição]") + " Três absolutos em sequência: “garante”, "
+                       "“por definição” e “independentemente”. O item ainda descarta as duas variáveis "
+                       "(juros e crescimento) que a equação da dívida põe no centro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com r > g, a estabilização da razão dívida/PIB exige superávit primário positivo.”</i> → CERTO",
+            "<i>“Um déficit primário torna inevitável o aumento da razão dívida/PIB.”</i> → ERRADO (modulador "
+            "absoluto: com r < g a razão pode cair)",
+        ])],
+        "reescrita": ("A existência de superávit primário " + hl("não garante") + " a redução do estoque da dívida "
+                      "pública líquida, " + hl("que depende de o superávit superar os juros; para a razão "
+                      "dívida/PIB, contam também a taxa de juros real e o crescimento do PIB") + "."),
+        "tipo_erro": ["GENERALIZACAO", "CONTRADICAO"],
+        "moduladores": ["garante", "por definição", "independentemente"], "dificuldade": 1,
+        "comentario_fonte": ("A dívida pode crescer com superávit primário se o juro real superar o crescimento; "
+                             "estabilizar exige primário suficiente para cobrir os juros, descontado o "
+                             "crescimento."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: “liquida” → “líquida”",
+                    "duplicata: comentário fundido com o da linha E1-0543 (mesmo item e mesmo verso)"],
+    },
+    # ------------------------------------------------------------------ E1-0656
+    {
+        "id": "ECO-E1-0656-1", "fonte_ref": "E1-0656", "destino": "48", "subtema": H2["fin"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Considerando os instrumentos e os objetivos da política fiscal no Brasil, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("O comportamento da dívida pública é afetado tanto pelo Tesouro Nacional, por meio dos leilões "
+                      "de títulos da dívida pública, quanto pelo Banco Central do Brasil, por meio do lançamento das "
+                      "operações compromissadas junto aos bancos comerciais."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O comportamento da dívida pública é afetado <u>tanto</u> pelo Tesouro Nacional, por meio dos "
+                      "leilões de títulos da dívida pública, <u>quanto</u> pelo Banco Central do Brasil, por meio do "
+                      "lançamento das <u>operações compromissadas</u> junto aos bancos comerciais."),
+        "poucas": ("O " + rx("Tesouro") + " emite títulos em leilão para financiar o governo e rolar a dívida; o "
+                   + rx("BCB") + ", proibido de emitir títulos próprios, usa títulos do Tesouro em "
+                   + azb("operações compromissadas") + " para enxugar liquidez — e elas entram na dívida bruta."),
+        "destrinchando": [
+            rx("Tesouro Nacional") + ": gestor da " + azb("dívida pública mobiliária federal") + ". Em leilões "
+            "periódicos vende LTN, LFT, NTN-B e outros títulos para cobrir déficits e pagar a dívida que vence "
+            "(rolagem). Define prazo, indexador e custo da dívida.",
+            rx("Banco Central") + ": pela " + vd("LRF (2000)") + ", não pode emitir títulos próprios desde " + vd("2002"); opera a "
+            "política monetária com títulos do Tesouro em carteira. Na " + azb("compromissada") + ", vende "
+            "títulos aos bancos com compromisso de recompra: retira reservas do sistema para manter a Selic na "
+            "meta (esterilização, por exemplo, de compras de reservas internacionais).",
+            "Efeito sobre a dívida: na metodologia do BCB, a " + azb("DBGG") + " inclui as compromissadas, "
+            "porque são passivo do setor público com o mercado lastreado em títulos do Tesouro. Mais "
+            "compromissadas → DBGG maior, ainda que o Tesouro não tenha emitido nada.",
+            "Na " + azb("DLSP") + " a operação é neutra no ato: o BC troca um passivo (reservas bancárias, "
+            "parte da base monetária) por outro (compromissada). Mas os juros pagos sobre as compromissadas "
+            "pesam no resultado nominal.",
+            "Daí a coordenação entre os dois órgãos: o volume e o custo da dívida dependem da estratégia de "
+            "emissões do Tesouro e da gestão de liquidez do BC.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O item soa estranho porque se pensa no BC como agente "
+                       "monetário, não fiscal. O detalhe que o torna CERTO é a inclusão das compromissadas na "
+                       "dívida bruta. Versões erradas costumam dizer que o BC emite títulos próprios."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O Banco Central do Brasil influencia a dívida pública ao emitir títulos de sua própria "
+            "responsabilidade.”</i> → ERRADO (troca de ator: vedado pela LRF; o BC usa títulos do Tesouro)",
+            "<i>“As operações compromissadas do BC integram a Dívida Bruta do Governo Geral na metodologia do "
+            "Banco Central.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["tanto… quanto"], "dificuldade": 2,
+        "comentario_fonte": ("O Tesouro emite títulos para financiar o déficit; o BC influencia a dívida "
+                             "mobiliária por meio das compromissadas; ambos afetam estoque e custo."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0657
+    {
+        "id": "ECO-E1-0657-1", "fonte_ref": "E1-0657", "destino": "48", "subtema": H2["laf"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_LAFFER,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo o modelo da curva de Laffer, a elevação de alíquotas em uma estrutura tributária já "
+                      "representada por alta carga tributária pode afetar negativamente o volume arrecadado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo o modelo da curva de Laffer, a elevação de alíquotas em uma estrutura tributária "
+                      "<u>já representada por alta carga tributária</u> <u>pode</u> afetar negativamente o volume "
+                      "arrecadado."),
+        "poucas": ("Na " + azb("zona proibitiva") + " da curva de Laffer (acima da alíquota de receita máxima), "
+                   "elevar a alíquota encolhe tanto a base que a arrecadação <b>cai</b>."),
+        "destrinchando": [
+            "Receita = alíquota × base. Subir a alíquota tem dois efeitos: o " + azb("efeito aritmético") + " "
+            "(mais imposto por unidade de base, R ↑) e o " + azb("efeito comportamental") + " (a base encolhe "
+            "por menos trabalho, menos investimento, evasão, elisão e informalidade, R ↓).",
+            "Com carga baixa, domina o primeiro; com carga alta, o segundo pode dominar. O ponto em que os dois "
+            "se igualam é a alíquota de " + vd("receita máxima t*") + "; acima dele, cada aumento de alíquota "
+            "reduz a receita.",
+            "Por que “pode”: “alta carga” não significa estar necessariamente acima de t*. O lugar de t* "
+            "depende da sensibilidade da base ao imposto — e é exatamente isso que se discute "
+            "empiricamente.",
+            "Implicação de " + azb("economia do lado da oferta") + " (" + oc("Arthur Laffer") + "): se a economia "
+            "estiver na zona proibitiva, cortar alíquotas aumenta a arrecadação. Fora dela, cortar alíquotas "
+            "reduz a receita.",
+        ],
+        "dissecando": (cz("[modulador relativo · literalidade]") + " O “pode” e a condição “já representada por "
+                       "alta carga” salvam o item: ele descreve a parte descendente da curva sem afirmar que "
+                       "toda alta de alíquota reduz a receita. Retire o “pode” e ponha “sempre”, e o item vira "
+                       "ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a curva de Laffer, qualquer elevação de alíquota a partir de níveis altos reduz a "
+            "arrecadação.”</i> → ERRADO (modulador absoluto: depende de estar acima de t*)",
+            "<i>“Segundo a curva de Laffer, com alíquotas baixas, a elevação de alíquotas tende a elevar a "
+            "arrecadação.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "LITERAL"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Em contextos de carga elevada, aumentar alíquotas pode reduzir a arrecadação, por "
+                             "desincentivar a produção e aumentar a evasão."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (117).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada; conteúdo absorvido no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00425-1 (versão ERRADO com “qualquer elevação”)"],
+    },
+    # ------------------------------------------------------------------ E1-0658
+    {
+        "id": "ECO-E1-0658-1", "fonte_ref": "E1-0658", "destino": "48", "subtema": H2["laf"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_LAFFER,
+        "rotulo_item": "Item",
+        "assertiva": ("A Curva de Laffer explica a ilimitada capacidade de arrecadar de todos os governos que fixam "
+                      "habitualmente altas cargas tributárias."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A Curva de Laffer explica a ") + vm("ilimitada") + az(" capacidade de arrecadar ")
+                    + vm("de todos os governos que fixam habitualmente altas cargas tributárias") + az(".")),
+        "poucas": ("A curva de Laffer mostra o oposto: há um " + azb("teto de arrecadação") + " (em t*), e "
+                   "alíquotas altas demais podem reduzir a receita."),
+        "destrinchando": [
+            "Formato da curva: receita zero com alíquota " + vd("0%") + " e com " + vd("100%") + "; "
+            "crescente até t*, decrescente depois. O máximo é finito — logo, a capacidade de arrecadar é "
+            "<b>limitada</b>.",
+            "Para quem já tem carga alta, a curva é um <b>alerta</b>, não uma licença: quanto mais perto (ou "
+            "além) de t*, menor o ganho de receita de cada ponto de alíquota, e na " + azb("zona proibitiva")
+            + " o ganho fica negativo.",
+            "Mecanismo: a base tributária reage à alíquota (oferta de trabalho, investimento, evasão, elisão, "
+            "informalidade, fuga de capitais). Quanto mais sensível a base, mais baixo fica t*.",
+            "Contexto: a curva é associada a " + oc("Arthur Laffer") + " e ao debate de " + azb("economia do lado "
+            "da oferta") + " dos anos 1970–80, que defendia cortes de alíquotas como forma de estimular a "
+            "atividade e, no limite, a própria receita.",
+        ],
+        "dissecando": (cz("[inversão · modulador absoluto]") + " O item inverte a mensagem da curva (limite → "
+                       "“ilimitada”) e ainda generaliza para “todos os governos”. Dois absolutos num item de "
+                       "teoria econômica quase sempre indicam ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A curva de Laffer indica que existe uma alíquota que maximiza a arrecadação.”</i> → CERTO",
+            "<i>“A curva de Laffer indica que governos com alta carga tributária estão necessariamente na zona "
+            "em que cortes de alíquota elevam a receita.”</i> → ERRADO (extrapolação: depende de onde está t*)",
+        ])],
+        "reescrita": ("A Curva de Laffer explica a " + hl("limitada") + " capacidade de arrecadar " + hl("dos "
+                      "governos: a partir de certa alíquota, novas elevações reduzem a arrecadação") + "."),
+        "tipo_erro": ["INVERSAO", "GENERALIZACAO"], "moduladores": ["ilimitada", "todos"], "dificuldade": 1,
+        "comentario_fonte": ("A curva mostra o contrário: há limite para a arrecadação; alíquotas altas podem "
+                             "reduzi-la ao desestimular a produção e incentivar a evasão."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0128-1 (mesma tese, versão CERTO)"],
+    },
+    # ------------------------------------------------------------------ E1-0659
+    {
+        "id": "ECO-E1-0659-1", "fonte_ref": "E1-0659", "destino": "48", "subtema": H2["laf"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_LAFFER,
+        "rotulo_item": "Item",
+        "assertiva": "A Curva de Laffer mostra a relação inversa entre a receita tributária e a alíquota do imposto.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A Curva de Laffer mostra a relação ") + vm("inversa") + az(" entre a receita tributária e "
+                                                                                  "a alíquota do imposto.")),
+        "poucas": ("A relação é " + azb("não monotônica") + " (em U invertido): a receita sobe com a alíquota até "
+                   "t* e só depois passa a cair. “Inversa” descreve apenas o trecho além do máximo."),
+        "destrinchando": [
+            "Receita R(t) = t × B(t), em que a base B cai quando t sobe. Para t baixo, R cresce com t "
+            "(relação <b>direta</b>); no máximo t*, R é máxima; acima de t*, R decresce (relação "
+            "<b>inversa</b>). Nos extremos, " + vd("R(0) = R(100%) = 0") + ".",
+            "Consequência curiosa: cada nível de receita abaixo do máximo pode ser obtido com <b>duas</b> "
+            "alíquotas, uma baixa e uma alta. A alta é ineficiente — mesma receita com mais distorção.",
+            "Se a relação fosse inversa em toda a curva, qualquer imposto reduziria a receita a partir de zero — "
+            "absurdo: a receita com alíquota zero já é zero.",
+            "A curva não informa onde fica t* nem onde a economia está; essa é uma questão empírica, que "
+            "depende da sensibilidade da base tributária.",
+        ],
+        "grafico_verso": "ECO-E1-0659-1-V1",
+        "dissecando": (cz("[meia-verdade · modulador absoluto]") + " Toma o trecho descendente pela curva "
+                       "inteira. Sem nenhum “sempre”, o artigo definido (“<b>a</b> relação inversa”) já "
+                       "generaliza. Pista: a curva de Laffer existe justamente para mostrar uma relação que "
+                       "<b>muda de sinal</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Acima da alíquota que maximiza a arrecadação, a curva de Laffer mostra relação inversa entre "
+            "receita tributária e alíquota.”</i> → CERTO",
+            "<i>“A curva de Laffer mostra relação direta entre receita tributária e alíquota.”</i> → ERRADO "
+            "(meia-verdade: só até t*)",
+        ])],
+        "reescrita": ("A Curva de Laffer mostra a relação " + hl("não linear — direta até a alíquota de receita "
+                      "máxima e inversa a partir dela —") + " entre a receita tributária e a alíquota do "
+                      "imposto."),
+        "tipo_erro": ["MEIA_VERDADE", "GENERALIZACAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Não é relação sempre inversa: até certo ponto a arrecadação aumenta; após o ponto "
+                             "ótimo, diminui. A relação é não linear."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (116).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "não preservada; mecanismo redesenhado em ECO-E1-0659-1-V1"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0660
+    {
+        "id": "ECO-E1-0660-1", "fonte_ref": "E1-0660", "destino": "48", "subtema": H2["laf"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_LAFFER,
+        "rotulo_item": "Item",
+        "assertiva": ("A Curva de Laffer nos alerta para uma relação entre as elasticidades de oferta e demanda em um "
+                      "determinado mercado e o comportamento da receita tributária perante variações na alíquota "
+                      "de um dado imposto que incide sobre esse mercado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A Curva de Laffer nos alerta para uma relação entre as <u>elasticidades de oferta e "
+                      "demanda</u> em um determinado mercado e o comportamento da receita tributária perante "
+                      "variações na alíquota de um dado imposto que incide sobre esse mercado."),
+        "poucas": ("A receita é t × Q(t), e quanto Q cai quando t sobe depende das " + azb("elasticidades")
+                   + " da oferta e da demanda. Curvas elásticas fazem a receita atingir o máximo cedo e "
+                   "depois cair."),
+        "destrinchando": [
+            "No mercado de um bem com imposto específico t, a receita é " + vd("R = t × Qₜ") + ". Subir t "
+            "aumenta a receita por unidade, mas reduz a quantidade transacionada Qₜ. Quanto mais "
+            + azb("elásticas") + " a oferta e a demanda, mais Qₜ cai.",
+            "Com curvas lineares, R(t) tem forma de U invertido — uma curva de Laffer para um único mercado. É "
+            "a aplicação apresentada por " + oc("Mankiw") + " (<i>Introdução à Economia</i>, capítulo sobre os "
+            "custos da tributação), ao lado do " + azb("peso morto") + ".",
+            "Ligação com o peso morto: ele cresce com o <b>quadrado</b> da alíquota, enquanto a receita cresce "
+            "cada vez menos e depois cai. Na zona proibitiva, o governo perde receita <i>e</i> aumenta a "
+            "distorção.",
+            "Regra prática: mercados de demanda e oferta inelásticas (combustíveis, cigarros) suportam "
+            "alíquotas altas sem sair da parte ascendente; bases elásticas (renda de capital móvel, bens com "
+            "muitos substitutos) chegam a t* muito antes.",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " Parece misturar dois capítulos (elasticidade e "
+                       "política fiscal), e o candidato desconfia. Mas o “alerta” é exatamente esse: o formato da "
+                       "curva de Laffer é ditado pela resposta da quantidade ao imposto, isto é, pelas "
+                       "elasticidades."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto mais elásticas a oferta e a demanda, maior a alíquota que maximiza a arrecadação.”</i> → "
+            "ERRADO (inversão: mais elasticidade, t* menor)",
+            "<i>“Em mercado de demanda perfeitamente inelástica, a receita cresce com a alíquota sem passar por "
+            "um máximo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A arrecadação depende da alíquota e da resposta dos agentes, isto é, das "
+                             "elasticidades de oferta e demanda."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (118).jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (imagem do verso não preservada; conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
 ]

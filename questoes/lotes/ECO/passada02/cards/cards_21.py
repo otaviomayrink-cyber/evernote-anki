@@ -1007,4 +1007,297 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: ECO-E1-0380-1 (outro item sobre a definição de carga tributária)"],
     },
+    # ------------------------------------------------------------------ E1-0580
+    {
+        "id": "ECO-E1-0580-1", "fonte_ref": "E1-0580", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("A tributação dos lucros empresariais é progressiva do ponto de vista social, pois penaliza "
+                      "apenas as empresas, impedindo-as de repassar tais custos aos consumidores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A tributação dos lucros empresariais é progressiva do ponto de vista social")
+                    + vm(", pois penaliza apenas as empresas, impedindo-as de repassar tais custos aos "
+                         "consumidores") + az(".")),
+        "poucas": ("O tributo sobre lucros não “trava” o repasse: conforme o " + azb("poder de mercado")
+                   + " e as elasticidades, parte do ônus vai para " + azb("preços") + " (consumidores) ou "
+                   "salários (trabalhadores), o que limita seu efeito progressivo."),
+        "destrinchando": [
+            "Distinção-chave: " + azb("incidência legal") + " (quem recolhe — a empresa) × "
+            + azb("incidência econômica") + " (quem perde renda de fato). Empresa não é contribuinte final: o "
+            "ônus sempre chega a pessoas — acionistas (menor retorno), consumidores (preços maiores) ou "
+            "trabalhadores (salários menores).",
+            "Repasse aos preços: em mercados concentrados, com preço formado por " + azb("markup") + " sobre "
+            "custos, o tributo tende a ser incorporado ao preço. Em concorrência, o repasse ocorre no médio "
+            "prazo, quando o capital sai dos setores mais tributados e a oferta encolhe.",
+            "Repasse aos salários: " + oc("Arnold Harberger") + " (" + vd("1962") + ") mostrou que o imposto "
+            "sobre lucros das empresas se espalha por todo o capital da economia; em economias abertas, com "
+            "capital móvel entre países, boa parte do ônus recai sobre o trabalho, que não pode emigrar.",
+            "Por que ainda se diz que ele “tende a ser progressivo”: a parcela que fica com os acionistas atinge "
+            "o topo da distribuição, onde a propriedade do capital se concentra. O grau de progressividade "
+            "depende, portanto, de quanto é repassado.",
+            vm("Regra-âncora: quem recolhe o tributo não é necessariamente quem o suporta."),
+        ],
+        "dissecando": (cz("[restrição indevida · nexo indevido]") + " A 1ª oração é defensável; o erro está na "
+                       "justificativa, com o “apenas” e o “impedindo-as de repassar”, que negam a possibilidade de "
+                       "translação. O nexo “é progressiva, pois…” apoia a conclusão num mecanismo falso."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Parte da carga do imposto sobre lucros pode ser transferida aos consumidores, por meio de "
+            "preços mais altos, a depender da estrutura de mercado.”</i> → CERTO",
+            "<i>“A incidência econômica de um tributo coincide sempre com sua incidência legal.”</i> → ERRADO "
+            "(modulador absoluto: dependem das elasticidades e da estrutura de mercado)",
+        ])],
+        "reescrita": ("A tributação dos lucros empresariais é progressiva do ponto de vista social"
+                      + hl(" na medida em que recai sobre os detentores do capital, mas as empresas podem repassar "
+                           "parte desses custos aos consumidores, conforme o grau de concorrência do mercado")
+                      + "."),
+        "tipo_erro": ["RESTRICAO", "NEXO_INDEVIDO"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": ("ERRADO. As empresas podem repassar parte dos custos tributários aos preços finais, "
+                             "dependendo do grau de concorrência do mercado, o que limita o efeito redistributivo "
+                             "da tributação sobre os lucros."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0581
+    {
+        "id": "ECO-E1-0581-1", "fonte_ref": "E1-0581", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("O princípio do benefício está associado à função alocativa, enquanto o princípio da "
+                      "capacidade de pagamento se relaciona à função distributiva do Estado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O princípio do <u>benefício</u> está associado à função <u>alocativa</u>, enquanto o "
+                      "princípio da <u>capacidade de pagamento</u> se relaciona à função <u>distributiva</u> do "
+                      "Estado."),
+        "poucas": ("Cobrar pelo " + azb("benefício") + " imita o mercado e serve à " + azb("alocação")
+                   + " eficiente; cobrar pela " + azb("capacidade de pagamento") + " gradua o ônus pela renda e "
+                   "serve à " + azb("redistribuição") + "."),
+        "destrinchando": [
+            "No " + azb("princípio do benefício") + ", o tributo é um quase-preço: cada um paga conforme o uso "
+            "ou a valoração do serviço público. Isso revela quanto a sociedade quer de cada bem e ajusta a "
+            "provisão — lógica de eficiência, típica da " + azb("função alocativa") + ".",
+            "No da " + azb("capacidade de pagamento") + ", o ônus se descola do uso e se vincula à renda ou à "
+            "riqueza: quem tem mais contribui mais, inclusive para serviços que não usa. É a base da "
+            "progressividade, instrumento da " + azb("função distributiva") + ".",
+            "Na tríade de " + oc("Musgrave") + ", a separação é didática: ele propunha que o “ramo de "
+            "alocação” fosse financiado pelo benefício e o “ramo de distribuição”, por tributos e transferências "
+            "segundo a capacidade.",
+            "Limites de cada um: o benefício falha em bens públicos puros (ninguém revela o quanto valoriza) e "
+            "não redistribui; a capacidade de pagamento exige definir a base (renda, consumo, patrimônio) e "
+            "conviver com o peso morto das alíquotas altas.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Associação direta de manual. A versão ERRADA clássica inverte "
+                       "os pares (benefício → distributiva; capacidade → alocativa) ou liga um deles à função "
+                       "estabilizadora."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O princípio do benefício, por vincular o tributo ao uso dos serviços públicos, é o mais "
+            "adequado à função distributiva.”</i> → ERRADO (inversão: serve à alocativa)",
+            "<i>“Taxas e contribuições de melhoria são aplicações do princípio do benefício.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. O princípio do benefício aloca recursos conforme o uso dos serviços públicos "
+                             "(função alocativa); o da capacidade de pagamento busca justiça social (função "
+                             "distributiva). Imagem anexa no verso, não preservada."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "Untitled (103).jpeg", "tipo_fonte": "DESCONHECIDO", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada; comentário escrito em texto)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0582
+    {
+        "id": "ECO-E1-0582-1", "fonte_ref": "E1-0582", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria da tributação ótima analisa como arrecadar a receita tributária respeitando as "
+                      "preferências individuais de contribuição."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A teoria da tributação ótima analisa como arrecadar a receita tributária ")
+                    + vm("respeitando as preferências individuais de contribuição") + az(".")),
+        "poucas": ("A " + azb("tributação ótima") + " busca arrecadar uma receita dada com o " + azb("menor "
+                   "peso morto") + " possível, ponderado pela equidade — não segundo o quanto cada um "
+                   "<b>prefere</b> contribuir."),
+        "destrinchando": [
+            "Pergunta da teoria: dada a receita que o governo precisa, que combinação de tributos e alíquotas "
+            "minimiza a perda de bem-estar (o " + azb("excesso de carga") + ") e respeita um critério "
+            "distributivo? É um problema de otimização sob restrição de receita.",
+            oc("Frank Ramsey") + " (" + vd("1927") + "): para tributos sobre bens, a " + azb("regra da "
+            "elasticidade inversa") + " — alíquotas maiores sobre bens de demanda menos elástica, porque ali a "
+            "quantidade quase não reage e o peso morto é menor.",
+            oc("James Mirrlees") + " (" + vd("1971") + ", Nobel de 1996): o IR ótimo equilibra redistribuição e "
+            "incentivo ao trabalho, num quadro de informação assimétrica (o governo observa a renda, não a "
+            "capacidade de cada um).",
+            "Tensão permanente: Ramsey puro mandaria tributar mais alimentos e remédios (inelásticos), o que "
+            "fere a equidade; os modelos ótimos introduzem pesos distributivos para corrigir isso.",
+            "As “preferências individuais de contribuição” aparecem em outro lugar: no " + azb("princípio do "
+            "benefício") + " (preços de Lindahl) — e mesmo ali o problema é que as pessoas escondem suas "
+            "preferências.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item troca o objetivo da teoria (eficiência e equidade "
+                       "sob restrição de receita) por uma ideia voluntarista, que lembra o princípio do "
+                       "benefício. Pista: tributo é compulsório; nenhuma teoria normativa o calibra pelo desejo "
+                       "de pagar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela regra de Ramsey, bens com demanda mais inelástica devem ser tributados com alíquotas "
+            "mais elevadas, para minimizar o peso morto.”</i> → CERTO",
+            "<i>“A tributação ótima recomenda alíquotas uniformes sobre todos os bens, independentemente das "
+            "elasticidades.”</i> → ERRADO (contradição: a regra de Ramsey diferencia pelas elasticidades)",
+        ])],
+        "reescrita": ("A teoria da tributação ótima analisa como arrecadar a receita tributária "
+                      + hl("com o menor custo de eficiência (peso morto), ponderado por critérios de equidade")
+                      + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("ERRADO. A tributação ótima busca minimizar as distorções e os custos sociais da "
+                             "arrecadação, sem se basear nas preferências subjetivas dos indivíduos sobre quanto "
+                             "desejam contribuir."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0583
+    {
+        "id": "ECO-E1-0583-1", "fonte_ref": "E1-0583", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Com relação à tributação: o princípio do benefício pode ser de difícil aplicação individual "
+                      "para o financiamento de qualquer bem público."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com relação à tributação: o princípio do benefício <u>pode ser</u> de difícil aplicação "
+                      "individual para o financiamento de qualquer bem público."),
+        "poucas": ("Bens públicos são " + azb("não rivais") + " e " + azb("não excludentes") + ": ninguém "
+                   "revela quanto valoriza o bem, e não há como cobrar de cada um pelo benefício que recebe."),
+        "destrinchando": [
+            "O " + azb("princípio do benefício") + " exige saber quanto cada indivíduo ganha com o serviço "
+            "público para cobrar dele o equivalente. Funciona com serviços divisíveis e excludentes (pedágio, "
+            "taxa de emissão de documento).",
+            "Com bens públicos, a " + azb("não exclusão") + " permite usufruir sem pagar, e a "
+            + azb("não rivalidade") + " faz o custo marginal de mais um usuário ser zero. Resultado: incentivo "
+            "a subdeclarar a própria valoração e pegar " + azb("carona") + " (<i>free rider</i>) — o problema "
+            "de revelação de preferências, já apontado por " + oc("Wicksell") + " e formalizado por "
+            + oc("Samuelson") + " (" + vd("1954") + ").",
+            "Exemplos: defesa nacional, iluminação pública, diplomacia, pesquisa básica. Não há como medir "
+            "quanto cada cidadão se beneficia nem excluir quem não paga; o financiamento vem de impostos gerais.",
+            "O “pode ser” e o “individual” calibram o item: o benefício até pode orientar o financiamento "
+            "<b>coletivo</b> (contribuição de melhoria por região beneficiada), mas a aplicação pessoa a pessoa "
+            "é a que esbarra no problema.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " O “qualquer” assusta como absoluto, mas está neutralizado "
+                       "pelo “pode ser de difícil”: o item não diz que é impossível. Leia o modulador do verbo "
+                       "antes de punir o quantificador."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O princípio do benefício é o critério mais adequado para financiar bens públicos puros, como a "
+            "defesa nacional.”</i> → ERRADO (contradição: é justamente onde ele falha)",
+            "<i>“A não exclusão dos bens públicos incentiva o comportamento de carona, que dificulta a "
+            "aplicação do princípio do benefício.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode ser", "qualquer"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. O princípio do benefício pressupõe que cada um pague conforme o uso, o que "
+                             "é difícil de mensurar em bens não excludentes e não rivais, como defesa nacional ou "
+                             "iluminação pública."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0584
+    {
+        "id": "ECO-E1-0584-1", "fonte_ref": "E1-0584", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": "A progressividade de um imposto contraria por completo o princípio da equidade.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A progressividade de um imposto ") + vm("contraria por completo") + az(" o princípio da "
+                                                                                              "equidade.")),
+        "poucas": ("A " + azb("progressividade") + " é a forma clássica de realizar a " + azb("equidade "
+                   "vertical") + ": quem tem mais capacidade contributiva paga proporcionalmente mais."),
+        "destrinchando": [
+            "Equidade tributária tem duas dimensões: " + azb("horizontal") + " (iguais pagam igual) e "
+            + azb("vertical") + " (desiguais pagam desigualmente, na medida da desigualdade). A progressividade "
+            "é o instrumento da vertical.",
+            "Imposto progressivo = alíquota efetiva crescente com a renda. Exemplo: IR com faixa de isenção e "
+            "alíquotas marginais crescentes — quem ganha pouco paga zero ou quase; quem ganha muito compromete "
+            "fração maior da renda.",
+            "Na " + rx("Constituição de 1988") + ", a progressividade é mandamento expresso para o IR ("
+            + vd("art. 153, § 2º, I") + ") e possibilidade para o IPTU e o ITCMD, como concretização da "
+            "capacidade contributiva (" + vd("art. 145, § 1º") + ").",
+            "A crítica liberal à progressividade não diz que ela fere a equidade, mas que tem custo de "
+            + azb("eficiência") + ": alíquotas marginais altas desestimulam trabalho e investimento e estimulam "
+            "planejamento tributário. O conflito é equidade × eficiência, não progressividade × equidade.",
+        ],
+        "dissecando": (cz("[inversão · modulador absoluto]") + " O item inverte a relação (a progressividade "
+                       "<b>promove</b> a equidade) e ainda reforça com “por completo”. Pista: quem lembra que "
+                       "existe equidade vertical resolve na hora."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A progressividade de um imposto é compatível com o princípio da equidade vertical.”</i> → "
+            "CERTO",
+            "<i>“A progressividade é exigência da equidade horizontal.”</i> → ERRADO (troca de conceito: é da "
+            "vertical)",
+        ])],
+        "reescrita": ("A progressividade de um imposto " + hl("é uma das formas de realizar") + " o princípio "
+                      "da equidade."),
+        "tipo_erro": ["INVERSAO", "GENERALIZACAO"], "moduladores": ["por completo"], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. A progressividade visa promover equidade, ao tributar mais quem pode pagar "
+                             "mais, reduzindo desigualdades."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0585
+    {
+        "id": "ECO-E1-0585-1", "fonte_ref": "E1-0585", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("O princípio da neutralidade é encontrado em um imposto sobre bebidas para fins de redução "
+                      "do consumo destas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O princípio da neutralidade ") + vm("é encontrado") + az(" em um imposto sobre bebidas "
+                                                                                  "para fins de redução do "
+                                                                                  "consumo destas.")),
+        "poucas": ("Um imposto criado <b>para reduzir</b> o consumo quer mudar comportamentos: é "
+                   + azb("extrafiscal") + " e, por definição, " + azb("não neutro") + "."),
+        "destrinchando": [
+            azb("Neutralidade") + " = o tributo arrecada sem alterar preços relativos nem decisões. Um imposto "
+            "sobre bebidas existe justamente para encarecê-las e desestimular o consumo — o oposto da "
+            "neutralidade.",
+            "Função " + azb("fiscal") + " (arrecadar) × " + azb("extrafiscal") + " (induzir comportamentos). "
+            "Tributos sobre álcool, tabaco, bebidas açucaradas e combustíveis fósseis são o exemplo de manual "
+            "do segundo tipo.",
+            "Justificativa econômica: o " + azb("tributo pigouviano") + " (" + oc("Arthur Pigou") + ", <i>The "
+            "Economics of Welfare</i>, " + vd("1920") + ") corrige uma " + azb("externalidade negativa") + " "
+            "(custos à saúde pública, acidentes), igualando o custo privado ao custo social. Aqui a distorção é "
+            "desejada: corrige uma distorção que já existia.",
+            "No " + rx("Brasil") + ", a reforma tributária (" + vd("EC 132/2023") + ", regulamentada pela "
+            + vd("LC 214/2025") + ") criou o " + azb("Imposto Seletivo") + ", que incide sobre bens e serviços "
+            "prejudiciais à saúde ou ao meio ambiente, como bebidas alcoólicas, bebidas açucaradas e produtos "
+            "fumígenos ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[contradição]") + " O próprio item traz a finalidade (“para fins de redução do "
+                       "consumo”), que contradiz a neutralidade. Bastava ler a frase até o fim. 🔥 “Neutralidade” "
+                       "aparece em prova sempre ligada a incentivos, isenções e tributos extrafiscais — e a "
+                       "resposta é que eles a violam."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto sobre bebidas destinado a reduzir seu consumo tem natureza extrafiscal e afasta a "
+            "neutralidade tributária.”</i> → CERTO",
+            "<i>“Tributos pigouvianos sempre reduzem o bem-estar, por gerarem peso morto.”</i> → ERRADO "
+            "(inversão: corrigem a externalidade e podem elevar o bem-estar)",
+        ])],
+        "reescrita": ("O princípio da neutralidade " + hl("é afastado") + " em um imposto sobre bebidas para fins "
+                      "de redução do consumo destas."),
+        "tipo_erro": ["CONTRADICAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. Tributos para desestimular consumo, como os de bebidas ou cigarros, têm "
+                             "função extrafiscal e quebram a neutralidade, pois influenciam comportamentos."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

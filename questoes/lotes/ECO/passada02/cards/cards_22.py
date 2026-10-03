@@ -964,4 +964,418 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0612
+    {
+        "id": "ECO-E1-0612-1", "fonte_ref": "E1-0612", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ESTAB,
+        "rotulo_item": "Item",
+        "assertiva": ("Ao nos depararmos com situação caracterizada como um significativo hiato deflacionário, uma "
+                      "medida governamental consistente com esse ambiente será uma redução de impostos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Ao nos depararmos com situação caracterizada como um significativo <u>hiato "
+                      "deflacionário</u>, uma medida governamental consistente com esse ambiente será uma "
+                      "<u>redução de impostos</u>."),
+        "poucas": ("Hiato " + azb("deflacionário") + " = demanda agregada insuficiente para o pleno emprego. A "
+                   "resposta coerente é " + azb("expandir") + " a demanda — e cortar impostos faz isso."),
+        "destrinchando": [
+            "Na " + azb("cruz keynesiana") + ", o " + azb("hiato deflacionário") + " (ou recessivo) é a distância "
+            "entre a demanda agregada efetiva e a necessária para o produto de pleno emprego: sobra capacidade, há "
+            "desemprego e pressão de baixa sobre os preços. O " + azb("hiato inflacionário") + " é o contrário: "
+            "demanda acima do produto potencial.",
+            "Para fechar o hiato deflacionário, a política deve ser " + azb("expansionista") + ": ↑G, ↓T, "
+            "↑transferências ou política monetária frouxa. A redução de impostos eleva a renda disponível, o "
+            "consumo e, pelo multiplicador " + vd("−c/(1 − c)") + ", a renda.",
+            "Detalhe de cálculo que a banca cobra: para fechar um hiato de produto ΔY, o corte de impostos precisa "
+            "ser <b>maior</b> que o aumento de gasto equivalente, porque o multiplicador dos tributos é menor em "
+            "módulo (parte do alívio vira poupança).",
+            "No hiato inflacionário, a medida consistente seria o inverso: ↑T, ↓G.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Aplicação direta: diagnóstico (falta demanda) → remédio "
+                       "(expansionista). A armadilha é ler “deflacionário” e pensar em medida contra a inflação "
+                       "(contracionista)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Diante de um hiato deflacionário, uma medida consistente será a elevação de impostos.”</i> → ERRADO "
+            "(inversão: aprofunda o hiato)",
+            "<i>“Para fechar o mesmo hiato, o corte de impostos necessário é menor que o aumento de gastos "
+            "equivalente.”</i> → ERRADO (inversão: é maior)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Reduzir impostos aumenta a renda disponível, estimulando consumo e investimento, "
+                            "o que ajuda a combater a deflação pelo aumento da demanda agregada.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: “um significativo deflacionário” → “um significativo hiato deflacionário” "
+                    "(palavra omitida na fonte; restituída pelo sentido técnico)"],
+    },
+    # ------------------------------------------------------------------ E1-0613
+    {
+        "id": "ECO-E1-0613-1", "fonte_ref": "E1-0613", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo à política fiscal e a seus efeitos sobre a renda e a inflação.",
+        "rotulo_item": "Item",
+        "assertiva": ("O efeito do orçamento equilibrado sobre a renda agregada mostra que déficits fiscais "
+                      "sistemáticos, independentemente da conjuntura econômica, são uma boa forma de controlar a "
+                      "inflação, pois levam a taxas de juros cada vez mais elevadas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O efeito do orçamento equilibrado sobre a renda agregada mostra que ")
+                    + vm("déficits fiscais sistemáticos, independentemente da conjuntura econômica, são uma boa forma "
+                         "de controlar a inflação, pois levam a taxas de juros cada vez mais elevadas") + az(".")),
+        "poucas": ("O " + azb("teorema do orçamento equilibrado") + " não fala de déficit: mostra que ↑G financiado "
+                   "por ↑T de igual valor eleva a renda em ΔG. E déficit sistemático pressiona a inflação, não a "
+                   "controla."),
+        "destrinchando": [
+            "Teorema de " + oc("Haavelmo") + " (1945): na cruz keynesiana, o multiplicador do gasto é 1/(1 − c) e o "
+            "dos impostos, −c/(1 − c). Somando os dois para ΔG = ΔT: " + vd("ΔY = ΔG · (1 − c)/(1 − c) = ΔG")
+            + " — o " + azb("multiplicador do orçamento equilibrado") + " é " + vd("1") + ". Gasto e imposto sobem "
+            "juntos, o saldo não muda e, ainda assim, a renda cresce.",
+            "Déficits " + azb("sistemáticos") + " são outra coisa: expandem a demanda agregada de forma "
+            "permanente e, perto do pleno emprego, geram " + azb("pressão inflacionária") + ". Se financiados por "
+            "dívida, elevam os juros e podem deslocar investimento privado (crowding out); se por emissão, "
+            "alimentam a inflação diretamente.",
+            "Juros cada vez mais altos por causa do déficit não são instrumento de controle de inflação; são "
+            "sintoma de " + azb("dominância fiscal") + " em potencial — quando a dívida cresce tanto que a alta de "
+            "juros piora o quadro fiscal e perde eficácia.",
+            "“Independentemente da conjuntura” contraria a lógica anticíclica: déficit pode ser recomendável na "
+            "recessão, nunca de forma indiscriminada.",
+        ],
+        "dissecando": (cz("[nexo indevido · modulador absoluto]") + " A banca cita um conceito real (efeito do "
+                       "orçamento equilibrado) e pendura nele uma conclusão que ele não sustenta, reforçada por "
+                       "“independentemente da conjuntura” e por um mecanismo falso (déficit → juros → controle da "
+                       "inflação)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pelo teorema do orçamento equilibrado, um aumento de gastos financiado integralmente por impostos "
+            "eleva a renda no mesmo montante do gasto.”</i> → CERTO",
+            "<i>“O multiplicador do orçamento equilibrado é nulo, pois o aumento de impostos anula o do gasto.”</i> "
+            "→ ERRADO (dado alterado: é 1)",
+        ])],
+        "reescrita": ("O efeito do orçamento equilibrado sobre a renda agregada mostra que "
+                      + hl("um aumento de gastos integralmente financiado por impostos eleva a renda no mesmo montante "
+                           "do gasto") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "GENERALIZACAO"], "moduladores": ["independentemente", "sistemáticos"],
+        "dificuldade": 2,
+        "comentario_fonte": "ERRADO. Déficits fiscais sistemáticos tendem a pressionar a demanda agregada e os preços, "
+                            "podendo aumentar a inflação; juros altos não são mecanismo desejável de controle fiscal "
+                            "permanente.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0614
+    {
+        "id": "ECO-E1-0614-1", "fonte_ref": "E1-0614", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Julgue o item a seguir, relativo ao conceito de política fiscal.",
+        "rotulo_item": "Item",
+        "assertiva": ("Define-se a política fiscal de um certo país como a administração exclusivamente de impostos, "
+                      "gastos e transferências dos governos federais, estaduais e municipais."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Define-se a política fiscal de um certo país como a administração <u>exclusivamente</u> de "
+                      "impostos, gastos e transferências dos governos <u>federais, estaduais e municipais</u>."),
+        "poucas": ("Política fiscal = gestão de " + azb("tributos") + ", " + azb("gastos") + " e "
+                   + azb("transferências") + " do setor público, em todos os níveis de governo. Juros, moeda e "
+                   "crédito ficam com a política monetária."),
+        "destrinchando": [
+            "Os três instrumentos do item esgotam a política fiscal no sentido de manual: o que o governo "
+            + azb("arrecada") + " (tributos), o que " + azb("gasta") + " (consumo e investimento públicos) e o que "
+            + azb("transfere") + " (previdência, assistência, subsídios). O saldo entre eles é o resultado fiscal "
+            "(primário, nominal) e a dívida pública é seu estoque.",
+            "Abrange os " + azb("três níveis") + " de governo: no conceito de setor público consolidado, estados e "
+            "municípios também fazem política fiscal com seus orçamentos — no " + rx("Brasil") + ", a Lei de "
+            "Responsabilidade Fiscal (" + vd("LC 101/2000") + ") vale para todos os entes.",
+            "O “exclusivamente” separa a política fiscal da " + azb("monetária") + " (juros, base monetária, "
+            "compulsório — Banco Central), da " + azb("cambial") + " e da " + azb("de rendas") + " (controle de "
+            "preços e salários).",
+            "Nuance: alguns autores incluem a gestão da dívida pública e do financiamento do déficit no campo "
+            "fiscal; ainda assim, ela decorre dos três instrumentos, não é um quarto independente.",
+        ],
+        "dissecando": (cz("[contraintuitivo · literalidade]") + " O “exclusivamente” costuma derrubar itens, mas "
+                       "aqui é verdadeiro: tributos, gastos e transferências são, de fato, o perímetro da política "
+                       "fiscal. O risco seria a banca incluir juros ou emissão de moeda na lista."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Define-se a política fiscal como a administração de impostos, gastos e da taxa básica de "
+            "juros.”</i> → ERRADO (troca de conceito: juros são política monetária)",
+            "<i>“A política fiscal restringe-se ao governo federal.”</i> → ERRADO (restrição indevida: os três "
+            "níveis)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "LITERAL"], "moduladores": ["exclusivamente"], "dificuldade": 2,
+        "comentario_fonte": "CERTO. A política fiscal refere-se à gestão de tributos, gastos públicos e transferências, "
+                            "abrangendo os três níveis de governo.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [FIG_PERDIDA("Untitled (109).jpeg")],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0615
+    {
+        "id": "ECO-E1-0615-1", "fonte_ref": "E1-0615", "destino": "47", "subtema": H2["est"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ESTADO,
+        "rotulo_item": "Item",
+        "assertiva": ("A ocorrência de desemprego e inflação constitui falha de mercado que justifica a intervenção "
+                      "estatal na economia por meio da função estabilizadora da política econômica."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A ocorrência de desemprego e inflação <u>constitui falha de mercado</u> que justifica a "
+                      "intervenção estatal na economia por meio da função estabilizadora da política econômica."),
+        "poucas": ("Na lista clássica dos manuais, " + azb("desemprego e inflação") + " figuram entre as "
+                   + azb("falhas de mercado") + ", e a resposta do Estado a elas é a " + azb("função "
+                   "estabilizadora") + "."),
+        "destrinchando": [
+            "Em " + oc("Giambiagi e Além") + " (<i>Finanças Públicas</i>), as falhas de mercado que justificam a "
+            "ação do governo são: " + azb("bens públicos") + ", " + azb("monopólios naturais") + ", "
+            + azb("externalidades") + ", " + azb("mercados incompletos") + ", " + azb("falhas de informação")
+            + " e " + azb("ocorrência de desemprego e inflação") + ".",
+            "As cinco primeiras são falhas <b>microeconômicas</b> (alocação ineficiente) e chamam a função "
+            "alocativa. A última é <b>macroeconômica</b>: o livre funcionamento dos mercados não garante pleno "
+            "emprego nem estabilidade de preços — a crítica de " + oc("Keynes") + " à ideia de autoajuste.",
+            "A resposta é a " + azb("função estabilizadora") + " (" + oc("Musgrave") + "): políticas fiscal, "
+            "monetária, cambial e de rendas para manter alto emprego, preços estáveis e crescimento.",
+            "Funções irmãs: " + azb("alocativa") + " (bens públicos, meritórios, correção de externalidades) e "
+            + azb("distributiva") + " (ajuste da distribuição de renda e riqueza).",
+        ],
+        "dissecando": (cz("[contraintuitivo · literalidade]") + " Quem associa falha de mercado só a fenômenos "
+                       "micro (externalidade, monopólio) tende a marcar ERRADO. O item reproduz a lista do manual de "
+                       "finanças públicas, que inclui desemprego e inflação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A ocorrência de desemprego e inflação justifica a intervenção estatal por meio da função "
+            "alocativa.”</i> → ERRADO (troca de conceito: é a estabilizadora)",
+            "<i>“Externalidades e bens públicos são falhas de mercado tratadas pela função alocativa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "LITERAL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "CERTO. A função estabilizadora busca corrigir desequilíbrios macroeconômicos, como "
+                            "inflação e desemprego.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o verso dizia que a função estabilizadora gera “externalidades positivas”; "
+                    "trecho descartado por impreciso"],
+    },
+    # ------------------------------------------------------------------ E1-0616
+    {
+        "id": "ECO-E1-0616-1", "fonte_ref": "E1-0616", "destino": "47", "subtema": H2["est"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_FUN,
+        "rotulo_item": "Item",
+        "assertiva": ("Um exemplo de materialização da função estabilizadora do governo é dado pelo provimento de bens "
+                      "meritórios."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um exemplo de materialização da função ") + vm("estabilizadora") + az(" do governo é dado "
+                                                                                             "pelo provimento de "
+                                                                                             "bens meritórios.")),
+        "poucas": ("Prover " + azb("bens meritórios") + " é tarefa da " + azb("função alocativa") + ": o governo "
+                   "decide o que produzir quando o mercado oferta menos que o socialmente desejável."),
+        "destrinchando": [
+            "As três funções de " + oc("Richard Musgrave") + " (<i>The Theory of Public Finance</i>, 1959): "
+            + azb("alocativa") + " — fornecer bens que o mercado não provê ou provê mal; " + azb("distributiva")
+            + " — ajustar a distribuição de renda; " + azb("estabilizadora") + " — buscar pleno emprego, "
+            "estabilidade de preços e crescimento.",
+            azb("Bens meritórios") + " (conceito do próprio Musgrave): bens privados — rivais e excludentes — cujo "
+            "consumo a sociedade considera tão valioso que o Estado os oferta ou subsidia além do que o mercado "
+            "daria. Exemplos: educação básica, saúde, vacinação, merenda escolar. Diferem dos " + azb("bens "
+            "públicos") + " puros (defesa, iluminação), que são não rivais e não excludentes.",
+            "Ambos — públicos e meritórios — são matéria da função <b>alocativa</b>, porque tratam de <b>quais</b> "
+            "bens a economia produz.",
+            "A estabilizadora atua sobre agregados: demanda agregada, emprego, inflação — com política fiscal "
+            "anticíclica e política monetária.",
+            vm("Regra-âncora: o quê produzir → alocativa; para quem → distributiva; quanto e quão estável → "
+               "estabilizadora."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Série clássica “um exemplo de materialização da função X é…”: "
+                       "a banca troca a função correspondente. Bens meritórios lembram “bem-estar social” e induzem "
+                       "à distributiva ou à estabilizadora, mas são alocativos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um exemplo de materialização da função alocativa do governo é dado pelo provimento de bens "
+            "meritórios.”</i> → CERTO",
+            "<i>“Bens meritórios são, por definição, não rivais e não excludentes.”</i> → ERRADO (troca de conceito: "
+            "isso é bem público puro)",
+        ])],
+        "reescrita": ("Um exemplo de materialização da função " + hl("alocativa") + " do governo é dado pelo "
+                      "provimento de bens meritórios."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. O provimento de bens meritórios está ligado à função alocativa do governo, que "
+                            "atua quando o mercado suboferta bens desejáveis, como educação e saneamento.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0617
+    {
+        "id": "ECO-E1-0617-1", "fonte_ref": "E1-0617", "destino": "47", "subtema": H2["est"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_FUN,
+        "rotulo_item": "Item",
+        "assertiva": ("Um exemplo de materialização da função estabilizadora do governo é dado pela redistribuição de "
+                      "renda por meio da política fiscal."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um exemplo de materialização da função ") + vm("estabilizadora") + az(" do governo é dado "
+                                                                                             "pela redistribuição de "
+                                                                                             "renda por meio da "
+                                                                                             "política fiscal.")),
+        "poucas": ("Redistribuir renda é a " + azb("função distributiva") + ". Usar política fiscal não basta para "
+                   "ser estabilizadora: o que define a função é o <b>objetivo</b>, não o instrumento."),
+        "destrinchando": [
+            azb("Função distributiva") + " (" + oc("Musgrave") + "): corrigir a distribuição de renda e riqueza que "
+            "o mercado produz, segundo o que a sociedade considera justo. Instrumentos: tributação progressiva, "
+            "transferências (no " + rx("Brasil") + ", Bolsa Família e BPC), subsídios a bens de consumo popular e "
+            "gasto social focalizado.",
+            azb("Função estabilizadora") + ": reduzir as oscilações do ciclo — desemprego, inflação, crescimento "
+            "instável. Instrumentos: política fiscal anticíclica, política monetária, estabilizadores automáticos.",
+            "O mesmo instrumento serve a funções diferentes: o imposto de renda progressivo redistribui "
+            "(distributiva) e, por variar com a renda, também amortece o ciclo (estabilizador automático). A "
+            "classificação segue a <b>finalidade</b> da medida — e “redistribuição de renda” denuncia a "
+            "distributiva.",
+            vm("Regra-âncora: redistribuir = distributiva; estabilizar ciclo = estabilizadora; prover bens = "
+               "alocativa."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A banca ancora o item num instrumento que de fato serve à "
+                       "estabilização (política fiscal) para disfarçar a troca de função. A finalidade "
+                       "(“redistribuição de renda”) está escrita no próprio item."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um exemplo de materialização da função distributiva do governo é dado pela redistribuição de renda "
+            "por meio da política fiscal.”</i> → CERTO",
+            "<i>“O imposto de renda progressivo pode servir, ao mesmo tempo, às funções distributiva e "
+            "estabilizadora.”</i> → CERTO",
+        ])],
+        "reescrita": ("Um exemplo de materialização da função " + hl("distributiva") + " do governo é dado pela "
+                      "redistribuição de renda por meio da política fiscal."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "ERRADO. A redistribuição de renda está relacionada à função distributiva do governo, "
+                            "cujo objetivo é reduzir desigualdades sociais.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [FIG_PERDIDA("Untitled (108).jpeg")],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0618
+    {
+        "id": "ECO-E1-0618-1", "fonte_ref": "E1-0618", "destino": "47", "subtema": H2["est"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_FUN,
+        "rotulo_item": "Item",
+        "assertiva": ("Um exemplo de materialização da função estabilizadora do governo é dado pela condução da "
+                      "política monetária."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um exemplo de materialização da função estabilizadora do governo é dado pela condução da "
+                      "<u>política monetária</u>."),
+        "poucas": ("A " + azb("política monetária") + " existe para estabilizar preços e suavizar o ciclo — é "
+                   "instrumento típico da " + azb("função estabilizadora") + "."),
+        "destrinchando": [
+            "A " + azb("função estabilizadora") + " busca alto nível de emprego, estabilidade de preços e "
+            "crescimento sustentado. Seus instrumentos: política " + azb("fiscal") + " (gasto e tributo "
+            "anticíclicos), " + azb("monetária") + " (juros e liquidez), " + azb("cambial") + " e " + azb("de "
+            "rendas") + ".",
+            "Política monetária contracionista (↑juros) esfria a demanda e a inflação; expansionista (↓juros) "
+            "estimula atividade e emprego em recessões. No " + rx("Brasil") + ", o " + azb("Copom") + " fixa a "
+            "meta da " + vd("Selic") + " no regime de " + azb("metas de inflação") + " (desde " + vd("1999") + "), "
+            "com meta contínua de " + vd("3%") + " desde 2025 ⏳ (out/2026).",
+            "Por que não é alocativa nem distributiva: a política monetária não escolhe quais bens produzir nem "
+            "quem recebe a renda (embora tenha efeitos distributivos colaterais, como o custo da inflação para os "
+            "mais pobres); seu alvo é o nível agregado de preços e atividade.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Único CERTO da série “um exemplo de materialização da função "
+                       "estabilizadora é…”: bens meritórios (alocativa) e redistribuição de renda (distributiva) "
+                       "são os distratores. Política monetária é estabilização por excelência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um exemplo de materialização da função estabilizadora do governo é dado pelo provimento de bens "
+            "públicos.”</i> → ERRADO (troca de conceito: alocativa)",
+            "<i>“A política monetária é instrumento exclusivo da função estabilizadora, sem papel para a política "
+            "fiscal.”</i> → ERRADO (restrição indevida)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "CERTO. A função estabilizadora busca corrigir flutuações como inflação e desemprego; a "
+                            "política monetária, conduzida pelo Banco Central, é um de seus principais instrumentos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [FIG_PERDIDA("Untitled (104).jpeg")],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0619
+    {
+        "id": "ECO-E1-0619-1", "fonte_ref": "E1-0619", "destino": "47", "subtema": H2["est"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ESTADO,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma forma de analisar a ação pública na economia se dá ao considerar o papel do Estado na "
+                      "utilização da política monetária, em sua função estabilizadora."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma forma de analisar a ação pública na economia se dá ao considerar o papel do Estado na "
+                      "utilização da política monetária, em sua <u>função estabilizadora</u>."),
+        "poucas": ("A ação do Estado se analisa pelas três funções de " + oc("Musgrave") + "; o uso da "
+                   + azb("política monetária") + " pertence à " + azb("função estabilizadora") + "."),
+        "destrinchando": [
+            "O enquadramento clássico de finanças públicas analisa a ação do Estado por suas " + azb("funções")
+            + ": " + azb("alocativa") + " (o que produzir — bens públicos, meritórios, correção de "
+            "externalidades), " + azb("distributiva") + " (para quem — tributos progressivos e transferências) e "
+            + azb("estabilizadora") + " (quanto e com que estabilidade — emprego, preços, crescimento).",
+            "A política monetária é estabilizadora porque age sobre o " + azb("nível agregado") + " de demanda: "
+            "juros e liquidez determinam o ritmo de consumo a crédito e de investimento e, por aí, o desemprego e a "
+            "inflação.",
+            "Ressalva institucional: a política monetária é conduzida pelo " + azb("Banco Central") + ", que é "
+            "parte do Estado ainda que tenha autonomia. No " + rx("Brasil") + ", a autonomia formal veio com a "
+            + vd("LC 179/2021") + " (mandatos fixos para a diretoria, desalinhados do presidencial), sem mudar o "
+            "fato de que a política monetária é ação pública.",
+            "Item “aberto” (“uma forma de analisar”) raramente é ERRADO: só cairia se trocasse a função "
+            "(alocativa, distributiva) ou o instrumento.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " “Uma forma de” relativiza a afirmação; a "
+                       "associação política monetária → função estabilizadora é a de manual. A banca também cobra a "
+                       "versão “um exemplo de materialização da função estabilizadora é a política monetária”, "
+                       "igualmente CERTA."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…o papel do Estado na utilização da política monetária, em sua função distributiva.”</i> → ERRADO "
+            "(troca de conceito: estabilizadora)",
+            "<i>“Por ser autônomo, o Banco Central não integra a ação pública na economia.”</i> → ERRADO (nexo "
+            "indevido)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["uma forma de"], "dificuldade": 1,
+        "comentario_fonte": "CERTO. A política monetária, conduzida pelo Banco Central, é instrumento típico da função "
+                            "estabilizadora, usada para controlar inflação, estimular crescimento ou conter recessões.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [FIG_PERDIDA("Untitled (105).jpeg"), FIG_PERDIDA("Untitled (115).jpeg")],
+        "alertas": ["quase_duplicata: ECO-E1-0618-1 (mesma associação política monetária → função estabilizadora, "
+                    "em outra redação)"],
+    },
+    # ------------------------------------------------------------------ E1-0620
+    {
+        "id": "ECO-E1-0620-1", "fonte_ref": "E1-0620", "destino": "47", "subtema": H2["est"],
+        "tipo": "C/E", "banca": BNI, "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ESTADO,
+        "rotulo_item": "Item",
+        "assertiva": ("Como possível objetivo do financiamento público em projetos de infraestrutura, aponta-se o não "
+                      "interesse do setor privado em financiar projetos centrais no desenvolvimento socioeconômico do "
+                      "país."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Como <u>possível</u> objetivo do financiamento público em projetos de infraestrutura, aponta-se "
+                      "o não interesse do setor privado em financiar projetos centrais no desenvolvimento "
+                      "socioeconômico do país."),
+        "poucas": ("Infraestrutura tem prazos longos, alto risco e " + azb("benefícios sociais") + " que o "
+                   "investidor não captura: o setor privado financia menos que o desejável, e o financiamento "
+                   "público preenche a lacuna."),
+        "destrinchando": [
+            "Por que o mercado não financia: projetos de " + azb("longa maturação") + " (décadas), alto custo "
+            "inicial e irreversível, risco regulatório e de demanda, retorno incerto — combinação que o crédito "
+            "privado de curto prazo não cobre. É uma " + azb("falha de mercado") + " por " + azb("mercados "
+            "incompletos") + " (falta de crédito de longo prazo).",
+            "Além disso, a infraestrutura gera " + azb("externalidades positivas") + " (redução de custos "
+            "logísticos, integração regional, saúde via saneamento) que não aparecem na receita do projeto: o "
+            "retorno social supera o privado e o mercado subinveste.",
+            "A resposta pública pertence à " + azb("função alocativa") + ": investimento direto, bancos de "
+            "desenvolvimento, garantias e concessões/PPPs com aporte público. No " + rx("Brasil") + ", o "
+            + azb("BNDES") + " é o principal financiador de longo prazo da infraestrutura.",
+            "Contraponto que a banca pode explorar: o financiamento público subsidiado pode " + azb("deslocar")
+            + " o mercado privado de crédito longo e tem custo fiscal — por isso o debate sobre a TLP, que "
+            "substituiu a TJLP em 2018 ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[modulador relativo · literalidade]") + " “Possível objetivo” protege o item: não se "
+                       "afirma que o setor privado nunca financia infraestrutura, só que seu desinteresse é uma das "
+                       "razões para a atuação pública."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O financiamento público de infraestrutura justifica-se porque o setor privado é incapaz de "
+            "investir em qualquer projeto de longo prazo.”</i> → ERRADO (modulador absoluto)",
+            "<i>“A provisão de infraestrutura com externalidades positivas é matéria da função alocativa do "
+            "Estado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "LITERAL"], "moduladores": ["possível"], "dificuldade": 1,
+        "comentario_fonte": "CERTO. Projetos de infraestrutura são de longo prazo, alto risco e retorno incerto, o que "
+                            "desestimula o setor privado; o financiamento público viabiliza esses projetos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

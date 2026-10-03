@@ -1300,4 +1300,243 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0586
+    {
+        "id": "ECO-E1-0586-1", "fonte_ref": "E1-0586", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": "Um incentivo fiscal caracteriza o cumprimento pleno do princípio da neutralidade.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um incentivo fiscal ") + vm("caracteriza o cumprimento pleno do") + az(" princípio da "
+                                                                                              "neutralidade.")),
+        "poucas": ("Incentivo fiscal existe para <b>mudar</b> decisões (investir aqui, produzir aquilo): altera "
+                   "preços relativos e, por isso, " + azb("viola") + " a neutralidade, em vez de cumpri-la."),
+        "destrinchando": [
+            "Pela " + azb("neutralidade") + ", o tributo não deve interferir nas escolhas de consumo, produção e "
+            "investimento. Um incentivo — isenção, redução de alíquota, crédito presumido, regime especial — "
+            "reduz o custo de uma atividade em relação às outras, e é exatamente essa diferença que move os "
+            "agentes.",
+            "Na contabilidade pública, o incentivo é um " + azb("gasto tributário") + ": receita de que o "
+            "governo abre mão para atingir um objetivo, com efeito equivalente a um subsídio direto. No "
+            + rx("Brasil") + ", os gastos tributários federais giram em torno de " + vd("4% a 5% do PIB")
+            + " ⏳ (out/2026), com destaque para o Simples Nacional, a Zona Franca de Manaus e as desonerações; a "
+            + vd("EC 109/2021") + " previu plano de redução para até 2% do PIB.",
+            "Isso não torna o incentivo necessariamente ruim: pode corrigir falhas de mercado (pesquisa e "
+            "desenvolvimento, externalidades positivas) ou perseguir objetivos regionais. Mas tem custos: "
+            "distorce a alocação, estimula a " + azb("guerra fiscal") + " entre entes e beneficia grupos com "
+            "poder de pressão.",
+            vm("Regra-âncora: incentivo, isenção e tributo extrafiscal são, por definição, não neutros."),
+        ],
+        "dissecando": (cz("[inversão · modulador absoluto]") + " O item afirma o oposto da definição e ainda "
+                       "reforça com “cumprimento pleno”. A banca explora a confusão entre “neutralidade” e "
+                       "“benefício ao contribuinte”: reduzir imposto parece “bom”, mas não é neutro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os incentivos fiscais, por alterarem preços relativos, representam afastamento do princípio "
+            "da neutralidade.”</i> → CERTO",
+            "<i>“Por reduzirem a arrecadação, os incentivos fiscais não são computados como gastos "
+            "públicos.”</i> → ERRADO (contradição: são gastos tributários, estimados no orçamento)",
+        ])],
+        "reescrita": ("Um incentivo fiscal " + hl("representa um afastamento do") + " princípio da "
+                      "neutralidade."),
+        "tipo_erro": ["INVERSAO", "GENERALIZACAO"], "moduladores": ["pleno"], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. Incentivos fiscais criam distorções no sistema de preços e na alocação de "
+                             "recursos; logo, violam a neutralidade tributária."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0587
+    {
+        "id": "ECO-E1-0587-1", "fonte_ref": "E1-0587", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um sistema tributário que vise à redistribuição da renda deve incluir, dentre outros "
+                      "mecanismos, alíquotas progressivas de imposto de renda aplicadas a todos os rendimentos "
+                      "acima do nível mínimo de isenção, juntamente com transferências de renda para aqueles cujos "
+                      "rendimentos são muito baixos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um sistema tributário que vise à redistribuição da renda deve incluir, <u>dentre outros "
+                      "mecanismos</u>, alíquotas progressivas de imposto de renda aplicadas a <u>todos os "
+                      "rendimentos</u> acima do nível mínimo de isenção, juntamente com transferências de renda "
+                      "para aqueles cujos rendimentos são muito baixos."),
+        "poucas": ("É a combinação clássica da " + azb("função distributiva") + ": tirar proporcionalmente mais "
+                   "do topo (" + azb("IR progressivo") + " sobre a renda global) e dar à base ("
+                   + azb("transferências") + ")."),
+        "destrinchando": [
+            "Os dois braços: pelo lado da receita, alíquotas efetivas crescentes com a renda reduzem a "
+            "desigualdade da renda disponível; pelo lado do gasto, transferências focalizadas elevam a renda "
+            "dos mais pobres, que o IR não alcança (estão abaixo da isenção).",
+            "O “todos os rendimentos” é detalhe técnico importante: a progressividade só funciona se a base for "
+            "<b>global</b> — salários, aluguéis, lucros, dividendos, ganhos financeiros somados. Se rendas de "
+            "capital escapam por alíquotas exclusivas ou isenções, o topo paga menos, e a progressividade se "
+            "perde.",
+            "Na mesma lógica, " + oc("Milton Friedman") + " (<i>Capitalismo e Liberdade</i>, " + vd("1962")
+            + ") propôs o " + azb("imposto de renda negativo") + ": abaixo de um nível de renda, o sistema "
+            "paga ao contribuinte em vez de cobrar — integra tributo e transferência numa só escala.",
+            "No " + rx("Brasil") + ", as transferências (Bolsa Família, BPC) reduzem a desigualdade mais do que "
+            "o IR, e a isenção dos dividendos distribuídos enfraquecia a progressividade no topo — ponto atacado "
+            "pela tributação mínima das altas rendas aprovada em 2025 ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Item longo, com cara de definição de "
+                       "manual. O “deve incluir” poderia soar prescritivo, mas vem amortecido por “dentre outros "
+                       "mecanismos”. A troca usual para ERRADO: dizer que basta um dos braços ou que tributos "
+                       "sobre consumo cumprem o mesmo papel."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para redistribuir renda, basta que o sistema tribute o consumo com alíquota uniforme e elevada, "
+            "dispensando transferências.”</i> → ERRADO (contradição: tributo uniforme sobre consumo é "
+            "regressivo)",
+            "<i>“A exclusão das rendas de capital da tabela progressiva do IR tende a reduzir a progressividade "
+            "efetiva do sistema.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["dentre outros"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. Progressividade aliada a transferências de renda é a combinação clássica da "
+                             "função distributiva do Estado para promover maior equidade."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0588
+    {
+        "id": "ECO-E1-0588-1", "fonte_ref": "E1-0588", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("O princípio da transparência fiscal impõe que a atividade fiscal deve desenvolver-se com "
+                      "clareza, abertura e simplicidade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O princípio da transparência fiscal impõe que a atividade fiscal deve desenvolver-se com "
+                      "<u>clareza, abertura e simplicidade</u>."),
+        "poucas": ("A " + azb("transparência fiscal") + " exige que tributos, receitas e gastos sejam claros, "
+                   "públicos e compreensíveis, para que o cidadão saiba quanto paga e como o dinheiro é usado."),
+        "destrinchando": [
+            "Na teoria da tributação, transparência e " + azb("simplicidade") + " andam juntas: o contribuinte "
+            "deve conseguir saber quanto paga e por quê. Sistemas complexos, com tributos embutidos em preços e "
+            "regimes especiais, escondem a carga e encarecem o cumprimento das obrigações.",
+            "Na gestão fiscal, o " + azb("FMI") + " consolidou o princípio no Código de Boas Práticas de "
+            "Transparência Fiscal (1998, revisto como Código de Transparência Fiscal em 2014): papéis "
+            "institucionais claros, orçamento aberto, informação fiscal confiável e publicada.",
+            "No " + rx("Brasil") + ": a " + vd("LRF (LC 101/2000), arts. 48 e 49") + " fixa os instrumentos de "
+            "transparência da gestão fiscal (orçamentos, prestações de contas, relatórios bimestrais e "
+            "quadrimestrais, divulgação em tempo real); a " + vd("Lei 12.741/2012") + " manda informar na nota "
+            "fiscal os tributos embutidos no preço, regulamentando o " + vd("art. 150, § 5º, da CF") + ".",
+            "Por que importa para a equidade: tributo invisível (indireto, embutido) reduz a percepção da carga "
+            "e o controle social — um argumento a favor do IVA “por fora”, com alíquota explícita, adotado na "
+            "reforma de 2023.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição direta, sem armadilha de modulador. A versão ERRADA "
+                       "usual trocaria o princípio (atribuir “clareza e simplicidade” à neutralidade) ou "
+                       "restringiria a transparência à arrecadação, deixando de fora o gasto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A Lei de Responsabilidade Fiscal define instrumentos de transparência da gestão fiscal, entre "
+            "eles os planos, orçamentos e prestações de contas, com ampla divulgação.”</i> → CERTO",
+            "<i>“A transparência fiscal limita-se à divulgação das receitas tributárias, sem alcançar a "
+            "execução das despesas.”</i> → ERRADO (restrição indevida)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. A transparência fiscal exige que a política tributária seja clara, aberta à "
+                             "sociedade e de fácil compreensão, garantindo controle social sobre os tributos."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0589
+    {
+        "id": "ECO-E1-0589-1", "fonte_ref": "E1-0589", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto é progressivo quando a participação dos impostos na renda dos agentes diminui "
+                      "conforme a renda aumenta."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um imposto é progressivo quando a participação dos impostos na renda dos agentes ")
+                    + vm("diminui") + az(" conforme a renda aumenta.")),
+        "poucas": ("Participação do imposto na renda que <b>cai</b> com a renda define o imposto "
+                   + azb("regressivo") + ". No " + azb("progressivo") + ", essa participação (alíquota média) "
+                   + vd("sobe") + "."),
+        "destrinchando": [
+            "O critério é a " + azb("alíquota média") + " (ou efetiva): T/Y. "
+            + vd("Progressivo") + " → T/Y cresce com Y; " + vd("proporcional") + " → T/Y constante; "
+            + vd("regressivo") + " → T/Y cai com Y.",
+            "Atenção ao “proporcional”: num imposto proporcional o rico já paga <b>mais em reais</b> (10% de "
+            "R$ 10 mil > 10% de R$ 1 mil). Progressividade exige mais que isso: pagar uma fração maior da renda.",
+            "Exemplo de progressivo: IR com isenção até certo nível e alíquotas marginais crescentes — a alíquota "
+            "média sobe aos poucos com a renda. Exemplo de regressivo: tributo sobre consumo com alíquota "
+            "uniforme (o pobre consome fração maior da renda) ou contribuição com teto (acima do teto, a "
+            "fração paga cai).",
+            "Não confundir alíquota <b>marginal</b> (sobre o último real ganho) com <b>média</b>: um imposto com "
+            "alíquota marginal única e uma faixa de isenção já é progressivo, porque a média sobe.",
+            vm("Regra-âncora: fração da renda paga em imposto sobe com a renda → progressivo; cai → regressivo."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Dá a definição exata do regressivo com o rótulo de "
+                       "progressivo — troca simples, mas perigosa porque “participação dos impostos na renda” "
+                       "é linguagem técnica correta, o que dá ar de verdade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um imposto é regressivo quando a participação dos impostos na renda dos agentes diminui "
+            "conforme a renda aumenta.”</i> → CERTO",
+            "<i>“É progressivo todo imposto em que o contribuinte de maior renda paga um valor absoluto "
+            "maior.”</i> → ERRADO (troca de conceito: isso vale até para o proporcional)",
+        ])],
+        "reescrita": ("Um imposto é progressivo quando a participação dos impostos na renda dos agentes "
+                      + hl("aumenta") + " conforme a renda aumenta."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. Isso define um imposto regressivo. No progressivo, a carga aumenta "
+                             "proporcionalmente com a renda."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem diz que no progressivo “a carga aumenta "
+                    "proporcionalmente com a renda”, o que descreve o imposto proporcional; no progressivo a "
+                    "carga cresce mais que proporcionalmente"],
+    },
+    # ------------------------------------------------------------------ E1-0590
+    {
+        "id": "ECO-E1-0590-1", "fonte_ref": "E1-0590", "destino": "47", "subtema": H2["trib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TRIB,
+        "rotulo_item": "Item",
+        "assertiva": ("Um imposto é direto quando incide sobre o preço das mercadorias, independentemente de quem "
+                      "pague o imposto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um imposto é ") + vm("direto") + az(" quando incide sobre o preço das mercadorias, "
+                                                             "independentemente de quem pague o imposto.")),
+        "poucas": ("Imposto sobre o preço das mercadorias é " + azb("indireto") + ". O " + azb("direto")
+                   + " incide sobre renda e patrimônio de quem efetivamente o suporta."),
+        "destrinchando": [
+            azb("Diretos") + ": incidem sobre a renda ou o patrimônio, e o contribuinte legal (de direito) "
+            "tende a coincidir com quem arca com o ônus (de fato). Exemplos: IR, IPTU, IPVA, ITR, ITCMD.",
+            azb("Indiretos") + ": incidem sobre a produção e a circulação de bens e serviços, embutidos no "
+            "preço. Quem recolhe (empresa, contribuinte de direito) repassa ao comprador (contribuinte de fato). "
+            "Exemplos: ICMS, IPI, ISS, PIS/Cofins e, na transição da reforma de 2023, IBS e CBS.",
+            "Por isso o critério que separa os dois não é quem recolhe, mas a <b>base</b> e a "
+            "<b>repercussão</b>: no indireto, o tributo se desloca para o preço, “independentemente de quem "
+            "pague” formalmente.",
+            "Ligação com a equidade: diretos permitem graduação pela capacidade de pagamento (alíquotas "
+            "progressivas, isenções pessoais); indiretos tratam igual o consumo de pobres e ricos e tendem à "
+            "regressividade. O " + rx("Brasil") + " depende muito dos indiretos, o que explica a regressividade "
+            "do sistema.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Definição correta do imposto indireto com o rótulo "
+                       "trocado. A expressão “independentemente de quem pague” é a marca da repercussão — "
+                       "típica do indireto, não do direto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O ICMS é imposto indireto, pois seu ônus é transferido ao consumidor final por meio do "
+            "preço.”</i> → CERTO",
+            "<i>“No imposto direto, contribuinte de direito e contribuinte de fato são, em regra, pessoas "
+            "diferentes.”</i> → ERRADO (inversão: em regra coincidem; diferem no indireto)",
+        ])],
+        "reescrita": ("Um imposto é " + hl("indireto") + " quando incide sobre o preço das mercadorias, "
+                      "independentemente de quem pague o imposto."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. Esse é o caso dos impostos indiretos; os diretos incidem sobre renda, "
+                             "patrimônio ou lucro, pagos diretamente pelo contribuinte."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

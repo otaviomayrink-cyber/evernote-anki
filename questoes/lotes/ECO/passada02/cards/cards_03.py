@@ -225,8 +225,8 @@ CARDS = [
         "rotulo_item": "Item",
         "assertiva": "Os estoques não entram no cálculo do PIB, pois não foram vendidos.",
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Os estoques ") + vm("não entram") + az(" no cálculo do PIB, ") + vm("pois") + az(" não ")
-                    + vm("foram") + az(" vendidos.")),
+        "anotada": (az("Os estoques ") + vm("não entram") + az(" no cálculo do PIB, ") + vm("pois")
+                    + az(" não foram vendidos.")),
         "poucas": ("O PIB mede " + azb("produção") + ", não vendas. O que foi produzido e não vendido entra como "
                    + azb("variação de estoques") + ", componente do investimento."),
         "destrinchando": [
@@ -1207,8 +1207,7 @@ CARDS = [
                       "transferência de ativos."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Considerando que o PIB compreende todos os bens e serviços finais produzidos dentro de um "
-                       "país em um período de tempo, ") + vm("avaliam-se") + az(", para sua mensuração, a produção "
-                                                                                 "corrente")
+                       "país em um período de tempo, avaliam-se, para sua mensuração, a produção corrente")
                     + vm(" e a transferência de ativos") + az(".")),
         "poucas": ("O PIB mede só a " + azb("produção corrente") + ". A " + azb("transferência de ativos")
                    + " (venda de bens usados, imóveis, ações) apenas muda a propriedade de algo já contado ou não "

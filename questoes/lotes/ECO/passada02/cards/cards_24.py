@@ -625,7 +625,7 @@ CARDS = [
             rx("Tesouro Nacional") + ": gestor da " + azb("dívida pública mobiliária federal") + ". Em leilões "
             "periódicos vende LTN, LFT, NTN-B e outros títulos para cobrir déficits e pagar a dívida que vence "
             "(rolagem). Define prazo, indexador e custo da dívida.",
-            rx("Banco Central") + ": pela " + vd("LRF (2000)") + ", não pode emitir títulos próprios desde " + vd("2002"); opera a "
+            rx("Banco Central") + ": pela " + vd("LRF (2000)") + ", não pode emitir títulos próprios desde " + vd("2002") + "; opera a "
             "política monetária com títulos do Tesouro em carteira. Na " + azb("compromissada") + ", vende "
             "títulos aos bancos com compromisso de recompra: retira reservas do sistema para manter a Selic na "
             "meta (esterilização, por exemplo, de compras de reservas internacionais).",

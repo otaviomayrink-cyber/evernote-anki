@@ -959,4 +959,406 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L01041
+    {
+        "id": "ECO-E2-L01041-1", "fonte_ref": "E2-L01041", "destino": "47", "subtema": H2["ric"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com o Princípio da Equivalência Ricardiana, uma redução dos impostos leva a um "
+                      "aumento proporcional do consumo privado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com o Princípio da Equivalência Ricardiana, uma redução dos impostos ")
+                    + vm("leva a um aumento proporcional do consumo privado") + az(".")),
+        "poucas": ("Sob " + azb("equivalência ricardiana") + ", o corte de impostos (com gasto constante) é "
+                   "integralmente " + azb("poupado") + " para pagar os impostos futuros: o consumo " + vd("não "
+                                                                                                       "muda") + "."),
+        "destrinchando": [
+            "Com o gasto público dado, cortar impostos hoje cria déficit, financiado por títulos. A "
+            + azb("restrição orçamentária intertemporal do governo") + " exige que o valor presente dos impostos "
+            "futuros suba exatamente o valor do corte.",
+            "A família racional faz a mesma conta: sua riqueza (valor presente da renda líquida de impostos) não "
+            "mudou. Ela compra os títulos com o dinheiro do corte: " + vd("poupança privada ↑ = déficit ↑")
+            + ", " + vd("poupança nacional constante") + ", consumo, juros e investimento inalterados.",
+            "A visão tradicional (keynesiana) prevê o contrário: renda disponível ↑ → consumo ↑ pela "
+            + azb("propensão marginal a consumir") + " — e, mesmo nela, o aumento seria uma fração (c × ΔT), "
+            "não “proporcional” no sentido de acompanhar o corte por inteiro.",
+            "Hipóteses do teorema (" + oc("Barro") + ", 1974): agentes racionais e prospectivos, horizonte "
+            "infinito ou altruísmo intergeracional, crédito perfeito e impostos lump-sum.",
+            vm("Regra-âncora: equivalência ricardiana → corte de impostos vira poupança, não consumo."),
+        ],
+        "dissecando": (cz("[troca de conceito · contradição]") + " O item atribui à equivalência ricardiana a "
+                       "previsão da visão keynesiana tradicional. Pista: se o corte elevasse o consumo, não haveria "
+                       "“equivalência” entre financiar por dívida ou por imposto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a equivalência ricardiana, uma redução de impostos financiada por dívida eleva a "
+            "poupança privada no mesmo montante.”</i> → CERTO",
+            "<i>“Segundo a equivalência ricardiana, uma redução de impostos financiada por dívida eleva a "
+            "poupança nacional.”</i> → ERRADO (troca de conceito: a poupança nacional fica constante)",
+        ])],
+        "reescrita": ("De acordo com o Princípio da Equivalência Ricardiana, uma redução dos impostos "
+                      + hl("não altera o consumo privado, pois a poupança privada aumenta no mesmo montante") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "CONTRADICAO"], "moduladores": ["proporcional"], "dificuldade": 1,
+        "comentario_fonte": "O consumo não se altera: a poupança privada aumenta na mesma medida, pois os "
+                            "indivíduos antecipam impostos futuros para pagar a dívida.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01255-1 (corte de impostos e consumo corrente sob equivalência "
+                    "ricardiana)"],
+    },
+    # ------------------------------------------------------------------ E2-L01254
+    {
+        "id": "ECO-E2-L01254-1", "fonte_ref": "E2-L01254", "destino": "47", "subtema": H2["ric"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_ER,
+        "rotulo_item": "Item",
+        "assertiva": ("Pelo princípio da Equivalência Ricardiana, uma redução de impostos financiada pela emissão de "
+                      "títulos públicos não implica aumento de poupança."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Pelo princípio da Equivalência Ricardiana, uma redução de impostos financiada pela emissão "
+                       "de títulos públicos ") + vm("não") + az(" implica aumento de poupança.")),
+        "poucas": ("É o contrário: a família " + azb("poupa todo o corte") + " para pagar os impostos futuros — a "
+                   + vd("poupança privada sobe") + " no mesmo montante do déficit."),
+        "destrinchando": [
+            "Raciocínio ricardiano em três passos: (1) o governo corta T e emite títulos de mesmo valor; (2) os "
+            "títulos serão pagos, com juros, por impostos futuros de " + vd("mesmo valor presente") + "; (3) a "
+            "família, que antecipa isso, não se sente mais rica e guarda o corte — em geral comprando os próprios "
+            "títulos emitidos.",
+            "Contabilidade: " + vd("S_nacional = S_privada + S_pública") + ". O corte reduz a poupança pública "
+            "(déficit maior) e eleva a privada na mesma medida: a " + azb("poupança nacional") + " fica "
+            "constante, e por isso juros, investimento e conta-corrente também não se movem.",
+            "Atenção ao termo: o item diz só “poupança”. Para a " + azb("privada") + ", há aumento (item "
+            "ERRADO). Se dissesse “poupança nacional”, não haveria aumento — e o item seria CERTO. A banca "
+            "explora essa ambiguidade.",
+            "Sem equivalência (visão tradicional), parte do corte é consumida: a poupança privada sobe menos que "
+            "o déficit, a nacional cai, os juros sobem e há " + azb("crowding out") + ".",
+        ],
+        "dissecando": (cz("[inversão]") + " Negação simples do mecanismo central do teorema. Pista: a "
+                       "equivalência ricardiana se explica justamente pela poupança — se ela não subisse, o "
+                       "consumo subiria e não haveria equivalência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela equivalência ricardiana, uma redução de impostos financiada por títulos não altera a "
+            "poupança nacional.”</i> → CERTO",
+            "<i>“Pela equivalência ricardiana, a redução de impostos financiada por títulos eleva a taxa de "
+            "juros.”</i> → ERRADO (contradição: juros inalterados)",
+        ])],
+        "reescrita": ("Pelo princípio da Equivalência Ricardiana, uma redução de impostos financiada pela emissão de "
+                      "títulos públicos <s>não</s> implica aumento de poupança" + hl(" privada, no mesmo montante "
+                                                                                     "do corte") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["não"], "dificuldade": 1,
+        "comentario_fonte": "Os agentes pouparão exatamente o necessário para pagar impostos mais elevados no "
+                            "futuro.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01255
+    {
+        "id": "ECO-E2-L01255-1", "fonte_ref": "E2-L01255", "destino": "47", "subtema": H2["ric"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_ER,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a equivalência ricardiana, um corte de impostos correntes, mantidos constantes "
+                      "todos os outros elementos, produz aumento do consumo corrente, em face da elevação da renda "
+                      "disponível."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com a equivalência ricardiana, um corte de impostos correntes, mantidos constantes "
+                       "todos os outros elementos, ") + vm("produz aumento do consumo corrente, em face da elevação "
+                                                           "da renda disponível") + az(".")),
+        "poucas": ("A renda disponível sobe hoje, mas a " + azb("renda permanente") + " não: com o gasto "
+                   "constante, o corte vira dívida e impostos futuros. O ricardiano " + azb("poupa") + " o "
+                   "acréscimo, e o " + vd("consumo corrente não muda") + "."),
+        "destrinchando": [
+            "“Mantidos constantes todos os outros elementos” inclui o gasto público: o corte de impostos gera "
+            "déficit, financiado por títulos, que exigirão impostos maiores no futuro.",
+            "O consumidor ricardiano decide pelo " + azb("valor presente") + " de toda a sua renda líquida de "
+            "impostos — a lógica da " + azb("renda permanente") + " de " + oc("Friedman") + " e do ciclo de "
+            "vida de " + oc("Modigliani") + ". Imposto menor hoje e maior amanhã, de mesmo valor presente, deixa "
+            "essa riqueza intacta; logo, o consumo também.",
+            "O acréscimo de renda disponível corrente é poupado (geralmente em títulos públicos). Conclusão "
+            "ricardiana: o corte de impostos financiado por dívida é " + azb("ineficaz") + " para estimular a "
+            "demanda — por isso a tese é tratada como crítica ao multiplicador keynesiano.",
+            "O raciocínio do item (renda disponível ↑ → consumo ↑) é o da " + azb("função consumo "
+                                                                                   "keynesiana") + ", "
+            "em que o consumo depende da renda corrente.",
+            vm("Regra-âncora: ricardiano olha a riqueza, não a renda do ano."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Aplica a função consumo keynesiana dentro de uma pergunta "
+                       "sobre equivalência ricardiana. O “em face da elevação da renda disponível” é a isca: "
+                       "parece uma justificativa óbvia, mas é exatamente o canal que o teorema nega."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a visão keynesiana tradicional, um corte de impostos correntes eleva o consumo corrente "
+            "pela elevação da renda disponível.”</i> → CERTO",
+            "<i>“De acordo com a equivalência ricardiana, um corte de impostos acompanhado de corte permanente "
+            "dos gastos não altera o consumo.”</i> → ERRADO (troca de conceito: com gasto menor, a riqueza "
+            "sobe e o consumo aumenta)",
+        ])],
+        "reescrita": ("De acordo com a equivalência ricardiana, um corte de impostos correntes, mantidos constantes "
+                      "todos os outros elementos, " + hl("não altera o consumo corrente, pois a elevação da renda "
+                                                         "disponível é poupada para pagar os impostos futuros") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Com equivalência ricardiana, o corte eleva o déficit e os impostos futuros; os agentes "
+                            "poupam o aumento de renda disponível, e o consumo não se altera.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01041-1 (corte de impostos e consumo sob equivalência ricardiana)"],
+    },
+    # ------------------------------------------------------------------ E2-L01482
+    {
+        "id": "ECO-E2-L01482-1", "fonte_ref": "E2-L01482", "destino": "47", "subtema": H2["fisc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_PAND,
+        "rotulo_item": "Item",
+        "assertiva": ("O aumento recente do endividamento do governo e das taxas de juros pagas pelos títulos da "
+                      "dívida pública é compatível com o chamado efeito deslocamento."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O aumento recente do endividamento do governo e das taxas de juros pagas pelos títulos da "
+                      "dívida pública é <u>compatível</u> com o chamado <u>efeito deslocamento</u>."),
+        "poucas": ("No " + azb("efeito deslocamento") + " (" + azb("crowding out") + "), o governo financia o "
+                   "gasto com dívida, disputa a poupança, eleva os juros e afasta o investimento privado. Dívida "
+                   "e juros subindo juntos é o retrato desse mecanismo."),
+        "destrinchando": [
+            "Mecanismo no IS-LM: a expansão fiscal desloca a IS para a direita; com a oferta de moeda dada, a "
+            "renda maior eleva a demanda por moeda e os " + vd("juros sobem") + "; juros maiores reduzem o "
+            "investimento privado. A renda cresce, mas menos que o multiplicador simples prometia.",
+            "No mercado de " + azb("fundos emprestáveis") + ": o déficit reduz a poupança nacional; a oferta de "
+            "fundos cai e o juro de equilíbrio sobe. Mesma conclusão: o gasto público toma o lugar de parte do "
+            "investimento privado.",
+            "Intensidade: " + azb("crowding out total") + " com LM vertical (caso clássico) ou pleno emprego; "
+            + azb("nulo") + " na armadilha da liquidez (LM horizontal). Há ainda o canal de " + azb("risco "
+                                                                                                    "fiscal")
+            + ": dívida alta exige prêmio maior nos títulos.",
+            "No " + rx("Brasil") + ", a resposta à pandemia (auxílio emergencial, gasto em saúde, adiamento de "
+            "tributos) elevou fortemente a dívida bruta em " + vd("2020") + ", e a " + vd("Selic subiu de 2% "
+                                                                                       "(2020–21) a 13,75% "
+                                                                                       "(2022)") + ". A alta "
+            "dos juros teve como causa principal a inflação, mas o quadro dívida ↑ + juros ↑ é "
+            "<b>compatível</b> com o deslocamento — e é só isso que o item afirma.",
+        ],
+        "grafico_verso": "ECO-E2-L01482-1-V1",
+        "dissecando": (cz("[modulador relativo]") + " O verbo “é compatível” protege o item: não se afirma que a "
+                       "alta dos juros foi causada pelo crowding out, só que o quadro é coerente com ele. Seria "
+                       "ERRADO se dissesse que o deslocamento <b>explica integralmente</b> a alta dos juros."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O efeito deslocamento é máximo quando a economia está na armadilha da liquidez.”</i> → ERRADO "
+            "(inversão: aí ele é nulo)",
+            "<i>“A elevação dos juros dos títulos públicos no pós-pandemia decorreu exclusivamente do efeito "
+            "deslocamento.”</i> → ERRADO (modulador absoluto: a inflação foi o motor principal)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["compatível"], "dificuldade": 1,
+        "comentario_fonte": "O crowding out ocorre quando o aumento do gasto financiado por dívida eleva os juros e "
+                            "desloca o investimento privado; dívida e juros maiores na pandemia são compatíveis "
+                            "com esse efeito.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 375", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01482-1-V1, IS-LM com crowding out)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01483
+    {
+        "id": "ECO-E2-L01483-1", "fonte_ref": "E2-L01483", "destino": "47", "subtema": H2["ric"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_PAND,
+        "rotulo_item": "Item",
+        "assertiva": ("Da perspectiva ricardiana da dívida pública, o aumento temporário da renda gerado pelo impacto "
+                      "da política fiscal expansionista tende a elevar o consumo no curto prazo, mas no longo prazo "
+                      "ocorrerá apenas um aumento da poupança privada, que servirá para pagar os impostos que subirão "
+                      "para pagar o serviço do endividamento adicional do governo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Da perspectiva ricardiana da dívida pública, o aumento temporário da renda gerado pelo "
+                       "impacto da política fiscal expansionista ") + vm("tende a elevar o consumo no curto prazo, "
+                                                                        "mas no longo prazo ocorrerá apenas")
+                    + az(" um aumento da poupança privada, que servirá para pagar os impostos que subirão para pagar "
+                         "o serviço do endividamento adicional do governo.")),
+        "poucas": ("Na visão " + azb("ricardiana") + ", o consumidor antecipa os impostos futuros " + vd("desde o "
+                   "início") + ": não há alta do consumo no curto prazo; a poupança privada sobe " + azb("já") + ", "
+                   "no mesmo montante do déficit."),
+        "destrinchando": [
+            "O agente ricardiano é " + azb("prospectivo") + " (<i>forward-looking</i>): ao ver o déficit, "
+            "reconhece imediatamente que a dívida é imposto futuro de mesmo valor presente. Sua riqueza não "
+            "muda, e ele não tem motivo para consumir mais em nenhum momento.",
+            "Por isso o ajuste é " + vd("imediato e integral") + ": a poupança privada sobe no próprio período "
+            "do corte de impostos ou da transferência, compensando a queda da poupança pública. Não existe uma "
+            "fase inicial de consumo seguida de poupança.",
+            "A sequência descrita no item (consumo sobe agora, poupança depois) é a de um consumidor "
+            + azb("míope") + " ou com " + azb("restrição de liquidez") + " — justamente os casos que "
+            "<b>violam</b> a equivalência.",
+            "Empiricamente, o auxílio emergencial de " + vd("2020") + " no " + rx("Brasil") + " foi em grande "
+            "parte consumido: beneficiários de baixa renda, sem acesso a crédito, comportam-se de modo "
+            "não ricardiano. Isso não muda o gabarito — o item pede a <b>perspectiva ricardiana</b>.",
+            vm("Regra-âncora: ricardiano não tem “curto prazo keynesiano” — poupa desde o primeiro real."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A segunda metade (poupança para pagar impostos "
+                       "futuros) é o mecanismo ricardiano correto; o erro foi enxertado na cronologia, com um "
+                       "consumo inicial que a teoria nega — comportamento keynesiano enxertado no curto prazo. "
+                       "Desconfie de “no curto prazo… mas no longo prazo” em itens "
+                       "sobre expectativas racionais."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Da perspectiva ricardiana, a política fiscal expansionista financiada por dívida eleva desde logo "
+            "a poupança privada, sem efeito sobre o consumo.”</i> → CERTO",
+            "<i>“Famílias com restrição de liquidez tendem a consumir transferências temporárias, contrariando a "
+            "equivalência ricardiana.”</i> → CERTO",
+        ])],
+        "reescrita": ("Da perspectiva ricardiana da dívida pública, o aumento temporário da renda gerado pelo impacto "
+                      "da política fiscal expansionista " + hl("não eleva o consumo nem no curto prazo: desde logo "
+                                                               "ocorre apenas") + " um aumento da poupança privada, "
+                      "que servirá para pagar os impostos que subirão para pagar o serviço do endividamento adicional "
+                      "do governo."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": ["tende a", "apenas"], "dificuldade": 2,
+        "comentario_fonte": "Na equivalência ricardiana, os consumidores antecipam impostos futuros e poupam o "
+                            "acréscimo de renda imediatamente; o erro é afirmar alta do consumo no curto prazo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 376-377", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (slides de aula em texto; conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01520
+    {
+        "id": "ECO-E2-L01520-1", "fonte_ref": "E2-L01520", "destino": "47", "subtema": H2["ric"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_DIV,
+        "rotulo_item": "Item",
+        "assertiva": ("O conceito de equivalência ricardiana implica que os agentes levem em conta os impactos futuros "
+                      "de políticas fiscais expansionistas, levando ao aumento da poupança no presente e reduzindo o "
+                      "impacto esperado pela teoria keynesiana."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O conceito de equivalência ricardiana implica que os agentes levem em conta os <u>impactos "
+                      "futuros</u> de políticas fiscais expansionistas, levando ao <u>aumento da poupança no "
+                      "presente</u> e <u>reduzindo</u> o impacto esperado pela teoria keynesiana."),
+        "poucas": ("Agentes " + azb("prospectivos") + " veem no déficit de hoje os impostos de amanhã, "
+                   + vd("poupam já") + " e neutralizam o estímulo: a equivalência ricardiana é uma " + azb("crítica "
+                   "ao multiplicador keynesiano") + "."),
+        "destrinchando": [
+            "Argumento em quatro passos (como nos manuais): (1) o governo pode financiar o gasto com impostos "
+            "atuais ou com dívida; (2) a dívida terá de ser paga, com impostos futuros maiores; (3) a escolha é, "
+            "portanto, entre imposto hoje e imposto amanhã; (4) o contribuinte, antecipando isso, aumenta a "
+            "poupança e compra os títulos emitidos.",
+            "Consequência: para um dado gasto, trocar imposto por dívida " + vd("não afeta a demanda agregada "
+                                                                                "nem os juros") + ". Como a "
+            "poupança privada sobe no mesmo montante do déficit, não há queda da poupança nacional, nem "
+            "crowding out, nem piora das contas externas. A dívida não é riqueza líquida do setor privado.",
+            "Por que “reduzindo” e não “anulando”: na versão estrita, o efeito de um corte de impostos financiado "
+            "por dívida é nulo; nas versões com violações parciais (parte das famílias com restrição de crédito), "
+            "é apenas menor. “Reduzir” cobre as duas leituras — o item não usa absoluto.",
+            "Autores: intuição de " + oc("David Ricardo") + " (que, aliás, duvidava de que as pessoas agissem "
+            "assim) e formalização de " + oc("Robert Barro") + " (1974); daí o nome “equivalência "
+            "Barro-Ricardo”.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Reproduz a tese do manual. O que derruba "
+                       "o candidato é o verbo: quem acha que a equivalência “anula” e não só “reduz” marca ERRADO. "
+                       "Reduzir é compatível com anular; seria ERRADO trocar por “intensificar”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…intensificando o efeito multiplicador previsto por Keynes.”</i> → ERRADO (inversão: reduz ou "
+            "anula)",
+            "<i>“…levando à redução da poupança no presente.”</i> → ERRADO (inversão: a poupança aumenta)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["reduzindo"], "dificuldade": 1,
+        "comentario_fonte": "Agentes racionais antecipam impostos futuros e elevam a poupança, atenuando ou anulando "
+                            "o multiplicador keynesiano; slides de aula reproduzem a argumentação da equivalência "
+                            "Barro-Ricardo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 403-404", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "texto (slides de aula absorvidos no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01635-1 (mesmo item com o acréscimo “como o aumento da dívida "
+                    "pública e de impostos”)"],
+    },
+    # ------------------------------------------------------------------ E2-L01635
+    {
+        "id": "ECO-E2-L01635-1", "fonte_ref": "E2-L01635", "destino": "47", "subtema": H2["ric"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_DIV,
+        "rotulo_item": "Item",
+        "assertiva": ("O conceito de equivalência ricardiana implica que os agentes levem em conta os impactos futuros "
+                      "de políticas fiscais expansionistas como o aumento da dívida pública e de impostos, levando ao "
+                      "aumento da poupança no presente e reduzindo o impacto da política fiscal que seria esperado "
+                      "pela teoria keynesiana."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O conceito de equivalência ricardiana implica que os agentes levem em conta os impactos futuros "
+                      "de políticas fiscais expansionistas como o <u>aumento da dívida pública e de impostos</u>, "
+                      "levando ao <u>aumento da poupança no presente</u> e reduzindo o impacto da política fiscal que "
+                      "seria esperado pela teoria keynesiana."),
+        "poucas": ("Dívida maior hoje = " + azb("impostos maiores amanhã") + ". O agente ricardiano antecipa a "
+                   "conta, " + vd("poupa no presente") + " e esvazia o estímulo que o multiplicador keynesiano "
+                   "prometia."),
+        "destrinchando": [
+            "O item explicita os “impactos futuros”: a expansão financiada por dívida eleva o " + azb("estoque "
+            "de dívida") + " e, por consequência, os " + azb("impostos futuros") + " necessários para pagar "
+            "principal e juros (restrição orçamentária intertemporal do governo).",
+            "O consumidor, que é também contribuinte, internaliza essa restrição: sua riqueza líquida não muda "
+            "com o corte de impostos financiado por dívida, então ele " + vd("poupa o corte") + " — "
+            "tipicamente comprando os próprios títulos públicos.",
+            "Resultado agregado: poupança privada ↑ = poupança pública ↓; poupança nacional, juros e demanda "
+            "agregada constantes. É a " + azb("crítica ricardiana ao multiplicador") + ": no modelo keynesiano, "
+            "o corte de impostos teria efeito −c/(1 − c) × ΔT sobre a renda; sob equivalência, efeito zero.",
+            "Hipóteses: horizonte infinito ou " + azb("altruísmo intergeracional") + " (" + oc("Barro") + ", "
+            "1974), crédito perfeito e impostos lump-sum. Violadas, o efeito keynesiano reaparece em parte.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Mesma tese do manual, com o mecanismo explicitado (dívida → "
+                       "impostos). O “reduzindo” é moderado e verdadeiro; não há modulador absoluto. A banca "
+                       "costuma trocar por “intensificando” para fabricar o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…intensificando o efeito multiplicador previsto por Keynes.”</i> → ERRADO (inversão)",
+            "<i>“…desde que os agentes tenham restrição de liquidez.”</i> → ERRADO (inversão: a restrição de "
+            "liquidez quebra a equivalência)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["reduzindo"], "dificuldade": 1,
+        "comentario_fonte": "Agentes antecipam impostos futuros, poupam para compensar déficits e reduzem o "
+                            "multiplicador keynesiano; resumo da argumentação Barro-Ricardo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01520-1 (mesmo item sem o trecho “como o aumento da dívida pública "
+                    "e de impostos”)"],
+    },
+    # ------------------------------------------------------------------ E2-L01778
+    {
+        "id": "ECO-E2-L01778-1", "fonte_ref": "E2-L01778", "destino": "47", "subtema": H2["ric"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_DIV,
+        "rotulo_item": "Item",
+        "assertiva": ("O conceito de equivalência ricardiana implica que os agentes levem em conta os impactos futuros "
+                      "de políticas fiscais expansionistas, intensificando o efeito multiplicador previsto por "
+                      "Keynes e elevando o impacto de políticas fiscais expansionistas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O conceito de equivalência ricardiana implica que os agentes levem em conta os impactos "
+                       "futuros de políticas fiscais expansionistas, ") + vm("intensificando") + az(" o efeito "
+                       "multiplicador previsto por Keynes e ") + vm("elevando") + az(" o impacto de políticas "
+                                                                                    "fiscais expansionistas.")),
+        "poucas": ("Antecipar os impostos futuros leva a " + azb("poupar") + ", não a gastar: a equivalência "
+                   "ricardiana " + vm("reduz ou anula") + " o multiplicador keynesiano."),
+        "destrinchando": [
+            "Lógica ricardiana: déficit hoje → dívida → " + azb("impostos futuros") + " de mesmo valor presente. "
+            "O agente racional poupa o corte de impostos (ou a transferência) para pagar essa conta.",
+            "No " + azb("multiplicador keynesiano") + ", a cadeia é a oposta: renda disponível ↑ → consumo ↑ → "
+            "renda de outros ↑ → novas rodadas de consumo. Se a primeira rodada é poupada, a cadeia não começa: "
+            "o multiplicador do corte de impostos financiado por dívida vai a " + vd("zero") + ".",
+            "Antecipar o futuro pode até <b>reduzir</b> o consumo presente em outro cenário: se o agente teme "
+            "que a dívida alta leve a ajuste mais duro adiante, poupa ainda mais (efeitos não keynesianos, tese "
+            "da “contração fiscal expansionista”). Em nenhuma versão a antecipação intensifica o multiplicador.",
+            "A tese de " + oc("Barro") + " (1974) é, por isso, classificada nos manuais como "
+            + azb("crítica ao multiplicador keynesiano") + ".",
+            vm("Regra-âncora: equivalência ricardiana enfraquece a política fiscal; nunca a fortalece."),
+        ],
+        "dissecando": (cz("[inversão]") + " A primeira metade copia a definição correta; a segunda inverte o "
+                       "efeito. O item é a versão “trocada” de um CERTO clássico, que diz “aumento da poupança e "
+                       "redução do impacto keynesiano”. Pista: “levar em conta os impactos futuros” é "
+                       "comportamento de poupador."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…levando ao aumento da poupança no presente e reduzindo o impacto esperado pela teoria "
+            "keynesiana.”</i> → CERTO",
+        ])],
+        "reescrita": ("O conceito de equivalência ricardiana implica que os agentes levem em conta os impactos futuros "
+                      "de políticas fiscais expansionistas, " + hl("reduzindo") + " o efeito multiplicador previsto "
+                      "por Keynes e " + hl("diminuindo") + " o impacto de políticas fiscais expansionistas."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A equivalência ricardiana reduz ou anula o multiplicador: os agentes poupam para pagar "
+                            "impostos futuros.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

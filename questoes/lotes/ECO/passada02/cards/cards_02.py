@@ -598,7 +598,7 @@ CARDS = [
                       "impostos, sem considerar as transferências que o governo faz para famílias e empresas."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A renda disponível bruta do governo é composta ")
-                    + vm("apenas pelas receitas arrecadadas através de impostos, sem considerar")
+                    + vm("apenas") + az(" pelas receitas arrecadadas através de impostos, ") + vm("sem considerar")
                     + az(" as transferências que o governo faz para famílias e empresas.")),
         "poucas": ("A " + azb("renda disponível bruta do governo") + " é o que lhe resta <b>depois</b> da "
                    "redistribuição: impostos, contribuições sociais e rendas de propriedade, " + vd("menos") + " "
@@ -631,9 +631,9 @@ CARDS = [
             "<i>“Os benefícios sociais pagos pelo governo integram a despesa de consumo final do governo.”</i> → "
             "ERRADO (troca de conceito: são transferências, não consumo)",
         ])],
-        "reescrita": ("A renda disponível bruta do governo é composta " + hl("pelos impostos, contribuições e "
-                      "demais rendas que recebe, deduzidas") + " as transferências que o governo faz para famílias "
-                      "e empresas."),
+        "reescrita": ("A renda disponível bruta do governo é composta <s>apenas</s> pelas receitas arrecadadas "
+                      "através de impostos, " + hl("contribuições e demais rendas que recebe, deduzidas")
+                      + " as transferências que o governo faz para famílias e empresas."),
         "tipo_erro": ["RESTRICAO", "MEIA_VERDADE"], "moduladores": ["apenas"], "dificuldade": 1,
         "comentario_fonte": ("Várias respostas de IA fundidas: RDB do governo = receitas − transferências e "
                              "subsídios; RDB = saldo da renda primária + transferências correntes líquidas; códigos "
@@ -932,7 +932,7 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Na transição do Valor Adicionado Bruto (VAB) a preços básicos para o Produto Interno Bruto "
                        "(PIB) a preços de mercado, é necessária a adição ")
-                    + vm("de todos os impostos incidentes sobre a produção, líquidos de subsídios") + az(".")),
+                    + vm("de todos os impostos incidentes sobre a produção") + az(", líquidos de subsídios.")),
         "poucas": (vd("PIBpm = VABpb + impostos sobre produtos − subsídios sobre produtos") + ". Os "
                    + azb("outros impostos sobre a produção") + " (IPTU da fábrica, taxas) já estão dentro do VAB "
                    "a preços básicos."),
@@ -963,8 +963,8 @@ CARDS = [
             "ERRADO (restrição indevida: entram todos os impostos sobre a produção e a importação)",
         ])],
         "reescrita": ("Na transição do Valor Adicionado Bruto (VAB) a preços básicos para o Produto Interno Bruto "
-                      "(PIB) a preços de mercado, é necessária a adição " + hl("dos impostos sobre produtos, "
-                      "líquidos de subsídios sobre produtos") + "."),
+                      "(PIB) a preços de mercado, é necessária a adição " + hl("dos impostos sobre produtos") + ", líquidos de subsídios"
+                      + hl(" sobre produtos") + "."),
         "tipo_erro": ["GENERALIZACAO", "TROCA_CONCEITO"], "moduladores": ["todos"], "dificuldade": 2,
         "comentario_fonte": ("Várias respostas de IA: só os impostos sobre produtos (líquidos de subsídios sobre "
                              "produtos) entram na passagem; outros impostos sobre a produção já estão no VAB a "

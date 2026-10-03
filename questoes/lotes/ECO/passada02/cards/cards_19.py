@@ -1244,4 +1244,245 @@ CARDS = [
                            "acao": "texto (fórmula transcrita no 📖)"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00387
+    {
+        "id": "ECO-E2-L00387-1", "fonte_ref": "E2-L00387", "destino": "39", "subtema": H2["dom"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da interação entre política fiscal e política monetária, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A condição de Dominância Fiscal, descrita por Sargent e Wallace, ocorre quando a autoridade "
+                      "fiscal não ajusta os superávits primários para estabilizar a dívida pública, forçando a "
+                      "autoridade monetária a gerar senhoriagem para evitar o calote. Nesse cenário, um aperto "
+                      "monetário (aumento de juros) pode ser inflacionário, pois eleva o serviço da dívida e "
+                      "sinaliza maior necessidade de emissão futura de moeda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A condição de Dominância Fiscal, descrita por Sargent e Wallace, ocorre quando a autoridade "
+                      "fiscal não ajusta os superávits primários para estabilizar a dívida pública, forçando a "
+                      "autoridade monetária a gerar senhoriagem para evitar o calote. Nesse cenário, um aperto "
+                      "monetário (aumento de juros) <u>pode ser inflacionário</u>, pois eleva o serviço da dívida "
+                      "e sinaliza maior necessidade de emissão futura de moeda."),
+        "poucas": ("Na " + azb("dominância fiscal") + ", o fiscal “joga primeiro” e o BC acaba financiando a "
+                   "dívida. Juros mais altos aumentam a dívida e a senhoriagem futura exigida, e o público, "
+                   "antecipando a inflação futura, eleva a de hoje: o aperto pode " + vd("piorar") + " a inflação."),
+        "destrinchando": [
+            "Restrição orçamentária intertemporal do governo: dívida hoje = valor presente dos " + azb("superávits "
+            "primários") + " futuros + " + azb("senhoriagem") + " futura. Se o fiscal fixa os primários sem "
+            "olhar a dívida, a senhoriagem é que fecha a conta.",
+            "“" + oc("Some Unpleasant Monetarist Arithmetic") + "” (" + oc("Sargent e Wallace") + ", "
+            + vd("1981") + "): aperto monetário hoje → menos senhoriagem agora → mais dívida → mais senhoriagem "
+            "e inflação <b>amanhã</b>. Como a demanda por moeda depende da inflação esperada, a inflação pode "
+            "subir já no presente.",
+            "Regimes de " + oc("Leeper") + " (" + vd("1991") + "): " + azb("dominância monetária") + " (BC ativo, "
+            "fiscal passivo — o fiscal ajusta primários; juros controlam a inflação) × " + azb("dominância "
+            "fiscal") + " (fiscal ativo, BC passivo). A " + azb("teoria fiscal do nível de preços") + " leva a "
+            "lógica ao extremo: o nível de preços se ajusta para tornar a dívida sustentável.",
+            "Versão aberta: " + oc("Blanchard") + " (" + vd("2004") + "), sobre o " + rx("Brasil") + " de "
+            + vd("2002–2003") + " — juros mais altos elevavam o risco de default, afugentavam capital, "
+            "depreciavam o real e, pelo repasse cambial, aumentavam a inflação.",
+            vm("Regra-âncora: sob dominância fiscal, juro alto pode ser inflacionário; a cura é fiscal, não "
+               "monetária."),
+        ],
+        "dissecando": (cz("[contraintuitivo · modulador relativo]") + " A intuição de manual (juro sobe → inflação "
+                       "cai) leva a marcar ERRADO. O “pode ser” protege o item: o resultado só vale no regime de "
+                       "dominância fiscal, que o próprio item descreve."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Sob dominância fiscal, a elevação dos juros é sempre suficiente para reduzir a inflação.”</i> → "
+            "ERRADO (modulador absoluto: pode agravá-la)",
+            "<i>“No regime de dominância monetária, a autoridade fiscal ajusta os superávits primários para "
+            "garantir a sustentabilidade da dívida.”</i> → CERTO",
+        ]), ("🃏 Carta na manga", [
+            "Credibilidade monetária não sobrevive sem âncora fiscal: a eficácia dos juros pressupõe que o "
+            "Tesouro, e não a impressora, garanta a solvência da dívida — lição de Sargent e Wallace e do "
+            "episódio brasileiro de 2002–2003.",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 3,
+        "comentario_fonte": ("Aritmética monetarista desagradável (Sargent e Wallace): com fiscal irresponsável, "
+                             "juro maior eleva o déficit nominal e a dívida, exigindo mais inflação futura; o "
+                             "público antecipa e a inflação sobe hoje."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00386
+    {
+        "id": "ECO-E3-L00386-1", "fonte_ref": "E3-L00386", "destino": "39", "subtema": H2["dom"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": ("A análise das contas públicas é um elemento importante da macroeconomia; a esse respeito, "
+                    "julgue certo ou errado (C ou E) o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("A condução da política fiscal é independente de, e não causa quaisquer efeitos sobre a "
+                      "condução da política monetária, de modo que o Executivo não encontra restrições oriundas da "
+                      "política monetária na determinação dos seus gastos e arrecadações."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A condução da política fiscal ") + vm("é independente de, e não causa quaisquer efeitos "
+                                                              "sobre")
+                    + az(" a condução da política monetária, de modo que o Executivo ") + vm("não encontra")
+                    + az(" restrições oriundas da política monetária na determinação dos seus gastos e "
+                         "arrecadações.")),
+        "poucas": ("Fiscal e monetária são " + azb("interdependentes") + ": gasto e tributo mexem na demanda, na "
+                   "inflação e nos juros; e os juros fixados pelo BC determinam o custo da dívida e, portanto, "
+                   "o espaço fiscal do Executivo."),
+        "destrinchando": [
+            "Do fiscal para o monetário: expansão fiscal aquece a demanda (IS para a direita), pressiona a "
+            "inflação e obriga o BC a subir juros; no limite, a " + azb("dominância fiscal") + " tira do BC o "
+            "controle da inflação.",
+            "Do monetário para o fiscal: juro mais alto eleva a conta de juros da dívida e o " + azb("resultado "
+            "nominal") + " (NFSP); no " + rx("Brasil") + ", parte relevante da dívida é atrelada à Selic ou de "
+            "prazo curto, então cada ponto de Selic pesa diretamente no orçamento. Juros altos também reduzem "
+            "a atividade e a arrecadação.",
+            "No IS-LM, o " + azb("policy mix") + " define o resultado: fiscal expansionista + monetária "
+            "contracionista = juros altos e efeito ambíguo sobre a renda; fiscal contracionista + monetária "
+            "expansionista = juros baixos, mais investimento privado.",
+            "Instituições de coordenação: proibição de o BC financiar o Tesouro (" + vd("art. 164, § 1º, da "
+            "CF") + "), " + azb("Lei de Responsabilidade Fiscal") + ", regras fiscais (teto de gastos, depois o "
+            + azb("arcabouço fiscal") + " da " + vd("LC 200/2023") + ").",
+            vm("Regra-âncora: política fiscal e monetária se condicionam mutuamente; o espaço fiscal depende dos "
+               "juros, e a eficácia dos juros depende do fiscal."),
+        ],
+        "dissecando": (cz("[modulador absoluto · contradição]") + " Três absolutos empilhados: "
+                       "“independente”, “não causa quaisquer efeitos”, “não encontra restrições”. Afirmar "
+                       "isolamento total entre políticas macro quase sempre é ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma elevação da taxa Selic, ao aumentar a despesa com juros, tende a elevar o déficit nominal "
+            "do setor público.”</i> → CERTO",
+            "<i>“A Constituição permite que o Banco Central conceda empréstimos diretos ao Tesouro Nacional "
+            "para financiar gastos.”</i> → ERRADO (norma violada: art. 164, § 1º, veda)",
+        ])],
+        "reescrita": ("A condução da política fiscal " + hl("depende de, e causa efeitos sobre")
+                      + " a condução da política monetária, de modo que o Executivo " + hl("encontra")
+                      + " restrições oriundas da política monetária na determinação dos seus gastos e "
+                        "arrecadações."),
+        "tipo_erro": ["GENERALIZACAO", "CONTRADICAO"], "moduladores": ["independente", "quaisquer", "não"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Políticas fiscal e monetária são interdependentes; expansão fiscal pressiona a "
+                             "inflação e força o BC a subir juros; dominância fiscal ocorre quando o descontrole "
+                             "das contas obriga a política monetária a acomodar a dívida."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 562", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (trecho de apostila; ideia levada ao 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0310
+    {
+        "id": "ECO-E1-0310-1", "fonte_ref": "E1-0310", "destino": "40", "subtema": H2["crise"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2017, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das funções dos bancos centrais e das crises financeiras, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("As funções do Federal Reserve System (FED) dos Estados Unidos da América incluem a de "
+                      "emprestador de última instância, utilizada para enfrentar danos causados por crises "
+                      "financeiras severas. Exercida pelo FED no enfrentamento da crise de 1929, essa função não "
+                      "foi adotada no trato da crise financeira de 2008, que, por isso, teve sua dimensão "
+                      "sistêmica ampliada."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As funções do Federal Reserve System (FED) dos Estados Unidos da América incluem a de "
+                       "emprestador de última instância, utilizada para enfrentar danos causados por crises "
+                       "financeiras severas. ") + vm("Exercida")
+                    + az(" pelo FED no enfrentamento da crise de 1929, essa função ") + vm("não foi adotada")
+                    + az(" no trato da crise financeira de 2008, que, por isso, teve sua dimensão sistêmica ")
+                    + vm("ampliada") + az(".")),
+        "poucas": ("A cronologia está trocada: em " + vd("1929–1933") + " o Fed " + azb("falhou") + " como "
+                   "emprestador de última instância e deixou a liquidez desabar; em " + vd("2008") + " agiu em "
+                   "escala inédita, o que conteve a crise."),
+        "destrinchando": [
+            azb("Emprestador de última instância") + " (doutrina de " + oc("Walter Bagehot") + ", <i>Lombard "
+            "Street</i>, 1873): em pânico bancário, o BC empresta livremente, a juros punitivos, contra boas "
+            "garantias, a instituições solventes, para que corridas não derrubem bancos sãos.",
+            "Grande Depressão: entre " + vd("1930") + " e " + vd("1933") + ", ondas de corridas quebraram cerca "
+            "de um terço dos bancos americanos, e a oferta de moeda caiu cerca de " + vd("um terço") + ". "
+            + oc("Friedman e Schwartz") + " (<i>A Monetary History of the United States</i>, 1963) atribuíram "
+            "a profundidade da crise a essa omissão do Fed.",
+            oc("Ben Bernanke") + ", estudioso da Depressão (canal do crédito: falências bancárias destroem "
+            "informação e crédito), presidia o Fed em 2008. Resposta: juros a zero, linhas de liquidez "
+            "emergenciais (TAF, PDCF, CPFF), resgate de AIG, swaps com outros BCs e o " + azb("QE")
+            + " a partir de " + vd("nov./2008") + ". Bernanke recebeu o " + vd("Nobel de 2022") + " por esses "
+            "estudos.",
+            "A quebra do " + azb("Lehman Brothers") + " (" + vd("set./2008") + "), deixado sem resgate, "
+            "mostrou o custo de não agir: o pânico se generalizou nos dias seguintes.",
+            vm("Regra-âncora: 1929 = BC omisso, depressão profunda; 2008 = BC emprestador maciço, recessão "
+               "grave mas contida."),
+        ],
+        "dissecando": (cz("[inversão · anacronismo]") + " A primeira frase (definição) está certa; o erro está "
+                       "na troca dos papéis entre 1929 e 2008, com um nexo causal montado em cima da troca. 🔥 "
+                       "Itens que comparam respostas de política a 1929 e a 2008 cobram justamente essa "
+                       "lição aprendida."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A atuação do Fed como emprestador de última instância em 2008 inspirou-se nas lições extraídas "
+            "da Grande Depressão.”</i> → CERTO",
+            "<i>“Na Grande Depressão, o Fed expandiu fortemente a oferta de moeda, mas não conseguiu evitar as "
+            "falências bancárias.”</i> → ERRADO (inversão: a moeda contraiu)",
+        ])],
+        "reescrita": ("As funções do Federal Reserve System (FED) dos Estados Unidos da América incluem a de "
+                      "emprestador de última instância, utilizada para enfrentar danos causados por crises "
+                      "financeiras severas. " + hl("Não exercida") + " pelo FED no enfrentamento da crise de "
+                      "1929, essa função " + hl("foi amplamente adotada") + " no trato da crise financeira de "
+                      "2008, que, por isso, teve sua dimensão sistêmica " + hl("contida") + "."),
+        "tipo_erro": ["INVERSAO", "ANACRONISMO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Em 1929 o Fed não agiu como emprestador de última instância e contraiu a liquidez; "
+                             "Bernanke estudou a Depressão e, em 2008, o Fed injetou liquidez maciça e comprou "
+                             "ativos depreciados."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: marcação de 2017 sugere CACD 2017 (CEBRASPE); a fonte não confirma"],
+    },
+    # ------------------------------------------------------------------ E1-0665
+    {
+        "id": "ECO-E1-0665-1", "fonte_ref": "E1-0665", "destino": "40", "subtema": H2["qe"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2025", "ano": 2025, "cacd": True,
+        "errei": False,
+        "comando": CMD_TPS25,
+        "rotulo_item": "Item",
+        "assertiva": ("A prática de juros negativos sobre as reservas bancárias foi utilizada como instrumento de "
+                      "política monetária não convencional durante a crise financeira internacional de 2008, com "
+                      "o objetivo de estimular a economia."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("A prática de juros negativos sobre as reservas bancárias foi utilizada como instrumento de "
+                      "política monetária não convencional <u>durante a crise financeira internacional de "
+                      "2008</u>, com o objetivo de estimular a economia."),
+        "poucas": ("Juros negativos sobre reservas são instrumento " + azb("não convencional") + " de estímulo, "
+                   "nascido no ciclo pós-2008: o " + azb("Riksbank") + " (Suécia) levou sua taxa de depósito a "
+                   + vd("−0,25%") + " já em " + vd("jul./2009") + "; BCE, Suíça e Japão vieram depois."),
+        "condicionais": [("⚠️ Gabarito contestável", "A adoção em larga escala é da década de 2010 (Dinamarca "
+                          + vd("2012") + ", BCE " + vd("jun./2014") + ", Suíça " + vd("dez./2014") + ", Japão "
+                          + vd("jan./2016") + "), e a resposta típica de 2008 foi corte a zero e QE; houve "
+                          "recursos. A banca manteve CERTO, lendo “crise de 2008” como o ciclo de crise e "
+                          "recuperação que se seguiu — leitura amparada pelo caso sueco de 2009.")],
+        "destrinchando": [
+            "Mecanismo: o BC <b>cobra</b> pelas reservas excedentes que os bancos deixam paradas nele. A ideia é "
+            "empurrar esses recursos para crédito e ativos, baixar toda a curva de juros e depreciar a moeda.",
+            "Três canais apontados na literatura: (1) " + azb("carteira dos bancos") + " — reservas ociosas "
+            "custam, então viram empréstimos; (2) " + azb("rebalanceamento") + " — investidores saem da renda "
+            "fixa para ações e imóveis (efeito riqueza); (3) " + azb("câmbio") + " — títulos em moeda local "
+            "rendem menos que os externos, a moeda deprecia e as exportações líquidas sobem.",
+            "Limites: o " + azb("limite inferior efetivo") + " (abaixo de certo ponto, guarda-se papel-moeda), a "
+            "compressão das margens bancárias (bancos relutam em cobrar juro negativo do depositante de varejo) "
+            "e riscos de bolhas. O Fed nunca adotou taxa negativa; o BCE e o Japão saíram dela em "
+            + vd("2022") + " e " + vd("2024") + ".",
+            "Família não convencional: " + azb("QE") + " (compra de ativos), " + azb("forward guidance")
+            + " (comunicação), " + azb("juros negativos") + " e linhas de crédito direcionadas (como as TLTRO "
+            "do BCE).",
+        ],
+        "dissecando": (cz("[detalhe · paráfrase fiel]") + " O conceito está certo; o risco está na datação. "
+                       "Candidato que sabe que os juros negativos “são de 2014” tende a marcar ERRADO. 🔥 Em "
+                       "itens do CACD sobre 2008, a banca trata a crise e seus desdobramentos como um bloco."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O Federal Reserve adotou juros negativos sobre reservas como principal resposta à crise de "
+            "2008.”</i> → ERRADO (troca de ator: o Fed usou juro zero e QE)",
+            "<i>“Juros negativos sobre reservas buscam estimular os bancos a emprestar em vez de manter "
+            "reservas excedentes no banco central.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 3,
+        "comentario_fonte": ("Juros negativos, ao lado de QE e forward guidance, são política não convencional; "
+                             "visam estimular crédito, rebalancear carteiras e depreciar o câmbio; adotados na "
+                             "década de 2010, o que gerou recursos, mas a banca manteve CERTO."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_TPS25,
+                    "contestavel: juros negativos foram adotados em larga escala só na década de 2010; a banca "
+                    "manteve CERTO (caso sueco de 2009 sustenta a leitura)",
+                    "nota_redacao: um dos comentários da fonte descreve o forward guidance como compra de "
+                    "ativos; corrigido"],
+    },
 ]

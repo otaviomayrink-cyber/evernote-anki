@@ -1025,17 +1025,20 @@ CARDS = [
         "rotulo_item": "Item",
         "assertiva": ("Ao considerar a igualdade “I = S + (T – G) + (M – X)”, a expressão “(M − X)” representa uma "
                       "transferência de poupança da economia local para o resto do mundo."),
-        "gabarito": "ERRADO", "gabarito_origem": "resolvido", "status": "contestavel",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
         "anotada": (az("Ao considerar a igualdade “I = S + (T – G) + (M – X)”, a expressão “(M − X)” representa "
-                       "uma transferência de poupança ") + vm("da economia local para o resto do mundo") + az(".")),
-        "poucas": ("(M − X) é a " + azb("poupança externa") + ": quando positiva, é poupança que vem " + vd("do "
-                   "resto do mundo para a economia local") + ". O item descreve o sentido inverso."),
+                       "uma <u>transferência de poupança da economia local para o resto do mundo</u>.")),
+        "poucas": ("Gabarito da fonte: CERTO, lendo (M − X) como a " + azb("transferência líquida de poupança") +
+                   " entre a economia local e o resto do mundo. Pelo rigor da identidade, porém, (M − X) > 0 é "
+                   "poupança que vem " + vd("do resto do mundo para a economia local") + " — ver ⚠️."),
         "condicionais": [("⚠️ Gabarito contestável",
-                          "a fonte indica CERTO, lendo (M − X) genericamente como “transferência líquida de "
+                          "mantido o CERTO da fonte, que lê (M − X) genericamente como “transferência líquida de "
                           "poupança entre países”. Mas o termo entra na identidade <b>somando</b> ao "
-                          "investimento: positivo, é poupança que o resto do mundo transfere à economia local. "
-                          "A transferência da economia local para o exterior corresponde a (X − M) > 0. Pelo "
-                          "conteúdo, o item é ERRADO.")],
+                          "investimento: positivo, é poupança que o resto do mundo transfere à economia local; "
+                          "a transferência da economia local para o exterior corresponde a (X − M) > 0. A "
+                          "resposta mais defensável é ERRADO, e a formulação rigorosa seria: <i>“(M − X) "
+                          "representa uma transferência de poupança do resto do mundo para a economia "
+                          "local”</i>.")],
         "destrinchando": [
             "Da identidade: " + vd("I = S privada + (T − G) + (M − X)") + ". Cada parcela é uma fonte de "
             "financiamento do investimento: poupança privada, do governo e " + azb("externa") + ".",
@@ -1049,24 +1052,23 @@ CARDS = [
             "e transferências); M − X é a versão simplificada, só com bens e serviços.",
             vm("Regra-âncora: (M − X) > 0 = poupança externa entrando; (X − M) > 0 = poupança doméstica saindo."),
         ],
-        "dissecando": (cz("[inversão]") + " O item inverte o sentido do fluxo associado ao termo. Pista: na "
-                       "identidade, (M − X) soma ao investimento — uma parcela que soma não pode representar "
-                       "saída de recursos quando é positiva."),
+        "dissecando": (cz("[contraintuitivo]") + " O item fala em “transferência de poupança” sem sinal, e a "
+                       "fonte aceitou a leitura genérica. Na prova, desconfie: na identidade, (M − X) soma ao "
+                       "investimento, e uma parcela que soma não representa saída de recursos quando é positiva. "
+                       "Itens mais rigorosos invertem o sentido para cobrar justamente esse ponto."),
         "modulos": [("😈 Para dificultar", [
             "<i>“…a expressão (M − X) representa a poupança externa, que financia o investimento quando as "
             "importações superam as exportações.”</i> → CERTO",
             "<i>“Um país com superávit comercial recebe poupança externa líquida.”</i> → ERRADO (inversão: "
             "exporta poupança)",
         ])],
-        "reescrita": ("Ao considerar a igualdade “I = S + (T – G) + (M – X)”, a expressão “(M − X)” representa uma "
-                      "transferência de poupança " + hl("do resto do mundo para a economia local") + "."),
-        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 2,
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": ("Gabarito dado como CERTO: com M > X a economia usa poupança externa; com X > M "
                              "transfere poupança ao exterior; (M − X) representa essa transferência líquida."),
         "qualidade_fonte": "com_erro",
         "figuras_fonte": [],
-        "alertas": ["contestavel: a fonte dá CERTO; pela identidade, (M − X) > 0 é poupança transferida do resto "
-                    "do mundo para a economia local — card resolvido como ERRADO"],
+        "alertas": ["contestavel: gabarito CERTO da fonte mantido; pela identidade, (M − X) > 0 é poupança "
+                    "transferida do resto do mundo para a economia local, e ERRADO seria mais defensável"],
     },
     # ------------------------------------------------------------------ E1-0409
     {

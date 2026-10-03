@@ -1414,4 +1414,146 @@ CARDS = [
         "alertas": ["texto_corrigido: fórmula da renda de equilíbrio estava fora de ordem na fonte (OCR: “a renda de "
                     "equilíbrio é Logo… 𝑌= 𝐶𝑎+𝐼+𝐺 1−𝑐”); recomposta como Y = (Ca + I + G)/(1 − c)"],
     },
+    # ------------------------------------------------------------------ E2-L00454
+    {
+        "id": "ECO-E2-L00454-1", "fonte_ref": "E2-L00454", "destino": "26", "subtema": H2["de"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": True,
+        "comando": CMD_NAB_MACRO,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo Keynes, o sistema econômico não pode estar em equilíbrio (com a oferta agregada igual "
+                      "à demanda agregada) quando há desemprego involuntário da força de trabalho."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Segundo Keynes, o sistema econômico ") + vm("não pode estar") + az(" em equilíbrio (com "
+                    "a oferta agregada igual à demanda agregada) quando há desemprego involuntário da força de "
+                    "trabalho.")),
+        "poucas": ("A tese central da <i>Teoria Geral</i> é justamente o " + azb("equilíbrio com desemprego "
+                   "involuntário") + ": oferta agregada = demanda agregada num nível de produto abaixo do pleno "
+                   "emprego, sem força automática que o corrija."),
+        "destrinchando": [
+            "“Equilíbrio” é termo técnico: um estado sem tendência interna à mudança — as firmas produzem o que "
+            "esperam vender e vendem o que produzem. Não significa situação boa nem pleno uso dos recursos.",
+            oc("Keynes") + " define o " + azb("ponto de demanda efetiva") + " como o encontro da função de "
+            "demanda agregada (receita esperada) com a de oferta agregada (receita que justifica cada nível de "
+            "emprego). Nada garante que esse ponto coincida com o pleno emprego.",
+            "Por que o desemprego não se corrige sozinho: cortes salariais reduzem renda e consumo; a "
+            + azb("preferência pela liquidez") + " impede que o juro caia o bastante; e o investimento depende "
+            "de expectativas deprimidas. A economia pode ficar “parada” num " + azb("equilíbrio de "
+            "subemprego") + " — a Grande Depressão foi o caso histórico.",
+            "Contraste clássico: com salários flexíveis, desemprego involuntário só existiria fora do equilíbrio "
+            "(transitório). Para Keynes, ele é compatível com o equilíbrio — daí a defesa de política fiscal "
+            "para elevar a demanda.",
+            vm("Regra-âncora: em Keynes, equilíbrio ≠ pleno emprego; pode haver equilíbrio com desemprego "
+               "involuntário."),
+        ],
+        "dissecando": (cz("[inversão · troca de ator]") + " O item atribui a Keynes a visão clássica "
+                       "(equilíbrio implica pleno emprego). A negação “não pode” é o ponto a desconfiar; a "
+                       "confusão vem do sentido cotidiano de “equilíbrio”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para a teoria clássica, com salários flexíveis, o desemprego involuntário não persiste em "
+            "equilíbrio.”</i> → CERTO",
+            "<i>“Segundo Keynes, o ponto de demanda efetiva corresponde necessariamente ao pleno emprego.”</i> → "
+            "ERRADO (modulador absoluto)",
+        ])],
+        "reescrita": ("Segundo Keynes, o sistema econômico " + hl("pode estar") + " em equilíbrio (com a oferta "
+                      "agregada igual à demanda agregada) quando há desemprego involuntário da força de "
+                      "trabalho."),
+        "tipo_erro": ["INVERSAO", "TROCA_ATOR"], "moduladores": ["não pode"], "dificuldade": 1,
+        "comentario_fonte": ("Para Keynes pode haver equilíbrio entre oferta e demanda agregadas com desemprego "
+                             "involuntário (equilíbrio de subemprego); várias respostas de IA concordantes."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 078", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida no 📖 (demanda efetiva, equilíbrio de subemprego, papel do Estado)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00657
+    {
+        "id": "ECO-E2-L00657-1", "fonte_ref": "E2-L00657", "destino": "26", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à macroeconomia, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considere uma economia fechada sem governo, com função consumo C = 200 + 0,75Y e investimento "
+                      "autônomo de 100. A renda de equilíbrio é Y = 1.200, e o multiplicador keynesiano de gastos "
+                      "autônomos é 4."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considere uma economia fechada sem governo, com função consumo C = 200 + 0,75Y e "
+                      "investimento autônomo de 100. A renda de equilíbrio é <u>Y = 1.200</u>, e o multiplicador "
+                      "keynesiano de gastos autônomos é <u>4</u>."),
+        "poucas": ("Multiplicador " + vd("1/(1 − 0,75) = 4") + "; gasto autônomo " + vd("200 + 100 = 300")
+                   + "; renda " + vd("4 × 300 = 1.200") + "."),
+        "destrinchando": [
+            "Equilíbrio: Y = C + I → Y = 200 + 0,75Y + 100 → 0,25Y = 300 → " + vd("Y = 1.200") + ".",
+            "Atalho: Y = k · A, com k = 1/(1 − c) e A = soma dos gastos autônomos (consumo autônomo + "
+            "investimento). Aqui k = " + vd("4") + " e A = " + vd("300") + ".",
+            "Conferências úteis: C = 200 + 0,75 × 1.200 = " + vd("1.100") + "; S = Y − C = " + vd("100")
+            + " = I. A igualdade S = I no equilíbrio sempre fecha — bom teste para pegar erro de conta.",
+            "Variações típicas: se I sobe 20, Y sobe 4 × 20 = 80; se c cai para 0,5, k = 2 e Y = 600 "
+            "(paradoxo da parcimônia em números).",
+        ],
+        "dissecando": (cz("[detalhe]") + " Item de cálculo puro. As armadilhas comuns são esquecer o consumo "
+                       "autônomo no gasto autônomo (4 × 100 = 400) ou usar 1/0,75 como multiplicador."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…A renda de equilíbrio é Y = 400.”</i> → ERRADO (esqueceu o consumo autônomo)",
+            "<i>“…No equilíbrio, a poupança é igual a 300.”</i> → ERRADO (S = I = 100)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "k = 1/(1 − 0,75) = 4; A = 200 + 100 = 300; Y = 4 × 300 = 1.200.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 101", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖 (cálculo transcrito)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00726
+    {
+        "id": "ECO-E2-L00726-1", "fonte_ref": "E2-L00726", "destino": "26", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação aos conceitos macroeconômicos, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo um modelo keynesiano simples, uma política fiscal expansionista representada pela "
+                      "redução de tributos incidentes sobre a renda tende a ser mais eficaz, no sentido de impactar "
+                      "positivamente a renda, em países cuja população é mais rica do que em países cuja população "
+                      "é mais pobre."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Segundo um modelo keynesiano simples, uma política fiscal expansionista representada pela "
+                       "redução de tributos incidentes sobre a renda tende a ser mais eficaz, no sentido de impactar "
+                       "positivamente a renda, em países cuja população é ") + vm("mais rica") + az(" do que em "
+                       "países cuja população é ") + vm("mais pobre") + az(".")),
+        "poucas": ("O efeito de um corte de tributos depende da " + azb("PMgC") + " (multiplicador c/(1 − c)). "
+                   "Populações mais pobres gastam fração maior da renda extra → corte mais eficaz onde a "
+                   "população é " + vd("mais pobre") + "."),
+        "destrinchando": [
+            "Multiplicador dos tributos: " + vd("ΔY/ΔT = −c/(1 − c)") + ". Com c = 0,9: 9; com c = 0,6: 1,5. "
+            "Quanto maior a PMgC, maior o impacto de cada real de imposto cortado.",
+            "Hipótese empírica do item: a PMgC cai com a renda — quem é pobre consome quase toda renda adicional "
+            "(necessidades não atendidas, restrição de crédito); quem é rico poupa boa parte. Já " + oc("Keynes")
+            + " notava que a propensão a consumir diminui à medida que a renda aumenta.",
+            "Aplicação: transferências e desonerações focadas na base da distribuição têm multiplicador maior do "
+            "que cortes para o topo. No " + rx("Brasil") + ", estudos do " + rx("Ipea") + " estimaram "
+            "multiplicadores do Bolsa Família bem acima dos de outros gastos e desonerações (ordem de 1,8 para "
+            "o PIB, com dados de 2009).",
+            "Fora do modelo simples, há ressalvas: equivalência ricardiana, restrição externa (vazamento por "
+            "importações) e a resposta de juros. O “tende a” e o “modelo keynesiano simples” delimitam o "
+            "raciocínio.",
+            vm("Regra-âncora: PMgC maior → multiplicador maior; renda adicional nas mãos de quem tem maior PMgC "
+               "gera mais renda."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca os polos (rica × pobre) de uma relação correta. Pergunta-"
+                       "teste: quem gasta mais de cada real extra? A resposta define onde o multiplicador é "
+                       "maior."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo keynesiano simples, o multiplicador dos tributos é maior quanto maior a propensão "
+            "marginal a consumir.”</i> → CERTO",
+            "<i>“Uma redução de tributos tem, em módulo, efeito sobre a renda igual ao de um aumento de gastos "
+            "de mesmo valor.”</i> → ERRADO (o do gasto é maior)",
+        ])],
+        "reescrita": ("Segundo um modelo keynesiano simples, uma política fiscal expansionista representada pela "
+                      "redução de tributos incidentes sobre a renda tende a ser mais eficaz, no sentido de impactar "
+                      "positivamente a renda, em países cuja população é " + hl("mais pobre") + " do que em países "
+                      "cuja população é " + hl("mais rica") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": ("A eficácia do corte de tributos depende da PMgC; populações mais pobres têm PMgC "
+                             "maior; logo o corte é mais eficaz em países mais pobres."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E2-L00781 (mesmo item e comentário) fundida neste card"],
+    },
 ]

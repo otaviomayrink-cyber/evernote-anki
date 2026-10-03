@@ -1267,4 +1267,269 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00169
+    {
+        "id": "ECO-E3-L00169-1", "fonte_ref": "E3-L00169", "destino": "36", "subtema": H2["inst"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": "Julgue o item que se segue, relativo à economia monetária.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma operação de mercado aberto, na qual a autoridade monetária vende títulos públicos de sua "
+                      "carteira, implica na expansão da base monetária."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma operação de mercado aberto, na qual a autoridade monetária vende títulos públicos de "
+                       "sua carteira, implica na ") + vm("expansão") + az(" da base monetária.")),
+        "poucas": ("Quem compra o título do BC paga com moeda, que sai de circulação: a venda de títulos "
+                   + azb("contrai") + " a base monetária. Expansão ocorre na compra."),
+        "destrinchando": [
+            azb("Base monetária") + " (moeda de alta potência) = papel-moeda em poder do público + depósitos "
+            "dos bancos no BC (e caixa dos bancos). É o passivo monetário do BC, diretamente afetado pelas suas "
+            "operações.",
+            "Venda de títulos: o banco comprador paga com " + azb("reservas bancárias") + ", debitadas da sua "
+            "conta no BC → reservas ↓ → " + vd("base ↓") + " → menos liquidez, juros de curto prazo ↑. É "
+            "instrumento " + azb("contracionista") + ".",
+            "Quadro dos instrumentos contracionistas: venda de títulos (base ↓); alta da Selic (crédito e "
+            "consumo ↓); aumento do compulsório (multiplicador ↓); restrições de crédito (expansão do crédito "
+            "↓); venda de dólares à vista pelo BC (retira reais do mercado).",
+            "Atenção ao mecanismo de compromissadas: quando o BC “vende com compromisso de recompra”, a base "
+            "cai durante a vigência e volta na recompra — por isso servem para regular liquidez de curto "
+            "prazo.",
+        ],
+        "dissecando": (cz("[inversão]") + " Troca o efeito da operação descrita corretamente. Para resolver: "
+                       "siga o dinheiro — na venda, ele vai do mercado para o BC (sai de circulação)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma operação de mercado aberto, na qual a autoridade monetária compra títulos públicos, implica "
+            "a expansão da base monetária.”</i> → CERTO",
+            "<i>“A venda de títulos pelo BC reduz a base monetária, mas não afeta os meios de pagamento.”</i> → "
+            "ERRADO (meia-verdade: M1 também cai, via multiplicador)",
+        ])],
+        "reescrita": ("Uma operação de mercado aberto, na qual a autoridade monetária vende títulos públicos de sua "
+                      "carteira, implica na " + hl("contração") + " da base monetária."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Na venda de títulos, os agentes entregam moeda ao BC; a base monetária se contrai. "
+                            "Quadro-resumo de instrumentos contracionistas (venda de títulos, Selic, compulsório, "
+                            "restrição ao crédito, venda de dólar).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 207", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (comentário e quadro de instrumentos contracionistas, no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00171
+    {
+        "id": "ECO-E3-L00171-1", "fonte_ref": "E3-L00171", "destino": "36", "subtema": H2["senh"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "ANTT/2023", "ano": 2023, "cacd": False, "errei": True,
+        "comando": "A partir da teoria macroeconômica, julgue o item seguinte.",
+        "rotulo_item": "Item",
+        "assertiva": ("Caso um país decida financiar seu déficit exclusivamente por meio da receita de "
+                      "senhoriagem, quanto maior for a taxa de inflação, menor poderá ser a taxa de crescimento da "
+                      "base monetária para financiar o mesmo montante de déficit."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Caso um país decida financiar seu déficit exclusivamente por meio da receita de "
+                       "senhoriagem, quanto maior for a taxa de inflação, ") + vm("menor poderá ser") + az(" a "
+                       "taxa de crescimento da base monetária para financiar o mesmo montante de déficit.")),
+        "poucas": ("Senhoriagem = " + vd("μ × M/P") + ". Inflação maior reduz a demanda por " + azb("saldos "
+                   "reais") + " (M/P); para arrecadar o mesmo valor real, a base tem de crescer <b>mais</b> "
+                   "depressa, não menos."),
+        "destrinchando": [
+            azb("Senhoriagem") + " = receita real do governo com a emissão: S = ΔM/P = " + vd("(ΔM/M) × (M/P) "
+            "= μ × m") + ", em que μ é a taxa de crescimento da base e m = M/P os saldos monetários reais. O "
+            + azb("imposto inflacionário") + " é a perda dos detentores de moeda: " + vd("π × m") + " (a "
+            "inflação é a alíquota; os saldos reais, a base).",
+            "Em regime, " + vd("μ = π + g") + " (g = crescimento da demanda real por moeda): mais inflação "
+            "anda junto com mais emissão. E, como a demanda por moeda cai com a inflação (" + oc("Cagan") + ", "
+            "1956: o público foge da moeda que perde valor), para manter S fixo é preciso " + vd("μ = S / m(π)")
+            + " — com m menor, μ maior.",
+            "A receita tem forma de " + azb("curva de Laffer") + ": cresce com a inflação até um máximo e "
+            "depois cai, porque a base do imposto (m) encolhe mais rápido que a alíquota sobe. Acima do "
+            "máximo, emitir mais rende <b>menos</b> — o caminho das hiperinflações.",
+            "Mesmo no trecho ascendente da curva, inflação maior vem com emissão maior: o que muda é se a "
+            "receita sobe ou cai, nunca o sinal da relação entre π e μ. A ideia de que inflação alta “ajuda” a "
+            "financiar com menos emissão é o erro do item.",
+            "No " + rx("Brasil") + " dos anos 1980 e início dos 1990, o financiamento inflacionário e a "
+            "indexação levaram a esse ciclo vicioso, até o Plano Real (1994).",
+        ],
+        "grafico_verso": "ECO-E3-L00171-1-V1",
+        "dissecando": (cz("[inversão]") + " Inverte o sentido da relação entre inflação e emissão. O item seduz "
+                       "porque inflação é “alíquota”: alíquota maior parece arrecadar mais com menos esforço. "
+                       "Mas a base do imposto (saldos reais) encolhe, e quem fixa a receita é μ × m, não π "
+                       "sozinho. 🔥 Itens de senhoriagem quase sempre testam a curva de Laffer."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…quanto maior for a taxa de inflação, maior terá de ser a taxa de crescimento da base monetária "
+            "para financiar o mesmo montante de déficit.”</i> → CERTO",
+            "<i>“A receita de senhoriagem cresce indefinidamente com a taxa de inflação.”</i> → ERRADO "
+            "(modulador absoluto: curva de Laffer, com máximo)",
+        ])],
+        "reescrita": ("Caso um país decida financiar seu déficit exclusivamente por meio da receita de senhoriagem, "
+                      "quanto maior for a taxa de inflação, " + hl("maior terá de ser") + " a taxa de crescimento "
+                      "da base monetária para financiar o mesmo montante de déficit."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["exclusivamente", "poderá"], "dificuldade": 3,
+        "comentario_fonte": "Com inflação maior, a demanda por moeda cai e a base precisa crescer mais para gerar "
+                            "a mesma receita; curva de Laffer da senhoriagem. Um dos comentários sugere que, com "
+                            "inflação baixa ou moderada, inflação maior permitiria menor expansão da base — "
+                            "incorreto; outro justifica pela maior demanda de papel-moeda para transações — "
+                            "raciocínio impreciso.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 209", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (fórmula da senhoriagem e curva de Laffer, no 📖)"},
+                          {"ref": "IMAGEM 210", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E3-L00171-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00313
+    {
+        "id": "ECO-E3-L00313-1", "fonte_ref": "E3-L00313", "destino": "36", "subtema": H2["inst"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": ("A compreensão da macroeconomia e dos seus agregados depende de algumas variáveis-chave, em "
+                    "especial, depende daquilo que alguns autores chamam de preços fundamentais, dentre os quais "
+                    "encontramos: i) a taxa de câmbio, o preço da moeda nacional em termos de moedas estrangeiras, "
+                    "ii) a taxa de juros, o preço intertemporal da moeda nacional em termos da própria moeda "
+                    "nacional, iii) a taxa de lucro e outros. A respeito da taxa de câmbio e taxa de juros, julgue "
+                    "o item a seguir (C ou E)."),
+        "rotulo_item": "Item",
+        "assertiva": ("A taxa de juros é um importante fator na determinação do nível de investimento agregado da "
+                      "economia. No entanto, ela também é um dos principais instrumentos de política monetária no "
+                      "controle do nível de preços. Em determinados momentos, existe um trade off entre a busca "
+                      "por um elevado nível de investimento e um baixo nível de preços, o papel da taxa de juros é "
+                      "importante para compreender esse trade off."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A taxa de juros é um importante fator na determinação do nível de investimento agregado da "
+                      "economia. No entanto, ela também é um dos principais instrumentos de política monetária no "
+                      "controle do nível de preços. <u>Em determinados momentos</u>, existe um trade off entre a "
+                      "busca por um elevado nível de investimento e um baixo nível de preços, o papel da taxa de "
+                      "juros é importante para compreender esse trade off."),
+        "poucas": ("O mesmo juro que, alto, contém a inflação, desestimula o investimento; baixo, faz o inverso. "
+                   "Daí o " + azb("trade-off de curto prazo") + " entre investimento e estabilidade de preços."),
+        "destrinchando": [
+            "Juros e investimento: na tradição de " + oc("Keynes") + ", o empresário compara a "
+            + azb("eficiência marginal do capital") + " (retorno esperado) com a taxa de juros; juro menor "
+            "torna viáveis mais projetos. Função típica: " + vd("I = I₀ − b·i") + ".",
+            "Juros e preços: no regime de metas, o BC eleva a taxa básica para conter a demanda agregada "
+            "(crédito, consumo, investimento), apreciar o câmbio e ancorar expectativas → inflação ↓.",
+            "O conflito: quando há pressão inflacionária com economia fraca, a alta dos juros reduz a "
+            + azb("formação bruta de capital fixo") + ". Ex.: no " + rx("Brasil") + " de 2015–2016, a Selic "
+            "chegou a " + vd("14,25%") + " e o investimento despencou na recessão.",
+            "Visões: para a ortodoxia, o trade-off é sobretudo de <b>curto prazo</b> — inflação baixa e "
+            "previsível favorece o investimento depois; para pós-keynesianos e estruturalistas, juros "
+            "cronicamente altos deprimem a capacidade produtiva e o crescimento de longo prazo.",
+            "Atenuantes: credibilidade (menos juros para o mesmo efeito), política fiscal que ajude a conter a "
+            "demanda e reformas que reduzam a " + azb("taxa de juros neutra") + ".",
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " Item descritivo e protegido por “em "
+                       "determinados momentos” e “um dos principais”. Itens assim só ficam ERRADOS se "
+                       "afirmarem trade-off permanente ou relação direta entre juros e investimento."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Há uma relação direta entre taxa de juros e investimento agregado, de modo que juros mais "
+            "altos estimulam o investimento.”</i> → ERRADO (inversão: a relação é inversa)",
+            "<i>“O trade-off entre investimento e estabilidade de preços é permanente, persistindo "
+            "integralmente no longo prazo.”</i> → ERRADO (modulador absoluto)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["em determinados momentos",
+                                                                           "um dos principais"],
+        "dificuldade": 1,
+        "comentario_fonte": "Três respostas de IA concordantes: relação inversa juros × investimento (eficiência "
+                            "marginal do capital); juros como instrumento contra a inflação; trade-off no curto "
+                            "prazo; exemplos de 1999–2002, 2008, 2015–2016 e 2021–2023; visões ortodoxa e "
+                            "heterodoxa.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00346
+    {
+        "id": "ECO-E3-L00346-1", "fonte_ref": "E3-L00346", "destino": "36", "subtema": H2["func"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NIDI_DEZ,
+        "rotulo_item": "Item",
+        "assertiva": ("O Banco Central é o único agente no Sistema Monetário Nacional Brasileiro atual que emite "
+                      "papel-moeda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O Banco Central é o <u>único</u> agente no Sistema Monetário Nacional Brasileiro atual que "
+                      "emite <u>papel-moeda</u>."),
+        "poucas": ("A emissão de moeda é " + azb("monopólio do BCB") + " (" + vd("CF, art. 164") + "). Bancos "
+                   "comerciais criam " + azb("moeda escritural") + ", não papel-moeda; a Casa da Moeda só "
+                   "fabrica."),
+        "destrinchando": [
+            "Base legal: " + vd("CF, art. 164") + " — a competência da União para emitir moeda será exercida "
+            "exclusivamente pelo banco central; " + vd("Lei 4.595/1964") + " — compete privativamente ao BCB "
+            "emitir moeda-papel e moeda metálica.",
+            "Quem faz o quê: a " + azb("Casa da Moeda do Brasil") + " fabrica cédulas e moedas por encomenda; "
+            "o " + azb("CMN") + " autoriza as emissões; o " + azb("BCB") + " emite, isto é, põe a moeda em "
+            "circulação (como passivo seu).",
+            azb("Moeda manual") + " (papel-moeda e moeda metálica) × " + azb("moeda escritural") + " (depósitos "
+            "à vista): os bancos criam a segunda ao conceder crédito — o empréstimo vira depósito —, e ela "
+            "integra o M1. Mas isso não é “emitir papel-moeda”, e por isso o “único” se sustenta.",
+            "Nos sistemas monetários do passado, bancos comerciais chegaram a emitir notas no " + rx("Brasil")
+            + " (Império e início da República); o “atual” do item fecha essa porta.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O “único” costuma sinalizar ERRADO, mas aqui é exato "
+                       "(monopólio constitucional). A armadilha é confundir emissão com fabricação (Casa da "
+                       "Moeda) ou com criação de moeda escritural (bancos)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O Banco Central é o único agente no Sistema Monetário Nacional que cria meios de "
+            "pagamento.”</i> → ERRADO (restrição indevida: bancos criam moeda escritural)",
+            "<i>“A Casa da Moeda do Brasil emite o papel-moeda, cabendo ao Banco Central apenas "
+            "distribuí-lo.”</i> → ERRADO (troca de ator: a Casa da Moeda fabrica; o BCB emite)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["único"], "dificuldade": 1,
+        "comentario_fonte": "Monopólio de emissão do BCB (Lei 4.595/1964; CF, art. 164); a Casa da Moeda fabrica; "
+                            "bancos comerciais criam moeda escritural, mas não emitem papel-moeda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00347
+    {
+        "id": "ECO-E3-L00347-1", "fonte_ref": "E3-L00347", "destino": "36", "subtema": H2["inst"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": True,
+        "comando": CMD_NIDI_DEZ,
+        "rotulo_item": "Item",
+        "assertiva": ("O redesconto refere-se ao processo de reemissão de um título da dívida pública que é comprado "
+                      "por um banco comercial, o qual detinha o título original, mas por um preço descontado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O redesconto refere-se ") + vm("ao processo de reemissão de um título da dívida pública "
+                       "que é comprado por um banco comercial, o qual detinha o título original, mas por um preço "
+                       "descontado") + az(".")),
+        "poucas": ("Redesconto não é reemissão de título: é " + azb("empréstimo de liquidez do Banco Central aos "
+                   "bancos") + ", com títulos dados em garantia, cobrado à " + azb("taxa de redesconto") + "."),
+        "destrinchando": [
+            "Origem do nome: o banco comercial “desconta” títulos de clientes (antecipa o valor de duplicatas e "
+            "promissórias com deságio); se fica sem liquidez, leva esses títulos ao BC, que os "
+            "<b>re</b>desconta — empresta ao banco com base neles. Hoje a garantia são, em geral, títulos "
+            "públicos ou outros ativos elegíveis.",
+            "Funções: (1) cobrir descasamentos de curto prazo entre entradas e saídas do banco; (2) "
+            + azb("emprestador de última instância") + ", que protege a solvência do sistema contra corridas; "
+            "(3) instrumento de política monetária, pela taxa e pelas condições de acesso.",
+            oc("Paulani e Braga") + " (<i>A nova contabilidade social</i>) chamam a operação entre o BC e as "
+            "sociedades depositárias de " + azb("redescontos de liquidez") + ": sem ela, o sistema bancário "
+            "ficaria permanentemente vulnerável.",
+            "O que o item descreve — o banco recomprar com desconto um título que já possuía, “reemitido” — não "
+            "corresponde a operação alguma. Quem emite título público é o " + azb("Tesouro Nacional") + "; o "
+            "BC negocia títulos no " + azb("mercado aberto") + ", que é outro instrumento.",
+            "Efeito monetário: o redesconto credita reservas ao banco → base ↑ enquanto o empréstimo vigora; "
+            "taxa ↑ desestimula o uso (contracionista), taxa ↓ estimula (expansionista).",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A banca explora o nome: “re-desconto” sugere “emitir de "
+                       "novo com desconto”. O conceito real é de crédito, não de título. Pista: o item não "
+                       "menciona o Banco Central, que é parte indispensável da operação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O redesconto é a operação pela qual o Banco Central concede empréstimos de liquidez aos bancos "
+            "comerciais, mediante garantias.”</i> → CERTO",
+            "<i>“O redesconto é a compra definitiva, pelo Banco Central, de títulos públicos em poder dos "
+            "bancos.”</i> → ERRADO (troca de conceito: isso é open market)",
+        ])],
+        "reescrita": ("O redesconto refere-se " + hl("à operação pela qual o Banco Central concede empréstimos de "
+                      "liquidez a um banco comercial, mediante garantia em títulos de sua carteira") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Redesconto é concessão de crédito do BC aos bancos contra garantia de títulos, como "
+                            "emprestador de última instância; não é reemissão de título nem compra com desconto. "
+                            "Slides citando Paulani (p. 339): “redescontos de liquidez”.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 489", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (definição de redescontos de liquidez, no 📖)"},
+                          {"ref": "IMAGEM 490", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (reescrita, fundida)"}],
+        "alertas": [],
+    },
 ]

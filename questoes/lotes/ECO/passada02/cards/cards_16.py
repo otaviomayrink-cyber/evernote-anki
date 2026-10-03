@@ -78,8 +78,9 @@ CARDS = [
             "entra na fórmula e reduz m)",
         ])],
         "reescrita": ("O multiplicador dos meios de pagamento reflete a capacidade do sistema bancário de aumentar a "
-                      "oferta de moeda a partir da base monetária inicial. […] O multiplicador dos meios de pagamento "
-                      "é " + hl("inversamente") + " proporcional à taxa de reservas mantidas pelos bancos "
+                      "oferta de moeda a partir da base monetária inicial. Considere a fórmula M = mB, em que M é o "
+                      "saldo dos meios de pagamento, B é a base monetária e m é o multiplicador. O multiplicador dos "
+                      "meios de pagamento é " + hl("inversamente") + " proporcional à taxa de reservas mantidas pelos bancos "
                       "comerciais."),
         "tipo_erro": ["INVERSAO"], "moduladores": ["diretamente"], "dificuldade": 1,
         "comentario_fonte": ("Multiplicador inversamente proporcional à taxa de reservas; m = 1/r no caso simples; "
@@ -859,8 +860,8 @@ CARDS = [
             "<i>“O pagamento de um empréstimo de redesconto pelos bancos comerciais expande a base "
             "monetária.”</i> → ERRADO (inversão: contrai)",
         ])],
-        "reescrita": ("Empréstimos do Banco Central aos bancos comerciais determinam aumento " + hl("de igual montante "
-                      "na base monetária e aumento multiplicado") + " nos meios de pagamento."),
+        "reescrita": ("Empréstimos do Banco Central aos bancos comerciais determinam aumento " + hl("multiplicado (via "
+                      "multiplicador bancário)") + " nos meios de pagamento."),
         "tipo_erro": ["TROCA_CONCEITO", "DADO_ALTERADO"], "moduladores": ["igual montante"], "dificuldade": 2,
         "comentario_fonte": ("Redesconto aumenta reservas e a base; via multiplicador, M1 aumenta em montante "
                              "tipicamente maior que o empréstimo (ex.: m = 2,5 → 250 para 100)."),

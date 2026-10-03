@@ -1228,7 +1228,7 @@ CARDS = [
             "absoluto: o primário também foi deficitário)",
         ])],
         "reescrita": ("Em 2022, observou-se um " + hl("superávit") + " primário de R$ 126 bilhões, "
-                      + hl("seguido, no ano seguinte, de déficit") + " primário de R$ 249,1 bilhões."),
+                      + hl("revertido no ano seguinte por um déficit") + " primário de R$ 249,1 bilhões."),
         "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": "Valores positivos = déficit; negativos = superávit. 2022: superávit primário de 126; "
                             "2023: déficit primário de 249 (2,3% do PIB).",

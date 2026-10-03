@@ -82,9 +82,9 @@
       "OA"
      ],
      "rotulo": "E₂",
-     "projetar": true,
+     "projetar": "x",
      "rotulo_x": "Y₂",
-     "rotulo_y": "P₂"
+     "rotulo_y": ""
     }
    ],
    "checar": [

@@ -708,7 +708,7 @@ CARDS = [
         "anotada": az("No Sistema de Contas Nacionais, os gastos com pesquisa e desenvolvimento (P&D) e a aquisição "
                       "de sistemas de armamentos deixaram de ser registrados como consumo intermediário e passaram a "
                       "compor a Formação Bruta de Capital Fixo (FBCF), o que gerou um <u>impacto positivo no nível "
-                      "do Produto Interno Bruto</u> quando da mudança metodológica."),
+                      "do Produto Interno Bruto</u> (PIB) quando da mudança metodológica."),
         "poucas": ("O " + azb("SCN 2008") + " ampliou a fronteira dos ativos: P&D e armamentos duráveis viraram "
                    + azb("FBCF") + ". O que era insumo (subtraído do valor adicionado) passou a ser demanda final, "
                    "e o nível do PIB subiu."),
@@ -1357,5 +1357,249 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["texto_corrigido: aspas finais soltas e apóstrofo da fonte normalizados (‘meras "
                     "transferências’)"],
+    },
+    # ------------------------------------------------------------------ E2-L00423
+    {
+        "id": "ECO-E2-L00423-1", "fonte_ref": "E2-L00423", "destino": "17", "subtema": H2["id"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("Apesar de produto, renda e despesa serem equivalentes, mudanças em qualquer uma das óticas não "
+                      "causam automaticamente igual variação nas demais."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Apesar de produto, renda e despesa serem equivalentes, mudanças em qualquer uma das óticas "
+                      "<u>não causam automaticamente</u> igual variação nas demais."),
+        "poucas": ("A igualdade " + vd("P ≡ R ≡ D") + " é " + azb("identidade contábil ex post") + ": vale "
+                   "sempre, depois de feitos os registros, mas não diz <b>como</b> um choque se propaga. Causalidade "
+                   "exige comportamento (propensões, expectativas, ajuste de estoques e preços)."),
+        "destrinchando": [
+            "As três óticas medem o mesmo fluxo: o valor adicionado na produção é a renda de alguém e é "
+            "comprado por alguém. A igualdade é garantida por construção — sobretudo pela " + azb("variação de "
+            "estoques") + ", que absorve na despesa tudo o que foi produzido e não vendido.",
+            "Exemplo: as famílias decidem consumir menos. No curto prazo, a produção e a renda não mudam; o que "
+            "não foi vendido vira " + azb("investimento não planejado em estoques") + " e a identidade fecha. "
+            "Só depois, se as empresas reduzirem a produção, a queda chega à renda — e em proporção que depende "
+            "da " + azb("propensão marginal a consumir") + " (multiplicador).",
+            "É a distinção de " + oc("Keynes") + " entre grandezas " + azb("ex ante") + " (planejadas: o que se "
+            "pretende gastar e produzir) e " + azb("ex post") + " (realizadas). Ex ante, despesa planejada e "
+            "produto podem divergir; o equilíbrio é uma condição a alcançar, não uma identidade.",
+            "Outros canais que impedem o espelhamento 1:1: vazamentos (poupança, impostos, importações), "
+            "mudanças de preços relativos, defasagens temporais.",
+            vm("Regra-âncora: identidade contábil descreve, não explica; causalidade exige teoria."),
+        ],
+        "dissecando": (cz("[contraintuitivo · modulador relativo]") + " Quem decorou “as três óticas são iguais” "
+                       "tende a deduzir que mexer em uma mexe nas outras na mesma medida. O “automaticamente” é o "
+                       "ponto: a identidade fecha sempre, mas o caminho do ajuste não é automático."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Como produto, renda e despesa são idênticos, uma queda do consumo reduz a renda na mesma "
+            "proporção e no mesmo período.”</i> → ERRADO (nexo indevido: o ajuste passa por estoques e "
+            "comportamento)",
+            "<i>“Ex post, o investimento realizado inclui a variação não planejada de estoques.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "MODULADOR_RELATIVO"], "moduladores": ["automaticamente"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Equivalência contábil/ex post; causalidade exige mecanismo. Respostas de IA: estoques "
+                             "como válvula de ajuste, vazamentos e injeções, ex ante × ex post, cunha de impostos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 065", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "texto (P ≡ R ≡ D)"},
+                          {"ref": "IMAGEM 066", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "cortada (fluxo circular de banco de imagens; não passa no teste do "
+                                   "quadro-negro)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00424
+    {
+        "id": "ECO-E2-L00424-1", "fonte_ref": "E2-L00424", "destino": "17", "subtema": H2["id"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("A identidade (X − M) = (T − G) + (S − I) não demonstra que déficit público necessariamente "
+                      "causa déficit externo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A identidade (X − M) = (T − G) + (S − I) <u>não demonstra</u> que déficit público "
+                      "<u>necessariamente causa</u> déficit externo."),
+        "poucas": ("Uma " + azb("identidade") + " só garante que os três saldos fecham. Um déficit público maior "
+                   "pode ser compensado por mais " + azb("poupança privada") + " ou menos " + azb("investimento")
+                   + ", sem tocar no saldo externo; a tese dos " + azb("déficits gêmeos") + " exige hipótese "
+                   "comportamental."),
+        "destrinchando": [
+            "A igualdade " + vd("(X − M) = (T − G) + (S − I)") + " vale em qualquer economia, em qualquer ano, "
+            "por construção contábil. Ela não tem variável dependente: qualquer termo pode ser o que se ajusta.",
+            "Três vias de ajuste a um aumento do déficit (T − G cai): (1) " + azb("déficit externo") + " maior "
+            "— déficits gêmeos, como nos " + rx("EUA") + " dos anos 1980; (2) " + azb("poupança privada")
+            + " maior — no limite, " + azb("equivalência ricardiana") + " (" + oc("Barro") + "); (3) "
+            + azb("investimento") + " menor — " + azb("crowding out") + " via juros.",
+            "Qual via prevalece depende de modelo: grau de mobilidade de capitais, regime cambial, expectativas "
+            "das famílias. No " + azb("Mundell-Fleming") + " com capital móvel e câmbio flutuante, a expansão "
+            "fiscal aprecia o câmbio e piora as exportações líquidas — aí a ligação aparece, mas como resultado "
+            "do modelo, não da identidade.",
+            "Há também episódios de sinais opostos (déficit público com superávit externo), o que mostra que a "
+            "relação não é necessária.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " O item nega uma relação causal "
+                       "“necessária” — e a negação de um absoluto costuma ser CERTA. A banca testa se o candidato "
+                       "distingue identidade de teoria."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A identidade dos três hiatos comprova que todo déficit público gera déficit em transações "
+            "correntes de igual valor.”</i> → ERRADO (modulador absoluto e nexo indevido)",
+            "<i>“Sob equivalência ricardiana plena, um aumento do déficit público não altera o saldo em "
+            "transações correntes.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["necessariamente"], "dificuldade": 1,
+        "comentario_fonte": "Não é mecanismo causal unívoco.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00294-1 (mesma identidade, cobrando as vias de compensação)"],
+    },
+    # ------------------------------------------------------------------ E2-L00444
+    {
+        "id": "ECO-E2-L00444-1", "fonte_ref": "E2-L00444", "destino": "17", "subtema": H2["id"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": CMD_NAB_CN,
+        "rotulo_item": "Item",
+        "assertiva": ("O Produto Interno Bruto (PIB) pela ótica da renda é composto pela soma da remuneração dos "
+                      "empregados, rendimento misto bruto, excedente operacional bruto e impostos sobre a produção e "
+                      "importação, líquidos de subsídios."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O Produto Interno Bruto (PIB) pela ótica da renda é composto pela soma da remuneração dos "
+                      "empregados, <u>rendimento misto bruto</u>, excedente operacional bruto e <u>impostos sobre a "
+                      "produção e importação, líquidos de subsídios</u>."),
+        "poucas": ("É a decomposição oficial do IBGE: " + vd("PIB = RE + RMB + EOB + (impostos − subsídios sobre "
+                   "a produção e a importação)") + ". Cada parcela diz <b>quem se apropriou</b> do valor "
+                   "gerado."),
+        "destrinchando": [
+            azb("Remuneração dos empregados") + ": salários, 13º, férias e contribuições sociais dos "
+            "empregadores — trabalho assalariado.",
+            azb("Excedente operacional bruto") + ": remuneração do capital das empresas constituídas em sociedade "
+            "(lucros, juros, aluguéis), antes da depreciação; inclui o aluguel imputado dos imóveis ocupados "
+            "pelos donos.",
+            azb("Rendimento misto bruto") + ": renda de autônomos e negócios familiares não constituídos em "
+            "sociedade, em que trabalho e capital não se separam.",
+            azb("Impostos sobre a produção e a importação, líquidos de subsídios") + ": a fatia do governo. "
+            "Somam-se aqui <b>todos</b> — os sobre produtos (ICMS, IPI, II) e os outros sobre a produção "
+            "(IPTU de empresas, taxas) — porque o objetivo é chegar ao valor a preços de mercado. Impostos sobre "
+            "a renda não entram (já estão dentro dos rendimentos).",
+            "As outras óticas: produção, " + vd("Σ VAB + impostos líquidos sobre produtos") + "; despesa, "
+            + vd("C + I + G + (X − M)") + ". As três coincidem ex post, com ajuste estatístico na prática.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Reproduz a fórmula oficial. Variantes que a banca usa para "
+                       "derrubar: trocar EOB por “lucro líquido”, omitir o rendimento misto, ou dizer que os "
+                       "impostos entram “acrescidos” de subsídios."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…e impostos sobre a produção e importação, acrescidos dos subsídios.”</i> → ERRADO (inversão: "
+            "subsídios são subtraídos)",
+            "<i>“O imposto de renda das pessoas físicas é somado à parte, como componente do PIB pela ótica da "
+            "renda.”</i> → ERRADO (troca de conceito: já está dentro dos rendimentos)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("PIB pela renda = salários + EOB (lucros e aluguéis) + RMB (autônomos) + impostos "
+                             "indiretos líquidos de subsídios; resposta de IA com as três óticas e o que entra e "
+                             "fica fora do PIB."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 073, 074, 075", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto"},
+                          {"ref": "IMAGEM 076", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00400-1 (mesma fórmula da ótica da renda, outra fonte)"],
+    },
+    # ------------------------------------------------------------------ E2-L00502
+    {
+        "id": "ECO-E2-L00502-1", "fonte_ref": "E2-L00502", "destino": "17", "subtema": H2["id"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": ("Acerca de macroeconomia aberta e sistema monetário internacional, julgue (C ou E) os itens a "
+                    "seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Em certo país, entre dois anos, a poupança do setor privado se manteve constante e a "
+                      "poupança do governo diminuiu, mas o investimento bruto aumentou. Logo, podemos concluir que o "
+                      "saldo em transações correntes necessariamente aumentou."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em certo país, entre dois anos, a poupança do setor privado se manteve constante e a "
+                       "poupança do governo diminuiu, mas o investimento bruto aumentou. Logo, podemos concluir que "
+                       "o saldo em transações correntes necessariamente ") + vm("aumentou") + az(".")),
+        "poucas": (vd("STC = S<sub>privada</sub> + S<sub>governo</sub> − I") + ". Poupança nacional caiu e "
+                   "investimento subiu: o " + azb("saldo em transações correntes") + " necessariamente "
+                   + vd("diminuiu") + "."),
+        "destrinchando": [
+            "Identidade da economia aberta: " + vd("S − I = STC") + ", com S = poupança nacional = privada + "
+            "pública. Toda a informação do item cabe nela.",
+            "Conta: ΔS<sub>priv</sub> = 0; ΔS<sub>gov</sub> < 0 → ΔS < 0. ΔI > 0. Logo " + vd("ΔSTC = ΔS − ΔI "
+            "< 0") + ": o saldo piorou — superávit menor ou déficit maior.",
+            "Leitura econômica: o país passou a poupar menos e investir mais; a diferença só pode vir da "
+            + azb("poupança externa") + " (déficit em transações correntes financiado pela conta financeira).",
+            "Note que aqui o “necessariamente” seria verdadeiro com o verbo certo, porque <b>as duas</b> "
+            "variações empurram o STC para baixo. Se uma subisse e outra caísse, o sinal ficaria indeterminado.",
+            vm("Regra-âncora: menos poupança ou mais investimento → pior saldo externo."),
+        ],
+        "dissecando": (cz("[inversão]") + " O item faz a conta certa até o fim e troca só o sentido "
+                       "(“aumentou” por “diminuiu”). O “necessariamente” está lá para parecer o erro, mas não é: "
+                       "a conclusão correta também é necessária."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se a poupança privada aumentou e o investimento também aumentou, o saldo em transações correntes "
+            "necessariamente diminuiu.”</i> → ERRADO (indeterminado: depende das magnitudes)",
+            "<i>“Mantidos o investimento e a poupança privada, um aumento do déficit público piora o saldo em "
+            "transações correntes.”</i> → CERTO",
+        ])],
+        "reescrita": ("Em certo país, entre dois anos, a poupança do setor privado se manteve constante e a "
+                      "poupança do governo diminuiu, mas o investimento bruto aumentou. Logo, podemos concluir que o "
+                      "saldo em transações correntes necessariamente " + hl("diminuiu") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["necessariamente"], "dificuldade": 1,
+        "comentario_fonte": ("STC = S − I; poupança nacional caiu e investimento subiu: o STC diminuiu (ou o déficit "
+                             "aumentou)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00654
+    {
+        "id": "ECO-E2-L00654-1", "fonte_ref": "E2-L00654", "destino": "17", "subtema": H2["id"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à macroeconomia, julgue (C ou E) os seguintes itens.",
+        "rotulo_item": "Item",
+        "assertiva": ("Na macroeconomia, a Contabilidade Nacional é uma ferramenta essencial para medir a atividade "
+                      "econômica de um país. O Produto Interno Bruto (PIB) pode ser mensurado por diferentes óticas. "
+                      "As três óticas principais de mensuração do PIB são: Ótica do Consumo, Ótica da Produção e "
+                      "Ótica da Renda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Na macroeconomia, a Contabilidade Nacional é uma ferramenta essencial para medir a atividade "
+                       "econômica de um país. O Produto Interno Bruto (PIB) pode ser mensurado por diferentes "
+                       "óticas. As três óticas principais de mensuração do PIB são: ") + vm("Ótica do Consumo")
+                    + az(", Ótica da Produção e Ótica da Renda.")),
+        "poucas": ("As três óticas são " + azb("produção") + ", " + azb("renda") + " e " + azb("despesa")
+                   + " (ou dispêndio). O consumo é só um componente da despesa, não uma ótica."),
+        "destrinchando": [
+            azb("Produção") + " (valor adicionado): " + vd("PIB = Σ (valor bruto da produção − consumo "
+            "intermediário) + impostos líquidos sobre produtos") + ". Evita a dupla contagem somando só o que "
+            "cada etapa acrescenta.",
+            azb("Renda") + ": " + vd("PIB = remuneração dos empregados + rendimento misto + excedente "
+            "operacional + impostos líquidos sobre a produção e a importação") + " — quem se apropriou do valor "
+            "gerado.",
+            azb("Despesa") + " (dispêndio, demanda): " + vd("PIB = C + I + G + (X − M)") + ". O consumo das "
+            "famílias é o maior componente — no " + rx("Brasil") + ", mais de 60% do PIB ⏳ (out/2026) —, mas é "
+            "uma parcela, ao lado de investimento, governo e setor externo.",
+            "As três chegam ao mesmo valor ex post (identidade). No " + rx("Brasil") + ", o IBGE divulga o PIB "
+            "trimestral pelas óticas da produção e da despesa; a da renda aparece nas contas anuais.",
+            vm("Regra-âncora: produção, renda e despesa — nunca “consumo”."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca uma ótica (despesa) por um de seus componentes "
+                       "(consumo). O texto introdutório é todo verdadeiro e serve para baixar a guarda; o erro "
+                       "está numa palavra da lista final."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela ótica da despesa, o PIB é a soma do consumo das famílias, da formação bruta de capital, do "
+            "consumo do governo e das exportações líquidas.”</i> → CERTO",
+            "<i>“A ótica da produção soma o valor bruto da produção de todos os setores.”</i> → ERRADO (dupla "
+            "contagem: soma o valor adicionado)",
+        ])],
+        "reescrita": ("Na macroeconomia, a Contabilidade Nacional é uma ferramenta essencial para medir a atividade "
+                      "econômica de um país. O Produto Interno Bruto (PIB) pode ser mensurado por diferentes óticas. "
+                      "As três óticas principais de mensuração do PIB são: " + hl("Ótica da Despesa")
+                      + ", Ótica da Produção e Ótica da Renda."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("As três óticas são produção (valor adicionado), renda e despesa (dispêndio); o consumo "
+                             "é componente da despesa, não ótica isolada."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
     },
 ]

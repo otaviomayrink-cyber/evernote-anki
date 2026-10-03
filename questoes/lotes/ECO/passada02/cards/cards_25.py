@@ -245,8 +245,8 @@ CARDS = [
         "assertiva": ("Se, em determinado ano, um país registrar déficit nominal, consequentemente, ele também "
                       "registrará déficit operacional."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Se, em determinado ano, um país registrar déficit nominal, ") + vm("consequentemente")
-                    + az(", ele também registrará déficit operacional.")),
+        "anotada": (az("Se, em determinado ano, um país registrar déficit nominal, ") + vm("consequentemente,")
+                    + az(" ele também registrará déficit operacional.")),
         "poucas": ("O " + azb("operacional") + " exclui a " + azb("correção monetária") + " dos juros; com "
                    "inflação, pode haver " + vd("déficit nominal e superávit operacional") + " ao mesmo tempo."),
         "destrinchando": [
@@ -1330,5 +1330,193 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
-    # FIM
+    # ------------------------------------------------------------------ E2-L00899
+    {
+        "id": "ECO-E2-L00899-1", "fonte_ref": "E2-L00899", "destino": "55", "subtema": H2["inv"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CONS_INV,
+        "rotulo_item": "Item",
+        "assertiva": ("Um Q de Tobin maior que 1 sinaliza que o valor de mercado dos ativos da empresa supera o seu "
+                      "custo de reposição, incentivando a empresa a investir mais, pois cada unidade de investimento "
+                      "adicional tem um custo inferior ao seu valor de mercado esperado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um Q de Tobin <u>maior que 1</u> sinaliza que o valor de mercado dos ativos da empresa "
+                      "<u>supera o seu custo de reposição</u>, incentivando a empresa a investir mais, pois cada "
+                      "unidade de investimento adicional tem um custo inferior ao seu valor de mercado esperado."),
+        "poucas": (vd("q = valor de mercado do capital ÷ custo de reposição") + ". Com " + vd("q > 1")
+                   + ", instalar uma máquina custa menos do que o mercado acionário paga por ela: vale investir."),
+        "destrinchando": [
+            oc("James Tobin") + " (1969) ligou investimento e mercado financeiro: o preço das ações resume as "
+            "expectativas sobre os lucros futuros do capital instalado. Se o mercado avalia a empresa acima do "
+            "custo de repor seus ativos, criar capital novo " + azb("gera valor") + " para os acionistas.",
+            vd("q > 1") + " → investir (expande o estoque de capital); " + vd("q < 1") + " → não repor o capital "
+            "que se deprecia, e pode ser mais barato comprar empresas existentes na bolsa do que construir "
+            "(fusões e aquisições); " + vd("q = 1") + " → equilíbrio de longo prazo.",
+            "Ponte com a teoria neoclássica: no ótimo, o q marginal iguala a razão entre o valor presente do "
+            "produto marginal do capital e seu custo; juros mais baixos elevam o valor das ações, o q e o "
+            "investimento — um canal de transmissão da " + azb("política monetária") + ".",
+            "Limite empírico: o que importa é o " + azb("q marginal") + " (da unidade adicional), mas só se observa "
+            "o " + azb("q médio") + "; e bolhas ou pessimismo da bolsa podem afastar q dos fundamentos.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Definição correta com a justificativa certa (custo da unidade "
+                       "adicional < valor de mercado). A armadilha usual seria inverter o limiar (q < 1 → investir) "
+                       "ou trocar custo de reposição por valor contábil."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um q de Tobin menor que 1 indica que é mais vantajoso para a empresa expandir sua capacidade "
+            "produtiva do que adquirir empresas já existentes.”</i> → ERRADO (inversão: com q < 1, comprar "
+            "empresas é mais barato)",
+            "<i>“Uma queda na taxa de juros, ao valorizar as ações, tende a elevar o q de Tobin e o "
+            "investimento.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("q = valor de mercado do capital instalado ÷ custo de reposição; q > 1 → vale investir; "
+                             "q < 1 → não há incentivo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00900
+    {
+        "id": "ECO-E2-L00900-1", "fonte_ref": "E2-L00900", "destino": "55", "subtema": H2["cons"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CONS_INV,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com o modelo do Ciclo de Vida, a propensão média a consumir é aproximadamente "
+                      "constante tanto no curto como no longo prazo, dado que a expectativa de renda do indivíduo é "
+                      "constante ao longo do seu ciclo de vida."),
+        "gabarito": "ERRADO", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": (az("De acordo com o modelo do Ciclo de Vida, a propensão média a consumir é aproximadamente "
+                       "constante ") + vm("tanto no curto como") + az(" no longo prazo, dado que ")
+                    + vm("a expectativa de renda do indivíduo é constante") + az(" ao longo do seu ciclo de vida.")),
+        "poucas": ("No ciclo de vida a " + azb("renda varia") + " por fases e o " + azb("consumo é suavizado")
+                   + "; por isso a PMeC " + vd("oscila no curto prazo") + " e só é estável no longo prazo."),
+        "destrinchando": [
+            "A premissa do item está invertida: o que o indivíduo mantém estável é o " + azb("consumo") + "; a "
+            + azb("renda") + " muda sistematicamente (baixa no início, alta na maturidade, baixa na "
+            "aposentadoria). A poupança é o amortecedor.",
+            "Curto prazo: uma alta de renda corrente sem alta proporcional da riqueza ou da renda esperada "
+            "reduz C/Y. Na versão de " + oc("Friedman") + ", " + vd("PMeC = C/Y = αY<sup>P</sup>/Y") + ": "
+            "quando Y fica acima de Y<sup>P</sup> (renda transitória positiva), a PMeC cai; abaixo, sobe.",
+            "Longo prazo: de década em década, a variação da renda é quase toda permanente (e a riqueza cresce "
+            "com ela), de modo que " + vd("Y<sup>P</sup>/Y ≈ constante") + " e a PMeC agregada fica estável.",
+            "É assim que ciclo de vida e renda permanente resolvem o " + azb("enigma do consumo") + ": funções "
+            "de curto prazo e de corte transversal com PMeC decrescente (como a keynesiana) convivem com séries "
+            "longas de PMeC constante (" + oc("Kuznets") + ").",
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " A estabilidade no longo prazo é verdadeira; o erro está "
+                       "em estendê-la ao curto prazo e em justificá-la com renda constante, quando a teoria parte "
+                       "de renda <b>variável</b>. Pista: “tanto… como” costuma esconder a metade falsa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela HRP, em anos de renda transitoriamente alta, a propensão média a consumir tende a "
+            "cair.”</i> → CERTO",
+            "<i>“Pela HCV, a propensão média a consumir de longo prazo é decrescente com a renda, como na função "
+            "keynesiana.”</i> → ERRADO (no longo prazo ela é constante)",
+        ])],
+        "reescrita": ("De acordo com o modelo do Ciclo de Vida, a propensão média a consumir é aproximadamente "
+                      "constante " + hl("só") + " no longo prazo, dado que " + hl("o indivíduo suaviza o consumo, "
+                      "embora sua renda varie") + " ao longo do seu ciclo de vida."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": ["tanto… como", "aproximadamente"],
+        "dificuldade": 2,
+        "comentario_fonte": ("A renda varia nas fases do ciclo de vida e o consumo é mantido; a PMeC varia no curto "
+                             "prazo e tende a ser constante no longo prazo (PMeC = αY<sup>P</sup>/Y)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 147", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (PMeC = αYP/Y no 📖)"}],
+        "alertas": ["nota_redacao: o verso da fonte não traz gabarito explícito; ERRADO resolvido pelo conteúdo do "
+                    "comentário (PMeC varia no curto prazo)",
+                    "quase_duplicata: ECO-E2-L00685-1 (PMeC constante ao longo da vida, ERRADO)"],
+    },
+    # ------------------------------------------------------------------ E2-L00901
+    {
+        "id": "ECO-E2-L00901-1", "fonte_ref": "E2-L00901", "destino": "55", "subtema": H2["cons"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CONS_INV,
+        "rotulo_item": "Item",
+        "assertiva": ("A hipótese do Ciclo de Vida sugere que a distribuição etária da população e a taxa de "
+                      "crescimento da economia são fatores determinantes da poupança agregada."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A hipótese do Ciclo de Vida sugere que a <u>distribuição etária da população</u> e a <u>taxa "
+                      "de crescimento da economia</u> são fatores determinantes da poupança agregada."),
+        "poucas": ("Poupança agregada = poupança dos ativos − despoupança dos aposentados. O saldo depende do "
+                   + azb("peso de cada grupo") + " (estrutura etária) e de quanto a renda dos jovens supera a "
+                   "dos velhos (" + azb("crescimento") + ")."),
+        "destrinchando": [
+            "Estrutura etária: mais pessoas em idade ativa em relação a aposentados → mais gente poupando do que "
+            "despoupando → " + vd("poupança agregada maior") + ". O " + azb("bônus demográfico") + " eleva a "
+            "poupança; o envelhecimento a reduz.",
+            "Crescimento: numa economia estacionária (sem crescimento da população nem da renda), a poupança dos "
+            "ativos é exatamente gasta pelos aposentados e a " + vd("poupança líquida agregada é zero")
+            + ". Se a economia cresce, cada geração ativa é mais numerosa ou mais rica que a aposentada, e a "
+            "poupança agregada fica positiva — maior quanto maior o crescimento.",
+            "Por isso a taxa de poupança, na previsão de " + oc("Modigliani") + ", depende do " + azb("crescimento")
+            + " e não do nível de renda per capita — uma diferença notável em relação à função keynesiana, em que "
+            "países mais ricos poupariam fração maior.",
+            "Aplicação: países que envelhecem rápido tendem a ver a poupança doméstica cair; o tema entra nos "
+            "debates sobre previdência e sobre a poupança baixa do " + rx("Brasil") + ".",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Reproduz uma implicação macro pouco lembrada da HCV, que "
+                       "costuma ser estudada só no plano individual. O “sugere” protege o item; a pista é que "
+                       "ambos os fatores mexem na proporção entre quem poupa e quem despoupa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a HCV, em uma economia sem crescimento populacional nem de renda, a poupança agregada "
+            "líquida tende a zero.”</i> → CERTO",
+            "<i>“Segundo a HCV, o envelhecimento da população tende a elevar a taxa de poupança agregada.”</i> → "
+            "ERRADO (inversão: mais aposentados despoupando reduzem a poupança)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["sugere"], "dificuldade": 2,
+        "comentario_fonte": ("A poupança varia com a idade (ativos poupam, inativos despoupam); assim, a "
+                             "distribuição etária influencia a poupança agregada."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01001
+    {
+        "id": "ECO-E2-L01001-1", "fonte_ref": "E2-L01001", "destino": "55", "subtema": H2["cons"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CONS_2023,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo a teoria de consumo de Milton Friedman, crises econômicas como a da pandemia da "
+                      "Covid-19 devem provocar quedas bruscas no consumo, acompanhando o movimento da renda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Segundo a teoria de consumo de Milton Friedman, crises econômicas como a da pandemia da "
+                       "Covid-19 devem provocar ") + vm("quedas bruscas no consumo, acompanhando o movimento da renda")
+                    + az(".")),
+        "poucas": ("Na " + azb("renda permanente") + ", choque visto como " + vd("transitório") + " mexe pouco no "
+                   "consumo: as famílias " + azb("suavizam") + ", usando poupança e crédito. Consumo colado à renda "
+                   "corrente é a visão keynesiana."),
+        "destrinchando": [
+            oc("Friedman") + " (1957): C = αY<sup>P</sup>. Uma recessão que derruba a renda corrente por pouco "
+            "tempo reduz pouco a renda permanente; o consumo cai bem menos que a renda, e a " + azb("poupança")
+            + " absorve o choque (cai ou fica negativa).",
+            "Contraste: na função keynesiana " + vd("C = C₀ + cY") + ", o consumo segue a renda corrente; uma queda "
+            "de renda derruba o consumo na proporção da propensão marginal.",
+            "Quando o consumo cai muito mesmo assim: se o choque é visto como " + azb("permanente") + " (perda de "
+            "emprego duradoura, revisão de expectativas) ou se as famílias têm " + azb("restrição de liquidez")
+            + ".",
+            "O caso da Covid tem um traço peculiar: o consumo de serviços caiu por " + azb("restrições sanitárias")
+            + " (não por queda de renda), e transferências como o auxílio emergencial sustentaram a renda — a "
+            "poupança das famílias subiu. A frase atribui a Friedman um mecanismo (consumo acompanha renda) "
+            "que não é o dele.",
+        ],
+        "dissecando": (cz("[troca de ator · troca de conceito]") + " Atribui a Friedman a previsão da função "
+                       "keynesiana. Pista: “acompanhando o movimento da renda” descreve consumo dependente da renda "
+                       "corrente — exatamente o que a renda permanente veio contestar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a HRP, uma crise vista como passageira tende a reduzir mais a poupança do que o "
+            "consumo.”</i> → CERTO",
+            "<i>“Segundo a HRP, uma perda de renda considerada permanente não altera o consumo.”</i> → ERRADO "
+            "(choque permanente muda a renda permanente e o consumo)",
+        ])],
+        "reescrita": ("Segundo a teoria de consumo de Milton Friedman, crises econômicas como a da pandemia da "
+                      "Covid-19 devem provocar " + hl("quedas pequenas no consumo, menores que as da renda, se "
+                      "percebidas como transitórias") + "."),
+        "tipo_erro": ["TROCA_ATOR", "TROCA_CONCEITO"], "moduladores": ["devem"], "dificuldade": 1,
+        "comentario_fonte": ("Na HRP o consumo reage mais à renda permanente que à transitória; choques passageiros, "
+                             "como a pandemia, não derrubam muito o consumo. Consumo dependente da renda corrente é "
+                             "a visão keynesiana."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

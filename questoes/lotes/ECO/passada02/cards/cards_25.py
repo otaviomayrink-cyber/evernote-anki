@@ -982,9 +982,10 @@ CARDS = [
             "<i>“…que, a exemplo do teto de gastos, mantém a despesa primária constante em termos reais.”</i> → "
             "ERRADO (o arcabouço permite crescimento real de até 2,5%)",
         ])],
-        "reescrita": ("A fragilidade fiscal é aspecto marcante […]. Entre tais dispositivos, destaca-se o Novo "
-                      "Arcabouço Fiscal, também conhecido como Regime Fiscal Sustentável (PLP 93/2023), que limita, "
-                      "em termos reais, o crescimento " + hl("da despesa primária") + " a 2,5%."),
+        "reescrita": ("A fragilidade fiscal é aspecto marcante ao longo da história da economia brasileira, mesmo "
+                      "com inúmeros dispositivos legais que visam a controlar a despesa pública e, por conseguinte, "
+                      "o endividamento. Entre tais dispositivos, destaca-se o Novo Arcabouço Fiscal, também "
+                      "conhecido como Regime Fiscal Sustentável (PLP 93/2023), que limita, em termos reais, o crescimento " + hl("da despesa primária") + " a 2,5%."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("O arcabouço limita o crescimento real da despesa a 70% do crescimento da receita, "
                              "entre 0,6% e 2,5%; não há limite para o crescimento do déficit."),

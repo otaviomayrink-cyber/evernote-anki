@@ -670,7 +670,12 @@
     "50",
     "55"
    ],
-   "itens": 757
+   "itens": 757,
+   "status": "entregue",
+   "cards": 752,
+   "nao_convertidos": 45,
+   "figuras": 46,
+   "data": "2026-10-03"
   },
   {
    "n": 3,

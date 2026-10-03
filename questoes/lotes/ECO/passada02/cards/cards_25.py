@@ -464,7 +464,7 @@ CARDS = [
                        "objeto e o item vira ERRADO."),
         "modulos": [("😈 Para dificultar", [
             "<i>“A razão dívida/PIB permanecerá constante, em uma economia em crescimento, caso o superávit "
-            "primário seja igual aos juros reais.”</i> → ERRADO (cairia: bastaria (r − g)·d)",
+            "primário seja igual aos juros reais.”</i> → ERRADO (cairia: bastaria superávit igual a [r − g]·d)",
             "<i>“O estoque nominal da dívida permanecerá constante caso o superávit primário iguale os juros "
             "reais.”</i> → ERRADO (com inflação, o estoque nominal cresce pela correção monetária)",
         ])],
@@ -937,6 +937,397 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "IMAGEM 312", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida (no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00836
+    {
+        "id": "ECO-E2-L00836-1", "fonte_ref": "E2-L00836", "destino": "50", "subtema": H2["regras"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_POL,
+        "rotulo_item": "Item",
+        "assertiva": ("A fragilidade fiscal é aspecto marcante ao longo da história da economia brasileira, mesmo com "
+                      "inúmeros dispositivos legais que visam a controlar a despesa pública e, por conseguinte, o "
+                      "endividamento. Entre tais dispositivos, destaca-se o Novo Arcabouço Fiscal, também conhecido "
+                      "como Regime Fiscal Sustentável (PLP 93/2023), que limita, em termos reais, o crescimento do "
+                      "déficit público a 2,5%."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A fragilidade fiscal é aspecto marcante ao longo da história da economia brasileira, mesmo "
+                       "com inúmeros dispositivos legais que visam a controlar a despesa pública e, por conseguinte, "
+                       "o endividamento. Entre tais dispositivos, destaca-se o Novo Arcabouço Fiscal, também "
+                       "conhecido como Regime Fiscal Sustentável (PLP 93/2023), que limita, em termos reais, o "
+                       "crescimento ") + vm("do déficit público") + az(" a 2,5%.")),
+        "poucas": ("O " + azb("arcabouço") + " (LC 200/2023) limita o crescimento real da " + azb("despesa "
+                   "primária") + " — entre " + vd("0,6% e 2,5%") + " ao ano —, não o do déficit."),
+        "destrinchando": [
+            "Regra de despesa: a despesa primária da União cresce, em termos reais, " + vd("70%") + " do "
+            "crescimento real da receita primária (" + vd("50%") + " se a meta de primário do ano anterior não "
+            "for cumprida), dentro de uma banda de " + vm("0,6% a 2,5% ao ano") + ". O piso evita arrocho em "
+            "anos de receita fraca; o teto impede expansão forte em anos de bonança.",
+            "Regra de resultado: " + azb("meta de resultado primário") + " na LDO, com intervalo de tolerância "
+            "de ±0,25 p.p. do PIB; descumprimento aciona gatilhos de contenção. Há ainda piso para investimentos "
+            "e destinação de parte do excesso de primário a investimento.",
+            "Lógica: como a despesa cresce menos que a receita, o primário melhora gradualmente e a dívida/PIB "
+            "tende a se estabilizar — o controle do déficit é <b>consequência</b>, não o objeto direto do limite.",
+            "Histórico: o PLP 93/2023 virou a " + vd("Lei Complementar 200, de agosto de 2023") + ", substituindo "
+            "o teto de gastos da EC 95/2016, que congelava a despesa em termos reais (só corrigida pelo IPCA). "
+            "⏳ (out/2026) Parâmetros conforme a LC 200/2023; conferir alterações posteriores.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Mantém o número certo (2,5%) e troca o objeto "
+                       "(déficit × despesa). O preâmbulo longo e verdadeiro sobre fragilidade fiscal distrai do "
+                       "único termo errado, no fim. 🔥 Arcabouço fiscal: a banca troca despesa, receita, déficit e "
+                       "dívida entre si."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…que limita o crescimento real da despesa primária a 70% do crescimento real da receita, "
+            "observada a banda de 0,6% a 2,5%.”</i> → CERTO",
+            "<i>“…que, a exemplo do teto de gastos, mantém a despesa primária constante em termos reais.”</i> → "
+            "ERRADO (o arcabouço permite crescimento real de até 2,5%)",
+        ])],
+        "reescrita": ("A fragilidade fiscal é aspecto marcante […]. Entre tais dispositivos, destaca-se o Novo "
+                      "Arcabouço Fiscal, também conhecido como Regime Fiscal Sustentável (PLP 93/2023), que limita, "
+                      "em termos reais, o crescimento " + hl("da despesa primária") + " a 2,5%."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O arcabouço limita o crescimento real da despesa a 70% do crescimento da receita, "
+                             "entre 0,6% e 2,5%; não há limite para o crescimento do déficit."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01028
+    {
+        "id": "ECO-E2-L01028-1", "fonte_ref": "E2-L01028", "destino": "50", "subtema": H2["regras"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MODELOS,
+        "rotulo_item": "Item",
+        "assertiva": ("O regime fiscal conhecido como teto de gastos, estabelecido em 2016, tomava como premissa que a "
+                      "raiz do problema fiscal brasileiro era o acelerado crescimento da despesa primária, que "
+                      "assumia trajetória contracíclica, crescendo em períodos de retração econômica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O regime fiscal conhecido como teto de gastos, estabelecido em 2016, tomava como premissa que "
+                       "a raiz do problema fiscal brasileiro era o acelerado crescimento da despesa primária, que "
+                       "assumia trajetória ") + vm("contracíclica, crescendo em períodos de retração econômica")
+                    + az(".")),
+        "poucas": ("O diagnóstico do " + azb("teto") + " era de despesa primária em " + azb("alta estrutural")
+                   + ": crescia acima do PIB em qualquer fase do ciclo, inclusive nas expansões — não só nas "
+                   "recessões."),
+        "destrinchando": [
+            "A " + vd("EC 95/2016") + " limitou, por 20 exercícios (com revisão possível após 10), a despesa "
+            "primária federal ao valor do ano anterior corrigido pelo " + vd("IPCA") + ": crescimento real "
+            "zero, de modo que a despesa cairia como proporção do PIB à medida que a economia crescesse.",
+            "Premissa: desde a CF/1988, a despesa primária do governo central subia de forma contínua — de "
+            "cerca de " + vd("14% do PIB em 1997") + " para perto de " + vd("20% em 2016") + " —, puxada por "
+            "previdência, vinculações e despesas obrigatórias indexadas, e não por resposta ao ciclo.",
+            "Por que não “contracíclica”: nos anos de crescimento forte (2004–2010), a despesa também acelerou, "
+            "acompanhando a receita. Política " + azb("contracíclica") + " exige poupar na expansão e gastar na "
+            "recessão; o padrão brasileiro era " + azb("pró-cíclico") + " ou acíclico, sempre expansivo.",
+            "Críticas ao teto: rigidez (despesas obrigatórias comprimindo as discricionárias e o investimento) e "
+            "sucessivas exceções (2020–2022). Foi substituído pelo arcabouço da LC 200/2023.",
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A 1ª parte (despesa primária acelerada como "
+                       "raiz) é o diagnóstico oficial; o erro foi enxertado na qualificação “contracíclica”. Pista: "
+                       "se a despesa só crescesse em recessões, o problema seria do ciclo, e não justificaria um "
+                       "teto de 20 anos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O teto de gastos limitava o crescimento da despesa primária federal à inflação do ano "
+            "anterior, sem prever crescimento real.”</i> → CERTO",
+            "<i>“O teto de gastos limitava o crescimento do resultado nominal do governo central.”</i> → ERRADO "
+            "(o objeto era a despesa primária)",
+        ])],
+        "reescrita": ("O regime fiscal conhecido como teto de gastos, estabelecido em 2016, tomava como premissa que "
+                      "a raiz do problema fiscal brasileiro era o acelerado crescimento da despesa primária, que "
+                      "assumia trajetória " + hl("de alta estrutural, crescendo acima do PIB tanto em períodos de "
+                      "expansão quanto de retração econômica") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A premissa era de despesa primária crescente e persistente, acima da receita e do PIB; "
+                             "crescia também nas expansões — trajetória pró-cíclica, não contracíclica."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["dado_aproximado: despesa primária do governo central de cerca de 14% (1997) para cerca de "
+                    "20% do PIB (2016), série do Tesouro Nacional, em valores arredondados"],
+    },
+    # ------------------------------------------------------------------ E2-L01438
+    {
+        "id": "ECO-E2-L01438-1", "fonte_ref": "E2-L01438", "destino": "50", "subtema": H2["traj"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_FHC,
+        "rotulo_item": "Item",
+        "assertiva": ("Durante os dois mandatos de Fernando H. Cardoso, as receitas obtidas com as privatizações de "
+                      "empresas estatais, bem como o sucesso em reduzir a inflação de forma duradoura, contribuíram "
+                      "para a redução da dívida pública em porcentagem do PIB."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Durante os dois mandatos de Fernando H. Cardoso, as receitas obtidas com as privatizações de "
+                       "empresas estatais, bem como o sucesso em reduzir a inflação de forma duradoura, ")
+                    + vm("contribuíram para a redução") + az(" da dívida pública em porcentagem do PIB.")),
+        "poucas": ("Apesar das privatizações e do Real, a " + azb("DLSP") + " subiu de cerca de " + vd("30% para "
+                   "cerca de 60% do PIB") + " entre 1994 e 2002, puxada por juros altos, esqueletos e câmbio."),
+        "destrinchando": [
+            "Os dois fatos da frase são verdadeiros — " + rx("privatizações") + " (Vale, sistema Telebrás, "
+            "elétricas, bancos estaduais) e inflação baixa e duradoura —, mas o resultado afirmado é falso: a "
+            "dívida líquida praticamente " + vd("dobrou") + " em proporção do PIB.",
+            "Por que subiu: (1) " + azb("juros reais muito altos") + " para sustentar a âncora cambial e enfrentar "
+            "as crises do México, da Ásia e da Rússia; (2) " + azb("resultados primários") + " nulos ou deficitários "
+            "em 1995–1998 (superávits expressivos só a partir de 1999, com o acordo com o FMI); (3) reconhecimento de "
+            + azb("esqueletos") + " (FCVS, dívidas antigas) e custos do saneamento bancário (PROER, PROES); (4) "
+            + azb("desvalorizações") + " de 1999 e 2001–2002 sobre a dívida indexada ao dólar.",
+            "O próprio fim da alta inflação pesou: deixou de haver a corrosão inflacionária de passivos e o "
+            "imposto inflacionário que ajudavam a fechar as contas, e despesas antes “comidas” pela inflação "
+            "passaram a aparecer.",
+            "Privatizações abateram dívida, mas eram receitas únicas, pequenas diante da conta de juros — "
+            "estoque × fluxo.",
+        ],
+        "dissecando": (cz("[nexo indevido · meia-verdade]") + " Junta dois fatos verdadeiros do período a uma "
+                       "consequência que não ocorreu. 🔥 Em história econômica, a banca adora o “paradoxo FHC”: "
+                       "estabilização e privatização com dívida/PIB em alta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Durante os governos FHC, a dívida líquida do setor público cresceu em proporção do PIB, apesar "
+            "das receitas de privatização.”</i> → CERTO",
+            "<i>“O setor público consolidado gerou superávits primários expressivos desde 1995.”</i> → "
+            "ERRADO (dado alterado: só a partir de 1999)",
+        ])],
+        "reescrita": ("Durante os dois mandatos de Fernando H. Cardoso, as receitas obtidas com as privatizações de "
+                      "empresas estatais, bem como o sucesso em reduzir a inflação de forma duradoura, "
+                      + hl("não impediram o aumento") + " da dívida pública em porcentagem do PIB."),
+        "tipo_erro": ["NEXO_INDEVIDO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A dívida/PIB cresceu nos anos FHC (de cerca de 30% para cerca de 60% do PIB) por juros "
+                             "altos, esqueletos, PROER e desvalorização cambial; privatizações não compensaram."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 340", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (série de DLSP/PIB 1995–2012 sem valores transcritos; trajetória "
+                                   "absorvida no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00314
+    {
+        "id": "ECO-E2-L00314-1", "fonte_ref": "E2-L00314", "destino": "55", "subtema": H2["inv"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_ARM_INV,
+        "rotulo_item": "Item",
+        "assertiva": ("Na visão keynesiana, a poupança antecede o investimento: sem aumento de poupança ex-ante, não "
+                      "é possível expandir o crédito bancário."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Na visão keynesiana, ")
+                    + vm("a poupança antecede o investimento: sem aumento de poupança ex-ante, não é possível "
+                         "expandir o crédito bancário") + az(".")),
+        "poucas": ("Para " + oc("Keynes") + ", o " + azb("investimento vem primeiro") + ", financiado por "
+                   + azb("crédito") + " bancário; a poupança é gerada " + azb("ex post") + ", pelo multiplicador."),
+        "destrinchando": [
+            "Visão " + azb("clássica/neoclássica") + " (fundos emprestáveis): a poupança das famílias é a fonte "
+            "dos recursos; a taxa de juros equilibra oferta de poupança e demanda de investimento. Sem poupar "
+            "antes, não se investe.",
+            "Visão de " + oc("Keynes") + ": o banco cria crédito (moeda) sem depósito prévio de poupança; o "
+            "empresário investe; a renda cresce pelo " + azb("multiplicador") + " até que a poupança gerada iguale "
+            "o investimento — " + vd("S = I ex post") + ". O que limita o investimento é a " + azb("liquidez")
+            + " (finance), não a poupança.",
+            "O " + azb("motivo finance") + " (1937) e, depois, o circuito " + azb("finance–funding")
+            + " dos pós-keynesianos: o crédito de curto prazo financia o gasto; a poupança gerada permite depois "
+            "consolidar a dívida em prazos longos (funding).",
+            "Corolário: o " + azb("paradoxo da parcimônia") + " — se todos tentam poupar mais, a renda cai e a "
+            "poupança agregada não aumenta.",
+        ],
+        "dissecando": (cz("[inversão · troca de ator]") + " Atribui a Keynes a tese dos fundos emprestáveis, "
+                       "que ele combateu. Pista: “poupança ex-ante” como pré-condição é marca neoclássica; em "
+                       "Keynes, a sequência é crédito → investimento → renda → poupança."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na visão keynesiana, o investimento pode ser financiado por crédito bancário, e a poupança "
+            "correspondente surge ex post, pela expansão da renda.”</i> → CERTO",
+            "<i>“Na teoria dos fundos emprestáveis, a taxa de juros é determinada pela preferência pela "
+            "liquidez.”</i> → ERRADO (troca de teoria: é pela poupança e pelo investimento)",
+        ])],
+        "reescrita": ("Na visão keynesiana, " + hl("o investimento antecede a poupança: o crédito bancário pode ser "
+                      "expandido sem aumento prévio de poupança, que surge ex post pela expansão da renda") + "."),
+        "tipo_erro": ["INVERSAO", "TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Na visão keynesiana o investimento é financiado pelo crédito e a poupança surge ex "
+                             "post, como resultado da expansão da renda."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00580
+    {
+        "id": "ECO-E2-L00580-1", "fonte_ref": "E2-L00580", "destino": "55", "subtema": H2["cons"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CRESC,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo a Hipótese do Ciclo de Vida (HCV) indivíduos mais jovens, em sua fase de trabalho, "
+                      "tendem a praticar “poupança negativa”, utilizando seus patrimônios acumulados para financiar o "
+                      "consumo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Segundo a Hipótese do Ciclo de Vida (HCV) indivíduos mais ")
+                    + vm("jovens, em sua fase de trabalho,") + az(" tendem a praticar “poupança negativa”, "
+                         "utilizando seus patrimônios acumulados para financiar o consumo.")),
+        "poucas": ("No " + azb("ciclo de vida") + " quem trabalha " + azb("poupa") + "; quem consome o patrimônio "
+                   "acumulado (" + azb("despoupança") + ") é o " + vd("aposentado") + ". O item troca as fases."),
+        "destrinchando": [
+            oc("Modigliani") + " (com Brumberg e Ando, anos 1950–1960): o indivíduo planeja o consumo para a vida "
+            "inteira e, com renda que varia por fases, " + azb("suaviza o consumo") + ". Versão simples: renda "
+            "constante enquanto trabalha, zero na aposentadoria, consumo constante do início ao fim.",
+            "Fase ativa: renda > consumo → " + vd("poupança positiva") + ", que forma o patrimônio. Aposentadoria: "
+            "renda ≈ 0 < consumo → " + vd("poupança negativa") + ", financiada justamente pelo patrimônio "
+            "acumulado. Por isso a riqueza segue uma “corcova”: sobe até a aposentadoria e depois cai.",
+            "Nuance: na versão com renda em formato de corcova, o jovem em início de carreira pode consumir acima da "
+            "renda — mas tomando <b>crédito</b>, não usando patrimônio, que ainda não tem. A frase do item só "
+            "funciona para o idoso.",
+            "Função consumo resultante (Ando–Modigliani): " + vd("C = αW + βY") + " — o consumo depende da "
+            + azb("riqueza") + " (W) e da renda do trabalho (Y).",
+        ],
+        "grafico_verso": "ECO-E2-L00580-1-V1",
+        "dissecando": (cz("[troca de ator · inversão]") + " Troca o grupo etário: a despoupança com uso do "
+                       "patrimônio é do aposentado. Pista interna: “patrimônios acumulados” não combina com "
+                       "“jovens” — só tem patrimônio a gastar quem já poupou."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a HCV, indivíduos aposentados tendem a despoupar, utilizando o patrimônio acumulado na "
+            "fase ativa para financiar o consumo.”</i> → CERTO",
+            "<i>“Segundo a HCV, o consumo acompanha a trajetória da renda corrente em cada fase da vida.”</i> → "
+            "ERRADO (o consumo é suavizado; quem acompanha a renda corrente é o consumo keynesiano)",
+        ])],
+        "reescrita": ("Segundo a Hipótese do Ciclo de Vida (HCV) indivíduos mais " + hl("idosos, já aposentados,")
+                      + " tendem a praticar “poupança negativa”, utilizando seus patrimônios acumulados para "
+                      "financiar o consumo."),
+        "tipo_erro": ["TROCA_ATOR", "INVERSAO"], "moduladores": ["tendem"], "dificuldade": 1,
+        "comentario_fonte": ("Na HCV, o indivíduo poupa quando jovem, na fase ativa, e despoupa na aposentadoria, "
+                             "mantendo o consumo estável."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: “(HCV) Indivíduos” → “(HCV) indivíduos” (maiúscula indevida da fonte)",
+                    "quase_duplicata: ECO-E2-L00685-1 e ECO-E2-L00900-1 (ciclo de vida: propensão média a "
+                    "consumir)"],
+    },
+    # ------------------------------------------------------------------ E2-L00581
+    {
+        "id": "ECO-E2-L00581-1", "fonte_ref": "E2-L00581", "destino": "55", "subtema": H2["cons"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CRESC,
+        "rotulo_item": "Item",
+        "assertiva": ("A Hipótese da Renda Permanente (HRP) sugere que um corte de impostos temporário teria um "
+                      "efeito de estímulo muito menor na demanda do que um corte permanente, devido ao comportamento "
+                      "de suavização do consumo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A Hipótese da Renda Permanente (HRP) sugere que um corte de impostos <u>temporário</u> teria "
+                      "um efeito de estímulo <u>muito menor</u> na demanda do que um corte permanente, devido ao "
+                      "comportamento de suavização do consumo."),
+        "poucas": ("Na " + azb("renda permanente") + ", o consumo responde ao que a pessoa espera ganhar ao longo do "
+                   "tempo; um corte " + vd("temporário") + " mexe pouco nisso e é, em boa parte, poupado."),
+        "destrinchando": [
+            oc("Milton Friedman") + " (<i>A Theory of the Consumption Function</i>, 1957): renda corrente = "
+            + azb("renda permanente") + " (Y<sup>P</sup>, a média esperada) + " + azb("renda transitória")
+            + " (Y<sup>T</sup>, desvios passageiros). O consumo é " + vd("C = αY<sup>P</sup>") + ".",
+            "Corte permanente de impostos → eleva Y<sup>P</sup> por inteiro → consumo sobe quase um a um. Corte "
+            "temporário → vira renda transitória → a " + azb("propensão marginal a consumir") + " dela é pequena; "
+            "a maior parte é poupada e o consumo é espalhado ao longo dos anos.",
+            "Aplicação: pacotes de estímulo com devolução única de impostos tendem a ter multiplicador baixo; já "
+            "mudanças de alíquota vistas como duradouras mexem no consumo.",
+            "Limites: famílias com " + azb("restrição de liquidez") + " (sem acesso a crédito) gastam o corte "
+            "temporário quase todo — por isso, na prática, o efeito não é nulo e depende do público atingido.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Reproduz a implicação clássica da HRP. O "
+                       "“muito menor” (e não “nulo”) e o “sugere” protegem o item; a pista é a causa citada, "
+                       "suavização do consumo, que é o mecanismo correto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela HRP, um corte temporário de impostos não tem efeito algum sobre o consumo corrente.”</i> → "
+            "ERRADO (modulador absoluto: o efeito é pequeno, não nulo)",
+            "<i>“Na função keynesiana, cortes temporários e permanentes de impostos de mesmo valor têm o mesmo "
+            "efeito imediato sobre o consumo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["sugere", "muito menor"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Na HRP o consumo depende da renda permanente; corte temporário afeta pouco essa renda "
+                             "e é em grande parte poupado; corte permanente eleva mais o consumo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00685
+    {
+        "id": "ECO-E2-L00685-1", "fonte_ref": "E2-L00685", "destino": "55", "subtema": H2["cons"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MODELOS,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo a hipótese do Ciclo de Vida de Modigliani, a propensão média a consumir tende a ser "
+                      "constante ao longo da vida do indivíduo, independentemente de sua idade."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Segundo a hipótese do Ciclo de Vida de Modigliani, a propensão média a consumir ")
+                    + vm("tende a ser constante ao longo da vida do indivíduo, independentemente de sua idade")
+                    + az(".")),
+        "poucas": ("Constante é o " + azb("consumo") + ", não a razão C/Y. Como a renda muda com a idade, a "
+                   + azb("PMeC") + " " + vd("varia") + ": é baixa na fase ativa e alta na aposentadoria."),
+        "destrinchando": [
+            "Propensão média a consumir: " + vd("PMeC = C/Y") + ". No ciclo de vida, C é suavizado e Y segue as "
+            "fases: na fase ativa, Y alto → C/Y abaixo de 1 (poupa); na aposentadoria, Y baixo → C/Y acima de 1 "
+            "(despoupa); no início da carreira, com renda ainda baixa, C/Y também tende a ser alto.",
+            "Onde a constância aparece: no " + azb("agregado de longo prazo") + ". Com C = αW + βY, a PMeC "
+            "agregada = α(W/Y) + β; no longo prazo riqueza e renda crescem juntas, W/Y fica estável e a PMeC "
+            "também — o que reconcilia a teoria com as séries longas de " + oc("Kuznets") + ".",
+            "No curto prazo, quando a renda sobe e a riqueza não, W/Y cai e a PMeC agregada diminui — padrão "
+            "das regressões de corte transversal e de séries curtas.",
+            vm("Regra-âncora: ciclo de vida = consumo suave, PMeC variável no indivíduo e constante só no longo "
+               "prazo agregado."),
+        ],
+        "dissecando": (cz("[troca de conceito · modulador absoluto]") + " Troca “consumo constante” por "
+                       "“propensão média constante” e reforça com “independentemente de sua idade” — justamente a "
+                       "variável que move a PMeC na teoria."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na HCV, a propensão média a consumir do indivíduo é maior na aposentadoria do que na fase "
+            "ativa.”</i> → CERTO",
+            "<i>“Na HCV, a propensão média a consumir agregada é constante no curto prazo.”</i> → ERRADO (é "
+            "constante só no longo prazo)",
+        ])],
+        "reescrita": ("Segundo a hipótese do Ciclo de Vida de Modigliani, a propensão média a consumir "
+                      + hl("varia ao longo da vida do indivíduo, conforme sua idade: é menor na fase ativa, quando ele "
+                           "poupa, e maior na aposentadoria, quando despoupa") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "GENERALIZACAO"], "moduladores": ["independentemente"], "dificuldade": 2,
+        "comentario_fonte": ("O consumo é estável, a renda varia com a idade; a PMeC varia ao longo da vida e só é "
+                             "estável no agregado de longo prazo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00900-1 (PMeC no ciclo de vida, curto × longo prazo) e "
+                    "ECO-E2-L00580-1"],
+    },
+    # ------------------------------------------------------------------ E2-L00764
+    {
+        "id": "ECO-E2-L00764-1", "fonte_ref": "E2-L00764", "destino": "55", "subtema": H2["cons"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_INTERT,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a Teoria da Renda Permanente, uma redução de impostos correntes do tipo "
+                      "lump-sum compensada por um aumento futuro de impostos corrigidos pela taxa de juros aumenta a "
+                      "poupança corrente e não provoca variações nos níveis de consumo corrente e futuro."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo com a Teoria da Renda Permanente, uma redução de impostos correntes do tipo "
+                      "lump-sum <u>compensada por um aumento futuro de impostos corrigidos pela taxa de juros</u> "
+                      "aumenta a poupança corrente e <u>não provoca variações</u> nos níveis de consumo corrente e "
+                      "futuro."),
+        "poucas": ("O corte compensado não muda o " + azb("valor presente") + " dos impostos, logo não muda a "
+                   + azb("renda permanente") + ": o consumo fica igual e o alívio de hoje é " + vd("poupado")
+                   + " para pagar o imposto de amanhã."),
+        "destrinchando": [
+            "Restrição orçamentária intertemporal da família: o que importa é o valor presente da renda líquida "
+            "de impostos. Corte de T hoje e aumento de T(1 + r) amanhã → " + vd("valor presente inalterado")
+            + " → Y<sup>P</sup> igual → consumo igual em todas as datas.",
+            "Contabilidade: a renda disponível sobe hoje, o consumo não → a " + azb("poupança privada")
+            + " sobe exatamente o valor do corte. A " + azb("poupança pública") + " cai o mesmo valor (déficit "
+            "financiado por dívida): a " + vd("poupança nacional não muda") + ".",
+            "É a " + azb("equivalência ricardiana") + ", formalizada por " + oc("Robert Barro") + " (1974, "
+            "<i>Are Government Bonds Net Wealth?</i>): títulos públicos não são riqueza líquida, porque "
+            "embutem impostos futuros. A ideia remonta a " + oc("David Ricardo") + ", que a enunciou e duvidou de "
+            "sua validade prática.",
+            "Quando falha: restrição de liquidez, miopia, horizonte finito sem altruísmo entre gerações (o "
+            "imposto futuro cai sobre outros), impostos distorcivos (não lump-sum) e incerteza.",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Parece contradizer o senso comum (“corte de "
+                       "imposto estimula consumo”), mas as premissas — lump-sum, compensado com juros, renda "
+                       "permanente — levam direto à neutralidade. O “aumenta a poupança corrente” é consequência, "
+                       "não pegadinha."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…aumenta a poupança nacional e não provoca variações no consumo.”</i> → ERRADO (troca de "
+            "conceito: sobe a poupança privada; a nacional fica igual)",
+            "<i>“Se as famílias enfrentam restrição de liquidez, o mesmo corte compensado eleva o consumo "
+            "corrente.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A redução compensada por imposto futuro de igual valor presente não altera a renda "
+                             "permanente; o corte é poupado e o consumo não muda (equivalência ricardiana)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
         "alertas": [],
     },
     # FIM

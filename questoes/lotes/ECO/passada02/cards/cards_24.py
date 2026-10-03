@@ -1214,4 +1214,353 @@ CARDS = [
         "alertas": ["contestavel: ceteris paribus, um déficit primário financiado por dívida eleva a DLSP; o "
                     "ERRADO da fonte depende de separar a emissão (neutra) do déficit e dos ajustes"],
     },
+    # ------------------------------------------------------------------ E2-L00794
+    {
+        "id": "ECO-E2-L00794-1", "fonte_ref": "E2-L00794", "destino": "48", "subtema": H2["fin"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação ao sistema monetário e ao conceito de déficit público, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em relação à dinâmica da razão da dívida pública no que se refere ao PIB, ceteris paribus, "
+                      "quanto menor a diferença entre a taxa real de juros e o crescimento real da economia, maior "
+                      "a variação dessa razão."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em relação à dinâmica da razão da dívida pública no que se refere ao PIB, ceteris paribus, "
+                       "quanto menor a diferença entre a taxa real de juros e o crescimento real da economia, ")
+                    + vm("maior") + az(" a variação dessa razão.")),
+        "poucas": ("Pela equação " + vd("Δb ≈ (r − g)·b − s") + ", a variação da razão dívida/PIB cresce com "
+                   "(r − g). Diferença <b>menor</b> → variação <b>menor</b> (ou queda da razão)."),
+        "destrinchando": [
+            "Equação da dinâmica da dívida: " + vd("Δb ≈ (r − g)·b₋₁ − s") + ", em que b = dívida/PIB, r = juro "
+            "real, g = crescimento real do PIB e s = superávit primário/PIB. (Versão exata: o primeiro termo "
+            "é dividido por 1 + g.)",
+            "Leitura dos termos: " + azb("(r − g)·b") + " é a dinâmica “automática” — os juros fazem a dívida "
+            "crescer, o crescimento do PIB aumenta o denominador e a dilui. " + azb("s") + " é o esforço "
+            "fiscal que a abate.",
+            "Mantidos b e s, reduzir (r − g) reduz Δb; se r − g fica <b>negativo</b>, a razão pode cair até com "
+            "déficit primário moderado (“efeito bola de neve” às avessas).",
+            "Primário que estabiliza a razão: " + vd("s* = (r − g)·b") + ". Exemplo: b = 80%, r − g = 3 p.p. → "
+            "s* = " + vd("2,4% do PIB") + "; se r − g cai para 1 p.p., s* cai para 0,8%.",
+            "É o raciocínio de " + oc("Evsey Domar") + " (1944): com crescimento suficiente, déficits "
+            "persistentes não fazem a razão dívida/PIB explodir. Por isso as discussões de sustentabilidade no "
+            + rx("Brasil") + " olham tanto para o primário quanto para o diferencial entre juro real e "
+            "crescimento.",
+        ],
+        "dissecando": (cz("[inversão]") + " Relação correta (r − g e Δb andam juntos) com o sentido trocado no "
+                       "fim. Itens com “quanto menor…, maior…” pedem que se confira o sinal na fórmula: aqui o "
+                       "coeficiente de (r − g) é positivo (b > 0)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Ceteris paribus, quanto maior a diferença entre o juro real e o crescimento real, maior o "
+            "superávit primário necessário para estabilizar a razão dívida/PIB.”</i> → CERTO",
+            "<i>“Se o juro real for inferior ao crescimento real, a razão dívida/PIB necessariamente cai, "
+            "qualquer que seja o resultado primário.”</i> → ERRADO (modulador absoluto: um déficit primário "
+            "grande ainda a eleva)",
+        ])],
+        "reescrita": ("Em relação à dinâmica da razão da dívida pública no que se refere ao PIB, ceteris paribus, "
+                      "quanto menor a diferença entre a taxa real de juros e o crescimento real da economia, "
+                      + hl("menor") + " a variação dessa razão."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["ceteris paribus", "quanto menor"], "dificuldade": 1,
+        "comentario_fonte": ("Δb = (r − g)b − sp; quanto menor a diferença r − g, menor (e não maior) a variação "
+                             "da razão dívida/PIB."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 116", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida no 📖 (equação da dinâmica da dívida)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01042-1 (mesma equação, outro item)"],
+    },
+    # ------------------------------------------------------------------ E2-L01042
+    {
+        "id": "ECO-E2-L01042-1", "fonte_ref": "E2-L01042", "destino": "48", "subtema": H2["fin"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": "Em relação às políticas monetária e fiscal, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se o déficit primário do setor público é nulo e não há “ajustes patrimoniais” (isto é, ajustes "
+                      "nos ativos ou passivos do setor público devidos a privatizações, reconhecimentos de dívidas "
+                      "etc.), então a razão dívida pública/PIB aumentará se a taxa de juros real incidente sobre a "
+                      "dívida for maior do que a taxa de crescimento real do PIB."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o déficit primário do setor público é <u>nulo</u> e não há “ajustes patrimoniais” (isto "
+                      "é, ajustes nos ativos ou passivos do setor público devidos a privatizações, reconhecimentos "
+                      "de dívidas etc.), então a razão dívida pública/PIB aumentará se a taxa de juros real "
+                      "incidente sobre a dívida for <u>maior</u> do que a taxa de crescimento real do PIB."),
+        "poucas": ("Com primário zero e sem ajustes, sobra " + vd("Δb ≈ (r − g)·b") + ": se r > g, Δb > 0 — a "
+                   "dívida cresce à taxa r e o PIB, à taxa g, menor."),
+        "destrinchando": [
+            "Origem da equação: a dívida varia pelo déficit nominal (primário + juros) mais os ajustes "
+            "patrimoniais. Dividindo por PIB e descontando inflação e crescimento: " + vd("Δb ≈ (r − g)·b₋₁ − "
+            "s + ajustes/PIB") + ".",
+            "O item zera dois termos: s = 0 (primário nulo) e ajustes = 0. Resta o termo automático: com "
+            "b > 0 e " + vd("r > g") + ", a razão sobe; com r = g, fica estável; com r < g, cai.",
+            "Intuição: sem primário, o governo paga os juros tomando nova dívida; o estoque cresce à taxa de "
+            "juros real, enquanto o denominador cresce a g. Quem cresce mais rápido ganha a corrida.",
+            "Por isso, com r > g, estabilizar a razão exige " + vd("superávit primário s* = (r − g)·b") + ". "
+            "Os ajustes patrimoniais foram excluídos de propósito: privatizações (reduzem a dívida) ou "
+            "reconhecimento de “esqueletos” (aumentam) poderiam mudar o resultado num ano.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Aplicação direta da equação, com as condições bem "
+                       "amarradas (primário nulo, sem ajustes, r > g). O cuidado é não confundir “razão "
+                       "dívida/PIB” com o estoque nominal da dívida, que, com primário nulo e juros positivos, "
+                       "sobe sempre."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com déficit primário nulo, a razão dívida/PIB permanece constante, independentemente das taxas "
+            "de juros e de crescimento.”</i> → ERRADO (modulador absoluto: só se r = g)",
+            "<i>“Com primário nulo e juro real inferior ao crescimento real, a razão dívida/PIB cai.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["se"], "dificuldade": 1,
+        "comentario_fonte": ("Δ(D/PIB) = (r − g)(D/PIB)ₜ₋₁ − (T − G)/PIB; com primário zero, a razão aumenta se "
+                             "r > g."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 175", "tipo_fonte": "FÓRMULA", "lado": "verso",
+                           "acao": "texto (equação transcrita no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00794-1 (mesma equação, outro item)"],
+    },
+    # ------------------------------------------------------------------ E2-L01274
+    {
+        "id": "ECO-E2-L01274-1", "fonte_ref": "E2-L01274", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": "No que se refere aos conceitos de déficit público e de dívida pública, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Os indicadores fiscais incluem as medidas de fluxos, como receitas e despesas, e de estoques, "
+                      "como déficit e dívida."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Os indicadores fiscais incluem as medidas de fluxos, como receitas e despesas, e de "
+                       "estoques, como ") + vm("déficit e") + az(" dívida.")),
+        "poucas": ("O " + azb("déficit") + " é " + azb("fluxo") + " (medido num período, como receitas e despesas); "
+                   "só a " + azb("dívida") + " é " + azb("estoque") + " (medida numa data)."),
+        "destrinchando": [
+            azb("Fluxo") + " = grandeza por unidade de tempo (R$ por ano): receitas, despesas, juros, resultado "
+            "primário, déficit nominal. " + azb("Estoque") + " = grandeza numa data (R$ em 31/12): dívida "
+            "bruta, dívida líquida, reservas.",
+            "A ponte entre os dois: " + vd("dívida no fim = dívida no início + déficit nominal (+ ajustes)")
+            + ". O déficit é a variação do estoque — como a água que entra numa caixa d’água num dia, frente ao "
+            "volume de água que ela contém.",
+            "Teste prático: faz sentido perguntar “quanto <b>por ano</b>?” → fluxo. Faz sentido perguntar "
+            "“quanto <b>em tal data</b>?” → estoque. Déficit de 2025 (fluxo); dívida em dezembro de 2025 "
+            "(estoque).",
+            "Mesma lógica em outros temas que a banca cobra: PIB e investimento são fluxos; capital e riqueza "
+            "são estoques; saldo em transações correntes é fluxo, passivo externo líquido é estoque.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Lista de exemplos com um intruso no grupo errado. Pista: "
+                       "receitas e despesas são fluxos, e o déficit é a <b>diferença</b> entre elas — a diferença "
+                       "entre dois fluxos é fluxo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O déficit nominal de um ano corresponde à variação do estoque da dívida fiscal no mesmo "
+            "período.”</i> → CERTO",
+            "<i>“O PIB e o estoque de capital são variáveis de fluxo.”</i> → ERRADO (troca de conceito: o "
+            "capital é estoque)",
+        ])],
+        "reescrita": ("Os indicadores fiscais incluem as medidas de fluxos, como receitas e despesas, e de estoques, "
+                      "como <s>déficit e</s> " + hl("a") + " dívida" + hl("; o déficit, diferença entre receitas e "
+                      "despesas, também é fluxo") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Receitas, despesas e déficit são fluxos; dívida é estoque.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01518
+    {
+        "id": "ECO-E2-L01518-1", "fonte_ref": "E2-L01518", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("As operações compromissadas do Banco Central entram no estoque da Dívida Bruta do Governo "
+                      "Geral (DBGG), bem como as dívidas das empresas estatais, como Petrobrás e Eletrobrás."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As operações compromissadas do Banco Central entram no estoque da Dívida Bruta do Governo "
+                       "Geral (DBGG), ") + vm("bem como") + az(" as dívidas das empresas estatais, como "
+                                                                "Petrobrás e Eletrobrás.")),
+        "poucas": ("A " + azb("DBGG") + " cobre só o " + azb("governo geral") + " (União, estados e municípios) "
+                   "e, do BC, apenas as compromissadas. Dívidas de " + azb("estatais") + " ficam fora."),
+        "destrinchando": [
+            azb("Governo geral") + " = governo federal (incluída a previdência), estados e municípios. Ficam "
+            "fora o Banco Central e as empresas estatais das três esferas.",
+            azb("DBGG") + " (metodologia do " + rx("BCB") + ") = débitos do governo geral junto ao setor privado, "
+            "ao setor público financeiro e ao resto do mundo + " + vd("operações compromissadas do BC") + ". "
+            "Elas entram porque o BC as faz com títulos do Tesouro, e o volume de compromissadas substitui "
+            "emissões do Tesouro na absorção de liquidez — incluí-las permite ver o quadro fiscal completo.",
+            azb("DLSP") + " = conceito mais amplo (governo geral + BC + estatais não financeiras) e líquido "
+            "(débitos − créditos, como as reservas). Mesmo nela, " + vd("Petrobras e Eletrobras") + " foram "
+            "excluídas (desde 2009–2010), por terem governança e porte de empresas de mercado; os bancos "
+            "públicos (BB, Caixa, BNDES) também não entram.",
+            "⏳ (out/2026) Ordem de grandeza recente: DBGG perto de três quartos do PIB e DLSP na faixa de 60% do "
+            "PIB (dados de fim de 2024) — a DLSP é menor porque desconta as reservas internacionais.",
+            vm("Regra-âncora: DBGG = bruta e só governo geral (+ compromissadas); DLSP = líquida e setor "
+               "público consolidado (sem bancos públicos, Petrobras e Eletrobras)."),
+        ],
+        "dissecando": (cz("[meia-verdade · extrapolação]") + " A primeira parte é verdadeira (compromissadas "
+                       "entram); o “bem como” enxerta as estatais. Os exemplos escolhidos agravam: Petrobras e "
+                       "Eletrobras estão fora até da DLSP, que inclui estatais."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A DLSP inclui o Banco Central e as empresas estatais não financeiras, exceto Petrobras e "
+            "Eletrobras.”</i> → CERTO",
+            "<i>“A DBGG inclui toda a carteira de títulos do Tesouro em poder do Banco Central.”</i> → ERRADO "
+            "(troca de conceito: é o critério do FMI; o do BCB inclui só as compromissadas)",
+        ])],
+        "reescrita": ("As operações compromissadas do Banco Central entram no estoque da Dívida Bruta do Governo "
+                      "Geral (DBGG), " + hl("mas não") + " as dívidas das empresas estatais, como Petrobrás e "
+                      "Eletrobrás."),
+        "tipo_erro": ["MEIA_VERDADE", "EXTRAPOLACAO"], "moduladores": ["bem como"], "dificuldade": 2,
+        "comentario_fonte": ("Compromissadas entram na DBGG; dívidas de estatais não. DBGG abrange governos "
+                             "federal, estaduais e municipais; DLSP é mais abrangente (BC e estatais não "
+                             "financeiras, sem bancos estatais)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 398", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "texto (organograma do setor público descrito no 📖)"},
+                          {"ref": "IMAGEM 399-400", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvidas no 📖"},
+                          {"ref": "IMAGEM 401-402", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortadas (séries históricas de NFSP e dívida; ordem de grandeza no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01633-1 (DBGG × DLSP, mesma prova)"],
+    },
+    # ------------------------------------------------------------------ E2-L01632
+    {
+        "id": "ECO-E2-L01632-1", "fonte_ref": "E2-L01632", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("A política fiscal expansionista tende a aumentar as Necessidades de Financiamento do Setor "
+                      "Público e a dívida pública."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A política fiscal expansionista <u>tende a</u> aumentar as Necessidades de Financiamento do "
+                      "Setor Público e a dívida pública."),
+        "poucas": ("Mais gasto ou menos imposto piora o resultado → as " + azb("NFSP") + " sobem → o déficit é "
+                   "coberto com nova dívida, e o estoque cresce."),
+        "destrinchando": [
+            azb("Política fiscal expansionista") + " = G ↑ e/ou T ↓. Com receitas que não acompanham, o "
+            "resultado primário piora e, com ele, o nominal.",
+            azb("NFSP") + " = quanto o setor público precisa financiar no período (conceito nominal = primário + "
+            "juros). Se não forem cobertas por emissão de moeda nem por venda de ativos, viram "
+            + vd("nova dívida") + ": Dívidaₜ = Dívidaₜ₋₁ + NFSPₜ (+ ajustes).",
+            "Efeito de segunda ordem: mais dívida → mais juros nos anos seguintes → NFSP nominal ainda maior, a "
+            "chamada " + azb("bola de neve") + " quando r > g.",
+            "Por que “tende a”: a expansão pode elevar a atividade e a arrecadação (estabilizadores "
+            "automáticos), e a razão dívida/PIB depende também do crescimento do denominador. Em recessão "
+            "profunda, um estímulo eficaz pode até moderar a alta da razão; em geral, porém, o efeito direto "
+            "domina.",
+            "Exemplo: em " + vd("2020") + ", a resposta fiscal à pandemia levou as NFSP nominais do " + rx("Brasil")
+            + " a cerca de 13% do PIB, segundo a série do BCB — o maior valor em duas décadas.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Encadeamento de manual, protegido pelo "
+                       "“tende a”. Versões ERRADO costumam trocar o sinal (“reduz as NFSP”) ou tornar o efeito "
+                       "absoluto (“necessariamente eleva a razão dívida/PIB”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política fiscal expansionista eleva necessariamente a razão dívida/PIB, qualquer que seja o "
+            "efeito sobre o crescimento.”</i> → ERRADO (modulador absoluto: o PIB maior pode compensar)",
+            "<i>“Déficits financiados por emissão monetária não elevam a dívida mobiliária, mas podem gerar "
+            "pressão inflacionária.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": ("Aumento de gastos ou redução de impostos eleva o déficit, as NFSP e, se não houver "
+                             "emissão monetária, a dívida; juros maiores criam efeito bola de neve."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 472", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (série histórica das NFSP; referência a 2020 no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01633
+    {
+        "id": "ECO-E2-L01633-1", "fonte_ref": "E2-L01633", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("A Dívida Bruta do Governo Geral (DBGG) é mais abrangente que a Dívida Líquida do Setor "
+                      "Público (DLSP), pois inclui os estados e municípios, bem como as empresas estatais."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A Dívida Bruta do Governo Geral (DBGG) é ") + vm("mais") + az(" abrangente que a Dívida "
+                    "Líquida do Setor Público (DLSP), pois inclui os estados e municípios, ") + vm("bem como")
+                    + az(" as empresas estatais.")),
+        "poucas": ("É o contrário: a " + azb("DLSP") + " é mais abrangente em cobertura (governo geral + BC + "
+                   "estatais não financeiras). A " + azb("DBGG") + " fica no governo geral e não inclui "
+                   "estatais."),
+        "destrinchando": [
+            "Organograma: " + azb("setor público") + " = governo geral (União, estados, municípios) + atividades "
+            "empresariais (estatais não financeiras; financeiras — o BC e os bancos públicos).",
+            azb("DBGG") + ": cobertura <b>restrita</b> (governo geral, mais as compromissadas do BC) e conceito "
+            "<b>bruto</b> (só passivos). Estados e municípios entram nas duas medidas — não são diferencial "
+            "de nenhuma.",
+            azb("DLSP") + ": cobertura <b>ampla</b> (governo geral + BC + estatais não financeiras, exceto "
+            "Petrobras e Eletrobras; sem bancos públicos) e conceito <b>líquido</b> (passivos − ativos "
+            "financeiros, como as reservas internacionais).",
+            "Não confundir abrangência com tamanho: a DBGG é <b>maior em valor</b> (perto de três quartos do PIB "
+            "⏳ (out/2026), dados de fim de 2024), porque não desconta ativos; mas é <b>menos abrangente</b> em "
+            "entidades.",
+            "Para que serve cada uma: a DBGG é a medida usada nas comparações internacionais e pelos "
+            "mercados (não depende do valor dos ativos); a DLSP é a base das NFSP e do resultado fiscal "
+            "“abaixo da linha”.",
+        ],
+        "dissecando": (cz("[inversão · troca de ator]") + " Inverte a comparação de abrangência e enxerta as "
+                       "estatais na DBGG. Pista: o próprio nome — “governo geral” é a parte; “setor público”, o "
+                       "todo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A DBGG supera a DLSP em proporção do PIB, entre outros motivos, porque não deduz as reservas "
+            "internacionais.”</i> → CERTO",
+            "<i>“A DLSP inclui as dívidas dos bancos públicos federais, como o BNDES.”</i> → ERRADO (troca de "
+            "ator: bancos públicos ficam fora)",
+        ])],
+        "reescrita": ("A Dívida Bruta do Governo Geral (DBGG) é " + hl("menos") + " abrangente que a Dívida "
+                      "Líquida do Setor Público (DLSP), pois inclui os estados e municípios, " + hl("mas não")
+                      + " as empresas estatais."),
+        "tipo_erro": ["INVERSAO", "TROCA_ATOR"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A DLSP é mais abrangente (inclui BC e estatais não financeiras, exceto Petrobras e "
+                             "Eletrobras) e deduz ativos; a DBGG cobre só o governo geral e não inclui estatais."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 473", "tipo_fonte": "DIAGRAMA", "lado": "verso",
+                           "acao": "texto (organograma descrito no 📖)"},
+                          {"ref": "IMAGEM 474", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (séries de DBGG e DLSP; ordem de grandeza no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01518-1 (DBGG × DLSP, mesma prova)"],
+    },
+    # ------------------------------------------------------------------ E2-L01775
+    {
+        "id": "ECO-E2-L01775-1", "fonte_ref": "E2-L01775", "destino": "48", "subtema": H2["conc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("O resultado nominal do setor público, ao excluir o pagamento de juros sobre a dívida pública, "
+                      "não reflete o crescimento do estoque da dívida, o que é feito pelo conceito de resultado "
+                      "primário."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O resultado nominal do setor público, ao ") + vm("excluir") + az(" o pagamento de juros "
+                    "sobre a dívida pública, ") + vm("não reflete") + az(" o crescimento do estoque da dívida, o "
+                                                                        "que ")
+                    + vm("é feito pelo") + az(" conceito de resultado primário.")),
+        "poucas": ("O item troca os papéis: o " + azb("nominal") + " <b>inclui</b> os juros e por isso reflete o "
+                   "crescimento da dívida; o " + azb("primário") + " exclui os juros e mede o esforço fiscal."),
+        "destrinchando": [
+            vd("Nominal = primário + juros nominais") + " = NFSP no conceito nominal = variação da dívida "
+            "fiscal líquida. É o indicador que conta quanto a dívida cresceu no período.",
+            azb("Primário") + ": receitas − despesas não financeiras. Ao excluir os juros, separa o que o "
+            "governo de hoje decide do custo da dívida herdada — é o " + azb("esforço fiscal") + " e o alvo das "
+            "metas fiscais.",
+            "Os dois juntos contam a história: superávit primário de 1% do PIB com juros de 7% = " + vd("déficit "
+            "nominal de 6%") + ". O governo “economiza”, mas a dívida sobe 6% do PIB.",
+            "Em inflação alta entra o terceiro conceito, o " + azb("operacional") + " (primário + juros reais), "
+            "que tira dos juros a correção monetária.",
+            vm("Regra-âncora: quer saber se a dívida cresceu? Olhe o nominal. Quer saber o esforço do governo? "
+               "Olhe o primário."),
+        ],
+        "dissecando": (cz("[inversão · troca de conceito]") + " Atribui ao nominal a característica do primário "
+                       "(excluir juros) e transfere ao primário a função do nominal. A frase é coerente por "
+                       "dentro — quem exclui juros não reflete a dívida —, por isso engana; a pista é lembrar "
+                       "que “nominal” é o conceito <b>completo</b>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O resultado primário, ao excluir os juros, não reflete o crescimento do estoque da dívida, o "
+            "que é feito pelo resultado nominal.”</i> → CERTO",
+            "<i>“Superávit primário implica, necessariamente, superávit nominal.”</i> → ERRADO (modulador "
+            "absoluto: juros podem superar o primário)",
+        ])],
+        "reescrita": ("O resultado nominal do setor público, ao " + hl("incluir") + " o pagamento de juros sobre a "
+                      "dívida pública, " + hl("reflete") + " o crescimento do estoque da dívida, o que "
+                      + hl("não é feito pelo") + " conceito de resultado primário."),
+        "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A assertiva inverte os conceitos: o nominal inclui juros e reflete o crescimento da "
+                             "dívida; o primário exclui juros e mede o esforço fiscal."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0438-1 (nominal × primário, outra prova)"],
+    },
 ]

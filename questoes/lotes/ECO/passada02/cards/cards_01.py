@@ -1068,5 +1068,439 @@ CARDS = [
         "alertas": ["contestavel: a fonte dá CERTO; pela identidade, (M − X) > 0 é poupança transferida do resto "
                     "do mundo para a economia local — card resolvido como ERRADO"],
     },
-    # FIM
+    # ------------------------------------------------------------------ E1-0409
+    {
+        "id": "ECO-E1-0409-1", "fonte_ref": "E1-0409", "destino": "17", "subtema": H2["ident"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": ("Considere uma economia aberta em que o governo recolha impostos e efetue gastos. A "
+                    "Contabilidade Nacional pode ser sucintamente representada pela seguinte relação: "
+                    "Y = C + I + G + X − M. Julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Essa equação revela a necessidade de poupança externa como o diferencial entre os valores "
+                      "das importações e exportações, indicado pela relação, após algum rearranjo algébrico, "
+                      "S − I = X − M, em que S contempla tanto a poupança pública quanto a privada."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Essa equação revela a necessidade de poupança externa como o diferencial entre os valores "
+                      "das importações e exportações, indicado pela relação, após algum rearranjo algébrico, "
+                      "<u>S − I = X − M</u>, em que S contempla <u>tanto a poupança pública quanto a "
+                      "privada</u>."),
+        "poucas": ("Rearranjando, " + vd("(S privada + S pública) − I = X − M") + ". Se M > X, a poupança "
+                   "doméstica não basta para o investimento, e a diferença é a " + azb("poupança externa") + "."),
+        "destrinchando": [
+            "Passo a passo: Y − C − G = I + X − M. Somando e subtraindo T: (Y − T − C) + (T − G) = I + X − M. "
+            "Como Y − T − C = poupança privada e T − G = poupança pública, " + vd("S − I = X − M") + ", com S = "
+            "poupança doméstica total.",
+            "Leitura: o saldo externo é o espelho do " + azb("hiato poupança-investimento") + ". Se o país "
+            "investe mais do que poupa (S < I), precisa de M > X — importa a diferença e a financia com "
+            "poupança externa (I − S = M − X).",
+            "É a base da " + azb("abordagem de absorção") + " do balanço de pagamentos: déficit externo = "
+            "absorção interna (C + I + G) maior que a renda. Corrigir o déficit exige poupar mais ou investir "
+            "menos.",
+            "Também é a base do argumento dos " + azb("déficits gêmeos") + ": mantida a poupança privada e o "
+            "investimento, um déficit fiscal (T < G) tende a se refletir em déficit externo.",
+            "Com rendas e transferências do exterior, troca-se X − M pelo saldo em " + azb("transações "
+            "correntes") + ".",
+        ],
+        "dissecando": (cz("[literalidade]") + " Paráfrase correta da identidade. O que pode confundir é o sinal "
+                       "(S − I = X − M, e não M − X) e a cláusula final sobre S, que precisa incluir o governo "
+                       "para a conta fechar — e inclui."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…indicado pela relação S − I = M − X…”</i> → ERRADO (sinal trocado)",
+            "<i>“…em que S representa apenas a poupança privada.”</i> → ERRADO (restrição indevida: falta o "
+            "termo T − G)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A identidade pode ser reescrita como S − I = X − M; com M > X há necessidade de "
+                             "poupança externa; S inclui os setores público e privado."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: a primeira frase da frente (economia aberta com governo e Y = C + I + G + "
+                    "X − M) foi levada ao comando"],
+    },
+    # ------------------------------------------------------------------ E1-0410
+    {
+        "id": "ECO-E1-0410-1", "fonte_ref": "E1-0410", "destino": "17", "subtema": H2["ident"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_CN,
+        "rotulo_item": "Item",
+        "assertiva": ("Em macroeconomia, sabendo que: Y é o Produto Interno Bruto (PIB), C é o consumo das "
+                      "famílias, I é investimento privado, G são os gastos do governo, X são as exportações e M "
+                      "são as importações, a identidade macroeconômica básica, também conhecida como equação do "
+                      "PIB pelo lado da demanda, é dada por: Y = C + G + I + (X − M)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em macroeconomia, sabendo que: Y é o Produto Interno Bruto (PIB), C é o consumo das "
+                      "famílias, I é investimento privado, G são os gastos do governo, X são as exportações e M "
+                      "são as importações, a identidade macroeconômica básica, também conhecida como equação do "
+                      "PIB pelo lado da demanda, é dada por: <u>Y = C + G + I + (X − M)</u>."),
+        "poucas": ("É a " + azb("ótica da despesa") + ": o PIB é a soma do que se gasta em bens finais "
+                   "domésticos — consumo, investimento, governo — mais as " + vd("exportações líquidas") + "."),
+        "destrinchando": [
+            "Cada componente compra produção final: " + azb("C") + " (famílias), " + azb("I") + " (formação "
+            "bruta de capital), " + azb("G") + " (consumo do governo) e " + azb("X") + " (estrangeiros). Como "
+            "C, I e G incluem bens importados, subtrai-se " + azb("M") + " para ficar só com a produção "
+            "interna.",
+            "A ordem das parcelas é irrelevante (Y = C + G + I + (X − M) é a mesma coisa). O que a banca "
+            "costuma mexer é o sinal de M ou a inclusão de transferências.",
+            "Em G entram compras de bens e serviços do governo, <b>não</b> transferências (aposentadorias, "
+            "Bolsa Família), que são redistribuição de renda e reaparecem como consumo das famílias.",
+            "Nuance de nomenclatura: nas contas nacionais, o investimento público fica em I (FBCF do governo) e "
+            "G é só o consumo final do governo; nos manuais, G costuma reunir todo o gasto do governo e I fica "
+            "como investimento privado — como no item.",
+            "Ordem de grandeza no " + rx("Brasil") + ": consumo das famílias ≈ " + vd("60–65%") + " do PIB; "
+            "consumo do governo ≈ " + vd("19–20%") + "; FBCF ≈ " + vd("16–17%") + " ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual com as parcelas fora da ordem habitual. A "
+                       "troca de ordem é cosmética; confira sinais e o que está em G."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…é dada por Y = C + I + G + (M − X).”</i> → ERRADO (sinal trocado)",
+            "<i>“Os pagamentos de aposentadorias pelo governo integram G na identidade do PIB.”</i> → ERRADO "
+            "(transferência não é compra de bem ou serviço)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("É a identidade do PIB pela ótica da demanda em economia aberta com governo: "
+                             "consumo, investimento, gastos do governo e saldo comercial."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0411
+    {
+        "id": "ECO-E1-0411-1", "fonte_ref": "E1-0411", "destino": "17", "subtema": H2["pib"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_CN,
+        "rotulo_item": "Item",
+        "assertiva": ("A relação entre Produto Bruto e Produto Líquido nas Contas Nacionais é expressa pela "
+                      "fórmula: PB = PL + Depreciação."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A relação entre Produto Bruto e Produto Líquido nas Contas Nacionais é expressa pela "
+                      "fórmula: <u>PB = PL + Depreciação</u>."),
+        "poucas": ("“Bruto” inclui a reposição do capital gasto; “líquido” a desconta. Logo " + vd("bruto = "
+                   "líquido + depreciação") + " — para o interno (PIB/PIL) e para o nacional (PNB/PNL)."),
+        "destrinchando": [
+            "Os qualificadores dos agregados combinam três pares independentes: " + azb("bruto × líquido")
+            + " (com ou sem depreciação), " + azb("interno × nacional") + " (território × residentes: renda "
+            "líquida do exterior) e " + azb("preços de mercado × custo de fatores") + " (com ou sem impostos "
+            "indiretos líquidos de subsídios).",
+            "Bruto → líquido: " + vd("PIL = PIB − depreciação") + "; " + vd("PNL = PNB − depreciação") + ". Nas "
+            "contas nacionais, a depreciação chama-se " + azb("consumo de capital fixo") + ".",
+            "Combinando: renda nacional = PNL a custo de fatores = PIB − RLEE − depreciação − (impostos "
+            "indiretos − subsídios).",
+            "Por que o bruto é o mais usado? A depreciação é difícil de medir (depende de vida útil e "
+            "obsolescência estimadas); o PIB evita essa estimativa e é comparável entre países.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Fórmula direta. A banca a erra trocando o sinal (PB = PL − "
+                       "depreciação) ou o termo (impostos indiretos no lugar da depreciação, que é a passagem "
+                       "preços de mercado × custo de fatores)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“PB = PL − Depreciação.”</i> → ERRADO (sinal trocado)",
+            "<i>“A diferença entre o produto a preços de mercado e o produto a custo de fatores é a "
+            "depreciação.”</i> → ERRADO (troca de conceito: são os impostos indiretos líquidos de subsídios)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Produto bruto = produto líquido + depreciação; vale para PIB/PIL e PNB/PNL.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0412
+    {
+        "id": "ECO-E1-0412-1", "fonte_ref": "E1-0412", "destino": "17", "subtema": H2["ident"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_CN,
+        "rotulo_item": "Item",
+        "assertiva": ("A poupança (S) é a parcela da renda gerada (salários, juros, aluguéis, lucros) mas que não "
+                      "foi consumida, ou seja, é a renda nacional (Y) menos o consumo (C)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A poupança (S) é a parcela da renda gerada (salários, juros, aluguéis, lucros) mas que "
+                      "<u>não foi consumida</u>, ou seja, é a renda nacional (Y) <u>menos o consumo</u> (C)."),
+        "poucas": ("Poupar é " + azb("não consumir") + " a renda: " + vd("S = Y − C") + ". Os parênteses listam "
+                   "as remunerações dos fatores, que somadas formam a renda nacional."),
+        "destrinchando": [
+            "A renda nacional é a soma das remunerações dos fatores: " + azb("salários") + " (trabalho), "
+            + azb("juros") + " (capital financeiro), " + azb("aluguéis") + " (terra e imóveis) e "
+            + azb("lucros") + " (capacidade empresarial). Parte é consumida, o resto é poupado.",
+            "Em economia fechada e sem governo, " + vd("S = Y − C") + " e, como Y = C + I, " + vd("S = I")
+            + " — a poupança é a contrapartida do investimento.",
+            "Com governo, distingue-se a " + azb("poupança privada") + " (renda disponível − consumo = Y − T − C) "
+            "da " + azb("poupança pública") + " (T − G). A poupança total, Y − C − G, segue sendo a renda não "
+            "consumida pelo conjunto da economia.",
+            "Poupança é <b>fluxo</b> (quanto se deixou de consumir no período), não estoque: o acumulado ao "
+            "longo do tempo é riqueza ou patrimônio.",
+            "No SCN, " + azb("poupança bruta") + " = renda disponível bruta − consumo final.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual, válida no modelo simples. Itens desse tipo "
+                       "ficam ERRADO quando trocam fluxo por estoque (“poupança é o total acumulado”) ou somam "
+                       "o consumo em vez de subtraí-lo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A poupança corresponde ao estoque de riqueza acumulado pelas famílias.”</i> → ERRADO (troca "
+            "fluxo por estoque)",
+            "<i>“Com governo, a poupança privada é a renda disponível (Y − T) menos o consumo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A poupança é a parte da renda nacional não consumida: S = Y − C.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0414
+    {
+        "id": "ECO-E1-0414-1", "fonte_ref": "E1-0414", "destino": "17", "subtema": H2["scn"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2022, "cacd": False,
+        "errei": False,
+        "comando": CMD_IBGE,
+        "rotulo_item": "Item",
+        "assertiva": ("As transferências sociais em espécie correspondem aos bens e serviços individuais fornecidos "
+                      "gratuitamente, ou a preços simbólicos, pelo governo ou por instituições sem fins de lucro a "
+                      "serviço das famílias, às famílias."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As transferências sociais em espécie correspondem aos <u>bens e serviços individuais</u> "
+                      "fornecidos gratuitamente, ou a preços simbólicos, pelo governo ou por instituições sem fins "
+                      "de lucro a serviço das famílias, às famílias."),
+        "poucas": ("É a definição do " + rx("IBGE") + " (SNA 2008): " + azb("transferências sociais em espécie")
+                   + " são " + vd("bens e serviços") + " (não dinheiro) entregues às famílias de graça ou a "
+                   "preço simbólico pelo governo ou pelas ISFLSF."),
+        "destrinchando": [
+            "Exemplos: atendimento no " + rx("SUS") + ", escola pública, merenda escolar, medicamentos "
+            "gratuitos, vacinas. São serviços <b>individuais</b> — usufruídos por uma família identificável —, "
+            "ao contrário dos serviços coletivos (defesa, segurança pública, diplomacia).",
+            "Não confundir com " + azb("benefícios sociais em dinheiro") + ": aposentadorias, Bolsa Família, "
+            "seguro-desemprego e auxílio emergencial são transferências <b>monetárias</b>; a família decide "
+            "como gastar.",
+            "Função no SCN (conta de redistribuição da renda em espécie): " + vd("renda disponível ajustada = "
+            "renda disponível + transferências sociais em espécie recebidas") + ". Do lado do consumo, o "
+            + azb("consumo final efetivo") + " das famílias soma ao que elas compram o que recebem do governo "
+            "e das ISFLSF.",
+            "Empresas financeiras e não financeiras não participam dessa conta: não recebem transferências "
+            "sociais em espécie.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Trecho copiado do relatório metodológico do IBGE. A "
+                       "redação longa (“a serviço das famílias, às famílias”) parece truncada, mas está "
+                       "correta. A banca erraria trocando “bens e serviços” por pagamentos em dinheiro ou "
+                       "incluindo empresas como fornecedoras."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os pagamentos do Bolsa Família são registrados como transferências sociais em espécie.”</i> → "
+            "ERRADO (troca de conceito: é benefício em dinheiro)",
+            "<i>“A renda disponível ajustada das famílias inclui as transferências sociais em espécie "
+            "recebidas.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Definição idêntica à do IBGE (Sistema de Contas Nacionais, relatório metodológico "
+                             "vol. 24); conta de redistribuição da renda em espécie; cita Bolsa Família, auxílio "
+                             "emergencial e seguro-desemprego como exemplos. O verso principal trata do registro "
+                             "CIF/FOB das importações, de outro item."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_2022, "duplicata: comentário de E1-0417 fundido",
+                    "qualidade_fonte: o comentário de origem dá Bolsa Família, auxílio emergencial e "
+                    "seguro-desemprego como transferências sociais em espécie; são benefícios em dinheiro"],
+    },
+    # ------------------------------------------------------------------ E1-0415
+    {
+        "id": "ECO-E1-0415-1", "fonte_ref": "E1-0415", "destino": "17", "subtema": H2["scn"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2022, "cacd": False,
+        "errei": False,
+        "comando": CMD_IBGE,
+        "rotulo_item": "Item",
+        "assertiva": ("Todos os serviços de transporte e de seguro relativos à importação, prestados por produtores "
+                      "residentes e não residentes e incluídos no valor CIF da importação por produtos, são "
+                      "globalmente deduzidos. Então, no Sistema de Contas Nacionais, o total da importação de bens "
+                      "é sempre registrado a preços FOB."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Todos os serviços de transporte e de seguro relativos à importação, prestados por "
+                      "produtores residentes e não residentes e incluídos no valor CIF da importação por "
+                      "produtos, são <u>globalmente deduzidos</u>. Então, no Sistema de Contas Nacionais, o "
+                      "<u>total</u> da importação de bens é <u>sempre</u> registrado a preços <u>FOB</u>."),
+        "poucas": ("O detalhe por produto vem a preços " + azb("CIF") + " (com frete e seguro), mas um "
+                   + azb("ajuste CIF/FOB") + " global retira esses serviços: o " + vd("total") + " das "
+                   "importações de bens fica a preços " + vd("FOB") + "."),
+        "destrinchando": [
+            azb("FOB") + " (<i>free on board</i>): valor da mercadoria posta a bordo no país exportador, sem "
+            "frete e seguro internacionais. " + azb("CIF") + " (<i>cost, insurance and freight</i>): valor "
+            "com frete e seguro até o porto de destino.",
+            "As estatísticas de comércio exterior registram as importações por produto a preços CIF. Mas, "
+            "pelo SNA, frete e seguro são <b>serviços</b>, com produtor próprio: se prestados por não "
+            "residentes, são importação de serviços; se por residentes, são produção doméstica. Deixá-los "
+            "dentro do valor do bem contaria o serviço no lugar errado.",
+            "Solução do " + rx("IBGE") + " (nota metodológica da estrutura do SCN): mantém o detalhe por "
+            "produto a preços CIF e faz uma " + vd("dedução global") + " de transporte e seguro na linha "
+            "do ajuste CIF/FOB. Resultado: total das importações de bens a FOB, coerente com o "
+            + azb("balanço de pagamentos") + " (BPM6), que também registra bens a FOB.",
+            "Por isso é CERTO tanto dizer que “as importações de bens, detalhadas por produtos, são avaliadas "
+            "a preços CIF” quanto que “o total é registrado a FOB” — a banca dividiu o mesmo parágrafo em dois "
+            "itens.",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " O “sempre” costuma denunciar erro, mas aqui "
+                       "é a regra do manual: o total é FOB. O item parece contradizer a ideia de importações a "
+                       "CIF, que vale só para o detalhamento por produto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No SCN, as importações de bens, detalhadas por produtos, são avaliadas a preços CIF.”</i> → "
+            "CERTO",
+            "<i>“No SCN, o total das importações de bens é registrado a preços CIF, incluindo frete e "
+            "seguro.”</i> → ERRADO (troca de conceito: o total é FOB, após o ajuste global)",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": ["todos", "sempre"], "dificuldade": 3,
+        "comentario_fonte": ("Comentários de professores (Jetro Coutinho e outros) citando a nota metodológica "
+                             "do IBGE: detalhe por produto a CIF, dedução global de frete e seguro, total a FOB."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_2022],
+    },
+    # ------------------------------------------------------------------ E1-0416
+    {
+        "id": "ECO-E1-0416-1", "fonte_ref": "E1-0416", "destino": "17", "subtema": H2["scn"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2022, "cacd": False,
+        "errei": False,
+        "comando": CMD_IBGE,
+        "rotulo_item": "Item",
+        "assertiva": ("Os usos são transações que reduzem o saldo de um setor institucional, enquanto os recursos "
+                      "são transações que aumentam seu saldo. Algumas transações podem ser apenas recurso dos "
+                      "setores institucionais, como a produção, por exemplo, ou apenas uso, como o consumo "
+                      "intermediário. Outras são registradas tanto nos usos quanto nos recursos, como os juros."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os <u>usos</u> são transações que <u>reduzem</u> o saldo de um setor institucional, "
+                      "enquanto os <u>recursos</u> são transações que <u>aumentam</u> seu saldo. Algumas "
+                      "transações podem ser apenas recurso dos setores institucionais, como a produção, por "
+                      "exemplo, ou apenas uso, como o consumo intermediário. Outras são registradas tanto nos "
+                      "usos quanto nos recursos, como os juros."),
+        "poucas": ("Nas " + azb("Contas Econômicas Integradas") + ", " + azb("recursos") + " (à direita) "
+                   "aumentam o saldo e " + azb("usos") + " (à esquerda) o reduzem. Produção é só recurso; "
+                   "consumo intermediário, só uso; juros, ambos."),
+        "destrinchando": [
+            "Usos e recursos substituem o par débito/crédito da contabilidade empresarial. Em cada conta, "
+            + vd("saldo = recursos − usos") + ", e o saldo de uma conta abre a seguinte (valor adicionado → "
+            "excedente operacional → renda disponível → poupança).",
+            "<b>Só recurso</b>: a " + azb("produção") + " (conta de produção) — nenhum setor “usa” produção "
+            "nessa conta. <b>Só uso</b>: o " + azb("consumo intermediário") + " e o consumo final.",
+            "<b>Nos dois lados</b>: transações distributivas, como " + azb("juros") + ", dividendos e salários: "
+            "para quem paga é uso; para quem recebe, recurso. Uma família recebe juros da poupança e paga "
+            "juros do financiamento imobiliário.",
+            "As CEI, base do SCN do " + rx("IBGE") + ", trazem em colunas os setores institucionais (empresas "
+            "não financeiras, financeiras, governo, famílias, ISFLSF), o resto do mundo — visto do ponto de "
+            "vista do resto do mundo — e bens e serviços; nas linhas, as transações e saldos.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Trecho copiado do relatório metodológico do IBGE. A "
+                       "banca poderia inverter usos e recursos ou trocar os exemplos (produção como uso); os "
+                       "três exemplos estão no lugar certo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os usos são transações que aumentam o saldo de um setor institucional, enquanto os recursos o "
+            "reduzem.”</i> → ERRADO (inversão)",
+            "<i>“Os juros são registrados apenas como uso dos setores institucionais.”</i> → ERRADO (restrição "
+            "indevida: são uso de quem paga e recurso de quem recebe)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": ("Trecho do IBGE (Sistema de Contas Nacionais, vol. 24): CEI com usos à esquerda e "
+                             "recursos à direita; produção como recurso, consumo intermediário como uso, juros nos "
+                             "dois lados."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [ALERTA_2022, "duplicata: comentário de E3-L00240 fundido"],
+    },
+    # ------------------------------------------------------------------ E1-0418
+    {
+        "id": "ECO-E1-0418-1", "fonte_ref": "E1-0418", "destino": "17", "subtema": H2["scn"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Nidi", "ano": 2023, "cacd": False,
+        "errei": True,
+        "comando": CMD_SCN,
+        "rotulo_item": "Item",
+        "assertiva": ("No formato vigente do Sistema de Contas Nacionais, as estimativas efetuadas sobre o "
+                      "desempenho da economia são apresentadas por meio de dois tipos de classificação. A "
+                      "classificação por tipo de atividade econômica é expressa nas Contas Econômicas Integradas e "
+                      "a classificação por setor institucional aparece nas Tabelas de Recursos e Usos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No formato vigente do Sistema de Contas Nacionais, as estimativas efetuadas sobre o "
+                       "desempenho da economia são apresentadas por meio de dois tipos de classificação. A "
+                       "classificação por tipo de atividade econômica é expressa nas ")
+                    + vm("Contas Econômicas Integradas") + az(" e a classificação por setor institucional aparece "
+                                                               "nas ")
+                    + vm("Tabelas de Recursos e Usos") + az(".")),
+        "poucas": ("Está trocado: as " + azb("TRU") + " detalham a economia por " + vd("atividade e produto")
+                   + "; as " + azb("CEI") + ", por " + vd("setor institucional") + "."),
+        "destrinchando": [
+            "O SCN do " + rx("IBGE") + " tem dois blocos principais: as " + azb("Tabelas de Recursos e Usos "
+            "(TRU)") + " e as " + azb("Contas Econômicas Integradas (CEI)") + ".",
+            "<b>TRU</b>: ótica da produção e dos produtos. Mostram a oferta (produção + importação) e a "
+            "demanda (consumo intermediário + usos finais) de cada produto e a produção de cada "
+            + azb("atividade econômica") + " (agropecuária, indústrias, serviços). Servem de base à matriz "
+            "insumo-produto (" + oc("Leontief") + ").",
+            "<b>CEI</b>: ótica dos agentes. Encadeiam as contas (produção, renda, uso da renda, capital, "
+            "financeira) por " + azb("setor institucional") + ": empresas não financeiras, empresas "
+            "financeiras, administração pública, famílias, ISFLSF e resto do mundo.",
+            "Atalho: atividade é <b>o que</b> se produz (TRU); setor institucional é <b>quem</b> decide e "
+            "detém a renda (CEI). Uma mesma atividade (ex.: saúde) aparece em vários setores (hospital "
+            "público, privado, filantrópico).",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca cruzada dos dois quadros: as duas classificações "
+                       "existem, mas cada uma foi posta na tabela da outra. Lembre que a CEI é “integrada” "
+                       "justamente por reunir os setores institucionais."),
+        "modulos": [("🧠 Mnemônico", ["<b>TRU</b> = <b>T</b>ipo de atividade; <b>CEI</b> = <b>C</b>ada setor "
+                                      "<b>I</b>nstitucional."])],
+        "reescrita": ("No formato vigente do Sistema de Contas Nacionais, as estimativas efetuadas sobre o "
+                      "desempenho da economia são apresentadas por meio de dois tipos de classificação. A "
+                      "classificação por tipo de atividade econômica é expressa nas " + hl("Tabelas de Recursos e "
+                      "Usos") + " e a classificação por setor institucional aparece nas " + hl("Contas Econômicas "
+                      "Integradas") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Está trocado: TRU distribuem a produção por atividade econômica; CEI, por setor "
+                             "institucional; panorama do SCN do IBGE."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": fig_verso("image (142).png", "image (143).png", "image (144).png", "image (145).png",
+                                   "image (146).png", "image (147).png", "image (148).png", "image (149).png"),
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0419
+    {
+        "id": "ECO-E1-0419-1", "fonte_ref": "E1-0419", "destino": "17", "subtema": H2["pib"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Nidi", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": CMD_SCN,
+        "rotulo_item": "Item",
+        "assertiva": ("A Renda Nacional Bruta se diferencia do Produto Interno Bruto por acrescentar as "
+                      "remunerações dos fatores produtivos brasileiros fora do território e descontar a "
+                      "remuneração dos fatores produtivos estrangeiros. Apesar disso, não se refere ao total da "
+                      "renda disponível para consumo do país, devendo ainda considerar outras remessas de renda "
+                      "secundária, ou seja, sem contrapartida econômica."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A Renda Nacional Bruta se diferencia do Produto Interno Bruto por acrescentar as "
+                      "remunerações dos fatores produtivos brasileiros fora do território e descontar a "
+                      "remuneração dos fatores produtivos estrangeiros. Apesar disso, <u>não se refere ao total da "
+                      "renda disponível</u> para consumo do país, devendo ainda considerar outras remessas de "
+                      "<u>renda secundária</u>, ou seja, sem contrapartida econômica."),
+        "poucas": (vd("RNB = PIB + renda primária líquida do exterior") + "; " + vd("RDB = RNB + renda "
+                   "secundária líquida") + " (transferências correntes sem contrapartida). A renda disponível "
+                   "é um passo além da RNB."),
+        "destrinchando": [
+            azb("PIB") + " → " + azb("RNB") + ": soma-se a " + azb("renda primária") + " recebida do exterior "
+            "(salários, juros, lucros e dividendos de fatores de residentes lá fora) e subtrai-se a enviada "
+            "(fatores de não residentes aqui). O " + rx("Brasil") + ", com grande passivo externo, tem renda "
+            "primária líquida negativa: RNB < PIB.",
+            azb("RNB") + " → " + azb("renda disponível bruta (RDB)") + ": soma-se a " + azb("renda "
+            "secundária") + " líquida — transferências correntes <b>sem contrapartida</b>: remessas de "
+            "emigrantes às famílias, doações, ajuda internacional, contribuições a organismos.",
+            "A RDB se reparte entre " + vd("consumo final + poupança bruta") + ": é a medida da renda que o "
+            "país pode efetivamente gastar.",
+            "No balanço de pagamentos (" + azb("BPM6") + "), as duas contas aparecem nas transações correntes: "
+            "renda primária e renda secundária, ao lado de bens e serviços.",
+            "Nuance de redação: o critério do SCN é residência, não nacionalidade; “fatores brasileiros” deve "
+            "ser lido como fatores de residentes.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Duas frases corretas encadeadas: a primeira define a "
+                       "RNB; a segunda (“apesar disso”) lembra que falta a renda secundária para chegar à renda "
+                       "disponível. A banca erraria dizendo que a RNB já é a renda disponível."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A renda nacional bruta já incorpora as transferências unilaterais correntes recebidas do "
+            "exterior.”</i> → ERRADO (troca de conceito: isso é a renda disponível bruta)",
+            "<i>“Remessas de emigrantes às famílias no país de origem são registradas como renda "
+            "secundária.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Item correto: definição de renda nacional e de produto interno; relação do BP com "
+                             "a conta de operações com o resto do mundo das CEI; estrutura do BP."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": fig_verso("image (143).png", "image (150).png", "image (151).png", "image (152).png"),
+        "alertas": [],
+    },
 ]

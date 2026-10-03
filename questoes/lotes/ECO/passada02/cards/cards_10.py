@@ -1065,4 +1065,393 @@ CARDS = [
         "figuras_fonte": [FIG_PERDIDA("Untitled (95).jpeg")],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0477
+    {
+        "id": "ECO-E1-0477-1", "fonte_ref": "E1-0477", "destino": "27", "subtema": H2["pol"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ISLM,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo IS-LM, a situação caracterizada por uma baixa sensibilidade-juros do investimento "
+                      "indica uma alta eficácia da política monetária."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No modelo IS-LM, a situação caracterizada por uma baixa sensibilidade-juros do investimento "
+                       "indica uma ") + vm("alta") + az(" eficácia da política monetária.")),
+        "poucas": ("A política monetária só chega à renda se o investimento reagir aos juros. Com " + azb("baixa "
+                   "sensibilidade") + ", a IS é íngreme e a eficácia monetária é " + vd("baixa") + "."),
+        "destrinchando": [
+            "Cadeia da política monetária: ↑M → " + vd("i ↓") + " → " + vd("I ↑") + " → multiplicador → "
+            + vd("Y ↑") + ". Se o segundo elo é fraco (investimento pouco sensível), a cadeia se rompe: o juro "
+            "cai, mas a renda quase não muda.",
+            "Graficamente: baixa sensibilidade → " + azb("IS quase vertical") + ". O deslocamento da LM para a "
+            "direita escorrega pela IS íngreme, produzindo grande queda do juro e pequeno ganho de renda.",
+            "No mesmo cenário, a política " + azb("fiscal") + " é forte: a alta do juro que ela provoca quase não "
+            "expulsa investimento (pouco crowding out).",
+            "Situações reais com investimento pouco sensível aos juros: recessões profundas com capacidade ociosa "
+            "e pessimismo, crises de "
+            "confiança, incerteza elevada.",
+            vm("Regra-âncora: investimento insensível aos juros → monetária fraca, fiscal forte."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca “baixa” por “alta” na consequência. A confusão vem de misturar "
+                       "as duas sensibilidades: demanda por moeda pouco sensível (LM íngreme) dá monetária forte; "
+                       "investimento pouco sensível (IS íngreme) dá monetária fraca."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a situação caracterizada por uma baixa sensibilidade-juros da demanda por moeda indica uma alta "
+            "eficácia da política monetária.”</i> → CERTO",
+            "<i>“…a situação caracterizada por uma baixa sensibilidade-juros do investimento indica uma baixa "
+            "eficácia da política fiscal.”</i> → ERRADO (inversão: a fiscal fica mais eficaz)",
+        ])],
+        "reescrita": ("No modelo IS-LM, a situação caracterizada por uma baixa sensibilidade-juros do investimento "
+                      "indica uma " + hl("baixa") + " eficácia da política monetária."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Com baixa sensibilidade do investimento ao juro, a política monetária perde eficácia.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0471-1 (mesma relação, versão CERTA)"],
+    },
+    # ------------------------------------------------------------------ E1-0478
+    {
+        "id": "ECO-E1-0478-1", "fonte_ref": "E1-0478", "destino": "27", "subtema": H2["lm"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ISLM,
+        "rotulo_item": "Item",
+        "assertiva": "Na síntese neoclássica, a curva LM revela os pontos onde o investimento se iguala à poupança.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Na síntese neoclássica, a curva ") + vm("LM") + az(" revela os pontos onde o investimento "
+                                                                          "se iguala à poupança.")),
+        "poucas": ("I = S é a condição do mercado de bens: define a " + azb("IS") + ". A " + azb("LM") + " é o "
+                   "equilíbrio do mercado monetário (demanda por moeda = oferta de moeda)."),
+        "destrinchando": [
+            "O nome de cada curva já diz o que ela equilibra: " + azb("IS") + " = <i>Investment = Saving</i> "
+            "(mercado de bens); " + azb("LM") + " = <i>Liquidity preference = Money supply</i> (mercado "
+            "monetário).",
+            "IS: pares (Y, i) em que " + vd("I(i) = S(Y)") + " — ou, com governo, Y = C + I + G. Negativamente "
+            "inclinada: juro menor → mais investimento → mais renda.",
+            "LM: pares (Y, i) em que " + vd("L(Y, i) = M/P") + ". Positivamente inclinada: renda maior → mais "
+            "demanda por moeda → juro maior para equilibrar.",
+            "A interseção dá o equilíbrio simultâneo dos dois mercados. Na " + azb("síntese neoclássica") + " ("
+            + oc("Hicks") + ", 1937; " + oc("Hansen") + "), esse é o modelo de curto prazo com preços fixos; no "
+            "longo prazo, a flexibilidade de preços leva ao pleno emprego.",
+            vm("Regra-âncora: I = S → IS; L = M → LM."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca de curva pura: a definição está correta, mas pertence "
+                       "à IS. Basta decodificar as siglas para resolver."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na síntese neoclássica, a curva IS revela os pontos onde o investimento se iguala à "
+            "poupança.”</i> → CERTO",
+            "<i>“A curva LM representa os pares de renda e juros que equilibram o mercado de bens.”</i> → ERRADO "
+            "(troca de mercado: é o monetário)",
+        ])],
+        "reescrita": ("Na síntese neoclássica, a curva " + hl("IS") + " revela os pontos onde o investimento se "
+                      "iguala à poupança."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "I = S é a curva IS (mercado de bens); a LM é o equilíbrio do mercado monetário.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0479
+    {
+        "id": "ECO-E1-0479-1", "fonte_ref": "E1-0479", "destino": "27", "subtema": H2["lm"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ISLM,
+        "rotulo_item": "Item",
+        "assertiva": ("Na síntese neoclássica, a curva LM se desloca para a esquerda quando ocorre uma redução da "
+                      "oferta monetária."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na síntese neoclássica, a curva LM se desloca para a <u>esquerda</u> quando ocorre uma "
+                      "<u>redução</u> da oferta monetária."),
+        "poucas": ("Menos moeda com a mesma demanda exige " + vd("juros maiores") + " para cada nível de renda: a "
+                   + azb("LM") + " sobe, ou seja, vai para a esquerda."),
+        "destrinchando": [
+            "Equilíbrio monetário: M/P = L(Y, i). Se M cai, ao juro e à renda antigos há " + azb("excesso de "
+            "demanda por moeda") + ": o público vende títulos para obter liquidez, o preço dos títulos cai e o "
+            "juro sobe.",
+            "Para cada Y, o juro de equilíbrio fica mais alto (LM para cima); para cada i, só uma renda menor "
+            "equilibra o mercado monetário (LM para a esquerda) — é o mesmo deslocamento.",
+            "Efeito no IS-LM: " + vd("i ↑, Y ↓") + ". Na prática, é a contração monetária: venda de títulos pelo "
+            "Banco Central, alta do compulsório.",
+            "Detalhe: o que importa é a oferta <b>real</b>, M/P. Alta do nível de preços com M constante tem o "
+            "mesmo efeito de reduzir M — é assim que a LM gera a curva de demanda agregada negativamente "
+            "inclinada (P ↑ → M/P ↓ → i ↑ → Y ↓).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Relação de manual. A variante ERRADA mais comum troca a curva "
+                       "(“a IS se desloca”) ou o sentido (“para a direita”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na síntese neoclássica, a curva LM se desloca para a esquerda quando ocorre um aumento do nível "
+            "de preços, mantida a oferta nominal de moeda.”</i> → CERTO",
+            "<i>“Uma redução da oferta monetária desloca a curva IS para a esquerda.”</i> → ERRADO (curva trocada: "
+            "a moeda mexe na LM)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Redução da oferta de moeda gera excesso de demanda por moeda; juros mais altos "
+                            "restabelecem o equilíbrio; LM para a esquerda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0480
+    {
+        "id": "ECO-E1-0480-1", "fonte_ref": "E1-0480", "destino": "27", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Considere uma economia em que o Governo tem a intenção de expandir a renda. Julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em um modelo IS-LM, com demanda por moeda infinitamente elástica em relação à taxa de juros "
+                      "que já está muito baixa será preferível uma política fiscal expansionista a uma política "
+                      "monetária."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um modelo IS-LM, com demanda por moeda <u>infinitamente elástica</u> em relação à taxa de "
+                      "juros que já está muito baixa será preferível uma política <u>fiscal</u> expansionista a uma "
+                      "política monetária."),
+        "poucas": ("Demanda por moeda infinitamente elástica com juro muito baixo é a " + azb("armadilha da "
+                   "liquidez") + " (LM horizontal): a monetária não reduz mais o juro; a " + vd("fiscal") + " eleva "
+                   "a renda sem crowding out."),
+        "destrinchando": [
+            "O item descreve a armadilha sem nomeá-la: com juros já no piso, todos esperam alta futura (e perda "
+            "de capital nos títulos) e preferem reter moeda. Qualquer moeda adicional é " + azb("entesourada") + ".",
+            "Política monetária: ↑M não reduz o juro → não estimula o investimento → " + vd("Y não muda") + ". É "
+            "o “empurrar uma corda”.",
+            "Política fiscal: ↑G ou ↓T desloca a IS ao longo da LM plana; o juro não sobe, não há "
+            + azb("crowding out") + ", e a renda cresce pelo multiplicador inteiro.",
+            "No mundo real, bancos centrais presos no limite inferior de juros recorreram a instrumentos não "
+            "convencionais (compra maciça de ativos, o " + azb("<i>quantitative easing</i>") + ", e orientação "
+            "futura), além de estímulos fiscais — foi o debate pós-2008 e da pandemia.",
+            vm("Regra-âncora: armadilha da liquidez → fiscal eficaz, monetária ineficaz."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Descreve a armadilha pela definição técnica (demanda por moeda "
+                       "infinitamente elástica + juro baixo), sem citar o nome — o candidato precisa reconhecê-la. "
+                       "Trocar “fiscal” por “monetária” daria o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com demanda por moeda totalmente inelástica em relação à taxa de juros, será preferível uma "
+            "política fiscal expansionista.”</i> → ERRADO (caso clássico: LM vertical, fiscal ineficaz)",
+            "<i>“…nessas condições, a expansão monetária eleva a renda sem alterar a taxa de juros.”</i> → ERRADO "
+            "(a monetária não altera a renda)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["preferível"], "dificuldade": 1,
+        "comentario_fonte": "Armadilha da liquidez, LM horizontal: monetária ineficaz; fiscal expansionista é a "
+                            "única capaz de elevar a renda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0475-1 (armadilha da liquidez: fiscal com eficácia máxima)"],
+    },
+    # ------------------------------------------------------------------ E1-0481
+    {
+        "id": "ECO-E1-0481-1", "fonte_ref": "E1-0481", "destino": "27", "subtema": H2["lm"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_SINTESE,
+        "rotulo_item": "Item",
+        "assertiva": ("Um aumento da oferta monetária leva a curva LM a se deslocar para a esquerda, em face do "
+                      "aumento da renda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um aumento da oferta monetária leva a curva LM a se deslocar para a ")
+                    + vm("esquerda, em face do aumento da renda") + az(".")),
+        "poucas": ("Mais moeda desloca a " + azb("LM") + " para a " + vd("direita") + " (para baixo): a cada nível "
+                   "de renda corresponde um juro menor. A renda maior é <b>efeito</b> do novo equilíbrio, não causa "
+                   "do deslocamento."),
+        "destrinchando": [
+            "Com ↑M, ao juro e à renda antigos sobra moeda: o público compra títulos, o preço deles sobe e o "
+            + vd("juro cai") + ". Para cada Y, o juro de equilíbrio é menor → LM para baixo/direita.",
+            "Novo equilíbrio IS-LM: " + vd("i ↓ e Y ↑") + ". A renda sobe porque o juro menor estimula o "
+            "investimento.",
+            "Dois erros no item: (1) o sentido (esquerda); (2) a causa. Variação da renda não desloca a LM — "
+            "provoca " + azb("movimento ao longo") + " dela. Os deslocadores da LM são a oferta de moeda, o nível "
+            "de preços e mudanças autônomas na demanda por moeda.",
+            "Para fixar: LM se desloca com M/P (direita se M/P sobe); IS se desloca com os gastos autônomos e a "
+            "política fiscal (direita se G sobe ou T cai). Renda e juros são as variáveis dos eixos: mudam por "
+            "movimento ao longo das curvas.",
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " Inverte o sentido e cria um nexo causal falso: põe a "
+                       "renda como causa de um deslocamento provocado pela moeda. A expressão “em face do” é a "
+                       "pista do nexo enxertado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um aumento da oferta monetária desloca a curva LM para a direita, reduzindo a taxa de juros de "
+            "equilíbrio e elevando a renda.”</i> → CERTO",
+            "<i>“Um aumento da renda desloca a curva LM para cima.”</i> → ERRADO (variável do eixo: movimento ao "
+            "longo da LM)",
+        ])],
+        "reescrita": ("Um aumento da oferta monetária leva a curva LM a se deslocar para a "
+                      + hl("direita, reduzindo os juros para cada nível de renda") + "."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Aumento da oferta monetária desloca a LM para a direita: mais moeda a cada renda, "
+                            "juros de equilíbrio menores.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0482
+    {
+        "id": "ECO-E1-0482-1", "fonte_ref": "E1-0482", "destino": "27", "subtema": H2["is"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_ISLM,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo IS-LM, a curva IS é deslocada para a esquerda se, para uma dada taxa de juros, "
+                      "houver redução do nível do produto de equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo IS-LM, a curva IS é deslocada para a esquerda se, <u>para uma dada taxa de "
+                      "juros</u>, houver redução do nível do produto de equilíbrio."),
+        "poucas": ("Deslocar a " + azb("IS") + " para a esquerda é exatamente isso: a cada juro, o mercado de bens "
+                   "passa a se equilibrar com " + vd("produto menor") + " — por queda de algum gasto autônomo."),
+        "destrinchando": [
+            "A IS dá, para cada juro, o produto que equilibra o mercado de bens: Y = k(A − b·i), com k o "
+            "multiplicador e A os gastos autônomos (C₀, I₀, G, X, −T…).",
+            "O “para uma dada taxa de juros” é a chave: se o produto de equilíbrio cai <b>com o juro "
+            "constante</b>, o que mudou foi outra coisa que não o juro — e a curva inteira se desloca. Se o "
+            "produto caísse por alta do juro, seria " + azb("movimento ao longo") + " da IS.",
+            "Causas de IS para a esquerda: queda de G, alta de T, queda do consumo autônomo (pessimismo), queda "
+            "do investimento autônomo, queda das exportações; também uma redução do multiplicador.",
+            "Tamanho do deslocamento horizontal: " + vd("k × ΔA") + ". Com c = 0,8 e queda de 10 em G, a IS anda "
+            "50 para a esquerda.",
+            "No equilíbrio com a LM, a renda cai menos que esse deslocamento horizontal, porque os juros também "
+            "caem e amortecem a contração.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição operacional do deslocamento da IS. A banca testa a "
+                       "distinção deslocamento × movimento: sem o “para uma dada taxa de juros”, a frase ficaria "
+                       "ambígua."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A curva IS se desloca para a esquerda quando a elevação da taxa de juros reduz o produto de "
+            "equilíbrio.”</i> → ERRADO (movimento ao longo da IS, não deslocamento)",
+            "<i>“Uma redução dos gastos do governo desloca a IS para a esquerda.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["para uma dada taxa de juros"], "dificuldade": 1,
+        "comentario_fonte": "IS para a esquerda com redução da demanda agregada (gastos públicos, consumo): menor "
+                            "renda de equilíbrio para o mesmo juro.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [FIG_PERDIDA("Untitled (93).jpeg")],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0483
+    {
+        "id": "ECO-E1-0483-1", "fonte_ref": "E1-0483", "destino": "27", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_EMPREGO,
+        "rotulo_item": "Item",
+        "assertiva": "A política fiscal será eficaz se a demanda por moeda for perfeitamente inelástica à taxa de juros.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A política fiscal será ") + vm("eficaz") + az(" se a demanda por moeda for perfeitamente "
+                                                                     "inelástica à taxa de juros.")),
+        "poucas": ("Demanda por moeda inelástica aos juros = " + azb("LM vertical") + " (caso clássico): a "
+                   "expansão fiscal só eleva os juros e expulsa investimento na mesma medida — " + vd("crowding out "
+                   "total") + ", política fiscal ineficaz."),
+        "destrinchando": [
+            "Se a demanda por moeda depende só da renda (L = kY), o equilíbrio monetário M/P = kY fixa a renda em "
+            + vd("Y = M/(kP)") + ", qualquer que seja o juro: a LM é vertical. É a lógica da " + azb("teoria "
+            "quantitativa da moeda") + ".",
+            "A expansão fiscal desloca a IS para a direita, mas a renda não pode subir sem mais moeda. O juro "
+            "sobe até que a queda do investimento compense exatamente o gasto adicional: ΔI = −ΔG.",
+            "Resultado: a política fiscal muda só a " + azb("composição") + " do produto (mais gasto público, "
+            "menos investimento privado) e eleva os juros. Para o emprego, ineficaz.",
+            "No mesmo caso, a política monetária tem eficácia " + vd("máxima") + ": cada unidade de moeda "
+            "adicional vira renda. Por isso o caso clássico é a bandeira dos monetaristas.",
+            vm("Regra-âncora: LM vertical → fiscal ineficaz, monetária máxima; LM horizontal → o inverso."),
+        ],
+        "grafico_verso": "ECO-E1-0483-1-V1",
+        "dissecando": (cz("[inversão]") + " Troca o polo do caso extremo: “perfeitamente inelástica” leva ao caso "
+                       "clássico, não à armadilha da liquidez (infinitamente elástica). Pista: o item fala da "
+                       "elasticidade da <b>demanda por moeda</b>, que mexe na LM."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política fiscal será eficaz se a demanda por moeda for infinitamente elástica à taxa de "
+            "juros.”</i> → CERTO",
+            "<i>“Com demanda por moeda perfeitamente inelástica à taxa de juros, a política monetária é "
+            "ineficaz.”</i> → ERRADO (inversão: ela tem eficácia máxima)",
+        ])],
+        "reescrita": ("A política fiscal será " + hl("ineficaz") + " se a demanda por moeda for perfeitamente "
+                      "inelástica à taxa de juros."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["perfeitamente"], "dificuldade": 1,
+        "comentario_fonte": "Demanda por moeda inelástica: LM vertical; a política fiscal só eleva os juros, sem "
+                            "impacto sobre a renda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0484
+    {
+        "id": "ECO-E1-0484-1", "fonte_ref": "E1-0484", "destino": "27", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_EMPREGO,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma redução dos impostos indiretos será eficaz se a demanda por investimentos for "
+                      "perfeitamente inelástica à taxa de juros."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma redução dos impostos indiretos será <u>eficaz</u> se a demanda por investimentos for "
+                      "<u>perfeitamente inelástica</u> à taxa de juros."),
+        "poucas": ("Investimento insensível aos juros = " + azb("IS vertical") + ": a expansão fiscal (corte de "
+                   "impostos) eleva os juros, mas não expulsa investimento — " + vd("sem crowding out") + ", eficácia "
+                   "máxima."),
+        "destrinchando": [
+            "Corte de impostos é " + azb("política fiscal expansionista") + ": aumenta a renda disponível (ou "
+            "reduz preços ao consumidor) e eleva o consumo → a IS se desloca para a direita.",
+            "Com investimento perfeitamente inelástico aos juros, a demanda agregada não depende de i: a IS é "
+            "vertical. O deslocamento leva a renda para a direita pelo multiplicador inteiro; o juro sobe (a LM "
+            "positivamente inclinada exige isso), mas essa alta não reduz o investimento.",
+            "Logo, o " + azb("crowding out") + " é nulo e a política fiscal tem eficácia máxima — o mesmo "
+            "resultado da armadilha da liquidez, por outro caminho (lá o juro não sobe; aqui sobe sem efeito).",
+            "Contraponto: com IS vertical, a política " + azb("monetária") + " é ineficaz, pois reduz juros que o "
+            "investimento ignora.",
+            "Ressalva fora do modelo: o efeito do corte de impostos é menor que o de um aumento equivalente de "
+            "gasto, porque parte da renda liberada é poupada (multiplicador dos tributos = c/(1 − c), menor que "
+            "1/(1 − c)).",
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Junta dois conceitos (instrumento fiscal + "
+                       "elasticidade do investimento) e pede a conclusão. Pode parecer estranho que “inelástico” "
+                       "favoreça a política, mas é a sensibilidade do investimento que gera o crowding out."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma redução dos impostos indiretos será ineficaz se a demanda por moeda for perfeitamente "
+            "inelástica à taxa de juros.”</i> → CERTO",
+            "<i>“Uma expansão monetária será eficaz se a demanda por investimentos for perfeitamente inelástica à "
+            "taxa de juros.”</i> → ERRADO (IS vertical: monetária ineficaz)",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": ["perfeitamente"], "dificuldade": 2,
+        "comentario_fonte": "Investimento inelástico ao juro: a alta dos juros provocada pela expansão fiscal não "
+                            "reduz o investimento; política fiscal mais eficaz.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0485
+    {
+        "id": "ECO-E1-0485-1", "fonte_ref": "E1-0485", "destino": "27", "subtema": H2["pol"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Acerca da política fiscal em uma economia fechada, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em uma economia fechada, que esteja operando abaixo do pleno emprego, o formulador de "
+                      "política econômica que pretenda expandir o nível de renda deve reduzir os gastos do "
+                      "governo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em uma economia fechada, que esteja operando abaixo do pleno emprego, o formulador de "
+                       "política econômica que pretenda expandir o nível de renda deve ") + vm("reduzir")
+                    + az(" os gastos do governo.")),
+        "poucas": ("Cortar gastos é " + azb("política fiscal contracionista") + ": desloca a IS para a esquerda e "
+                   "reduz a renda. Para expandi-la, o caminho fiscal é " + vd("aumentar G") + " (ou reduzir "
+                   "tributos)."),
+        "destrinchando": [
+            "No modelo keynesiano, abaixo do pleno emprego a renda é limitada pela " + azb("demanda efetiva") + ". "
+            "G é componente direto da demanda: ↓G → ↓Y pelo multiplicador; ↑G → ↑Y.",
+            "No IS-LM: ↑G desloca a IS para a direita → " + vd("Y ↑") + " e i ↑ (com algum crowding out). ↓G faz "
+            "o oposto: Y ↓ e i ↓.",
+            "Alternativas para expandir a renda: corte de tributos (multiplicador menor que o do gasto), aumento "
+            "de transferências, ou política monetária expansionista (↑M, LM para a direita).",
+            "Nuance de debate: a tese da " + azb("contração fiscal expansionista") + " (" + oc("Giavazzi") + " e "
+            + oc("Pagano") + ", 1990; " + oc("Alesina") + ") sustenta que ajustes críveis podem estimular a "
+            "economia via expectativas e juros. É hipótese contestada e fora do modelo keynesiano-padrão que o "
+            "item pressupõe.",
+            vm("Regra-âncora: abaixo do pleno emprego, expansão = ↑G, ↓T ou ↑M."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca o sinal do instrumento. O contexto (“abaixo do pleno emprego”, "
+                       "“expandir a renda”) aponta claramente para política expansionista; o “deve reduzir” é o "
+                       "enxerto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…o formulador que pretenda expandir o nível de renda pode elevar os gastos do governo ou reduzir "
+            "os tributos.”</i> → CERTO",
+            "<i>“…o formulador que pretenda expandir a renda deve vender títulos públicos no mercado aberto.”</i> → "
+            "ERRADO (venda de títulos é contracionista)",
+        ])],
+        "reescrita": ("Em uma economia fechada, que esteja operando abaixo do pleno emprego, o formulador de política "
+                      "econômica que pretenda expandir o nível de renda deve " + hl("aumentar") + " os gastos do "
+                      "governo."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["deve"], "dificuldade": 1,
+        "comentario_fonte": "Reduzir gastos públicos é contracionista: diminui a demanda agregada, a renda e o "
+                            "emprego.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

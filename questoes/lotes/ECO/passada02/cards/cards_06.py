@@ -38,7 +38,6 @@ TAB_Q4 = {
                ["Donativos", "recebidos", "5"],
                ["Fretes", "pagos", "20"],
                ["Amortizações", "pagas", "10"]],
-    "fonte": "Dados hipotéticos.",
 }
 
 CMD_TEIX = ("Com base na sexta edição do Manual do Balanço de Pagamentos do Fundo Monetário Internacional (BPM6), "

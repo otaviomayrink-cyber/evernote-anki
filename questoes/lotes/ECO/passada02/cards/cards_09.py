@@ -1202,4 +1202,216 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00058
+    {
+        "id": "ECO-E2-L00058-1", "fonte_ref": "E2-L00058", "destino": "26", "subtema": H2["de"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_MULT,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo Keynes, mesmo em uma situação de renda zero, a economia ainda apresentaria um nível de "
+                      "consumo, determinado pelo consumo autônomo. Tal situação pode ser apresentada por uma curva "
+                      "positiva traçada em um ponto sobre o eixo vertical, acima da origem, em um gráfico consumo x "
+                      "renda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo Keynes, mesmo em uma situação de renda zero, a economia ainda apresentaria um nível "
+                      "de consumo, determinado pelo <u>consumo autônomo</u>. Tal situação pode ser apresentada por "
+                      "uma curva positiva traçada em um ponto sobre o eixo vertical, <u>acima da origem</u>, em um "
+                      "gráfico consumo x renda."),
+        "poucas": ("Na função " + vd("C = Ca + cY") + ", Ca > 0 é o consumo com renda zero: a reta do consumo "
+                   "corta o eixo vertical " + azb("acima da origem") + " e sobe com inclinação c (0 < c < 1)."),
+        "destrinchando": [
+            "Função consumo keynesiana: " + vd("C = Ca + cY") + ". " + azb("Ca") + " (consumo autônomo) é o "
+            "intercepto — o que se consome mesmo sem renda corrente, financiado por poupança passada, crédito ou "
+            "transferências; " + azb("c") + " (propensão marginal a consumir) é a inclinação.",
+            "Consequências: a " + azb("propensão média a consumir") + " (C/Y = Ca/Y + c) é maior que a marginal "
+            "e <b>cai</b> com a renda; com renda baixa, C > Y (despoupança). A função poupança espelha a do "
+            "consumo: S = −Ca + (1 − c)Y, que corta o eixo vertical <b>abaixo</b> da origem.",
+            "No gráfico com a reta de 45° (C = Y), o cruzamento com a função consumo marca o nível de renda em "
+            "que a poupança é zero; à esquerda dele há despoupança, à direita, poupança positiva.",
+            "Evidência: " + oc("Kuznets") + " mostrou que, no longo prazo, C/Y é aproximadamente constante — "
+            "contradição que motivou as teorias de " + oc("Friedman") + " (renda permanente, 1957) e "
+            + oc("Modigliani") + " (ciclo de vida). A função de Keynes descreve bem o <b>curto prazo</b>.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Descrição gráfica correta do intercepto. A redação “curva "
+                       "positiva traçada em um ponto sobre o eixo vertical” é desajeitada, mas significa reta "
+                       "crescente que parte de Ca > 0; o risco é confundir com a função poupança, que começa "
+                       "abaixo da origem."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo keynesiano, a função poupança parte de um ponto do eixo vertical acima da "
+            "origem.”</i> → ERRADO (troca de conceito: parte de −Ca, abaixo da origem)",
+            "<i>“Com consumo autônomo positivo, a propensão média a consumir é constante.”</i> → ERRADO (cai "
+            "com a renda)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Consumo autônomo persiste com renda zero; C = consumo autônomo + parcela dependente da "
+                             "renda; no gráfico, a curva começa acima da origem e é ascendente."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00079
+    {
+        "id": "ECO-E2-L00079-1", "fonte_ref": "E2-L00079", "destino": "26", "subtema": H2["de"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": ("Julgue a assertiva a seguir, sobre a teoria econômica clássica e suas críticas no contexto "
+                    "keynesiano e da ortodoxia econômica."),
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria keynesiana sugere que, em tempos de superprodução, o governo deve atuar como um super "
+                      "demandante, aumentando seus gastos para acelerar a demanda agregada através do multiplicador "
+                      "keynesiano, assim, evitando crises de superprodução e estabilizando a economia."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria keynesiana sugere que, em tempos de <u>superprodução</u>, o governo deve atuar como "
+                      "um <u>super demandante</u>, aumentando seus gastos para acelerar a demanda agregada através "
+                      "do multiplicador keynesiano, assim, evitando crises de superprodução e estabilizando a "
+                      "economia."),
+        "poucas": ("“Superprodução” em Keynes é " + azb("demanda efetiva insuficiente") + ": a oferta "
+                   "possível não encontra compradores. O governo cobre a lacuna gastando, e o "
+                   + azb("multiplicador") + " amplia o efeito."),
+        "destrinchando": [
+            "Para a ortodoxia clássica (Lei de Say), superprodução <b>geral</b> é impossível: toda oferta gera "
+            "renda que a compra. " + oc("Keynes") + " (e, antes, " + oc("Malthus") + " e " + oc("Marx")
+            + ", por caminhos distintos) admite crises em que a produção potencial excede a demanda — estoques "
+            "encalhados, demissões, capacidade ociosa.",
+            "Nesse quadro, o Estado pode atuar como demandante de última instância: obras públicas, compras, "
+            "transferências. O gasto vira renda, que vira consumo induzido: ΔY = ΔG/(1 − c).",
+            "“Superprodução”, aqui, é sinônimo de " + azb("hiato recessivo") + " (produto efetivo abaixo do "
+            "potencial), e não de “superaquecimento”. No superaquecimento, a recomendação keynesiana é a "
+            "oposta: conter gastos.",
+            "Exemplos históricos associados à lógica: o New Deal nos EUA (anos 1930, anterior à <i>Teoria "
+            "Geral</i>, mas lido depois nessa chave) e os pacotes fiscais de 2008–2009 e de 2020.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " A palavra “superprodução” induz a pensar em "
+                       "excesso de atividade e, portanto, em cortar gastos. Em Keynes, superprodução = sobra de "
+                       "oferta por falta de demanda — e a resposta é gastar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para a teoria keynesiana, em tempos de superprodução o governo deve cortar gastos para "
+            "equilibrar o orçamento.”</i> → ERRADO (receita pró-cíclica, oposta à keynesiana)",
+            "<i>“Para os clássicos, crises gerais de superprodução são impossíveis em razão da Lei de Say.”</i> "
+            "→ CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": ["deve"], "dificuldade": 1,
+        "comentario_fonte": ("Em superprodução, o governo é crucial; o multiplicador faz o gasto reverberar, "
+                             "absorvendo excedentes e evitando crises."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00293
+    {
+        "id": "ECO-E2-L00293-1", "fonte_ref": "E2-L00293", "destino": "26", "subtema": H2["de"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir, relativo ao modelo keynesiano de determinação da renda.",
+        "rotulo_item": "Item",
+        "assertiva": ("O “Paradoxo da Parcimônia” no modelo keynesiano indica que um aumento exógeno na propensão "
+                      "marginal a poupar de toda a sociedade leva a um aumento do investimento agregado e, "
+                      "consequentemente, a um maior nível de renda de equilíbrio no curto prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O “Paradoxo da Parcimônia” no modelo keynesiano indica que um aumento exógeno na propensão "
+                       "marginal a poupar de toda a sociedade leva a ") + vm("um aumento do investimento agregado")
+                    + az(" e, consequentemente, a um ") + vm("maior") + az(" nível de renda de equilíbrio no curto "
+                    "prazo.")),
+        "poucas": ("É o oposto: poupar mais = consumir menos → a " + azb("demanda agregada") + " cai, a renda de "
+                   "equilíbrio " + vd("cai") + " e, no fim, a poupança realizada não sobe (continua igual ao "
+                   "investimento)."),
+        "destrinchando": [
+            "No modelo keynesiano simples, o " + azb("investimento") + " é autônomo — depende de expectativas "
+            "(“animal spirits”) e juros, não da vontade de poupar. Logo, mais propensão a poupar não gera, por si, "
+            "mais investimento.",
+            "Encadeamento: s↑ (c↓) → consumo cai → vendas caem e estoques se acumulam → firmas cortam produção e "
+            "emprego → Y cai. Com o multiplicador 1/s menor, a nova renda é " + vd("Y = A/s") + ", mais baixa.",
+            "No equilíbrio, S = I. Se I é dado, a poupança agregada realizada volta ao <b>mesmo</b> valor; se I "
+            "depende da renda (investimento induzido), ela até <b>cai</b>. A tentativa coletiva de poupar "
+            "fracassa — " + azb("falácia da composição") + ".",
+            "Visão clássica (contraste): mais poupança → oferta de fundos à direita → juro cai → investimento "
+            "sobe. Keynes nega que o juro faça esse ajuste no curto prazo; quem se ajusta é a " + azb("renda")
+            + ".",
+            "Escopo: o paradoxo é de curto prazo e com capacidade ociosa. No longo prazo (Solow), poupar mais "
+            "eleva o capital e a renda per capita.",
+        ],
+        "grafico_verso": "ECO-E2-L00293-1-V1",
+        "dissecando": (cz("[inversão · nexo indevido]") + " O item cola no nome keynesiano o raciocínio clássico "
+                       "(S → I → Y). Dois sinais trocados: o investimento não sobe e a renda cai. 🔥 Paradoxo da "
+                       "parcimônia é tema recorrente, quase sempre cobrado invertido."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o paradoxo da parcimônia, um aumento da propensão a poupar reduz a renda de equilíbrio e "
+            "pode deixar inalterada a poupança agregada.”</i> → CERTO",
+            "<i>“O paradoxo da parcimônia vale no longo prazo, no modelo de Solow.”</i> → ERRADO (anacronismo de "
+            "modelo: em Solow, poupar mais eleva a renda)",
+        ])],
+        "reescrita": ("O “Paradoxo da Parcimônia” no modelo keynesiano indica que um aumento exógeno na propensão "
+                      "marginal a poupar de toda a sociedade leva a " + hl("uma queda do consumo e da demanda "
+                      "agregada") + " e, consequentemente, a um " + hl("menor") + " nível de renda de equilíbrio "
+                      "no curto prazo."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Várias respostas de IA concordantes: poupar mais reduz o consumo, a demanda e a renda; "
+                             "a poupança agregada pode ficar igual ou cair; o investimento depende de expectativas, "
+                             "não da poupança."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [
+            {"ref": "IMAGEM 029", "tipo_fonte": "TEXTO", "lado": "verso",
+             "acao": "absorvida no 📖 (s↑ → c↓ → multiplicador menor → renda menor)"},
+            {"ref": "IMAGEM 030", "tipo_fonte": "TABELA", "lado": "verso", "acao": "absorvida no 📖"},
+        ],
+        "alertas": ["quase_duplicata: ECO-E1-0360-1 (mesmo tema, outra fonte)"],
+    },
+    # ------------------------------------------------------------------ E2-L00348
+    {
+        "id": "ECO-E2-L00348-1", "fonte_ref": "E2-L00348", "destino": "26", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": "Julgue o item a seguir, relativo ao modelo keynesiano simples.",
+        "rotulo_item": "Item",
+        "assertiva": ("Assumindo C(Y) = Ca + cY, (I) e (G) autônomos e (0 &lt; c &lt; 1), a renda de equilíbrio é "
+                      "Y = (Ca + I + G)/(1 − c). Logo, o multiplicador pode ser reescrito como 1/(1 − c). Sendo (c) "
+                      "estável no curto prazo, as flutuações do nível de atividade decorrem primordialmente da "
+                      "volatilidade do investimento, o que justifica estabilizadores automáticos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Assumindo C(Y) = Ca + cY, (I) e (G) autônomos e (0 &lt; c &lt; 1), a renda de equilíbrio é "
+                      "Y = (Ca + I + G)/(1 − c). Logo, o multiplicador pode ser reescrito como 1/(1 − c). Sendo (c) "
+                      "estável no curto prazo, as flutuações do nível de atividade decorrem <u>primordialmente</u> "
+                      "da <u>volatilidade do investimento</u>, o que justifica estabilizadores automáticos."),
+        "poucas": ("Resultado canônico: " + vd("Y = (Ca + I + G)/(1 − c)") + ", multiplicador " + vd("1/(1 − c)")
+                   + ". Com c estável, o que oscila é o " + azb("investimento") + ", amplificado pelo "
+                   "multiplicador — daí os " + azb("estabilizadores automáticos") + "."),
+        "destrinchando": [
+            "Dedução: Y = C + I + G = Ca + cY + I + G → Y(1 − c) = Ca + I + G → " + vd("Y = (Ca + I + G)/(1 − c)")
+            + ". Cada R$ 1 de gasto autônomo eleva Y em 1/(1 − c); com c = 0,8, em R$ 5.",
+            "Por que o investimento? Para " + oc("Keynes") + ", ele depende de expectativas de longo prazo sobre "
+            "rendimentos incertos (" + azb("eficiência marginal do capital") + ", “" + azb("animal spirits")
+            + "”), que mudam bruscamente; o consumo segue a renda de forma estável (“lei psicológica "
+            "fundamental”). Choques de I, multiplicados, produzem o ciclo.",
+            azb("Estabilizadores automáticos") + ": mecanismos que, sem nova decisão de governo, sustentam a "
+            "demanda na queda e a freiam na alta — imposto de renda progressivo, seguro-desemprego, "
+            "transferências. No modelo, um imposto proporcional t reduz o multiplicador para "
+            + vd("1/[1 − c(1 − t)]") + ", amortecendo o impacto de cada choque de investimento.",
+            "Vantagem sobre a política discricionária: não sofrem as defasagens de reconhecimento, decisão e "
+            "implementação (aprovação de lei, licitação), que podem fazer o estímulo chegar tarde.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Junta três ideias corretas (fórmula, "
+                       "multiplicador, instabilidade do investimento) e fecha com uma implicação de política. O "
+                       "“primordialmente” protege o item; a fórmula escrita em linha costuma assustar quem "
+                       "errou."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…as flutuações do nível de atividade decorrem primordialmente da volatilidade do consumo, dado "
+            "que o investimento é estável.”</i> → ERRADO (inversão)",
+            "<i>“A introdução de um imposto proporcional à renda aumenta o multiplicador keynesiano.”</i> → "
+            "ERRADO (reduz: 1/[1 − c(1 − t)])",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["primordialmente"], "dificuldade": 2,
+        "comentario_fonte": ("Resultado canônico Y = (Ca + I + G)/(1 − c) e multiplicador 1/(1 − c); volatilidade "
+                             "vem do investimento; estabilizadores automáticos se justificam. Respostas de IA "
+                             "longas e concordantes."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [
+            {"ref": "IMAGEM 049", "tipo_fonte": "TEXTO", "lado": "verso",
+             "acao": "absorvida no 📖 (exemplo do multiplicador com c = 0,8)"},
+            {"ref": "IMAGEM 050", "tipo_fonte": "TABELA", "lado": "verso",
+             "acao": "absorvida no 📖 (consumo estável × investimento volátil)"},
+            {"ref": "IMAGEM 051", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto (fórmula no 📖)"},
+            {"ref": "IMAGEM 052", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto (fórmula no 📖)"},
+        ],
+        "alertas": ["texto_corrigido: fórmula da renda de equilíbrio estava fora de ordem na fonte (OCR: “a renda de "
+                    "equilíbrio é Logo… 𝑌= 𝐶𝑎+𝐼+𝐺 1−𝑐”); recomposta como Y = (Ca + I + G)/(1 − c)"],
+    },
 ]

@@ -1054,3 +1054,211 @@ CARDS += [
                     "ano exato"],
     },
 ]
+
+# ====================================================================== bloco 6 — Nidi/Jacqueline Bueno, Outubro/2024
+CARDS += [
+    # ------------------------------------------------------------------ E3-L00414
+    {
+        "id": "ECO-E3-L00414-1", "fonte_ref": "E3-L00414", "destino": "17", "subtema": H2["pib"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": True,
+        "comando": CMD_NIDI_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("A renda nacional é a soma dos salários, aluguéis, juros e lucros recebidos pelos fatores de "
+                      "produção, inclusive dos fatores que estão fora das fronteiras, e inclui ainda as "
+                      "transferências governamentais, como pensões e subsídios."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A renda nacional é a soma dos salários, aluguéis, juros e lucros recebidos pelos fatores de "
+                       "produção, inclusive dos fatores que estão fora das fronteiras, ") + vm("e inclui ainda")
+                    + az(" as transferências governamentais, como pensões e subsídios.")),
+        "poucas": ("A " + azb("renda nacional") + " soma só a " + azb("remuneração dos fatores") + " de "
+                   "residentes (dentro ou fora do país). Pensões e bolsas são " + vd("transferências") + ": "
+                   "redistribuem renda já gerada e não entram."),
+        "destrinchando": [
+            "A primeira parte está certa: renda nacional = salários + aluguéis + juros + lucros dos fatores "
+            "pertencentes a residentes, inclusive os que atuam no exterior (por isso “nacional”, e não "
+            "“interna”). Em sentido estrito, é o " + vd("PNL a custo de fatores") + ".",
+            "Transferências (aposentadorias, pensões, Bolsa Família, seguro-desemprego) não remuneram produção "
+            "corrente: o governo tira de quem produziu (tributos) e repassa. Somá-las contaria duas vezes a mesma "
+            "renda — na mão do contribuinte e na do beneficiário.",
+            "Onde as transferências entram: na " + azb("renda pessoal") + " (renda nacional − lucros retidos − "
+            "contribuições sociais + transferências) e na " + azb("renda disponível") + " (após impostos "
+            "diretos); no SCN, na distribuição secundária da renda, que gera a " + azb("renda disponível bruta")
+            + ".",
+            "Cuidado com os " + azb("subsídios") + ": na passagem de preços de mercado para custo de fatores eles "
+            "são <b>somados</b>, mas porque já estão embutidos na remuneração dos fatores das empresas "
+            "subsidiadas — não como renda adicional. Tratá-los como “transferência às famílias”, ao lado de "
+            "pensões, é parte do erro.",
+            vm("Regra-âncora: renda nacional = remuneração de fatores; transferência só entra na renda pessoal "
+               "ou disponível."),
+        ],
+        "dissecando": (cz("[meia-verdade]") + " Primeira oração correta e completa; o erro foi acrescentado no "
+                       "fim com “e inclui ainda”. Itens que terminam alongando uma definição correta merecem "
+                       "atenção redobrada ao enxerto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A renda pessoal disponível inclui as transferências do governo às famílias.”</i> → CERTO",
+            "<i>“A renda nacional exclui a renda dos fatores de residentes que atuam no exterior.”</i> → ERRADO "
+            "(confunde nacional com interna)",
+        ])],
+        "reescrita": ("A renda nacional é a soma dos salários, aluguéis, juros e lucros recebidos pelos fatores de "
+                      "produção, inclusive dos fatores que estão fora das fronteiras, " + hl("mas não inclui")
+                      + " as transferências governamentais, como pensões e subsídios."),
+        "tipo_erro": ["MEIA_VERDADE"], "moduladores": ["inclusive"], "dificuldade": 1,
+        "comentario_fonte": ("Renda nacional = remuneração dos fatores; transferências são redistribuição, gerariam "
+                             "dupla contagem; distinção renda nacional × pessoal × disponível. Uma reescrita da "
+                             "fonte restringe a renda nacional aos fatores “dentro das fronteiras” (incorreto)."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 581-584", "tipo_fonte": "TEXTO/TABELA", "lado": "verso",
+                           "acao": "absorvidas (conceitos de renda levados ao 📖)"}],
+        "alertas": ["qualidade_fonte: uma das reescritas de origem limita a renda nacional aos fatores “localizados "
+                    "dentro das fronteiras”, o que é o conceito de renda interna — descartada"],
+    },
+    # ------------------------------------------------------------------ E3-L00415
+    {
+        "id": "ECO-E3-L00415-1", "fonte_ref": "E3-L00415", "destino": "17", "subtema": H2["pm"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": True,
+        "comando": CMD_NIDI_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("O Produto Interno Bruto (PIB) a preços de mercado é obtido a partir do PIB a preços básicos, "
+                      "fazendo a subtração dos impostos indiretos que incidem sobre a produção e a venda e a soma dos "
+                      "subsídios concedidos à produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O Produto Interno Bruto (PIB) a preços de mercado é obtido a partir do PIB a preços "
+                       "básicos, fazendo a ") + vm("subtração") + az(" dos impostos indiretos que incidem sobre a "
+                       "produção e a venda e a ") + vm("soma") + az(" dos subsídios concedidos à produção.")),
+        "poucas": ("Sinais invertidos: " + vd("PIBpm = PIBpb + impostos sobre produtos − subsídios sobre "
+                   "produtos") + ". O preço de mercado (o que o comprador paga) fica acima do básico (o que o "
+                   "produtor recebe) por causa dos impostos."),
+        "destrinchando": [
+            azb("Preço básico") + ": o que o produtor recebe por unidade, sem os impostos sobre produtos e "
+            "incluindo os subsídios sobre produtos. " + azb("Preço de comprador") + " (de mercado): o que o "
+            "comprador paga, com impostos e sem o subsídio, que já baixou o preço.",
+            "Do produtor ao consumidor, o preço " + vd("sobe") + " com o imposto e " + vd("cai") + " com o "
+            "subsídio. Logo: preço de mercado = básico + impostos − subsídios. Exemplo: PIB básico 100, impostos "
+            "10, subsídios 2 → PIB de mercado " + vd("108") + ".",
+            "No SCN do IBGE, o valor adicionado é medido a preços básicos; o PIB resulta de " + vd("VA (preços "
+            "básicos) + impostos líquidos de subsídios sobre produtos") + ". Os “outros impostos sobre a "
+            "produção” (que não incidem sobre o produto, como IPTU de fábrica) já estão no preço básico.",
+            "Não confundir com " + azb("custo de fatores") + ", conceito mais antigo que exclui todos os impostos "
+            "indiretos, inclusive os que não incidem sobre produtos: custo de fatores ≤ preços básicos ≤ preços de "
+            "mercado (com impostos líquidos positivos).",
+            vm("Regra-âncora: para chegar a preços de mercado, soma impostos e subtrai subsídios."),
+        ],
+        "dissecando": (cz("[inversão]") + " As duas operações foram trocadas ao mesmo tempo, e a frase continua "
+                       "fluente. Teste rápido: o PIB a preços de mercado precisa ser <b>maior</b> que o básico "
+                       "quando os impostos superam os subsídios — a versão do item o faria menor."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O PIB a preços básicos é obtido subtraindo-se do PIB a preços de mercado os impostos sobre "
+            "produtos líquidos de subsídios.”</i> → CERTO",
+            "<i>“Num país em que os subsídios superam os impostos sobre produtos, o PIB a preços de mercado é "
+            "maior que o PIB a preços básicos.”</i> → ERRADO (seria menor)",
+        ])],
+        "reescrita": ("O Produto Interno Bruto (PIB) a preços de mercado é obtido a partir do PIB a preços básicos, "
+                      "fazendo a " + hl("soma") + " dos impostos indiretos que incidem sobre a produção e a venda e a "
+                      + hl("subtração") + " dos subsídios concedidos à produção."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Preço de mercado = preço básico + impostos − subsídios; a assertiva inverte os "
+                             "sinais; exemplo 100 + 10 − 2 = 108."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 585", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "texto (regra de sinais levada ao 📖)"}],
+        "alertas": ["texto_corrigido: “subsidios” → “subsídios” (acento, erro de digitação)"],
+    },
+    # ------------------------------------------------------------------ E3-L00416
+    {
+        "id": "ECO-E3-L00416-1", "fonte_ref": "E3-L00416", "destino": "17", "subtema": H2["ident"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": CMD_NIDI_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("O PIB é uma medida que contabiliza o valor total dos bens e serviços finais produzidos em um "
+                      "país durante um determinado período, excluindo as transações de bens intermediários para "
+                      "evitar a contagem dupla."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O PIB é uma medida que contabiliza o valor total dos bens e serviços <u>finais</u> produzidos "
+                      "em um país durante um determinado período, <u>excluindo as transações de bens "
+                      "intermediários</u> para evitar a contagem dupla."),
+        "poucas": ("Definição de manual: PIB = valor dos " + azb("bens e serviços finais") + " = soma dos "
+                   + azb("valores adicionados") + ". Incluir os intermediários contaria o mesmo insumo várias "
+                   "vezes."),
+        "destrinchando": [
+            "Cadeia trigo → farinha → pão: se o trigo vale 10, a farinha 25 e o pão 40, somar tudo (75) contaria o "
+            "trigo três vezes e a farinha duas. O PIB é " + vd("40") + ": o valor do bem final, ou a soma dos "
+            "valores adicionados (10 + 15 + 15).",
+            azb("Bem intermediário") + " é definido pelo <b>uso</b>, não pela natureza: farinha comprada pela "
+            "padaria é intermediária; a mesma farinha comprada pela família é bem final (consumo).",
+            "Equivalência das óticas: " + azb("produto") + " (Σ valor adicionado = VBP − consumo intermediário) = "
+            + azb("despesa") + " (C + I + G + X − M, só usos finais) = " + azb("renda") + " (remuneração dos "
+            "fatores + impostos líquidos).",
+            "Bens finais incluem os de capital (máquinas compradas pelas empresas, que são FBCF) e a variação de "
+            "estoques: insumo produzido e não usado no período entra como estoque, não some.",
+            "Também ficam fora do PIB transações que não são produção corrente: revenda de usados (só a margem do "
+            "revendedor entra), compra de ações e transferências.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição canônica. Variantes erradas incluem os intermediários "
+                       "(“valor total de todas as transações”) ou trocam “finais” por “de consumo”, esquecendo "
+                       "investimento e exportações."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O PIB corresponde à soma do valor bruto da produção de todos os setores da economia.”</i> → "
+            "ERRADO (inclui o consumo intermediário: dupla contagem)",
+            "<i>“Uma máquina adquirida por uma empresa para uso na produção é bem final e entra no PIB como "
+            "investimento.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Definição do PIB pela ótica do produto; exemplos farinha/pão e aço/carro; soma de "
+                             "valores adicionados; tabela de insumo-produto ilustrativa."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 586", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "cortada (tabela de insumo-produto ilustrativa com transcrição incompleta)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00417
+    {
+        "id": "ECO-E3-L00417-1", "fonte_ref": "E3-L00417", "destino": "17", "subtema": H2["ident"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": CMD_NIDI_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("O conceito de valor agregado, que é fundamental na contabilidade nacional, considera não apenas "
+                      "o valor dos bens e serviços finais, mas também as contribuições dos fatores de produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O conceito de valor agregado, que é fundamental na contabilidade nacional, considera não "
+                      "apenas o valor dos bens e serviços finais, mas também as <u>contribuições dos fatores de "
+                      "produção</u>."),
+        "poucas": ("" + azb("Valor agregado") + " = VBP − consumo intermediário: o valor novo criado em cada etapa, "
+                   "que remunera os " + azb("fatores de produção") + ". Somado na economia, iguala o valor dos bens "
+                   "finais."),
+        "destrinchando": [
+            "Em cada empresa: " + vd("VA = valor bruto da produção − consumo intermediário") + ". Madeireira vende "
+            "100 com 20 de insumos → VA 80; marcenaria transforma a madeira (100) em móveis de 300 → VA 200. "
+            "PIB = 80 + 200 = " + vd("280") + " (e não 400).",
+            "O VA de cada etapa é exatamente o que fica para pagar trabalho (salários), capital (lucros, juros), "
+            "terra (aluguéis) e governo (impostos líquidos sobre a produção). Por isso a ótica do produto (Σ VA) "
+            "coincide com a ótica da renda.",
+            "E Σ VA coincide com o valor dos bens finais (ótica da despesa): é a mesma “pizza” cortada de três "
+            "jeitos. Essa dupla face é o que o item descreve, de forma pouco técnica, como considerar o valor dos "
+            "bens finais “e também” as contribuições dos fatores.",
+            "Utilidade prática: o VA permite medir a contribuição de cada setor ao PIB (agropecuária, indústria, "
+            "serviços) sem dupla contagem; é também a base do " + azb("IVA") + ", imposto que incide só sobre o "
+            "valor adicionado em cada etapa.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Redação imprecisa (“não apenas… mas "
+                       "também”), mas sem afirmação falsa: o VA liga as óticas do produto e da renda. Em item "
+                       "conceitual frouxo, a banca de simulado tende ao CERTO se nada estiver objetivamente errado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O valor agregado de uma empresa corresponde ao valor bruto de sua produção.”</i> → ERRADO (falta "
+            "subtrair o consumo intermediário)",
+            "<i>“A soma dos valores agregados de todas as unidades produtivas residentes, mais os impostos "
+            "líquidos sobre produtos, corresponde ao PIB.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["não apenas", "mas também"],
+        "dificuldade": 1,
+        "comentario_fonte": ("VA = VBP − CI = remuneração dos fatores; soma dos VA = PIB; exemplos padaria e "
+                             "madeireira/marcenaria."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 586", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "cortada (tabela de insumo-produto ilustrativa com transcrição incompleta)"}],
+        "alertas": [],
+    },
+]

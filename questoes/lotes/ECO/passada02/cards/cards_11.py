@@ -1044,4 +1044,193 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: ECO-E2-L00295-1, ECO-E1-0872-1"],
     },
+    # ------------------------------------------------------------------ E2-L01352
+    {
+        "id": "ECO-E2-L01352-1", "fonte_ref": "E2-L01352", "destino": "27", "subtema": H2["is"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2022", "ano": 2022, "cacd": False, "errei": False,
+        "comando": CMD_GRAF,
+        "frente_figuras": ["ECO-E2-L01352-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Um aumento dos gastos autônomos deslocaria a curva de equilíbrio de bens e serviços para "
+                      "cima, o que, consequentemente, aumentaria a taxa de juros e a renda de equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Um aumento dos gastos autônomos deslocaria a <u>curva de equilíbrio de bens e serviços</u> "
+                      "para cima, o que, consequentemente, aumentaria a taxa de juros e a renda de equilíbrio."),
+        "poucas": ("A “curva de equilíbrio de bens e serviços” é a " + azb("IS") + ". Gasto autônomo maior a "
+                   "desloca para cima/direita; com a LM positivamente inclinada, " + vd("Y e i sobem") + "."),
+        "destrinchando": [
+            "A IS é o lugar dos pares (Y, i) com o mercado de bens em equilíbrio: Y = C(Y − T) + I(i) + G + NX. "
+            "Gastos autônomos são os componentes que não dependem da renda nem do juro: gasto público, consumo "
+            "e investimento autônomos, exportações.",
+            "Mais gasto autônomo eleva a demanda a cada juro: a IS se desloca horizontalmente em " + vd("ΔA / "
+            "(1 − c)") + " (multiplicador simples × choque). “Para cima” e “para a direita” descrevem o mesmo "
+            "deslocamento de uma curva decrescente.",
+            "Novo equilíbrio: a renda maior eleva a demanda por moeda; com oferta de moeda fixa, o juro sobe e "
+            "corta parte do investimento (" + azb("crowding-out parcial") + "). Por isso Y sobe menos que o "
+            "deslocamento horizontal da IS.",
+            "O efeito depende da LM: horizontal → Y sobe o deslocamento inteiro, i constante; vertical → só i "
+            "sobe, Y constante.",
+        ],
+        "grafico_verso": "ECO-E2-L01352-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " O item evita a sigla e descreve a IS pelo que ela representa "
+                       "(“curva de equilíbrio de bens e serviços”), apostando que o candidato a confunda com a "
+                       "LM. Identificada a curva, o resultado é o padrão da expansão fiscal com LM inclinada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um aumento dos gastos autônomos deslocaria a curva de equilíbrio do mercado monetário para "
+            "baixo…”</i> → ERRADO (curva trocada: gasto autônomo desloca a IS)",
+            "<i>“…o que aumentaria a renda de equilíbrio sem alterar a taxa de juros, qualquer que fosse a "
+            "inclinação da LM.”</i> → ERRADO (modulador absoluto: só com LM horizontal)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Aumento de gastos autônomos desloca a IS para cima, elevando renda e juros.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 233 (não transcrita nesta linha; mesma figura da questão)",
+                           "tipo_fonte": "GRÁFICO", "lado": "frente", "acao": "redesenhada"}],
+        "alertas": [ALERTA_233],
+    },
+    # ------------------------------------------------------------------ E2-L01353
+    {
+        "id": "ECO-E2-L01353-1", "fonte_ref": "E2-L01353", "destino": "27", "subtema": H2["pol"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2022", "ano": 2022, "cacd": False, "errei": False,
+        "comando": CMD_GRAF,
+        "frente_figuras": ["ECO-E2-L01352-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Uma compra de títulos, por parte da autoridade monetária, deslocaria a curva LM para cima "
+                      "(esquerda), o que provocaria um aumento da taxa de juros de equilíbrio e uma redução da "
+                      "renda da economia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma compra de títulos, por parte da autoridade monetária, deslocaria a curva LM para ")
+                    + vm("cima (esquerda)") + az(", o que provocaria ") + vm("um aumento") + az(" da taxa de "
+                                                                                                 "juros de "
+                                                                                                 "equilíbrio e ")
+                    + vm("uma redução") + az(" da renda da economia.")),
+        "poucas": ("Comprar títulos é " + azb("injetar moeda") + " (open market expansionista): a LM vai para "
+                   "baixo/direita, os juros " + vd("caem") + " e a renda " + vd("sobe") + "."),
+        "destrinchando": [
+            "No " + azb("open market") + ", o Banco Central paga os títulos que compra com moeda nova: a base "
+            "monetária e a oferta de moeda aumentam. A venda de títulos faz o contrário: retira moeda de "
+            "circulação.",
+            "Com mais moeda e a mesma demanda por moeda, o mercado monetário só se equilibra com juros menores a "
+            "cada nível de renda: a LM se desloca para " + vd("baixo/direita") + ".",
+            "Novo equilíbrio: " + vd("i ↓") + " estimula o investimento → " + vd("Y ↑") + ". A intensidade "
+            "depende das inclinações: LM inclinada e IS plana → política monetária muito eficaz; LM horizontal "
+            "(armadilha da liquidez) ou IS vertical → ineficaz.",
+            "Pelo lado do mercado de títulos: o Banco Central comprando eleva o preço dos títulos, e preço maior "
+            "de título é juro menor — a mesma conclusão, por outro caminho.",
+            vm("Regra-âncora: compra de títulos = expansão monetária = LM para baixo/direita."),
+        ],
+        "dissecando": (cz("[inversão]") + " Descreve com coerência interna o efeito de uma <b>venda</b> de títulos "
+                       "e o atribui à compra. Como tudo “fecha” (LM à esquerda → i↑, Y↓), a armadilha é não "
+                       "checar o ponto de partida: quem compra título paga em moeda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma venda de títulos pela autoridade monetária deslocaria a LM para a esquerda, elevando os "
+            "juros e reduzindo a renda.”</i> → CERTO",
+            "<i>“Uma compra de títulos deslocaria a curva IS para a direita.”</i> → ERRADO (curva trocada: é a "
+            "LM)",
+        ])],
+        "reescrita": ("Uma compra de títulos, por parte da autoridade monetária, deslocaria a curva LM para "
+                      + hl("baixo (direita)") + ", o que provocaria " + hl("uma redução") + " da taxa de juros de "
+                      "equilíbrio e " + hl("um aumento") + " da renda da economia."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Compra de títulos aumenta a liquidez: política monetária expansionista; LM para "
+                            "baixo (direita), juros caem e a renda sobe, ceteris paribus.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_233,
+        "alertas": [ALERTA_233,
+                    "quase_duplicata: ECO-E2-L01485-1, ECO-E1-0704-1",
+                    "nota_redacao: mesmo item usado no card de teste ECO-T06-1 (teste de gráficos), fora das "
+                    "notas definitivas"],
+    },
+    # ------------------------------------------------------------------ E2-L01354
+    {
+        "id": "ECO-E2-L01354-1", "fonte_ref": "E2-L01354", "destino": "27", "subtema": H2["pol"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2022", "ano": 2022, "cacd": False, "errei": False,
+        "comando": CMD_GRAF,
+        "frente_figuras": ["ECO-E2-L01352-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Uma diminuição da carga tributária deslocaria a curva IS para cima (direita) e provocaria um "
+                      "aumento da taxa de juros de equilíbrio e da renda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma diminuição da carga tributária deslocaria a curva IS para <u>cima (direita)</u> e "
+                      "provocaria um aumento da taxa de juros de equilíbrio e da renda."),
+        "poucas": ("Menos imposto → mais renda disponível → mais consumo: a " + azb("IS") + " vai para cima/"
+                   "direita, e com a LM inclinada " + vd("Y e i sobem") + "."),
+        "destrinchando": [
+            "Corte de impostos é política fiscal expansionista: eleva a renda disponível (Y − T) e o consumo a "
+            "cada nível de juros, deslocando a IS.",
+            "Multiplicador dos impostos: " + vd("ΔY = −c·ΔT / (1 − c)") + ", menor em módulo que o dos gastos "
+            "(" + vd("1 / (1 − c)") + "), porque parte do imposto devolvido é poupada. Daí o "
+            + azb("multiplicador do orçamento equilibrado") + " igual a 1 (no modelo simples, com imposto "
+            "autônomo).",
+            "Com a LM positivamente inclinada, a renda maior eleva a demanda por moeda e o juro; o juro maior "
+            "corta parte do investimento (crowding-out parcial).",
+            "Efeito sobre as contas públicas: o corte de impostos piora o resultado primário no curto prazo, "
+            "salvo se a renda crescer o bastante para recompor a arrecadação — hipótese otimista que a "
+            "literatura raramente confirma.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item de mecânica básica, com a curva certa, o sentido certo e os "
+                       "efeitos certos. A versão ERRADA mais comum troca a curva (“LM”) ou o sinal dos juros "
+                       "(“redução da taxa de juros”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma diminuição da carga tributária deslocaria a curva IS para a direita e provocaria redução da "
+            "taxa de juros e aumento da renda.”</i> → ERRADO (sinal trocado: os juros sobem)",
+            "<i>“Um aumento dos gastos públicos financiado por aumento igual de impostos autônomos eleva a "
+            "renda.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Redução da carga tributária desloca a IS para a direita e para cima; aumentam renda e "
+                            "juros.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": FIG_233,
+        "alertas": [ALERTA_233],
+    },
+    # ------------------------------------------------------------------ E2-L01355
+    {
+        "id": "ECO-E2-L01355-1", "fonte_ref": "E2-L01355", "destino": "27", "subtema": H2["ext"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2022", "ano": 2022, "cacd": False, "errei": False,
+        "comando": CMD_GRAF,
+        "frente_figuras": ["ECO-E2-L01352-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("No curto prazo, em uma situação de armadilha da liquidez, a política fiscal é ineficaz para "
+                      "alterar o nível de renda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No curto prazo, em uma situação de armadilha da liquidez, a política ") + vm("fiscal")
+                    + az(" é ineficaz para alterar o nível de renda.")),
+        "poucas": ("Na " + azb("armadilha da liquidez") + " a LM é horizontal: a política <b>monetária</b> é "
+                   "ineficaz e a <b>fiscal</b> tem " + vd("eficácia máxima") + " (sem crowding-out)."),
+        "destrinchando": [
+            "Com juros muito baixos, todos esperam que eles subam (e que os títulos percam valor): a demanda por "
+            "moeda torna-se " + azb("infinitamente elástica aos juros") + ". Toda moeda adicional é "
+            "entesourada, e a LM fica horizontal.",
+            "Política monetária: mais moeda não reduz juros que já não caem → Y não muda. Política fiscal: a IS "
+            "se desloca ao longo do trecho plano, os juros não sobem, não há " + azb("crowding-out") + " e o "
+            + azb("multiplicador keynesiano") + " opera por inteiro.",
+            "Origem: " + oc("Keynes") + " (<i>Teoria Geral</i>, 1936) descreveu a possibilidade; a formalização "
+            "veio com o IS-LM de " + oc("Hicks") + " (1937). O tema voltou com o Japão dos anos 1990 e o "
+            "pós-2008 (juros no piso).",
+            "Espelho: no " + azb("caso clássico") + " (LM vertical), a fiscal é totalmente ineficaz "
+            "(crowding-out completo) e a monetária, máxima.",
+            vm("Regra-âncora: LM horizontal → fiscal manda; LM vertical → monetária manda."),
+        ],
+        "grafico_verso": "ECO-E2-L01355-1-V1",
+        "dissecando": (cz("[troca de conceito · inversão]") + " Troca a política: a ineficácia na armadilha é da "
+                       "<b>monetária</b>. 🔥 Itens sobre casos extremos do IS-LM quase sempre testam a tabela de "
+                       "quatro casas (LM horizontal/vertical × fiscal/monetária)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na armadilha da liquidez, a política monetária é ineficaz para alterar a renda.”</i> → CERTO",
+            "<i>“No caso clássico, a política fiscal expansionista eleva a renda sem efeito deslocamento.”</i> → "
+            "ERRADO (inversão: no clássico o crowding-out é total)",
+        ])],
+        "reescrita": ("No curto prazo, em uma situação de armadilha da liquidez, a política " + hl("monetária")
+                      + " é ineficaz para alterar o nível de renda."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "LM horizontal: monetária ineficaz, fiscal com eficácia máxima; sem alta de juros nem "
+                            "crowding-out; multiplicador pleno.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_233,
+        "alertas": [ALERTA_233,
+                    "quase_duplicata: ECO-E2-L01443-1",
+                    "nota_redacao: mesmo item usado no card de teste ECO-T07-1 (teste de gráficos), fora das "
+                    "notas definitivas"],
+    },
 ]

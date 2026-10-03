@@ -1214,4 +1214,272 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00612
+    {
+        "id": "ECO-E2-L00612-1", "fonte_ref": "E2-L00612", "destino": "35", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_SIST,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o encaixe monetário dos bancos comerciais (reservas voluntárias e compulsórias) for nulo, "
+                      "o multiplicador monetário dependerá apenas da preferência do público por papel-moeda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o encaixe monetário dos bancos comerciais (reservas voluntárias e compulsórias) for "
+                      "<u>nulo</u>, o multiplicador monetário dependerá <u>apenas</u> da preferência do público "
+                      "por papel-moeda."),
+        "poucas": ("Com r = 0, " + vd("m = (1 + c)/(c + r)") + " vira " + vd("m = (1 + c)/c") + ": sobra só c, "
+                   "a preferência do público por papel-moeda."),
+        "destrinchando": [
+            "O multiplicador tem dois parâmetros de comportamento: " + azb("c") + " (público: PMPP/DV) e "
+            + azb("r") + " (bancos: reservas/DV, compulsórias + voluntárias). Zerado um, o outro determina m "
+            "sozinho.",
+            "Com r = 0, o único vazamento do circuito de crédito é o papel-moeda retido. Exemplo: c = 0,25 → "
+            "m = 1,25/0,25 = " + vd("5") + "; c = 0,5 → m = " + vd("3") + ".",
+            "Espelho: com c = 0 (ninguém retém cédulas), " + vd("m = 1/r") + " — o "
+            + azb("multiplicador bancário simples") + ", que depende só do encaixe.",
+            "Os dois zeros ao mesmo tempo (c = 0 e r = 0) fariam m tender ao infinito: sem vazamento algum, "
+            "um real de base sustentaria depósitos ilimitados. Por isso os casos-limite são só didáticos.",
+            "No mundo real, mesmo sem compulsório (caso de EUA, Canadá e Reino Unido para depósitos à vista), "
+            "os bancos mantêm reservas voluntárias para liquidação de pagamentos: r nunca é zero.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O “apenas”, que costuma denunciar ERRADO, aqui é "
+                       "verdadeiro por construção: com r = 0 só resta c na fórmula. Antes de reagir ao "
+                       "modulador, substitua na fórmula."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o público não retiver papel-moeda, o multiplicador dependerá apenas da taxa de "
+            "reservas.”</i> → CERTO",
+            "<i>“Se o encaixe for nulo, o multiplicador será igual a 1.”</i> → ERRADO (m = 1 ocorre com reserva "
+            "integral, r = 1, ou com c → ∞)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": "m = (1 + c)/(r + c); com r = 0, m = (1 + c)/c: depende só de c.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00613
+    {
+        "id": "ECO-E2-L00613-1", "fonte_ref": "E2-L00613", "destino": "35", "subtema": H2["dem"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_SIST,
+        "rotulo_item": "Item",
+        "assertiva": ("A elevação da taxa de juros de mercado tende a reduzir a demanda por moeda para fins de "
+                      "especulação, uma vez que o custo de oportunidade de reter moeda em vez de aplicá-la em "
+                      "ativos rentáveis aumenta."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A elevação da taxa de juros de mercado tende a <u>reduzir</u> a demanda por moeda para fins "
+                      "de especulação, uma vez que o <u>custo de oportunidade</u> de reter moeda em vez de "
+                      "aplicá-la em ativos rentáveis aumenta."),
+        "poucas": ("O juro é o " + azb("preço de ficar líquido") + ": juros maiores tornam mais caro reter moeda e "
+                   "reduzem a " + azb("demanda especulativa") + " (" + oc("Keynes") + ")."),
+        "destrinchando": [
+            "Os três motivos de " + oc("Keynes") + " (<i>Teoria Geral</i>, 1936): " + azb("transação") + " e "
+            + azb("precaução") + ", ligados à renda; " + azb("especulação") + ", ligado inversamente aos juros.",
+            "Mecanismo especulativo: preço do título e juros andam em sentido oposto. Com juros altos, o agente "
+            "espera que caiam (títulos vão se valorizar) e compra títulos — reduz a moeda retida. Com juros "
+            "baixos, espera alta (perda de capital nos títulos) e prefere ficar líquido.",
+            "Leitura de " + oc("Tobin") + " (1958): mesmo sem expectativa de reversão, a escolha de carteira "
+            "entre moeda (sem risco, sem rendimento) e títulos (com risco e rendimento) faz a demanda por "
+            "moeda cair com os juros, pelo custo de oportunidade.",
+            "Caso-limite: a " + azb("armadilha da liquidez") + " — com juros muito baixos, todos esperam alta, "
+            "a demanda especulativa fica infinitamente elástica e a LM, horizontal.",
+            vm("Regra-âncora: L = L₁(Y) + L₂(i), com L₁ crescente na renda e L₂ decrescente nos juros."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Relação de manual, com o “tende a” e o "
+                       "mecanismo certo (custo de oportunidade). A banca inverteria o sinal ou trocaria o motivo "
+                       "(“transação” no lugar de “especulação”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A elevação da renda reduz a demanda por moeda para transações.”</i> → ERRADO (sinal invertido)",
+            "<i>“Na armadilha da liquidez, a demanda especulativa por moeda é infinitamente elástica em relação "
+            "aos juros.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["tende a"], "dificuldade": 1,
+        "comentario_fonte": ("Demanda especulativa: escolha entre reter moeda e aplicar em títulos; juros maiores "
+                             "elevam o custo de oportunidade e reduzem a demanda."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00655
+    {
+        "id": "ECO-E2-L00655-1", "fonte_ref": "E2-L00655", "destino": "35", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MACRO,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o público decide substituir parte dos depósitos à vista por papel-moeda e a base "
+                      "monetária se mantenha constante, o multiplicador monetário será reduzido."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o público decide substituir parte dos depósitos à vista por papel-moeda e a base "
+                      "monetária se mantenha <u>constante</u>, o multiplicador monetário será <u>reduzido</u>."),
+        "poucas": ("Sacar depósitos para guardar cédulas eleva " + vd("c = PMPP/DV") + "; com r dado, "
+                   + vd("m = (1 + c)/(c + r) cai") + " e, com a base constante, o M1 também cai."),
+        "destrinchando": [
+            "Efeito imediato do saque: PMPP ↑ e DV ↓ no mesmo valor — o M1 não muda no primeiro instante. Mas o "
+            "banco perdeu reservas (o caixa saiu com o cliente).",
+            "Efeito em cadeia: com menos reservas, o banco precisa recompor o encaixe e reduz empréstimos; os "
+            "depósitos que nasceriam desses empréstimos não nascem. No novo equilíbrio, " + vd("M1 = m · B")
+            + " é menor, porque m caiu e B ficou igual.",
+            "Exemplo: r = 0,1; B = 100. Com c = 0,25: m ≈ 3,57 e M1 ≈ " + vd("357") + ". Com c = 0,5: m = 2,5 "
+            "e M1 = " + vd("250") + ".",
+            "Caso histórico: nas corridas bancárias da Grande Depressão (EUA, 1930–1933), c disparou e o M1 "
+            "despencou, mesmo com a base crescendo — análise clássica de " + oc("Friedman e Schwartz") + ".",
+            "Por isso o BC reage a pânicos com " + azb("prestamista de última instância") + ": injeta base para "
+            "compensar a queda do multiplicador.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " A cláusula “base constante” isola o efeito sobre m. Armadilha: "
+                       "achar que trocar depósito por cédula é neutro porque o M1 inicial não muda — o "
+                       "multiplicador, não o estoque instantâneo, é o que o item pergunta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o público substitui depósitos à vista por papel-moeda, os meios de pagamento permanecem "
+            "constantes após o ajuste do sistema bancário, pois o M1 inclui ambos.”</i> → ERRADO (só no instante "
+            "do saque; após o ajuste, M1 cai)",
+            "<i>“Uma corrida bancária tende a reduzir o multiplicador monetário.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Mais papel-moeda retido → menos recursos nos bancos para emprestar → multiplicador "
+                             "menor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: “papel- moeda” → “papel-moeda” (quebra de linha da fonte)"],
+    },
+    # ------------------------------------------------------------------ E2-L00722
+    {
+        "id": "ECO-E2-L00722-1", "fonte_ref": "E2-L00722", "destino": "35", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_POL,
+        "rotulo_item": "Item",
+        "assertiva": ("A moeda escritural, também chamada de papel-moeda, tem seu curso forçado por lei e não "
+                      "possui lastro em ouro ou em qualquer outro ativo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A moeda ") + vm("escritural, também chamada de papel-moeda,") + az(" tem seu curso forçado "
+                    "por lei e não possui lastro em ouro ou em qualquer outro ativo.")),
+        "poucas": (azb("Moeda escritural") + " = depósitos à vista (registro contábil nos bancos). "
+                   + azb("Papel-moeda") + " = cédulas emitidas pelo Banco Central. O item funde as duas; a "
+                   "descrição (curso forçado, sem lastro) é a da " + azb("moeda fiduciária") + "."),
+        "destrinchando": [
+            "Tipos de moeda pela forma: " + azb("metálica") + " (valor intrínseco), " + azb("papel-moeda")
+            + " (cédulas; historicamente conversível, hoje inconversível), " + azb("moeda escritural ou "
+            "bancária") + " (saldos em conta corrente movimentáveis por cheque, cartão de débito, TED, Pix).",
+            "Quem cria cada uma: o papel-moeda é emitido pelo " + rx("Banco Central do Brasil") + " "
+            "(monopólio de emissão); a moeda escritural é criada pelos bancos comerciais ao conceder crédito "
+            "(multiplicador).",
+            azb("Moeda fiduciária") + ": vale pela confiança e pela lei, não por lastro. Desde o fim de "
+            "Bretton Woods (" + vd("1971") + "), nenhuma grande moeda é conversível em ouro.",
+            "Curso legal e forçado se aplicam ao papel-moeda; a moeda escritural não tem curso forçado próprio "
+            "— é um direito contra o banco, conversível em papel-moeda à vista, e o credor pode recusar cheque.",
+            vm("Regra-âncora: M1 = papel-moeda em poder do público (manual) + depósitos à vista (escritural)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O aposto “também chamada de papel-moeda” iguala os dois "
+                       "componentes do M1; o resto da frase está certo para o papel-moeda e distrai. Pista: "
+                       "“escritural” vem de escrita, registro contábil."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A moeda escritural corresponde aos depósitos à vista nos bancos comerciais.”</i> → CERTO",
+            "<i>“O papel-moeda brasileiro é lastreado nas reservas internacionais do país.”</i> → ERRADO "
+            "(moeda fiduciária, sem lastro)",
+        ])],
+        "reescrita": ("A moeda " + hl("fiduciária, como o papel-moeda,") + " tem seu curso forçado por lei e não "
+                      "possui lastro em ouro ou em qualquer outro ativo."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Moeda escritural = depósitos à vista; papel-moeda = cédulas e moedas. O papel-moeda é "
+                             "que tem curso forçado e é fiduciário. Comentário fundido com o da duplicata "
+                             "E2-L00777."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E2-L00777 (mesmo item, comentário fundido)"],
+    },
+    # ------------------------------------------------------------------ E2-L00724
+    {
+        "id": "ECO-E2-L00724-1", "fonte_ref": "E2-L00724", "destino": "35", "subtema": H2["mult"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_POL,
+        "rotulo_item": "Item",
+        "assertiva": ("O multiplicador dos meios de pagamento reflete a capacidade do sistema bancário de aumentar "
+                      "a oferta de moeda a partir de uma base monetária inicial. Considere a fórmula M = mB, onde M "
+                      "é o saldo dos meios de pagamento, B é a base monetária e m é o multiplicador. O "
+                      "funcionamento do multiplicador dos meios de pagamento é diretamente proporcional à taxa de "
+                      "reservas mantidas pelos bancos comerciais."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O multiplicador dos meios de pagamento reflete a capacidade do sistema bancário de aumentar "
+                       "a oferta de moeda a partir de uma base monetária inicial. Considere a fórmula M = mB, onde "
+                       "M é o saldo dos meios de pagamento, B é a base monetária e m é o multiplicador. O "
+                       "funcionamento do multiplicador dos meios de pagamento é ") + vm("diretamente proporcional")
+                    + az(" à taxa de reservas mantidas pelos bancos comerciais.")),
+        "poucas": ("Reserva é dinheiro que o banco " + azb("não empresta") + ": quanto maior a taxa de reservas, "
+                   "menor a expansão de depósitos — " + vd("m varia na razão inversa de r") + "."),
+        "destrinchando": [
+            "Na forma simples (sem papel-moeda retido), " + vd("m = 1/r") + ": r = 10% → m = 10; r = 20% → "
+            "m = 5. Dobrar as reservas corta o multiplicador pela metade.",
+            "Na forma completa, " + vd("m = (1 + c)/(c + r)") + " (c = PMPP/DV): m continua decrescente em r "
+            "para qualquer c.",
+            "Taxa de reservas = compulsório (fixado pelo BC) + reservas voluntárias (prudência dos bancos). O "
+            + azb("compulsório") + " é instrumento de política monetária: elevá-lo contrai o crédito e o M1 "
+            "sem mexer na base.",
+            "As duas primeiras frases do item são definições corretas: M = m · B, e o multiplicador mede quanto "
+            "o sistema bancário amplia a base.",
+            vm("Regra-âncora: reservas ↑ → multiplicador ↓; papel-moeda retido ↑ → multiplicador ↓."),
+        ],
+        "dissecando": (cz("[inversão · meia-verdade]") + " Duas frases de definição corretas preparam a "
+                       "terceira, que inverte o sinal. Em itens longos, o erro costuma estar na última oração."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A redução da alíquota do compulsório sobre depósitos à vista eleva o multiplicador dos meios de "
+            "pagamento.”</i> → CERTO",
+            "<i>“O multiplicador é inversamente proporcional aos depósitos à vista.”</i> → ERRADO (sinal "
+            "invertido: depósitos ampliam m)",
+        ])],
+        "reescrita": ("O multiplicador dos meios de pagamento reflete a capacidade do sistema bancário de aumentar a "
+                      "oferta de moeda a partir de uma base monetária inicial. Considere a fórmula M = mB, onde M é "
+                      "o saldo dos meios de pagamento, B é a base monetária e m é o multiplicador. O funcionamento "
+                      "do multiplicador dos meios de pagamento é " + hl("inversamente relacionado") + " à taxa de "
+                      "reservas mantidas pelos bancos comerciais."),
+        "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Quanto maior a taxa de reservas, menor a capacidade de criar moeda escritural: relação "
+                             "inversa. Comentário fundido com o da duplicata E2-L00779."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E2-L00779 (mesmo item, comentário fundido)"],
+    },
+    # ------------------------------------------------------------------ E2-L00758
+    {
+        "id": "ECO-E2-L00758-1", "fonte_ref": "E2-L00758", "destino": "35", "subtema": H2["agr"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CN2,
+        "rotulo_item": "Item",
+        "assertiva": ("Os agregados monetários são uma medida importante no sistema monetário, pois estão "
+                      "relacionados à liquidez na economia. Nesse caso, os meios de pagamento (M1) correspondem à "
+                      "soma do papel moeda em circulação e dos depósitos à vista nos bancos comerciais, deduzido os "
+                      "valores em seu caixa."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os agregados monetários são uma medida importante no sistema monetário, pois estão "
+                      "relacionados à liquidez na economia. Nesse caso, os meios de pagamento (M1) correspondem à "
+                      "soma do papel moeda <u>em circulação</u> e dos depósitos à vista nos bancos comerciais, "
+                      "<u>deduzido os valores em seu caixa</u>."),
+        "poucas": (vd("M1 = PMPP + DV") + " e " + vd("PMPP = papel-moeda em circulação − caixa dos bancos") + "; "
+                   "logo " + vd("M1 = papel-moeda em circulação + DV − caixa dos bancos") + ", que é o que o "
+                   "item diz."),
+        "destrinchando": [
+            "Escada: papel-moeda emitido − caixa do BC = " + azb("papel-moeda em circulação") + "; em "
+            "circulação − caixa (encaixe em moeda corrente) dos bancos comerciais = " + azb("PMPP") + ".",
+            "Substituindo no M1: M1 = (PMC − caixa dos bancos) + DV = " + vd("PMC + DV − caixa dos bancos")
+            + ". A dedução final é exatamente o “deduzido os valores em seu caixa”.",
+            "Por que o caixa sai: cédulas nos cofres dos bancos não estão à disposição do público para "
+            "pagamentos. Contá-las e contar também os depósitos que elas lastreiam seria dupla contagem.",
+            "Os agregados medem a " + azb("liquidez") + " disponível ao público: M1 (liquidez imediata, sem "
+            "rendimento), M2, M3 e M4 (sucessivamente menos líquidos e mais remunerados).",
+            "Detalhe de português: o correto seria “deduzidos os valores” (concordância com “valores”); a "
+            "falha é da redação original e não afeta o julgamento.",
+        ],
+        "dissecando": (cz("[detalhe · literalidade]") + " O item parece errado à primeira vista — “papel-moeda "
+                       "em circulação” não é PMPP —, mas a dedução no fim da frase corrige a diferença. Leia "
+                       "até o último termo antes de julgar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O M1 corresponde à soma do papel-moeda em circulação e dos depósitos à vista.”</i> → ERRADO "
+            "(falta deduzir o caixa dos bancos)",
+            "<i>“O M1 corresponde ao papel-moeda emitido mais os depósitos à vista, deduzidos os caixas do BC e "
+            "dos bancos comerciais.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "LITERAL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "PME = PMC = PMPP + caixa dos bancos; M1 = PMPP + DV = PMC + DV − caixa dos bancos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 112", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"}],
+        "alertas": [],
+    },
 ]

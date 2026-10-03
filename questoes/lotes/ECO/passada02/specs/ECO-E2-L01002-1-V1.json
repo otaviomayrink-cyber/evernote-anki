@@ -1,0 +1,144 @@
+{
+ "id": "ECO-E2-L01002-1-V1",
+ "uso": "verso",
+ "legenda": "Ciclo da vida: a renda tem forma de corcova e zera na aposentadoria; o consumo fica estável. O jovem e o idoso despoupam (vermelho); o adulto em idade ativa poupa (verde). Transferir renda do jovem-adulto que poupa para o idoso que despoupa reduz a poupança agregada.",
+ "eixos": {
+  "x": "idade",
+  "y": "R$",
+  "xmax": 92,
+  "ymax": 7.5,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "R",
+   "tipo": "funcao",
+   "expr": "6 - 0.006*(x-48)**2",
+   "dominio": [
+    20,
+    65
+   ],
+   "familia": "demanda",
+   "rotulo": "renda",
+   "rotulo_em": 46,
+   "rotulo_desloc": [
+    0,
+    14
+   ]
+  },
+  {
+   "id": "R2",
+   "tipo": "pontos",
+   "pontos": [
+    [
+     65,
+     4.266
+    ],
+    [
+     65,
+     0.04
+    ],
+    [
+     85,
+     0.04
+    ]
+   ],
+   "familia": "demanda",
+   "rotulo": "renda = 0",
+   "rotulo_xy": [
+    80,
+    0.4
+   ],
+   "suave": false
+  },
+  {
+   "id": "C",
+   "tipo": "horizontal",
+   "y": 3.33,
+   "x": [
+    20,
+    85
+   ],
+   "familia": "oferta",
+   "rotulo": "consumo"
+  },
+  {
+   "id": "Apos",
+   "tipo": "vertical",
+   "x": 65,
+   "y": [
+    4.45,
+    6.8
+   ],
+   "familia": "referencia",
+   "rotulo": "aposentadoria"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "intersecao": [
+    "R",
+    "C"
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "tipo": "entre",
+   "sup": "C",
+   "inf": "R",
+   "x": [
+    20,
+    "A.x"
+   ],
+   "papel": "perda"
+  },
+  {
+   "tipo": "entre",
+   "sup": "R",
+   "inf": "C",
+   "x": [
+    "A.x",
+    65
+   ],
+   "papel": "ganho",
+   "rotulo": "poupa",
+   "rotulo_xy": [
+    46,
+    4.4
+   ]
+  },
+  {
+   "tipo": "entre",
+   "sup": "C",
+   "inf": 0,
+   "x": [
+    65,
+    85
+   ],
+   "papel": "perda",
+   "rotulo": "despoupa",
+   "rotulo_xy": [
+    75,
+    1.6
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    24.5,
+    1.05
+   ],
+   "texto": "despoupa",
+   "tamanho": 10
+  }
+ ],
+ "checar": [
+  "A.x < 30",
+  "R(48) > C(48)",
+  "R(22) < C(22)",
+  "R(64) > C(64)"
+ ]
+}

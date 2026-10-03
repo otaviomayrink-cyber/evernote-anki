@@ -984,4 +984,438 @@ CARDS = [
         "figuras_fonte": FIG_E1("image (139).png"),
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0460
+    {
+        "id": "ECO-E1-0460-1", "fonte_ref": "E1-0460", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Macro – Aula 5", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT_CLA,
+        "rotulo_item": "Item",
+        "assertiva": ("O produto e nível de emprego da economia são determinados pelo lado da demanda. Desta forma, "
+                      "uma política fiscal expansionista pode trazer maior crescimento econômico."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O produto e nível de emprego da economia são determinados pelo lado da ") + vm("demanda")
+                    + az(". Desta forma, uma política fiscal expansionista ") + vm("pode") + az(" trazer maior "
+                    "crescimento econômico.")),
+        "poucas": ("No modelo clássico, produto e emprego vêm do " + azb("lado da oferta") + " (trabalho, capital, "
+                   "tecnologia). A expansão fiscal só muda a composição do produto, via juros: "
+                   + azb("crowding out") + " total."),
+        "destrinchando": [
+            "Sequência clássica: com salários flexíveis, o mercado de trabalho fixa o emprego de pleno emprego; a "
+            "função de produção converte esse emprego em produto. A " + azb("oferta agregada") + " é vertical: a "
+            "demanda não tem como alterar Y.",
+            azb("Lei de Say") + " (" + oc("Jean-Baptiste Say") + "): a oferta cria sua própria demanda. Toda renda "
+            "gerada é gasta, diretamente ou via poupança que vira investimento pelo ajuste dos juros.",
+            "Expansão fiscal: mais G (ou menos T) reduz a poupança nacional, a oferta de fundos emprestáveis cai, "
+            "os juros sobem e o investimento privado cai na mesma medida — " + vd("ΔI = −ΔG") + ". O produto não "
+            "muda; muda quem o usa.",
+            "Pior para o crescimento: menos investimento hoje significa menos capital amanhã. A política fiscal "
+            "clássica que eleva o produto é a que mexe na <b>oferta</b> (infraestrutura, educação, incentivos).",
+            "A frase do item descreve " + oc("Keynes") + ": demanda efetiva determina produto e emprego, e o "
+            "gasto público pode tirar a economia do desemprego pelo multiplicador.",
+        ],
+        "dissecando": (cz("[troca de conceito · troca de ator]") + " O item atribui ao modelo clássico a tese "
+                       "central keynesiana (demanda determina o produto) e tira dela a conclusão keynesiana. Pista: "
+                       "o comando fixa o modelo clássico; qualquer frase com “determinado pela demanda” já cai."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo clássico, uma política fiscal expansionista eleva a taxa de juros e reduz o "
+            "investimento na mesma magnitude.”</i> → CERTO",
+            "<i>“No modelo clássico, a política monetária expansionista eleva o produto no curto prazo.”</i> → "
+            "ERRADO (neutralidade: só eleva preços)",
+        ])],
+        "reescrita": ("O produto e nível de emprego da economia são determinados pelo lado da " + hl("oferta")
+                      + ". Desta forma, uma política fiscal expansionista " + hl("não pode") + " trazer maior "
+                      "crescimento econômico."),
+        "tipo_erro": ["TROCA_CONCEITO", "TROCA_ATOR"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "Para os clássicos, produto e emprego são determinados exclusivamente pela oferta; a "
+                            "assertiva descreve a visão keynesiana.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0461
+    {
+        "id": "ECO-E1-0461-1", "fonte_ref": "E1-0461", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Macro – Aula 5", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT_CLA,
+        "rotulo_item": "Item",
+        "assertiva": ("Não existe desemprego involuntário, isto é, trabalhadores buscando emprego ao nível de salário "
+                      "real vigente que não encontram emprego, pois os preços e salários são perfeitamente "
+                      "flexíveis."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Não existe <u>desemprego involuntário</u>, isto é, trabalhadores buscando emprego ao nível de "
+                      "salário real vigente que não encontram emprego, pois os preços e salários são "
+                      "<u>perfeitamente flexíveis</u>."),
+        "poucas": ("Com salários flexíveis, qualquer excesso de oferta de trabalho derruba o " + azb("salário real")
+                   + " até que todos os que querem trabalhar a esse salário estejam empregados."),
+        "destrinchando": [
+            "Mercado de trabalho clássico: demanda das firmas (" + vd("w/P = PMgL") + ", decrescente) e oferta das "
+            "famílias (crescente no salário real). O salário real se ajusta até igualar as duas: é o "
+            + azb("pleno emprego") + ".",
+            azb("Desemprego involuntário") + " (definição de " + oc("Keynes") + "): gente disposta a trabalhar pelo "
+            "salário real vigente, ou até por menos, sem encontrar vaga. Exige salário acima do equilíbrio que não "
+            "cai — rigidez que o modelo clássico exclui por hipótese.",
+            "O que sobra no pleno emprego clássico: " + azb("desemprego voluntário") + " (quem não aceita o salário "
+            "vigente) e " + azb("friccional") + " (tempo de busca entre empregos). Ambos compatíveis com a "
+            "taxa natural.",
+            "Keynes contesta em duas frentes: salários nominais rígidos para baixo e, mesmo que caíssem, a queda "
+            "reduziria a renda e a demanda efetiva sem garantir o pleno emprego.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item define o conceito e dá a causa correta da sua ausência. "
+                       "O absoluto “não existe” é a hipótese do modelo, delimitado pelo comando. A banca costuma "
+                       "trocar “involuntário” por “friccional” ou “voluntário”, que existem mesmo no modelo "
+                       "clássico."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo clássico, não existe desemprego friccional, pois os salários são flexíveis.”</i> → "
+            "ERRADO (o friccional persiste: é tempo de busca)",
+            "<i>“Para os clássicos, todo desemprego observado no equilíbrio é voluntário ou friccional.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["perfeitamente"], "dificuldade": 1,
+        "comentario_fonte": "Para os clássicos, com salários flexíveis, não há desemprego involuntário: quem quer "
+                            "trabalhar, trabalha.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0463
+    {
+        "id": "ECO-E1-0463-1", "fonte_ref": "E1-0463", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Macro – Aula 5", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT_CLA,
+        "rotulo_item": "Item",
+        "assertiva": ("A economia sempre estará no pleno emprego, exceto se houver incerteza com relação ao futuro que "
+                      "faça os empresários demitirem trabalhadores e não realizarem investimentos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A economia sempre estará no pleno emprego") + vm(", exceto se houver incerteza com relação "
+                       "ao futuro que faça os empresários demitirem trabalhadores e não realizarem investimentos")
+                    + az(".")),
+        "poucas": ("A ressalva é " + oc("keynesiana") + ": incerteza radical e expectativas instáveis derrubando "
+                   "investimento e emprego. No modelo clássico, o pleno emprego não tem essa exceção."),
+        "destrinchando": [
+            "Clássicos: salários e preços flexíveis garantem pleno emprego; a " + azb("Lei de Say") + " impede "
+            "insuficiência de demanda; e a taxa de juros iguala poupança e investimento. Se o investimento cai, "
+            "o juro cai e o consumo ou outro investimento ocupa o espaço.",
+            "Os agentes clássicos têm informação suficiente para formar planos coerentes; o futuro não aparece "
+            "como fonte de crises de demanda.",
+            oc("Keynes") + " (<i>Teoria Geral</i>, 1936): o investimento depende da " + azb("eficiência marginal "
+            "do capital") + ", isto é, de expectativas sobre um futuro incerto e não calculável. Os "
+            + azb("“espíritos animais”") + " oscilam, o investimento despenca, a demanda efetiva cai e o "
+            "desemprego involuntário pode persistir.",
+            "A incerteza também alimenta a " + azb("preferência pela liquidez") + ": reter moeda é proteção contra "
+            "o desconhecido, o que eleva os juros e reforça a queda do investimento.",
+            vm("Regra-âncora: incerteza, expectativas e demanda efetiva = Keynes; flexibilidade e Lei de Say = "
+               "clássicos."),
+        ],
+        "dissecando": (cz("[troca de ator · meia-verdade]") + " A 1ª oração é a tese clássica; a exceção enxertada "
+                       "é argumento de Keynes. 🔥 Itens sobre escolas costumam colar a tese de uma escola ao "
+                       "mecanismo de outra: pergunte sempre “quem diria isso?”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Keynes, a incerteza quanto ao futuro pode deprimir o investimento e gerar desemprego "
+            "involuntário persistente.”</i> → CERTO",
+            "<i>“Para os clássicos, a queda do investimento gera desemprego até que o governo eleve seus "
+            "gastos.”</i> → ERRADO (o ajuste é pelos juros, sem intervenção)",
+        ])],
+        "reescrita": ("A economia sempre estará no pleno emprego<s>, exceto se houver incerteza com relação ao futuro "
+                      "que faça os empresários demitirem trabalhadores e não realizarem investimentos</s>"
+                      + hl(", pois a flexibilidade de preços, salários e juros reabsorve qualquer queda de "
+                           "investimento") + "."),
+        "tipo_erro": ["TROCA_ATOR", "MEIA_VERDADE"], "moduladores": ["sempre", "exceto"], "dificuldade": 1,
+        "comentario_fonte": "A incerteza sobre o futuro como causa do comportamento empresarial é argumento de "
+                            "Keynes; para os clássicos, há pleno emprego e vale a Lei de Say.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0816
+    {
+        "id": "ECO-E1-0816-1", "fonte_ref": "E1-0816", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True, "errei": False,
+        "comando": ("Considere uma economia descrita pelo sistema de equações a seguir, em tempo contínuo. A respeito "
+                    "dessa economia, julgue o item que se segue."),
+        "excerto": (
+            "<p>Função de produção agregada: Y = F(K, N), com F<sub>K</sub> &gt; 0, F<sub>N</sub> &gt; 0, "
+            "F<sub>KN</sub> &gt; 0, F<sub>NN</sub> &lt; 0 e F<sub>KK</sub> &lt; 0, em que F<sub>i</sub> é a "
+            "primeira derivada da função de produção com relação ao insumo i, e F<sub>ii</sub> é a segunda "
+            "derivada da função de produção com relação ao insumo i</p>"
+            "<p>Demanda de trabalho em termos reais: w/P = F<sub>N</sub>(K, N)</p>"
+            "<p>Função investimento: I = I(q(K, N, r − π) − 1), I′ &lt; 0, em que I′ é a derivada do investimento "
+            "em relação à taxa de juros</p>"
+            "<p>Função consumo: C = C(Y − T), 0 &lt; C′ &lt; 1, em que C′ é a derivada do consumo em relação à "
+            "renda disponível</p>"
+            "<p>Equilíbrio no mercado de bens: Y = C + I + G + δK (5)</p>"
+            "<p>Equilíbrio monetário: M/P = m(Y, r) (6)</p>"
+            "<p>Em que Y é o produto, N o emprego, K o estoque de capital, w o salário nominal, P o nível geral de "
+            "preços, I o investimento, q o Q de Tobin, r a taxa nominal de juros, π a taxa de inflação, C o "
+            "consumo, T os tributos autônomos, G os gastos autônomos do governo, m(Y, r) a demanda real por moeda, "
+            "M o estoque nominal de moeda e δK a taxa de depreciação do estoque de capital.</p>"
+            "<p>Considere, ainda, um regime em que: o governo (via Banco Central) controla exogenamente a quantidade "
+            "de moeda M; o estoque de capital é constante no tempo.</p>"),
+        "rotulo_item": "Item",
+        "assertiva": ("O sistema exibe a chamada dicotomia clássica: com o estoque de capital (K) dado, as variáveis "
+                      "reais (Y, L, w/P, r − π, C, I) são determinadas exclusivamente pelo bloco real (função de "
+                      "produção, mercado de trabalho, comportamento de consumo e investimento e política fiscal), "
+                      "sendo o nível de preços P ajustado de forma a compatibilizar o equilíbrio monetário "
+                      "M / P = m(Y, r), para um dado M."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O sistema ") + vm("exibe") + az(" a chamada dicotomia clássica: com o estoque de capital (K) "
+                       "dado, as variáveis reais (Y, L, w/P, r − π, C, I) ") + vm("são determinadas exclusivamente")
+                    + az(" pelo bloco real (função de produção, mercado de trabalho, comportamento de consumo e "
+                         "investimento e política fiscal), ")
+                    + vm("sendo o nível de preços P ajustado de forma a compatibilizar o equilíbrio monetário "
+                         "M / P = m(Y, r), para um dado M") + az(".")),
+        "poucas": ("O modelo só tem a <b>demanda</b> de trabalho, com " + azb("salário nominal w dado") + ". Então "
+                   "P altera w/P, o emprego e o produto: preços e moeda afetam variáveis reais, e não há "
+                   + azb("dicotomia clássica") + "."),
+        "destrinchando": [
+            "Conte as peças. Não há oferta de trabalho: a única equação do mercado de trabalho é " + vd("w/P = "
+            "F<sub>N</sub>(K, N)") + ", e w é um parâmetro. Dado w, cada nível de preços P fixa um salário real, "
+            "um emprego N e um produto Y = F(K, N). Isso é uma " + azb("oferta agregada positivamente inclinada")
+            + ": P ↑ → w/P ↓ → N ↑ → Y ↑.",
+            "As demais equações formam um " + azb("IS-LM") + ": consumo, investimento e equilíbrio de bens dão a "
+            "IS; M/P = m(Y, r) dá a LM. Com a OA, são três relações para três incógnitas (Y, r, P), resolvidas "
+            "<b>simultaneamente</b>. O lado real não se fecha sozinho.",
+            "Teste da moeda: ↑M desloca a LM e a demanda agregada; P sobe, w/P cai, as firmas contratam mais e Y "
+            "aumenta. A moeda <b>não é neutra</b> — exatamente o que a dicotomia nega.",
+            "Para haver dicotomia faltaria uma " + azb("oferta de trabalho") + " N<sup>s</sup>(w/P) com w "
+            "flexível: o mercado de trabalho fixaria w/P e N; a função de produção, Y; o mercado de bens, o juro "
+            "real; e só então a equação monetária determinaria P. É o modelo clássico de manual.",
+            "O item ainda menciona “mercado de trabalho” no bloco real, mas o sistema só especifica a demanda das "
+            "firmas — o lado que poderia fechar o bloco real não existe.",
+            vm("Regra-âncora: salário nominal dado + só demanda de trabalho = OA inclinada = moeda não neutra."),
+        ],
+        "dissecando": (cz("[troca de conceito · extrapolação]") + " O item descreve com perfeição a dicotomia de "
+                       "manual e a aplica a um sistema que não tem a peça que a sustenta (oferta de trabalho com "
+                       "salário flexível). O trabalho do candidato é inventariar as equações: w aparece como dado, "
+                       "e P entra no salário real. 🔥 O bloco de 2026 explorou o mesmo sistema em vários itens "
+                       "(neutralidade da moeda, choque de salário nominal, crowding out)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Como o modelo especifica apenas a demanda de trabalho, com salário nominal dado, variações do "
+            "nível de preços alteram o emprego e o produto no curto prazo.”</i> → CERTO",
+            "<i>“Um aumento permanente de M, com salário nominal dado, eleva apenas P, sem alterar Y nem N.”</i> → "
+            "ERRADO (a queda de w/P eleva N e Y)",
+            "<i>“Um aumento do salário nominal eleva P e reduz a renda de equilíbrio.”</i> → CERTO",
+        ])],
+        "reescrita": ("O sistema " + hl("não exibe") + " a chamada dicotomia clássica: com o estoque de capital (K) "
+                      "dado, as variáveis reais (Y, L, w/P, r − π, C, I) " + hl("não são determinadas "
+                      "exclusivamente") + " pelo bloco real (função de produção, mercado de trabalho, comportamento "
+                      "de consumo e investimento e política fiscal), " + hl("porque, com o salário nominal w dado, "
+                      "o nível de preços P — determinado em conjunto com o equilíbrio monetário M / P = m(Y, r) — "
+                      "altera o salário real, o emprego e o produto") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "EXTRAPOLACAO"], "moduladores": ["exclusivamente"], "dificuldade": 3,
+        "comentario_fonte": "",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: a equação da demanda de trabalho (w/P = F_N(K, N)) faltava na frente da fonte; "
+                    "restaurada a partir do enunciado de outro item do mesmo bloco da prova, que a reproduz",
+                    "nota_redacao: verso da fonte só com o gabarito; comentário redigido a partir do sistema de "
+                    "equações e dos gabaritos dos demais itens do bloco"],
+    },
+    # ------------------------------------------------------------------ E2-L00081
+    {
+        "id": "ECO-E2-L00081-1", "fonte_ref": "E2-L00081", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": ("Julgue o item a seguir como certo ou errado, com base nos conceitos de política econômica e de "
+                    "intervenção governamental nos contextos keynesiano e clássico."),
+        "rotulo_item": "Item",
+        "assertiva": ("Na teoria clássica, a flexibilidade dos preços e dos salários garante que uma economia se "
+                      "reequilibre de forma natural, sem necessidade de intervenção estatal, mesmo em tempos de "
+                      "crise, visto que essa flexibilidade impulsiona os ajustes necessários para alcançar o pleno "
+                      "emprego."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na teoria clássica, a <u>flexibilidade dos preços e dos salários</u> garante que uma economia "
+                      "se reequilibre de forma natural, sem necessidade de intervenção estatal, <u>mesmo em tempos "
+                      "de crise</u>, visto que essa flexibilidade impulsiona os ajustes necessários para alcançar o "
+                      "pleno emprego."),
+        "poucas": ("É o " + azb("autoajuste") + " clássico: salários, preços e juros flexíveis eliminam excessos de "
+                   "oferta e de demanda e levam a economia de volta ao pleno emprego, sem o Estado."),
+        "destrinchando": [
+            "Três mercados, três preços que se ajustam: no de trabalho, o " + azb("salário real") + " (desemprego "
+            "→ salário cai → contratações sobem); no de fundos emprestáveis, a " + azb("taxa de juros") + " (queda "
+            "do investimento → juro cai → poupança e investimento se igualam); no de bens, os " + azb("preços")
+            + " (excesso de oferta → preços caem).",
+            "Juntos, garantem a " + azb("Lei de Say") + ": não há insuficiência geral de demanda, e crises são "
+            "desajustes temporários que o próprio mercado corrige.",
+            "Daí o papel mínimo do Estado (laissez-faire): política fiscal só desloca investimento privado "
+            "(crowding out) e política monetária só mexe em preços (neutralidade).",
+            "A crítica de " + oc("Keynes") + " (1936) atacou essa premissa após a Grande Depressão: salários "
+            "nominais são rígidos para baixo; e, mesmo que caíssem, a deflação reduziria renda e demanda, podendo "
+            "aprofundar a crise. Daí a defesa de política fiscal ativa.",
+            "Herdeiros da tese clássica: monetaristas (" + oc("Friedman") + ") e novos clássicos (" + oc("Lucas")
+            + "), com expectativas racionais, retomam a ideia de que a economia tende ao produto natural.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Retrato fiel do pensamento clássico. O “mesmo em tempos de "
+                       "crise” e o “garante” parecem fortes, mas são a tese da escola, delimitada pelo “na teoria "
+                       "clássica”. A banca fabrica o ERRADO trocando o ator (“na teoria keynesiana…”) ou incluindo "
+                       "a necessidade de estímulo estatal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na teoria keynesiana, a flexibilidade de preços e salários garante o retorno ao pleno emprego sem "
+            "intervenção estatal.”</i> → ERRADO (troca de ator: é a tese clássica)",
+            "<i>“Para os clássicos, em crises, a política fiscal expansionista é necessária para restaurar o pleno "
+            "emprego.”</i> → ERRADO (contradiz o autoajuste)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["garante", "mesmo"], "dificuldade": 1,
+        "comentario_fonte": "Na teoria clássica, a flexibilidade de preços e salários garante o autoajuste da "
+                            "economia ao pleno emprego, sem intervenção estatal.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00292
+    {
+        "id": "ECO-E2-L00292-1", "fonte_ref": "E2-L00292", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Acerca do modelo clássico de determinação da renda, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo clássico, caracterizado pela flexibilidade de preços e salários, a curva de Oferta "
+                      "Agregada é vertical no nível de pleno emprego. Consequentemente, políticas fiscais "
+                      "expansionistas resultam apenas em aumento do nível de preços e da taxa de juros (crowding out "
+                      "total), sem afetar o produto real."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo clássico, caracterizado pela flexibilidade de preços e salários, a curva de Oferta "
+                      "Agregada é <u>vertical</u> no nível de pleno emprego. Consequentemente, políticas fiscais "
+                      "expansionistas resultam <u>apenas</u> em aumento do nível de preços e da taxa de juros "
+                      "(crowding out total), sem afetar o produto real."),
+        "poucas": ("Com a " + azb("OA vertical") + ", deslocar a demanda só move preços; nos fundos emprestáveis, os "
+                   "juros sobem até o investimento privado cair o mesmo que o gasto público subiu: "
+                   + azb("crowding out total") + "."),
+        "destrinchando": [
+            "Por que a OA é vertical: o produto depende só de trabalho, capital e tecnologia. Se P sobe, w sobe na "
+            "mesma proporção (salários flexíveis), w/P não muda, e o emprego e o produto também não.",
+            "Expansão fiscal: no mercado de bens, a demanda agregada se desloca para a direita e, com OA vertical, "
+            "só o nível de preços sobe. Nos fundos emprestáveis, o governo absorve poupança, o juro sobe e o "
+            "investimento privado cai: " + vd("ΔI = −ΔG") + ".",
+            "Resultado: Y inalterado, composição do produto alterada (mais G, menos I) e menor acumulação de "
+            "capital no futuro.",
+            "Nuance de modelo: na versão estrita, em que a demanda agregada é só a TQM (PY = MV), G nem desloca a "
+            "DA e o ajuste se dá todo pelos juros. A alta de P aparece quando a DA vem do IS-LM (ou quando V "
+            "responde aos juros). Nas duas leituras, o produto real não muda.",
+            "Contraste: com OA horizontal (keynesiano extremo), a expansão fiscal eleva Y sem pressão de preços; "
+            "com OA positivamente inclinada (curto prazo), divide-se entre Y e P.",
+        ],
+        "grafico_verso": "ECO-E2-L00292-1-V1",
+        "dissecando": (cz("[paráfrase fiel]") + " O item encadeia hipótese (flexibilidade), forma da OA (vertical) "
+                       "e consequência (crowding out total) sem erro. O “apenas” assusta, mas é exatamente o que a "
+                       "OA vertical implica. 🔥 A banca troca “vertical” por “horizontal” ou “crowding out total” "
+                       "por “parcial” para fabricar o ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo clássico, a política fiscal expansionista eleva o produto, ainda que com crowding out "
+            "parcial.”</i> → ERRADO (o crowding out é total)",
+            "<i>“No modelo clássico, a política monetária expansionista eleva apenas o nível de preços.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["apenas"], "dificuldade": 1,
+        "comentario_fonte": "O produto é determinado por fatores reais e a OA é vertical; a expansão fiscal eleva a "
+                            "DA, o ajuste ocorre via preços, e os juros sobem reduzindo o investimento na mesma "
+                            "proporção do gasto (crowding out).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00455
+    {
+        "id": "ECO-E2-L00455-1", "fonte_ref": "E2-L00455", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à teoria macroeconômica, julgue (C ou E) o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A taxa de juros, para o modelo clássico, é determinada pela produtividade marginal do capital e "
+                      "pela preferência intertemporal dos indivíduos; tal análise difere da perspectiva de Keynes, que "
+                      "analisa a taxa de juros como resultante da preferência por liquidez, dada a oferta de moeda."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A taxa de juros, para o modelo clássico, é determinada pela <u>produtividade marginal do "
+                      "capital</u> e pela <u>preferência intertemporal</u> dos indivíduos; tal análise difere da "
+                      "perspectiva de Keynes, que analisa a taxa de juros como resultante da <u>preferência por "
+                      "liquidez</u>, dada a oferta de moeda."),
+        "poucas": ("Clássicos: juro é variável <b>real</b>, fixada por investimento (" + azb("produtividade do "
+                   "capital") + ") e poupança (" + azb("paciência") + "). Keynes: juro é fenômeno <b>monetário</b>, "
+                   "fixado pela demanda e oferta de moeda."),
+        "destrinchando": [
+            "Visão clássica (" + oc("Fisher") + ", " + oc("Böhm-Bawerk") + "): no mercado de fundos emprestáveis, "
+            "a <b>demanda</b> vem do investimento, que depende da produtividade marginal do capital; a "
+            "<b>oferta</b> vem da poupança, que remunera quem adia consumo (" + azb("preferência intertemporal")
+            + "). O juro é o preço que iguala " + vd("S = I") + " — a recompensa pela espera.",
+            "Visão de " + oc("Keynes") + " (<i>Teoria Geral</i>, 1936): o juro é a recompensa por abrir mão da "
+            + azb("liquidez") + ", não por poupar. A demanda por moeda tem motivos transação, precaução e "
+            "especulação; dada a oferta de moeda (decidida pelo banco central), o juro iguala as duas.",
+            "Consequências: nos clássicos, poupança e investimento se igualam pelo juro, e a moeda é neutra. Em "
+            "Keynes, o juro vem do mercado monetário; S e I se igualam pela variação da <b>renda</b>, e a política "
+            "monetária afeta o lado real.",
+            "Síntese posterior: o " + azb("IS-LM") + " (" + oc("Hicks") + ", 1937) junta os dois lados — o juro sai "
+            "da interação entre o mercado de bens (IS) e o monetário (LM).",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " O item contrapõe corretamente as duas teorias. O risco é a troca "
+                       "de atores: a banca costuma atribuir a preferência pela liquidez aos clássicos ou a "
+                       "determinação real do juro a Keynes. Associe: <b>real</b> = clássico; <b>monetário</b> = "
+                       "Keynes."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para os clássicos, a taxa de juros é determinada pela oferta e pela demanda de moeda.”</i> → "
+            "ERRADO (troca de ator: é Keynes)",
+            "<i>“Para Keynes, a igualdade entre poupança e investimento é garantida por variações na renda, e não "
+            "na taxa de juros.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Clássicos: juro real fixado nos fundos emprestáveis por poupança (preferência "
+                            "intertemporal) e investimento (produtividade marginal do capital). Keynes: juro "
+                            "monetário, fixado por oferta de moeda e preferência pela liquidez.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E2-L00635 (mesmo item, mesma banca e ano, outro comando) fundido neste card"],
+    },
+    # ------------------------------------------------------------------ E2-L00923
+    {
+        "id": "ECO-E2-L00923-1", "fonte_ref": "E2-L00923", "destino": "25", "subtema": H2["cla"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": ("Acerca dos indicadores do mercado de trabalho, conceitos e tipos de desemprego, julgue o item a "
+                    "seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("O pagamento de um salário real de equilíbrio no modelo macroeconômico clássico permite afirmar "
+                      "que a economia continua em pleno emprego, isso é possível mesmo quando ocorre uma demora na "
+                      "aquisição de um novo emprego ou mesmo quando algumas pessoas preferem ficar desempregadas ao "
+                      "nível de salário vigente. Nessas condições pode-se afirmar que, para o modelo clássico, o "
+                      "mercado de trabalho garante o pleno emprego, mesmo com desemprego friccional e voluntário."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O pagamento de um salário real de equilíbrio no modelo macroeconômico clássico permite afirmar "
+                      "que a economia continua em pleno emprego, isso é possível mesmo quando ocorre uma demora na "
+                      "aquisição de um novo emprego ou mesmo quando algumas pessoas preferem ficar desempregadas ao "
+                      "nível de salário vigente. Nessas condições pode-se afirmar que, para o modelo clássico, o "
+                      "mercado de trabalho garante o pleno emprego, <u>mesmo com desemprego friccional e "
+                      "voluntário</u>."),
+        "poucas": (azb("Pleno emprego") + " não é desemprego zero: é ausência de desemprego " + azb("involuntário")
+                   + ". O friccional (busca) e o voluntário (recusa do salário vigente) convivem com ele."),
+        "destrinchando": [
+            "No modelo clássico, o salário real flexível iguala oferta e demanda de trabalho. Todos os que querem "
+            "trabalhar a esse salário estão empregados — essa é a definição de pleno emprego.",
+            azb("Desemprego friccional") + ": tempo de procura e de casamento entre vagas e trabalhadores (quem "
+            "mudou de cidade, quem acabou de se formar). Existe mesmo com o mercado em equilíbrio.",
+            azb("Desemprego voluntário") + ": quem não aceita trabalhar ao salário vigente. Não é falha do "
+            "mercado; é escolha.",
+            "Somados ao estrutural, compõem a " + azb("taxa natural de desemprego") + " (" + oc("Friedman") + ", "
+            "1968), compatível com o pleno emprego. O que fica de fora é o " + azb("desemprego cíclico") + " (ou "
+            "involuntário, na terminologia de " + oc("Keynes") + "), associado a recessões e a salários acima do "
+            "equilíbrio.",
+            "Ordem de grandeza " + rx("brasileira") + ": a taxa de desemprego da PNAD Contínua desceu para perto de "
+            + vd("6%") + " em 2025, mínima da série iniciada em 2012 — um mercado de trabalho próximo ou abaixo "
+            "das estimativas de taxa natural ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " Parece contraditório “pleno emprego com desemprego”, e é nisso "
+                       "que o item aposta. A chave é a definição: pleno emprego exclui só o involuntário. A banca "
+                       "fabrica o ERRADO incluindo o involuntário ou dizendo que pleno emprego exige desemprego "
+                       "nulo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo clássico, pleno emprego significa taxa de desemprego igual a zero.”</i> → ERRADO "
+            "(friccional e voluntário persistem)",
+            "<i>“Para o modelo clássico, o mercado de trabalho garante o pleno emprego, mesmo com desemprego "
+            "involuntário.”</i> → ERRADO (troca de conceito: o involuntário é justamente o que a flexibilidade "
+            "elimina)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["mesmo"], "dificuldade": 2,
+        "comentario_fonte": "Pleno emprego: todos que desejam trabalhar ao salário real de equilíbrio encontram "
+                            "emprego, com a taxa natural (friccional e estrutural), sem desemprego cíclico.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

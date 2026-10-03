@@ -1306,7 +1306,7 @@ CARDS += [
                    "“não são instrumento” é, no mínimo, ambíguo — e o tema estava fora do conteúdo do edital."),
         "condicionais": [("⚠️ Gabarito contestável",
                           "Anulação. Motivos prováveis: (1) a conta de capitais compensatórios pertence ao balanço "
-                          "de pagamentos, fora do escopo anunciado no enunciado original (contabilidade nacional e "
+                          "de pagamentos, fora do escopo anunciado no comando da prova (contabilidade nacional e "
                           "teoria monetária); (2) a redação é ambígua: os atrasados <b>integravam</b> os capitais "
                           "compensatórios como forma de financiamento do resultado, ainda que não fossem uma "
                           "operação voluntária da autoridade monetária. A descrição do mecanismo contábil está "
@@ -1322,7 +1322,7 @@ CARDS += [
             "credita-se “atrasados” nos compensatórios — um passivo que aumenta. Mostra que o déficit foi "
             "“financiado” pelo calote.",
             "Foi decisivo nos anos 1980, com a crise da dívida e a " + rx("moratória brasileira de 1987")
-            + ": os atrasados chegaram a ser a principal forma de fechar o balanço.",
+            + ": os atrasados ganharam peso relevante no fechamento do balanço.",
             "No " + azb("BPM6") + " (adotado pelo BCB em 2015), a lógica “acima × abaixo da linha” mudou: não há "
             "conta de compensatórios; reservas são ativos de reserva na conta financeira, e atrasados aparecem "
             "como itens de financiamento excepcional (outros investimentos — passivos).",
@@ -1368,9 +1368,9 @@ CARDS += [
                           "direto, que fica na conta financeira — subconta da “conta capital e financeira” do BPM5, "
                           "vigente em 2012. A leitura mais defensável seria CERTO. O ERRADO se apoia em dois "
                           "argumentos frágeis: a especificação (“conta financeira”, não “capital e financeira”) e a "
-                          "incompletude (o débito em rendas não é mencionado). Um comentário de origem chega a "
-                          "dizer que o crédito vai para “serviços e rendas”, o que inverte o lançamento: em rendas, "
-                          "o lucro de estrangeiros é <b>débito</b>.")],
+                          "incompletude (o débito em rendas não é mencionado). Atenção: situar o crédito em "
+                          "“serviços e rendas” inverteria o lançamento — em rendas, o lucro de estrangeiros é "
+                          "<b>débito</b>.")],
         "destrinchando": [
             "Lucro de empresa estrangeira no Brasil é " + azb("renda de investimento direto") + " paga a não "
             "residente (renda primária, débito), quer seja remetido, quer reinvestido. Se fosse remetido, a "
@@ -1397,8 +1397,8 @@ CARDS += [
             "→ ERRADO (o débito em renda o aumenta)",
         ])],
         "reescrita": ("Os lucros das empresas estrangeiras reinvestidos no Brasil são contabilizados como crédito "
-                      + hl("na conta financeira (investimento direto no país), com débito na conta de rendas das "
-                           "transações correntes,") + " do balanço de pagamentos brasileiro."),
+                      + hl("na conta financeira (investimento direto no país)") + " do balanço de pagamentos brasileiro"
+                      + hl(", com débito na conta de rendas das transações correntes") + "."),
         "tipo_erro": ["MEIA_VERDADE", "OUTRO"], "moduladores": [], "dificuldade": 3,
         "comentario_fonte": ("Comentários divergentes: um diz que o crédito vai para “serviços e rendas”; outro, "
                              "que vai para a conta financeira e não para a “conta capital e financeira” (mudança de "

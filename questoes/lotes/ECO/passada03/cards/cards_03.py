@@ -1084,7 +1084,7 @@ CARDS = [
             "firma gera " + azb("conhecimento que transborda") + " para as outras (learning-by-doing, à "
             + oc("Arrow") + "), e o capital agregado passa a ter rendimentos constantes; " + oc("Lucas") + " (1988) "
             "— " + azb("capital humano") + " acumulado sem rendimentos decrescentes; " + oc("Romer") + " (1990) — "
-            azb("ideias") + " não rivais, produzidas por P&D com fins de lucro.",
+            + azb("ideias") + " não rivais, produzidas por P&D com fins de lucro.",
             "No modelo " + azb("AK") + ", o “K” é capital em sentido amplo (físico + humano + conhecimento); é "
             "essa amplitude, e não o capital físico em si, que justifica rendimentos constantes.",
             "Vocabulário: " + azb("rendimentos marginais decrescentes") + " = um fator aumenta, os outros "

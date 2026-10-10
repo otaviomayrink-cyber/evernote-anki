@@ -1084,9 +1084,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 214 (E2-L01234)", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida"}],
-        "alertas": ["quase_duplicata: ECO-E2-L01234-1 (mesmo item em outra prova)", "duplicata: comentário fundido com o de E2-L01234",
-                    "nota_redacao: E2-L01234 vem de outra lista Nabuco (2023); pela regra de provas diferentes, "
-                    "poderia ter card próprio — a classificação o registrou como duplicata"],
+        "alertas": ["quase_duplicata: ECO-E2-L01234-1 (mesmo item em outra prova)"],
     },
     # ------------------------------------------------------------------ E2-L00640
     {

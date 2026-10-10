@@ -873,7 +873,8 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("No longo prazo, a adoção de barreiras comerciais, como, por exemplo, tarifas e quotas à "
                        "importação, conduz ao aumento da taxa de câmbio real, o que ")
-                    + vm("favorece o aumento das exportações líquidas da economia e a redução do déficit")
+                    + vm("favorece o aumento das") + az(" exportações líquidas da economia ")
+                    + vm("e a redução do") + az(" déficit")
                     + az(" em conta corrente na economia.")),
         "poucas": ("No longo prazo, " + vd("NX = S − I") + ", e tarifas não mudam nem S nem I. A proteção "
                    + azb("aprecia") + " o câmbio real o bastante para anular a queda das importações: o comércio "
@@ -910,8 +911,8 @@ CARDS = [
         ])],
         "reescrita": ("No longo prazo, a adoção de barreiras comerciais, como, por exemplo, tarifas e quotas à "
                       "importação, conduz ao aumento da taxa de câmbio real, o que " + hl("reduz as exportações e "
-                      "anula a queda das importações, sem alterar as exportações líquidas da economia nem o "
-                      "déficit") + " em conta corrente na economia."),
+                      "anula a queda das importações, sem alterar as") + " exportações líquidas da economia "
+                      + hl("nem o") + " déficit em conta corrente na economia."),
         "tipo_erro": ["NEXO_INDEVIDO", "MEIA_VERDADE"], "moduladores": ["no longo prazo"], "dificuldade": 3,
         "comentario_fonte": ("Tarifas reduzem importações e apreciam o câmbio real; a apreciação prejudica as "
                              "exportações e NX volta ao nível dado por S − I. Alguns comentários tratam “aumento da "
@@ -935,7 +936,7 @@ CARDS = [
                       "movimentos desordenados da taxa de câmbio que ocorrem em momentos de instabilidade."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("No regime de câmbio flutuante, o valor da moeda é determinado pela oferta e demanda no "
-                       "mercado, ") + vm("por isso o Banco Central do Brasil não pode intervir")
+                       "mercado, ") + vm("por isso") + az(" o Banco Central do Brasil ") + vm("não pode intervir")
                     + az(" no mercado para evitar movimentos desordenados da taxa de câmbio que ocorrem em momentos "
                          "de instabilidade.")),
         "poucas": ("Câmbio flutuante não proíbe intervenção. O " + rx("Brasil") + " pratica "
@@ -969,7 +970,8 @@ CARDS = [
             "→ ERRADO (swaps são liquidados em reais e não consomem reservas)",
         ])],
         "reescrita": ("No regime de câmbio flutuante, o valor da moeda é determinado pela oferta e demanda no "
-                      "mercado, " + hl("mas isso não impede que o Banco Central do Brasil intervenha") + " no "
+                      "mercado, " + hl("mas isso não impede que") + " o Banco Central do Brasil "
+                      + hl("intervenha") + " no "
                       "mercado para evitar movimentos desordenados da taxa de câmbio que ocorrem em momentos de "
                       "instabilidade."),
         "tipo_erro": ["NEXO_INDEVIDO", "RESTRICAO"], "moduladores": ["não pode"], "dificuldade": 1,
@@ -1193,7 +1195,7 @@ CARDS = [
                       "numerário de reserva de valor."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A gestão da autoridade monetária sobre os investimentos das reservas internacionais ")
-                    + vm("não é afetada") + az(" pelos níveis de juros ") + vm("nem") + az(" pelas paridades das "
+                    + vm("não") + az(" é afetada pelos níveis de juros ") + vm("nem") + az(" pelas paridades das "
                     "moedas de investimento contra a moeda numerário de reserva de valor.")),
         "poucas": ("Reservas são uma " + azb("carteira de investimentos") + ": o retorno depende dos " + vd("juros")
                    + " (títulos soberanos) e das " + vd("paridades") + " entre as moedas da carteira e a moeda "
@@ -1228,7 +1230,7 @@ CARDS = [
             "dólar.”</i> → ERRADO (inversão: reduz o valor dos ativos em outras moedas)",
         ])],
         "reescrita": ("A gestão da autoridade monetária sobre os investimentos das reservas internacionais "
-                      + hl("é afetada") + " pelos níveis de juros " + hl("e") + " pelas paridades das moedas de "
+                      + "<s>não</s> é afetada pelos níveis de juros " + hl("e") + " pelas paridades das moedas de "
                       "investimento contra a moeda numerário de reserva de valor."),
         "tipo_erro": ["INVERSAO", "GENERALIZACAO"], "moduladores": ["não", "nem"], "dificuldade": 2,
         "comentario_fonte": ("Juros e paridades influenciam o valor das carteiras: juros altos geram ganho de "
@@ -1535,7 +1537,7 @@ CARDS = [
                       "expansão da base monetária."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Uma desvalorização cambial tende a elevar o valor das reservas internacionais em moeda "
-                       "doméstica. ") + vm("Sendo assim") + az(", em resposta a uma desvalorização da moeda "
+                       "doméstica. ") + vm("Sendo") + az(" assim, em resposta a uma desvalorização da moeda "
                        "doméstica, ") + vm("haverá uma") + az(" expansão da base monetária.")),
         "poucas": ("A desvalorização gera um " + azb("ganho contábil") + " nas reservas medidas em reais, mas não "
                    "cria moeda: a base monetária só se expande se o Banco Central " + azb("comprar ativos") + " ou "
@@ -1568,7 +1570,8 @@ CARDS = [
             "CERTO",
         ])],
         "reescrita": ("Uma desvalorização cambial tende a elevar o valor das reservas internacionais em moeda "
-                      "doméstica. " + hl("Ainda assim") + ", em resposta a uma desvalorização da moeda doméstica, "
+                      "doméstica. " + hl("Ainda") + " assim, em resposta
+ a uma desvalorização da moeda doméstica, "
                       + hl("não haverá, por si só,") + " expansão da base monetária."),
         "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["sendo assim", "haverá"], "dificuldade": 2,
         "comentario_fonte": ("A desvalorização eleva o valor contábil das reservas, mas o ganho patrimonial não cria "

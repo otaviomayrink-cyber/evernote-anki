@@ -1,0 +1,33 @@
+{
+ "cards": 2213,
+ "pulados": 93,
+ "errei": 331,
+ "cacd": 71,
+ "polemicos": 91,
+ "figuras_unicas": 265,
+ "codigos": {
+  "PARAFRASE_FIEL": 275,
+  "NEXO_INDEVIDO": 65,
+  "LITERAL": 568,
+  "MODULADOR_RELATIVO": 89,
+  "TROCA_CONCEITO": 378,
+  "JUIZO_INDEVIDO": 7,
+  "INVERSAO": 290,
+  "CONTRAINTUITIVO": 76,
+  "DETALHE": 81,
+  "GENERALIZACAO": 81,
+  "MEIA_VERDADE": 110,
+  "EXCECAO": 3,
+  "CONTRADICAO": 35,
+  "DADO_ALTERADO": 35,
+  "OUTRO": 16,
+  "RESTRICAO": 29,
+  "TROCA_ATOR": 38,
+  "EXTRAPOLACAO": 13,
+  "ANACRONISMO": 12
+ },
+ "lacunas_notas": [
+  "60",
+  "85"
+ ]
+}

@@ -1254,7 +1254,7 @@ CARDS = [
             "capital → déficit → BC " + vd("vende reservas") + " → LM para a esquerda → Y sobe pouco.",
             "Mobilidade nula (BP vertical): a renda maior só piora a conta corrente → venda de reservas até a "
             "LM recuar e Y voltar ao nível compatível com o equilíbrio externo: fiscal " + vd("ineficaz") + ".",
-            "Exemplo citado na fonte: a " + azb("China") + ", com câmbio administrado e forte demanda, acumulou "
+            "Exemplo: a " + azb("China") + ", com câmbio administrado e forte demanda, acumulou "
             "reservas maciças intervindo para evitar a valorização do yuan.",
         ],
         "dissecando": (cz("[literalidade · detalhe]") + " Item que pressupõe, sem dizer, a mobilidade perfeita de "

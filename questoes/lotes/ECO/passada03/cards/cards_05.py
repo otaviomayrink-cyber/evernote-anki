@@ -1027,8 +1027,8 @@ CARDS = [
                       "supranacional, o Bancor, para evitar a hegemonia de uma moeda nacional no sistema."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A Conferência de Bretton Woods (1944) resultou na vitória do Plano ") + vm("Keynes")
-                    + az(" sobre o Plano ") + vm("White") + az(", ")
-                    + vm("estabelecendo a criação da International Clearing Union e de uma moeda contábil "
+                    + az(" sobre o Plano ") + vm("White") + az(", estabelecendo ")
+                    + vm("a criação da International Clearing Union e de uma moeda contábil "
                          "supranacional, o Bancor, para evitar a hegemonia de uma moeda nacional no sistema")
                     + az(".")),
         "poucas": ("Venceu o " + azb("Plano White") + " (EUA): criou-se o " + vd("FMI") + " e o padrão "
@@ -1061,7 +1061,7 @@ CARDS = [
             "(troca de ator: deriva do fundo de estabilização de White)",
         ])],
         "reescrita": ("A Conferência de Bretton Woods (1944) resultou na vitória do Plano " + hl("White")
-                      + " sobre o Plano " + hl("Keynes") + ", " + hl("estabelecendo o FMI e o padrão ouro-dólar, "
+                      + " sobre o Plano " + hl("Keynes") + ", estabelecendo " + hl("o FMI e o padrão ouro-dólar, "
                       "com o dólar conversível em ouro como âncora, o que consolidou a hegemonia de uma moeda "
                       "nacional no sistema") + "."),
         "tipo_erro": ["INVERSAO", "TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
@@ -1240,10 +1240,10 @@ CARDS = [
                       "cambiais, mesmo em casos de “desequilíbrio fundamental”, devendo manter a paridade fixa a "
                       "qualquer custo para evitar as desvalorizações competitivas dos anos 1930."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("No regime de Bretton Woods, os países membros ") + vm("estavam proibidos de realizar "
-                                                                             "desvalorizações cambiais, mesmo em")
-                    + az(" casos de “desequilíbrio fundamental”, devendo ") + vm("manter a paridade fixa a "
-                                                                                 "qualquer custo")
+        "anotada": (az("No regime de Bretton Woods, os países membros ") + vm("estavam proibidos de")
+                    + az(" realizar desvalorizações cambiais") + vm(", mesmo em")
+                    + az(" casos de “desequilíbrio fundamental”, devendo manter a paridade fixa ")
+                    + vm("a qualquer custo")
                     + az(" para evitar as desvalorizações competitivas dos anos 1930.")),
         "poucas": ("Bretton Woods era de " + azb("paridades fixas, mas ajustáveis") + ": em " + vd("desequilíbrio "
                    "fundamental") + ", o país podia alterar a paridade, com consulta ao FMI."),
@@ -1273,9 +1273,10 @@ CARDS = [
             "<i>“Bretton Woods previa a livre flutuação das moedas em relação ao dólar, com intervenções apenas em "
             "situações de crise.”</i> → ERRADO (troca de conceito: paridades fixas com margem de 1%)",
         ])],
-        "reescrita": ("No regime de Bretton Woods, os países membros " + hl("podiam realizar desvalorizações "
-                      "cambiais, com consulta ao FMI, em") + " casos de “desequilíbrio fundamental”, devendo "
-                      + hl("manter a paridade fixa nos demais casos") + " para evitar as desvalorizações "
+        "reescrita": ("No regime de Bretton Woods, os países membros " + hl("podiam") + " realizar desvalorizações cambiais"
+                      + hl(", com consulta ao FMI, em") + " casos de “desequilíbrio fundamental”, devendo "
+                      "manter a paridade fixa " + hl("nos demais casos") + " para
+ evitar as desvalorizações "
                       "competitivas dos anos 1930."),
         "tipo_erro": ["GENERALIZACAO", "CONTRADICAO"], "moduladores": ["proibidos", "mesmo", "a qualquer custo"],
         "dificuldade": 1,

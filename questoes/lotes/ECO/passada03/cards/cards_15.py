@@ -917,7 +917,9 @@ CARDS = [
             "<i>“…a liberalização elevará o preço relativo dos bens importáveis.”</i> → ERRADO (inversão: ele cai)",
         ])],
         "reescrita": ("De acordo com a teoria das vantagens comparativas, nas versões de Heckscher-Ohlin e Samuelson, "
-                      "[…] o efeito será o aumento " + hl("da remuneração real do fator de produção abundante do "
+                      "quando um país em desenvolvimento adota um programa radical de liberalização comercial, "
+                      "caracterizado pela redução linear de todas as tarifas de importação de mercadorias, "
+                      "o efeito será o aumento " + hl("da remuneração real do fator de produção abundante do "
                                                          "país, usado intensivamente nos bens exportados") + "."),
         "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": ["todas"], "dificuldade": 2,
         "comentario_fonte": "A liberalização eleva a demanda e o preço relativo do bem exportado, intensivo no fator "

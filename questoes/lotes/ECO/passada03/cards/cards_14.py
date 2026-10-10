@@ -177,8 +177,8 @@ CARDS = [
         "grafico_verso": "ECO-E1-0917-1-V1",
         "dissecando": (cz("[contraintuitivo · detalhe]") + " O “qualquer” soa como modulador absoluto e convida "
                        "a marcar ERRADO. No modelo de FPP côncava, porém, ele é literal: a tangência reage a toda "
-                       "variação de preços. A pista é o contexto da série (fatores específicos, FPP côncava); fora "
-                       "dele, o absoluto é o ponto fraco do item."),
+                       "variação de preços. A pista é o modelo implícito (FPP côncava, produção diversificada); "
+                       "fora dele, o absoluto é o ponto fraco do item."),
         "modulos": [("😈 Para dificultar", [
             "<i>“No modelo ricardiano, qualquer alteração nos preços relativos muda a composição da produção.”</i> "
             "→ ERRADO (FPP reta: só muda se o preço cruzar o custo de oportunidade interno)",

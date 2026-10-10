@@ -1142,7 +1142,10 @@ CARDS = [
             "<i>“Para Ricardo, um país pode ter vantagem comparativa na produção de todos os bens.”</i> → ERRADO "
             "(impossível: a vantagem comparativa é relativa)",
         ])],
-        "reescrita": ("[…] pois o importante, segundo ele, são as vantagens comparativas, não as absolutas, "
+        "reescrita": ("David Ricardo aperfeiçoou as ideias de Adam Smith e desenvolveu a chamada Teoria das Vantagens "
+                      "Comparativas. No livro Sobre os Princípios da Economia Política e da Tributação, Ricardo "
+                      "defende que o comércio internacional é benéfico a todos os países que mantêm vínculos "
+                      "comerciais entre si, pois o importante, segundo ele, são as vantagens comparativas, não as absolutas, "
                       + hl("na produção dos bens, medidas pela produtividade do trabalho, único fator de produção "
                            "do modelo") + "."),
         "tipo_erro": ["ANACRONISMO", "TROCA_CONCEITO"], "moduladores": ["todos"], "dificuldade": 2,

@@ -1,0 +1,26 @@
+{
+ "id": "ECO-E2-L01155-1-V1",
+ "uso": "verso",
+ "legenda": "Com o subsídio s, o preço interno sobe de Pm para Pm + s. O consumidor perde a + b; o produtor ganha a + b + c; o governo gasta b + c + d (s × exportações). Saldo: perda líquida b + d — o ganho do produtor é pago pelo consumidor e pelo Tesouro.",
+ "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "D", "tipo": "reta", "p1": [0.5, 9.5], "p2": [9.5, 0.5], "familia": "demanda", "rotulo": "D"},
+  {"id": "S", "tipo": "reta", "p1": [0.5, 0.5], "p2": [9.3, 9.3], "familia": "oferta", "rotulo": "O"},
+  {"id": "Pw", "tipo": "horizontal", "y": 6, "x": [0, 9.6], "familia": "referencia", "rotulo": "Pm"},
+  {"id": "Ps", "tipo": "horizontal", "y": 7.5, "x": [0, 9.6], "familia": "destaque", "rotulo": "Pm + s", "tracejada": true}
+ ],
+ "pontos": [
+  {"id": "D2", "intersecao": ["D", "Ps"], "marcar": false, "projetar": "x", "rotulo_x": "q₂ᵈ"},
+  {"id": "D1", "intersecao": ["D", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "q₁ᵈ"},
+  {"id": "S1", "intersecao": ["S", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "q₁ˢ"},
+  {"id": "S2", "intersecao": ["S", "Ps"], "marcar": false, "projetar": "x", "rotulo_x": "q₂ˢ"}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": [[0, 6], [0, 7.5], "D2", ["D2.x", 6]], "papel": "perda", "rotulo": "a", "rotulo_xy": [1.2, 6.75]},
+  {"tipo": "poligono", "vertices": ["D2", "D1", ["D2.x", 6]], "papel": "peso_morto", "rotulo": "b", "rotulo_xy": [2.33, 6.4]},
+  {"tipo": "poligono", "vertices": ["D2", "S2", "S1", "D1"], "papel": "gasto", "rotulo": "c", "rotulo_xy": [4.75, 6.75]},
+  {"tipo": "poligono", "vertices": ["S1", ["S2.x", 6], "S2"], "papel": "peso_morto", "rotulo": "d", "rotulo_xy": [7.17, 6.4]}
+ ],
+ "checar": ["D2.x < D1.x", "S2.x > S1.x", "D1.x < S1.x",
+            "abs((S2.x - D2.x)*1.5 - (0.5*(D1.x-D2.x)*1.5 + 0.5*(S2.x-S1.x)*1.5 + ((S2.x-D2.x)+(S1.x-D1.x))/2*1.5)) < 0.01"]
+}

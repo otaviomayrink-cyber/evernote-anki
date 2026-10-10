@@ -1428,4 +1428,338 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00244
+    {
+        "id": "ECO-E2-L00244-1", "fonte_ref": "E2-L00244", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("O padrão de inserção do Brasil nas CGVs, por privilegiar setores baseados em vantagens "
+                      "comparativas naturais, tem fortalecido a resiliência da economia brasileira diante de choques "
+                      "globais e contribuído para sua inserção em segmentos estratégicos da segurança econômica "
+                      "global, como alimentos e energia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O padrão de inserção do Brasil nas CGVs, por privilegiar setores baseados em vantagens "
+                       "comparativas naturais, tem ") + vm("fortalecido a resiliência da economia brasileira diante "
+                                                           "de") + az(" choques globais e ")
+                    + vm("contribuído para sua inserção em segmentos estratégicos da")
+                    + az(" segurança econômica global, como alimentos e energia.")),
+        "poucas": ("A inserção " + rx("brasileira") + " nas CGVs é sobretudo " + azb("a montante") + ", como "
+                   "fornecedor de commodities: baixa agregação de valor e " + vm("vulnerabilidade") + " a choques de "
+                   "preços. Ser relevante em alimentos e energia não equivale a inserção estratégica e resiliente "
+                   "nas cadeias."),
+        "destrinchando": [
+            "Posição nas cadeias: um país participa " + azb("para trás") + " (<i>backward</i>: usa insumos "
+            "importados nas exportações) ou " + azb("para frente") + " (<i>forward</i>: seus insumos entram nas "
+            "exportações de outros). O " + rx("Brasil") + " tem participação total baixa para seu tamanho e "
+            "predominantemente " + vd("para frente") + ": soja, minério de ferro, petróleo, carnes, celulose.",
+            "Consequências: " + vd("baixa agregação de valor") + " doméstica nos elos industriais, exposição ao "
+            "ciclo de preços de commodities e à demanda chinesa, e pouca presença nas etapas de maior valor "
+            "(P&amp;D, design, serviços). Daí o debate sobre " + azb("reprimarização") + " da pauta e "
+            + azb("doença holandesa") + ".",
+            "Choques recentes ilustram a vulnerabilidade: o fim do superciclo de commodities (" + vd("2014–2016")
+            + ") contribuiu para a recessão; na pandemia, a dependência de insumos importados (fármacos, "
+            "semicondutores) ficou evidente.",
+            "O que o item tem de verdadeiro: o Brasil é peça relevante da " + azb("segurança alimentar e "
+            "energética") + " mundial (maior exportador de soja, grande produtor de proteína animal, biocombustíveis "
+            "e petróleo do pré-sal) ⏳ (out/2026). Mas relevância como fornecedor de bens primários não é o "
+            "mesmo que resiliência macroeconômica nem que inserção em segmentos de comando das cadeias.",
+        ],
+        "dissecando": (cz("[nexo indevido · juízo indevido]") + " O item parte de um fato (especialização em "
+                       "vantagens naturais) e lhe atribui efeitos positivos que a literatura contesta. A menção "
+                       "verdadeira a alimentos e energia serve de isca. Pista: “fortalecido a resiliência” "
+                       "contraria o diagnóstico usual de vulnerabilidade externa de economias primário-exportadoras."),
+        "modulos": [("🟣 Posição do Brasil", [
+            "A agenda da " + rx("Nova Indústria Brasil") + " (" + vd("2024") + ") e o discurso diplomático "
+            "brasileiro buscam converter a vantagem em alimentos, energia limpa e minerais críticos em "
+            "<b>neoindustrialização</b> e maior agregação de valor nas cadeias, inclusive com transição "
+            "energética ⏳ (out/2026).",
+        ]), ("😈 Para dificultar", [
+            "<i>“A inserção do Brasil nas CGVs ocorre predominantemente como fornecedor de insumos primários, "
+            "com baixa agregação de valor.”</i> → CERTO",
+            "<i>“O Brasil está inserido nas CGVs sobretudo pela importação de insumos para montagem de bens "
+            "exportados, como o México.”</i> → ERRADO (troca de ator: participação brasileira é sobretudo para "
+            "frente)",
+        ])],
+        "reescrita": ("O padrão de inserção do Brasil nas CGVs, por privilegiar setores baseados em vantagens "
+                      "comparativas naturais, tem " + hl("aumentado a vulnerabilidade da economia brasileira a")
+                      + " choques globais e " + hl("concentrado sua inserção em elos de baixo valor agregado, ainda "
+                      "que o país seja relevante para a") + " segurança econômica global, como alimentos e energia."),
+        "tipo_erro": ["NEXO_INDEVIDO", "JUIZO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "A inserção brasileira concentra-se em commodities agrícolas e minerais, com baixa "
+                            "agregação de valor e vulnerabilidade a choques de preços; ser relevante em alimentos e "
+                            "energia não equivale a inserção estratégica e resiliente nas CGVs.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00350
+    {
+        "id": "ECO-E2-L00350-1", "fonte_ref": "E2-L00350", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("A reconfiguração das CGVs em direção a nearshoring/friendshoring, digitalização e "
+                      "securitização setorial elevou o peso de normas ESG como pré-requisitos de acesso às cadeias, "
+                      "operando como barreiras não tarifárias e critérios de governança impostos por "
+                      "compradores/lideranças dos países desenvolvidos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A reconfiguração das CGVs em direção a nearshoring/friendshoring, digitalização e "
+                      "securitização setorial elevou o peso de normas ESG como <u>pré-requisitos de acesso</u> às "
+                      "cadeias, operando como <u>barreiras não tarifárias</u> e critérios de governança impostos por "
+                      "compradores/lideranças dos países desenvolvidos."),
+        "poucas": ("Na reconfiguração recente das CGVs, exigências " + azb("ESG") + " (ambientais, sociais e de "
+                   "governança) viraram " + vd("condição de entrada") + " nas cadeias, impostas pelas firmas "
+                   "líderes e por regulações do Norte — na prática, " + azb("barreiras não tarifárias") + "."),
+        "destrinchando": [
+            "A reconfiguração pós-pandemia e pós-guerra na Ucrânia: " + azb("nearshoring") + " (produzir perto "
+            "do mercado consumidor), " + azb("friendshoring") + " (produzir em países aliados, termo popularizado "
+            "por " + oc("Janet Yellen") + " em 2022), digitalização e " + azb("securitização") + " de setores "
+            "estratégicos (semicondutores, baterias, minerais críticos, fármacos).",
+            "Na tipologia de " + oc("Gereffi") + ", as cadeias " + azb("lideradas por compradores") + " (varejo, "
+            "marcas) impõem padrões aos fornecedores. Hoje esses padrões incluem rastreabilidade, emissões, "
+            "trabalho decente e governança corporativa.",
+            "Exemplos regulatórios da UE: o " + vd("Regulamento Antidesmatamento (EUDR)") + ", o "
+            + vd("Mecanismo de Ajuste de Carbono na Fronteira (CBAM)") + " e a diretiva de " + vd("due diligence "
+            "em sustentabilidade corporativa") + ". Para o " + rx("Brasil") + ", afetam soja, carne, café, "
+            "madeira, aço e alumínio ⏳ (out/2026).",
+            "A crítica dos países em desenvolvimento: são medidas unilaterais que funcionam como "
+            + azb("protecionismo verde") + ", elevam custos de conformidade e podem excluir pequenos produtores; "
+            "o debate passa pela OMC (compatibilidade com o GATT e com o Acordo sobre Barreiras Técnicas).",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Item de “atualidades de economia internacional”, com vocabulário "
+                       "denso, mas todas as relações estão certas. O risco é achar que ESG é só “boa prática "
+                       "voluntária” e estranhar “barreiras não tarifárias”."),
+        "modulos": [("🟣 Posição do Brasil", [
+            "O " + rx("Brasil") + " contesta o caráter unilateral de medidas como o EUDR e o CBAM, defende que "
+            "normas ambientais respeitem o princípio das responsabilidades comuns porém diferenciadas e as "
+            "regras da OMC, e propõe certificações e rastreabilidade próprias ⏳ (out/2026).",
+        ]), ("😈 Para dificultar", [
+            "<i>“As normas ESG, por serem voluntárias, não afetam o acesso de fornecedores de países em "
+            "desenvolvimento às CGVs.”</i> → ERRADO (viraram pré-requisito de acesso)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Near/friendshoring, digitalização e securitização reforçam a governança liderada por "
+                            "compradores; ESG virou critério de acesso (barreira não tarifária).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00351
+    {
+        "id": "ECO-E2-L00351-1", "fonte_ref": "E2-L00351", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("Países desenvolvidos preservam posições de comando ancoradas em intangíveis, P&amp;D e "
+                      "regulação, enquanto países em desenvolvimento, ingressando via montagem, commodities e "
+                      "serviços terceirizados, enfrentam desafios de captura de valor e vulnerabilidade. Dada essa "
+                      "hierarquia, não há espaço realista para upgrading processual, de produto ou funcional."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Países desenvolvidos preservam posições de comando ancoradas em intangíveis, P&amp;D e "
+                       "regulação, enquanto países em desenvolvimento, ingressando via montagem, commodities e "
+                       "serviços terceirizados, enfrentam desafios de captura de valor e vulnerabilidade. Dada essa "
+                       "hierarquia, ") + vm("não há espaço realista") + az(" para upgrading processual, de produto "
+                                                                          "ou funcional.")),
+        "poucas": ("A hierarquia descrita é real, mas a literatura de CGVs insiste que " + vm("há espaço") + " para "
+                   + azb("upgrading") + " — difícil e desigual, porém documentado (Coreia, Taiwan, China, "
+                   "México em autopeças)."),
+        "destrinchando": [
+            "A primeira parte é o diagnóstico padrão: as firmas líderes do Norte controlam " + vd("intangíveis")
+            + " (marcas, patentes, software, dados), P&amp;D e a definição de padrões; os países em "
+            "desenvolvimento entram pelos elos de montagem, matérias-primas e serviços de baixo valor.",
+            "Tipos de " + azb("upgrading") + " (" + oc("Humphrey e Schmitz") + ", 2002): " + vd("processual")
+            + " (eficiência, novas tecnologias de produção), " + vd("de produto") + " (bens mais sofisticados), "
+            + vd("funcional") + " (subir para design, marca, P&amp;D) e " + vd("intersetorial") + " (migrar para "
+            "outra cadeia). O processual e o de produto são os mais frequentes; o funcional, o mais difícil, "
+            "porque a firma líder pode bloqueá-lo.",
+            "Casos: fabricantes taiwaneses passaram de montadores (OEM) a projetistas (ODM) e marcas próprias "
+            "(OBM) — a Acer, a Asus; a China subiu em eletrônicos e veículos elétricos; no " + rx("Brasil") + ", "
+            "a Embraer e o agronegócio com tecnologia da Embrapa mostram upgrading em nichos.",
+            "O debate é sobre condições: capacitação, política industrial, infraestrutura e escala do mercado "
+            "interno. Negar a possibilidade contradiz a literatura (" + oc("Gereffi") + ", UNCTAD, OCDE, Banco "
+            "Mundial, <i>World Development Report 2020</i>).",
+        ],
+        "dissecando": (cz("[modulador absoluto · extrapolação]") + " Duas frases corretas preparam uma conclusão "
+                       "categórica (“não há espaço realista”) que não decorre delas. Pista: dificuldade não é "
+                       "impossibilidade; desconfie de conclusões fatalistas introduzidas por “dada essa hierarquia”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O upgrading funcional tende a ser o mais difícil, pois envolve funções que as firmas líderes "
+            "preferem reter.”</i> → CERTO",
+            "<i>“A inserção em CGVs garante upgrading funcional automático aos países em desenvolvimento.”</i> → "
+            "ERRADO (modulador absoluto no sentido oposto)",
+        ])],
+        "reescrita": ("Países desenvolvidos preservam posições de comando ancoradas em intangíveis, P&amp;D e "
+                      "regulação, enquanto países em desenvolvimento, ingressando via montagem, commodities e "
+                      "serviços terceirizados, enfrentam desafios de captura de valor e vulnerabilidade. Dada essa "
+                      "hierarquia, " + hl("há espaço, ainda que limitado,") + " para upgrading processual, de "
+                      "produto ou funcional."),
+        "tipo_erro": ["GENERALIZACAO", "EXTRAPOLACAO"], "moduladores": ["não há espaço realista"], "dificuldade": 1,
+        "comentario_fonte": "A hierarquia funcional existe, mas há espaço para upgrading processual, de produto e "
+                            "funcional; negar isso contradiz a literatura.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00254
+    {
+        "id": "ECO-E3-L00254-1", "fonte_ref": "E3-L00254", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Março/2025", "ano": 2025,
+        "cacd": False, "errei": True,
+        "comando": CMD_NIDI_CGV,
+        "rotulo_item": "Item",
+        "assertiva": ASSERT_CGV_OMC,
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma característica marcante das Cadeias Globais de Valor (CGVs) é a existência de uma "
+                      "estrutura de governança <u>distribuída entre várias unidades em diversos países</u>. Essa "
+                      "característica é um dos principais fatores que <u>dificulta o enquadramento</u> das CGVs "
+                      "nas normas vigentes da OMC."),
+        "poucas": ("As regras multilaterais foram concebidas quando o comércio era de " + azb("bens finais") + "; "
+                   "processos produtivos fragmentados entre muitos países, sob governança de firmas líderes, não "
+                   "cabem bem nelas — daí a demanda por " + vd("modernização") + " das normas da OMC."),
+        "destrinchando": [
+            "Governança das CGVs segundo " + oc("Gereffi, Humphrey e Sturgeon") + " (2005): " + vd("mercado") + ", "
+            + vd("modular") + ", " + vd("relacional") + ", " + vd("cativa") + " e " + vd("hierárquica") + " "
+            "(integração vertical), conforme a complexidade das transações, a possibilidade de codificá-las e a "
+            "capacidade dos fornecedores. Em todas, as decisões se espalham por firmas e países.",
+            "Onde a OMC tropeça: as regras foram negociadas para fluxos de bens entre fronteiras; nas CGVs, o "
+            "que importa é o " + azb("valor adicionado") + " em cada etapa, a circulação de serviços, dados, "
+            "propriedade intelectual e capital. Barreiras “atrás da fronteira” (regulação, padrões, "
+            "investimento, concorrência) pesam mais que a tarifa.",
+            "Paradoxo: tarifas pequenas viram grandes custos quando um insumo cruza fronteiras várias vezes — "
+            "efeito cascata. E regras de origem diferentes em cada acordo criam o “" + azb("spaghetti bowl")
+            + "” (" + oc("Jagdish Bhagwati") + ").",
+            "Respostas: acordos regionais profundos (CPTPP, USMCA), iniciativas plurilaterais na OMC (comércio "
+            "eletrônico, facilitação de investimentos) e o " + vd("Acordo de Facilitação de Comércio") + " "
+            "(" + vd("2017") + "), que reduz custos de fronteira — útil justamente às cadeias ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Item conceitual, sem pegadinha de palavra: "
+                       "“um dos principais fatores” é prudente. Quem erra costuma achar que a OMC já regula tudo "
+                       "o que cruza fronteiras; o item cobra a ideia de descompasso entre regras do século XX e "
+                       "produção do século XXI."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A estrutura de governança das CGVs é centralizada em um único país, o que facilita sua "
+            "regulação pela OMC.”</i> → ERRADO (contradição com a governança distribuída)",
+            "<i>“Barreiras regulatórias “atrás da fronteira” ganham peso relativo em relação às tarifas no "
+            "contexto das CGVs.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["um dos principais"],
+        "dificuldade": 2,
+        "comentario_fonte": "As regras foram concebidas quando o comércio era de bens finais, não de processos "
+                            "fragmentados entre vários países; a crítica demanda a modernização das normas.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0856-1 (mesma assertiva, prova Maio/2026)"],
+    },
+    # ------------------------------------------------------------------ E1-0371
+    {
+        "id": "ECO-E1-0371-1", "fonte_ref": "E1-0371", "destino": "77", "subtema": H2["ied"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "2018", "ano": 2018, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do movimento internacional de capitais, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ASSERT_IED,
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Do ponto de vista dos impactos, pode-se considerar que o investimento direto é um tipo de "
+                      "capital de longo prazo, <u>mais resiliente</u> a crises, com efeitos <u>potencialmente</u> "
+                      "positivos sobre uma economia por se tratar de uma das formas de internacionalização da "
+                      "produção, permitindo que um país tenha acesso a tecnologia, bens ou serviços originários de "
+                      "outros países."),
+        "poucas": ("O " + azb("IED") + " envolve controle ou influência duradoura e ativos produtivos: não sai "
+                   "“da noite para o dia” como o capital de portfólio e pode trazer " + vd("tecnologia") + ", "
+                   "gestão e acesso a mercados. O “potencialmente” deixa o item certo."),
+        "destrinchando": [
+            azb("Investimento direto") + " × " + azb("investimento em carteira") + ": no direto, o investidor "
+            "busca " + vd("controle ou influência significativa") + " sobre a gestão de uma empresa no exterior "
+            "(no BPM6 do FMI, " + vd("10% ou mais do capital votante") + "); no portfólio, busca só retorno "
+            "financeiro (ações abaixo de 10%, títulos).",
+            "Por que é mais " + azb("resiliente") + ": envolve fábricas, redes de fornecedores, marcas — ativos "
+            "ilíquidos e de horizonte longo. Em crises, o portfólio sofre " + azb("sudden stops") + " (" + oc("Calvo")
+            + "), enquanto o IED oscila menos. Ressalva: parte do IED (empréstimos intercompanhia, lucros "
+            "reinvestidos) pode reagir mais rápido.",
+            "Efeitos " + vd("potencialmente") + " positivos: " + azb("transbordamentos") + " tecnológicos e "
+            "gerenciais, encadeamentos com fornecedores locais, aumento de produtividade e exportações, integração "
+            "às cadeias globais. Riscos: enclaves sem encadeamento, remessas de lucros, desnacionalização, "
+            "concorrência predatória.",
+            "Teoria: o IED é uma das formas de " + azb("internacionalização da produção") + " — " + oc("Hymer")
+            + " (vantagens específicas da firma), " + oc("Vernon") + " (ciclo do produto) e o paradigma "
+            + azb("OLI") + " de " + oc("Dunning") + " (propriedade, localização, internalização).",
+            "No " + rx("Brasil") + ", o IDP tem financiado com folga o déficit em transações correntes, o que é "
+            "visto como sinal de solidez do balanço de pagamentos ⏳ (out/2026).",
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " “Mais resiliente” (comparativo, não "
+                       "“imune”) e “potencialmente positivos” protegem o item. Versões erradas trocariam por "
+                       "“imune a crises” ou “necessariamente positivos”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O investimento direto, por ser de longo prazo, é imune a reversões em crises financeiras.”</i> → "
+            "ERRADO (modulador absoluto: é mais resiliente, não imune)",
+            "<i>“O investimento em carteira tende a ser mais volátil que o investimento direto.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["mais resiliente", "potencialmente"],
+        "dificuldade": 1,
+        "comentario_fonte": "Descrição breve e precisa do IED.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (CACD 2018); a fonte só traz o ano e o item reaparece no simulado "
+                    "Nidi/Jacqueline Bueno como Questão 65, item 2 — não confirmado",
+                    "quase_duplicata: ECO-E3-L00291-1 (mesma assertiva, simulado Fevereiro/2025)"],
+    },
+    # ------------------------------------------------------------------ E3-L00291
+    {
+        "id": "ECO-E3-L00291-1", "fonte_ref": "E3-L00291", "destino": "77", "subtema": H2["ied"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2025", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": ("Tendo em vista que o movimento internacional de capitais tem recebido grande atenção da "
+                    "literatura [...], julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ASSERT_IED,
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Do ponto de vista dos impactos, pode-se considerar que o investimento direto é um tipo de "
+                      "capital de <u>longo prazo</u>, mais resiliente a crises, com efeitos potencialmente "
+                      "positivos sobre uma economia por se tratar de uma das formas de <u>internacionalização da "
+                      "produção</u>, permitindo que um país tenha acesso a tecnologia, bens ou serviços originários "
+                      "de outros países."),
+        "poucas": ("O IED é o “" + azb("capital paciente") + "”: participação duradoura com controle ou influência "
+                   "(≥ " + vd("10%") + " do capital votante no BPM6), menos volátil que o portfólio e com "
+                   "potencial de trazer tecnologia e integração produtiva."),
+        "destrinchando": [
+            "Critério do " + azb("BPM6") + " (FMI, 2009): há investimento direto quando um residente detém "
+            + vd("10% ou mais") + " do capital votante de empresa residente em outra economia — sinal de controle "
+            "ou influência significativa na gestão. Abaixo de 10%, é " + azb("investimento em carteira") + ".",
+            "Registro no balanço de pagamentos (conta financeira): " + vd("IDE") + " — investimento direto no "
+            "exterior (ativo) — e " + vd("IDP") + " — investimento direto no país (passivo). Cada um tem dois "
+            "componentes: " + azb("participação no capital") + " (inclui lucros reinvestidos) e "
+            + azb("operações intercompanhia") + " (empréstimos entre empresas do mesmo grupo).",
+            "Por que é visto como “capital de boa qualidade”: está amarrado a ativos físicos e organizacionais, "
+            "não foge com uma mudança de humor do mercado e traz <i>know-how</i> tecnológico e gerencial das "
+            "matrizes. O " + azb("hot money") + " (portfólio de curto prazo) é o contraponto.",
+            "Nuances que bancas exploram: (1) os empréstimos intercompanhia podem se comportar como capital de "
+            "curto prazo; (2) os benefícios dependem da " + azb("capacidade de absorção") + " do país receptor "
+            "(capital humano, fornecedores locais); (3) parte do IED passa por " + azb("entidades de propósito "
+            "específico") + " em centros financeiros, o que infla estatísticas.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " O item reúne as três ideias-padrão sobre o "
+                       "IED (longo prazo, resiliência relativa, transbordamentos potenciais) sem absolutizar. Itens "
+                       "vizinhos costumam cobrar o critério dos 10% ou a classificação de lucros reinvestidos e "
+                       "empréstimos intercompanhia."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pelo BPM6, a aquisição de 5% do capital votante de uma empresa estrangeira é registrada como "
+            "investimento direto.”</i> → ERRADO (dado alterado: o limiar é 10%)",
+            "<i>“Os empréstimos intercompanhia integram o investimento direto no balanço de pagamentos.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["mais resiliente", "potencialmente"],
+        "dificuldade": 1,
+        "comentario_fonte": "IED como capital de boa qualidade (instalações, know-how, integração a cadeias); "
+                            "critério do BPM6 (10% do capital votante); contas IDE (ativo) e IDP (passivo), com "
+                            "participações no capital e empréstimos intercompanhia; ressalvas sobre riscos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 399", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 400", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["quase_duplicata: ECO-E1-0371-1 (mesma assertiva, item de 2018)",
+                    "texto_parcial: o texto motivador da Questão 65 vem truncado na fonte (“grande atenção da "
+                    "lit...”); completado com [...]",
+                    "nota_redacao: a classificação fundiu este item como duplicata de E1-0371; mantido como card "
+                    "próprio por ser de outra prova (regra das passadas)"],
+    },
 ]

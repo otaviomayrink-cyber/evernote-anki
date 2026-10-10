@@ -667,8 +667,8 @@ CARDS = [
         "anotada": (az("A ausência de barreiras, em prol da liberalização das trocas externas, promove, entre "
                        "outros benefícios, ") + vm("o aumento da autossuficiência dos países") + az(" no que "
                        "concerne à disponibilidade de bens e serviços")
-                    + vm(" e a redução dos riscos associados às oscilações nas quantidades produzidas e nos preços "
-                         "praticados") + az(".")),
+                    + vm(" e a redução dos riscos") + az(" associados às oscilações nas quantidades produzidas e "
+                                                         "nos preços praticados.")),
         "poucas": ("O livre-comércio leva à " + azb("especialização") + ", que é o contrário da autossuficiência: "
                    "cada país passa a depender de importações e aumenta a " + azb("interdependência") + ", com "
                    "maior exposição a choques de oferta e de preços externos."),

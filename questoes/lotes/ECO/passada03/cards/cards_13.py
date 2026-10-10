@@ -1302,4 +1302,284 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0899
+    {
+        "id": "ECO-E1-0899-1", "fonte_ref": "E1-0899", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2020, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de comércio de David Ricardo descreve como é possível alcançar pontos acima e à "
+                      "direita na fronteira de possibilidades de consumo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O modelo de comércio de David Ricardo descreve como é possível alcançar pontos <u>acima e à "
+                      "direita</u> na <u>fronteira de possibilidades de consumo</u>."),
+        "poucas": ("Com especialização e troca, o país passa a consumir sobre a " + azb("fronteira de "
+                   "possibilidades de consumo") + " (a linha de troca), que fica " + azb("acima e à direita")
+                   + " da sua FPP: mais dos dois bens do que conseguiria sozinho."),
+        "destrinchando": [
+            "Em autarquia, o país só consome o que produz: o consumo fica <b>sobre a FPP</b>, cuja inclinação "
+            "é o custo de oportunidade doméstico.",
+            "Com o comércio, ele se especializa no bem de vantagem comparativa (ponto P da FPP) e troca ao "
+            + azb("preço relativo internacional") + ". A reta que sai de P com essa inclinação é a fronteira de "
+            "possibilidades de consumo: como o preço mundial é melhor que o custo doméstico, ela fica "
+            + vd("fora da FPP") + ".",
+            "Resultado: pontos inalcançáveis em autarquia (C, à direita e acima de A) tornam-se possíveis — é o "
+            + azb("ganho de comércio") + " de " + oc("Ricardo") + ", visto no gráfico. Quanto mais o preço "
+            "mundial se afasta do custo doméstico, maior o ganho.",
+            "Ressalva: o ganho é do país como um todo; no modelo de um só fator (trabalho), não há perdedores "
+            "internos — conflitos distributivos aparecem nos modelos com mais fatores.",
+        ],
+        "grafico_verso": "ECO-E1-0899-1-V1",
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " A redação é truncada (“pontos acima e à direita na "
+                       "fronteira de possibilidades de consumo”), mas descreve o resultado gráfico clássico. "
+                       "Seria ERRADO se dissesse que o comércio permite <b>produzir</b> além da FPP."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo de Ricardo mostra que o comércio permite ao país produzir em pontos além da sua fronteira "
+            "de possibilidades de produção.”</i> → ERRADO (troca de conceito: consome além; produz na FPP)",
+            "<i>“No modelo de Ricardo, o comércio permite consumir combinações de bens inalcançáveis em "
+            "autarquia.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Comentário curto: especializando-se, o país “vive além de suas possibilidades” "
+                             "isoladas; o comércio melhora a vida de todos os envolvidos."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0900
+    {
+        "id": "ECO-E1-0900-1", "fonte_ref": "E1-0900", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2020, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("Na teoria clássica de comércio, as vantagens comparativas são explicadas por funções de "
+                      "produção diferentes dos dois países."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na teoria clássica de comércio, as vantagens comparativas são explicadas por <u>funções de "
+                      "produção diferentes</u> dos dois países."),
+        "poucas": ("No modelo de " + oc("Ricardo") + ", a vantagem comparativa nasce de diferenças de "
+                   + azb("tecnologia") + " (produtividade do trabalho), isto é, de funções de produção distintas "
+                   "— e não de dotações de fatores, como no H-O."),
+        "destrinchando": [
+            "Teoria clássica (" + oc("Smith") + ", " + oc("Ricardo") + "): um só fator, o trabalho, com "
+            + azb("coeficientes técnicos") + " (horas por unidade) diferentes entre países. Cada país tem sua "
+            "própria função de produção para cada bem.",
+            "Funções de produção diferentes → FPPs com " + vd("inclinações diferentes") + " → custos de "
+            "oportunidade diferentes. O país em que o bem custa menos em termos do outro bem tem vantagem "
+            "comparativa nele.",
+            "Teoria neoclássica (" + azb("Heckscher-Ohlin") + "): o oposto — funções de produção " + vd("iguais")
+            + " entre países, vantagem comparativa explicada pelas dotações relativas de fatores. É a "
+            "distinção que as bancas mais cobram entre os dois modelos.",
+            "Origem histórica das diferenças tecnológicas no modelo ricardiano: clima, solo, habilidades, "
+            "técnica — no exemplo de Ricardo, Portugal fazia vinho com menos trabalho que a Inglaterra.",
+        ],
+        "grafico_verso": "ECO-E1-0900-1-V1",
+        "dissecando": (cz("[literalidade]") + " Item de definição. O risco é confundir com o H-O e pensar que "
+                       "“funções de produção iguais” é a hipótese clássica. Ricardo = tecnologia diferente; "
+                       "H-O = tecnologia igual, dotação diferente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Heckscher-Ohlin, as vantagens comparativas são explicadas por funções de produção "
+            "diferentes entre os países.”</i> → ERRADO (troca de conceito: no H-O as tecnologias são iguais)",
+            "<i>“Na teoria clássica, as vantagens comparativas decorrem das diferentes dotações de capital dos "
+            "países.”</i> → ERRADO (anacronismo: dotações são o critério neoclássico)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Comentário curto com exemplo de FPPs (país A com vantagem comparativa em soja, país B "
+                             "em chips de computador) e uma figura não preservada."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "00044.jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E1-0900-1-V1, FPPs de A e B com valores ilustrativos)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0901
+    {
+        "id": "ECO-E1-0901-1", "fonte_ref": "E1-0901", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2013, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("As teorias clássicas do comércio internacional baseiam-se na produtividade relativa da mão de "
+                      "obra, e a teoria neoclássica do comércio internacional, na diferença relativa de dotação dos "
+                      "fatores de produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As teorias clássicas do comércio internacional baseiam-se na <u>produtividade relativa da "
+                      "mão de obra</u>, e a teoria neoclássica do comércio internacional, na <u>diferença relativa "
+                      "de dotação dos fatores</u> de produção."),
+        "poucas": ("É a divisão de manual: clássicos (" + oc("Smith") + ", " + oc("Ricardo") + ") → "
+                   + azb("produtividade do trabalho") + "; neoclássicos (" + oc("Heckscher") + ", "
+                   + oc("Ohlin") + ", " + oc("Samuelson") + ") → " + azb("dotações relativas de fatores") + "."),
+        "destrinchando": [
+            "<b>Clássica</b>: valor-trabalho, um só fator. " + oc("Smith") + " (1776) compara produtividades "
+            "absolutas; " + oc("Ricardo") + " (1817), relativas — daí “produtividade relativa da mão de obra”.",
+            "<b>Neoclássica</b>: dois ou mais fatores, tecnologia igual entre países. A vantagem comparativa vem "
+            "da " + azb("abundância relativa") + ": o país rico em capital exporta bens intensivos em capital.",
+            "Diferenças de consequência: no Ricardo, o comércio beneficia o país como um todo, sem perdedores "
+            "internos; no H-O, há " + azb("efeitos distributivos") + " (Stolper-Samuelson: ganha o fator "
+            "abundante, perde o escasso).",
+            "Correção da fonte: a teoria neoclássica <b>não</b> se estrutura em torno de Ricardo nem explica o "
+            "comércio pela produtividade — esse é justamente o traço clássico que o H-O substitui pelas "
+            "dotações.",
+            vm("Regra-âncora: clássico = produtividade (tecnologia); neoclássico = dotação de fatores."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Item-síntese que só exige associar cada escola ao seu critério. "
+                       "A banca erra o item trocando os critérios entre as escolas ou falando em produtividade "
+                       "“absoluta” para Ricardo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A teoria neoclássica do comércio baseia-se na produtividade relativa da mão de obra.”</i> → "
+            "ERRADO (troca de conceito)",
+            "<i>“Para Ricardo, o padrão de comércio é determinado pela produtividade absoluta do trabalho.”</i> → "
+            "ERRADO (absoluta é Smith)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Comentário que diz que a teoria neoclássica “se estrutura em torno da análise de "
+                             "David Ricardo” e mistura o critério de produtividade com o de dotação."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0905
+    {
+        "id": "ECO-E1-0905-1", "fonte_ref": "E1-0905", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2010, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com o princípio das vantagens comparativas, a produção mundial total será maximizada "
+                      "se cada bem for produzido pelo país capaz de fazê-lo com os menores custos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com o princípio das vantagens comparativas, a produção mundial total será "
+                       "maximizada se cada bem for produzido pelo país capaz de fazê-lo com ")
+                    + vm("os menores custos") + az(".")),
+        "poucas": ("“Menores custos” (absolutos) é o critério de " + oc("Smith") + ". Pelo princípio de "
+                   + oc("Ricardo") + ", cada bem deve ser produzido pelo país com o " + vm("menor custo de "
+                   "oportunidade") + " — mesmo que outro país o faça com menos recursos."),
+        "destrinchando": [
+            "Exemplo: o país A produz 2 máquinas ou 5 t de alimento por dia; o B, 1 máquina ou 4 t. A tem menor "
+            "custo absoluto nos dois bens. Se “cada bem fosse produzido por quem tem menor custo”, A faria tudo e "
+            "B ficaria ocioso — a produção mundial não seria máxima.",
+            "Custos de oportunidade: em A, 1 máquina = " + vd("2,5 t") + "; em B, " + vd("4 t") + ". A tem "
+            "vantagem comparativa em máquinas; B, em alimentos (1 t custa 0,25 máquina em B contra 0,4 em A). "
+            "Com essa especialização, a produção conjunta dos dois bens aumenta.",
+            "O princípio ricardiano afirma, sim, que a especialização pela vantagem comparativa " + vd("eleva a "
+            "produção mundial") + " (com os recursos dados) e permite que todos ganhem com a troca — o erro do "
+            "item está só no critério.",
+            vm("Regra-âncora: especialização eficiente segue o custo de oportunidade, não o custo absoluto."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item cita o “princípio das vantagens comparativas” e "
+                       "entrega o critério das <b>absolutas</b>. Pista: “menores custos” sem “de "
+                       "oportunidade” ou “relativos”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“De acordo com o princípio das vantagens comparativas, a produção mundial total será maximizada se "
+            "cada bem for produzido pelo país com o menor custo de oportunidade.”</i> → CERTO",
+            "<i>“Segundo Ricardo, um país sem vantagem absoluta em nenhum bem não ganha com o comércio.”</i> → "
+            "ERRADO (é justamente o caso que Ricardo resolve)",
+        ])],
+        "reescrita": ("De acordo com o princípio das vantagens comparativas, a produção mundial total será maximizada "
+                      "se cada bem for produzido pelo país capaz de fazê-lo com " + hl("o menor custo de "
+                      "oportunidade") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Comentário confuso: nega que o princípio trate da maximização da produção mundial e "
+                             "fala em “custo absoluto + custo de oportunidade”; afinal admite que a especialização "
+                             "aumenta a produção."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0908
+    {
+        "id": "ECO-E1-0908-1", "fonte_ref": "E1-0908", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2010, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo clássico de comércio internacional, formulado no começo do século XIX, não pode ser "
+                      "aplicado ao comércio de serviços."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O modelo clássico de comércio internacional, formulado no começo do século XIX, ")
+                    + vm("não pode") + az(" ser aplicado ao comércio de serviços.")),
+        "poucas": ("A lógica do " + azb("custo de oportunidade") + " vale para qualquer coisa que se produza e se "
+                   "troque, inclusive serviços transacionáveis (transporte, seguros, software, turismo). O limite "
+                   "é a transacionabilidade, não o modelo."),
+        "destrinchando": [
+            "O modelo de " + oc("Ricardo") + " (1817) foi formulado com bens (vinho e tecido), mas seus "
+            "pressupostos — produtividades diferentes, custo de oportunidade, troca — não dependem da natureza "
+            "física do produto.",
+            "Serviços transacionáveis: fretes e seguros (historicamente centrais no comércio britânico), "
+            "serviços financeiros, turismo, consultoria, tecnologia da informação. A " + azb("Índia") + " em "
+            "software e serviços de TI é o exemplo moderno de vantagem comparativa em serviços.",
+            "Limite real: serviços que exigem presença física simultânea (cabeleireiro, construção civil) são "
+            + azb("não transacionáveis") + " — não por falha do modelo, mas porque não entram no comércio "
+            "internacional (ou só entram via movimento de pessoas).",
+            "No sistema multilateral, os serviços passaram a ter regras próprias com o " + azb("GATS") + " "
+            "(Acordo Geral sobre Comércio de Serviços), criado na Rodada Uruguai com a " + vd("OMC (1995)")
+            + ".",
+            vm("Regra-âncora: vantagem comparativa se aplica a todo produto transacionável, bem ou serviço."),
+        ],
+        "dissecando": (cz("[restrição indevida · anacronismo]") + " O item usa a data de formulação (“começo do "
+                       "século XIX”) para sugerir que o modelo ficou preso aos bens da época. A teoria é "
+                       "abstrata: vale para serviços transacionáveis."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo ricardiano pode explicar o comércio de serviços transacionáveis, como os de tecnologia "
+            "da informação.”</i> → CERTO",
+            "<i>“Todos os serviços podem ser objeto de comércio internacional.”</i> → ERRADO (modulador absoluto: "
+            "há não transacionáveis)",
+        ])],
+        "reescrita": ("O modelo clássico de comércio internacional, formulado no começo do século XIX, "
+                      + hl("também pode") + " ser aplicado ao comércio de serviços" + hl(" transacionáveis") + "."),
+        "tipo_erro": ["RESTRICAO", "ANACRONISMO"], "moduladores": ["não pode"], "dificuldade": 1,
+        "comentario_fonte": ("Comentário correto no essencial: o modelo se aplica a serviços como transporte, seguro "
+                             "e educação; serviços com barreiras geográficas não são transacionáveis. Condiciona a "
+                             "aplicação à “mobilidade de fatores”, o que não procede."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0914
+    {
+        "id": "ECO-E1-0914-1", "fonte_ref": "E1-0914", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2022, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de vantagens comparativas sustenta que todos os participantes do comércio "
+                      "internacional apresentam ganhos equivalentes ao participar do comércio."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O modelo de vantagens comparativas sustenta que todos os participantes do comércio "
+                       "internacional apresentam ganhos ") + vm("equivalentes") + az(" ao participar do comércio.")),
+        "poucas": ("O modelo garante que todos <b>podem</b> ganhar, mas não que ganhem o mesmo: a divisão dos "
+                   "ganhos depende dos " + azb("termos de troca") + " — quem negocia a um preço mais distante do "
+                   "seu custo de autarquia ganha mais."),
+        "destrinchando": [
+            "No modelo de " + oc("Ricardo") + ", há ganho mútuo se os termos de troca ficarem " + vd("entre os "
+            "custos de oportunidade") + " dos dois países. Onde o preço se fixa dentro desse intervalo decide "
+            "quem fica com a maior fatia.",
+            "Caso extremo: o " + azb("país grande") + " que não se especializa por completo comercia ao próprio "
+            "preço de autarquia e " + vd("não ganha nada") + "; o país pequeno fica com todo o ganho. Ganhos "
+            "“equivalentes” seriam coincidência, não resultado do modelo.",
+            "Dentro de cada país, a questão é outra: com um só fator (trabalho), o Ricardo não tem perdedores "
+            "internos; já nos modelos com mais fatores (" + azb("Heckscher-Ohlin") + ", fatores específicos), o "
+            "comércio cria ganhadores e perdedores, e os ganhos agregados permitem, em tese, compensar os "
+            "perdedores.",
+            "Ponte com a " + azb("CEPAL") + ": a discussão sobre a repartição dos ganhos dialoga com a crítica"
+            + " de " + oc("Prebisch") + ", para quem a deterioração dos termos de troca deixava à periferia a "
+            "menor parte dos ganhos.",
+            vm("Regra-âncora: vantagem comparativa garante ganho possível para todos, não ganho igual."),
+        ],
+        "dissecando": (cz("[extrapolação · modulador absoluto]") + " “Todos ganham” é tese ricardiana; o "
+                       "examinador acrescentou “equivalentes”, que o modelo não sustenta. Desconfie de adjetivos "
+                       "de igualdade (iguais, equivalentes, proporcionais) colados a resultados de ganho mútuo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo de vantagens comparativas sustenta que todos os participantes podem ganhar com o "
+            "comércio, e a divisão dos ganhos depende dos termos de troca.”</i> → CERTO",
+            "<i>“No modelo ricardiano, o país grande sempre se apropria da maior parte dos ganhos de "
+            "comércio.”</i> → ERRADO (inversão: tende a ganhar menos)",
+        ])],
+        "reescrita": ("O modelo de vantagens comparativas sustenta que todos os participantes do comércio "
+                      "internacional apresentam ganhos " + hl("— não necessariamente equivalentes, pois sua divisão "
+                      "depende dos termos de troca —") + " ao participar do comércio."),
+        "tipo_erro": ["EXTRAPOLACAO", "GENERALIZACAO"], "moduladores": ["todos", "equivalentes"], "dificuldade": 1,
+        "comentario_fonte": ("Comentário longo de IA: o modelo não garante ganhos iguais; explora efeitos "
+                             "distributivos entre fatores e setores dentro de cada país (próprios do H-O, não do "
+                             "Ricardo de um fator) e não menciona os termos de troca."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: frente em forma de pergunta (“É correto afirmar que ‘…’?”) convertida na "
+                    "assertiva entre aspas"],
+    },
 ]

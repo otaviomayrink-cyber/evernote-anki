@@ -1010,5 +1010,605 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: ECO-E1-0452-1, ECO-E1-0717-1 (destruição criadora)"],
     },
-    # FIM
+    # ------------------------------------------------------------------ E2-L00172
+    {
+        "id": "ECO-E2-L00172-1", "fonte_ref": "E2-L00172", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma das críticas ao modelo de Solow é que ele não considera a tecnologia como uma variável "
+                      "endógena, o que limita sua capacidade de explicar como mudanças tecnológicas afetam a "
+                      "produtividade de forma sustentada ao longo do tempo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma das críticas ao modelo de Solow é que ele <u>não considera a tecnologia como uma variável "
+                      "endógena</u>, o que limita sua capacidade de explicar como mudanças tecnológicas afetam a "
+                      "produtividade de forma sustentada ao longo do tempo."),
+        "poucas": ("No " + oc("Solow") + ", o progresso técnico é " + azb("exógeno") + ": cresce a uma taxa g "
+                   "dada. Como só ele sustenta o crescimento per capita no longo prazo, o modelo deixa sem "
+                   "explicação o próprio motor do crescimento."),
+        "destrinchando": [
+            "Sem progresso técnico, o Solow leva ao estado estacionário com crescimento per capita " + vd("zero")
+            + " (rendimentos marginais decrescentes do capital). Para reproduzir o crescimento sustentado "
+            "observado, Solow acrescenta A(t) crescendo a uma taxa " + vd("g") + " exógena — o “maná do céu”.",
+            "Na " + azb("contabilidade do crescimento") + " (Solow, 1957), cerca de " + vd("7/8") + " do "
+            "crescimento do produto por hora nos EUA de 1909 a 1949 ficou no resíduo — a " + azb("PTF")
+            + ", “uma medida da nossa ignorância” (" + oc("Abramovitz") + ").",
+            "Críticas que daí decorrem: (1) o modelo não diz por que a tecnologia avança nem por que difere "
+            "entre países; (2) políticas (educação, P&D, patentes) não afetam o crescimento de longo prazo; (3) "
+            "prevê convergência que não se observa entre países muito diferentes.",
+            "Resposta: os modelos de " + azb("crescimento endógeno") + " — " + oc("Romer") + " (1986, 1990), "
+            + oc("Lucas") + " (1988), " + oc("Aghion e Howitt") + " (1992) — explicam o progresso técnico por P&D, "
+            "capital humano e transbordamentos de conhecimento.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Crítica de manual, sem modulador perigoso. A variante ERRADA "
+                       "comum diz que Solow trata a tecnologia como endógena ou que, no Solow, a poupança "
+                       "determina o crescimento de longo prazo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Solow, o progresso técnico é determinado pela taxa de poupança da economia.”</i> → "
+            "ERRADO (nexo indevido: é exógeno)",
+            "<i>“No modelo de Solow, sem progresso técnico, o produto per capita para de crescer no estado "
+            "estacionário.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Solow trata o progresso técnico como exógeno, o que limita a explicação de seus "
+                            "efeitos sustentados; os modelos endógenos o incorporam internamente.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["dado_aproximado: fração do resíduo em Solow (1957) arredondada para 7/8 (87,5%)"],
+    },
+    # ------------------------------------------------------------------ E2-L00173
+    {
+        "id": "ECO-E2-L00173-1", "fonte_ref": "E2-L00173", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("Nos modelos de crescimento endógeno, espera-se que o aumento do estoque de capital por "
+                      "trabalhador seja a principal forma de romper com os rendimentos decrescentes típicos das "
+                      "economias de escala."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Nos modelos de crescimento endógeno, espera-se que ") + vm("o aumento do estoque de capital "
+                                                                                   "por trabalhador")
+                    + az(" seja a principal forma de romper com os rendimentos decrescentes ")
+                    + vm("típicos das economias de escala") + az(".")),
+        "poucas": ("Acumular capital físico é justamente o que " + vm("esbarra") + " nos rendimentos "
+                   "decrescentes. Nos modelos endógenos, eles são rompidos por " + azb("conhecimento") + " — P&D, "
+                   "capital humano, transbordamentos. E “economias de escala” são rendimentos " + vd("crescentes")
+                   + ", não decrescentes."),
+        "destrinchando": [
+            "No " + oc("Solow") + ", mais k por trabalhador rende cada vez menos (f″ &lt; 0): é por isso que o "
+            "crescimento per capita para no estado estacionário. Só aumentar k não rompe nada — é o próprio "
+            "problema.",
+            "Como os modelos endógenos rompem a barreira: " + oc("Romer") + " (1986) — o investimento de cada "
+            "firma gera " + azb("conhecimento que transborda") + " para as outras (learning-by-doing, à "
+            + oc("Arrow") + "), e o capital agregado passa a ter rendimentos constantes; " + oc("Lucas") + " (1988) "
+            "— " + azb("capital humano") + " acumulado sem rendimentos decrescentes; " + oc("Romer") + " (1990) — "
+            azb("ideias") + " não rivais, produzidas por P&D com fins de lucro.",
+            "No modelo " + azb("AK") + ", o “K” é capital em sentido amplo (físico + humano + conhecimento); é "
+            "essa amplitude, e não o capital físico em si, que justifica rendimentos constantes.",
+            "Vocabulário: " + azb("rendimentos marginais decrescentes") + " = um fator aumenta, os outros "
+            "fixos, e o produto adicional cai. " + azb("Economias de escala") + " = todos os fatores aumentam e "
+            "o produto aumenta mais que proporcionalmente (rendimentos crescentes de escala). O item mistura os "
+            "dois.",
+            vm("Regra-âncora: crescimento endógeno rompe os rendimentos decrescentes com conhecimento, não com "
+               "mais máquinas."),
+        ],
+        "dissecando": (cz("[troca de conceito · troca de conceito]") + " Duas trocas: (1) o motor do crescimento "
+                       "endógeno (conhecimento) trocado pela acumulação de capital físico, que é o motor do "
+                       "Solow; (2) rendimentos decrescentes atribuídos a “economias de escala”, que significam o "
+                       "oposto. Basta uma para marcar ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Nos modelos de crescimento endógeno, externalidades do conhecimento permitem superar os "
+            "rendimentos marginais decrescentes do capital.”</i> → CERTO",
+            "<i>“Economias de escala correspondem a rendimentos decrescentes de escala.”</i> → ERRADO (troca de "
+            "conceito: são rendimentos crescentes)",
+        ])],
+        "reescrita": ("Nos modelos de crescimento endógeno, espera-se que " + hl("a acumulação de conhecimento — "
+                      "P&D, capital humano e transbordamentos —") + " seja a principal forma de romper com os "
+                      "rendimentos decrescentes " + hl("do capital") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["principal"], "dificuldade": 2,
+        "comentario_fonte": "Não é o aumento do capital que rompe os rendimentos decrescentes, mas a incorporação "
+                            "de tecnologia e conhecimento.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00174
+    {
+        "id": "ECO-E2-L00174-1", "fonte_ref": "E2-L00174", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria do crescimento endógeno sugere que o investimento em tecnologia e conhecimento pode "
+                      "prolongar o crescimento econômico mesmo após o ponto de equilíbrio estacionário descrito nos "
+                      "modelos tradicionais."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria do crescimento endógeno sugere que o investimento em tecnologia e conhecimento "
+                      "<u>pode</u> prolongar o crescimento econômico mesmo após o ponto de equilíbrio estacionário "
+                      "descrito nos modelos tradicionais."),
+        "poucas": ("Nos modelos tradicionais (" + oc("Solow") + " sem progresso técnico), o crescimento per capita "
+                   "para no " + azb("estado estacionário") + ". Nos endógenos, investir em conhecimento — sem "
+                   "rendimentos decrescentes — mantém o crescimento indefinidamente."),
+        "destrinchando": [
+            "Por que o Solow para: com rendimentos marginais decrescentes, cada unidade adicional de capital "
+            "rende menos, até que a poupança só baste para repor a depreciação e equipar os novos trabalhadores "
+            "(s·f(k*) = (n+δ)k*). Daí em diante, y per capita fica constante (ou cresce à taxa exógena g).",
+            "Por que os endógenos não param: o fator acumulável relevante — " + azb("conhecimento") + ", "
+            + azb("capital humano") + ", capital em sentido amplo — tem rendimentos " + vd("constantes") + ". "
+            "No modelo AK, γ = sA − δ > 0 para sempre, sem estado estacionário em nível.",
+            "Mecanismos: P&D movido pelo lucro de patentes (" + oc("Romer") + ", 1990), educação e treinamento "
+            "(" + oc("Lucas") + ", 1988), aprendizado na prática e transbordamentos (" + oc("Arrow") + ", 1962; "
+            + oc("Romer") + ", 1986).",
+            "Implicação de política: subsídios a P&D, educação e proteção à propriedade intelectual podem "
+            "elevar a taxa de crescimento de longo prazo — no Solow, só elevariam o nível.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Redação vaga (“ponto de equilíbrio "
+                       "estacionário descrito nos modelos tradicionais”), mas a ideia é correta e protegida por "
+                       "“pode”. Itens desse tipo erram quando dizem que os endógenos também levam a um estado "
+                       "estacionário sem crescimento."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os modelos de crescimento endógeno, assim como o de Solow, preveem que a economia converge para "
+            "um estado estacionário sem crescimento per capita.”</i> → ERRADO (troca de conceito)",
+            "<i>“No modelo AK, a taxa de crescimento de longo prazo depende da taxa de poupança.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": "Investimento em tecnologia e educação estende o crescimento além do estado "
+                            "estacionário de Solow, por aumentos contínuos de produtividade.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00175
+    {
+        "id": "ECO-E2-L00175-1", "fonte_ref": "E2-L00175", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("O conceito de destruição criativa, conforme discutido por Schumpeter, refere-se à "
+                      "substituição de antigas estruturas econômicas construídas por empreendedores por novas por "
+                      "meio de inovações oriundas de agentes focados em pesquisa e desenvolvimento, desempenhando um "
+                      "papel crucial no moderno progresso econômico baseado na disrupção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O conceito de destruição criativa, conforme discutido por Schumpeter, refere-se à "
+                       "substituição de antigas estruturas econômicas ") + vm("construídas por empreendedores")
+                    + az(" por novas por meio de inovações ") + vm("oriundas de agentes focados em pesquisa e "
+                                                                   "desenvolvimento")
+                    + az(", desempenhando um papel crucial no moderno progresso econômico baseado na disrupção.")),
+        "poucas": ("O item inverte os papéis: em " + oc("Schumpeter") + " o " + azb("empreendedor") + " é quem "
+                   "<b>introduz</b> a inovação e destrói o velho — não o construtor das estruturas antigas — e a "
+                   "inovação não se define por vir de “agentes de P&D”."),
+        "destrinchando": [
+            "<i>Teoria do Desenvolvimento Econômico</i> (" + vd("1911") + "): o " + azb("empresário inovador")
+            + " é definido pela função de realizar " + azb("novas combinações") + " (produto, método, mercado, "
+            "matéria-prima, organização). Quem apenas administra o negócio existente, segundo a rotina, não é "
+            "empresário nesse sentido.",
+            azb("Invenção × inovação") + ": o inventor (ou o laboratório) cria a ideia; a inovação só existe "
+            "quando o empresário a leva ao mercado, assumindo o risco com crédito bancário. Pesquisa sem "
+            "empreendedor fica na gaveta.",
+            "Nuance — “" + azb("Schumpeter Mark II") + "”: em <i>Capitalismo, Socialismo e Democracia</i> ("
+            + vd("1942") + "), ele nota que a inovação tende a se " + azb("rotinizar") + " nos departamentos de "
+            "P&D das grandes empresas, e via nisso um sinal da burocratização do capitalismo. Mesmo aí, o "
+            "conceito de destruição criadora não opõe “empreendedores” (velhos) a “agentes de P&D” (novos).",
+            "O que é a destruição criadora: o processo que “revoluciona incessantemente a estrutura econômica a "
+            "partir de dentro, destruindo o antigo e criando o novo” — para Schumpeter, o fato essencial do "
+            "capitalismo, e não um traço de um “moderno progresso baseado na disrupção”.",
+            vm("Regra-âncora: em Schumpeter, empreendedor = agente da inovação (e da destruição)."),
+        ],
+        "dissecando": (cz("[troca de ator · inversão]") + " O item preserva o vocabulário certo (destruição "
+                       "criativa, inovação, disrupção) e embaralha os agentes: empurra o empreendedor para o lado "
+                       "do “antigo” e entrega a inovação a pesquisadores. Pista: em Schumpeter, quem destrói é "
+                       "sempre o empreendedor."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Schumpeter, o empreendedor distingue-se do inventor por introduzir a inovação no sistema "
+            "econômico.”</i> → CERTO",
+            "<i>“Para Schumpeter, a inovação depende apenas da invenção científica, independentemente da ação do "
+            "empreendedor.”</i> → ERRADO (restrição indevida e inversão)",
+        ])],
+        "reescrita": ("O conceito de destruição criativa, conforme discutido por Schumpeter, refere-se à "
+                      "substituição de antigas estruturas econômicas <s>construídas por empreendedores</s> por novas "
+                      "por meio de inovações " + hl("introduzidas pelos empreendedores") + ", desempenhando um papel "
+                      "crucial no moderno progresso econômico baseado na disrupção."),
+        "tipo_erro": ["TROCA_ATOR", "INVERSAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Várias respostas de IA concordantes: o empreendedor é o próprio agente da inovação; "
+                            "a assertiva o separa artificialmente dos agentes de P&D; nuance do Schumpeter Mark II "
+                            "(rotinização da inovação nas grandes empresas).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0452-1, ECO-E2-L00620-1 (destruição criadora)"],
+    },
+    # ------------------------------------------------------------------ E2-L00523
+    {
+        "id": "ECO-E2-L00523-1", "fonte_ref": "E2-L00523", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "A respeito das teorias de crescimento econômico, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de Harrod-Domar postula uma relação de produto-capital fixa e conclui que a taxa de "
+                      "crescimento da economia é diretamente proporcional à taxa de poupança e inversamente "
+                      "proporcional à relação capital-produto."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O modelo de Harrod-Domar postula uma relação de produto-capital fixa e conclui que a taxa de "
+                      "crescimento da economia é <u>diretamente</u> proporcional à taxa de poupança e "
+                      "<u>inversamente</u> proporcional à relação capital-produto."),
+        "poucas": ("É a equação fundamental " + vd("g = s/v") + ": s no numerador (diretamente proporcional), v "
+                   "= K/Y no denominador (inversamente). Produto-capital fixa ⇔ capital-produto fixa — uma é o "
+                   "inverso da outra."),
+        "destrinchando": [
+            "Dedução em uma linha: I = S = sY e I = ΔK = v·ΔY (proporções fixas) ⇒ sY = vΔY ⇒ " + vd("ΔY/Y = s/v")
+            + ".",
+            "Exemplo: s = 24% e v = 3 ⇒ g = " + vd("8%") + ". Se a poupança cai para 18%, g cai para 6%; se a "
+            "tecnologia exigisse v = 4, g cairia para 6% com s = 24%.",
+            "Cuidado com as duas notações: com a relação " + azb("capital-produto") + " (v = K/Y), g = s/v; com "
+            "a relação " + azb("produto-capital") + " (σ = Y/K = 1/v), g = s·σ. O item usa as duas corretamente: "
+            "postula a produto-capital fixa e põe a capital-produto no denominador.",
+            "Leitura de política dos anos 1950: para acelerar o crescimento, elevar s (inclusive com poupança "
+            "externa e ajuda internacional) — base do “" + azb("hiato de poupança") + "” nos modelos de "
+            "desenvolvimento e no planejamento.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Item de fórmula. A armadilha está na troca entre as "
+                       "duas relações (produto-capital × capital-produto): a banca inverte “diretamente” e "
+                       "“inversamente” ou troca a relação no denominador para pegar quem decorou sem entender."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Harrod-Domar, a taxa de crescimento é diretamente proporcional à relação "
+            "capital-produto.”</i> → ERRADO (inversão)",
+            "<i>“No modelo de Harrod-Domar, a taxa de crescimento é o produto da taxa de poupança pela relação "
+            "produto-capital.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Proporções fixas; g = s/v; mais poupança ou menor coeficiente de capital elevam o "
+                            "crescimento.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0706-1, ECO-E1-0713-1 (g = s/v)"],
+    },
+    # ------------------------------------------------------------------ E2-L00620
+    {
+        "id": "ECO-E2-L00620-1", "fonte_ref": "E2-L00620", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_4,
+        "rotulo_item": "Item",
+        "assertiva": ("Schumpeter cunhou a expressão “destruição criativa” para descrever o processo pelo qual "
+                      "inovações tecnológicas revolucionam a estrutura econômica, destruindo velhos setores e "
+                      "criando novos, sendo este um motor fundamental do capitalismo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Schumpeter cunhou a expressão “destruição criativa” para descrever o processo pelo qual "
+                      "inovações tecnológicas revolucionam a estrutura econômica, destruindo velhos setores e "
+                      "criando novos, sendo este um <u>motor fundamental do capitalismo</u>."),
+        "poucas": ("Definição correta da " + azb("destruição criativa") + " (ou criadora) de " + oc("Schumpeter")
+                   + ": inovações rompem a estrutura existente, eliminam setores e empresas antigos e criam "
+                   "novos — o motor do capitalismo."),
+        "destrinchando": [
+            "Em <i>Capitalismo, Socialismo e Democracia</i> (" + vd("1942") + "), Schumpeter descreve o "
+            "capitalismo como um processo de mutação industrial que revoluciona a estrutura econômica " + azb("de "
+            "dentro") + ", destruindo o antigo e criando o novo: esse é, para ele, o fato essencial do sistema.",
+            "Quem move o processo é o " + azb("empresário inovador") + ", com " + azb("crédito bancário") + ". "
+            "A inovação vai além da tecnologia de produto: inclui novos métodos, mercados, fontes de "
+            "matéria-prima e formas de organização. A concorrência decisiva não é a de preços, mas a da "
+            "novidade.",
+            "Consequências: lucro extraordinário temporário do inovador; imitação em enxame; falências e "
+            "desemprego nos setores ultrapassados; ciclos econômicos ligados às ondas de inovação.",
+            "Nota de história do pensamento: a expressão aparece antes em " + oc("Werner Sombart") + " (1913), "
+            "mas foi Schumpeter quem a consagrou; em prova, “Schumpeter cunhou” é aceito.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual. A versão ERRADA mais comum troca o autor "
+                       "(Keynes, Marx), torna o processo exógeno ou nega o lado destrutivo (“sem eliminar "
+                       "empresas”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Keynes cunhou a expressão destruição criativa para descrever o papel do investimento na "
+            "demanda agregada.”</i> → ERRADO (troca de ator)",
+            "<i>“Para Schumpeter, a inovação abrange também novas formas de organização da produção e a "
+            "abertura de novos mercados.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Conceito central de Schumpeter: inovações de empreendedores tornam obsoletos setores "
+                            "e modelos de negócio, gerando crescimento e eficiência dinâmica.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0717-1, ECO-E1-0452-1 (destruição criadora)"],
+    },
+    # ------------------------------------------------------------------ E2-L00621
+    {
+        "id": "ECO-E2-L00621-1", "fonte_ref": "E2-L00621", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_4,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma característica definidora dos modelos de crescimento endógeno é a incorporação da inovação "
+                      "tecnológica como uma variável determinada dentro do modelo, resultante de decisões econômicas "
+                      "de agentes que buscam lucro."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma característica definidora dos modelos de crescimento endógeno é a incorporação da inovação "
+                      "tecnológica como uma <u>variável determinada dentro do modelo</u>, resultante de decisões "
+                      "econômicas de agentes que <u>buscam lucro</u>."),
+        "poucas": ("É a definição de " + azb("crescimento endógeno") + ": a inovação deixa de ser dada (como no "
+                   "Solow) e passa a resultar de escolhas — por exemplo, firmas que investem em P&D para obter o "
+                   + azb("lucro de monopólio") + " de uma patente."),
+        "destrinchando": [
+            "Modelo-símbolo: " + oc("Paul Romer") + " (1990), “Endogenous Technological Change”. Há um setor de "
+            "pesquisa que produz novas ideias (novos bens de capital); a firma inovadora ganha uma patente e "
+            "lucro de monopólio, que remunera o custo da pesquisa. Crescimento = ritmo de criação de ideias.",
+            "Duas propriedades das " + azb("ideias") + ": " + azb("não rivalidade") + " (o mesmo conhecimento "
+            "serve a muitos ao mesmo tempo) e " + azb("excludabilidade parcial") + " (patentes e segredos "
+            "permitem cobrar por ela). A não rivalidade gera rendimentos crescentes; a excludabilidade cria o "
+            "incentivo ao lucro — daí a necessidade de concorrência imperfeita no modelo.",
+            "Outras famílias: " + oc("Lucas") + " (1988), em que as famílias escolhem quanto tempo investir em "
+            "capital humano (busca de renda, não de lucro); " + oc("Aghion e Howitt") + " (1992), com "
+            "destruição criadora schumpeteriana.",
+            "Contraste: no " + oc("Solow") + ", A cresce à taxa g exógena, sem relação com decisões; nos "
+            "endógenos, políticas que mudam incentivos (patentes, subsídios a P&D, educação) mudam a taxa de "
+            "crescimento.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição correta; “que buscam lucro” é preciso para o modelo de "
+                       "Romer (1990) e para os schumpeterianos. Um ponto que a banca poderia explorar: nem todo "
+                       "modelo endógeno depende de lucro (Lucas trata de decisões de famílias), mas o item fala "
+                       "em “característica definidora” da inovação tecnológica, o que está certo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Nos modelos de crescimento endógeno, a inovação tecnológica cresce a uma taxa constante "
+            "determinada fora do modelo.”</i> → ERRADO (troca de conceito: isso é o Solow)",
+            "<i>“No modelo de Romer (1990), o poder de monopólio conferido por patentes é o incentivo à "
+            "pesquisa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Nos modelos endógenos (Romer, Lucas), o progresso técnico decorre de investimento em "
+                            "P&D ou capital humano por agentes maximizadores.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0716-1 (mesma definição, prova de 2019)"],
+    },
+    # ------------------------------------------------------------------ E2-L00765
+    {
+        "id": "ECO-E2-L00765-1", "fonte_ref": "E2-L00765", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_INTERT,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de Solow apresenta uma contradição básica, conhecida como equilíbrio em fio de "
+                      "navalha: se um país sair da trajetória de equilíbrio a longo prazo, ele não consegue voltar "
+                      "mais para a trajetória do crescimento equilibrado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O modelo ") + vm("de Solow") + az(" apresenta uma contradição básica, conhecida como "
+                       "equilíbrio em fio de navalha: se um país sair da trajetória de equilíbrio a longo prazo, "
+                       "ele não consegue voltar mais para a trajetória do crescimento equilibrado.")),
+        "poucas": ("O " + azb("fio da navalha") + " é do " + vd("Harrod-Domar") + ". O Solow foi criado "
+                   "justamente para superá-lo: com substituição entre fatores e rendimentos decrescentes, a "
+                   "economia converge para o estado estacionário."),
+        "destrinchando": [
+            "Harrod-Domar: proporções fixas (v constante) e poupança s fixa. A taxa garantida s/v é instável — "
+            "desvios se acumulam — e só por acaso coincide com a natural (n). É o fio da navalha.",
+            oc("Solow") + " (1956), “A Contribution to the Theory of Economic Growth”: torna v variável "
+            "(função de produção neoclássica, com substituição entre K e L). Se k &lt; k*, s·f(k) > (n+δ)k e k "
+            "sobe; se k > k*, k cai. O estado estacionário é " + vd("estável") + ", e g<sub>w</sub> se ajusta a "
+            "g<sub>n</sub> pela relação capital-produto.",
+            "No mesmo ano, " + oc("Trevor Swan") + " chegou a resultado semelhante — daí “modelo Solow-Swan”.",
+            "Fórmula de prova: Harrod-Domar → g = s/v, instável; Solow → s·f(k*) = (n+δ)k*, estável, com "
+            "crescimento per capita de longo prazo igual a g (progresso técnico exógeno).",
+            vm("Regra-âncora: fio da navalha = Harrod-Domar; convergência estável = Solow."),
+        ],
+        "dissecando": (cz("[troca de ator]") + " A descrição do fio da navalha está perfeita; só o modelo foi "
+                       "trocado. 🔥 Clássico de prova: a banca copia a definição de um modelo e cola o nome do "
+                       "outro. Pista: “contradição básica” e “não consegue voltar” nunca descrevem o Solow."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo de Harrod-Domar apresenta uma contradição básica, conhecida como equilíbrio em fio de "
+            "navalha.”</i> → CERTO",
+            "<i>“O modelo de Solow corrige o fio da navalha ao fixar a relação capital-produto.”</i> → ERRADO "
+            "(inversão: ele a torna variável)",
+        ])],
+        "reescrita": ("O modelo " + hl("de Harrod-Domar") + " apresenta uma contradição básica, conhecida como "
+                      "equilíbrio em fio de navalha: se um país sair da trajetória de equilíbrio a longo prazo, ele "
+                      "não consegue voltar mais para a trajetória do crescimento equilibrado."),
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Duas respostas concordantes: fio da navalha é característica do Harrod-Domar; no Solow "
+                            "a economia converge a um estado estacionário estável.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0740-1 (estável × instável)"],
+    },
+    # ------------------------------------------------------------------ E2-L00766
+    {
+        "id": "ECO-E2-L00766-1", "fonte_ref": "E2-L00766", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_INTERT,
+        "rotulo_item": "Item",
+        "assertiva": ("Se há retornos marginais constantes dos fatores de produção que podem ser acumulados, os "
+                      "modelos de crescimento endógenos preveem que a taxa de crescimento de longo-prazo seja "
+                      "influenciada pela taxa de acumulação desses fatores. No caso do modelo básico Y = AK, a taxa "
+                      "de crescimento de longo-prazo é influenciada pela taxa de poupança."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se há <u>retornos marginais constantes</u> dos fatores de produção que podem ser acumulados, "
+                      "os modelos de crescimento endógenos preveem que a taxa de crescimento de longo-prazo seja "
+                      "influenciada pela taxa de acumulação desses fatores. No caso do modelo básico Y = AK, a taxa "
+                      "de crescimento de longo-prazo é <u>influenciada pela taxa de poupança</u>."),
+        "poucas": ("Sem rendimentos decrescentes, poupar mais não “se esgota”: no modelo " + azb("AK") + ", "
+                   + vd("γ = sA − δ") + " — a taxa de poupança afeta a taxa de crescimento de longo prazo, e não "
+                   "só o nível."),
+        "destrinchando": [
+            "Modelo AK: Y = AK, com A constante e K capital em sentido amplo (físico + humano + conhecimento). "
+            "O produto marginal do capital é " + vd("A, constante") + ". Acumulação: ΔK = sY − δK = (sA − δ)K ⇒ "
+            + vd("ΔK/K = ΔY/Y = sA − δ") + ".",
+            "Leitura gráfica: s·A·K e δK são duas retas que partem da origem. Se sA > δ, o investimento supera "
+            "a depreciação em qualquer K — não existe interseção (estado estacionário em nível), e o capital "
+            "cresce para sempre à mesma taxa.",
+            "Contraste com o " + oc("Solow") + ": com rendimentos decrescentes, s·f(k) acaba encontrando (n+δ)k "
+            "e o crescimento per capita para; a poupança tem só " + azb("efeito nível") + ". No AK, tem "
+            + azb("efeito crescimento") + ".",
+            "Generalização do item: o que importa é haver rendimentos constantes no fator <b>acumulável</b> — "
+            "capital amplo no AK (" + oc("Rebelo") + ", 1991), capital humano em " + oc("Lucas") + " (1988), "
+            "conhecimento em " + oc("Romer") + ". A taxa de acumulação desse fator (poupança, tempo de estudo, "
+            "esforço de P&D) passa a determinar o crescimento.",
+            "Implicação: no AK não há " + azb("convergência") + " — países com s diferentes crescem a taxas "
+            "diferentes para sempre.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Condicional bem construída: “se há retornos marginais "
+                       "constantes” é exatamente a hipótese que gera crescimento endógeno. A armadilha seria "
+                       "trocar por “decrescentes” (aí o item viraria ERRADO) ou afirmar que no AK a poupança só "
+                       "afeta o nível."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo Y = AK, um aumento da taxa de poupança eleva apenas temporariamente a taxa de "
+            "crescimento.”</i> → ERRADO (o efeito é permanente)",
+            "<i>“Se os fatores acumuláveis têm retornos marginais decrescentes, a taxa de poupança não afeta a "
+            "taxa de crescimento de longo prazo.”</i> → CERTO (é o caso de Solow)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["se"], "dificuldade": 2,
+        "comentario_fonte": "No AK, K amplo sem rendimentos decrescentes; g = sA − δ; políticas que elevam s ou A "
+                            "elevam permanentemente o crescimento; gráfico com sAk acima de δk em qualquer K.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 114", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvida (descrição no 📖; gráfico do mesmo mecanismo em ECO-E2-L01059-1-V1)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01059-1 (modelo AK e poupança)"],
+    },
+    # ------------------------------------------------------------------ E2-L00829
+    {
+        "id": "ECO-E2-L00829-1", "fonte_ref": "E2-L00829", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Com relação às teorias do crescimento econômico, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com os modelos de crescimento endógeno, algumas explicações para o diferencial de "
+                      "renda per capita podem ser encontradas em variáveis como capital humano e investimento em "
+                      "pesquisa e desenvolvimento."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo com os modelos de crescimento endógeno, <u>algumas</u> explicações para o "
+                      "diferencial de renda per capita <u>podem</u> ser encontradas em variáveis como capital "
+                      "humano e investimento em pesquisa e desenvolvimento."),
+        "poucas": ("Nos modelos endógenos, " + azb("capital humano") + " (" + oc("Lucas") + ") e " + azb("P&D")
+                   + " (" + oc("Romer") + ") determinam a taxa de crescimento; países que investem diferente "
+                   "neles crescem a taxas diferentes, e as rendas per capita divergem."),
+        "destrinchando": [
+            oc("Lucas") + " (1988), “On the Mechanics of Economic Development”: a acumulação de capital humano "
+            "não tem rendimentos decrescentes e ainda gera " + azb("externalidades") + " (trabalhadores mais "
+            "qualificados tornam os colegas mais produtivos). Países com mais esforço educacional crescem mais "
+            "— e o trabalho qualificado não migra para os pobres como o Solow faria prever.",
+            oc("Romer") + " (1990): o crescimento depende da quantidade de pesquisadores e do estoque de ideias; "
+            "economias com mais P&D crescem mais rápido.",
+            "Diferença em relação ao " + oc("Solow") + ": lá, as diferenças de renda vêm de s, n e do nível de "
+            "A (exógeno) e tendem a se estabilizar (convergência condicional). Nos endógenos, diferenças de "
+            "investimento em conhecimento podem gerar " + vd("divergência permanente") + " das taxas de "
+            "crescimento.",
+            "Ponte empírica: o Solow ampliado de " + oc("Mankiw, Romer e Weil") + " (1992), com capital humano, "
+            "explica cerca de " + vd("80%") + " da variação internacional da renda per capita na amostra dos "
+            "autores — capital humano importa mesmo fora dos modelos endógenos.",
+        ],
+        "dissecando": (cz("[modulador relativo · literalidade]") + " “Algumas” e “podem” protegem o item; as "
+                       "variáveis citadas são as clássicas dos modelos de Lucas e Romer. Viraria ERRADO com "
+                       "“exclusivamente” ou com variáveis exógenas no lugar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo os modelos de crescimento endógeno, o diferencial de renda per capita entre países se "
+            "explica exclusivamente pelas diferenças de taxa de poupança.”</i> → ERRADO (modulador absoluto)",
+            "<i>“No modelo de Lucas, externalidades do capital humano ajudam a explicar por que o capital não "
+            "flui dos países ricos para os pobres.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "LITERAL"], "moduladores": ["algumas", "podem"], "dificuldade": 1,
+        "comentario_fonte": "Investimento em capital humano pode afetar permanentemente a taxa de crescimento "
+                            "(rendimentos constantes ou crescentes do insumo acumulável); outros modelos "
+                            "introduzem P&D e retornos crescentes de escala. A fonte fala em “concorrência "
+                            "perfeita” nos modelos de P&D.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem associa os modelos de P&D à “concorrência perfeita”; "
+                    "eles exigem concorrência imperfeita (lucro de monopólio das patentes) — omitido",
+                    "dado_aproximado: R² de cerca de 0,8 do Solow ampliado em Mankiw, Romer e Weil (1992), "
+                    "amostra de países não exportadores de petróleo"],
+    },
+    # ------------------------------------------------------------------ E2-L01058
+    {
+        "id": "ECO-E2-L01058-1", "fonte_ref": "E2-L01058", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TEOR,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de crescimento Harrod-Domar indica que qualquer desvio entre o investimento efetivo e "
+                      "o planejado faz com que a economia nunca mais retorne ao seu equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O modelo de crescimento Harrod-Domar indica que <u>qualquer</u> desvio entre o investimento "
+                      "efetivo e o planejado faz com que a economia <u>nunca mais</u> retorne ao seu equilíbrio."),
+        "poucas": ("É o " + azb("fio da navalha") + ": quando o investimento efetivo difere do planejado (taxa "
+                   "efetiva ≠ taxa garantida), as reações dos empresários " + vd("ampliam") + " o desvio. Não há "
+                   "força que traga a economia de volta."),
+        "destrinchando": [
+            "Em " + oc("Harrod") + " (1939), a " + azb("taxa garantida") + " g<sub>w</sub> = s/v é aquela em "
+            "que o capital existente é exatamente o desejado: os empresários não têm motivo para investir mais "
+            "nem menos. Mas a taxa efetiva resulta de expectativas e erros, e nada garante que coincida com "
+            "g<sub>w</sub>.",
+            "Se o investimento efetivo supera o planejado — demanda acima do esperado, capacidade insuficiente —, "
+            "as firmas investem mais, a demanda sobe mais (multiplicador) e o crescimento efetivo se afasta "
+            "ainda mais de g<sub>w</sub>. O inverso vale para baixo. O desvio é " + vd("cumulativo") + ": o "
+            "equilíbrio é instável.",
+            "Por isso o “nunca mais retorne” é aceito: no modelo puro, sem intervenção, não há mecanismo de "
+            "retorno. Na realidade, tetos (pleno emprego) e pisos (investimento autônomo) limitam a divergência "
+            "— ideia que " + oc("Hicks") + " (1950) desenvolveu na teoria do ciclo.",
+            "Contraste: no " + oc("Solow") + ", a relação capital-produto se ajusta e a economia volta ao estado "
+            "estacionário.",
+        ],
+        "dissecando": (cz("[contraintuitivo · literalidade]") + " “Qualquer” e “nunca mais” são absolutos que "
+                       "costumam sinalizar ERRADO, mas aqui descrevem com exatidão a instabilidade do fio da "
+                       "navalha. 🔥 Exceção clássica à regra dos moduladores: no Harrod-Domar, o absoluto é a "
+                       "própria tese."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Harrod-Domar, desvios entre o investimento efetivo e o planejado são corrigidos "
+            "automaticamente por ajustes na relação capital-produto.”</i> → ERRADO (mecanismo de Solow)",
+            "<i>“No modelo de Harrod, a taxa garantida representa um equilíbrio instável.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO", "LITERAL"], "moduladores": ["qualquer", "nunca mais"], "dificuldade": 2,
+        "comentario_fonte": "Taxa garantida: capital efetivo = desejado; nada assegura que a economia cresça a "
+                            "ela; o steady state de Harrod não é estável; afastamentos são cumulativos.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0740-1, ECO-E1-0729-1 (fio da navalha)"],
+    },
+    # ------------------------------------------------------------------ E2-L01059
+    {
+        "id": "ECO-E2-L01059-1", "fonte_ref": "E2-L01059", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TEOR,
+        "rotulo_item": "Item",
+        "assertiva": ("Com base nos modelos de crescimento endógeno, considerando uma função de produção dada por "
+                      "Y = AK, em que Y é o produto, K é o capital e A é um parâmetro fixo de produtividade, um "
+                      "aumento permanente na taxa de poupança aumenta permanentemente o nível de produto e, "
+                      "temporariamente, a taxa de crescimento do produto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Com base nos modelos de crescimento endógeno, considerando uma função de produção dada por "
+                       "Y = AK, em que Y é o produto, K é o capital e A é um parâmetro fixo de produtividade, um "
+                       "aumento permanente na taxa de poupança aumenta permanentemente o nível de produto e, ")
+                    + vm("temporariamente") + az(", a taxa de crescimento do produto.")),
+        "poucas": ("O item descreve o " + oc("Solow") + ". No modelo " + azb("AK") + ", " + vd("γ = sA − δ")
+                   + ": poupar mais eleva a taxa de crescimento " + vm("permanentemente") + ", porque o capital "
+                   "não tem rendimentos decrescentes."),
+        "destrinchando": [
+            "No AK, ΔK/K = sA − δ e, como Y = AK, ΔY/Y = ΔK/K. Com s maior, a taxa de crescimento sobe "
+            "imediatamente e fica mais alta " + vd("para sempre") + " — não há transição nem estado "
+            "estacionário em nível. Ex.: A = 0,5, δ = 5%; s de 20% para 30% ⇒ γ de " + vd("5%") + " para "
+            + vd("10%") + ".",
+            "Consequentemente, o nível do produto também fica permanentemente acima da trajetória antiga — e a "
+            "distância entre as duas trajetórias " + vd("cresce sem parar") + ". A 1ª parte do item está certa; "
+            "o erro é o “temporariamente”.",
+            "Por que no Solow é temporário: com rendimentos decrescentes, o novo s·f(k) encontra (n+δ)k num "
+            "k* maior; atingido o novo k*, o crescimento per capita volta a g. É o par " + azb("efeito nível")
+            + " (Solow) × " + azb("efeito crescimento") + " (AK).",
+            "Por que o AK não tem rendimentos decrescentes: K é capital em sentido amplo, que inclui capital "
+            "humano e conhecimento; à medida que se acumula, o conhecimento compensa a queda do produto marginal "
+            "do capital físico.",
+            vm("Regra-âncora: Solow → s muda o nível; AK → s muda a taxa de crescimento, para sempre."),
+        ],
+        "grafico_verso": "ECO-E2-L01059-1-V1",
+        "dissecando": (cz("[troca de conceito · meia-verdade]") + " O item enuncia o resultado do Solow e o "
+                       "atribui ao AK. A 1ª metade (nível permanentemente maior) é verdadeira nos dois modelos, o "
+                       "que dá falsa segurança. Pista: “Y = AK” elimina os rendimentos decrescentes, logo elimina "
+                       "a transição."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Solow, um aumento permanente da taxa de poupança eleva permanentemente o nível do "
+            "produto per capita e, temporariamente, sua taxa de crescimento.”</i> → CERTO",
+            "<i>“No modelo AK, países com taxas de poupança diferentes convergem para a mesma taxa de "
+            "crescimento.”</i> → ERRADO (γ = sA − δ difere entre eles)",
+        ])],
+        "reescrita": ("Com base nos modelos de crescimento endógeno, considerando uma função de produção dada por "
+                      "Y = AK, em que Y é o produto, K é o capital e A é um parâmetro fixo de produtividade, um "
+                      "aumento permanente na taxa de poupança aumenta permanentemente o nível de produto e, "
+                      + hl("permanentemente") + ", a taxa de crescimento do produto."),
+        "tipo_erro": ["TROCA_CONCEITO", "MEIA_VERDADE"], "moduladores": ["temporariamente"], "dificuldade": 2,
+        "comentario_fonte": "Nos modelos endógenos, a taxa de investimento afeta a trajetória de crescimento "
+                            "equilibrado; no AK, rendimentos constantes do capital; políticas que elevam a poupança "
+                            "elevam permanentemente o crescimento; Lucas: rendimentos constantes do conhecimento.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 187", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L01059-1-V1, em diagrama de taxas com s₁ e s₂)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00766-1 (AK e poupança)"],
+    },
 ]

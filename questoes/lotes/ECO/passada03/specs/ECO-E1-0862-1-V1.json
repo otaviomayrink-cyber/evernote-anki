@@ -76,14 +76,14 @@
    "tipo": "funcao",
    "expr": "4.5 + 2*(x-5)",
    "dominio": [
-    3.0,
-    7.2
+    3.2,
+    6.9
    ],
    "familia": "terceira",
    "rotulo": "BP",
    "rotulo_xy": [
-    7.25,
-    8.6
+    3.4,
+    0.55
    ]
   }
  ],

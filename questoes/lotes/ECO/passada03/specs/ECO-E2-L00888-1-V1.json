@@ -1,0 +1,25 @@
+{
+ "id": "ECO-E2-L00888-1-V1",
+ "uso": "verso",
+ "legenda": "A tarifa de R$ 5 leva o preço interno de 10 a 15: a produção doméstica sobe de 600 para 900 e o consumo cai de 1.400 para 1.300. Os dois triângulos vermelhos são o peso morto: 750 (produção) + 250 (consumo) = R$ 1.000; o retângulo verde é a receita, 5 × 400 = R$ 2.000.",
+ "eixos": {"x": "Q", "y": "p", "xmax": 1700, "ymax": 24, "numeros": true},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "80 - x/20", "dominio": [1150, 1600], "familia": "demanda", "rotulo": "D"},
+  {"id": "S", "tipo": "funcao", "expr": "x/60", "dominio": [0, 1340], "familia": "oferta", "rotulo": "O doméstica"},
+  {"id": "Pw", "tipo": "horizontal", "y": 10, "x": [0, 1650], "familia": "referencia", "rotulo": "Pm = 10"},
+  {"id": "Pt", "tipo": "horizontal", "y": 15, "x": [0, 1650], "familia": "destaque", "rotulo": "Pm + t = 15", "tracejada": true}
+ ],
+ "pontos": [
+  {"id": "A", "intersecao": ["S", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "600"},
+  {"id": "C", "intersecao": ["S", "Pt"], "marcar": false, "projetar": "x", "rotulo_x": "900"},
+  {"id": "F", "intersecao": ["D", "Pt"], "marcar": false, "projetar": "x", "rotulo_x": "1.300"},
+  {"id": "B", "intersecao": ["D", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "1.400"}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": ["A", "C", ["C.x", 10]], "papel": "peso_morto"},
+  {"tipo": "poligono", "vertices": ["C", "F", ["F.x", 10], ["C.x", 10]], "papel": "receita_tributaria", "rotulo": "receita 2.000", "rotulo_xy": [1100, 12.5]},
+  {"tipo": "poligono", "vertices": [["F.x", 10], "F", "B"], "papel": "peso_morto"}
+ ],
+ "checar": ["abs(A.x - 600) < 0.01", "abs(C.x - 900) < 0.01", "abs(F.x - 1300) < 0.01", "abs(B.x - 1400) < 0.01",
+            "abs(0.5*(C.x-A.x)*5 + 0.5*(B.x-F.x)*5 - 1000) < 0.01", "abs((F.x-C.x)*5 - 2000) < 0.01"]
+}

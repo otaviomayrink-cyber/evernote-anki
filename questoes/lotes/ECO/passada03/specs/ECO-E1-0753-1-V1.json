@@ -106,8 +106,8 @@
    ],
    "rotulo": "E′",
    "rotulo_desloc": [
-    -28,
-    -12
+    14,
+    0
    ]
   },
   {
@@ -120,8 +120,8 @@
    "projetar": "x",
    "rotulo_x": "Y₂",
    "rotulo_desloc": [
-    10,
-    10
+    -6,
+    26
    ]
   }
  ],

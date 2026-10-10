@@ -1,0 +1,112 @@
+{
+ "id": "ECO-E2-L00496-1-V1",
+ "uso": "verso",
+ "tamanho": "card",
+ "legenda": "Oferta (OR) e demanda (DR) relativas mundiais de calçados, com p = preço do calçado em unidades de vestuário. Abaixo de 3/7 (custo de oportunidade do Brasil) ninguém produz calçados; acima de 2 (custo do México) ninguém produz vestuário. Com p = 1, no trecho vertical, cada país se especializa no bem de sua vantagem comparativa e ambos ganham.",
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 10,
+  "ymax": 2.8,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "OR",
+   "tipo": "pontos",
+   "pontos": [
+    [
+     0,
+     0.428571
+    ],
+    [
+     4,
+     0.428571
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     9.5,
+     2
+    ]
+   ],
+   "familia": "oferta",
+   "rotulo": "OR",
+   "rotulo_xy": [
+    9.2,
+    2.15
+   ],
+   "suave": false
+  },
+  {
+   "id": "DR",
+   "tipo": "funcao",
+   "expr": "4/x",
+   "dominio": [
+    1.6,
+    9.5
+   ],
+   "familia": "demanda",
+   "rotulo": "DR",
+   "rotulo_xy": [
+    9.2,
+    0.62
+   ]
+  },
+  {
+   "id": "P",
+   "tipo": "horizontal",
+   "y": 1,
+   "x": [
+    0,
+    5
+   ],
+   "familia": "referencia",
+   "rotulo": "p = 1",
+   "rotulo_xy": [
+    1.0,
+    1.12
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "DR",
+    "P"
+   ],
+   "rotulo": "E",
+   "rotulo_desloc": [
+    10,
+    8
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    1.7,
+    0.22
+   ],
+   "texto": "custo do Brasil = 3/7",
+   "cor": "oferta"
+  },
+  {
+   "xy": [
+    6.8,
+    2.35
+   ],
+   "texto": "custo do México = 2",
+   "cor": "oferta"
+  }
+ ],
+ "checar": [
+  "abs(E.y - 1) < 0.01",
+  "E.y > 3/7",
+  "E.y < 2",
+  "abs(E.x - 4) < 0.01"
+ ]
+}

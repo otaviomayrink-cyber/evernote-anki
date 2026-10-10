@@ -1,0 +1,17 @@
+{"id": "ECO-E2-L01514-1-V1", "uso": "verso",
+ "legenda": "Câmbio fixo sem mobilidade de capital: a BP é vertical na renda que equilibra a balança comercial. A expansão fiscal leva a economia a E′, à direita da BP (déficit comercial); o Banco Central vende reservas, a LM recua para a esquerda e o equilíbrio final E″ tem a mesma renda Y₁ e juros maiores: a política fiscal é ineficaz.",
+ "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "BP", "tipo": "vertical", "x": 4, "y": [0.6, 9.6], "familia": "terceira", "rotulo": "BP", "rotulo_xy": [4.35, 9.5]},
+  {"id": "IS1", "tipo": "reta", "p1": [0.8, 8.2], "p2": [7.6, 1.4], "familia": "demanda", "rotulo": "IS₁", "estado": "inicial"},
+  {"id": "IS2", "tipo": "reta", "p1": [2.8, 8.2], "p2": [9.6, 1.4], "familia": "demanda", "rotulo": "IS₂"},
+  {"id": "LM1", "tipo": "reta", "p1": [1.2, 2.2], "p2": [7.6, 8.6], "familia": "oferta", "rotulo": "LM₁", "estado": "inicial"},
+  {"id": "LM2", "tipo": "reta", "p1": [0.6, 3.6], "p2": [5.6, 8.6], "familia": "oferta", "rotulo": "LM₂"}],
+ "deslocamentos": [
+  {"de": "IS1", "para": "IS2", "sentido": "direita", "em_y": 2.4},
+  {"de": "LM1", "para": "LM2", "sentido": "esquerda", "em_y": 8.0}],
+ "pontos": [
+  {"id": "E", "intersecao": ["IS1", "LM1"], "rotulo": "E", "rotulo_desloc": [12, -10], "projetar": true, "rotulo_x": "Y₁", "rotulo_y": "i₁"},
+  {"id": "Ep", "intersecao": ["IS2", "LM1"], "rotulo": "E′", "rotulo_desloc": [12, -8]},
+  {"id": "Epp", "intersecao": ["IS2", "LM2"], "rotulo": "E″", "rotulo_desloc": [-34, 14], "projetar": "y", "rotulo_y": "i₂"}],
+ "checar": ["Ep.x > E.x", "abs(Epp.x - E.x) < 0.01", "Epp.y > E.y"]}

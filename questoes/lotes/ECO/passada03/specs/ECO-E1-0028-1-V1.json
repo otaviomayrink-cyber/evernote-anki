@@ -1,0 +1,4 @@
+{"id": "ECO-E1-0028-1-V1", "uso": "verso",
+ "legenda": "A tarifa t eleva o preço interno de Pm para Pm + t. O consumidor perde toda a faixa entre os dois preços, à esquerda da demanda: uma parte vira ganho do produtor, outra receita do governo (verde) e o resto é peso morto (vermelho). Quanto maior t, mais alta a faixa — maior a perda do consumidor e maior o peso morto.",
+ "modelo": "tarifa", "params": {"pw": 2, "t": 2},
+ "checar": ["C.x > A.x", "F.x < B.x"]}

@@ -1,0 +1,153 @@
+{
+ "id": "ECO-E2-L00144-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio fixo e mobilidade perfeita: a expansão fiscal leva a IS para a direita (IS₁ → IS₂) e os juros sobem só no ponto provisório E′, acima da BP; a entrada de capitais obriga o BC a comprar divisas, a LM acompanha (LM₁ → LM₂) e o equilíbrio final E₂ volta a i*, com renda bem maior.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    7.5
+   ],
+   "p2": [
+    9.5,
+    2.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "LM2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    1.5
+   ],
+   "p2": [
+    9.6,
+    6.6
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₂"
+  },
+  {
+   "id": "BP",
+   "tipo": "horizontal",
+   "y": 4.5,
+   "x": [
+    0.3,
+    9.7
+   ],
+   "familia": "terceira",
+   "rotulo": "BP",
+   "rotulo_xy": [
+    0.9,
+    4.95
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": "x",
+   "rotulo_x": "Y₁",
+   "rotulo_desloc": [
+    8,
+    -34
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS2",
+    "LM1"
+   ],
+   "rotulo": "E′"
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS2",
+    "LM2"
+   ],
+   "rotulo": "E₂",
+   "projetar": "x",
+   "rotulo_x": "Y₂",
+   "rotulo_desloc": [
+    6,
+    -22
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.15,
+    4.75
+   ],
+   "texto": "i*",
+   "cor": "texto"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 6.6
+  },
+  {
+   "de": "LM1",
+   "para": "LM2",
+   "sentido": "direita",
+   "em_y": 2.6
+  }
+ ],
+ "checar": [
+  "abs(E2.y - E1.y) < 0.01",
+  "E2.x > E1.x",
+  "Ep.y > E1.y"
+ ]
+}

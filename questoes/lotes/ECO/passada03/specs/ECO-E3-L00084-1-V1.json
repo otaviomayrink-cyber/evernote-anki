@@ -1,0 +1,67 @@
+{
+ "id": "ECO-E3-L00084-1-V1",
+ "uso": "verso",
+ "legenda": "A forma da FPP espelha o custo de oportunidade: reta = custo constante (Ricardo); curvada para fora = custo crescente (caso usual); curvada para dentro, convexa em relação à origem = custo decrescente, efeito das economias de escala.",
+ "eixos": {
+  "x": "X",
+  "y": "Y",
+  "xmax": 12,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "L",
+   "tipo": "reta",
+   "p1": [
+    0,
+    9
+   ],
+   "p2": [
+    9,
+    0
+   ],
+   "familia": "referencia",
+   "rotulo": "linear",
+   "rotulo_xy": [
+    6.6,
+    3.4
+   ]
+  },
+  {
+   "id": "C",
+   "tipo": "funcao",
+   "expr": "sqrt(maximum(0, 81 - x**2))",
+   "dominio": [
+    0,
+    9
+   ],
+   "familia": "demanda",
+   "rotulo": "côncava",
+   "rotulo_xy": [
+    8.7,
+    6.0
+   ]
+  },
+  {
+   "id": "V",
+   "tipo": "funcao",
+   "expr": "(3 - sqrt(x))**2",
+   "dominio": [
+    0,
+    9
+   ],
+   "familia": "destaque",
+   "rotulo": "convexa",
+   "rotulo_xy": [
+    3.3,
+    3.0
+   ]
+  }
+ ],
+ "checar": [
+  "V(4.5) < L(4.5)",
+  "L(4.5) < C(4.5)",
+  "abs(V(9)) < 0.01",
+  "abs(L(9)) < 0.01"
+ ]
+}

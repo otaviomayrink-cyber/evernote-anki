@@ -1,0 +1,17 @@
+{
+ "id": "ECO-E2-L00578-1-V1",
+ "uso": "verso",
+ "legenda": "Alta de n: a reta de investimento necessário fica mais inclinada ((n₁+δ)k → (n₂+δ)k) e cruza s·f(k) mais cedo — o capital por trabalhador de estado estacionário cai (k₁* → k₂*). No novo equilíbrio, k fica constante, e o produto agregado cresce à nova taxa n₂, maior.",
+ "eixos": {"x": "k", "y": "y", "xmax": 26, "ymax": 6.2},
+ "curvas": [
+  {"id": "sf", "tipo": "funcao", "expr": "0.9*x**0.5", "dominio": [0, 26], "familia": "oferta", "rotulo": "s·f(k)"},
+  {"id": "dep1", "tipo": "funcao", "expr": "0.2*x", "dominio": [0, 26], "familia": "terceira", "rotulo": "(n₁+δ)k", "estado": "inicial"},
+  {"id": "dep2", "tipo": "funcao", "expr": "0.3*x", "dominio": [0, 20], "familia": "terceira", "rotulo": "(n₂+δ)k"}
+ ],
+ "deslocamentos": [{"de": "dep1", "para": "dep2", "em_x": 15, "sentido": "cima"}],
+ "pontos": [
+  {"id": "E1", "intersecao": ["sf", "dep1"], "indice": 1, "projetar": "x", "rotulo_x": "k₁*"},
+  {"id": "E2", "intersecao": ["sf", "dep2"], "indice": 1, "projetar": "x", "rotulo_x": "k₂*"}
+ ],
+ "checar": ["E2.x < E1.x", "abs(E1.x - 20.25) < 0.01", "abs(E2.x - 9) < 0.01"]
+}

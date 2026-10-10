@@ -1,0 +1,12 @@
+{"id": "ECO-E2-L00623-1-V1", "uso": "verso",
+ "legenda": "A alta da poupança (s₁ → s₂) desloca a curva de investimento para cima: em k₁* passa a sobrar investimento além da reposição, k cresce durante a transição e para em k₂* — nível maior, mas de novo sem crescimento de k.",
+ "eixos": {"x": "k", "y": "i", "xmax": 46, "ymax": 9.5},
+ "curvas": [
+   {"id": "s1f", "tipo": "funcao", "expr": "0.9*x**0.5", "dominio": [0, 45], "familia": "oferta", "rotulo": "s₁·f(k)", "estado": "inicial"},
+   {"id": "s2f", "tipo": "funcao", "expr": "1.2*x**0.5", "dominio": [0, 45], "familia": "oferta", "rotulo": "s₂·f(k)"},
+   {"id": "dep", "tipo": "funcao", "expr": "0.2*x", "dominio": [0, 45], "familia": "terceira", "rotulo": "(n+δ)k"}],
+ "pontos": [
+   {"id": "E1", "intersecao": ["s1f", "dep"], "indice": 1, "projetar": "x", "rotulo_x": "k₁*"},
+   {"id": "E2", "intersecao": ["s2f", "dep"], "indice": 1, "projetar": "x", "rotulo_x": "k₂*"}],
+ "deslocamentos": [{"de": "s1f", "para": "s2f", "sentido": "cima", "em_x": 12}],
+ "checar": ["E2.x > E1.x", "abs(E1.x - 20.25) < 0.01", "abs(E2.x - 36) < 0.01"]}

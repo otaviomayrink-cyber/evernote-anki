@@ -1,0 +1,9 @@
+{
+ "id": "ECO-E2-L00104-1-V1",
+ "uso": "verso",
+ "legenda": "Mercado de dólares: ao vender divisas das reservas, o Banco Central soma oferta à do mercado (O₁ → O₂). A cotação E (reais por dólar) cai de E₁ para E₂ — o real se VALORIZA.",
+ "modelo": "oferta_demanda",
+ "params": {"deslocar": {"S": "direita"}, "passo": 2, "eixos": {"x": "US$", "y": "E"}},
+ "substituir": {"E1": {"rotulo_x": "q₁", "rotulo_y": "E₁"}, "E2": {"rotulo_x": "q₂", "rotulo_y": "E₂"}, "D1": {"rotulo": "D (demanda de US$)"}, "S1": {"rotulo": "O₁"}, "S2": {"rotulo": "O₂ (+ venda do BC)"}},
+ "checar": ["E2.y < E1.y", "E2.x > E1.x"]
+}

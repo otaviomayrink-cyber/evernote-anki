@@ -1,0 +1,124 @@
+{
+ "id": "ECO-E1-0451-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Alta permanente da poupança em t₀: o produto per capita (em log) acelera só durante a transição e depois volta a crescer à taxa g, numa trajetória paralela e mais alta. O efeito permanente é sobre o NÍVEL; sobre a taxa de crescimento, é temporário.",
+ "paineis": [
+  {
+   "titulo": "Nível: ln(y)",
+   "eixos": {
+    "x": "t",
+    "y": "ln y",
+    "xmax": 12,
+    "ymax": 7
+   },
+   "curvas": [
+    {
+     "id": "velha",
+     "tipo": "funcao",
+     "expr": "2 + 0.25*x",
+     "dominio": [
+      3,
+      12
+     ],
+     "familia": "referencia",
+     "rotulo": "sem a alta de s",
+     "rotulo_em": 8,
+     "rotulo_desloc": [
+      10,
+      -34
+     ]
+    },
+    {
+     "id": "nova",
+     "tipo": "funcao",
+     "expr": "2 + 0.25*x + 1.5*(1 - exp(-0.45*maximum(0, x - 3)))",
+     "dominio": [
+      0,
+      12
+     ],
+     "familia": "demanda",
+     "rotulo": "com a alta de s",
+     "rotulo_xy": [
+      7.2,
+      6.6
+     ]
+    },
+    {
+     "id": "t0",
+     "tipo": "vertical",
+     "x": 3,
+     "y": [
+      0,
+      6.5
+     ],
+     "familia": "referencia",
+     "rotulo": "t₀"
+    }
+   ],
+   "checar": [
+    "nova(12) > velha(12)"
+   ]
+  },
+  {
+   "titulo": "Taxa de crescimento de y",
+   "eixos": {
+    "x": "t",
+    "y": "g_y",
+    "xmax": 12,
+    "ymax": 3
+   },
+   "curvas": [
+    {
+     "id": "gref",
+     "tipo": "horizontal",
+     "y": 0.8,
+     "x": [
+      0,
+      12
+     ],
+     "familia": "referencia",
+     "rotulo": "g",
+     "rotulo_em": 11.5,
+     "rotulo_desloc": [
+      0,
+      -22
+     ]
+    },
+    {
+     "id": "gy",
+     "tipo": "funcao",
+     "expr": "0.8 + 1.6*exp(-0.45*(x - 3))*(x >= 3)",
+     "dominio": [
+      0,
+      12
+     ],
+     "familia": "demanda",
+     "rotulo": "taxa de crescimento",
+     "rotulo_em": 5,
+     "rotulo_desloc": [
+      8,
+      6
+     ]
+    },
+    {
+     "id": "t0b",
+     "tipo": "vertical",
+     "x": 3,
+     "y": [
+      0,
+      2.8
+     ],
+     "familia": "referencia",
+     "rotulo": "t₀"
+    }
+   ],
+   "checar": [
+    "gy(3.01) > 2",
+    "abs(gy(12) - 0.8) < 0.05",
+    "abs(gy(1) - 0.8) < 0.01"
+   ]
+  }
+ ],
+ "checar": []
+}

@@ -1,0 +1,12 @@
+{"id": "ECO-E1-0899-1-V1", "uso": "verso",
+ "legenda": "Sem comércio, o país consome sobre a própria FPP (A). Especializando-se em Y (P) e trocando ao preço internacional, passa a consumir sobre a fronteira de consumo, acima e à direita da FPP (C): mais X e mais Y do que em A.",
+ "eixos": {"x": "X", "y": "Y", "xmax": 9, "ymax": 9},
+ "curvas": [
+  {"id": "FPP", "tipo": "reta", "p1": [0, 8], "p2": [4, 0], "familia": "demanda", "rotulo": "FPP", "rotulo_xy": [3.3, 2.2]},
+  {"id": "Troca", "tipo": "reta", "p1": [0, 8], "p2": [8, 0], "familia": "terceira", "rotulo": "fronteira de consumo", "rotulo_xy": [5.4, 3.4]}],
+ "pontos": [
+  {"id": "A", "xy": [2, 4], "rotulo": "A", "rotulo_desloc": [-26, -10]},
+  {"id": "P", "xy": [0, 8], "rotulo": "P", "rotulo_desloc": [10, 4]},
+  {"id": "C", "xy": [3, 5], "rotulo": "C", "rotulo_desloc": [8, 8], "projetar": true}],
+ "setas": [{"de": ["A.x+0.15", "A.y+0.15"], "para": ["C.x-0.15", "C.y-0.15"], "cor": "vermelho"}],
+ "checar": ["C.y > FPP(C.x)", "abs(Troca(C.x) - C.y) < 0.01", "abs(FPP(A.x) - A.y) < 0.01", "C.x > A.x", "C.y > A.y"]}

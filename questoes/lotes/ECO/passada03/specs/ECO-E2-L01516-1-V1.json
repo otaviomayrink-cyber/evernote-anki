@@ -1,0 +1,29 @@
+{"id": "ECO-E2-L01516-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "A fuga de capitais eleva os juros exigidos (BP₁ → BP₂). No câmbio fixo, o Banco Central vende reservas, a LM recua e a renda cai (Y₂ < Y₁); no câmbio flexível, a moeda se deprecia, as exportações líquidas sobem, a IS avança e a renda até aumenta.",
+ "paineis": [
+  {"titulo": "Câmbio fixo",
+   "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "BP1", "tipo": "horizontal", "y": 5, "x": [0, 9.4], "familia": "terceira", "rotulo": "BP₁", "estado": "inicial"},
+    {"id": "BP2", "tipo": "horizontal", "y": 6.5, "x": [0, 9.4], "familia": "terceira", "rotulo": "BP₂"},
+    {"id": "IS", "tipo": "reta", "p1": [0.8, 8.2], "p2": [7.6, 1.4], "familia": "demanda", "rotulo": "IS"},
+    {"id": "LM1", "tipo": "reta", "p1": [1.2, 2.2], "p2": [7.0, 8.0], "familia": "oferta", "rotulo": "LM₁", "estado": "inicial"},
+    {"id": "LM2", "tipo": "reta", "p1": [0.4, 4.4], "p2": [4.4, 8.4], "familia": "oferta", "rotulo": "LM₂"}],
+   "deslocamentos": [{"de": "LM1", "para": "LM2", "sentido": "esquerda", "em_y": 7.6}],
+   "pontos": [
+    {"id": "E1", "intersecao": ["IS", "LM1"], "rotulo": "E₁", "rotulo_desloc": [12, -10], "projetar": "x", "rotulo_x": "Y₁"},
+    {"id": "E2", "intersecao": ["IS", "LM2"], "rotulo": "E₂", "rotulo_desloc": [10, 12], "projetar": "x", "rotulo_x": "Y₂"}],
+   "checar": ["E2.x < E1.x", "abs(E2.y - 6.5) < 0.01"]},
+  {"titulo": "Câmbio flexível",
+   "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "BP1", "tipo": "horizontal", "y": 5, "x": [0, 9.4], "familia": "terceira", "rotulo": "BP₁", "estado": "inicial"},
+    {"id": "BP2", "tipo": "horizontal", "y": 6.5, "x": [0, 9.4], "familia": "terceira", "rotulo": "BP₂"},
+    {"id": "LM", "tipo": "reta", "p1": [1.2, 2.2], "p2": [7.0, 8.0], "familia": "oferta", "rotulo": "LM"},
+    {"id": "IS1", "tipo": "reta", "p1": [0.8, 8.2], "p2": [7.6, 1.4], "familia": "demanda", "rotulo": "IS₁", "estado": "inicial"},
+    {"id": "IS2", "tipo": "reta", "p1": [3.8, 8.2], "p2": [9.4, 2.6], "familia": "demanda", "rotulo": "IS₂"}],
+   "deslocamentos": [{"de": "IS1", "para": "IS2", "sentido": "direita", "em_y": 3.0}],
+   "pontos": [
+    {"id": "E1", "intersecao": ["IS1", "LM"], "rotulo": "E₁", "rotulo_desloc": [-30, 0], "projetar": "x", "rotulo_x": "Y₁"},
+    {"id": "E2", "intersecao": ["IS2", "LM"], "rotulo": "E₂", "rotulo_desloc": [10, 12], "projetar": "x", "rotulo_x": "Y₂"}],
+   "checar": ["E2.x > E1.x", "abs(E2.y - 6.5) < 0.01"]}]}

@@ -1,0 +1,107 @@
+{
+ "id": "ECO-E2-L01733-1-V1",
+ "uso": "verso",
+ "legenda": "A taxa de crescimento de k é a distância entre s·f(k)/k (decrescente, pelos rendimentos marginais decrescentes) e n+δ. Com os mesmos parâmetros, o país pobre (k menor) está mais longe de k* e cresce mais rápido: γ_pobre > γ_rico.",
+ "eixos": {
+  "x": "k",
+  "y": "taxa",
+  "xmax": 50,
+  "ymax": 0.75
+ },
+ "curvas": [
+  {
+   "id": "g",
+   "tipo": "funcao",
+   "expr": "1.2/x**0.5",
+   "dominio": [
+    2.8,
+    48
+   ],
+   "familia": "oferta",
+   "rotulo": "s·f(k)/k",
+   "rotulo_em": 5,
+   "rotulo_desloc": [
+    12,
+    0
+   ]
+  },
+  {
+   "id": "nd",
+   "tipo": "horizontal",
+   "y": 0.2,
+   "x": [
+    0,
+    48
+   ],
+   "familia": "terceira",
+   "rotulo": "n+δ"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "g",
+    "nd"
+   ],
+   "projetar": "x",
+   "rotulo_x": "k*"
+  },
+  {
+   "id": "P",
+   "sobre": "g",
+   "x": 9,
+   "marcar": true
+  },
+  {
+   "id": "Pd",
+   "sobre": "nd",
+   "x": 9,
+   "projetar": "x",
+   "rotulo_x": "k_pobre"
+  },
+  {
+   "id": "R",
+   "sobre": "g",
+   "x": 25,
+   "marcar": true
+  },
+  {
+   "id": "Rd",
+   "sobre": "nd",
+   "x": 25,
+   "projetar": "x",
+   "rotulo_x": "k_rico"
+  }
+ ],
+ "setas": [
+  {
+   "de": "Pd",
+   "para": "P",
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "γ_pobre",
+   "rotulo_desloc": [
+    -40,
+    0
+   ]
+  },
+  {
+   "de": "Rd",
+   "para": "R",
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "γ_rico",
+   "rotulo_desloc": [
+    0,
+    26
+   ]
+  }
+ ],
+ "checar": [
+  "abs(E.x - 36) < 0.01",
+  "(P.y - Pd.y) > (R.y - Rd.y)",
+  "P.x < R.x",
+  "R.x < E.x"
+ ]
+}

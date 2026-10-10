@@ -1,0 +1,13 @@
+{"id": "ECO-E1-0026-1-V1", "uso": "verso",
+ "legenda": "Supondo preço mundial de 20 (sem cota, importariam-se 13,5), a cota de 9 soma 9 unidades à oferta doméstica (O + cota). O preço INTERNO sobe até 30, onde demanda 14 = oferta doméstica 5 + cota 9. O preço mundial não se altera — e nada chega perto de 70.",
+ "eixos": {"x": "Q", "y": "P", "xmax": 24, "ymax": 110, "numeros": true},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "100 - 5*x", "dominio": [0, 20], "familia": "demanda", "rotulo": "D"},
+  {"id": "S", "tipo": "funcao", "expr": "10 + 4*x", "dominio": [0, 22], "familia": "oferta", "rotulo": "O"},
+  {"id": "Sq", "tipo": "funcao", "expr": "4*x - 26", "dominio": [11.5, 23], "familia": "destaque", "rotulo": "O + cota"},
+  {"id": "Pm", "tipo": "horizontal", "y": 20, "x": [0, 23], "familia": "referencia", "rotulo": "Pm = 20"}],
+ "pontos": [
+  {"id": "Pc", "intersecao": ["D", "Sq"], "rotulo": "p = 30", "projetar": "y"},
+  {"id": "Qs", "sobre": "S", "x": 5, "projetar": "x", "marcar": true}],
+ "setas": [{"de": ["Qs.x", 8], "para": ["Pc.x", 8], "estilo": "<|-|>", "cor": "vermelho", "rotulo": "cota = 9"}],
+ "checar": ["abs(Pc.y - 30) < 0.01", "abs(Pc.x - 14) < 0.01", "abs(Qs.y - 30) < 0.01", "abs(Pc.x - Qs.x - 9) < 0.01"]}

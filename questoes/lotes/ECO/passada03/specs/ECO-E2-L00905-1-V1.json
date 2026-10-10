@@ -1,0 +1,15 @@
+{"id": "ECO-E2-L00905-1-V1", "uso": "verso",
+ "legenda": "Câmbio fixo e mobilidade perfeita: a expansão monetária leva a LM para a direita e os juros para baixo de i* (E′); a saída de capitais obriga o Banco Central a vender reservas, a base monetária encolhe e a LM volta à posição inicial — a renda fica em Y₁, mas as reservas diminuíram.",
+ "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "BP", "tipo": "horizontal", "y": 5, "x": [0, 9.6], "familia": "terceira", "rotulo": "BP (i = i*)", "rotulo_xy": [8.6, 5.45]},
+  {"id": "IS", "tipo": "reta", "p1": [0.8, 8.2], "p2": [7.6, 1.4], "familia": "demanda", "rotulo": "IS"},
+  {"id": "LM1", "tipo": "reta", "p1": [1.2, 2.2], "p2": [7.6, 8.6], "familia": "oferta", "rotulo": "LM₁ = LM final"},
+  {"id": "LM2", "tipo": "reta", "p1": [3.2, 2.2], "p2": [9.0, 8.0], "familia": "oferta", "rotulo": "LM₂ (temporária)", "tracejada": true}],
+ "deslocamentos": [
+  {"de": "LM1", "para": "LM2", "sentido": "direita", "em_y": 7.4},
+  {"de": "LM2", "para": "LM1", "sentido": "esquerda", "em_y": 2.9}],
+ "pontos": [
+  {"id": "E", "intersecao": ["IS", "LM1"], "rotulo": "E", "rotulo_desloc": [-6, 16], "projetar": true, "rotulo_x": "Y₁", "rotulo_y": "i*"},
+  {"id": "Ep", "intersecao": ["IS", "LM2"], "rotulo": "E′", "rotulo_desloc": [-8, -18]}],
+ "checar": ["Ep.y < E.y", "Ep.x > E.x", "abs(E.y - 5) < 0.01"]}

@@ -1,0 +1,132 @@
+{
+ "id": "ECO-E3-L00447-1-V1",
+ "uso": "verso",
+ "legenda": "Economia acima da regra de ouro (s alto). Com n maior, k* recua de k₁* para k₂*, mas, com s fixo, o consumo c* = (1−s)·f(k*) — a distância entre f(k) e s·f(k) — encolhe: c₂* < c₁*.",
+ "eixos": {
+  "x": "k",
+  "y": "y",
+  "xmax": 135,
+  "ymax": 37
+ },
+ "curvas": [
+  {
+   "id": "f",
+   "tipo": "funcao",
+   "expr": "3*x**0.5",
+   "dominio": [
+    0,
+    132
+   ],
+   "familia": "demanda",
+   "rotulo": "f(k)"
+  },
+  {
+   "id": "sf",
+   "tipo": "funcao",
+   "expr": "2.1*x**0.5",
+   "dominio": [
+    0,
+    132
+   ],
+   "familia": "oferta",
+   "rotulo": "s·f(k)"
+  },
+  {
+   "id": "d1",
+   "tipo": "funcao",
+   "expr": "0.2*x",
+   "dominio": [
+    0,
+    132
+   ],
+   "familia": "terceira",
+   "rotulo": "(n₁+δ)k",
+   "estado": "inicial"
+  },
+  {
+   "id": "d2",
+   "tipo": "funcao",
+   "expr": "0.3*x",
+   "dominio": [
+    0,
+    75
+   ],
+   "familia": "terceira",
+   "rotulo": "(n₂+δ)k"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "sf",
+    "d1"
+   ],
+   "indice": 1,
+   "projetar": "x",
+   "rotulo_x": "k₁*"
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "sf",
+    "d2"
+   ],
+   "indice": 1,
+   "projetar": "x",
+   "rotulo_x": "k₂*"
+  },
+  {
+   "id": "F1",
+   "sobre": "f",
+   "x": "E1.x",
+   "marcar": true
+  },
+  {
+   "id": "F2",
+   "sobre": "f",
+   "x": "E2.x",
+   "marcar": true
+  }
+ ],
+ "setas": [
+  {
+   "de": "E1",
+   "para": "F1",
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "c₁*",
+   "rotulo_desloc": [
+    14,
+    0
+   ]
+  },
+  {
+   "de": "E2",
+   "para": "F2",
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "c₂*",
+   "rotulo_desloc": [
+    14,
+    0
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "d1",
+   "para": "d2",
+   "sentido": "esquerda",
+   "em_y": 6
+  }
+ ],
+ "checar": [
+  "E2.x < E1.x",
+  "abs(E1.x - 110.25) < 0.01",
+  "abs(E2.x - 49) < 0.01",
+  "E1.x > 56.25",
+  "E2.x > 25",
+  "(F2.y - E2.y) < (F1.y - E1.y)"
+ ]
+}

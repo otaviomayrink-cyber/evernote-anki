@@ -1,0 +1,144 @@
+{
+ "id": "ECO-E1-0881-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio fixo e baixa mobilidade (BP mais inclinada que a LM): a expansão fiscal leva a IS a IS₂; em E′, à direita da BP, há déficit externo, o BC vende reservas e a LM recua a LM₂ — no equilíbrio E₂ os juros são maiores que no início, e a renda sobe pouco.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    7.5
+   ],
+   "p2": [
+    9.5,
+    2.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "LM2",
+   "tipo": "reta",
+   "p1": [
+    1.5,
+    2.071
+   ],
+   "p2": [
+    7.6,
+    8.171
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₂"
+  },
+  {
+   "id": "BP",
+   "tipo": "reta",
+   "p1": [
+    3.6,
+    1.0
+   ],
+   "p2": [
+    6.7,
+    8.75
+   ],
+   "familia": "terceira",
+   "rotulo": "BP"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_x": "Y₁",
+   "rotulo_y": "i₁",
+   "rotulo_desloc": [
+    10,
+    -14
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS2",
+    "LM1"
+   ],
+   "rotulo": "E′"
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS2",
+    "LM2"
+   ],
+   "rotulo": "E₂",
+   "projetar": true,
+   "rotulo_x": "Y₂",
+   "rotulo_y": "i₂",
+   "rotulo_desloc": [
+    -30,
+    10
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 2.9
+  },
+  {
+   "de": "LM1",
+   "para": "LM2",
+   "sentido": "esquerda",
+   "em_y": 2.6
+  }
+ ],
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x > E1.x",
+  "E2.x < Ep.x"
+ ]
+}

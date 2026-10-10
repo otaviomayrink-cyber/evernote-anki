@@ -1,0 +1,114 @@
+{
+ "id": "ECO-E2-L01059-1-V1",
+ "uso": "verso",
+ "legenda": "No modelo AK, s·f(k)/k = sA não depende de k: a distância até δ é a taxa de crescimento, igual em qualquer k. Subir s de s₁ para s₂ afasta para sempre as duas retas — a taxa de crescimento sobe de γ₁ para γ₂ de forma permanente, e não só na transição.",
+ "eixos": {
+  "x": "k",
+  "y": "taxa",
+  "xmax": 10,
+  "ymax": 0.6
+ },
+ "curvas": [
+  {
+   "id": "s1",
+   "tipo": "horizontal",
+   "y": 0.3,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "s₁A",
+   "estado": "inicial"
+  },
+  {
+   "id": "s2",
+   "tipo": "horizontal",
+   "y": 0.45,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "s₂A"
+  },
+  {
+   "id": "dep",
+   "tipo": "horizontal",
+   "y": 0.1,
+   "x": [
+    0,
+    9.5
+   ],
+   "familia": "terceira",
+   "rotulo": "δ"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A1",
+   "xy": [
+    2.5,
+    0.3
+   ]
+  },
+  {
+   "id": "B1",
+   "xy": [
+    2.5,
+    0.1
+   ]
+  },
+  {
+   "id": "A2",
+   "xy": [
+    6.5,
+    0.45
+   ]
+  },
+  {
+   "id": "B2",
+   "xy": [
+    6.5,
+    0.1
+   ]
+  }
+ ],
+ "setas": [
+  {
+   "de": "B1",
+   "para": "A1",
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "γ₁ = s₁A − δ",
+   "rotulo_desloc": [
+    58,
+    0
+   ]
+  },
+  {
+   "de": "B2",
+   "para": "A2",
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "γ₂ = s₂A − δ",
+   "rotulo_desloc": [
+    62,
+    -34
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "s1",
+   "para": "s2",
+   "sentido": "cima",
+   "em_x": 4.5
+  }
+ ],
+ "checar": [
+  "(A2.y - B2.y) > (A1.y - B1.y)",
+  "abs((A1.y - B1.y) - 0.2) < 1e-9",
+  "abs((A2.y - B2.y) - 0.35) < 1e-9"
+ ]
+}

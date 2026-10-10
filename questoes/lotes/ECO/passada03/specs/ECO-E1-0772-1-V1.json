@@ -1,0 +1,74 @@
+{
+ "id": "ECO-E1-0772-1-V1",
+ "uso": "verso",
+ "legenda": "Logo após a desvalorização (t₀), o saldo comercial cai abaixo do nível inicial: os volumes ainda não reagiram e as importações ficaram mais caras. Com o tempo, o efeito-quantidade domina e o saldo sobe acima do ponto de partida — o desenho de um J.",
+ "eixos": {
+  "x": "t",
+  "y": "X−M",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "Ref",
+   "tipo": "horizontal",
+   "y": 4.5,
+   "x": [
+    0,
+    10
+   ],
+   "familia": "referencia",
+   "rotulo": "saldo inicial",
+   "rotulo_xy": [
+    8.6,
+    3.9
+   ]
+  },
+  {
+   "id": "J",
+   "tipo": "funcao",
+   "expr": "4.5 - 5*maximum(0, x-2.5)*exp(-0.8*maximum(0, x-2.5)) + 0.55*maximum(0, x-2.5)",
+   "dominio": [
+    0.3,
+    9.7
+   ],
+   "familia": "demanda",
+   "rotulo": "saldo comercial",
+   "rotulo_xy": [
+    6.6,
+    8.0
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "T0",
+   "xy": [
+    2.5,
+    4.5
+   ],
+   "rotulo": "desvalorização",
+   "projetar": "x",
+   "rotulo_x": "t₀",
+   "rotulo_desloc": [
+    -60,
+    22
+   ]
+  },
+  {
+   "id": "Fundo",
+   "sobre": "J",
+   "x": 3.6,
+   "rotulo": "piora inicial",
+   "rotulo_desloc": [
+    12,
+    -22
+   ]
+  }
+ ],
+ "checar": [
+  "J(3.6) < J(2.5)",
+  "J(9) > J(2.5)",
+  "Fundo.y < T0.y"
+ ]
+}

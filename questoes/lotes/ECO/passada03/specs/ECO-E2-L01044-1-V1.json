@@ -1,0 +1,17 @@
+{
+ "id": "ECO-E2-L01044-1-V1",
+ "uso": "verso",
+ "legenda": "Mercado de câmbio pela paridade descoberta: o retorno do ativo doméstico é a reta vertical em i; o do ativo externo em moeda doméstica, i* + (Eᵉ − E)/E, cai quando E sobe. Com Eᵉ e prêmio de risco fixos, a alta de i (i₁ → i₂) leva o equilíbrio de E₁ para E₂ < E₁: a moeda doméstica se aprecia.",
+ "eixos": {"x": "retorno", "y": "E", "xmax": 6, "ymax": 6},
+ "curvas": [
+  {"id": "Rx", "tipo": "funcao", "expr": "6/(x+0.5)", "dominio": [0.6, 5.6], "familia": "demanda", "rotulo": "i* + (Eᵉ − E)/E"},
+  {"id": "R1", "tipo": "vertical", "x": 2, "y": [0, 5.4], "familia": "oferta", "estado": "inicial", "rotulo": "i₁"},
+  {"id": "R2", "tipo": "vertical", "x": 3.5, "y": [0, 5.4], "familia": "oferta", "rotulo": "i₂"}
+ ],
+ "pontos": [
+  {"id": "E1", "intersecao": ["Rx", "R1"], "rotulo": "1", "rotulo_desloc": [10, 12], "projetar": "y", "rotulo_y": "E₁"},
+  {"id": "E2", "intersecao": ["Rx", "R2"], "rotulo": "2", "rotulo_desloc": [10, 12], "projetar": "y", "rotulo_y": "E₂"}
+ ],
+ "deslocamentos": [{"de": "R1", "para": "R2", "sentido": "direita", "em_y": 4.6}],
+ "checar": ["E2.y < E1.y", "E2.x > E1.x"]
+}

@@ -1,0 +1,29 @@
+{"id": "ECO-E2-L01551-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "A mesma expansão fiscal (IS₁ → IS₂) leva a economia a E′. Com baixa mobilidade (BP mais inclinada que a LM), E′ fica abaixo da BP: déficit. Com alta mobilidade (BP menos inclinada que a LM), E′ fica acima da BP: superávit.",
+ "paineis": [
+  {"titulo": "Baixa mobilidade",
+   "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "LM", "tipo": "reta", "p1": [1.2, 2.2], "p2": [7.6, 8.6], "familia": "oferta", "rotulo": "LM"},
+    {"id": "BP", "tipo": "reta", "p1": [3.0, 2.0], "p2": [5.5, 9.5], "familia": "terceira", "rotulo": "BP", "rotulo_desloc": [-34, 6]},
+    {"id": "IS1", "tipo": "reta", "p1": [0.8, 8.2], "p2": [7.6, 1.4], "familia": "demanda", "rotulo": "IS₁", "estado": "inicial"},
+    {"id": "IS2", "tipo": "reta", "p1": [2.8, 8.2], "p2": [9.6, 1.4], "familia": "demanda", "rotulo": "IS₂"}],
+   "deslocamentos": [{"de": "IS1", "para": "IS2", "sentido": "direita", "em_y": 2.4}],
+   "pontos": [
+    {"id": "E", "intersecao": ["IS1", "LM"], "rotulo": "E", "rotulo_desloc": [-24, 4]},
+    {"id": "Ep", "intersecao": ["IS2", "LM"], "rotulo": "E′", "rotulo_desloc": [10, -14]}],
+   "textos": [{"xy": [6.6, 6.0], "texto": "E′: déficit no BP", "cor": "vermelho", "negrito": true}],
+   "checar": ["BP(Ep.x) > Ep.y", "abs(BP(E.x) - E.y) < 0.01"]},
+  {"titulo": "Alta mobilidade",
+   "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "LM", "tipo": "reta", "p1": [1.2, 2.2], "p2": [7.6, 8.6], "familia": "oferta", "rotulo": "LM"},
+    {"id": "BP", "tipo": "funcao", "expr": "0.3*x + 3.8", "dominio": [0, 9.4], "familia": "terceira", "rotulo": "BP", "rotulo_desloc": [8, -10]},
+    {"id": "IS1", "tipo": "reta", "p1": [0.8, 8.2], "p2": [7.6, 1.4], "familia": "demanda", "rotulo": "IS₁", "estado": "inicial"},
+    {"id": "IS2", "tipo": "reta", "p1": [2.8, 8.2], "p2": [9.6, 1.4], "familia": "demanda", "rotulo": "IS₂"}],
+   "deslocamentos": [{"de": "IS1", "para": "IS2", "sentido": "direita", "em_y": 2.4}],
+   "pontos": [
+    {"id": "E", "intersecao": ["IS1", "LM"], "rotulo": "E", "rotulo_desloc": [-24, -6]},
+    {"id": "Ep", "intersecao": ["IS2", "LM"], "rotulo": "E′", "rotulo_desloc": [-30, 10]}],
+   "textos": [{"xy": [7.0, 5.0], "texto": "E′: superávit no BP", "cor": "vermelho", "negrito": true}],
+   "checar": ["BP(Ep.x) < Ep.y", "abs(BP(E.x) - E.y) < 0.01"]}]}

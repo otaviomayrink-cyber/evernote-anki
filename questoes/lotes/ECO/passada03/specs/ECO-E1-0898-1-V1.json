@@ -1,0 +1,32 @@
+{
+ "id": "ECO-E1-0898-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "O formato da FPP revela o custo de oportunidade: constante → reta; crescente → côncava (curva para fora); decrescente, como sob economias de escala → convexa em relação à origem (curva para dentro).",
+ "paineis": [
+  {
+   "titulo": "Custos constantes",
+   "eixos": {"x": "X", "y": "Y", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "F", "tipo": "reta", "p1": [0, 8], "p2": [8, 0], "familia": "oferta", "rotulo": "FPP reta", "rotulo_xy": [6.4, 4.8]}
+   ],
+   "checar": ["abs(F(4) - 4) < 0.01"]
+  },
+  {
+   "titulo": "Custos crescentes",
+   "eixos": {"x": "X", "y": "Y", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "F", "tipo": "funcao", "expr": "sqrt(maximum(0, 64 - x**2))", "dominio": [0, 8], "familia": "demanda", "rotulo": "FPP côncava", "rotulo_xy": [7.2, 7.6]}
+   ],
+   "checar": ["F(4) > 4"]
+  },
+  {
+   "titulo": "Economias de escala",
+   "eixos": {"x": "X", "y": "Y", "xmax": 10, "ymax": 10},
+   "curvas": [
+    {"id": "F", "tipo": "funcao", "expr": "(8 - minimum(x, 8))**2 / 8", "dominio": [0, 8], "familia": "destaque", "rotulo": "FPP convexa", "rotulo_xy": [6.2, 3.6]}
+   ],
+   "checar": ["F(4) < 4", "abs(F(0) - 8) < 0.01"]
+  }
+ ]
+}

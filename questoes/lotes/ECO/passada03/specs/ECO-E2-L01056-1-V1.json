@@ -1,0 +1,117 @@
+{
+ "id": "ECO-E2-L01056-1-V1",
+ "uso": "verso",
+ "legenda": "À direita de k*, a reta de reposição (n+g+δ)k passa acima do investimento s·f(k): o que se poupa não cobre a depreciação efetiva e k encolhe até k*. À esquerda, ocorre o inverso e k cresce.",
+ "eixos": {
+  "x": "k",
+  "y": "i",
+  "xmax": 72,
+  "ymax": 14
+ },
+ "curvas": [
+  {
+   "id": "sf",
+   "tipo": "funcao",
+   "expr": "1.2*x**0.5",
+   "dominio": [
+    0,
+    70
+   ],
+   "familia": "oferta",
+   "rotulo": "s·f(k)"
+  },
+  {
+   "id": "dep",
+   "tipo": "funcao",
+   "expr": "0.2*x",
+   "dominio": [
+    0,
+    70
+   ],
+   "familia": "terceira",
+   "rotulo": "(n+g+δ)k"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "sf",
+    "dep"
+   ],
+   "indice": 1,
+   "projetar": "x",
+   "rotulo_x": "k*"
+  },
+  {
+   "id": "A",
+   "sobre": "sf",
+   "x": 64,
+   "marcar": true
+  },
+  {
+   "id": "B",
+   "sobre": "dep",
+   "x": 64,
+   "marcar": true,
+   "projetar": "x",
+   "rotulo_x": "k₁"
+  }
+ ],
+ "setas": [
+  {
+   "de": "A",
+   "para": "B",
+   "cor": "vermelho",
+   "estilo": "<|-|>"
+  },
+  {
+   "de": [
+    62,
+    1.2
+   ],
+   "para": [
+    56,
+    1.2
+   ],
+   "cor": "vermelho",
+   "rotulo": "k cai",
+   "rotulo_desloc": [
+    0,
+    10
+   ]
+  },
+  {
+   "de": [
+    16,
+    1.2
+   ],
+   "para": [
+    22,
+    1.2
+   ],
+   "cor": "vermelho",
+   "rotulo": "k sobe",
+   "rotulo_desloc": [
+    0,
+    10
+   ]
+  }
+ ],
+ "checar": [
+  "B.y > A.y",
+  "E.x < B.x",
+  "abs(E.x - 36) < 0.01"
+ ],
+ "textos": [
+  {
+   "xy": [
+    20,
+    12.3
+   ],
+   "texto": "k > k*: s·f(k) < (n+g+δ)k",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ]
+}

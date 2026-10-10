@@ -1,0 +1,18 @@
+{"id": "ECO-E2-L01583-1-V1", "uso": "verso",
+ "legenda": "Alta mobilidade imperfeita (BP menos inclinada que a LM) e câmbio flutuante: a expansão fiscal leva a economia a E′, acima da BP₁ (superávit externo); a moeda se aprecia, as exportações líquidas caem e a IS recua só em parte (IS₃): no equilíbrio final E″ a renda ainda é maior que em E, mas menor que em E′.",
+ "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "LM", "tipo": "reta", "p1": [1.2, 2.2], "p2": [7.6, 8.6], "familia": "oferta", "rotulo": "LM"},
+  {"id": "BP1", "tipo": "funcao", "expr": "0.3*x + 3.8", "dominio": [0, 9.4], "familia": "terceira", "rotulo": "BP₁", "estado": "inicial", "rotulo_desloc": [8, -10]},
+  {"id": "BP2", "tipo": "funcao", "expr": "0.3*x + 4.15", "dominio": [0, 9.4], "familia": "terceira", "rotulo": "BP₂", "rotulo_desloc": [8, 10]},
+  {"id": "IS1", "tipo": "reta", "p1": [0.8, 8.2], "p2": [7.6, 1.4], "familia": "demanda", "rotulo": "IS₁", "estado": "inicial", "rotulo_desloc": [-10, -16]},
+  {"id": "IS2", "tipo": "reta", "p1": [2.8, 8.2], "p2": [8.8, 2.2], "familia": "demanda", "rotulo": "IS₂", "tracejada": true},
+  {"id": "IS3", "tipo": "reta", "p1": [1.8, 8.2], "p2": [8.2, 1.8], "familia": "demanda", "rotulo": "IS₃", "rotulo_desloc": [6, -12]}],
+ "deslocamentos": [
+  {"de": "IS1", "para": "IS2", "sentido": "direita", "em_y": 7.6},
+  {"de": "IS2", "para": "IS3", "sentido": "esquerda", "em_y": 2.6}],
+ "pontos": [
+  {"id": "E", "intersecao": ["IS1", "LM"], "rotulo": "E", "rotulo_desloc": [-24, -4], "projetar": "x", "rotulo_x": "Y₁"},
+  {"id": "Ep", "intersecao": ["IS2", "LM"], "rotulo": "E′", "rotulo_desloc": [10, 10], "projetar": "x", "rotulo_x": "Y′"},
+  {"id": "Epp", "intersecao": ["IS3", "LM"], "rotulo": "E″", "rotulo_desloc": [-30, 14], "projetar": "x", "rotulo_x": "Y₂"}],
+ "checar": ["BP1(Ep.x) < Ep.y", "E.x < Epp.x < Ep.x", "abs(BP2(Epp.x) - Epp.y) < 0.01", "abs(BP1(E.x) - E.y) < 0.01"]}

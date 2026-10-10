@@ -1,0 +1,69 @@
+{
+ "id": "ECO-E2-L00639-1-V1",
+ "uso": "verso",
+ "legenda": "Logo após a depreciação real (t = 0), o saldo comercial piora: as quantidades ainda não reagiram e cada importação custa mais em moeda doméstica. Com o tempo, exportações e importações se ajustam e, valendo Marshall-Lerner, o saldo supera o nível inicial — o desenho do “J”.",
+ "eixos": {
+  "x": "t",
+  "y": "BC",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "S0",
+   "tipo": "horizontal",
+   "y": 5,
+   "x": [
+    0,
+    10
+   ],
+   "familia": "referencia",
+   "rotulo": "saldo inicial"
+  },
+  {
+   "id": "J",
+   "tipo": "funcao",
+   "expr": "5 + 0.4*x - 3*x*exp(-x/2)",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "saldo comercial"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "M",
+   "sobre": "J",
+   "x": 1.5,
+   "rotulo": "piora inicial",
+   "rotulo_desloc": [
+    0,
+    -30
+   ]
+  },
+  {
+   "id": "F",
+   "sobre": "J",
+   "x": 8,
+   "rotulo": "melhora posterior"
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.3,
+    9.4
+   ],
+   "texto": "depreciação real em t = 0",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "J(1.5) < 5",
+  "J(8) > 5",
+  "J(0.5) < 5"
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "id": "ECO-E2-L00151-1-V1",
+ "uso": "verso",
+ "legenda": "Em todo estado estacionário, s·f(k) = (n+δ)k — é o ponto k*. A regra de ouro escolhe o k em que a inclinação de f(k) iguala a de (n+δ)k: ali a distância vertical entre produção e investimento necessário (o consumo) é máxima.",
+ "modelo": "solow",
+ "params": {"A": 3, "alfa": 0.5, "s": 0.3, "n_delta": 0.2, "ouro": true},
+ "substituir": {"G": {"rotulo_x": "k ouro"}},
+ "checar": ["G.x > E.x", "abs(G.x - 56.25) < 0.01"]
+}

@@ -1,0 +1,108 @@
+{
+ "id": "ECO-E2-L01626-1-V1",
+ "uso": "verso",
+ "legenda": "Logo após a depreciação (t₀), o saldo comercial CAI: as importações encarecem em moeda nacional antes que os volumes reajam (efeito-preço). Depois, exportações sobem e importações caem (efeito-volume), e o saldo termina acima do nível inicial — o desenho de um J.",
+ "eixos": {
+  "x": "t",
+  "y": "NX",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "Z",
+   "tipo": "horizontal",
+   "y": 5,
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "referencia",
+   "rotulo": "saldo inicial",
+   "rotulo_xy": [
+    8.2,
+    4.55
+   ]
+  },
+  {
+   "id": "T0",
+   "tipo": "vertical",
+   "x": 2,
+   "y": [
+    0,
+    9
+   ],
+   "familia": "referencia",
+   "rotulo": "t₀: depreciação",
+   "rotulo_xy": [
+    2.1,
+    9.3
+   ]
+  },
+  {
+   "id": "J",
+   "tipo": "pontos",
+   "suave": true,
+   "pontos": [
+    [
+     2,
+     5
+    ],
+    [
+     2.8,
+     3.4
+    ],
+    [
+     3.6,
+     2.6
+    ],
+    [
+     4.6,
+     3.3
+    ],
+    [
+     5.8,
+     5
+    ],
+    [
+     7.4,
+     6.8
+    ],
+    [
+     9.2,
+     8
+    ]
+   ],
+   "familia": "destaque",
+   "rotulo": "saldo comercial",
+   "rotulo_xy": [
+    7.6,
+    8.4
+   ]
+  }
+ ],
+ "pontos": [],
+ "textos": [
+  {
+   "xy": [
+    2.6,
+    1.5
+   ],
+   "texto": "efeito-preço domina",
+   "cor": "vermelho"
+  },
+  {
+   "xy": [
+    5.9,
+    3.4
+   ],
+   "texto": "efeito-volume domina",
+   "cor": "verde"
+  }
+ ],
+ "checar": [
+  "J(3.6) < 5",
+  "J(9) > 5",
+  "J(5) < 5"
+ ]
+}

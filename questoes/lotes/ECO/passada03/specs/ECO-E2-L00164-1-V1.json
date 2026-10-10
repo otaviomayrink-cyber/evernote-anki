@@ -1,0 +1,124 @@
+{
+ "id": "ECO-E2-L00164-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio flutuante e mobilidade perfeita: a expansão fiscal leva a IS a IS₂ e os juros sobem no ponto provisório E′, acima da BP; a entrada de capitais aprecia o câmbio, as exportações líquidas caem e a IS volta a IS₁ — renda e juros terminam onde começaram (E₁).",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁"
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    7.5
+   ],
+   "p2": [
+    9.5,
+    2.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂ (provisória)",
+   "tracejada": true
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁"
+  },
+  {
+   "id": "BP",
+   "tipo": "horizontal",
+   "y": 4.5,
+   "x": [
+    0.3,
+    9.7
+   ],
+   "familia": "terceira",
+   "rotulo": "BP",
+   "rotulo_xy": [
+    0.9,
+    4.95
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": "x",
+   "rotulo_x": "Y₁",
+   "rotulo_desloc": [
+    8,
+    -34
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS2",
+    "LM1"
+   ],
+   "rotulo": "E′"
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.15,
+    4.75
+   ],
+   "texto": "i*",
+   "cor": "texto"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 7.0
+  },
+  {
+   "de": "IS2",
+   "para": "IS1",
+   "sentido": "esquerda",
+   "em_y": 2.9
+  }
+ ],
+ "checar": [
+  "Ep.y > E1.y",
+  "Ep.x > E1.x",
+  "abs(E1.y - 4.5) < 0.01"
+ ]
+}

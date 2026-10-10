@@ -1,0 +1,106 @@
+{
+ "id": "ECO-E2-L01429-1-V1",
+ "uso": "verso",
+ "legenda": "A Suíça chegou antes e vende a P₁. A Tailândia teria custo menor em grande escala (P₂ < P₁), mas, partindo do zero, enfrenta C₀ > P₁ e não entra sem proteção: com economias externas, quem chega primeiro trava o padrão de comércio.",
+ "eixos": {
+  "x": "Q",
+  "y": "p",
+  "xmax": 15,
+  "ymax": 12
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "9 - 0.6*x",
+   "dominio": [
+    0,
+    13.2
+   ],
+   "familia": "demanda",
+   "rotulo": "D mundial",
+   "rotulo_xy": [
+    3.2,
+    8.4
+   ]
+  },
+  {
+   "id": "ACs",
+   "tipo": "funcao",
+   "expr": "2 + 10/(x + 1)",
+   "dominio": [
+    0.4,
+    14.5
+   ],
+   "familia": "oferta",
+   "rotulo": "CMe suíço",
+   "rotulo_xy": [
+    12.5,
+    3.5
+   ]
+  },
+  {
+   "id": "ACt",
+   "tipo": "funcao",
+   "expr": "1 + 10/(x + 1)",
+   "dominio": [
+    0,
+    14.5
+   ],
+   "familia": "terceira",
+   "rotulo": "CMe tailandês",
+   "rotulo_xy": [
+    7.4,
+    1.15
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "D",
+    "ACs"
+   ],
+   "indice": 1,
+   "rotulo": "1",
+   "rotulo_desloc": [
+    4,
+    14
+   ],
+   "projetar": true,
+   "rotulo_x": "Q₁",
+   "rotulo_y": "P₁"
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "D",
+    "ACt"
+   ],
+   "indice": 1,
+   "rotulo": "2",
+   "rotulo_desloc": [
+    4,
+    -14
+   ],
+   "projetar": true,
+   "rotulo_x": "Q₂",
+   "rotulo_y": "P₂"
+  },
+  {
+   "id": "C0",
+   "xy": [
+    0,
+    "ACt(0)"
+   ],
+   "rotulo_y": "C₀"
+  }
+ ],
+ "checar": [
+  "C0.y > E1.y",
+  "E2.y < E1.y",
+  "E2.x > E1.x",
+  "abs(C0.y - 11) < 0.01"
+ ]
+}

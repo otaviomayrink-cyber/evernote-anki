@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E3-L00030-1-V1",
+ "uso": "verso",
+ "legenda": "Com W maior e P constante, o salário real sobe de (W/P)* para W₁/P, acima do equilíbrio: as firmas demandam menos trabalho (L₁ᴰ) e mais pessoas querem trabalhar (L₁ˢ) — surge excesso de oferta de trabalho (desemprego).",
+ "eixos": {"x": "L", "y": "W/P", "xmax": 100, "ymax": 10, "numeros": false},
+ "curvas": [
+  {"id": "LD", "tipo": "funcao", "expr": "9 - x/12.5", "dominio": [5, 95], "familia": "demanda", "rotulo": "Lᴰ"},
+  {"id": "LS", "tipo": "funcao", "expr": "1 + x/12.5", "dominio": [5, 100], "familia": "oferta", "rotulo": "Lˢ"},
+  {"id": "W1", "tipo": "horizontal", "y": 6.6, "x": [0, 92], "familia": "destaque", "rotulo": "W₁/P", "tracejada": true}
+ ],
+ "pontos": [
+  {"id": "E", "intersecao": ["LD", "LS"], "rotulo": "E", "rotulo_desloc": [4, -26], "projetar": true, "rotulo_x": "L*", "rotulo_y": "(W/P)*"},
+  {"id": "A", "intersecao": ["LD", "W1"], "projetar": "x", "rotulo_x": "L₁ᴰ", "marcar": true},
+  {"id": "B", "intersecao": ["LS", "W1"], "projetar": "x", "rotulo_x": "L₁ˢ", "marcar": true}
+ ],
+ "setas": [
+  {"de": ["A.x", 7.6], "para": ["B.x", 7.6], "cor": "vermelho", "estilo": "<|-|>", "rotulo": "desemprego"}
+ ],
+ "checar": ["A.x < E.x", "B.x > E.x", "B.x - A.x > 0", "W1(50) > E.y"]
+}

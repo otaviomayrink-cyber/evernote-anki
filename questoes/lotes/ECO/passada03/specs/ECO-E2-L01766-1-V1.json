@@ -1,0 +1,126 @@
+{
+ "id": "ECO-E2-L01766-1-V1",
+ "uso": "verso",
+ "legenda": "As duas trajetórias começam iguais: o saldo cai logo após a desvalorização (t₀). Só quando vale Marshall-Lerner (soma das elasticidades, em módulo, maior que 1) o efeito-volume supera o efeito-preço e o saldo termina ACIMA do inicial; sem a condição, ele se recupera em parte, mas fica abaixo.",
+ "eixos": {
+  "x": "t",
+  "y": "NX",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "Z",
+   "tipo": "horizontal",
+   "y": 5,
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "referencia",
+   "rotulo": "saldo inicial",
+   "rotulo_xy": [
+    8.2,
+    5.25
+   ]
+  },
+  {
+   "id": "T0",
+   "tipo": "vertical",
+   "x": 2,
+   "y": [
+    0,
+    9
+   ],
+   "familia": "referencia",
+   "rotulo": "t₀: desvalorização",
+   "rotulo_xy": [
+    2.1,
+    9.3
+   ]
+  },
+  {
+   "id": "SEM",
+   "tipo": "pontos",
+   "suave": true,
+   "pontos": [
+    [
+     2,
+     5
+    ],
+    [
+     2.8,
+     3.4
+    ],
+    [
+     3.6,
+     2.6
+    ],
+    [
+     4.8,
+     3.0
+    ],
+    [
+     6.5,
+     3.6
+    ],
+    [
+     9.2,
+     3.9
+    ]
+   ],
+   "familia": "terceira",
+   "rotulo": "sem Marshall-Lerner",
+   "rotulo_xy": [
+    6.4,
+    2.6
+   ]
+  },
+  {
+   "id": "J",
+   "tipo": "pontos",
+   "suave": true,
+   "pontos": [
+    [
+     2,
+     5
+    ],
+    [
+     2.8,
+     3.4
+    ],
+    [
+     3.6,
+     2.6
+    ],
+    [
+     4.6,
+     3.3
+    ],
+    [
+     5.8,
+     5
+    ],
+    [
+     7.4,
+     6.8
+    ],
+    [
+     9.2,
+     8
+    ]
+   ],
+   "familia": "destaque",
+   "rotulo": "com Marshall-Lerner (curva J)",
+   "rotulo_xy": [
+    4.6,
+    8.4
+   ]
+  }
+ ],
+ "checar": [
+  "J(9) > 5",
+  "SEM(9) < 5",
+  "abs(J(3) - SEM(3)) < 0.3"
+ ]
+}

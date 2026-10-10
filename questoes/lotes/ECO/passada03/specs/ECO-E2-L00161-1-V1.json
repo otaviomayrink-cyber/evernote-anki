@@ -1,0 +1,127 @@
+{
+ "id": "ECO-E2-L00161-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio fixo e mobilidade perfeita: a expansão monetária leva a LM a LM₂ e os juros caem no ponto provisório E′, abaixo da BP; a fuga de capitais obriga o BC a vender divisas e recolher moeda, e a LM volta a LM₁ — a renda não sai de Y₁.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁"
+  },
+  {
+   "id": "LM2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    1.5
+   ],
+   "p2": [
+    9.6,
+    6.6
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₂ (provisória)",
+   "tracejada": true
+  },
+  {
+   "id": "BP",
+   "tipo": "horizontal",
+   "y": 4.5,
+   "x": [
+    0.3,
+    9.7
+   ],
+   "familia": "terceira",
+   "rotulo": "BP",
+   "rotulo_xy": [
+    0.9,
+    4.95
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": "x",
+   "rotulo_x": "Y₁",
+   "rotulo_desloc": [
+    -60,
+    16
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS1",
+    "LM2"
+   ],
+   "rotulo": "E′",
+   "rotulo_desloc": [
+    -10,
+    -26
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.15,
+    4.75
+   ],
+   "texto": "i*",
+   "cor": "texto"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "LM1",
+   "para": "LM2",
+   "sentido": "direita",
+   "em_y": 2.3
+  },
+  {
+   "de": "LM2",
+   "para": "LM1",
+   "sentido": "esquerda",
+   "em_y": 6.4
+  }
+ ],
+ "checar": [
+  "Ep.y < E1.y",
+  "Ep.x > E1.x"
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "id": "ECO-E1-0504-1-V1",
+ "uso": "verso",
+ "legenda": "A demanda por trabalho é a curva do valor do produto marginal (P × PMgL): se a PMgL sobe, cada trabalhador rende mais à firma e a demanda se desloca para a DIREITA (Lᴰ₁ → Lᴰ₂), elevando emprego e salário.",
+ "eixos": {
+  "x": "L",
+  "y": "w",
+  "xmax": 10,
+  "ymax": 10,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "D1",
+   "tipo": "funcao",
+   "expr": "7.5 - 0.8*x",
+   "dominio": [
+    0,
+    9
+   ],
+   "familia": "demanda",
+   "rotulo": "Lᴰ₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "D2",
+   "tipo": "funcao",
+   "expr": "9.5 - 0.8*x",
+   "dominio": [
+    0.6,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "Lᴰ₂"
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "1 + 0.6*x",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "oferta",
+   "rotulo": "Lˢ"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "D1",
+   "para": "D2",
+   "sentido": "direita",
+   "em_y": 2.5
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "D1",
+    "S"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_x": "L₁",
+   "rotulo_y": "w₁",
+   "rotulo_desloc": [
+    22,
+    0
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "D2",
+    "S"
+   ],
+   "rotulo": "E₂",
+   "projetar": true,
+   "rotulo_x": "L₂",
+   "rotulo_y": "w₂",
+   "rotulo_desloc": [
+    22,
+    0
+   ]
+  }
+ ],
+ "checar": [
+  "E2.x > E1.x",
+  "E2.y > E1.y"
+ ]
+}

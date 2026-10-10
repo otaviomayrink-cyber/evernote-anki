@@ -1,0 +1,30 @@
+{"id": "ECO-E2-L01631-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "A fuga de capitais eleva a BP (BP₁ → BP₂). No câmbio fixo, o BC vende reservas, a LM recua (LM₁ → LM₂) e a renda cai (Y₂ < Y₁); no flexível, a moeda se deprecia, a IS avança (IS₁ → IS₂) e a renda não cai.",
+ "paineis": [
+  {"titulo": "Câmbio fixo",
+   "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 9},
+   "curvas": [
+    {"id": "IS", "tipo": "reta", "p1": [1, 8], "p2": [9, 1], "familia": "demanda", "rotulo": "IS"},
+    {"id": "LM1", "tipo": "reta", "p1": [2.5, 0.929], "p2": [9, 7.429], "familia": "oferta", "rotulo": "LM₁", "estado": "inicial"},
+    {"id": "LM2", "tipo": "reta", "p1": [0.5, 2.143], "p2": [6.5, 8.143], "familia": "oferta", "rotulo": "LM₂"},
+    {"id": "BP1", "tipo": "horizontal", "y": 4, "x": [0.3, 9.7], "familia": "terceira", "rotulo": "BP₁", "estado": "inicial", "rotulo_xy": [8.9, 3.5]},
+    {"id": "BP2", "tipo": "horizontal", "y": 5.5, "x": [0.3, 9.7], "familia": "terceira", "rotulo": "BP₂", "rotulo_xy": [8.9, 5.9]}],
+   "pontos": [
+    {"id": "E1", "intersecao": ["IS", "LM1"], "rotulo": "E₁", "rotulo_desloc": [-6, 26], "projetar": "x", "rotulo_x": "Y₁"},
+    {"id": "E2", "intersecao": ["IS", "LM2"], "rotulo": "E₂", "rotulo_desloc": [-6, 26], "projetar": "x", "rotulo_x": "Y₂"}],
+   "deslocamentos": [{"de": "LM1", "para": "LM2", "sentido": "esquerda", "em_y": 6.8}],
+   "checar": ["E2.x < E1.x", "abs(E1.y - 4) < 0.05", "abs(E2.y - 5.5) < 0.05"]},
+  {"titulo": "Câmbio flexível",
+   "eixos": {"x": "Y", "y": "i", "xmax": 10, "ymax": 9},
+   "curvas": [
+    {"id": "IS1", "tipo": "reta", "p1": [1, 8], "p2": [9, 1], "familia": "demanda", "rotulo": "IS₁", "estado": "inicial"},
+    {"id": "IS2", "tipo": "reta", "p1": [3.3, 8.8], "p2": [9.8, 3.112], "familia": "demanda", "rotulo": "IS₂"},
+    {"id": "LM", "tipo": "reta", "p1": [2.5, 0.929], "p2": [9, 7.429], "familia": "oferta", "rotulo": "LM"},
+    {"id": "BP1", "tipo": "horizontal", "y": 4, "x": [0.3, 9.7], "familia": "terceira", "rotulo": "BP₁", "estado": "inicial", "rotulo_xy": [0.6, 3.5]},
+    {"id": "BP2", "tipo": "horizontal", "y": 5.5, "x": [0.3, 9.7], "familia": "terceira", "rotulo": "BP₂", "rotulo_xy": [0.6, 5.9]}],
+   "pontos": [
+    {"id": "E1", "intersecao": ["IS1", "LM"], "rotulo": "E₁", "rotulo_desloc": [-6, 26], "projetar": "x", "rotulo_x": "Y₁"},
+    {"id": "E2", "intersecao": ["IS2", "LM"], "rotulo": "E₂", "rotulo_desloc": [-6, 26], "projetar": "x", "rotulo_x": "Y₂"}],
+   "deslocamentos": [{"de": "IS1", "para": "IS2", "sentido": "direita", "em_y": 7}],
+   "checar": ["E2.x > E1.x", "abs(E2.y - 5.5) < 0.05"]}
+ ]}

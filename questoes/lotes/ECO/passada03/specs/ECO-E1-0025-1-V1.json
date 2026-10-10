@@ -1,0 +1,14 @@
+{"id": "ECO-E1-0025-1-V1", "uso": "verso",
+ "legenda": "Com preço mundial de 50, igual ao de autarquia (E: Q = 10), a produção doméstica cobre toda a demanda e a importação é zero. Só um preço mundial menor geraria importação — a 30, por exemplo, demanda 14 e oferta doméstica 5: importa 9. E a demanda nunca passa de 20 unidades.",
+ "eixos": {"x": "Q", "y": "P", "xmax": 24, "ymax": 110, "numeros": true},
+ "curvas": [
+  {"id": "D", "tipo": "funcao", "expr": "100 - 5*x", "dominio": [0, 20], "familia": "demanda", "rotulo": "D"},
+  {"id": "S", "tipo": "funcao", "expr": "10 + 4*x", "dominio": [0, 22], "familia": "oferta", "rotulo": "O"},
+  {"id": "Pm", "tipo": "horizontal", "y": 50, "x": [0, 23], "familia": "destaque", "rotulo": "Pm = 50", "tracejada": true},
+  {"id": "Pm2", "tipo": "horizontal", "y": 30, "x": [0, 23], "familia": "referencia", "rotulo": "Pm = 30"}],
+ "pontos": [
+  {"id": "E", "intersecao": ["D", "S"], "rotulo": "E", "rotulo_desloc": [10, 14]},
+  {"id": "A", "intersecao": ["S", "Pm2"], "projetar": "x", "marcar": true},
+  {"id": "B", "intersecao": ["D", "Pm2"], "projetar": "x", "marcar": true}],
+ "setas": [{"de": ["A.x", 22], "para": ["B.x", 22], "estilo": "<|-|>", "cor": "vermelho", "rotulo": "importa 9"}],
+ "checar": ["abs(E.x - 10) < 0.01", "abs(E.y - 50) < 0.01", "abs(B.x - A.x - 9) < 0.01"]}

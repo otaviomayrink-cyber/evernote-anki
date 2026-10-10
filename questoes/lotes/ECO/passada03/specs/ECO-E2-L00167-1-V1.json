@@ -1,0 +1,144 @@
+{
+ "id": "ECO-E2-L00167-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio fixo e capitais imóveis (BP vertical): a expansão fiscal leva a IS a IS₂; em E′ a renda maior gera déficit externo, o BC vende reservas, a moeda encolhe e a LM recua até LM₂ — o equilíbrio E₂ tem a mesma renda Y₁ e juros mais altos.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    7.5
+   ],
+   "p2": [
+    9.5,
+    2.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "LM2",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    2.5
+   ],
+   "p2": [
+    6.5,
+    8.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₂"
+  },
+  {
+   "id": "BP",
+   "tipo": "vertical",
+   "x": 5,
+   "y": [
+    0.3,
+    8.7
+   ],
+   "familia": "terceira",
+   "rotulo": "BP",
+   "rotulo_xy": [
+    5.5,
+    8.5
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_x": "Y₁",
+   "rotulo_y": "i₁",
+   "rotulo_desloc": [
+    10,
+    -14
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS2",
+    "LM1"
+   ],
+   "rotulo": "E′"
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS2",
+    "LM2"
+   ],
+   "rotulo": "E₂",
+   "projetar": "y",
+   "rotulo_y": "i₂",
+   "rotulo_desloc": [
+    10,
+    8
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 3.0
+  },
+  {
+   "de": "LM1",
+   "para": "LM2",
+   "sentido": "esquerda",
+   "em_y": 6.0
+  }
+ ],
+ "checar": [
+  "abs(E2.x - E1.x) < 0.01",
+  "E2.y > E1.y",
+  "Ep.x > E1.x"
+ ]
+}

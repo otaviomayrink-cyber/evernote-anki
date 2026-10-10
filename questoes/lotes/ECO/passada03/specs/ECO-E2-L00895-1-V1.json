@@ -1,0 +1,11 @@
+{"id": "ECO-E2-L00895-1-V1", "uso": "verso",
+ "legenda": "Com n maior, a reta de investimento de manutenção (n+δ)k fica mais inclinada: a mesma poupança precisa equipar mais trabalhadores novos, e o estado estacionário recua de k₁* para k₂* — logo, y* = f(k*) também cai.",
+ "eixos": {"x": "k", "y": "i", "xmax": 46, "ymax": 9.5},
+ "curvas": [
+   {"id": "sf", "tipo": "funcao", "expr": "1.2*x**0.5", "dominio": [0, 45], "familia": "oferta", "rotulo": "s·f(k)"},
+   {"id": "d1", "tipo": "funcao", "expr": "0.2*x", "dominio": [0, 45], "familia": "terceira", "rotulo": "(n₁+δ)k", "estado": "inicial"},
+   {"id": "d2", "tipo": "funcao", "expr": "0.3*x", "dominio": [0, 31], "familia": "terceira", "rotulo": "(n₂+δ)k"}],
+ "pontos": [
+   {"id": "E1", "intersecao": ["sf", "d1"], "indice": 1, "projetar": "x", "rotulo_x": "k₁*"},
+   {"id": "E2", "intersecao": ["sf", "d2"], "indice": 1, "projetar": "x", "rotulo_x": "k₂*"}],
+ "checar": ["E2.x < E1.x", "abs(E1.x - 36) < 0.01", "abs(E2.x - 16) < 0.01"]}

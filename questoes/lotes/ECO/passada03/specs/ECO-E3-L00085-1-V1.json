@@ -1,0 +1,93 @@
+{
+ "id": "ECO-E3-L00085-1-V1",
+ "uso": "verso",
+ "legenda": "Na autarquia, a FPP ricardiana (reta: 1 X custa 2 Y) é também a fronteira de consumo, e o país consome em A. Especializado em X (P) e trocando a 3 Y por X, consome sobre a nova FPC, que gira para fora a partir de P: C tem mais X e mais Y que A.",
+ "eixos": {
+  "x": "X",
+  "y": "Y",
+  "xmax": 5,
+  "ymax": 13,
+  "numeros": true
+ },
+ "curvas": [
+  {
+   "id": "F",
+   "tipo": "reta",
+   "p1": [
+    0,
+    8
+   ],
+   "p2": [
+    4,
+    0
+   ],
+   "familia": "demanda",
+   "rotulo": "FPP = FPC na autarquia",
+   "rotulo_xy": [
+    1.1,
+    2.0
+   ]
+  },
+  {
+   "id": "T",
+   "tipo": "reta",
+   "p1": [
+    0,
+    12
+   ],
+   "p2": [
+    4,
+    0
+   ],
+   "familia": "destaque",
+   "rotulo": "FPC com comércio (1 X = 3 Y)",
+   "rotulo_em": 1.2,
+   "rotulo_desloc": [
+    14,
+    8
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "sobre": "F",
+   "x": 2,
+   "rotulo": "A",
+   "rotulo_desloc": [
+    -20,
+    -18
+   ]
+  },
+  {
+   "id": "P",
+   "xy": [
+    4,
+    0
+   ],
+   "rotulo": "P",
+   "rotulo_desloc": [
+    10,
+    12
+   ]
+  },
+  {
+   "id": "C",
+   "sobre": "T",
+   "x": 2.5,
+   "rotulo": "C",
+   "projetar": true,
+   "rotulo_desloc": [
+    10,
+    8
+   ]
+  }
+ ],
+ "checar": [
+  "C.x > A.x",
+  "C.y > A.y",
+  "C.y > 8 - 2*C.x",
+  "abs(A.y - 4) < 0.01",
+  "abs(C.y - 4.5) < 0.01"
+ ]
+}

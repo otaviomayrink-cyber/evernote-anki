@@ -1,0 +1,84 @@
+{
+ "id": "ECO-E3-L00010-1-V1",
+ "uso": "verso",
+ "legenda": "Na autarquia, o país consome sobre a própria FPP (A). Com comércio, produz em P, troca ao preço mundial ao longo da linha de comércio e consome em C — mais dos dois bens que em A e fora da FPP. A FPP não se move: o que se amplia é o consumo.",
+ "eixos": {
+  "x": "X",
+  "y": "Y",
+  "xmax": 10,
+  "ymax": 10.5
+ },
+ "curvas": [
+  {
+   "id": "F",
+   "tipo": "funcao",
+   "expr": "sqrt(maximum(0, 64 - x**2))",
+   "dominio": [
+    0,
+    8
+   ],
+   "familia": "demanda",
+   "rotulo": "FPP",
+   "rotulo_em": 2,
+   "rotulo_desloc": [
+    0,
+    14
+   ]
+  },
+  {
+   "id": "T",
+   "tipo": "funcao",
+   "expr": "3.4871 - 2.0647*(x - 7.2)",
+   "dominio": [
+    4.2,
+    8.85
+   ],
+   "familia": "destaque",
+   "rotulo": "linha de comércio",
+   "rotulo_em": 8.5,
+   "rotulo_desloc": [
+    12,
+    8
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "A",
+   "sobre": "F",
+   "x": 4.4,
+   "rotulo": "A (autarquia)",
+   "rotulo_desloc": [
+    -60,
+    -26
+   ]
+  },
+  {
+   "id": "P",
+   "sobre": "F",
+   "x": 7.2,
+   "rotulo": "P (produção)",
+   "rotulo_desloc": [
+    14,
+    10
+   ]
+  },
+  {
+   "id": "C",
+   "sobre": "T",
+   "x": 5,
+   "rotulo": "C (consumo)",
+   "rotulo_desloc": [
+    14,
+    4
+   ]
+  }
+ ],
+ "checar": [
+  "C.x**2 + C.y**2 > 64",
+  "C.x > A.x",
+  "C.y > A.y",
+  "abs(P.x**2 + P.y**2 - 64) < 0.01",
+  "abs(T(7.2) - P.y) < 0.01"
+ ]
+}

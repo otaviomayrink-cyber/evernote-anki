@@ -1,0 +1,23 @@
+{
+ "id": "ECO-E1-0738-1-V1",
+ "uso": "verso",
+ "legenda": "Com s₁ abaixo da poupança de ouro, o estado estacionário k₁* fica à esquerda de k ouro. Elevar a poupança até sₒᵤᵣₒ leva a economia a k ouro, onde a distância entre f(k) e (n+δ)k — o consumo por trabalhador — é máxima: c* ouro > c₁*.",
+ "eixos": {"x": "k", "y": "y", "xmax": 72, "ymax": 27},
+ "curvas": [
+  {"id": "f", "tipo": "funcao", "expr": "3*x**0.5", "dominio": [0, 72], "familia": "demanda", "rotulo": "f(k)"},
+  {"id": "sf1", "tipo": "funcao", "expr": "0.9*x**0.5", "dominio": [0, 72], "familia": "oferta", "rotulo": "s₁·f(k)", "estado": "inicial"},
+  {"id": "sfg", "tipo": "funcao", "expr": "1.5*x**0.5", "dominio": [0, 72], "familia": "oferta", "rotulo": "sₒᵤᵣₒ·f(k)"},
+  {"id": "dep", "tipo": "funcao", "expr": "0.2*x", "dominio": [0, 72], "familia": "terceira", "rotulo": "(n+δ)k"}
+ ],
+ "pontos": [
+  {"id": "E1", "intersecao": ["sf1", "dep"], "indice": 1, "projetar": "x", "rotulo_x": "k₁*"},
+  {"id": "G", "intersecao": ["sfg", "dep"], "indice": 1, "projetar": "x", "rotulo_x": "k ouro"},
+  {"id": "F1", "sobre": "f", "x": "E1.x", "marcar": true},
+  {"id": "FG", "sobre": "f", "x": "G.x", "marcar": true}
+ ],
+ "setas": [
+  {"de": "E1", "para": "F1", "cor": "verde", "estilo": "<|-|>", "rotulo": "c₁*", "rotulo_desloc": [6, 0]},
+  {"de": "G", "para": "FG", "cor": "vermelho", "estilo": "<|-|>", "rotulo": "c* ouro", "rotulo_desloc": [6, 0]}
+ ],
+ "checar": ["G.x > E1.x", "abs(G.x - 56.25) < 0.01", "(FG.y - G.y) > (F1.y - E1.y)", "abs((F1.y - E1.y) - 9.45) < 0.01", "abs((FG.y - G.y) - 11.25) < 0.01"]
+}

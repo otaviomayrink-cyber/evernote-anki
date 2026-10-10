@@ -1,0 +1,11 @@
+{"id": "ECO-E2-L00799-1-V1", "uso": "verso",
+ "legenda": "Na banda cambial, o câmbio oscila livremente entre o piso e o teto; o Banco Central só atua nos limites — vende divisas quando E encosta no teto e compra quando encosta no piso. Constante, o câmbio só seria num regime de câmbio fixo.",
+ "eixos": {"x": "t", "y": "E", "xmax": 10, "ymax": 10},
+ "curvas": [
+   {"id": "T", "tipo": "horizontal", "y": 7.5, "x": [0, 10], "familia": "destaque", "rotulo": "teto da banda"},
+   {"id": "P", "tipo": "horizontal", "y": 3.5, "x": [0, 10], "familia": "destaque", "rotulo": "piso da banda"},
+   {"id": "E", "tipo": "funcao", "expr": "5.5 + 1.3*sin(1.7*x) + 0.5*sin(4.1*x)", "dominio": [0, 8.6], "familia": "demanda", "rotulo": "câmbio de mercado"}],
+ "setas": [
+   {"de": [3.2, 9.3], "para": [3.2, 7.7], "rotulo": "BC vende divisas", "cor": "vermelho"},
+   {"de": [6.6, 1.6], "para": [6.6, 3.3], "rotulo": "BC compra divisas", "cor": "vermelho"}],
+ "checar": ["E(1) < 7.5", "E(1) > 3.5", "E(3) > 3.5", "E(5) < 7.5", "E(7) > 3.5"]}

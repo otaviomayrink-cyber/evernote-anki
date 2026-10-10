@@ -1,0 +1,28 @@
+{"id": "ECO-E2-L00696-1-V1", "uso": "verso", "tamanho": "largo",
+ "legenda": "À esquerda, a FPP ricardiana é uma reta: cada 2 unidades extras de X custam sempre 2 de Y (custo de oportunidade constante). À direita, a FPP côncava de modelos com dois fatores e rendimentos decrescentes: cada 2 unidades de X custam cada vez mais Y.",
+ "paineis": [
+  {"titulo": "Ricardo: custo constante",
+   "eixos": {"x": "X", "y": "Y", "xmax": 9.5, "ymax": 9.5},
+   "curvas": [{"id": "R", "tipo": "reta", "p1": [0, 8], "p2": [8, 0], "familia": "demanda", "rotulo": "FPP", "rotulo_em": 6.6, "rotulo_desloc": [8, 8]}],
+   "pontos": [
+     {"id": "B", "sobre": "R", "x": 2, "rotulo": "", "marcar": false},
+     {"id": "C", "sobre": "R", "x": 4, "rotulo": "", "marcar": false},
+     {"id": "D", "sobre": "R", "x": 6, "rotulo": "", "marcar": false}],
+   "setas": [
+     {"de": [2, 8], "para": [2, "B.y"], "cor": "vermelho", "rotulo": "−2"},
+     {"de": [4, "B.y"], "para": [4, "C.y"], "cor": "vermelho", "rotulo": "−2"},
+     {"de": [6, "C.y"], "para": [6, "D.y"], "cor": "vermelho", "rotulo": "−2"}],
+   "checar": ["abs((8 - B.y) - (B.y - C.y)) < 0.01", "abs((B.y - C.y) - (C.y - D.y)) < 0.01"]},
+  {"titulo": "Dois fatores: custo crescente",
+   "eixos": {"x": "X", "y": "Y", "xmax": 9.5, "ymax": 9.5},
+   "curvas": [{"id": "F", "tipo": "funcao", "expr": "sqrt(maximum(0, 64 - x**2))", "dominio": [0, 8], "familia": "demanda", "rotulo": "FPP", "rotulo_em": 7.2, "rotulo_desloc": [8, 8]}],
+   "pontos": [
+     {"id": "B", "sobre": "F", "x": 2, "rotulo": "", "marcar": false},
+     {"id": "C", "sobre": "F", "x": 4, "rotulo": "", "marcar": false},
+     {"id": "D", "sobre": "F", "x": 6, "rotulo": "", "marcar": false}],
+   "setas": [
+     {"de": [2, 8], "para": [2, "B.y"], "cor": "vermelho", "rotulo": "−0,3"},
+     {"de": [4, "B.y"], "para": [4, "C.y"], "cor": "vermelho", "rotulo": "−0,8"},
+     {"de": [6, "C.y"], "para": [6, "D.y"], "cor": "vermelho", "rotulo": "−1,6"}],
+   "checar": ["(C.y - D.y) > (B.y - C.y)", "(B.y - C.y) > (8 - B.y)"]}
+ ]}

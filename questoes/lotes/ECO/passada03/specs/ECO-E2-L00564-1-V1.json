@@ -1,0 +1,145 @@
+{
+ "id": "ECO-E2-L00564-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio flutuante e mobilidade alta, mas imperfeita (BP menos inclinada que a LM): a expansão fiscal atrai capitais e aprecia o câmbio, o que devolve parte do deslocamento da IS e sobe a BP (BP₁ → BP₂); no saldo, E₂ tem juros e renda maiores que E₁.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    3.5,
+    7.5
+   ],
+   "p2": [
+    9,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁"
+  },
+  {
+   "id": "BP1",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    3.15
+   ],
+   "p2": [
+    9.7,
+    5.91
+   ],
+   "familia": "terceira",
+   "rotulo": "BP₁",
+   "estado": "inicial",
+   "rotulo_xy": [
+    9.2,
+    5.25
+   ]
+  },
+  {
+   "id": "BP2",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    3.675
+   ],
+   "p2": [
+    9.7,
+    6.435
+   ],
+   "familia": "terceira",
+   "rotulo": "BP₂",
+   "rotulo_xy": [
+    9.2,
+    6.75
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": true,
+   "rotulo_x": "Y₁",
+   "rotulo_y": "i₁",
+   "rotulo_desloc": [
+    -8,
+    -28
+   ]
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "IS2",
+    "LM1"
+   ],
+   "rotulo": "E₂",
+   "projetar": true,
+   "rotulo_x": "Y₂",
+   "rotulo_y": "i₂",
+   "rotulo_desloc": [
+    -4,
+    18
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 6.6
+  },
+  {
+   "de": "BP1",
+   "para": "BP2",
+   "sentido": "cima",
+   "em_x": 8.2
+  }
+ ],
+ "checar": [
+  "E2.y > E1.y",
+  "E2.x > E1.x",
+  "abs(BP2(E2.x) - E2.y) < 0.01",
+  "abs(BP1(E1.x) - E1.y) < 0.01"
+ ]
+}

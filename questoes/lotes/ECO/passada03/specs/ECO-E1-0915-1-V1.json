@@ -1,0 +1,106 @@
+{
+ "id": "ECO-E1-0915-1-V1",
+ "uso": "verso",
+ "tamanho": "largo",
+ "legenda": "Com um só fator e produtividade constante (Ricardo), cada unidade a mais de X custa sempre o mesmo de Y: a FPP é reta. Com fatores específicos e produtividade marginal do trabalho decrescente, cada unidade a mais de X custa cada vez mais Y: a FPP é côncava.",
+ "paineis": [
+  {
+   "titulo": "Ricardo: PMg constante",
+   "eixos": {
+    "x": "X",
+    "y": "Y",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "R",
+     "tipo": "reta",
+     "p1": [
+      0,
+      8
+     ],
+     "p2": [
+      8,
+      0
+     ],
+     "familia": "oferta",
+     "rotulo": "FPP reta",
+     "rotulo_xy": [
+      6.4,
+      4.8
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "sobre": "R",
+     "x": 2,
+     "rotulo": "A"
+    },
+    {
+     "id": "B",
+     "sobre": "R",
+     "x": 6,
+     "rotulo": "B"
+    }
+   ],
+   "checar": [
+    "abs((R(2) - R(3)) - (R(6) - R(7))) < 0.01"
+   ]
+  },
+  {
+   "titulo": "Fatores específicos: PMg decrescente",
+   "eixos": {
+    "x": "X",
+    "y": "Y",
+    "xmax": 10,
+    "ymax": 10
+   },
+   "curvas": [
+    {
+     "id": "F",
+     "tipo": "funcao",
+     "expr": "sqrt(maximum(0, 64 - x**2))",
+     "dominio": [
+      0,
+      8
+     ],
+     "familia": "demanda",
+     "rotulo": "FPP côncava",
+     "rotulo_xy": [
+      7.4,
+      7.6
+     ]
+    }
+   ],
+   "pontos": [
+    {
+     "id": "A",
+     "sobre": "F",
+     "x": 2,
+     "rotulo": "A",
+     "rotulo_desloc": [
+      -14,
+      -14
+     ]
+    },
+    {
+     "id": "B",
+     "sobre": "F",
+     "x": 6,
+     "rotulo": "B",
+     "rotulo_desloc": [
+      -14,
+      -14
+     ]
+    }
+   ],
+   "checar": [
+    "(F(2) - F(3)) < (F(6) - F(7))",
+    "F(4) > 4"
+   ]
+  }
+ ]
+}

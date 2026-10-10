@@ -1,0 +1,12 @@
+{"id": "ECO-E2-L00661-1-V1", "uso": "verso",
+ "legenda": "Especializado em x (ponto P) e trocando a 1x = 3y no mercado mundial, o país passa da autarquia (A) para o consumo em C, fora da FPP. A fronteira de produção não se moveu: o que se expandiu foi a fronteira de consumo.",
+ "eixos": {"x": "x", "y": "y", "xmax": 6.5, "ymax": 13},
+ "curvas": [
+   {"id": "F", "tipo": "reta", "p1": [0, 8], "p2": [4, 0], "familia": "demanda", "rotulo": "FPP", "rotulo_em": 1.0, "rotulo_desloc": [-38, -10]},
+   {"id": "T", "tipo": "reta", "p1": [4, 0], "p2": [0, 12], "familia": "terceira", "rotulo": "consumo com comércio", "rotulo_em": 0.7, "rotulo_desloc": [10, 6]}],
+ "pontos": [
+   {"id": "A", "xy": [2.6, 2.8], "rotulo": "A", "rotulo_desloc": [-18, -16]},
+   {"id": "P", "xy": [4, 0], "rotulo": "P", "rotulo_desloc": [8, 10]},
+   {"id": "C", "sobre": "T", "x": 1.7, "rotulo": "C", "rotulo_desloc": [10, 8]}],
+ "setas": [{"de": ["A.x-0.08", "A.y+0.35"], "para": ["C.x+0.1", "C.y-0.4"], "cor": "vermelho"}],
+ "checar": ["C.y > 8 - 2*C.x", "abs(A.y - (8 - 2*A.x)) < 0.01", "abs(C.y - 3*(4 - C.x)) < 0.01", "C.y > A.y"]}

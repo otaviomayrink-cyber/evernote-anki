@@ -1,0 +1,83 @@
+{
+ "id": "ECO-E3-L00380-1-V1",
+ "uso": "verso",
+ "legenda": "Em t₀ a taxa de poupança sobe. A trajetória de ln y fica mais inclinada só durante a transição e depois volta a correr paralela à antiga, à mesma taxa g: o efeito permanente é de NÍVEL, não de crescimento.",
+ "eixos": {
+  "x": "t",
+  "y": "ln y",
+  "xmax": 15,
+  "ymax": 6.2
+ },
+ "curvas": [
+  {
+   "id": "antiga",
+   "tipo": "funcao",
+   "expr": "1 + 0.25*x",
+   "dominio": [
+    4,
+    14
+   ],
+   "familia": "referencia",
+   "tracejada": true,
+   "rotulo": "sem a alta de s",
+   "rotulo_desloc": [
+    6,
+    -16
+   ]
+  },
+  {
+   "id": "nova",
+   "tipo": "funcao",
+   "expr": "1.8 + 0.25*x",
+   "dominio": [
+    0,
+    14
+   ],
+   "familia": "referencia",
+   "tracejada": true,
+   "rotulo": "nova trajetória",
+   "rotulo_xy": [
+    2.8,
+    3.6
+   ]
+  },
+  {
+   "id": "Y",
+   "tipo": "funcao",
+   "expr": "1 + 0.25*x + 0.8*(1 - exp(-0.6*maximum(0, x-4)))",
+   "dominio": [
+    0,
+    14
+   ],
+   "familia": "demanda",
+   "rotulo": "ln y"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "T0",
+   "sobre": "Y",
+   "x": 4,
+   "projetar": "x",
+   "rotulo_x": "t₀ (s ↑)",
+   "marcar": true
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    4.6,
+    1.5
+   ],
+   "texto": "transição: cresce mais rápido",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ],
+ "checar": [
+  "abs((Y(14) - Y(13)) - 0.25) < 0.01",
+  "(Y(5) - Y(4)) > 0.5",
+  "abs((Y(2) - Y(1)) - 0.25) < 0.001",
+  "Y(14) > antiga(14)"
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "id": "ECO-E2-L01589-1-V1",
+ "uso": "verso",
+ "legenda": "O consumo de estado estacionário é a distância vertical entre f(k) e (n+δ)k. Ela é máxima em k*ouro, onde a inclinação de f(k) (o PMgK) iguala n+δ. A taxa de poupança da regra de ouro é a que leva a economia exatamente a esse k; poupar mais ainda eleva k e y, mas encolhe c.",
+ "modelo": "solow",
+ "params": {
+  "A": 3,
+  "alfa": 0.5,
+  "s": 0.5,
+  "n_delta": 0.2,
+  "ouro": true
+ },
+ "substituir": {
+  "G": {
+   "rotulo_x": "k*ouro"
+  },
+  "sf": {
+   "rotulo": "s_ouro·f(k)"
+  }
+ },
+ "remover": [
+  "E"
+ ],
+ "checar": [
+  "abs(sf(G.x) - dep(G.x)) < 1e-6"
+ ]
+}

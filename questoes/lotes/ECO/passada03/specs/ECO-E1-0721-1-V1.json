@@ -1,0 +1,20 @@
+{
+ "id": "ECO-E1-0721-1-V1",
+ "uso": "verso",
+ "legenda": "Alta da poupança (s₁ → s₂): a curva de investimento sobe, o novo estado estacionário tem mais capital por trabalhador (k₁* → k₂*) e, pela função de produção, renda per capita de longo prazo maior (y₁* → y₂*).",
+ "eixos": {"x": "k", "y": "y", "xmax": 58, "ymax": 25},
+ "curvas": [
+  {"id": "f", "tipo": "funcao", "expr": "3*x**0.5", "dominio": [0, 58], "familia": "demanda", "rotulo": "f(k)"},
+  {"id": "sf1", "tipo": "funcao", "expr": "0.9*x**0.5", "dominio": [0, 58], "familia": "oferta", "rotulo": "s₁·f(k)", "estado": "inicial"},
+  {"id": "sf2", "tipo": "funcao", "expr": "1.35*x**0.5", "dominio": [0, 58], "familia": "oferta", "rotulo": "s₂·f(k)"},
+  {"id": "dep", "tipo": "funcao", "expr": "0.2*x", "dominio": [0, 58], "familia": "terceira", "rotulo": "(n+δ)k"}
+ ],
+ "deslocamentos": [{"de": "sf1", "para": "sf2", "em_x": 8, "sentido": "cima"}],
+ "pontos": [
+  {"id": "E1", "intersecao": ["sf1", "dep"], "indice": 1, "projetar": "x", "rotulo_x": "k₁*"},
+  {"id": "E2", "intersecao": ["sf2", "dep"], "indice": 1, "projetar": "x", "rotulo_x": "k₂*"},
+  {"id": "Y1", "sobre": "f", "x": "E1.x", "projetar": "y", "rotulo_y": "y₁*", "marcar": true},
+  {"id": "Y2", "sobre": "f", "x": "E2.x", "projetar": "y", "rotulo_y": "y₂*", "marcar": true}
+ ],
+ "checar": ["E2.x > E1.x", "Y2.y > Y1.y", "abs(E1.x - 20.25) < 0.01", "abs(E2.x - 45.5625) < 0.01"]
+}

@@ -1,0 +1,128 @@
+{
+ "id": "ECO-E3-L00446-1-V1",
+ "uso": "verso",
+ "legenda": "Com δ maior, a reta (n+δ)k fica mais inclinada e o estado estacionário recua de k₁* para k₂*. Como f(k) é côncava, a inclinação de f — o produto marginal do capital, que remunera o capital — é maior em k₂* do que em k₁*.",
+ "eixos": {
+  "x": "k",
+  "y": "y",
+  "xmax": 48,
+  "ymax": 22
+ },
+ "curvas": [
+  {
+   "id": "f",
+   "tipo": "funcao",
+   "expr": "3*x**0.5",
+   "dominio": [
+    0,
+    47
+   ],
+   "familia": "demanda",
+   "rotulo": "f(k)"
+  },
+  {
+   "id": "sf",
+   "tipo": "funcao",
+   "expr": "1.2*x**0.5",
+   "dominio": [
+    0,
+    47
+   ],
+   "familia": "oferta",
+   "rotulo": "s·f(k)"
+  },
+  {
+   "id": "d1",
+   "tipo": "funcao",
+   "expr": "0.2*x",
+   "dominio": [
+    0,
+    47
+   ],
+   "familia": "terceira",
+   "rotulo": "(n+δ₁)k",
+   "estado": "inicial"
+  },
+  {
+   "id": "d2",
+   "tipo": "funcao",
+   "expr": "0.3*x",
+   "dominio": [
+    0,
+    34
+   ],
+   "familia": "terceira",
+   "rotulo": "(n+δ₂)k"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "sf",
+    "d1"
+   ],
+   "indice": 1,
+   "projetar": "x",
+   "rotulo_x": "k₁*"
+  },
+  {
+   "id": "E2",
+   "intersecao": [
+    "sf",
+    "d2"
+   ],
+   "indice": 1,
+   "projetar": "x",
+   "rotulo_x": "k₂*"
+  },
+  {
+   "id": "T1",
+   "sobre": "f",
+   "x": "E1.x",
+   "marcar": true
+  },
+  {
+   "id": "T2",
+   "sobre": "f",
+   "x": "E2.x",
+   "marcar": true
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "d1",
+   "para": "d2",
+   "sentido": "esquerda",
+   "em_y": 8.5
+  }
+ ],
+ "checar": [
+  "E2.x < E1.x",
+  "abs(E1.x - 36) < 0.01",
+  "abs(E2.x - 16) < 0.01",
+  "1.5/E2.x**0.5 > 1.5/E1.x**0.5",
+  "abs(1.5/E1.x**0.5 - 0.25) < 0.001",
+  "abs(1.5/E2.x**0.5 - 0.375) < 0.001"
+ ],
+ "textos": [
+  {
+   "xy": [
+    2.5,
+    16.5
+   ],
+   "texto": "em k₂*: PMgK = f′ = 0,375",
+   "cor": "vermelho",
+   "negrito": true
+  },
+  {
+   "xy": [
+    31,
+    13.6
+   ],
+   "texto": "em k₁*: PMgK = f′ = 0,25",
+   "cor": "cinza",
+   "negrito": true
+  }
+ ]
+}

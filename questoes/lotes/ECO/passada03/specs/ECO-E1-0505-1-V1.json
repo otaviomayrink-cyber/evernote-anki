@@ -1,0 +1,69 @@
+{
+ "id": "ECO-E1-0505-1-V1",
+ "uso": "verso",
+ "legenda": "Salário mínimo abaixo do equilíbrio (w mín < w*) não “morde”: o mercado continua em E, com o mesmo emprego L* e o mesmo salário w* — nenhum efeito sobre o desemprego.",
+ "eixos": {
+  "x": "L",
+  "y": "w",
+  "xmax": 10,
+  "ymax": 10,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "9 - 0.8*x",
+   "dominio": [
+    0.3,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "Lᴰ"
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "1 + 0.8*x",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "oferta",
+   "rotulo": "Lˢ"
+  },
+  {
+   "id": "Wmin",
+   "tipo": "horizontal",
+   "y": 3,
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "destaque",
+   "rotulo": "w mín (não vinculante)",
+   "tracejada": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "L*",
+   "rotulo_y": "w*",
+   "rotulo_desloc": [
+    22,
+    0
+   ]
+  }
+ ],
+ "checar": [
+  "E.y > 3",
+  "abs(E.x - 5) < 0.01"
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "id": "ECO-E1-0496-1-V1",
+ "uso": "verso",
+ "legenda": "Com o salário mínimo acima do equilíbrio (w mín > w*), as firmas contratam menos (Lᴰ) e mais pessoas querem trabalhar (Lˢ): a diferença é desemprego INVOLUNTÁRIO — gente disposta a trabalhar ao salário vigente sem encontrar vaga.",
+ "eixos": {
+  "x": "L",
+  "y": "w",
+  "xmax": 10,
+  "ymax": 10,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "9 - 0.8*x",
+   "dominio": [
+    0.3,
+    10
+   ],
+   "familia": "demanda",
+   "rotulo": "Lᴰ"
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "1 + 0.8*x",
+   "dominio": [
+    0,
+    10
+   ],
+   "familia": "oferta",
+   "rotulo": "Lˢ"
+  },
+  {
+   "id": "Wmin",
+   "tipo": "horizontal",
+   "y": 7,
+   "x": [
+    0,
+    9.6
+   ],
+   "familia": "destaque",
+   "rotulo": "w mín",
+   "tracejada": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "L*",
+   "rotulo_y": "w*",
+   "rotulo_desloc": [
+    22,
+    0
+   ]
+  },
+  {
+   "id": "Ld",
+   "intersecao": [
+    "D",
+    "Wmin"
+   ],
+   "projetar": "x",
+   "rotulo_x": "Lᴰ₁",
+   "marcar": true
+  },
+  {
+   "id": "Ls",
+   "intersecao": [
+    "S",
+    "Wmin"
+   ],
+   "projetar": "x",
+   "rotulo_x": "Lˢ₁",
+   "marcar": true
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "Ld.x",
+    7.7
+   ],
+   "para": [
+    "Ls.x",
+    7.7
+   ],
+   "cor": "vermelho",
+   "estilo": "<|-|>",
+   "rotulo": "desemprego involuntário",
+   "rotulo_desloc": [
+    -80,
+    18
+   ]
+  }
+ ],
+ "checar": [
+  "Ls.x > Ld.x",
+  "E.y < 7",
+  "abs(E.x - 5) < 0.01"
+ ]
+}

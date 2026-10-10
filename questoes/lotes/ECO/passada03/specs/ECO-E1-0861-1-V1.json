@@ -43,8 +43,8 @@
    "rotulo": "IS₂ (provisória)",
    "tracejada": true,
    "rotulo_xy": [
-    8.2,
-    3.0
+    4.3,
+    7.95
    ]
   },
   {
@@ -61,8 +61,8 @@
    "familia": "demanda",
    "rotulo": "IS₃",
    "rotulo_xy": [
-    3.0,
-    7.75
+    8.5,
+    2.0
    ]
   },
   {
@@ -89,7 +89,11 @@
    ],
    "familia": "terceira",
    "rotulo": "BP₁",
-   "estado": "inicial"
+   "estado": "inicial",
+   "rotulo_xy": [
+    8.6,
+    5.15
+   ]
   },
   {
    "id": "BP2",
@@ -100,7 +104,11 @@
     9.6
    ],
    "familia": "terceira",
-   "rotulo": "BP₂"
+   "rotulo": "BP₂",
+   "rotulo_xy": [
+    8.6,
+    6.75
+   ]
   }
  ],
  "pontos": [
@@ -114,8 +122,8 @@
    "projetar": "x",
    "rotulo_x": "Y₁",
    "rotulo_desloc": [
-    -32,
-    -14
+    -30,
+    -40
    ]
   },
   {
@@ -126,8 +134,8 @@
    ],
    "rotulo": "E′",
    "rotulo_desloc": [
-    -30,
-    10
+    -8,
+    22
    ]
   },
   {
@@ -140,8 +148,8 @@
    "projetar": "x",
    "rotulo_x": "Y₃",
    "rotulo_desloc": [
-    12,
-    -12
+    -6,
+    24
    ]
   }
  ],

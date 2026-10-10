@@ -1043,4 +1043,263 @@ CARDS = [
         "alertas": ["nota_redacao: assertiva mantida com o erro “custo de custo de oportunidade”, que é o motivo da "
                     "anulação"],
     },
+    # ------------------------------------------------------------------ E1-0859
+    {
+        "id": "ECO-E1-0859-1", "fonte_ref": "E1-0859", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Maio/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": ("No que diz respeito à Teoria do Comércio Internacional, julgue certo ou errado (C ou E) o item "
+                    "a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria neoclássica do comércio internacional, conhecida como Teorema de Hecksher-Ohlin, "
+                      "demonstra como a oferta relativa de fatores de produção e o emprego desses fatores em "
+                      "diferentes intensidades na produção explicam os padrões de especialização e as "
+                      "possibilidades do comércio internacional."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria neoclássica do comércio internacional, conhecida como Teorema de Hecksher-Ohlin, "
+                      "demonstra como a <u>oferta relativa de fatores</u> de produção e o emprego desses fatores em "
+                      "<u>diferentes intensidades</u> na produção explicam os padrões de especialização e as "
+                      "possibilidades do comércio internacional."),
+        "poucas": ("O H-O assenta-se em dois pilares: " + azb("dotação relativa de fatores") + " (abundância × "
+                   "escassez) e " + azb("intensidade fatorial") + " dos bens. Da combinação sai o padrão de "
+                   "comércio: exporta-se o bem intensivo no fator abundante."),
+        "destrinchando": [
+            "Modelo de " + oc("Heckscher") + " (1919) e " + oc("Ohlin") + " (1933), formalizado por "
+            + oc("Samuelson") + ": 2 países, 2 bens, 2 fatores (trabalho e capital), mesma tecnologia nos dois "
+            "países, fatores móveis entre setores e imóveis entre países, concorrência perfeita.",
+            "Como a tecnologia é igual, a diferença de custos — e portanto a vantagem comparativa — vem das "
+            + azb("dotações relativas") + ": no país abundante em capital, o capital é relativamente barato, e "
+            "o bem intensivo em capital sai mais barato antes do comércio.",
+            "Teoremas derivados: " + azb("Heckscher-Ohlin") + " (padrão de comércio), " + azb("Stolper-"
+            "Samuelson") + " (preços dos bens → remuneração dos fatores), " + azb("Rybczynski") + " (aumento de "
+            "um fator → expansão do setor que o usa intensivamente) e " + azb("equalização dos preços dos "
+            "fatores") + ".",
+            "Contraste com " + oc("Ricardo") + ": lá a vantagem comparativa nasce de diferenças de "
+            "<b>produtividade</b> (tecnologia) com um só fator; no H-O, de diferenças de <b>dotação</b> com "
+            "tecnologia igual.",
+            "Teste empírico famoso: o " + azb("paradoxo de Leontief") + " (1953), que encontrou exportações "
+            "americanas relativamente intensivas em trabalho, apesar da abundância de capital dos EUA.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual, com os dois pilares certos. A banca costuma "
+                       "errar o item trocando “dotação relativa” por “produtividade do trabalho” (que é Ricardo) "
+                       "ou “abundante” por “escasso” no padrão de exportação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O teorema de Heckscher-Ohlin explica o comércio pelas diferenças de produtividade do trabalho "
+            "entre os países.”</i> → ERRADO (troca de conceito: isso é Ricardo)",
+            "<i>“Pelo modelo H-O, o país exporta o bem intensivo no fator relativamente escasso.”</i> → ERRADO "
+            "(inversão)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Comentário curto e correto: H-O vincula vantagem comparativa à dotação relativa e à "
+                             "intensidade fatorial; exporta-se o bem intensivo no fator abundante."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: retirado o número do item (“Questão 214:”)",
+                    "quase_duplicata: ECO-E1-0894-1 (mesma definição de H-O, outra fonte)"],
+    },
+    # ------------------------------------------------------------------ E1-0893
+    {
+        "id": "ECO-E1-0893-1", "fonte_ref": "E1-0893", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2016, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("David Ricardo aperfeiçoou as ideias de Adam Smith e desenvolveu a chamada Teoria das Vantagens "
+                      "Comparativas. No livro Sobre os Princípios da Economia Política e da Tributação, Ricardo "
+                      "defende que o comércio internacional é benéfico a todos os países que mantêm vínculos "
+                      "comerciais entre si, pois o importante, segundo ele, são as vantagens comparativas, não as "
+                      "absolutas, de todos os fatores de produção de uma economia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("David Ricardo aperfeiçoou as ideias de Adam Smith e desenvolveu a chamada Teoria das "
+                       "Vantagens Comparativas. No livro Sobre os Princípios da Economia Política e da Tributação, "
+                       "Ricardo defende que o comércio internacional é benéfico a todos os países que mantêm "
+                       "vínculos comerciais entre si, pois o importante, segundo ele, são as vantagens comparativas, "
+                       "não as absolutas, ") + vm("de todos os fatores de produção de uma economia") + az(".")),
+        "poucas": ("O modelo de " + oc("Ricardo") + " usa " + vm("um único fator, o trabalho") + ", e a vantagem "
+                   "comparativa se refere a <b>bens</b> (custo de oportunidade de produzi-los), não a “todos os "
+                   "fatores de produção”."),
+        "destrinchando": [
+            "Em " + oc("Ricardo") + " (<i>Princípios de Economia Política e Tributação</i>, 1817, cap. 7, o "
+            "exemplo de vinho e tecido entre Portugal e Inglaterra), o custo de cada bem é medido em "
+            + azb("horas de trabalho") + ": é a teoria do valor-trabalho aplicada ao comércio.",
+            "A vantagem comparativa compara, dentro de cada país, o custo relativo de dois <b>bens</b>. Portugal "
+            "produzia vinho e tecido com menos horas que a Inglaterra (vantagem absoluta em ambos), mas sua "
+            "vantagem relativa era maior no vinho; a Inglaterra, menos ineficiente em tecido, especializou-se "
+            "nele.",
+            "Consequência lógica: nenhum país tem vantagem comparativa em <b>todos</b> os bens — com dois bens e "
+            "dois países, a vantagem comparativa de um num bem implica a do outro no outro bem.",
+            "Múltiplos fatores de produção entram só na teoria neoclássica (" + azb("Heckscher-Ohlin") + "), "
+            "que explica a vantagem comparativa pelas dotações relativas de trabalho, capital e terra.",
+            "O restante do item está correto: Ricardo refina a ideia de " + oc("Adam Smith") + " (vantagem "
+            "absoluta) e conclui que o comércio pode beneficiar todos os parceiros.",
+        ],
+        "dissecando": (cz("[anacronismo · troca de conceito]") + " Quatro afirmações verdadeiras abrem caminho "
+                       "para o erro no fim: “de todos os fatores de produção” enxerta em Ricardo um elemento "
+                       "neoclássico (H-O). Itens longos e corretos no começo costumam esconder o erro no "
+                       "complemento final."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo ricardiano, as vantagens comparativas decorrem das diferenças de produtividade do "
+            "trabalho entre os países.”</i> → CERTO",
+            "<i>“Para Ricardo, um país pode ter vantagem comparativa na produção de todos os bens.”</i> → ERRADO "
+            "(impossível: a vantagem comparativa é relativa)",
+        ])],
+        "reescrita": ("[…] pois o importante, segundo ele, são as vantagens comparativas, não as absolutas, "
+                      + hl("na produção dos bens, medidas pela produtividade do trabalho, único fator de produção "
+                           "do modelo") + "."),
+        "tipo_erro": ["ANACRONISMO", "TROCA_CONCEITO"], "moduladores": ["todos"], "dificuldade": 2,
+        "comentario_fonte": ("Vários comentários (IDEG, Prof. Jetro Coutinho, alunos, trecho do Manual do Candidato "
+                             "de Economia da FUNAG, 2016): Ricardo considera só o trabalho; vantagem comparativa é "
+                             "entre produtos, não fatores; não há vantagem comparativa em todos os bens. Um "
+                             "comentário afirma que Ricardo “rejeita” Smith e que o comércio seria benéfico mesmo a "
+                             "quem não troca (impreciso)."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: a fonte não traz órgão nem prova, só o ano (2016)"],
+    },
+    # ------------------------------------------------------------------ E1-0894
+    {
+        "id": "ECO-E1-0894-1", "fonte_ref": "E1-0894", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2016, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo a teoria neoclássica do comércio internacional, também conhecida como Teorema de "
+                      "Hecksher-Ohlin, o comércio internacional resulta de dotações distintas dos fatores de "
+                      "produção entre os países, e a vantagem comparativa é determinada pela escassez relativa "
+                      "desses fatores."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo a teoria neoclássica do comércio internacional, também conhecida como Teorema de "
+                      "Hecksher-Ohlin, o comércio internacional resulta de <u>dotações distintas</u> dos fatores de "
+                      "produção entre os países, e a vantagem comparativa é determinada pela <u>escassez "
+                      "relativa</u> desses fatores."),
+        "poucas": ("No H-O, a vantagem comparativa vem das " + azb("dotações relativas") + ": cada fator é barato "
+                   "onde é abundante e caro onde é " + azb("escasso") + ". Escassez e abundância relativas são "
+                   "as duas faces do mesmo critério."),
+        "destrinchando": [
+            "Com tecnologias iguais entre países, o que diferencia os custos é o preço relativo dos fatores, "
+            "determinado pela " + azb("escassez relativa") + ": se o capital é escasso (e o trabalho abundante), "
+            "o salário relativo é baixo e os bens intensivos em trabalho saem baratos.",
+            "Daí o padrão: o país " + vd("exporta") + " o bem intensivo no fator abundante e " + vd("importa")
+            + " o bem intensivo no fator escasso. Dizer que a vantagem comparativa é determinada pela escassez "
+            "relativa é dizer o mesmo pelo outro lado.",
+            "A abundância relativa pode ser definida por quantidades (K/L do país maior que o do parceiro) ou por "
+            "preços (r/w menor). As definições coincidem se a demanda for semelhante entre países.",
+            "Erro comum (inclusive em comentários de cursinho): tratar o H-O como “mera formalização” de "
+            + oc("Ricardo") + ". Os modelos explicam a vantagem comparativa por causas distintas — tecnologia em "
+            "Ricardo, dotações no H-O — e só o H-O tem efeitos distributivos internos (Stolper-Samuelson).",
+            vm("Regra-âncora: H-O = tecnologia igual + dotações diferentes → exporta-se o fator abundante "
+               "“embutido” nos bens."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " O item usa “escassez relativa” onde o manual costuma "
+                       "dizer “abundância relativa”, e isso assusta. Mas a dotação relativa é um só critério: o "
+                       "que é abundante num país é escasso no outro. Erraria se dissesse que o país "
+                       "<b>exporta</b> o bem intensivo no fator escasso."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…e cada país exporta o bem intensivo no fator de produção relativamente escasso.”</i> → ERRADO "
+            "(inversão)",
+            "<i>“…o comércio resulta de diferenças tecnológicas entre os países.”</i> → ERRADO (troca de "
+            "conceito: isso é Ricardo)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Comentário curto e equivocado: chama o H-O de “mera formalização da teoria ricardiana” "
+                             "e diz que países que não usam vantagens comparativas têm piores resultados."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0859-1 (mesma definição de H-O, outra fonte)"],
+    },
+    # ------------------------------------------------------------------ E1-0895
+    {
+        "id": "ECO-E1-0895-1", "fonte_ref": "E1-0895", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2016, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo uma vertente da teoria neoclássica de comércio internacional, conhecida como Teorema "
+                      "Heckscher-Ohlin-Samuelson, a eliminação das barreiras ao comércio entre dois países resulta "
+                      "na convergência dos preços de seus fatores de produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo uma vertente da teoria neoclássica de comércio internacional, conhecida como Teorema "
+                      "Heckscher-Ohlin-Samuelson, a eliminação das barreiras ao comércio entre dois países resulta "
+                      "na <u>convergência</u> dos preços de seus fatores de produção."),
+        "poucas": ("É o " + azb("teorema da equalização dos preços dos fatores") + " (" + oc("Samuelson")
+                   + ", 1948–49): o comércio de <b>bens</b> iguala os preços dos bens e, com eles, salários e "
+                   "rendas do capital — mesmo com os fatores imóveis entre países."),
+        "destrinchando": [
+            "Mecanismo: com o comércio, o país abundante em trabalho expande o setor intensivo em trabalho; a "
+            "demanda por trabalho sobe e o salário relativo, antes baixo, aumenta. No país abundante em capital, "
+            "ocorre o inverso. Os preços relativos dos fatores " + vd("convergem") + ".",
+            "Ponto central: no H-O os fatores são " + azb("imóveis entre países") + ". O comércio de bens "
+            "funciona como <b>substituto</b> da migração de fatores: exportar bens intensivos em trabalho é "
+            "“exportar trabalho embutido”.",
+            "Condições para a equalização plena: mesma tecnologia, sem especialização completa, sem custos de "
+            "transporte e barreiras, concorrência perfeita, mesmo número de bens e fatores. Na prática, há "
+            "convergência parcial, não igualdade.",
+            "Correção da fonte: a convergência <b>não</b> decorre de capitais e trabalhadores migrarem em busca "
+            "de melhores rendimentos — isso seria mobilidade de fatores, hipótese que o modelo exclui.",
+            vm("Regra-âncora: no HOS, comércio de bens substitui a mobilidade de fatores e tende a igualar seus "
+               "preços."),
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Item de definição, com “convergência” "
+                       "(mais seguro que “igualdade”). A pegadinha possível seria atribuir o resultado à "
+                       "mobilidade internacional de fatores ou dizer que a equalização é sempre completa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pelo teorema HOS, a equalização dos preços dos fatores decorre da livre migração de trabalhadores "
+            "e capitais entre os países.”</i> → ERRADO (nexo indevido: os fatores são imóveis no modelo)",
+            "<i>“O livre comércio sempre iguala completamente os salários reais entre os países.”</i> → ERRADO "
+            "(modulador absoluto)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Comentário que atribui a equalização à mobilidade internacional de capitais e "
+                             "trabalhadores e discute políticas anti-imigração (mecanismo errado para o modelo)."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0897
+    {
+        "id": "ECO-E1-0897-1", "fonte_ref": "E1-0897", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2020, "cacd": False, "errei": False,
+        "comando": CMD_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de vantagens comparativas de David Ricardo somente é capaz de explicar ganhos de "
+                      "comércio sob uma situação de especialização completa."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O modelo de vantagens comparativas de David Ricardo ") + vm("somente")
+                    + az(" é capaz de explicar ganhos de comércio ") + vm("sob")
+                    + az(" uma situação de especialização completa.")),
+        "poucas": ("O modelo ricardiano admite ganhos de comércio " + azb("sem especialização completa de ambos")
+                   + ": no caso do país grande, este segue produzindo os dois bens, e o parceiro pequeno, que se "
+                   "especializa, colhe os ganhos."),
+        "destrinchando": [
+            "No Ricardo com custos constantes (FPP linear), o país que comercia a um preço diferente do de "
+            "autarquia especializa-se por inteiro: a especialização completa é o resultado <b>típico</b>, mas "
+            "não condição para explicar ganhos.",
+            "Caso do " + azb("país grande") + " (" + oc("Krugman e Obstfeld") + "): se a demanda mundial pelo "
+            "bem exceder o que o país pequeno consegue produzir, o preço internacional fica igual ao preço de "
+            "autarquia do país grande. Ele continua produzindo os dois bens (" + vd("especialização "
+            "incompleta") + ") e não ganha; o país pequeno se especializa e fica com " + vd("todo o ganho") + ".",
+            "Com muitos bens (modelo de " + oc("Dornbusch, Fischer e Samuelson") + ", 1977), cada país produz "
+            "uma <b>faixa</b> de bens definida pelos salários relativos — não um único bem.",
+            "Com custos de oportunidade crescentes (FPP côncava), o caso usual é a " + azb("especialização "
+            "parcial") + ", e os ganhos de comércio continuam existindo.",
+            vm("Regra-âncora: ganho de comércio exige preço internacional diferente do preço de autarquia, não "
+               "especialização completa de todos."),
+        ],
+        "dissecando": (cz("[restrição indevida]") + " O “somente” transforma o resultado mais comum do modelo "
+                       "num requisito. 🔥 Itens com “somente”, “apenas” e “exclusivamente” sobre modelos "
+                       "teóricos tendem a ERRADO quando o manual traz um caso-limite."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo ricardiano, um país grande pode não se especializar completamente e, nesse caso, não "
+            "obtém ganhos de comércio.”</i> → CERTO",
+            "<i>“No modelo ricardiano, os ganhos de comércio dependem de um país ter vantagem absoluta.”</i> → "
+            "ERRADO (troca de conceito: basta a vantagem comparativa)",
+        ])],
+        "reescrita": ("O modelo de vantagens comparativas de David Ricardo " + hl("também") + " é capaz de explicar "
+                      "ganhos de comércio " + hl("fora de") + " uma situação de especialização completa"
+                      + hl(", como no caso do país grande") + "."),
+        "tipo_erro": ["RESTRICAO"], "moduladores": ["somente"], "dificuldade": 3,
+        "comentario_fonte": ("Comentário que fala em “mix de produtos” com características semelhantes "
+                             "(commodities, microeletrônicos) para negar a solução de canto — argumento que não "
+                             "corresponde ao modelo ricardiano."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

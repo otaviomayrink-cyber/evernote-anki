@@ -1024,4 +1024,222 @@ CARDS = [
                     "política monetária é ineficaz e a afirmação seria verdadeira; gabarito da fonte (ERRADO) "
                     "mantido, na leitura de câmbio flexível"],
     },
+    # ------------------------------------------------------------------ E2-L01516
+    {
+        "id": "ECO-E2-L01516-1", "fonte_ref": "E2-L01516", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_B,
+        "rotulo_item": "Item",
+        "assertiva": ("Com perfeita mobilidade de capital, países com regimes cambiais flexíveis tendem a ter menores "
+                      "perdas, em termos de produto e emprego, do que países com regimes de câmbio fixo, ao serem "
+                      "acometidos por fugas de capital."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Com perfeita mobilidade de capital, países com regimes cambiais <u>flexíveis</u> tendem a ter "
+                      "<u>menores perdas</u>, em termos de produto e emprego, do que países com regimes de câmbio "
+                      "fixo, ao serem acometidos por fugas de capital."),
+        "poucas": ("Na fuga de capitais, o câmbio flexível " + azb("deprecia") + " e estimula as exportações "
+                   "líquidas (amortecedor); o câmbio fixo exige " + vd("venda de reservas") + " e contração "
+                   "monetária, com juros mais altos e recessão."),
+        "destrinchando": [
+            "Uma fuga de capitais (alta do risco-país, alta de i*, expectativa de desvalorização) eleva o juro "
+            "que o país precisa pagar para reter capital: a " + azb("BP horizontal sobe") + " (i = i* + prêmio "
+            "de risco + desvalorização esperada).",
+            vd("Câmbio fixo") + ": para defender a paridade, o BC vende reservas e recolhe moeda doméstica; a LM "
+            "se desloca para a esquerda até o juro doméstico alcançar o novo patamar. Juros maiores, "
+            + vd("produto e emprego menores") + ". O ajuste é todo pela recessão.",
+            vd("Câmbio flexível") + ": a saída de capitais deprecia a moeda; exportações líquidas sobem e a IS "
+            "vai para a direita. No modelo-padrão, o produto até " + vd("aumenta") + " (o juro sobe pela maior "
+            "demanda por moeda, com a mesma oferta). O câmbio funciona como " + azb("amortecedor de "
+            "choques") + ".",
+            "Na prática ⏳ (out/2026), a depreciação forte tem custos que o modelo ignora: repasse para a "
+            "inflação e efeito patrimonial sobre empresas endividadas em dólar. Mesmo assim, a experiência das "
+            "crises dos anos 1990 (México 1994, Ásia 1997, Rússia 1998, " + rx("Brasil") + " 1999) é "
+            "frequentemente citada a favor da flexibilidade.",
+            vm("Regra-âncora: choque financeiro externo → câmbio fixo amplifica a recessão; câmbio flexível a "
+               "amortece."),
+        ],
+        "grafico_verso": "ECO-E2-L01516-1-V1",
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Item comparativo protegido por “tendem a”. "
+                       "O raciocínio-chave é que, no câmbio fixo, a defesa da paridade transforma a fuga de "
+                       "capitais em contração monetária. 🔥 A versão errada costuma inverter os regimes "
+                       "(“maiores perdas” no flexível)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…países com regimes cambiais flexíveis tendem a ter maiores perdas, em termos de produto e "
+            "emprego, do que países com câmbio fixo, diante de fugas de capital.”</i> → ERRADO (inversão)",
+            "<i>“Sob câmbio fixo, uma fuga de capitais obriga o Banco Central a vender reservas, reduzindo a "
+            "oferta monetária e o produto.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["tendem a"], "dificuldade": 2,
+        "comentario_fonte": "Câmbio fixo: venda de reservas, contração monetária, juros maiores, recessão. Câmbio "
+                            "flexível: depreciação, NX ↑, IS para a direita, amortecendo ou compensando a perda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [redes("IMAGEM 397", "ECO-E2-L01516-1-V1", "fuga de capitais com câmbio fixo"),
+                          redes("IMAGEM 395", "ECO-E2-L01516-1-V1", "fuga de capitais com câmbio flexível")],
+        "alertas": ["quase_duplicata: ECO-E2-L01631-1 (mesmo item sem “e emprego”)"],
+    },
+    # ------------------------------------------------------------------ E2-L01550
+    {
+        "id": "ECO-E2-L01550-1", "fonte_ref": "E2-L01550", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_C,
+        "rotulo_item": "Item",
+        "assertiva": ("Considere que um país esteja com economia muito aquecida, com pressões inflacionárias, e que o "
+                      "governo deseja implementar uma política de retração da demanda agregada. Um aumento do "
+                      "resultado fiscal do governo, num contexto de câmbio flexível e perfeita mobilidade de "
+                      "capitais, vai levar à depreciação cambial e aumento do saldo comercial, mas não será eficaz "
+                      "em reduzir a demanda agregada."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considere que um país esteja com economia muito aquecida, com pressões inflacionárias, e que "
+                      "o governo deseja implementar uma política de retração da demanda agregada. Um <u>aumento do "
+                      "resultado fiscal</u> do governo, num contexto de câmbio flexível e perfeita mobilidade de "
+                      "capitais, vai levar à <u>depreciação</u> cambial e aumento do saldo comercial, mas <u>não "
+                      "será eficaz</u> em reduzir a demanda agregada."),
+        "poucas": ("“Aumento do resultado fiscal” = " + azb("contração fiscal") + ". No flutuante com mobilidade "
+                   "perfeita, ela reduz o juro, provoca saída de capitais, " + vd("deprecia") + " o câmbio e eleva "
+                   "NX na mesma medida do corte de gasto: a demanda agregada não cai."),
+        "destrinchando": [
+            "Vocabulário: elevar o " + azb("resultado fiscal") + " (primário) é cortar gastos ou aumentar "
+            "impostos — política fiscal contracionista. A IS vai para a esquerda.",
+            "Mecanismo: IS ← → i tende a cair abaixo de i* → saída de capitais → " + vd("depreciação") + " → "
+            "exportações sobem, importações caem → " + vd("NX ↑") + " → IS volta à posição inicial.",
+            "Equilíbrio final: renda e demanda agregada inalteradas; menos G (ou mais T) e mais NX: o saldo "
+            "comercial melhora. É o espelho do crowding-out externo da expansão fiscal.",
+            "Implicação para a estabilização: para esfriar a economia nesse regime, o instrumento eficaz é a "
+            + azb("política monetária contracionista") + " (juro ↑ → apreciação → NX ↓, reforçando a queda da "
+            "demanda). A contração fiscal serve a outros fins — por exemplo, a sustentabilidade da dívida ou a "
+            "melhora das contas externas.",
+            REGRA_MF,
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " O item exige duas traduções: “aumento do "
+                       "resultado fiscal” = contração, e o resultado do flutuante com mobilidade perfeita = "
+                       "fiscal ineficaz. A narrativa de economia superaquecida empurra para a intuição de que "
+                       "cortar gastos esfria a demanda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…um aumento do resultado fiscal vai levar à apreciação cambial e à redução do saldo "
+            "comercial.”</i> → ERRADO (inversão: a contração fiscal deprecia)",
+            "<i>“…num contexto de câmbio fixo e perfeita mobilidade de capitais, um aumento do resultado fiscal "
+            "será eficaz em reduzir a demanda agregada.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Contração fiscal com câmbio flexível e mobilidade perfeita: juros caem, saída de "
+                            "capitais, depreciação, saldo comercial maior; demanda agregada inalterada (vários "
+                            "comentários de IA; um falava em compensação “parcial”).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [corte("IMAGEM 419", "IS-LM-BP com BP horizontal em i = i*")],
+        "alertas": ["quase_duplicata: ECO-E2-L01628-1 (contração fiscal no flutuante com mobilidade perfeita)"],
+    },
+    # ------------------------------------------------------------------ E2-L01551
+    {
+        "id": "ECO-E2-L01551-1", "fonte_ref": "E2-L01551", "destino": "70", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_C,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma política fiscal expansionista leva a um superávit temporário do saldo do balanço de "
+                      "pagamentos (BP), se houver baixa mobilidade de capital, e a um déficit temporário do BP, se a "
+                      "mobilidade de capitais for alta."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma política fiscal expansionista leva a um ") + vm("superávit") + az(" temporário do saldo "
+                       "do balanço de pagamentos (BP), se houver baixa mobilidade de capital, e a um ")
+                    + vm("déficit") + az(" temporário do BP, se a mobilidade de capitais for alta.")),
+        "poucas": ("Está invertido. Com " + azb("baixa mobilidade") + ", domina o efeito renda (mais importações): "
+                   + vd("déficit") + ". Com " + azb("alta mobilidade") + ", domina o efeito juros (entrada de "
+                   "capitais): " + vd("superávit") + "."),
+        "destrinchando": [
+            "A expansão fiscal mexe no balanço de pagamentos por dois canais opostos: a " + vd("renda maior")
+            + " eleva as importações e piora a conta corrente; o " + vd("juro maior") + " atrai capital e "
+            "melhora a conta financeira. Qual prevalece depende da mobilidade de capital.",
+            "Critério gráfico: compara-se a inclinação da BP com a da LM. " + azb("BP mais inclinada que a LM")
+            + " (baixa mobilidade): o novo ponto IS × LM fica abaixo/à direita da BP → " + vd("déficit")
+            + ". " + azb("BP menos inclinada que a LM") + " (alta mobilidade): o ponto fica acima/à esquerda "
+            "→ " + vd("superávit") + ".",
+            "Por que “temporário”? Porque o desequilíbrio desencadeia um ajuste. No câmbio fixo: déficit → "
+            "venda de reservas → LM para a esquerda; superávit → compra de reservas → LM para a direita. No "
+            "câmbio flutuante: déficit → depreciação; superávit → apreciação, com deslocamento de IS e BP.",
+            "Por isso, no câmbio fixo, a eficácia da fiscal cresce com a mobilidade (o superávit expande a "
+            "moeda), e no flutuante ela diminui com a mobilidade (o superávit aprecia o câmbio e reduz NX).",
+        ],
+        "grafico_verso": "ECO-E2-L01551-1-V1",
+        "dissecando": (cz("[inversão]") + " Os dois casos existem, mas com os resultados trocados. A pergunta "
+                       "certa é “qual efeito domina?”: pouca mobilidade → o capital mal reage ao juro, sobra o "
+                       "efeito importações (déficit); muita mobilidade → o capital inunda o país (superávit)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…leva a um déficit temporário do BP se a curva BP for mais inclinada que a LM.”</i> → CERTO",
+            "<i>“…com perfeita mobilidade de capitais, a política fiscal expansionista leva a um déficit "
+            "temporário do BP.”</i> → ERRADO (com BP horizontal, surge superávit)",
+        ])],
+        "reescrita": ("Uma política fiscal expansionista leva a um " + hl("déficit") + " temporário do saldo do "
+                      "balanço de pagamentos (BP), se houver baixa mobilidade de capital, e a um "
+                      + hl("superávit") + " temporário do BP, se a mobilidade de capitais for alta."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["temporário"], "dificuldade": 2,
+        "comentario_fonte": "Relação invertida: baixa mobilidade → déficit (importações); alta mobilidade → "
+                            "superávit (entrada de capitais). Um comentário trata o caso de baixa mobilidade como "
+                            "“ambíguo”.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [corte("IMAGEM 420", "monetária expansionista com câmbio fixo e mobilidade perfeita; não "
+                                              "corresponde ao item")],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01552
+    {
+        "id": "ECO-E2-L01552-1", "fonte_ref": "E2-L01552", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_C,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma política monetária expansionista num regime de câmbio flexível e perfeita mobilidade de "
+                      "capitais terá eficácia em expandir a demanda agregada, porém será ineficaz para expandir o "
+                      "produto e reduzir o desemprego no longo prazo, se prevalecer a versão de Friedman da curva de "
+                      "Philips com expectativas adaptativas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma política monetária expansionista num regime de câmbio flexível e perfeita mobilidade de "
+                      "capitais terá <u>eficácia em expandir a demanda agregada</u>, porém será <u>ineficaz</u> para "
+                      "expandir o produto e reduzir o desemprego <u>no longo prazo</u>, se prevalecer a versão de "
+                      "Friedman da curva de Philips com expectativas adaptativas."),
+        "poucas": ("Duas teorias encadeadas: no " + azb("Mundell-Fleming") + " (curto prazo, preços rígidos), a "
+                   "monetária expande a demanda via juros e depreciação; na " + azb("curva de Phillips "
+                   "aceleracionista") + " de " + oc("Friedman") + ", as expectativas se ajustam e o desemprego "
+                   "volta à taxa natural no longo prazo."),
+        "destrinchando": [
+            "Curto prazo: M ↑ → LM para a direita → i ↓ → saída de capitais → " + vd("depreciação") + " → NX ↑ "
+            "→ IS para a direita. Demanda agregada e produto sobem; o desemprego cai abaixo da taxa natural.",
+            "Longo prazo: com desemprego abaixo da " + azb("taxa natural") + ", a inflação sobe. Com "
+            + azb("expectativas adaptativas") + " (π<sup>e</sup> segue a inflação passada), trabalhadores e "
+            "empresas incorporam a inflação maior aos contratos; a curva de Phillips de curto prazo se desloca "
+            "para cima e o desemprego volta à taxa natural, com inflação mais alta.",
+            "A curva de Phillips de " + vd("longo prazo é vertical") + " na taxa natural: a moeda é "
+            + azb("neutra") + " no longo prazo. Manter o desemprego abaixo da taxa natural exigiria inflação "
+            "sempre crescente — daí o nome “aceleracionista”. A crítica é de " + oc("Friedman") + " (1968) e "
+            + oc("Phelps") + " (1967–1968).",
+            "Contraste com " + oc("Lucas") + " e as " + azb("expectativas racionais") + ": se a política for "
+            "antecipada, ela é ineficaz até no curto prazo (proposição da ineficácia de Sargent e Wallace). Com "
+            "expectativas adaptativas, há efeito real <b>transitório</b>.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O item junta duas teorias e só fica certo porque separa "
+                       "os horizontes: eficácia no curto prazo (Mundell-Fleming) e neutralidade no longo "
+                       "(Friedman). A pegadinha seria dizer “ineficaz também no curto prazo” com expectativas "
+                       "adaptativas, o que só valeria com expectativas racionais e política antecipada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com expectativas adaptativas, a política monetária expansionista é ineficaz para reduzir o "
+            "desemprego mesmo no curto prazo.”</i> → ERRADO (isso é com expectativas racionais e política "
+            "antecipada)",
+            "<i>“…na versão de Friedman, a curva de Phillips de longo prazo é vertical na taxa natural de "
+            "desemprego.”</i> → CERTO",
+        ]), ("📚 Autores e teses", [
+            oc("Milton Friedman") + ", discurso presidencial à American Economic Association (1968, publicado em "
+            "“The Role of Monetary Policy”): taxa natural de desemprego e trade-off apenas transitório.",
+            oc("Robert Mundell") + " e " + oc("Marcus Fleming") + " (início dos anos 1960): eficácia das políticas "
+            "conforme o regime cambial e a mobilidade de capital.",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["no longo prazo"], "dificuldade": 2,
+        "comentario_fonte": "Monetária eficaz no curto prazo via depreciação; no longo prazo, com expectativas "
+                            "adaptativas (Friedman), retorno à taxa natural com inflação maior (vários comentários "
+                            "de IA convergentes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [corte("IMAGEM 420", "monetária com câmbio fixo; não corresponde ao item"),
+                          corte("IMAGEM 421", "OA de longo prazo vertical × DA")],
+        "alertas": [],
+    },
 ]

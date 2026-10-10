@@ -346,7 +346,7 @@ CARDS = [
                       "fixo: uma desvalorização cambial provoca uma redução da renda."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Em um modelo IS-LM-BP com alta, mas não perfeita, mobilidade de capital e com regime de câmbio "
-                       "fixo: uma desvalorização cambial provoca uma ") + vm("redução") + az(" da renda.")),
+                       "fixo: uma desvalorização cambial provoca ") + vm("uma redução") + az(" da renda.")),
         "poucas": ("A desvalorização barateia os bens nacionais, eleva " + azb("NX") + " e desloca a IS para a "
                    "direita; o superávit externo ainda leva o BC a emitir moeda: a renda " + vm("aumenta") + "."),
         "destrinchando": [
@@ -373,14 +373,13 @@ CARDS = [
             "para a direita)",
         ])],
         "reescrita": ("Em um modelo IS-LM-BP com alta, mas não perfeita, mobilidade de capital e com regime de câmbio "
-                      "fixo: uma desvalorização cambial provoca um " + hl("aumento") + " da renda."),
+                      "fixo: uma desvalorização cambial provoca " + hl("um aumento") + " da renda."),
         "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": ("ERRADO. A desvalorização torna os produtos nacionais mais competitivos, estimula as "
                              "exportações líquidas e aumenta a demanda agregada e a renda."),
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": ["nota_redacao: a reescrita troca “uma redução” por “um aumento” (concordância do artigo "
-                    "incluída no realce)"],
+        "alertas": [],
     },
     # ------------------------------------------------------------------ E1-0890
     {
@@ -1248,5 +1247,301 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
         "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00167
+    {
+        "id": "ECO-E2-L00167-1", "fonte_ref": "E2-L00167", "destino": "70", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_4,
+        "rotulo_item": "Item",
+        "assertiva": ("Sob câmbio fixo e imobilidade de capitais, políticas fiscais expansivas resultam em aumento da "
+                      "taxa de juros e, devido à intervenção do Banco Central para estabilizar a moeda, a renda "
+                      "permanece inalterada, tornando a política ineficaz em termos de estímulo ao crescimento "
+                      "econômico."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Sob câmbio fixo e imobilidade de capitais, políticas fiscais expansivas resultam em <u>aumento "
+                      "da taxa de juros</u> e, devido à intervenção do Banco Central para estabilizar a moeda, a "
+                      "<u>renda permanece inalterada</u>, tornando a política ineficaz em termos de estímulo ao "
+                      "crescimento econômico."),
+        "poucas": ("Capitais imóveis → " + azb("BP vertical") + " no único nível de renda que equilibra a balança "
+                   "comercial. A fiscal eleva Y, gera déficit, o BC vende reservas, a LM recua: " + vd("Y volta ao "
+                   "nível inicial") + " com juros mais altos."),
+        "destrinchando": [
+            "Sem fluxo de capitais, o balanço de pagamentos é só a balança comercial, que depende da renda (via "
+            "importações) e não dos juros: " + vd("BP vertical") + " em Y₁.",
+            "G ↑ → IS₁ → IS₂ → no ponto provisório E′, Y > Y₁: importações ↑ → " + vd("déficit") + " (E′ à direita "
+            "da BP) → pressão de desvalorização.",
+            "Para manter a paridade, o BC " + vd("vende reservas") + " e recolhe moeda doméstica → base ↓ → LM₁ → "
+            "LM₂, até a economia voltar à BP. Equilíbrio E₂: " + vd("Y = Y₁") + ", " + vd("i₂ > i₁") + ".",
+            "A composição da demanda muda: mais gasto público, menos investimento privado (juros maiores) — "
+            + azb("crowding out completo") + ", agora imposto pela " + azb("restrição externa") + ".",
+            "Contexto: retrata economias com controle de capitais e reservas escassas — " + rx("Brasil") + " e "
+            "América Latina antes dos anos 1990, quando o crescimento esbarrava no “estrangulamento externo” "
+            "(tema caro à " + oc("CEPAL") + ").",
+            "Para escapar da restrição sem mudar a mobilidade, só a política que desloca a própria BP: "
+            "desvalorização (NX ↑ a cada renda) ou proteção comercial.",
+        ],
+        "grafico_verso": "ECO-E2-L00167-1-V1",
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Caso-limite pouco lembrado: muitos associam "
+                       "“câmbio fixo” a “fiscal forte”, o que só vale com mobilidade alta. Aqui a imobilidade "
+                       "inverte o resultado. Pista: “imobilidade” = BP vertical = renda presa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Sob câmbio fixo e imobilidade de capitais, a política fiscal expansiva eleva a renda sem alterar "
+            "os juros.”</i> → ERRADO (troca de caso: isso vale com mobilidade perfeita)",
+            "<i>“Sob câmbio fixo e imobilidade de capitais, uma desvalorização cambial eleva a renda de "
+            "equilíbrio.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. A fiscal eleva juros e renda; sem entrada de capitais, o déficit comercial leva "
+                             "o BC a vender reservas e retirar moeda, a LM recua e a renda volta ao nível inicial, com "
+                             "juros maiores. Várias respostas empilhadas com o passo a passo e a BP vertical."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00485
+    {
+        "id": "ECO-E2-L00485-1", "fonte_ref": "E2-L00485", "destino": "70", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_ABERTA,
+        "rotulo_item": "Item",
+        "assertiva": ("A trindade impossível identificada por Mundell refere-se à impossibilidade de combinar livre "
+                      "mobilidade de capital, taxa de câmbio flutuante e política monetária autônoma."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A trindade impossível identificada por Mundell refere-se à impossibilidade de combinar livre "
+                       "mobilidade de capital, taxa de câmbio ") + vm("flutuante") + az(" e política monetária "
+                       "autônoma.")),
+        "poucas": ("O trilema é entre " + azb("câmbio fixo") + ", livre mobilidade de capital e política monetária "
+                   "autônoma. Câmbio " + vm("flutuante") + " + capital livre + autonomia é justamente a combinação "
+                   "possível."),
+        "destrinchando": [
+            "Enunciado: um país pode ter, no máximo, " + vd("dois de três") + " objetivos — (1) câmbio fixo, (2) "
+            "livre mobilidade de capital, (3) política monetária autônoma. Formulação associada a " + oc("Mundell")
+            + " e " + oc("Fleming") + " (anos 1960); o nome “trilema” popularizou-se depois, com " + oc("Obstfeld")
+            + " e outros.",
+            "Lógica: com capital livre, i = i* + expectativa de desvalorização. Se o câmbio é fixo e crível, i = "
+            "i*: o BC não escolhe os juros. Para ter juros próprios, é preciso deixar o câmbio flutuar ou "
+            "restringir o capital.",
+            "As três combinações possíveis: " + vd("fixo + capital livre") + " (zona do euro, currency boards; sem "
+            "autonomia); " + vd("flutuante + capital livre") + " (Brasil desde 1999, EUA; com autonomia); "
+            + vd("fixo + autonomia") + " (Bretton Woods, China por muito tempo; com controles de capital).",
+            rx("Brasil") + ": o tripé de 1999 (metas de inflação, câmbio flutuante, metas fiscais) escolheu o "
+            "vértice flutuante + capital livre + autonomia monetária.",
+            "Debate recente: " + oc("Hélène Rey") + " (2013) argumenta que o ciclo financeiro global reduz a "
+            "autonomia mesmo com câmbio flutuante — o trilema viraria “dilema”.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Troca um dos vértices pelo seu oposto. Teste rápido: a "
+                       "combinação descrita existe no mundo real? Câmbio flutuante + capital livre + juros próprios "
+                       "é o arranjo de quase todos os grandes emergentes — logo, não é “impossível”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela trindade impossível, um país com câmbio fixo e livre mobilidade de capital abre mão da "
+            "autonomia monetária.”</i> → CERTO",
+            "<i>“A trindade impossível impede que um país adote simultaneamente câmbio fixo e controle de "
+            "capitais.”</i> → ERRADO (essa dupla é compatível e preserva a autonomia monetária)",
+        ])],
+        "reescrita": ("A trindade impossível identificada por Mundell refere-se à impossibilidade de combinar livre "
+                      "mobilidade de capital, taxa de câmbio " + hl("fixa") + " e política monetária autônoma."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. O trilema envolve livre mobilidade de capitais, câmbio fixo e política monetária "
+                             "autônoma; o câmbio flutuante é o que permite combinar capital livre e autonomia."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00505
+    {
+        "id": "ECO-E2-L00505-1", "fonte_ref": "E2-L00505", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_ABERTA,
+        "rotulo_item": "Item",
+        "assertiva": ("Numa economia aberta, se o governo realiza uma política fiscal ativa, evidencia-se redução das "
+                      "exportações líquidas na mesma magnitude dos gastos do governo quando a autoridade monetária "
+                      "garante liberdade de capitais e câmbio flexível."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Numa economia aberta, se o governo realiza uma política fiscal ativa, evidencia-se redução das "
+                      "exportações líquidas <u>na mesma magnitude</u> dos gastos do governo quando a autoridade "
+                      "monetária garante liberdade de capitais e câmbio flexível."),
+        "poucas": ("Câmbio flexível + capital livre: a expansão fiscal valoriza a moeda até que " + vd("ΔNX = −ΔG")
+                   + ". É o " + azb("crowding out cambial") + " total do Mundell-Fleming — a renda não muda."),
+        "destrinchando": [
+            "Por que “na mesma magnitude”? No equilíbrio, i = i* e a LM não se move (o BC não intervém no câmbio). "
+            "Então Y fica igual; com Y e i iguais, consumo e investimento também. Da identidade Y = C + I + G + "
+            "NX, se G sobe e Y, C, I não mudam, " + vd("NX cai exatamente o mesmo valor") + ".",
+            "Mecanismo: G ↑ → pressão de alta dos juros → entrada de capitais → " + azb("valorização") + " → "
+            "X ↓, M ↑ → a IS volta ao ponto de partida.",
+            "Pela ótica da poupança: S − I = NX. O gasto público reduz a poupança nacional (S ↓); I fica igual; "
+            "logo NX cai — e a contrapartida é a entrada de capital externo que financia o déficit (" + azb("déficits "
+            "gêmeos") + ").",
+            "“Liberdade de capitais” deve ser lida como " + vd("mobilidade perfeita") + " em pequena economia "
+            "aberta. Com mobilidade apenas alta, NX cai menos que G e a renda sobe um pouco.",
+            vm("Regra-âncora: flutuante + mobilidade perfeita → ΔNX = −ΔG, ΔY = 0."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O “na mesma magnitude” é o detalhe que assusta, mas decorre "
+                       "da ineficácia total da fiscal. Variações com “câmbio fixo” no lugar de “câmbio flexível” "
+                       "seriam ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…evidencia-se redução das exportações líquidas na mesma magnitude dos gastos do governo quando a "
+            "autoridade monetária garante câmbio fixo.”</i> → ERRADO (troca de regime: no fixo, a renda sobe e NX "
+            "não compensa G)",
+            "<i>“…evidencia-se redução do investimento privado na mesma magnitude dos gastos do governo.”</i> → "
+            "ERRADO (troca de conceito: com i = i*, o investimento não muda; quem cai é NX)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["na mesma magnitude"], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. Resultado clássico do Mundell-Fleming: a expansão fiscal eleva os juros, atrai "
+                             "capital e valoriza o câmbio, reduzindo as exportações líquidas na mesma magnitude do "
+                             "gasto e tornando a fiscal ineficaz."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00164-1, ECO-E2-L00658-1 (fiscal ineficaz sob câmbio flutuante e "
+                    "mobilidade perfeita)",
+                    "texto_corrigido: removido do comentário de origem um resíduo de outra questão (“4. Acerca dos "
+                    "instrumentos de política comercial…”)"],
+    },
+    # ------------------------------------------------------------------ E2-L00564
+    {
+        "id": "ECO-E2-L00564-1", "fonte_ref": "E2-L00564", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação ao modelo IS-LM, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Supondo uma economia sob o regime de câmbio flutuante e com elevada mobilidade (embora "
+                      "imperfeita) de capitais, de acordo com o modelo de Mundell-Fleming, os efeitos finais, "
+                      "decorrentes de uma política fiscal expansionista, sobre a taxa de juros, a taxa de câmbio "
+                      "Real/Dólar (R$/US$) e a renda agregada no país, comparativamente à situação prevalecente no "
+                      "equilíbrio inicial, serão, respectivamente, aumento, redução e aumento."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Supondo uma economia sob o regime de câmbio flutuante e com elevada mobilidade (embora "
+                      "imperfeita) de capitais, de acordo com o modelo de Mundell-Fleming, os efeitos finais, "
+                      "decorrentes de uma política fiscal expansionista, sobre a taxa de juros, a taxa de câmbio "
+                      "Real/Dólar (R$/US$) e a renda agregada no país, comparativamente à situação prevalecente no "
+                      "equilíbrio inicial, serão, respectivamente, <u>aumento, redução e aumento</u>."),
+        "poucas": ("Mobilidade alta, mas imperfeita: a fiscal atrai capital e " + azb("valoriza") + " o real (R$/US$ "
+                   + vd("cai") + "), o que devolve só " + azb("parte") + " do estímulo — juros e renda terminam "
+                   + vd("acima") + " do ponto inicial."),
+        "destrinchando": [
+            "Com mobilidade " + vd("elevada, mas imperfeita") + ", a BP é positivamente inclinada e " + vd("menos "
+            "inclinada que a LM") + ": juros um pouco acima de i* já atraem muito capital, mas não infinitamente.",
+            "G ↑ → IS à direita → i e Y sobem → como a BP é mais plana que a LM, o ponto provisório fica acima "
+            "dela → " + vd("superávit") + " → no câmbio flutuante, " + vd("valorização") + " (R$/US$ ↓).",
+            "A valorização reduz NX: a IS recua parcialmente e a BP sobe (cada renda agora exige juros maiores "
+            "para equilibrar as contas externas), até as três curvas se cruzarem em E₂.",
+            "Saldo: " + vd("i ↑, R$/US$ ↓, Y ↑") + " — a fiscal funciona, mas pouco. Nos extremos: mobilidade "
+            "perfeita → Y e i inalterados; mobilidade baixa → desvalorização e fiscal forte.",
+            "Convenção: “taxa de câmbio R$/US$” é o preço do dólar em reais; " + vd("redução") + " = real mais "
+            "forte.",
+        ],
+        "grafico_verso": "ECO-E2-L00564-1-V1",
+        "dissecando": (cz("[detalhe · literalidade]") + " Item de três sinais em sequência; o detalhe decisivo é o "
+                       "“embora imperfeita”, que permite aos juros e à renda ficarem acima do inicial. Quem aplica o "
+                       "caso de mobilidade perfeita marca ERRADO pensando em “inalterado, redução, inalterado”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com perfeita mobilidade de capitais, os efeitos finais sobre juros, câmbio R$/US$ e renda serão, "
+            "respectivamente, aumento, redução e aumento.”</i> → ERRADO (com mobilidade perfeita, juros e renda "
+            "ficam inalterados)",
+            "<i>“…com baixa mobilidade de capitais, os efeitos finais serão aumento, aumento e aumento.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["DETALHE", "LITERAL"], "moduladores": ["embora imperfeita"], "dificuldade": 2,
+        "comentario_fonte": ("CERTO. Verso só com o gráfico IS-LM-BP (IS₁ → IS₂, BP quase horizontal) e o texto: a "
+                             "elevação de i atrai capitais, aprecia o câmbio, reduz exportações líquidas e desloca a IS "
+                             "parcialmente de volta; produto e juros maiores, fiscal pouco eficaz."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 093", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (ECO-E2-L00564-1-V1, gráfico didático)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00658
+    {
+        "id": "ECO-E2-L00658-1", "fonte_ref": "E2-L00658", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Em relação à economia internacional, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Considere uma política fiscal expansionista representada pelo aumento dos gastos do governo em "
+                      "um modelo Mundell-Fleming em uma pequena economia aberta e com perfeita mobilidade de "
+                      "capitais. No regime de câmbio fixo, o produto aumenta; no de câmbio flutuante, o produto não "
+                      "se altera."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Considere uma política fiscal expansionista representada pelo aumento dos gastos do governo em "
+                      "um modelo Mundell-Fleming em uma pequena economia aberta e com perfeita mobilidade de "
+                      "capitais. No regime de câmbio fixo, o produto <u>aumenta</u>; no de câmbio flutuante, o produto "
+                      "<u>não se altera</u>."),
+        "poucas": ("É o quadro central do Mundell-Fleming: " + azb("fixo") + " → o BC compra divisas, a LM acompanha "
+                   "a IS e " + vd("Y ↑") + "; " + azb("flutuante") + " → a valorização derruba NX, a IS volta e "
+                   + vd("Y não muda") + "."),
+        "destrinchando": [
+            "Ponto comum: G ↑ → IS para a direita → juros pressionados acima de i* → entrada de capitais. O que "
+            "difere é quem absorve a pressão.",
+            vd("Câmbio fixo") + ": o BC impede a valorização comprando dólares → base ↑ → LM para a direita → i "
+            "volta a i* com renda maior. A moeda se ajusta à fiscal: " + azb("eficácia máxima") + ".",
+            vd("Câmbio flutuante") + ": o câmbio absorve a pressão → valorização → NX ↓ → a IS volta → Y e i "
+            "inalterados, " + vd("ΔNX = −ΔG") + ": " + azb("ineficácia total") + ".",
+            "Quadro de quatro casas (mobilidade perfeita): fiscal — fixo eficaz, flutuante ineficaz; monetária — "
+            "fixo ineficaz, flutuante eficaz. Origem: " + oc("Robert Mundell") + " e " + oc("J. Marcus Fleming")
+            + " (início dos anos 1960); Mundell recebeu o Nobel de 1999.",
+            "Hipóteses que sustentam o resultado: pequena economia (i* dado), preços rígidos, expectativas "
+            "estáticas sobre o câmbio e Marshall-Lerner.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item-síntese que testa as duas casas da fiscal ao mesmo tempo. A "
+                       "armadilha habitual é inverter os regimes; aqui eles estão na ordem certa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…No regime de câmbio flutuante, o produto aumenta; no de câmbio fixo, o produto não se "
+            "altera.”</i> → ERRADO (regimes invertidos: esse é o resultado da política monetária)",
+            "<i>“…No regime de câmbio fixo, as reservas internacionais aumentam.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. Câmbio fixo: o BC compra moeda estrangeira, a LM se desloca para a direita e o "
+                             "produto aumenta. Câmbio flutuante: a valorização reduz as exportações líquidas, a IS "
+                             "volta e o produto não muda."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00144-1, ECO-E2-L00164-1, ECO-E2-L00505-1 (fiscal nos dois regimes "
+                    "com mobilidade perfeita)"],
+    },
+    # ------------------------------------------------------------------ E2-L00728
+    {
+        "id": "ECO-E2-L00728-1", "fonte_ref": "E2-L00728", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": "Em relação aos conceitos macroeconômicos, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em uma economia aberta, com câmbio flexível e mobilidade de capitais imperfeita, uma política "
+                      "monetária expansionista provoca desvalorização da moeda local no curto prazo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em uma economia aberta, com câmbio flexível e mobilidade de capitais <u>imperfeita</u>, uma "
+                      "política monetária expansionista provoca <u>desvalorização da moeda local</u> no curto prazo."),
+        "poucas": ("A expansão monetária reduz os juros domésticos; mesmo com mobilidade imperfeita, sai capital (ou "
+                   "entra menos), e a renda maior eleva as importações: os dois efeitos " + azb("depreciam") + " a "
+                   "moeda."),
+        "destrinchando": [
+            "M ↑ → LM para a direita → i ↓ e Y ↑. No balanço de pagamentos, os " + vd("dois canais apontam para o "
+            "mesmo lado") + ": juros menores pioram a conta financeira; renda maior piora a balança comercial.",
+            "Resultado: déficit → excesso de demanda por divisas → no câmbio flexível, " + vd("depreciação") + " "
+            "(e = R$/US$ ↑). A depreciação eleva NX e desloca IS e BP para a direita, reforçando a alta da renda.",
+            "Diferença em relação à fiscal: na expansão fiscal, os canais se opõem (juros ↑ atraem capital; renda "
+            "↑ eleva importações), e o sinal do câmbio depende da mobilidade. Na monetária, o sinal é "
+            + azb("inequívoco") + ", qualquer que seja a mobilidade — por isso o “imperfeita” não muda nada.",
+            "Com mobilidade imperfeita, os juros finais ficam abaixo dos iniciais; com mobilidade perfeita, voltam "
+            "a i*. Nos dois casos, câmbio depreciado e renda maior.",
+            "Na " + azb("paridade descoberta de juros") + ": i = i* + expectativa de depreciação; cortar i exige "
+            "que a moeda se deprecie hoje (" + oc("Dornbusch") + ", 1976, mostra que ela pode até “ultrapassar” "
+            "o novo nível de longo prazo — " + azb("overshooting") + ").",
+            vm("Regra-âncora: expansão monetária em câmbio flutuante → moeda deprecia, sempre."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " A ressalva “imperfeita” tenta fazer o candidato duvidar, "
+                       "mas não altera o sinal: juros menores e renda maior pressionam o câmbio no mesmo sentido. "
+                       "Seria ERRADO trocar “desvalorização” por “valorização” ou “monetária” por “fiscal”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…uma política monetária expansionista provoca valorização da moeda local no curto prazo.”</i> → "
+            "ERRADO (sentido trocado)",
+            "<i>“…com mobilidade de capitais imperfeita, uma política fiscal expansionista provoca necessariamente "
+            "desvalorização da moeda local.”</i> → ERRADO (modulador absoluto: depende de a BP ser mais ou menos "
+            "inclinada que a LM)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["no curto prazo"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. A expansão monetária reduz os juros domésticos; mesmo com mobilidade imperfeita, "
+                             "os ativos domésticos ficam menos atraentes, há saída de capitais e, no câmbio flexível, "
+                             "depreciação da moeda local."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: comentário fundido com o da linha E2-L00783 (mesmo item, mesmo caderno)"],
     },
 ]

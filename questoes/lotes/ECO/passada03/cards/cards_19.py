@@ -1267,4 +1267,347 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["duplicata: E1-0544 (mesmo item e mesmo comentário) fundido neste card"],
     },
+    # ------------------------------------------------------------------ E1-0678
+    {
+        "id": "ECO-E1-0678-1", "fonte_ref": "E1-0678", "destino": "79", "subtema": H2["cota"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2025", "ano": 2025, "cacd": True,
+        "errei": False,
+        "comando": CMD_TPS25,
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição a determinados países de normas técnicas distintas das internacionais não "
+                      "configurará barreira comercial se o objetivo das normas impostas for o aumento da "
+                      "segurança do usuário do produto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A imposição a determinados países de normas técnicas distintas das internacionais ")
+                    + vm("não configurará") + az(" barreira comercial ") + vm("se") + az(" o objetivo das "
+                    "normas impostas ") + vm("for") + az(" o aumento da segurança do usuário do produto.")),
+        "poucas": ("Norma técnica que dificulta a importação " + azb("é") + " barreira — uma "
+                   + azb("barreira técnica ao comércio") + ". O objetivo legítimo (segurança) não a apaga; "
+                   "só ajuda a decidir se ela é " + azb("compatível com a OMC") + "."),
+        "destrinchando": [
+            "Qualquer medida que torne a importação mais difícil ou cara do que seria sem ela é barreira "
+            "comercial. Normas técnicas, regulamentos e procedimentos de avaliação de conformidade são "
+            + azb("barreiras não tarifárias") + " do tipo técnico (TBT); as sanitárias e fitossanitárias têm "
+            "acordo próprio (SPS).",
+            "O " + azb("Acordo sobre Barreiras Técnicas ao Comércio") + " (OMC, 1994) reconhece o direito de "
+            "regular para " + azb("objetivos legítimos") + " — segurança nacional, prevenção de práticas "
+            "enganosas, proteção da saúde e da segurança humana, da vida animal e vegetal e do meio ambiente "
+            "(art. 2.2) —, desde que a medida passe por testes:",
+            vd("art. 2.1") + ": não discriminação (" + azb("nação mais favorecida") + " e " + azb("tratamento "
+            "nacional") + "). Impor a norma só “a determinados países” já é suspeito. " + vd("art. 2.2")
+            + ": não ser mais restritiva ao comércio que o necessário. " + vd("art. 2.4") + ": basear-se nas "
+            "normas internacionais quando existirem, salvo se forem ineficazes ou inadequadas para o objetivo. "
+            "Arts. 2.9–2.10: notificação e transparência.",
+            "Jurisprudência: " + azb("CE — Sardinhas") + " (2002: desvio injustificado do padrão Codex, "
+            "art. 2.4); " + azb("EUA — Cigarros de Cravo") + ", " + azb("EUA — Atum II") + " e "
+            + azb("EUA — COOL") + " (2012: objetivos legítimos, mas medidas discriminatórias).",
+            vm("Regra-âncora: objetivo legítimo não faz a barreira deixar de existir; define se ela é "
+               "permitida."),
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " Confunde <b>existência</b> da barreira "
+                       "com sua <b>legitimidade</b>: da finalidade nobre deduz que não há barreira. Pistas: "
+                       "“a determinados países” (discriminação) e “distintas das internacionais” (art. 2.4) "
+                       "agravam o quadro em vez de atenuá-lo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Normas técnicas voltadas à segurança do usuário podem ser compatíveis com a OMC, desde que não "
+            "discriminatórias e não mais restritivas que o necessário.”</i> → CERTO",
+            "<i>“O Acordo TBT proíbe que os membros adotem regulamentos técnicos distintos das normas "
+            "internacionais.”</i> → ERRADO (o desvio é admitido se a norma internacional for inadequada ao "
+            "objetivo legítimo)",
+        ])],
+        "reescrita": ("A imposição a determinados países de normas técnicas distintas das internacionais "
+                      + hl("configurará") + " barreira comercial " + hl("mesmo que") + " o objetivo das normas "
+                      "impostas " + hl("seja") + " o aumento da segurança do usuário do produto."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": ["se"], "dificuldade": 2,
+        "comentario_fonte": ("A assertiva confunde existência da barreira com legitimidade; Acordo TBT arts. "
+                             "2.1, 2.2, 2.4, 2.9–2.10; NMF e tratamento nacional; casos Sardinhas, Cigarros de "
+                             "Cravo, Atum II, COOL."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (202).png", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "cortada (imagem não preservada; conteúdo absorvido no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0679
+    {
+        "id": "ECO-E1-0679-1", "fonte_ref": "E1-0679", "destino": "79", "subtema": H2["cota"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2025", "ano": 2025, "cacd": True,
+        "errei": False,
+        "comando": CMD_TPS25,
+        "rotulo_item": "Item",
+        "assertiva": ("É esperado que tanto a imposição de quotas de importação abaixo do equilíbrio de livre "
+                      "mercado quanto a imposição de tarifas de importação tenham o efeito de reduzir a "
+                      "quantidade demandada de importações."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("É esperado que tanto a imposição de quotas de importação <u>abaixo do equilíbrio de livre "
+                      "mercado</u> quanto a imposição de tarifas de importação tenham o efeito de reduzir a "
+                      "quantidade demandada de importações."),
+        "poucas": ("A " + azb("tarifa") + " reduz as importações pelo " + azb("preço") + " (encarece o "
+                   "importado); a " + azb("quota restritiva") + ", pela " + azb("quantidade") + " (teto físico). "
+                   "Os dois caminhos levam a menos importação."),
+        "destrinchando": [
+            "Tarifa: o preço interno sobe de Pm para Pm + t; a demanda doméstica cai, a produção doméstica "
+            "sobe, e as importações (Qᴰ − Qˢ) encolhem pelos dois lados.",
+            "Quota: limite físico às importações. Só tem efeito se fixada " + azb("abaixo") + " do volume de "
+            "livre-comércio (quota “restritiva”); aí o preço interno sobe até o mercado fechar com "
+            "Qᴰ = Qˢ + quota. Quota acima do livre-comércio é inócua — daí a ressalva do item.",
+            "Para cada quota restritiva existe uma " + azb("tarifa equivalente") + " com os mesmos efeitos sobre "
+            "preço, produção, consumo e importações. Diferenças: a tarifa gera " + azb("receita tributária")
+            + "; a quota gera " + azb("renda de quota") + " para quem detém as licenças (ou para o governo, se "
+            "leiloadas). Com demanda crescente, a quota trava o volume e o preço sobe mais; a tarifa deixa as "
+            "importações crescerem.",
+            "Regras: o GATT (art. XI) proíbe, em regra, restrições quantitativas; a tarifa é o instrumento "
+            "preferido por ser transparente e consolidável. A " + azb("quota tarifária") + " (tarifa menor "
+            "dentro da quota, maior fora) é comum na agricultura.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " Item correto com a ressalva técnica bem colocada "
+                       "(“abaixo do equilíbrio de livre mercado”). A banca inverteria dizendo que a quota "
+                       "“reduz as importações qualquer que seja o nível fixado” ou que apenas a tarifa altera "
+                       "o preço interno."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma quota de importação fixada acima do volume importado em livre-comércio reduz as "
+            "importações.”</i> → ERRADO (quota não restritiva é inócua)",
+            "<i>“Quotas e tarifas equivalentes produzem a mesma receita para o governo.”</i> → ERRADO (a quota "
+            "gera renda de quota para os detentores de licença)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["é esperado"], "dificuldade": 1,
+        "comentario_fonte": ("Quota abaixo do livre-comércio limita fisicamente as importações; tarifa eleva o "
+                             "preço e reduz a quantidade importada; tarifa gera receita, quota só se licenças "
+                             "forem vendidas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0697
+    {
+        "id": "ECO-E1-0697-1", "fonte_ref": "E1-0697", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da recente escalada tarifária no comércio internacional, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição recíproca de tarifas sobre bens industriais entre os Estados Unidos e países "
+                      "parceiros afetou negativamente cadeias globais de suprimento, aumentando custos de "
+                      "produção e pressionando preços ao consumidor final."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A imposição recíproca de tarifas sobre bens industriais entre os Estados Unidos e países "
+                      "parceiros afetou negativamente cadeias globais de suprimento, aumentando <u>custos de "
+                      "produção</u> e pressionando preços ao consumidor final."),
+        "poucas": ("Tarifa sobre " + azb("insumos") + " industriais vira custo das indústrias a jusante; "
+                   "como as cadeias cruzam fronteiras várias vezes, o custo se acumula e chega ao "
+                   + vd("preço final") + "."),
+        "destrinchando": [
+            "Contexto ⏳ (out/2026): em 2025 os EUA ampliaram tarifas de forma generalizada — sobre aço e "
+            "alumínio (Seção 232), automóveis e tarifas “recíprocas” anunciadas em abril de 2025, com "
+            "retaliações de parceiros. A tarifa efetiva média americana chegou ao maior nível desde a década "
+            "de 1930, segundo estimativas de centros como o Yale Budget Lab. O " + rx("Brasil") + " foi "
+            "atingido por sobretaxa de até 50% a partir de agosto de 2025.",
+            "Mecanismo: nas " + azb("cadeias globais de valor") + ", um componente pode cruzar fronteiras "
+            "várias vezes antes do bem final; cada travessia tarifada soma custo (" + azb("efeito "
+            "cascata") + "). A " + azb("proteção efetiva") + " de quem compra insumos tarifados cai — pode até "
+            "ficar negativa.",
+            "Repasse: estudos das tarifas de 2018–2019 encontraram repasse quase integral aos preços pagos por "
+            "importadores e consumidores americanos (" + oc("Amiti, Redding e Weinstein") + ", 2019). Parte do "
+            "custo foi absorvida em margens e parte desviada por realocação de fornecedores "
+            "(" + azb("desvio de comércio") + " para México e Vietnã, por exemplo).",
+            "Efeitos macro: choque de oferta negativo (custos ↑, produção ↓), incerteza que adia investimentos "
+            "e pressão inflacionária que complica a política monetária.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Item de atualidade com mecanismo de manual (tarifa sobre "
+                       "insumo → custo → preço). A banca inverteria dizendo que a tarifa sobre insumos "
+                       "“aumenta a proteção efetiva das indústrias que os utilizam” ou que o custo recai "
+                       "“exclusivamente sobre os exportadores estrangeiros”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Tarifas sobre insumos importados elevam a proteção efetiva das indústrias domésticas que os "
+            "utilizam.”</i> → ERRADO (inversão: reduzem a proteção efetiva delas)",
+            "<i>“Estudos sobre as tarifas americanas de 2018–2019 indicam repasse elevado aos preços "
+            "domésticos.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Tarifas sobre insumos (aço, alumínio, semicondutores) elevam custos a jusante; "
+                             "estudos de 2026 (Tax Foundation, Yale Budget Lab) indicam alta de preços ao "
+                             "consumidor e repasse majoritário."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0699
+    {
+        "id": "ECO-E1-0699-1", "fonte_ref": "E1-0699", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Março/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Acerca da recente escalada tarifária no comércio internacional, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A guerra tarifária permitiu uma reestruturação eficiente dos mercados globais, com "
+                      "realocação ótima de recursos baseada em vantagens comparativas, aumentando o excedente "
+                      "total de todos os países envolvidos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A guerra tarifária ") + vm("permitiu uma reestruturação eficiente dos mercados globais, "
+                                                   "com realocação ótima de recursos baseada em vantagens "
+                                                   "comparativas, aumentando")
+                    + az(" o excedente total ") + vm("de todos os") + az(" países envolvidos.")),
+        "poucas": ("Tarifas " + azb("afastam") + " a alocação das vantagens comparativas e geram "
+                   + azb("peso morto") + ". Numa guerra tarifária, com retaliação mútua, o excedente total "
+                   "cai — o resultado típico é perda para todos."),
+        "destrinchando": [
+            "Pela teoria clássica (" + oc("Ricardo") + ") e neoclássica, o livre-comércio maximiza o excedente "
+            "mundial: cada país se especializa onde tem menor custo de oportunidade. A tarifa reintroduz "
+            "produção doméstica ineficiente e reduz o consumo — perdas de eficiência (os triângulos de peso "
+            "morto).",
+            "Exceção teórica: um " + azb("país grande") + " pode ganhar com uma " + azb("tarifa ótima") + " ao "
+            "derrubar o preço do que importa (ganho de termos de troca) — mas à custa do parceiro, e o mundo "
+            "perde. Se o parceiro retalia, os dois tendem a perder: a guerra tarifária é um "
+            + azb("dilema do prisioneiro") + ".",
+            "Por isso existe o sistema multilateral: o " + azb("GATT/OMC") + " consolida tarifas e troca "
+            "concessões recíprocas para evitar a escalada. A memória histórica é a tarifa " + azb("Smoot-Hawley")
+            + " (EUA, 1930), seguida de retaliações e colapso do comércio na Depressão.",
+            "Os efeitos observados da escalada de 2025 ⏳ (out/2026): desvio de comércio (realocação de "
+            "fornecedores para terceiros países, não necessariamente mais eficientes), alta de custos e "
+            "incerteza. Reestruturação houve; eficiência e ganho para todos, não.",
+            vm("Regra-âncora: tarifa distorce a alocação e cria peso morto; retaliação mútua reduz o bem-estar "
+               "de todos."),
+        ],
+        "dissecando": (cz("[inversão · modulador absoluto]") + " Atribui à tarifa os efeitos do "
+                       "livre-comércio (alocação por vantagens comparativas) e generaliza o ganho “de todos”. "
+                       "Pistas: “eficiente”, “ótima” e “todos” juntos sobre uma política protecionista."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um país grande pode, em tese, elevar seu bem-estar com uma tarifa ótima, desde que não haja "
+            "retaliação.”</i> → CERTO",
+            "<i>“A desviação de comércio provocada por tarifas sempre transfere a produção para os produtores "
+            "mais eficientes.”</i> → ERRADO (o desvio pode favorecer fornecedores menos eficientes)",
+        ])],
+        "reescrita": ("A guerra tarifária " + hl("distorceu os mercados globais, afastando a alocação de recursos "
+                                                 "das vantagens comparativas e reduzindo") + " o excedente total "
+                      + hl("do conjunto dos") + " países envolvidos."),
+        "tipo_erro": ["INVERSAO", "GENERALIZACAO"], "moduladores": ["ótima", "todos"], "dificuldade": 1,
+        "comentario_fonte": ("Protecionismo gera peso morto e afasta a alocação das vantagens comparativas; "
+                             "dados de 2026 indicam menor crescimento nos EUA e parceiros."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0720
+    {
+        "id": "ECO-E1-0720-1", "fonte_ref": "E1-0720", "destino": "79", "subtema": H2["omc"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2022, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos instrumentos de política comercial e do sistema multilateral de comércio, julgue (C ou E) o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Patentes servem como um incentivo para empresas investirem em pesquisa e desenvolvimento "
+                      "(P&amp;D). A relevância desse estímulo mostra-se por meio do Acordo sobre os Aspectos dos "
+                      "Direitos de Propriedade Intelectual Relacionados ao Comércio, que estabelece padrões "
+                      "mínimos para as leis de patentes entre os países-membros da Organização Mundial do "
+                      "Comércio (OMC)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Patentes servem como um incentivo para empresas investirem em pesquisa e desenvolvimento "
+                      "(P&amp;D). A relevância desse estímulo mostra-se por meio do Acordo sobre os Aspectos dos "
+                      "Direitos de Propriedade Intelectual Relacionados ao Comércio, que estabelece <u>padrões "
+                      "mínimos</u> para as leis de patentes entre os países-membros da Organização Mundial do "
+                      "Comércio (OMC)."),
+        "poucas": ("A patente dá " + azb("monopólio temporário") + " que permite recuperar o custo da P&amp;D; o "
+                   + azb("TRIPS") + " (OMC, 1994) fixa " + vd("padrões mínimos") + " de proteção, como prazo "
+                   "de " + vd("20 anos") + " do depósito."),
+        "destrinchando": [
+            "Lógica econômica: conhecimento é " + azb("bem não rival") + " e difícil de excluir — copiar é "
+            "barato. Sem proteção, quem inova arca com o custo e o imitador colhe o lucro: subinvestimento em "
+            "P&amp;D. A patente troca um " + azb("monopólio temporário") + " (com peso morto) pela divulgação "
+            "da invenção e pelo incentivo a inovar.",
+            "O " + azb("TRIPS") + " (Acordo sobre Aspectos dos Direitos de Propriedade Intelectual "
+            "Relacionados ao Comércio) nasceu na " + azb("Rodada Uruguai") + " e integra o pacote de "
+            "Marraqueche (1994), obrigatório para todos os membros da OMC (" + azb("single undertaking") + "). "
+            "Padrões mínimos: patentes para invenções novas, com atividade inventiva e aplicação industrial, "
+            "em todos os campos tecnológicos (art. 27); prazo mínimo de " + vd("20 anos") + " a partir do "
+            "depósito (art. 33); proteção de variedades vegetais por patente ou sistema " + azb("sui "
+            "generis") + " (art. 27.3.b), que também permite excluir plantas e animais da patenteabilidade.",
+            "Objetivos (art. 7): promover inovação, transferência e difusão de tecnologia, em benefício mútuo "
+            "de produtores e usuários. Flexibilidades: " + azb("licença compulsória") + " (art. 31), "
+            "importação paralela; a " + azb("Declaração de Doha sobre TRIPS e Saúde Pública") + " (2001) "
+            "reafirmou o direito de proteger a saúde pública.",
+            "Crítica do Sul: o TRIPS eleva custos de acesso a tecnologia e medicamentos e favorece os países "
+            "que detêm as patentes; a tensão reapareceu na proposta de suspensão das patentes de vacinas na "
+            "pandemia (decisão ministerial de 2022, mais limitada que o pedido original).",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Duas afirmações de manual encadeadas. A banca costuma errar "
+                       "o item trocando “padrões mínimos” por “harmonização completa” ou “padrões máximos”, ou "
+                       "dizendo que o TRIPS é acordo plurilateral de adesão voluntária."),
+        "modulos": [
+            ("🟣 Posição do Brasil", [
+                rx("O Brasil adaptou sua legislação ao TRIPS com a Lei de Propriedade Industrial (Lei nº "
+                   "9.279/1996) e foi protagonista das flexibilidades em saúde: defendeu a Declaração de Doha "
+                   "(2001) e decretou a licença compulsória do antirretroviral efavirenz em 2007.")]),
+            ("😈 Para dificultar", [
+                "<i>“O Acordo TRIPS harmoniza integralmente as legislações nacionais de patentes dos membros da "
+                "OMC.”</i> → ERRADO (fixa padrões mínimos, não harmonização total)",
+                "<i>“O TRIPS admite a concessão de licenças compulsórias, observadas certas condições.”</i> → "
+                "CERTO",
+            ]),
+        ],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Patentes estimulam P&amp;D; o TRIPS (Rodada Uruguai, 1994) estabelece padrões "
+                             "mínimos; art. 7 (objetivos); prazo de 20 anos; um comentário diz que o TRIPS "
+                             "obriga patentear plantas e animais geneticamente modificados."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: um comentário de origem afirma que o TRIPS obriga a proteger plantas e "
+                    "animais geneticamente modificados; o art. 27.3.b permite excluí-los e exige só a proteção "
+                    "de variedades vegetais (patente ou sui generis)",
+                    "banca_provavel: CEBRASPE (formato C/E, 2022; órgão não informado)"],
+    },
+    # ------------------------------------------------------------------ E1-0902
+    {
+        "id": "ECO-E1-0902-1", "fonte_ref": "E1-0902", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2013, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos instrumentos de defesa comercial, julgue (C ou E) o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A salvaguarda, e não uma medida antidumping, é aplicada contra as importações originárias "
+                      "de todos os países envolvidos na transação."),
+        "gabarito": "ANULADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A salvaguarda, e não uma medida antidumping, é aplicada contra as importações originárias ")
+                    + vm("de todos os países envolvidos na transação") + az(".")),
+        "poucas": ("A ideia central está certa: a " + azb("salvaguarda") + " vale, em regra, para as importações "
+                   "de " + vd("todas as origens") + " (é não seletiva), enquanto o " + azb("antidumping")
+                   + " atinge exportadores ou países específicos. A redação “países envolvidos na transação” "
+                   "é que ficou ambígua."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "sem justificativa oficial disponível. O motivo provável da anulação é a expressão "
+                          "“todos os países envolvidos na transação”, que não tem sentido técnico (salvaguarda "
+                          "não incide sobre “transações”, e sim sobre importações de um produto) e ignora "
+                          "exceções: países em desenvolvimento com participação pequena nas importações ficam "
+                          "isentos, e as quotas podem ser repartidas por origem. Sem essa ambiguidade, a "
+                          "resposta seria CERTO.")],
+        "destrinchando": [
+            azb("Salvaguarda") + " (art. XIX do GATT e " + azb("Acordo sobre Salvaguardas") + "): proteção "
+            + vd("temporária") + " contra um " + azb("surto de importações") + " que cause ou ameace causar "
+            + azb("prejuízo grave") + " à indústria doméstica. Não exige prática desleal: o comércio é "
+            "“leal”, mas o país ganha tempo para a indústria se ajustar. Aplica-se ao produto "
+            + vd("independentemente da origem") + " (art. 2.2); pode ser sobretaxa ou quota.",
+            "Exceções à não seletividade: isenção de países em desenvolvimento com até " + vd("3%") + " das "
+            "importações do produto (se juntos não passarem de 9%) (art. 9.1); repartição de quotas por "
+            "fornecedor. Duração: até 4 anos, prorrogável até 8 (10 para países em desenvolvimento), com "
+            "liberalização progressiva; o país afetado pode pedir compensação.",
+            azb("Antidumping") + " (art. VI do GATT e Acordo Antidumping): reage a prática " + azb("desleal")
+            + " — exportar abaixo do valor normal — com " + azb("dano material") + " e nexo causal. O direito "
+            "é fixado por exportador ou país investigado, não erga omnes. " + azb("Direitos compensatórios")
+            + " (Acordo SMC) seguem lógica parecida contra subsídios.",
+            "No " + rx("Brasil") + ", as investigações de defesa comercial são conduzidas pelo Departamento de "
+            "Defesa Comercial (Secex/MDIC) e as medidas aplicadas pelo Gecex/Camex.",
+            vm("Regra-âncora: salvaguarda = surto de importações leais, todas as origens, prejuízo grave; "
+               "antidumping = prática desleal, origem específica, dano material."),
+        ],
+        "dissecando": (cz("[modulador absoluto · exceção]") + " O núcleo (salvaguarda erga omnes × antidumping "
+                       "seletivo) é o contraste mais cobrado em defesa comercial; o “todos os países envolvidos "
+                       "na transação” abriu a ambiguidade. 🔥 Diferenças a decorar: leal × desleal, prejuízo "
+                       "grave × dano material, todas as origens × origem específica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A aplicação de medida de salvaguarda pressupõe a comprovação de prática desleal de "
+            "comércio.”</i> → ERRADO (troca de conceito: isso é do antidumping)",
+            "<i>“Medidas antidumping são aplicadas às importações do produto investigado provenientes de "
+            "exportadores ou países específicos.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["GENERALIZACAO", "EXCECAO"], "moduladores": ["todos"], "dificuldade": 2,
+        "comentario_fonte": ("Anulado. Salvaguardas visam aumentar temporariamente a proteção à indústria "
+                             "doméstica que sofra prejuízo grave por aumento de importações (MDIC)."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (marca ⌚ e ano 2013; órgão não informado)"],
+    },
 ]

@@ -42,8 +42,8 @@
    "rotulo": "IS₂ (provisória)",
    "tracejada": true,
    "rotulo_xy": [
-    7.3,
-    7.9
+    3.9,
+    8.0
    ]
   },
   {
@@ -87,8 +87,8 @@
    "projetar": "x",
    "rotulo_x": "Y₁",
    "rotulo_desloc": [
-    -120,
-    -26
+    -55,
+    -62
    ]
   },
   {
@@ -99,8 +99,8 @@
    ],
    "rotulo": "E′",
    "rotulo_desloc": [
-    -30,
-    8
+    -8,
+    22
    ]
   }
  ],
@@ -115,10 +115,10 @@
   },
   {
    "xy": [
-    6.6,
-    3.0
+    7.1,
+    2.95
    ],
-   "texto": "apreciação → NX ↓",
+   "texto": "apreciação",
    "cor": "vermelho"
   }
  ],

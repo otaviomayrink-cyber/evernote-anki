@@ -1174,4 +1174,439 @@ CARDS = [
                     "“paradoxo de Jevons”; é o paradoxo do valor (Smith), e o paradoxo de Jevons trata de "
                     "eficiência e consumo de recursos — corrigido"],
     },
+    # ------------------------------------------------------------------ E2-L00296
+    {
+        "id": "ECO-E2-L00296-1", "fonte_ref": "E2-L00296", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_TEORIAS,
+        "rotulo_item": "Item",
+        "assertiva": ("O Modelo Heckscher-Ohlin (H-O) pressupõe que as diferenças de produtividade do trabalho "
+                      "(tecnologia) entre os países são a principal causa do comércio internacional, prevendo que "
+                      "cada país exportará o bem em que sua mão de obra é relativamente mais produtiva."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O Modelo Heckscher-Ohlin (H-O) pressupõe que ")
+                    + vm("as diferenças de produtividade do trabalho (tecnologia) entre os países")
+                    + az(" são a principal causa do comércio internacional, prevendo que cada país exportará o bem ")
+                    + vm("em que sua mão de obra é relativamente mais produtiva") + az(".")),
+        "poucas": ("O item descreve o " + azb("modelo ricardiano") + ". O " + azb("H-O") + " supõe "
+                   + vd("tecnologia idêntica") + " e explica o comércio pela diferença de " + azb("dotação relativa "
+                   "de fatores") + ": cada país exporta o bem intensivo no fator relativamente abundante."),
+        "destrinchando": [
+            "Quadro comparativo que a banca adora: " + oc("Ricardo") + " → um fator (trabalho), tecnologias "
+            "diferentes, FPP reta, vantagem pela produtividade relativa do trabalho. " + oc("Heckscher-Ohlin")
+            + " → dois fatores (capital e trabalho), tecnologia igual, FPP côncava, vantagem pela abundância "
+            "relativa de fatores.",
+            "O H-O nasce justamente para explicar o comércio <b>mesmo sem</b> diferença tecnológica: por que "
+            "países com acesso às mesmas técnicas ainda trocam? Porque o fator abundante é barato e barateia os "
+            "bens que o usam com intensidade.",
+            "Consequências que só o H-O tem: efeitos distributivos internos (" + azb("Stolper-Samuelson") + "), "
+            + azb("equalização dos preços dos fatores") + " e efeito das dotações sobre a produção ("
+            + azb("Rybczynski") + "). No Ricardo, com um só fator, não há conflito distributivo entre fatores.",
+            "O " + azb("paradoxo de Leontief") + " (EUA abundantes em capital exportando bens intensivos em "
+            "trabalho) foi lido por alguns como sinal de que a produtividade, isto é, um elemento ricardiano, "
+            "importava, o que estimulou modelos híbridos.",
+            vm("Regra-âncora: produtividade/tecnologia → Ricardo; dotação de fatores → H-O."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item atribui ao H-O a premissa e a previsão do modelo "
+                       "ricardiano, com linguagem técnica (“relativamente mais produtiva”) que soa correta. Pista: "
+                       "a palavra “tecnologia” entre parênteses denuncia Ricardo, já que o H-O a supõe igual."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo ricardiano prevê que cada país exportará o bem em que sua mão de obra é relativamente "
+            "mais produtiva.”</i> → CERTO",
+            "<i>“O modelo H-O supõe que os países têm tecnologias idênticas e dotações de fatores diferentes.”</i> "
+            "→ CERTO",
+        ])],
+        "reescrita": ("O Modelo Heckscher-Ohlin (H-O) pressupõe que " + hl("as diferenças de dotação relativa de "
+                      "fatores entre os países") + " são a principal causa do comércio internacional, prevendo que "
+                      "cada país exportará o bem " + hl("intensivo em seu fator relativamente abundante") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A descrição é do modelo ricardiano; o H-O supõe tecnologias idênticas e explica o "
+                             "comércio pela dotação de fatores."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00298
+    {
+        "id": "ECO-E2-L00298-1", "fonte_ref": "E2-L00298", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_TEORIAS,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com o Teorema de Stolper-Samuelson, derivado do modelo Heckscher-Ohlin, a abertura "
+                      "comercial tende a aumentar a desigualdade de renda em países desenvolvidos (abundantes em "
+                      "capital/trabalho qualificado) e a reduzi-la em países em desenvolvimento (abundantes em "
+                      "trabalho não qualificado)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo com o Teorema de Stolper-Samuelson, derivado do modelo Heckscher-Ohlin, a abertura "
+                      "comercial <u>tende a</u> aumentar a desigualdade de renda em países desenvolvidos (abundantes "
+                      "em capital/trabalho qualificado) e a reduzi-la em países em desenvolvimento (abundantes em "
+                      "trabalho não qualificado)."),
+        "poucas": ("O " + azb("Stolper-Samuelson") + " diz que a abertura favorece o " + azb("fator abundante")
+                   + ". No país rico, esse fator é capital ou qualificação (já no topo da distribuição): a "
+                   "desigualdade sobe. No país pobre, é o trabalho não qualificado (na base): a desigualdade cai."),
+        "destrinchando": [
+            "Cadeia: abertura → o preço relativo do bem exportável sobe internamente → a remuneração real do fator "
+            "intensivo nele sobe mais que proporcionalmente e a do outro fator cai (" + oc("Stolper e Samuelson")
+            + ", " + vd("1941") + ").",
+            "País desenvolvido: exporta bens intensivos em capital e qualificação (máquinas, serviços "
+            "sofisticados) e importa bens intensivos em trabalho simples. Sobem os retornos do capital e o "
+            + azb("prêmio de qualificação") + "; caem os salários dos menos qualificados. A distribuição se abre.",
+            "País em desenvolvimento: exporta manufaturas leves e agrícolas intensivas em trabalho simples. O "
+            "salário desse grupo sobe relativamente e a desigualdade cai, <b>na previsão teórica</b>.",
+            "Ressalva empírica, que o “tende a” acomoda: na América Latina dos anos 1990, incluindo o " + rx("Brasil")
+            + ", a abertura veio acompanhada de mais desigualdade salarial em vários países. Explicações: "
+            + azb("mudança tecnológica viesada para qualificação") + ", cadeias globais de valor (a tarefa “não "
+            "qualificada” transferida do Norte é relativamente qualificada no Sul), entrada da China com trabalho "
+            "ainda mais barato e especialização em commodities intensivas em terra e capital.",
+            "A leitura com trabalho qualificado × não qualificado é uma adaptação moderna do H-O, que originalmente "
+            "usa capital × trabalho.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " Item longo que aplica o teorema aos dois tipos de país. O "
+                       "“tende a” salva a proposição diante da evidência mista. Quem pensa na experiência latino-"
+                       "americana marca ERRADO, mas o item pergunta o que diz o teorema, não o que a empiria "
+                       "mostrou."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“De acordo com o Teorema de Stolper-Samuelson, a abertura comercial beneficia todos os fatores de "
+            "produção, reduzindo a desigualdade em todos os países.”</i> → ERRADO (modulador absoluto; o fator "
+            "escasso perde)",
+            "<i>“A evidência empírica confirma integralmente que a abertura reduziu a desigualdade nos países em "
+            "desenvolvimento.”</i> → ERRADO (evidência mista)",
+        ]), ("🃏 Carta na manga", [
+            "O Stolper-Samuelson explica por que a globalização gera ganhos agregados e, ao mesmo tempo, perdedores "
+            "concentrados, o que alimenta a reação protecionista no Norte. Argumento útil para discutir políticas "
+            "compensatórias (requalificação, seguro-desemprego) como condição da sustentabilidade política da "
+            "abertura.",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["tende a"], "dificuldade": 2,
+        "comentario_fonte": ("O teorema prevê ganho do fator abundante: países ricos (capital/qualificação) veem "
+                             "desigualdade subir; países pobres, cair. Vários comentários empilhados, com evolução "
+                             "das teorias e ressalvas empíricas (tecnologia viesada, cadeias de valor)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 033", "tipo_fonte": "TABELA", "lado": "verso",
+                           "acao": "absorvida (síntese das teorias no 📖)"}],
+        "alertas": ["texto_parcial: verso da fonte truncado no limite de caracteres; o conteúdo preservado basta "
+                    "para o comentário"],
+    },
+    # ------------------------------------------------------------------ E2-L00494
+    {
+        "id": "ECO-E2-L00494-1", "fonte_ref": "E2-L00494", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TAB,
+        "excerto_tabela": TAB_086,
+        "rotulo_item": "Item",
+        "assertiva": "México detém vantagem absoluta na produção de ambos os bens.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": vm("México") + az(" detém vantagem absoluta na produção de ambos os bens."),
+        "poucas": ("Vantagem absoluta = menos horas por unidade. O " + rx("Brasil") + " gasta menos nos dois bens: "
+                   + vd("1/7 < 1") + " (calçados) e " + vd("1/3 < 1/2") + " (vestuário). A vantagem absoluta "
+                   "em ambos é brasileira."),
+        "destrinchando": [
+            "A tabela dá " + azb("coeficientes técnicos") + " (horas por unidade). Quanto <b>menor</b> o "
+            "coeficiente, mais produtivo o país. Cuidado para não ler como produção por hora, que inverteria tudo.",
+            "Calçados: Brasil " + vd("1/7 h") + " × México " + vd("1 h") + " → o Brasil é 7 vezes mais "
+            "produtivo. Vestuário: Brasil " + vd("1/3 h") + " × México " + vd("1/2 h") + " → 1,5 vez mais "
+            "produtivo.",
+            "Na teoria de " + oc("Adam Smith") + ", com vantagem absoluta do Brasil em tudo, não haveria comércio. "
+            "Em " + oc("Ricardo") + ", há: a vantagem brasileira é relativamente maior em calçados (7× contra "
+            "1,5×). O Brasil tem " + azb("vantagem comparativa") + " em calçados (custo de 3/7 de vestuário, contra "
+            "2 no México) e o México, em vestuário (1/2 calçado, contra 7/3 no Brasil).",
+            "Ganho mútuo com termos de troca entre 3/7 e 2 vestuários por calçado.",
+            vm("Regra-âncora: absoluta → compare horas do mesmo bem entre países; comparativa → compare a razão "
+               "entre bens dentro de cada país."),
+        ],
+        "dissecando": (cz("[troca de ator]") + " Troca o país detentor. Funciona com quem lê os números maiores do "
+                       "México (1 e 1/2) como “mais produção”, quando são mais horas. 🔥 Tabelas de coeficientes "
+                       "sempre testam a leitura horas × produtividade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O Brasil detém vantagem absoluta em ambos os bens e, ainda assim, há base para comércio "
+            "mutuamente vantajoso.”</i> → CERTO",
+            "<i>“O México detém vantagem comparativa em calçados.”</i> → ERRADO (troca de bem: é em vestuário)",
+        ])],
+        "reescrita": hl("Brasil") + " detém vantagem absoluta na produção de ambos os bens.",
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O Brasil precisa de menos horas nos dois bens (1/7 < 1 e 1/3 < 1/2); a vantagem "
+                             "absoluta é do Brasil."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_086,
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00495
+    {
+        "id": "ECO-E2-L00495-1", "fonte_ref": "E2-L00495", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TAB,
+        "excerto_tabela": TAB_086,
+        "rotulo_item": "Item",
+        "assertiva": "Brasil detém vantagem comparativa em vestuário.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": vm("Brasil") + az(" detém vantagem comparativa em vestuário."),
+        "poucas": ("Vantagem comparativa = menor " + azb("custo de oportunidade") + ". Em vestuário, ele é "
+                   + vd("7/3 de calçado") + " no Brasil e " + vd("1/2 calçado") + " no México: a vantagem é "
+                   "mexicana. O Brasil a tem em calçados."),
+        "destrinchando": [
+            "Custo de oportunidade de 1 unidade de vestuário = horas no vestuário ÷ horas no calçado. "
+            + rx("Brasil") + ": (1/3) ÷ (1/7) = " + vd("7/3 ≈ 2,33 calçados") + ". México: (1/2) ÷ 1 = "
+            + vd("0,5 calçado") + ".",
+            "Para fazer uma roupa, o Brasil abre mão de mais de dois pares de calçados; o México, de meio par. Logo "
+            "o México tem vantagem comparativa em <b>vestuário</b>, e o Brasil em <b>calçados</b> (custo de 3/7 "
+            "de vestuário por par, contra 2 no México).",
+            "Armadilha: o Brasil tem " + azb("vantagem absoluta") + " também no vestuário (1/3 h < 1/2 h). Mas a "
+            "pergunta é comparativa, e a vantagem brasileira no vestuário (1,5×) é bem menor que em calçados "
+            "(7×).",
+            "Com dois bens e dois países, se um país tem vantagem comparativa num bem, o outro necessariamente a "
+            "tem no outro bem. Os custos de oportunidade de um bem são o inverso dos do outro.",
+            vm("Regra-âncora: na comparativa, compara-se a razão entre os bens dentro de cada país, nunca as horas "
+               "entre países."),
+        ],
+        "dissecando": (cz("[troca de ator · troca de conceito]") + " O item troca o país detentor e se apoia na "
+                       "confusão absoluta × comparativa: quem olha só as horas vê o Brasil “melhor em tudo” e "
+                       "marca CERTO. 🔥 Tabela de coeficientes com um país absolutamente superior nos dois bens é "
+                       "a montagem preferida da banca."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O Brasil detém vantagem absoluta em vestuário.”</i> → CERTO",
+            "<i>“Com termos de troca de 1 calçado por 3 unidades de vestuário, ambos ganham com o comércio.”</i> "
+            "→ ERRADO (fora do intervalo 3/7–2)",
+        ])],
+        "reescrita": hl("México") + " detém vantagem comparativa em vestuário.",
+        "tipo_erro": ["TROCA_ATOR", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Custo de oportunidade do vestuário: México 1/2 calçado; Brasil 7/3. México tem "
+                             "vantagem comparativa em vestuário; Brasil, em calçados."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_086,
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00496
+    {
+        "id": "ECO-E2-L00496-1", "fonte_ref": "E2-L00496", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TAB,
+        "excerto_tabela": TAB_086,
+        "rotulo_item": "Item",
+        "assertiva": ("Os dois países, caso pratiquem livre-comércio, terão ganhos recíprocos de comércio, se o "
+                      "preço relativo internacional for igual a 1."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os dois países, caso pratiquem livre-comércio, terão ganhos recíprocos de comércio, se o "
+                      "preço relativo internacional for <u>igual a 1</u>."),
+        "poucas": ("Há ganho mútuo quando os " + azb("termos de troca") + " ficam entre os custos de oportunidade "
+                   "dos dois países. Em calçados por vestuário: " + vd("3/7 < 1 < 2") + ". Em vestuário por "
+                   "calçado: " + vd("1/2 < 1 < 7/3") + ". Nas duas leituras, 1 está dentro."),
+        "destrinchando": [
+            "Custos de oportunidade de 1 calçado (em vestuário): " + rx("Brasil") + " (1/7) ÷ (1/3) = "
+            + vd("3/7") + "; México 1 ÷ (1/2) = " + vd("2") + ". O Brasil tem vantagem comparativa em calçados, "
+            "e o México, em vestuário.",
+            "Com p = 1 (1 calçado = 1 roupa): o Brasil produz um par por 3/7 de roupa sacrificada e o troca por 1 "
+            "roupa inteira, ganhando 4/7. O México produz uma roupa por 1/2 par sacrificado e a troca por 1 par, "
+            "ganhando 1/2. Ambos consomem além de suas FPPs.",
+            "Fora do intervalo, um lado perde: com p < 3/7, nem o Brasil quer exportar calçados; com p > 2, nem o "
+            "México quer exportar vestuário. Nos extremos (p = 3/7 ou p = 2), todo o ganho fica com um país só.",
+            "Onde o preço cai dentro do intervalo depende da demanda: é a " + azb("demanda recíproca") + " de "
+            + oc("John Stuart Mill") + ". O país cujo produto é mais demandado pelo outro capta uma parte maior "
+            "dos ganhos.",
+            vm("Regra-âncora: ganho mútuo ⇔ termos de troca estritamente entre os custos de oportunidade dos dois "
+               "países."),
+        ],
+        "grafico_verso": "ECO-E2-L00496-1-V1",
+        "dissecando": (cz("[detalhe]") + " O item não diz em que unidade está o preço relativo, mas 1 é o inverso "
+                       "de si mesmo: cai no intervalo nas duas leituras (calçado/vestuário ou vestuário/calçado). "
+                       "Se a banca desse 2,5 ou 0,4, a unidade passaria a importar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…terão ganhos recíprocos se o preço relativo internacional for de 3 vestuários por calçado.”</i> "
+            "→ ERRADO (fora do intervalo 3/7–2: o México não exportaria vestuário)",
+            "<i>“Com o preço relativo igual a 2 vestuários por calçado, todo o ganho do comércio fica com o "
+            "Brasil.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("1 calçado = 1 vestuário está no intervalo 3/7 < 1 < 2; Brasil exporta calçados e "
+                             "México exporta vestuário, com ganhos mútuos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_086,
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00497
+    {
+        "id": "ECO-E2-L00497-1", "fonte_ref": "E2-L00497", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_TAB,
+        "excerto_tabela": TAB_086,
+        "rotulo_item": "Item",
+        "assertiva": "Não há base para existir o comércio mutuamente vantajoso entre Brasil e México.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": vm("Não há") + az(" base para existir o comércio mutuamente vantajoso entre Brasil e México."),
+        "poucas": ("A base do comércio vantajoso é a diferença de " + azb("custos de oportunidade") + ", não de "
+                   "vantagem absoluta. Como " + vd("3/7 ≠ 2") + " (custo do calçado no Brasil e no México), há "
+                   "espaço para especialização e ganho mútuo."),
+        "destrinchando": [
+            "O item explora a intuição de " + oc("Adam Smith") + ": como o " + rx("Brasil") + " tem vantagem "
+            "absoluta nos dois bens (1/7 < 1 e 1/3 < 1/2), não precisaria comprar nada do México.",
+            oc("Ricardo") + " mostra o contrário. O que importa é que a produtividade relativa difere: o Brasil é "
+            "7 vezes mais produtivo em calçados e só 1,5 vez em vestuário. Custo de 1 calçado: Brasil "
+            + vd("3/7 de vestuário") + "; México " + vd("2 vestuários") + ".",
+            "O Brasil se especializa em calçados e o México em vestuário; com termos de troca entre 3/7 e 2 "
+            "vestuários por calçado (por exemplo, 1 por 1), ambos consomem mais do que em autarquia.",
+            "Só não haveria base para comércio se os custos de oportunidade fossem <b>iguais</b>, isto é, se a "
+            "vantagem absoluta de um país fosse da mesma proporção nos dois bens.",
+            vm("Regra-âncora: custos de oportunidade diferentes → há comércio mutuamente vantajoso, mesmo com "
+               "vantagem absoluta de um país em tudo."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item condiciona o comércio à vantagem absoluta (Smith) e "
+                       "ignora a comparativa (Ricardo). Pista: quando a tabela mostra um país superior em tudo, a "
+                       "banca quase sempre testa se o candidato ainda enxerga o ganho comparativo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Mesmo tendo vantagem absoluta nos dois bens, o Brasil ganha ao importar vestuário do México.”</i> "
+            "→ CERTO",
+            "<i>“Haveria base para comércio ainda que os custos de oportunidade fossem iguais nos dois países.”</i> "
+            "→ ERRADO (sem diferença de custos de oportunidade, não há ganho de especialização)",
+        ])],
+        "reescrita": hl("Há") + " base para existir o comércio mutuamente vantajoso entre Brasil e México.",
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A base do comércio mutuamente vantajoso é a diferença nos custos de oportunidade, que "
+                             "existe entre os dois países."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_086,
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00498
+    {
+        "id": "ECO-E2-L00498-1", "fonte_ref": "E2-L00498", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_2,
+        "rotulo_item": "Item",
+        "assertiva": ("No Modelo de Ricardo, a tecnologia difere entre os países, e as preferências dos "
+                      "consumidores entre os países são idênticas. Já o Modelo de Heckscher-Ohlin pressupõe a "
+                      "igualdade entre a tecnologia e a preferência dos consumidores entre os países."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No Modelo de Ricardo, a tecnologia <u>difere</u> entre os países, e as preferências dos "
+                      "consumidores entre os países são idênticas. Já o Modelo de Heckscher-Ohlin pressupõe a "
+                      "<u>igualdade</u> entre a tecnologia e a preferência dos consumidores entre os países."),
+        "poucas": ("Ricardo: " + vd("tecnologias diferentes") + " (é a fonte da vantagem comparativa). H-O: "
+                   + vd("tecnologias iguais") + " e preferências iguais, para que só a " + azb("dotação de "
+                   "fatores") + " explique o comércio."),
+        "destrinchando": [
+            "No " + azb("modelo ricardiano") + ", as diferenças de produtividade do trabalho (coeficientes "
+            "a<sub>L</sub>) entre países refletem diferenças de tecnologia, e é delas que nasce a vantagem "
+            "comparativa. Preferências são tratadas como iguais (ou irrelevantes para o padrão de "
+            "especialização).",
+            "No " + azb("H-O") + ", a hipótese de tecnologia idêntica serve para eliminar a explicação "
+            "ricardiana. Preferências idênticas e homotéticas impedem que o padrão de comércio seja ditado por "
+            "gostos: se um país abundante em capital preferisse muito bens intensivos em capital, poderia "
+            "acabar importando-os (" + azb("reversão de demanda") + ", uma das explicações do paradoxo de "
+            "Leontief).",
+            "Demais hipóteses do H-O: dois fatores móveis entre setores e imóveis entre países, rendimentos "
+            "constantes, concorrência perfeita, ausência de reversão de intensidade fatorial e de custos de "
+            "comércio.",
+            vm("Regra-âncora: Ricardo → tecnologia diferente; H-O → tecnologia e preferências iguais, dotações "
+               "diferentes."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Item de quadro comparativo de hipóteses, correto nos dois "
+                       "modelos. A versão ERRADA clássica inverte a tecnologia (igual em Ricardo, diferente no H-O) "
+                       "ou dá ao H-O preferências diferentes."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Heckscher-Ohlin, o comércio decorre de diferenças de tecnologia e de preferências "
+            "entre os países.”</i> → ERRADO (o H-O supõe ambas iguais)",
+            "<i>“No modelo de Ricardo, há um único fator de produção, o trabalho.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Ricardo baseia a vantagem comparativa na diferença de tecnologia; H-O supõe tecnologia "
+                             "idêntica para focar na dotação de fatores."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00501
+    {
+        "id": "ECO-E2-L00501-1", "fonte_ref": "E2-L00501", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_2,
+        "rotulo_item": "Item",
+        "assertiva": ("No Modelo Ricardiano, a Fronteira de Possibilidade de Produção é côncava, existem dois "
+                      "fatores e pressupõe-se a lei dos rendimentos marginais decrescentes dos fatores."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No Modelo Ricardiano, a Fronteira de Possibilidade de Produção é ") + vm("côncava")
+                    + az(", ") + vm("existem dois fatores") + az(" e pressupõe-se ")
+                    + vm("a lei dos rendimentos marginais decrescentes dos fatores") + az(".")),
+        "poucas": ("O " + azb("modelo ricardiano") + " tem " + vd("um único fator") + " (trabalho) com "
+                   "produtividade " + vd("constante") + ". O custo de oportunidade é constante e a FPP é uma "
+                   + azb("reta") + ". O item descreve o modelo neoclássico (H-O)."),
+        "destrinchando": [
+            "Com um fator e coeficientes fixos (a<sub>LX</sub>, a<sub>LY</sub>), a restrição de recursos é "
+            "a<sub>LX</sub>X + a<sub>LY</sub>Y = L, que é uma reta. A inclinação a<sub>LX</sub>/a<sub>LY</sub> "
+            "é o custo de oportunidade de X, igual em qualquer ponto.",
+            "Consequência: a especialização tende a ser " + azb("completa") + ". Se o preço relativo mundial "
+            "supera o custo de oportunidade interno, o país produz só o bem em que tem vantagem comparativa.",
+            "Já no " + azb("H-O") + " e no modelo de fatores específicos há dois ou mais fatores e rendimentos "
+            "marginais decrescentes: o custo de oportunidade é crescente, a FPP é côncava e a especialização "
+            "costuma ser parcial.",
+            "Os três erros do item são, na verdade, as três marcas do modelo neoclássico. Basta um para marcar "
+            "ERRADO.",
+            vm("Regra-âncora: Ricardo = 1 fator + produtividade constante + FPP reta."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item transplanta para Ricardo as três características do "
+                       "modelo neoclássico (FPP côncava, dois fatores, rendimentos decrescentes). Pista: “dois "
+                       "fatores” já denuncia H-O."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Heckscher-Ohlin, a FPP é côncava, existem dois fatores e há rendimentos marginais "
+            "decrescentes.”</i> → CERTO",
+            "<i>“No modelo ricardiano, o custo de oportunidade é crescente ao longo da FPP.”</i> → ERRADO (é "
+            "constante)",
+        ])],
+        "reescrita": ("No Modelo Ricardiano, a Fronteira de Possibilidade de Produção é " + hl("linear") + ", "
+                      + hl("existe um único fator (trabalho)") + " e pressupõe-se " + hl("produtividade constante "
+                      "do trabalho") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Ricardo: um fator (trabalho), custos de oportunidade constantes, FPP reta, sem "
+                             "rendimentos decrescentes."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0915-1 (mesmo contraste FPP reta × côncava, cobrado pelo lado dos "
+                    "fatores específicos)"],
+    },
+    # ------------------------------------------------------------------ E2-L00570
+    {
+        "id": "ECO-E2-L00570-1", "fonte_ref": "E2-L00570", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_1,
+        "rotulo_item": "Item",
+        "assertiva": "No Modelo Ricardiano, a mobilidade dos fatores de produção é assumida como perfeita entre os países.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No Modelo Ricardiano, a mobilidade dos fatores de produção é assumida como ")
+                    + vm("perfeita entre os países") + az(".")),
+        "poucas": ("Em " + oc("Ricardo") + ", o trabalho é " + vd("móvel entre setores") + " dentro do país e "
+                   + vd("imóvel entre países") + ". É essa imobilidade que sustenta salários e custos diferentes e, "
+                   "portanto, a vantagem comparativa."),
+        "destrinchando": [
+            "Se o trabalho migrasse livremente, os trabalhadores iriam para o país de maior produtividade e "
+            "salário, e a produção se concentraria ali. O raciocínio de vantagem comparativa entre nações perderia "
+            "o sentido. " + oc("Ricardo") + " justificava a imobilidade pela preferência das pessoas por "
+            "permanecer em seu país e pela insegurança do capital no exterior.",
+            "Por isso, na economia clássica, o comércio internacional tinha teoria própria: dentro do país, a "
+            "mobilidade de fatores iguala os lucros e vale a vantagem absoluta (custos); entre países, sem essa "
+            "mobilidade, vale a vantagem comparativa.",
+            "Mobilidade interna perfeita garante que o trabalho se desloque para o setor de vantagem comparativa "
+            "quando o país se abre: a especialização é completa e sem custo de ajuste.",
+            "A mesma hipótese (fatores móveis entre setores, imóveis entre países) se repete no " + azb("H-O")
+            + ". Lá, o comércio de bens funciona como substituto da mobilidade internacional de fatores "
+            "(equalização dos preços dos fatores).",
+            vm("Regra-âncora: modelos clássico e neoclássico de comércio → fatores móveis dentro do país, imóveis "
+               "entre países."),
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " Troca o âmbito da mobilidade: a perfeita é a "
+                       "<b>interna</b>; a internacional é nula. Pista: se os fatores se movessem livremente entre "
+                       "países, não haveria custos de oportunidade nacionais distintos a comparar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo ricardiano, o trabalho é perfeitamente móvel entre os setores de um mesmo país.”</i> → "
+            "CERTO",
+            "<i>“No modelo de Heckscher-Ohlin, o capital é perfeitamente móvel entre os países.”</i> → ERRADO "
+            "(fatores imóveis entre países)",
+        ])],
+        "reescrita": ("No Modelo Ricardiano, a mobilidade dos fatores de produção é assumida como "
+                      + hl("perfeita entre setores dentro de cada país, mas nula entre os países") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O trabalho é móvel entre setores dentro do país e imóvel entre países; essa "
+                             "imobilidade justifica salários relativos diferentes e vantagens comparativas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

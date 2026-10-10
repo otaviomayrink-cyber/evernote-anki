@@ -83,9 +83,9 @@ CARDS = [
             "<i>“Pela Lei de Okun, qualquer crescimento positivo do PIB reduz a taxa de desemprego.”</i> → ERRADO "
             "(só o crescimento acima do normal)",
         ])],
-        "reescrita": ("De acordo com a Lei de Okun, um aumento de 1% no PIB " + hl("acima de seu crescimento "
-                      "normal") + " está associado a uma redução de " + hl("cerca de 0,4 a 0,5 ponto percentual")
-                      + " na taxa de desemprego."),
+        "reescrita": ("De acordo com a Lei de Okun, um aumento de 1% no PIB está associado a uma redução de "
+                      + hl("menos de 1 ponto percentual (nos EUA, cerca de 0,4 a 0,5 ponto por ponto de "
+                           "crescimento acima do normal)") + " na taxa de desemprego."),
         "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
         "comentario_fonte": "A Lei de Okun relaciona produto e desemprego, mas a relação não é necessariamente "
                             "unitária: o aumento de 1% no PIB pode reduzir o desemprego em mais ou menos de 1%.",
@@ -1122,5 +1122,551 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
         "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00363
+    {
+        "id": "ECO-E2-L00363-1", "fonte_ref": "E2-L00363", "destino": "65", "subtema": H2["pos"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("Os Direitos Especiais de Saque (SDRs) do FMI são ativos de reserva internacional cujo valor é "
+                      "determinado por uma cesta de moedas que, desde 2016, inclui o Renminbi (Yuan) chinês, "
+                      "refletindo a ascensão da China no sistema financeiro global."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Os Direitos Especiais de Saque (SDRs) do FMI são ativos de reserva internacional cujo valor "
+                      "é determinado por uma cesta de moedas que, <u>desde 2016</u>, inclui o Renminbi (Yuan) "
+                      "chinês, refletindo a ascensão da China no sistema financeiro global."),
+        "poucas": ("O " + azb("DES/SDR") + " vale uma cesta de cinco moedas; o " + vd("renminbi") + " entrou em "
+                   + vd("1º de outubro de 2016") + ", ao lado de dólar, euro, iene e libra."),
+        "destrinchando": [
+            "Os " + azb("Direitos Especiais de Saque") + " foram criados em " + vd("1969") + " (primeira emenda "
+            "ao Convênio Constitutivo do FMI) para complementar as reservas de ouro e dólar — uma resposta ao "
+            "dilema de Triffin. São alocados aos países-membros na proporção de suas cotas.",
+            "Valor: de início, igual a 0,888671 g de ouro (= US$ 1); desde 1974, definido por uma " + azb("cesta "
+            "de moedas") + ", revista a cada cinco anos. Critérios de entrada: ser moeda de grande exportador e "
+            "ser " + azb("“livremente utilizável”") + " (amplamente usada em pagamentos e negociada nos "
+            "principais mercados de câmbio).",
+            "O FMI decidiu incluir o renminbi em novembro de " + vd("2015") + ", com vigência a partir de "
+            + vd("outubro de 2016") + " — primeira moeda de país emergente na cesta. Pesos da revisão de 2022: "
+            "dólar " + vd("43,38%") + ", euro " + vd("29,31%") + ", renminbi " + vd("12,28%") + ", iene "
+            + vd("7,59%") + ", libra " + vd("7,44%") + " ⏳ (out/2026).",
+            "A inclusão teve peso simbólico (reconhecimento da internacionalização do renminbi) maior que o "
+            "efeito prático: o DES é pouco usado e o renminbi ainda responde por fatia pequena das reservas "
+            "mundiais, por causa dos controles de capital chineses.",
+            "Maiores alocações: " + vd("2009") + " (resposta à crise global) e " + vd("agosto de 2021") + " "
+            "(cerca de US$ 650 bilhões, resposta à pandemia).",
+        ],
+        "dissecando": (cz("[detalhe]") + " Item factual: o dado decisivo é o ano de entrada do renminbi. "
+                       "Pista: a decisão é de 2015 e a vigência, de 2016 — a banca pode trocar uma pela outra, ou "
+                       "dizer que a cesta inclui o franco suíço ou o rublo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A cesta do DES é composta pelo dólar, pelo euro, pelo iene, pela libra e pelo franco "
+            "suíço.”</i> → ERRADO (troca de ator: a quinta moeda é o renminbi)",
+            "<i>“O DES foi criado em 1969 para complementar as reservas internacionais no sistema de Bretton "
+            "Woods.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O yuan entrou na cesta do SDR em 1º de outubro de 2016, juntando-se ao dólar, "
+                            "euro, iene e libra esterlina.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00371-1 (natureza dos DES)"],
+    },
+    # ------------------------------------------------------------------ E2-L00364
+    {
+        "id": "ECO-E2-L00364-1", "fonte_ref": "E2-L00364", "destino": "65", "subtema": H2["pos"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("O sistema de “Petrodólares”, consolidado na década de 1970, ajudou a sustentar a demanda "
+                      "global pelo dólar após o fim da paridade ouro, ao estabelecer que as exportações de petróleo "
+                      "da OPEP seriam liquidadas exclusivamente na moeda norte-americana."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O sistema de “Petrodólares”, consolidado na década de 1970, ajudou a sustentar a demanda "
+                      "global pelo dólar após o fim da paridade ouro, ao estabelecer que as exportações de petróleo "
+                      "da OPEP seriam liquidadas <u>exclusivamente</u> na moeda norte-americana."),
+        "poucas": ("Com o petróleo cotado e pago em " + azb("dólar") + ", todo importador precisa de dólares, e os "
+                   "exportadores reciclam seus superávits em " + vd("títulos do Tesouro americano") + ": o dólar "
+                   "ganhou uma âncora de demanda no lugar do ouro."),
+        "destrinchando": [
+            "Depois do fim da conversibilidade (1971) e do primeiro choque do petróleo (1973), os EUA fecharam "
+            "com a " + azb("Arábia Saudita") + " (1974) um arranjo de cooperação econômica e militar; os "
+            "sauditas passaram a aplicar seus excedentes em títulos do Tesouro, e a OPEP adotou o dólar como "
+            "moeda de cotação e de faturamento do petróleo (1975).",
+            "Mecanismo de sustentação: a commodity mais negociada do mundo exige dólares → demanda "
+            "transacional constante pela moeda; os superávits dos exportadores voltam aos EUA como "
+            + azb("petrodólares") + " aplicados em ativos americanos → financiamento dos déficits dos EUA e "
+            "liquidez para o sistema bancário internacional.",
+            "Parte desses recursos foi " + azb("reciclada") + " pelos bancos do euromercado em empréstimos a "
+            "países importadores de petróleo — inclusive o " + rx("Brasil") + " —, o que preparou a crise da "
+            "dívida dos anos 1980.",
+            "Sobre o “exclusivamente”: tratava-se de convenção de faturamento adotada pelos exportadores, não de "
+            "regra jurídica; houve exceções pontuais (o Iraque passou a vender em euros em 2000; o Irã, sob "
+            "sanções, aceita outras moedas) e hoje parte do comércio com a China usa renminbi. Para a década de "
+            "1970, porém, a descrição é a de manual.",
+            "É um dos pilares do " + azb("“privilégio exorbitante”") + " do dólar e um dos alvos dos debates "
+            "atuais sobre desdolarização.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Descrição de manual do sistema dos petrodólares. O "
+                       "risco está no modulador absoluto “exclusivamente”, que costuma ser sinal de ERRADO: aqui "
+                       "ele descreve a convenção adotada pela OPEP nos anos 1970. Pista: o item situa o arranjo "
+                       "no tempo (“consolidado na década de 1970”)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A reciclagem dos petrodólares pelos bancos internacionais contribuiu para o endividamento "
+            "externo de países latino-americanos nos anos 1970.”</i> → CERTO",
+            "<i>“O sistema dos petrodólares foi criado na Conferência de Bretton Woods, em 1944.”</i> → ERRADO "
+            "(anacronismo: consolidou-se depois de 1971–1973)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["exclusivamente"], "dificuldade": 2,
+        "comentario_fonte": "Após o colapso de Bretton Woods, o acordo dos EUA com a Arábia Saudita garantiu "
+                            "que o petróleo fosse cotado em dólar, reciclando os superávits árabes em títulos do "
+                            "Tesouro americano.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01096-1 (reciclagem dos petrodólares)",
+                    "nota_redacao: o “exclusivamente” descreve uma convenção de faturamento, não uma regra; o "
+                    "gabarito CERTO da fonte foi mantido e a ressalva vai no 📖"],
+    },
+    # ------------------------------------------------------------------ E2-L00366
+    {
+        "id": "ECO-E2-L00366-1", "fonte_ref": "E2-L00366", "destino": "65", "subtema": H2["bw"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("No regime de Bretton Woods, os países membros estavam proibidos de realizar desvalorizações "
+                      "cambiais, mesmo em casos de “desequilíbrio fundamental”, devendo manter a paridade fixa a "
+                      "qualquer custo para evitar as desvalorizações competitivas dos anos 1930."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No regime de Bretton Woods, os países membros ") + vm("estavam proibidos de realizar "
+                                                                             "desvalorizações cambiais, mesmo em")
+                    + az(" casos de “desequilíbrio fundamental”, devendo ") + vm("manter a paridade fixa a "
+                                                                                 "qualquer custo")
+                    + az(" para evitar as desvalorizações competitivas dos anos 1930.")),
+        "poucas": ("Bretton Woods era de " + azb("paridades fixas, mas ajustáveis") + ": em " + vd("desequilíbrio "
+                   "fundamental") + ", o país podia alterar a paridade, com consulta ao FMI."),
+        "destrinchando": [
+            "Pelo Convênio Constitutivo do FMI (art. IV), cada moeda tinha uma paridade em ouro ou em dólar, com "
+            "margem de " + vd("±1%") + ". A alteração só podia ser proposta para corrigir um "
+            + azb("desequilíbrio fundamental") + " do balanço de pagamentos, e após consulta ao Fundo; mudanças "
+            "de até " + vd("10%") + " da paridade inicial não sofriam objeção.",
+            "A ideia era combinar o melhor dos dois mundos: estabilidade (contra as " + azb("desvalorizações "
+            "competitivas") + " dos anos 1930, que o item cita corretamente como motivação) e flexibilidade (para "
+            "não repetir o ajuste deflacionário do padrão-ouro, que forçava recessão para defender a paridade).",
+            "Exemplos de ajustes: a libra desvalorizou-se em " + vd("1949") + " (de US$ 4,03 para 2,80) e em "
+            + vd("1967") + " (para 2,40); o marco alemão foi revalorizado em 1961 e 1969; o franco francês, "
+            "desvalorizado em 1958 e 1969.",
+            "O conceito de “desequilíbrio fundamental” nunca foi definido no convênio — deixou margem ao "
+            "julgamento político. Na prática, os países relutavam em ajustar (desvalorizar parecia derrota; "
+            "revalorizar prejudicava exportadores), e a rigidez acabou sendo um dos fatores do colapso do sistema.",
+            vm("Regra-âncora: Bretton Woods = fixo + ajustável em desequilíbrio fundamental, com o FMI."),
+        ],
+        "dissecando": (cz("[modulador absoluto · contradição]") + " “Proibidos”, “mesmo em” e “a qualquer custo” "
+                       "transformam um regime ajustável em câmbio rígido. Pista: o próprio item menciona o "
+                       "“desequilíbrio fundamental”, que é justamente a cláusula de escape do sistema. A motivação "
+                       "(evitar as desvalorizações competitivas) está certa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No sistema de Bretton Woods, alterações de paridade eram admitidas para corrigir desequilíbrios "
+            "fundamentais do balanço de pagamentos.”</i> → CERTO",
+            "<i>“Bretton Woods previa a livre flutuação das moedas em relação ao dólar, com intervenções apenas em "
+            "situações de crise.”</i> → ERRADO (troca de conceito: paridades fixas com margem de 1%)",
+        ])],
+        "reescrita": ("No regime de Bretton Woods, os países membros " + hl("podiam realizar desvalorizações "
+                      "cambiais, com consulta ao FMI, em") + " casos de “desequilíbrio fundamental”, devendo "
+                      + hl("manter a paridade fixa nos demais casos") + " para evitar as desvalorizações "
+                      "competitivas dos anos 1930."),
+        "tipo_erro": ["GENERALIZACAO", "CONTRADICAO"], "moduladores": ["proibidos", "mesmo", "a qualquer custo"],
+        "dificuldade": 1,
+        "comentario_fonte": "Bretton Woods permitia ajustes cambiais em desequilíbrio fundamental, com consulta "
+                            "ou aprovação do FMI: paridades fixas, mas ajustáveis.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00504-1 (ajuste de paridade em desequilíbrio fundamental)"],
+    },
+    # ------------------------------------------------------------------ E2-L00367
+    {
+        "id": "ECO-E2-L00367-1", "fonte_ref": "E2-L00367", "destino": "65", "subtema": H2["pos"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("O fim do padrão dólar-ouro em 1971, por decisão unilateral de Richard Nixon (o “Nixon "
+                      "Shock”), marcou a transição definitiva para um sistema global de taxas de câmbio flutuantes "
+                      "e moedas fiduciárias (fiat money)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O fim do padrão dólar-ouro em 1971, por decisão unilateral de Richard Nixon (o “Nixon "
+                      "Shock”), <u>marcou</u> a transição definitiva para um sistema global de taxas de câmbio "
+                      "flutuantes e moedas fiduciárias (fiat money)."),
+        "poucas": ("Ao fechar a " + azb("janela do ouro") + " em " + vd("15/8/1971") + ", Nixon cortou o último "
+                   "vínculo metálico do sistema: desde então as moedas são " + azb("fiduciárias") + ", e a "
+                   "flutuação se generalizou em seguida."),
+        "destrinchando": [
+            "Antecedentes: déficits americanos crescentes (Vietnã, Grande Sociedade), dólares no exterior muito "
+            "acima do ouro dos EUA (o " + azb("dilema de Triffin") + " realizado), conversões pela França e "
+            "especulação contra o dólar. Em agosto de 1971, " + oc("Nixon") + " suspendeu a conversibilidade, "
+            "impôs sobretaxa de 10% às importações e congelou preços e salários — sem consultar o FMI.",
+            "A transição não foi instantânea: o " + azb("Acordo Smithsonian") + " (dezembro de " + vd("1971")
+            + ") tentou restaurar paridades fixas (ouro a US$ 38 por onça, bandas de 2,25%), sem "
+            "conversibilidade. Ruiu em " + vd("março de 1973") + ", quando as principais moedas passaram a "
+            "flutuar. A flutuação foi legalizada pelos " + azb("Acordos da Jamaica") + " (" + vd("1976") + "), "
+            "que alteraram o convênio do FMI.",
+            "Por isso o item fala que 1971 <b>marcou</b> a transição: é o marco de ruptura, ainda que a "
+            "flutuação generalizada só se consolide em 1973. Desde então nenhuma moeda relevante tem lastro "
+            "metálico: o valor depende da confiança no emissor (" + azb("moeda fiduciária") + ").",
+            "“Sistema global de câmbio flutuante” é uma simplificação: muitos países mantêm câmbio fixo ou "
+            "administrado (o " + rx("Brasil") + " teve crawling peg, bandas e âncora cambial até adotar a "
+            "flutuação em " + vd("1999") + "). O que acabou foi a obrigação de paridade fixa dentro de um "
+            "sistema comum.",
+        ],
+        "dissecando": (cz("[detalhe · contraintuitivo]") + " Item verdadeiro na leitura usual dos manuais. O "
+                       "risco é o candidato bem informado lembrar do Acordo Smithsonian e da flutuação de 1973 e "
+                       "marcar ERRADO por causa do “definitiva”. Pista: o verbo é “marcou”, de marco histórico. "
+                       "A banca costuma errar a data (1973 no lugar de 1971) ou o autor da decisão."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os Acordos da Jamaica, de 1976, legalizaram a flutuação cambial no âmbito do FMI.”</i> → CERTO",
+            "<i>“O Acordo Smithsonian, de 1971, restabeleceu a conversibilidade do dólar em ouro a US$ 38 por "
+            "onça.”</i> → ERRADO (detalhe: houve nova paridade, mas sem conversibilidade)",
+        ])],
+        "tipo_erro": ["DETALHE", "CONTRAINTUITIVO"], "moduladores": ["definitiva"], "dificuldade": 2,
+        "comentario_fonte": "Nixon fechou a janela do ouro, encerrando a última âncora metálica do sistema e "
+                            "inaugurando a era das moedas fiduciárias.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00370
+    {
+        "id": "ECO-E2-L00370-1", "fonte_ref": "E2-L00370", "destino": "65", "subtema": H2["pos"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("A “Exorbitante Prerrogativa” (Exorbitant Privilege), termo cunhado na França dos anos 1960, "
+                      "refere-se à vantagem dos EUA de financiar seus déficits em conta corrente emitindo sua "
+                      "própria moeda, que é aceita globalmente sem os custos de ajuste impostos a outros países."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A “Exorbitante Prerrogativa” (Exorbitant Privilege), termo cunhado na <u>França dos anos "
+                      "1960</u>, refere-se à vantagem dos EUA de financiar seus déficits em conta corrente "
+                      "emitindo sua própria moeda, que é aceita globalmente sem os custos de ajuste impostos a "
+                      "outros países."),
+        "poucas": ("O " + azb("privilégio exorbitante") + " (expressão de " + oc("Valéry Giscard d'Estaing")
+                   + ", ministro das Finanças de De Gaulle) é poder pagar o resto do mundo com passivos na "
+                   "própria moeda, que todos aceitam e guardam como reserva."),
+        "destrinchando": [
+            "Origem: na década de 1960, sob o padrão ouro-dólar, a França criticava a assimetria do sistema — os "
+            "EUA financiavam déficits (e investimentos e guerras no exterior) emitindo dólares que os outros "
+            "bancos centrais eram obrigados a acumular. " + oc("Jacques Rueff") + " e De Gaulle defendiam a "
+            "volta ao padrão-ouro; a França converteu dólares em ouro.",
+            "Vantagens concretas para os EUA: (1) " + azb("senhoriagem") + " internacional (papel-moeda e "
+            "títulos detidos por estrangeiros); (2) juros mais baixos, pela demanda mundial por títulos do "
+            "Tesouro como ativo seguro; (3) dívida externa na própria moeda, sem " + azb("descasamento "
+            "cambial") + " — uma depreciação do dólar até reduz o valor real do passivo externo; (4) menor "
+            "pressão para ajustar o balanço de pagamentos.",
+            "Contraste com os demais países, sobretudo emergentes: déficits persistentes exigem divisas que eles "
+            "não emitem; quando o financiamento seca, o ajuste vem por recessão e desvalorização (o "
+            + azb("“pecado original”") + " de não conseguir se endividar externamente na própria moeda).",
+            oc("Barry Eichengreen") + " retomou o termo em <i>Exorbitant Privilege</i> (2011). A outra face é o "
+            + azb("dilema de Triffin") + ": o privilégio depende de oferecer ao mundo ativos em dólar, o que "
+            "exige déficits e endividamento crescentes.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição correta e atribuição correta de origem. O risco é o "
+                       "detalhe histórico: a expressão é francesa, dos anos 1960 (não de economistas americanos "
+                       "nem do pós-2008). Pista: “sem os custos de ajuste” é exatamente a assimetria que os "
+                       "franceses denunciavam."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O privilégio exorbitante permite aos EUA endividar-se externamente em sua própria moeda, sem "
+            "risco de descasamento cambial.”</i> → CERTO",
+            "<i>“A expressão “privilégio exorbitante” foi cunhada por autoridades norte-americanas para justificar "
+            "o papel do dólar.”</i> → ERRADO (troca de ator: foi cunhada por críticos franceses)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Como o mundo quer dólares para reserva, os EUA podem importar mais do que exportam e "
+                            "pagar com moeda que eles mesmos emitem, com juros mais baixos do que teriam em outra "
+                            "situação.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00371
+    {
+        "id": "ECO-E2-L00371-1", "fonte_ref": "E2-L00371", "destino": "65", "subtema": H2["pos"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("O estatuto do FMI permite que os SDRs sejam utilizados diretamente em transações comerciais "
+                      "privadas e no varejo internacional, funcionando como uma alternativa líquida ao dólar para "
+                      "cidadãos e empresas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O estatuto do FMI ") + vm("permite") + az(" que os SDRs sejam utilizados ")
+                    + vm("diretamente em transações comerciais privadas e no varejo internacional, funcionando "
+                         "como uma alternativa líquida ao dólar para cidadãos e empresas") + az(".")),
+        "poucas": ("O " + azb("DES") + " não é moeda circulante: é um " + azb("ativo de reserva escritural")
+                   + " que só bancos centrais, governos e alguns " + vd("detentores oficiais autorizados")
+                   + " podem deter e trocar."),
+        "destrinchando": [
+            "O DES é um direito potencial sobre as moedas livremente utilizáveis dos membros do FMI: quem o "
+            "detém pode trocá-lo, entre detentores oficiais, por dólares, euros etc. Não existe cédula, conta "
+            "bancária de varejo nem pagamento comercial em DES.",
+            "Quem pode deter: os " + vd("países-membros") + " (via Departamento de DES do FMI), o próprio Fundo "
+            "e cerca de vinte " + azb("detentores prescritos") + " (organismos como o BIS e bancos centrais "
+            "regionais). Particulares, não.",
+            "Funções reais: reforçar reservas (as alocações de 2009 e de 2021 deram liquidez a países sem acesso "
+            "a mercado), servir de " + azb("unidade de conta") + " do FMI e de outros organismos e de referência "
+            "para algumas cestas cambiais.",
+            "Por que nunca rivalizou com o dólar: volume pequeno, ausência de mercado privado de ativos em DES e "
+            "de um emissor com poder fiscal. Daí as propostas recorrentes (por exemplo, do presidente do banco "
+            "central chinês em 2009) de ampliar seu papel — sem resultado prático.",
+            vm("Regra-âncora: DES = ativo de reserva oficial, não moeda de pagamento privado."),
+        ],
+        "dissecando": (cz("[troca de conceito · extrapolação]") + " Transforma um ativo de reserva oficial em "
+                       "moeda de uso privado. Pista: “varejo”, “cidadãos e empresas” — nenhum particular tem conta "
+                       "em DES. 🔥 Itens sobre DES alternam composição da cesta, ano de criação e quem pode "
+                       "detê-los."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os DES podem ser trocados por moedas livremente utilizáveis entre os países-membros do "
+            "FMI.”</i> → CERTO",
+            "<i>“Os DES são emitidos pelo FMI sob a forma de cédulas, para uso nas transações oficiais entre bancos "
+            "centrais.”</i> → ERRADO (são escriturais)",
+        ])],
+        "reescrita": ("O estatuto do FMI " + hl("não permite") + " que os SDRs sejam utilizados "
+                      + hl("por particulares: eles servem como ativo de reserva escritural, detido e negociado "
+                           "apenas por bancos centrais, governos e detentores oficiais autorizados") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "EXTRAPOLACAO"], "moduladores": ["diretamente"], "dificuldade": 1,
+        "comentario_fonte": "O SDR não é moeda circulante: é ativo de reserva escritural usado exclusivamente por "
+                            "bancos centrais, governos e algumas organizações internacionais autorizadas.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00363-1 (DES)"],
+    },
+    # ------------------------------------------------------------------ E2-L00486
+    {
+        "id": "ECO-E2-L00486-1", "fonte_ref": "E2-L00486", "destino": "65", "subtema": H2["bw"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_26,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma das principais diferenças entre os planos White e Keynes na conferência de Bretton Woods "
+                      "refere-se à ideia, defendida pelo primeiro, da criação de uma moeda supranacional."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma das principais diferenças entre os planos White e Keynes na conferência de Bretton "
+                       "Woods refere-se à ideia, defendida pelo ") + vm("primeiro")
+                    + az(", da criação de uma moeda supranacional.")),
+        "poucas": ("A moeda supranacional — o " + vd("bancor") + " — era a peça central do plano " + azb("Keynes")
+                   + " (o segundo da enumeração). White queria o " + vd("dólar conversível em ouro") + " no centro."),
+        "destrinchando": [
+            azb("Plano Keynes") + " (Reino Unido): " + vd("International Clearing Union") + " — uma câmara de "
+            "compensação entre bancos centrais, com contas em " + vd("bancor") + ", moeda contábil "
+            "supranacional criada pela própria União. Grandes linhas de crédito automático e encargos sobre "
+            "<b>credores e devedores</b> (ajuste simétrico).",
+            azb("Plano White") + " (EUA, " + oc("Harry Dexter White") + "): um " + vd("Fundo de "
+            "Estabilização") + " formado por cotas em ouro e moedas nacionais, que emprestaria aos deficitários "
+            "dentro de limites. O plano chegou a prever uma unidade de conta para o fundo (a <i>unitas</i>), "
+            "mas sem poder de criar liquidez — nada comparável ao bancor.",
+            "O desenho final seguiu White: o " + azb("FMI") + " nasceu do Fundo de Estabilização, e o dólar, "
+            "conversível a US$ 35 por onça, virou a moeda-âncora (padrão ouro-dólar).",
+            "Outras diferenças cobradas: tamanho dos recursos (Keynes queria muito mais), simetria do ajuste "
+            "(Keynes penalizava superavitários; White deixava o ônus no deficitário) e o interesse nacional por "
+            "trás de cada plano (devedor × credor).",
+            vm("Regra-âncora: bancor = Keynes; dólar-ouro e Fundo de Estabilização = White."),
+        ],
+        "dissecando": (cz("[troca de ator · inversão]") + " Troca de autoria disfarçada pela ordem da enumeração: "
+                       "“o primeiro” remete a White. Pista: leia com atenção “primeiro/segundo” e "
+                       "“respectivamente” — a banca adora inverter a correspondência sem mexer no conteúdo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A criação de uma moeda supranacional de compensação foi proposta no plano britânico, elaborado "
+            "por Keynes.”</i> → CERTO",
+            "<i>“O plano White previa que os países superavitários arcassem com encargos pelos saldos acumulados, "
+            "em simetria com os deficitários.”</i> → ERRADO (troca de ator: essa simetria era do plano Keynes)",
+        ])],
+        "reescrita": ("Uma das principais diferenças entre os planos White e Keynes na conferência de Bretton Woods "
+                      "refere-se à ideia, defendida pelo " + hl("segundo") + ", da criação de uma moeda "
+                      "supranacional."),
+        "tipo_erro": ["TROCA_ATOR", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A afirmação inverte os proponentes: o bancor era a peça central do plano de Keynes; o "
+                            "plano de White previa um fundo de estabilização (futuro FMI) com o dólar conversível "
+                            "em ouro no centro.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0464-1, ECO-E2-L00361-1 (planos Keynes × White)"],
+    },
+    # ------------------------------------------------------------------ E2-L00504
+    {
+        "id": "ECO-E2-L00504-1", "fonte_ref": "E2-L00504", "destino": "65", "subtema": H2["bw"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_26,
+        "rotulo_item": "Item",
+        "assertiva": ("Pelo sistema Bretton Woods de taxas de câmbio fixas, instituído após a Segunda Guerra "
+                      "Mundial, mudanças nas taxas cambiais eram permitidas somente com autorização do Fundo "
+                      "Monetário Internacional (FMI), desde que houvesse desequilíbrios estruturais no balanço de "
+                      "pagamentos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Pelo sistema Bretton Woods de taxas de câmbio fixas, instituído após a Segunda Guerra "
+                      "Mundial, mudanças nas taxas cambiais eram permitidas <u>somente com autorização do Fundo "
+                      "Monetário Internacional (FMI)</u>, desde que houvesse <u>desequilíbrios estruturais</u> no "
+                      "balanço de pagamentos."),
+        "poucas": ("Regime de " + azb("paridades fixas, mas ajustáveis") + ": a paridade só mudava para "
+                   "corrigir " + vd("desequilíbrio fundamental") + " (estrutural) do balanço de pagamentos, com "
+                   "o aval do FMI."),
+        "destrinchando": [
+            "Cada membro declarava ao FMI a paridade de sua moeda em ouro ou em dólar e a defendia dentro de "
+            "uma margem de " + vd("±1%") + ", comprando e vendendo dólares. O dólar, por sua vez, era "
+            "conversível em ouro a " + vd("US$ 35 por onça") + " para bancos centrais.",
+            "Mudança de paridade: só por proposta do país e para corrigir " + azb("desequilíbrio fundamental")
+            + " (expressão do art. IV do convênio, que os manuais traduzem por desequilíbrio estrutural ou "
+            "persistente — e que nunca foi definida com precisão). O FMI devia concordar; para variações "
+            "acumuladas de até " + vd("10%") + " da paridade inicial, não podia se opor.",
+            "Lógica: impedir as " + azb("desvalorizações competitivas") + " dos anos 1930 (mudança por "
+            "conveniência comercial) sem obrigar os países a recessões para defender paridades insustentáveis, "
+            "como no padrão-ouro.",
+            "Complementos do regime: controles de capital eram permitidos (art. VI), e as transações correntes "
+            "deveriam tornar-se conversíveis (art. VIII) — o que na Europa só ocorreu em " + vd("1958") + ".",
+            "Na prática, os ajustes foram raros e tardios (libra em 1949 e 1967; marco em 1961 e 1969), e a "
+            "rigidez contribuiu para o colapso do sistema em 1971–1973.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · restrição indevida aparente]") + " O “somente” costuma sinalizar "
+                       "ERRADO, mas aqui descreve a regra do convênio. O risco é marcar ERRADO por lembrar que "
+                       "Bretton Woods é “câmbio fixo” (sem ajuste) ou pela margem de 10% sem objeção. Pista: "
+                       "“desequilíbrios estruturais” é a paráfrase de “desequilíbrio fundamental”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em Bretton Woods, os países podiam alterar livremente suas paridades para estimular "
+            "exportações.”</i> → ERRADO (contradição: era isso que o sistema queria impedir)",
+            "<i>“O sistema de Bretton Woods combinava paridades fixas com a possibilidade de ajuste em caso de "
+            "desequilíbrio fundamental.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": ["somente", "desde que"], "dificuldade": 1,
+        "comentario_fonte": "Bretton Woods era um regime de taxas fixas, porém ajustáveis; a paridade só podia "
+                            "mudar para corrigir desequilíbrio fundamental (estrutural) do BP, com aprovação prévia "
+                            "do FMI.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00366-1 (ajuste de paridade em desequilíbrio fundamental)"],
+    },
+    # ------------------------------------------------------------------ E2-L01096
+    {
+        "id": "ECO-E2-L01096-1", "fonte_ref": "E2-L01096", "destino": "65", "subtema": H2["pos"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": "Sobre a economia brasileira na década de 1970, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("No início da década de 70 do séc. passado o Brasil e o mundo passam a assistir ao embargo "
+                      "efetivado pelos países membros da OPEP (Organização dos Países Exportadores de Petróleo) na "
+                      "distribuição de petróleo para os Estados Unidos e países da Europa. A ação provoca um "
+                      "descomunal aumento dos preços do petróleo no mundo. Nesse período houve mudanças "
+                      "importantes, tais como a subida do déficit em conta corrente das nações importadoras de "
+                      "petróleo, movimento financiado pelos chamados “petrodólares”, via sistema financeiro "
+                      "internacional."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No início da década de 70 do séc. passado o Brasil e o mundo passam a assistir ao embargo "
+                      "efetivado pelos países membros da OPEP (Organização dos Países Exportadores de Petróleo) na "
+                      "distribuição de petróleo para os Estados Unidos e países da Europa. A ação provoca um "
+                      "descomunal aumento dos preços do petróleo no mundo. Nesse período houve mudanças "
+                      "importantes, tais como a <u>subida do déficit em conta corrente</u> das nações importadoras "
+                      "de petróleo, movimento <u>financiado pelos chamados “petrodólares”</u>, via sistema "
+                      "financeiro internacional."),
+        "poucas": ("O choque de " + vd("1973") + " transferiu renda dos importadores para os exportadores de "
+                   "petróleo; os superávits árabes, depositados nos bancos internacionais (" + azb("reciclagem "
+                   "dos petrodólares") + "), financiaram os déficits dos importadores — o Brasil entre eles."),
+        "destrinchando": [
+            "Em outubro de " + vd("1973") + ", na Guerra do Yom Kippur, os países árabes da OPEP embargaram o "
+            "petróleo para os EUA e alguns aliados europeus e cortaram a produção. O preço do barril "
+            + vd("quadruplicou") + " em poucos meses (de cerca de US$ 3 para perto de US$ 12).",
+            "Efeito contábil: a conta de importação dos países consumidores disparou → " + azb("déficits em "
+            "conta corrente") + "; do outro lado, os exportadores acumularam superávits que não conseguiam gastar "
+            "de imediato.",
+            azb("Reciclagem") + ": esses superávits foram depositados nos grandes bancos internacionais, sobretudo "
+            "no " + azb("euromercado") + ", que os emprestaram aos deficitários a juros flutuantes. A reciclagem "
+            "foi essencialmente privada (“competitiva”); o FMI teve papel secundário, com facilidades especiais "
+            "do petróleo em 1974–1975.",
+            "No " + rx("Brasil") + ": em vez de ajustar pela recessão, o governo Geisel lançou o " + azb("II PND")
+            + " (1974–1979), que aprofundou a substituição de importações (bens de capital, insumos básicos, "
+            "energia) financiada com dívida externa — o “crescimento com endividamento”. A dívida externa "
+            "multiplicou-se ao longo da década.",
+            "A conta veio depois: o segundo choque do petróleo (1979) e o " + azb("choque de juros") + " de "
+            "Volcker tornaram impagável a dívida contratada a juros flutuantes — a crise dos anos 1980.",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Narrativa longa e verdadeira, típica de item de contexto. O "
+                       "risco são as imprecisões aparentes (“início da década” para 1973; “descomunal”), que não "
+                       "alteram o núcleo: choque → déficits → financiamento por petrodólares. Pista: o item não "
+                       "tem modulador absoluto nem nexo forçado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A reciclagem dos petrodólares foi conduzida majoritariamente pelo FMI, por meio de empréstimos "
+            "condicionados.”</i> → ERRADO (troca de ator: foi feita sobretudo pelos bancos privados)",
+            "<i>“O II PND respondeu ao primeiro choque do petróleo com a manutenção do crescimento, financiado por "
+            "endividamento externo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Os excedentes dos exportadores de petróleo geraram liquidez internacional que "
+                            "financiou os déficits em conta corrente dos importadores; a proposta de reciclagem sob "
+                            "supervisão do FMI não teve apoio, e a reciclagem foi feita pelos bancos privados "
+                            "(“reciclagem competitiva”).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00364-1 (petrodólares)"],
+    },
+    # ------------------------------------------------------------------ E3-L00036
+    {
+        "id": "ECO-E3-L00036-1", "fonte_ref": "E3-L00036", "destino": "65", "subtema": H2["bw"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "TJ/PA/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": ("Tendo como referência inicial as informações precedentes, julgue o item seguinte, com base nos "
+                    "fundamentos do comércio exterior, das finanças internacionais e das instituições "
+                    "multilaterais."),
+        "excerto": ("<p><i>Nos últimos anos, a economia internacional tem sido marcada por intensas transformações "
+                    "nos fluxos comerciais e financeiros, impulsionadas por mudanças na taxa de câmbio, nas "
+                    "políticas comerciais e na integração entre mercados. Nesse cenário, o papel das tarifas, "
+                    "subsídios, blocos econômicos, organismos multilaterais e dos capitais internacionais tornou-se "
+                    "ainda mais relevante na formulação de políticas públicas, o que exige compreensão crítica dos "
+                    "seus mecanismos e implicações para o equilíbrio macroeconômico.</i></p>"),
+        "rotulo_item": "Item",
+        "assertiva": ("O principal objetivo do FMI é financiar projetos de longo prazo em infraestrutura e "
+                      "desenvolvimento sustentável nos países em desenvolvimento."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O principal objetivo do FMI é ") + vm("financiar projetos de longo prazo em infraestrutura "
+                                                              "e desenvolvimento sustentável nos países em "
+                                                              "desenvolvimento") + az(".")),
+        "poucas": ("Financiar projetos de desenvolvimento é papel do " + azb("Banco Mundial") + ". O " + azb("FMI")
+                   + " cuida da " + vd("estabilidade monetária e financeira internacional") + ": supervisão e "
+                   "crédito a países com problemas de balanço de pagamentos."),
+        "destrinchando": [
+            "As duas “instituições de Bretton Woods” (1944) nasceram com mandatos complementares: o "
+            + azb("FMI") + " para a cooperação monetária e a estabilidade cambial; o " + azb("BIRD") + " (Banco "
+            "Internacional para Reconstrução e Desenvolvimento, núcleo do Grupo Banco Mundial) para a "
+            "reconstrução europeia e, depois, o desenvolvimento.",
+            "Funções do FMI: (1) " + azb("supervisão") + " das políticas econômicas (consultas do art. IV); (2) "
+            + azb("assistência financeira") + " a países com dificuldades de balanço de pagamentos, em geral "
+            "de curto e médio prazo e com condicionalidades (Stand-By, Extended Fund Facility); (3) assistência "
+            "técnica. Os recursos vêm das cotas dos membros.",
+            "Funções do Banco Mundial: empréstimos de longo prazo para projetos (infraestrutura, saúde, "
+            "educação, clima) e programas de reforma; a AID (Associação Internacional de Desenvolvimento) "
+            "empresta em condições concessionais aos países mais pobres.",
+            "Zona cinzenta: o FMI criou, em 2022, o " + azb("Resilience and Sustainability Trust") + ", com "
+            "financiamento de prazo mais longo para choques climáticos e pandêmicos — mas isso não altera seu "
+            "mandato principal. ⏳ (out/2026)",
+            "O " + rx("Brasil") + " recorreu ao FMI nas crises da dívida (anos 1980) e em 1998–2002; quitou "
+            "antecipadamente a dívida com o Fundo em " + vd("2005") + " e hoje é credor da instituição.",
+            vm("Regra-âncora: FMI = balanço de pagamentos e estabilidade; Banco Mundial = projetos e "
+               "desenvolvimento."),
+        ],
+        "dissecando": (cz("[troca de ator]") + " Atribui ao FMI o mandato do Banco Mundial. Pista: “projetos de "
+                       "longo prazo” e “infraestrutura” são palavras do vocabulário do banco de desenvolvimento; "
+                       "o FMI trabalha com “balanço de pagamentos”, “supervisão” e “estabilidade”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O principal objetivo do Banco Mundial é financiar projetos de longo prazo voltados ao "
+            "desenvolvimento dos países-membros.”</i> → CERTO",
+            "<i>“O FMI concede empréstimos de longo prazo a projetos de infraestrutura, sem condicionalidades, "
+            "aos países mais pobres.”</i> → ERRADO (troca de ator: descreve a AID, do Grupo Banco Mundial)",
+        ])],
+        "reescrita": ("O principal objetivo do FMI é " + hl("promover a estabilidade monetária e financeira "
+                      "internacional, com apoio de curto e médio prazo a países com problemas de balanço de "
+                      "pagamentos") + "."),
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O objetivo descrito é o do Banco Mundial; o FMI promove a estabilidade monetária e "
+                            "financeira internacional e assiste países com desequilíbrios de balanço de "
+                            "pagamentos com crédito de curto e médio prazo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: uma das respostas empilhadas na fonte menciona gabarito oficial C para o item "
+                    "80, atribuindo a divergência a erro de leitura; as demais e a indicação principal da fonte "
+                    "dão ERRADO, que é também a resposta correta pelo conteúdo — mantido"],
     },
 ]

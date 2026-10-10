@@ -1192,12 +1192,12 @@ CARDS = [
         "assertiva": ("Uma política monetária expansionista num regime de câmbio flexível e perfeita mobilidade de "
                       "capitais terá eficácia em expandir a demanda agregada, porém será ineficaz para expandir o "
                       "produto e reduzir o desemprego no longo prazo, se prevalecer a versão de Friedman da curva de "
-                      "Philips com expectativas adaptativas."),
+                      "Phillips com expectativas adaptativas."),
         "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": az("Uma política monetária expansionista num regime de câmbio flexível e perfeita mobilidade de "
                       "capitais terá <u>eficácia em expandir a demanda agregada</u>, porém será <u>ineficaz</u> para "
                       "expandir o produto e reduzir o desemprego <u>no longo prazo</u>, se prevalecer a versão de "
-                      "Friedman da curva de Philips com expectativas adaptativas."),
+                      "Friedman da curva de Phillips com expectativas adaptativas."),
         "poucas": ("Duas teorias encadeadas: no " + azb("Mundell-Fleming") + " (curto prazo, preços rígidos), a "
                    "monetária expande a demanda via juros e depreciação; na " + azb("curva de Phillips "
                    "aceleracionista") + " de " + oc("Friedman") + ", as expectativas se ajustam e o desemprego "
@@ -1228,8 +1228,8 @@ CARDS = [
             "<i>“…na versão de Friedman, a curva de Phillips de longo prazo é vertical na taxa natural de "
             "desemprego.”</i> → CERTO",
         ]), ("📚 Autores e teses", [
-            oc("Milton Friedman") + ", discurso presidencial à American Economic Association (1968, publicado em "
-            "“The Role of Monetary Policy”): taxa natural de desemprego e trade-off apenas transitório.",
+            oc("Milton Friedman") + ", discurso presidencial à American Economic Association (dez./1967), "
+            "publicado como “The Role of Monetary Policy” (1968): taxa natural de desemprego e trade-off apenas transitório.",
             oc("Robert Mundell") + " e " + oc("Marcus Fleming") + " (início dos anos 1960): eficácia das políticas "
             "conforme o regime cambial e a mobilidade de capital.",
         ])],
@@ -1240,6 +1240,5 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [corte("IMAGEM 420", "monetária com câmbio fixo; não corresponde ao item"),
                           corte("IMAGEM 421", "OA de longo prazo vertical × DA")],
-        "alertas": [],
+        "alertas": ["texto_corrigido: “curva de Philips” corrigido para “curva de Phillips” na assertiva"],
     },
-]

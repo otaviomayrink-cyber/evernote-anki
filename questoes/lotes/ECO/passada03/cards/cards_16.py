@@ -1336,4 +1336,281 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: ECO-E2-L01620-1, ECO-E2-L01622-1 (clássicos × neoclássicos)"],
     },
+    # ------------------------------------------------------------------ E1-0277
+    {
+        "id": "ECO-E1-0277-1", "fonte_ref": "E1-0277", "destino": "74", "subtema": H2["cepal"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2018, "cacd": False, "errei": False,
+        "comando": "Acerca da deterioração dos termos de troca e da industrialização brasileira, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("A tendência à deterioração dos termos de troca afetou as economias latino-americanas durante "
+                      "todo o século XIX em seu período agroexportador. Esse foi o motivo pelo qual o Brasil abandonou "
+                      "esse modelo na década de 30 do século XX em prol de uma política industrial que favorecia bens "
+                      "com forte desempenho no mercado internacional."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A tendência à deterioração dos termos de troca afetou as economias latino-americanas durante "
+                       "todo o século XIX em seu período agroexportador. ") + vm("Esse foi o motivo")
+                    + az(" pelo qual o Brasil abandonou esse modelo na década de 30 do século XX ")
+                    + vm("em prol de uma política industrial que favorecia bens com forte desempenho no mercado "
+                         "internacional") + az(".")),
+        "poucas": ("A guinada dos anos 1930 veio da " + azb("Grande Depressão") + ", não da tese dos termos de "
+                   "troca (formulada só em " + vd("1949") + "), e gerou uma industrialização por "
+                   + azb("substituição de importações") + " voltada ao mercado interno, não às exportações."),
+        "destrinchando": [
+            "Cronologia da ideia: a " + azb("tese da deterioração dos termos de troca") + " ganhou forma com "
+            + oc("Raúl Prebisch") + " (o “manifesto” da " + azb("CEPAL") + ", " + vd("1949") + ") e com "
+            + oc("Hans Singer") + " (" + vd("1950") + "), apoiada em dados britânicos de " + vd("1876–1938")
+            + ". Antes disso predominava a visão das vantagens comparativas, que via a vocação agroexportadora "
+            "como natural.",
+            "O que mudou nos anos 1930 foi o choque externo: a crise de 1929 derrubou o preço do café e a "
+            "capacidade de importar; o comércio mundial se contraiu, vieram desvalorizações cambiais e controles. "
+            "Com importações caras e escassas, a demanda interna se voltou para a produção nacional.",
+            oc("Celso Furtado") + " (<i>Formação Econômica do Brasil</i>, " + vd("1959") + ") chamou isso de "
+            + azb("deslocamento do centro dinâmico") + " para o mercado interno. A " + rx("política de defesa do "
+            "café") + " do governo Vargas (compra e queima de estoques) sustentou a renda interna — um "
+            "keynesianismo “involuntário” — e a capacidade ociosa da indústria existente permitiu a expansão.",
+            "Logo, a industrialização inicial foi em grande parte <b>espontânea</b> e por substituição de "
+            "importações, orientada ao mercado interno. A tese cepalina chegou depois, para justificar e "
+            "aprofundar a industrialização deliberada (anos 1950, Plano de Metas).",
+            vm("Regra-âncora: 1930 = choque externo (Depressão) e ISI espontânea; 1949 = tese de Prebisch."),
+        ],
+        "dissecando": (cz("[nexo indevido · anacronismo]") + " O item liga dois fatos plausíveis com um nexo causal "
+                       "inexistente (“esse foi o motivo”), usando como causa uma teoria posterior ao efeito, e "
+                       "inverte a orientação da indústria (mercado interno, não exportação)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A industrialização brasileira dos anos 1930 resultou, em grande medida, do deslocamento do centro "
+            "dinâmico para o mercado interno após a crise de 1929.”</i> → CERTO",
+            "<i>“A tese da deterioração dos termos de troca orientou a política econômica de Vargas desde "
+            "1930.”</i> → ERRADO (anacronismo: tese de 1949)",
+        ])],
+        "reescrita": ("A tendência à deterioração dos termos de troca afetou as economias latino-americanas durante "
+                      "todo o século XIX em seu período agroexportador. " + hl("Esse não foi o motivo") + " pelo qual "
+                      "o Brasil abandonou esse modelo na década de 30 do século XX" + hl(", e sim a Grande "
+                      "Depressão, que levou a uma industrialização por substituição de importações voltada ao "
+                      "mercado interno") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "ANACRONISMO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A tese da deterioração ficou conhecida com o manifesto de Prebisch (1949); a guinada dos "
+                             "anos 1930 se deveu à Grande Depressão, que deslocou o centro dinâmico para o mercado "
+                             "interno (Furtado), com substituição espontânea de importações e defesa do café."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE/CACD 2018 (a fonte marca só o ano; órgão não confirmado)",
+                    "nota_redacao: a 1ª frase (deterioração “durante todo o século XIX”) ficou em azul por não ser o "
+                    "erro decisivo; a série de Prebisch começa em 1876"],
+    },
+    # ------------------------------------------------------------------ E1-0675
+    {
+        "id": "ECO-E1-0675-1", "fonte_ref": "E1-0675", "destino": "74", "subtema": H2["cepal"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2025", "ano": 2025, "cacd": True, "errei": False,
+        "comando": CMD_CEPAL,
+        "rotulo_item": "Item",
+        "assertiva": ("A deterioração dos termos de troca descrita na hipótese Prebisch-Singer tem relação direta com "
+                      "a inelasticidade-preço da demanda dos produtos primários vendidos pelos países periféricos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A deterioração dos termos de troca descrita na hipótese Prebisch-Singer tem relação direta "
+                      "com a <u>inelasticidade-preço</u> da demanda dos produtos primários vendidos pelos países "
+                      "periféricos."),
+        "poucas": ("Com demanda " + azb("preço-inelástica") + ", os ganhos de produtividade na produção primária "
+                   "viram queda de preço sem aumento proporcional de vendas: a renda é transferida ao centro e os "
+                   + azb("termos de troca") + " da periferia pioram."),
+        "destrinchando": [
+            azb("Termos de troca") + " = índice de preços das exportações ÷ índice de preços das importações. "
+            "Deterioração = é preciso exportar cada vez mais café para importar o mesmo trator.",
+            "A " + azb("hipótese Prebisch-Singer") + " (" + oc("Raúl Prebisch") + " e " + oc("Hans Singer")
+            + ", " + vd("1949–1950") + ", de forma independente) aponta uma tendência estrutural de queda dos "
+            "preços dos primários em relação aos manufaturados.",
+            "Papel da " + azb("baixa elasticidade-preço") + ": alimentos e matérias-primas têm poucos substitutos "
+            "e peso de hábito; quando a oferta cresce (boa safra, nova tecnologia), o preço precisa cair muito "
+            "para que a quantidade adicional seja absorvida. O ganho de produtividade se dissipa em preços "
+            "menores, apropriados pelos compradores do centro.",
+            "Os outros pilares da tese: " + azb("baixa elasticidade-renda") + " dos primários (lei de Engel: com "
+            "a renda maior, a demanda vai para manufaturados) e assimetria institucional — no centro, sindicatos e "
+            "oligopólios retêm os ganhos de produtividade em salários e lucros; na periferia, o excedente de mão "
+            "de obra e a concorrência forçam os preços para baixo, sobretudo nas fases de baixa do ciclo.",
+            "Prebisch enfatizou mais a elasticidade-renda; a elasticidade-preço entra como canal complementar — "
+            "por isso a banca escreve “relação direta”, e não “causa exclusiva”.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " O item escolhe o canal menos lembrado (preço, e não "
+                       "renda). Quem só decorou “baixa elasticidade-renda” pode estranhar e marcar ERRADO. 🔥 "
+                       "O CEBRASPE alterna elasticidade-renda e elasticidade-preço — e o erro clássico é escrever "
+                       "“elevadas” elasticidades."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…tem relação direta com a elevada elasticidade-preço da demanda dos produtos primários…”</i> → "
+            "ERRADO (é baixa)",
+            "<i>“…decorre exclusivamente da inelasticidade-preço da demanda dos primários.”</i> → ERRADO "
+            "(restrição indevida: há também a elasticidade-renda e a assimetria institucional)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["relação direta"], "dificuldade": 2,
+        "comentario_fonte": ("Prebisch-Singer: tendência de deterioração dos termos de troca dos exportadores de "
+                             "primários; demanda de primários com baixa elasticidade-preço e renda; progresso "
+                             "técnico concentrado na indústria do centro."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (197).png", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do caderno E1 não preservada; texto do verso suficiente)"}],
+        "alertas": ["quase_duplicata: ECO-E1-0896-1, ECO-E1-0906-1 (elasticidades dos primários na tese cepalina)"],
+    },
+    # ------------------------------------------------------------------ E1-0676
+    {
+        "id": "ECO-E1-0676-1", "fonte_ref": "E1-0676", "destino": "74", "subtema": H2["cepal"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2025", "ano": 2025, "cacd": True, "errei": False,
+        "comando": CMD_CEPAL,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria da deterioração dos termos de troca tem como um de seus pressupostos o fato de países "
+                      "dependentes ou periféricos serem pequenos no contexto do comércio internacional, ou seja, "
+                      "serem tomadores de preços."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria da deterioração dos termos de troca tem como um de seus pressupostos o fato de "
+                      "países dependentes ou periféricos serem pequenos no contexto do comércio internacional, ou "
+                      "seja, serem <u>tomadores de preços</u>."),
+        "poucas": ("Exportadores de primários vendem em mercados competitivos e não controlam os preços "
+                   "(" + azb("price takers") + "); o centro, com manufaturas diferenciadas e oligopolizadas, tem "
+                   "poder de mercado. Essa assimetria sustenta a deterioração."),
+        "destrinchando": [
+            "Commodities são homogêneas e transacionadas em mercados próximos da concorrência perfeita: cada país "
+            "periférico, isoladamente, não move o preço internacional do café, do cobre ou da soja — é "
+            + azb("tomador de preços") + ".",
+            "Os manufaturados do centro são diferenciados, protegidos por marcas e tecnologia e produzidos em "
+            "estruturas oligopolizadas, com sindicatos fortes. Ganhos de produtividade viram salários e lucros "
+            "maiores, não preços menores; na periferia, viram queda de preço.",
+            "Assim, nas fases de alta do ciclo os preços primários sobem, mas nas fases de baixa caem mais do que "
+            "os industriais — a " + azb("assimetria cíclica") + " de " + oc("Prebisch") + ". Somada à baixa "
+            "elasticidade-renda dos primários, gera a tendência estrutural de deterioração.",
+            "Nuance: Prebisch não formulou a tese com a expressão “país pequeno/tomador de preços” da teoria "
+            "neoclássica; a ideia está implícita na assimetria de poder de mercado entre centro e periferia. O "
+            "item usa o vocabulário moderno para um pressuposto que a literatura reconhece.",
+            "Corolário político da " + azb("CEPAL") + ": se a periferia não controla seus preços, a saída é mudar "
+            "a pauta — " + azb("industrialização por substituição de importações") + ", proteção à indústria "
+            "nascente, planejamento.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " Junta a linguagem neoclássica (“tomadores de preços”) "
+                       "à tese estruturalista, o que gera desconfiança. O “um de seus pressupostos” é modulador "
+                       "relativo: não diz que é o único nem o principal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A teoria da deterioração dos termos de troca supõe que os países periféricos têm poder de mercado "
+            "para fixar os preços de suas exportações.”</i> → ERRADO (inversão)",
+            "<i>“A deterioração decorre exclusivamente de os periféricos serem tomadores de preços.”</i> → ERRADO "
+            "(restrição indevida)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["um de seus pressupostos"], "dificuldade": 2,
+        "comentario_fonte": ("Periféricos exportadores de primários têm pouco poder de mercado, são price takers; "
+                             "o centro, com manufaturas diferenciadas, tem maior poder de barganha. Um comentário "
+                             "observa que Prebisch não abordava expressamente essa ideia."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: OCR “paises” → “países”"],
+    },
+    # ------------------------------------------------------------------ E1-0896
+    {
+        "id": "ECO-E1-0896-1", "fonte_ref": "E1-0896", "destino": "74", "subtema": H2["cepal"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2016, "cacd": False, "errei": True,
+        "comando": "Acerca da crítica da CEPAL à teoria clássica do comércio internacional, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma das críticas da Comissão Econômica para a América Latina (CEPAL) à teoria clássica é que a "
+                      "sua análise do comércio internacional é estática, não dinâmica, de modo que as elevadas "
+                      "elasticidades-renda e preço dos produtos básicos tendem a produzir deterioração nos termos de "
+                      "intercâmbio ao longo do tempo, o que é desfavorável aos países exportadores de bens "
+                      "primários."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma das críticas da Comissão Econômica para a América Latina (CEPAL) à teoria clássica é que "
+                       "a sua análise do comércio internacional é estática, não dinâmica, de modo que as ")
+                    + vm("elevadas") + az(" elasticidades-renda e preço dos produtos básicos tendem a produzir "
+                                          "deterioração nos termos de intercâmbio ao longo do tempo, o que é "
+                                          "desfavorável aos países exportadores de bens primários.")),
+        "poucas": ("Para a " + azb("CEPAL") + ", os produtos básicos têm " + vm("baixas") + " elasticidades-renda "
+                   "e preço; os manufaturados, alta elasticidade-renda. Essa assimetria é que deteriora os termos de "
+                   "troca da periferia."),
+        "destrinchando": [
+            "A crítica à teoria clássica (Ricardo) está correta: as vantagens comparativas são uma análise "
+            + azb("estática") + " — tomam a especialização como dada e ignoram como evoluem preços, demanda e "
+            "progresso técnico ao longo do tempo.",
+            azb("Baixa elasticidade-renda") + " dos primários (lei de Engel): quando a renda mundial cresce, a "
+            "demanda por alimentos e matérias-primas cresce menos que proporcionalmente; a de manufaturados, mais "
+            "que proporcionalmente. A demanda mundial migra para o que o centro vende.",
+            azb("Baixa elasticidade-preço") + ": se o preço do primário cai (por ganho de produtividade ou "
+            "excesso de oferta), a quantidade vendida aumenta pouco e a receita do exportador encolhe. Os ganhos "
+            "de produtividade da periferia são transferidos ao centro via preços.",
+            "Resultado: tendência estrutural de " + azb("deterioração dos termos de intercâmbio") + " e de "
+            "restrição externa ao crescimento. A resposta cepalina: industrialização por substituição de "
+            "importações, para mudar a pauta exportadora.",
+            vm("Regra-âncora: primários = baixas elasticidades (renda e preço); manufaturados = alta "
+               "elasticidade-renda."),
+        ],
+        "dissecando": (cz("[inversão]") + " Uma palavra inverte a tese: “elevadas” no lugar de “baixas”. O resto "
+                       "(crítica à análise estática, deterioração, prejuízo à periferia) é verdadeiro e serve de "
+                       "isca. 🔥 Questão recorrente no CEBRASPE; leia sempre o adjetivo da elasticidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…de modo que as baixas elasticidades-renda e preço dos produtos básicos tendem a produzir "
+            "deterioração nos termos de intercâmbio…”</i> → CERTO",
+            "<i>“…a alta elasticidade-renda da demanda por manufaturados favorece os países exportadores de "
+            "primários.”</i> → ERRADO (favorece os exportadores de manufaturados)",
+        ])],
+        "reescrita": ("Uma das críticas da Comissão Econômica para a América Latina (CEPAL) à teoria clássica é que a "
+                      "sua análise do comércio internacional é estática, não dinâmica, de modo que as "
+                      + hl("baixas") + " elasticidades-renda e preço dos produtos básicos tendem a produzir "
+                      "deterioração nos termos de intercâmbio ao longo do tempo, o que é desfavorável aos países "
+                      "exportadores de bens primários."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tendem a"], "dificuldade": 1,
+        "comentario_fonte": ("A crítica da CEPAL refere-se à baixa (e não alta) elasticidade-renda e preço dos "
+                             "primários; a renda mundial crescente desloca a demanda para manufaturados."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["banca_provavel: CEBRASPE (comentários da fonte tratam o item como do CESPE; órgão não "
+                    "identificado)",
+                    "quase_duplicata: ECO-E1-0906-1, ECO-E1-0675-1 (elasticidades dos primários na tese cepalina)"],
+    },
+    # ------------------------------------------------------------------ E1-0906
+    {
+        "id": "ECO-E1-0906-1", "fonte_ref": "E1-0906", "destino": "74", "subtema": H2["cepal"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2010, "cacd": False, "errei": False,
+        "comando": "Acerca do pensamento de Raúl Prebisch, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a visão de Prebisch, as recorrentes crises, nas nações periféricas, causadas pelo "
+                      "desequilíbrio dos balanços de pagamentos, decorreram, em parte, do fato de às elevadas "
+                      "elasticidades-renda da demanda de importações terem-se contraposto as baixas "
+                      "elasticidades-renda das exportações da periferia, o que contribuía para a deterioração dos "
+                      "termos de trocas desses países."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("De acordo com a visão de Prebisch, as recorrentes crises, nas nações periféricas, causadas "
+                      "pelo desequilíbrio dos balanços de pagamentos, decorreram, <u>em parte</u>, do fato de às "
+                      "<u>elevadas</u> elasticidades-renda da demanda de importações terem-se contraposto as "
+                      "<u>baixas</u> elasticidades-renda das exportações da periferia, o que contribuía para a "
+                      "deterioração dos termos de trocas desses países."),
+        "poucas": ("A periferia importa manufaturados de " + azb("alta elasticidade-renda") + " e exporta "
+                   "primários de " + azb("baixa elasticidade-renda") + ": quando a renda cresce, as importações "
+                   "sobem mais que as exportações — " + azb("estrangulamento externo") + " e termos de troca "
+                   "piores."),
+        "destrinchando": [
+            "Assimetria de elasticidades: se a periferia cresce, sua demanda por manufaturados importados cresce "
+            "<b>mais</b> que proporcionalmente; se o centro cresce, sua demanda por primários da periferia cresce "
+            "<b>menos</b> que proporcionalmente. Mesmo com as duas regiões crescendo ao mesmo ritmo, as "
+            "importações da periferia avançam mais rápido que suas exportações.",
+            "Consequências: (1) déficits recorrentes no " + azb("balanço de pagamentos") + " e crises cambiais — "
+            "o crescimento periférico esbarra na falta de divisas (" + azb("restrição externa") + "); (2) excesso "
+            "de oferta de primários e excesso de demanda por manufaturados no mercado mundial, o que pressiona os "
+            + azb("termos de troca") + " contra a periferia.",
+            "A ideia foi depois formalizada na " + azb("lei de Thirlwall") + " (" + oc("A. P. Thirlwall") + ", "
+            + vd("1979") + "): a taxa de crescimento compatível com o equilíbrio externo é a razão entre o "
+            "crescimento das exportações e a elasticidade-renda das importações.",
+            "Daí a prescrição de " + oc("Prebisch") + " e da " + azb("CEPAL") + ": industrializar para substituir "
+            "importações de alta elasticidade-renda e diversificar a pauta exportadora.",
+            vm("Regra-âncora: importações de alta elasticidade-renda × exportações de baixa = estrangulamento "
+               "externo da periferia."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " As elasticidades estão no lugar certo "
+                       "(elevadas nas importações da periferia, baixas nas exportações) e o “em parte” protege o "
+                       "nexo causal. A armadilha usual é trocar os adjetivos — o que tornaria o item ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…do fato de às baixas elasticidades-renda da demanda de importações terem-se contraposto as "
+            "elevadas elasticidades-renda das exportações da periferia…”</i> → ERRADO (inversão)",
+            "<i>“As crises de balanço de pagamentos na periferia decorreram exclusivamente da deterioração dos "
+            "termos de troca.”</i> → ERRADO (modulador absoluto)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["em parte"], "dificuldade": 2,
+        "comentario_fonte": ("Exportações primárias são inelásticas à renda; com o crescimento mundial, a demanda vai "
+                             "para manufaturados importados pela periferia, gerando déficits estruturais e "
+                             "deterioração dos termos de troca (comentário fundido com o da linha duplicada "
+                             "E2-L01159)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0896-1, ECO-E1-0675-1 (elasticidades dos primários na tese cepalina)"],
+    },
 ]

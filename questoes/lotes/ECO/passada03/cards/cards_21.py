@@ -947,4 +947,548 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: ECO-E2-L00554-1 (cota e novo preço doméstico, outro mercado)"],
     },
+    # ------------------------------------------------------------------ E2-L01154
+    {
+        "id": "ECO-E2-L01154-1", "fonte_ref": "E2-L01154", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23A,
+        "rotulo_item": "Item",
+        "assertiva": ("As cotas de importação são um exemplo de instrumento tarifário cujo objetivo é o de proteger a "
+                      "indústria local."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As cotas de importação são um exemplo de instrumento ") + vm("tarifário")
+                    + az(" cujo objetivo é o de proteger a indústria local.")),
+        "poucas": ("A cota é " + azb("barreira não tarifária") + ": limita a quantidade importada. Instrumento "
+                   "tarifário é a tarifa (imposto de importação). O objetivo de proteção está correto."),
+        "destrinchando": [
+            azb("Instrumentos tarifários") + ": a tarifa de importação, " + vd("específica") + " (valor fixo por "
+            "unidade) ou " + vd("ad valorem") + " (percentual do valor), e suas variantes (tarifa mista, cota "
+            "tarifária — alíquota menor até certo volume, maior acima dele).",
+            azb("Barreiras não tarifárias") + ": " + vd("cotas de importação") + ", restrições voluntárias às "
+            "exportações, exigências de conteúdo local, subsídios, barreiras técnicas e sanitárias, licenciamento "
+            "não automático, compras governamentais preferenciais.",
+            "Embora a cota e a tarifa equivalente produzam o mesmo preço interno, a natureza é diferente: a tarifa "
+            "atua pelo preço e gera receita; a cota atua na quantidade e gera " + azb("renda de cota") + " para "
+            "quem detém as licenças.",
+            "Na OMC, o GATT (art. XI) proíbe, como regra, restrições quantitativas — cotas inclusive —, admitindo "
+            "exceções (balanço de pagamentos, salvaguardas, agricultura em casos específicos). A " + azb("tarifação")
+            + " da Rodada Uruguai converteu barreiras não tarifárias agrícolas em tarifas equivalentes.",
+            vm("Regra-âncora: tarifa = imposto (preço); cota = limite de quantidade (não tarifária)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O item acerta o objetivo (proteger a indústria) e erra a "
+                       "classificação. A meia-frase verdadeira dá credibilidade ao todo. Pista: “tarifário” "
+                       "pressupõe imposto; a cota não tributa nada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As cotas de importação são barreiras não tarifárias e, como regra, são vedadas pelo "
+            "GATT.”</i> → CERTO",
+            "<i>“A cota tarifária é uma restrição quantitativa absoluta às importações.”</i> → ERRADO (é alíquota "
+            "diferenciada por volume, não teto)",
+        ])],
+        "reescrita": ("As cotas de importação são um exemplo de instrumento " + hl("não tarifário")
+                      + " cujo objetivo é o de proteger a indústria local."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Tarifas são instrumento tarifário; cotas são limitações quantitativas sobre o total "
+                             "importado."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00834-1 (natureza da cota de importação)"],
+    },
+    # ------------------------------------------------------------------ E2-L01155
+    {
+        "id": "ECO-E2-L01155-1", "fonte_ref": "E2-L01155", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23A,
+        "rotulo_item": "Item",
+        "assertiva": ("O subsídio à exportação eleva o excedente do produtor à custa somente da redução do excedente "
+                      "do consumidor."),
+        "gabarito": "ERRADO", "gabarito_origem": "resolvido", "status": "normal",
+        "anotada": (az("O subsídio à exportação eleva o excedente do produtor à custa ") + vm("somente")
+                    + az(" da redução do excedente do consumidor.")),
+        "poucas": ("O ganho do produtor é pago pelo " + azb("consumidor") + " (preço interno maior) " + vm("e pelo "
+                                                                                                         "governo")
+                   + " (gasto com o subsídio); e ainda sobra perda líquida de bem-estar."),
+        "destrinchando": [
+            "Com o subsídio s por unidade exportada, o preço interno sobe para P<sub>m</sub> + s (arbitragem). Os "
+            "produtores vendem mais e mais caro; os consumidores pagam mais e consomem menos; o governo paga s "
+            "sobre cada unidade exportada.",
+            "Balanço (país pequeno, letras do gráfico): consumidor perde " + vd("a + b") + "; produtor ganha "
+            + vd("a + b + c") + "; governo gasta " + vd("b + c + d") + ". Saldo nacional: " + vd("−(b + d)")
+            + " — as distorções no consumo (b) e na produção (d), análogas às da tarifa.",
+            "No país grande (versão de " + oc("Krugman e Obstfeld") + "), o subsídio ainda derruba o preço "
+            "estrangeiro: o gasto do governo cresce e há perda adicional de termos de troca. A conclusão se "
+            "reforça: o subsídio à exportação sempre reduz o bem-estar de quem o concede.",
+            "Comparação com a tarifa: nos dois casos o consumidor perde e o produtor ganha; mas na tarifa o governo "
+            "<b>arrecada</b>, no subsídio ele <b>paga</b>.",
+            vm("Regra-âncora: subsídio à exportação → produtor ganha à custa do consumidor E do Tesouro, com perda "
+               "líquida."),
+        ],
+        "grafico_verso": "ECO-E2-L01155-1-V1",
+        "dissecando": (cz("[restrição indevida]") + " O “somente” apaga um dos pagadores — o governo. Sem ele, o "
+                       "subsídio pareceria mera transferência entre consumidores e produtores. Pista: subsídio é "
+                       "sempre gasto público; se o item não o menciona entre os custos, desconfie."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O subsídio à exportação eleva o excedente do produtor à custa da redução do excedente do "
+            "consumidor e do gasto do governo, gerando perda líquida.”</i> → CERTO",
+            "<i>“O ganho dos produtores com o subsídio supera a soma das perdas dos consumidores e do "
+            "governo.”</i> → ERRADO (inversão: é menor; a diferença é a perda líquida b + d)",
+        ])],
+        "reescrita": ("O subsídio à exportação eleva o excedente do produtor à custa <s>somente</s> da redução do "
+                      "excedente do consumidor" + hl(" e do gasto do governo, com perda líquida de bem-estar")
+                      + "."),
+        "tipo_erro": ["RESTRICAO"], "moduladores": ["somente"], "dificuldade": 1,
+        "comentario_fonte": ("Verso só com imagens: gráfico do subsídio à exportação (produtor ganha a + b + c, "
+                             "consumidor perde a + b, governo gasta b + c + d + e + f + g) e nota de que b, d e e são "
+                             "perdas de distorção."),
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "IMAGEM 190", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (versão didática de país pequeno)"},
+                          {"ref": "IMAGEM 191", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["nota_redacao: o verso da fonte não traz gabarito escrito; ERRADO resolvido pelo conteúdo (e "
+                    "coincide com a classificação)"],
+    },
+    # ------------------------------------------------------------------ E2-L01156
+    {
+        "id": "ECO-E2-L01156-1", "fonte_ref": "E2-L01156", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23A,
+        "rotulo_item": "Item",
+        "assertiva": ("A desvalorização do yuan frente ao dólar norte-americano aumenta a competitividade da produção "
+                      "chinesa frente à produção norte americana. A imposição unilateral, por parte dos EUA, de "
+                      "tarifas de importação aos produtos chineses reduz esse ganho de competitividade."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A desvalorização do yuan frente ao dólar norte-americano <u>aumenta</u> a competitividade da "
+                      "produção chinesa frente à produção norte americana. A imposição unilateral, por parte dos "
+                      "EUA, de tarifas de importação aos produtos chineses <u>reduz</u> esse ganho de "
+                      "competitividade."),
+        "poucas": ("O yuan desvalorizado " + azb("barateia em dólar") + " os produtos chineses; a tarifa dos EUA os "
+                   + azb("encarece") + " no mercado norte-americano e compensa, no todo ou em parte, esse ganho."),
+        "destrinchando": [
+            "Preço em dólar de um bem chinês nos EUA ≈ (preço em yuan ÷ taxa de câmbio yuan/dólar) × (1 + "
+            "tarifa). Uma " + azb("desvalorização") + " do yuan (mais yuans por dólar) reduz o primeiro termo; a "
+            + azb("tarifa") + " eleva o segundo. Os dois efeitos vão em sentidos opostos.",
+            "Equivalência aproximada: uma desvalorização de x% pode ser neutralizada, para o mercado "
+            "norte-americano, por uma tarifa de cerca de x%. Por isso tarifas são às vezes defendidas como "
+            "resposta a “manipulação cambial”.",
+            "Limites: a tarifa só compensa no mercado dos EUA; nos demais mercados (e em terceiros países) a China "
+            "segue mais competitiva. Além disso, a tarifa encarece insumos e bens finais para consumidores e "
+            "empresas norte-americanos.",
+            "Contexto: na guerra comercial de 2018-2019, os EUA impuseram tarifas sobre centenas de bilhões de "
+            "dólares em importações chinesas; em agosto de 2019, o yuan ultrapassou 7 por dólar e o Tesouro "
+            "norte-americano classificou a China como manipuladora cambial (designação retirada em janeiro de "
+            "2020).",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Duas orações de mecanismo simples, ambas corretas. O risco é o "
+                       "candidato confundir desvalorização com valorização ou supor que a tarifa “reforça” a "
+                       "competitividade chinesa. Pista: câmbio e tarifa atuam sobre o mesmo preço final em dólar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A valorização do yuan frente ao dólar aumenta a competitividade da produção chinesa nos "
+            "EUA.”</i> → ERRADO (inversão: valorização encarece os produtos chineses em dólar)",
+            "<i>“A tarifa dos EUA neutraliza o ganho de competitividade chinês em todos os mercados.”</i> → ERRADO "
+            "(modulador absoluto: só no mercado norte-americano)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A desvalorização do yuan reduz o preço em dólar dos produtos chineses; as tarifas dos "
+                             "EUA, ao elevarem esse preço, podem compensar em algum grau o efeito cambial."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01163
+    {
+        "id": "ECO-E2-L01163-1", "fonte_ref": "E2-L01163", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23B,
+        "rotulo_item": "Item",
+        "assertiva": ("As quotas à importação, contrariamente às tarifas, não alteram o preço relativo entre os "
+                      "produtos domésticos e importados e, portanto, não afetam a distribuição de renda do país que "
+                      "as impõe."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As quotas à importação, ") + vm("contrariamente às tarifas, não alteram")
+                    + az(" o preço relativo entre os produtos domésticos e importados e, portanto, ")
+                    + vm("não afetam") + az(" a distribuição de renda do país que as impõe.")),
+        "poucas": ("Como a tarifa, a quota " + azb("eleva o preço interno") + " do bem importado: consumidores "
+                   "perdem, produtores domésticos ganham e surge renda de quota. A distribuição de renda "
+                   + vm("muda") + "."),
+        "destrinchando": [
+            "Ao limitar a quantidade importada, a quota cria escassez relativa: o preço interno sobe acima do "
+            "mundial até o excesso de demanda igualar a quota. O preço do bem importável sobe em relação aos "
+            "demais — exatamente o que faz uma tarifa.",
+            "Efeitos distributivos idênticos aos da " + azb("tarifa equivalente") + ": " + vd("consumidores")
+            + " perdem; " + vd("produtores domésticos") + " ganham; o retângulo (preço interno − mundial) × quota "
+            "vai para os " + vd("detentores das licenças") + " (renda de quota), e não para o governo — salvo "
+            "leilão das licenças.",
+            "Em nível de fatores, vale o raciocínio de " + oc("Stolper-Samuelson") + ": a proteção que eleva o "
+            "preço relativo de um bem aumenta a remuneração real do fator usado intensivamente nele — seja a "
+            "proteção feita por tarifa ou por quota.",
+            "Diferenças reais entre quota e tarifa: o destino do retângulo; a resposta a choques de demanda (com "
+            "quota, o ajuste é todo no preço); e o incentivo a poder de mercado (a quota pode transformar um "
+            "produtor doméstico em monopolista, o que a tarifa não faz).",
+            vm("Regra-âncora: quota e tarifa equivalente elevam igualmente o preço interno; muda só quem fica com o "
+               "retângulo."),
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " Fabrica uma diferença inexistente entre os "
+                       "instrumentos (“contrariamente”) e dela deduz uma consequência falsa (“portanto”). Pista: "
+                       "qualquer restrição à oferta de importados eleva o preço interno."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As quotas à importação, assim como as tarifas, elevam o preço interno; a diferença é que a renda "
+            "correspondente pode ficar com os detentores de licenças.”</i> → CERTO",
+            "<i>“A quota não gera peso morto, porque não arrecada.”</i> → ERRADO (o peso morto é o mesmo da tarifa "
+            "equivalente)",
+        ])],
+        "reescrita": ("As quotas à importação, " + hl("assim como as tarifas, alteram") + " o preço relativo entre "
+                      "os produtos domésticos e importados e, portanto, " + hl("afetam") + " a distribuição de renda "
+                      "do país que as impõe."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": ["contrariamente", "portanto"],
+        "dificuldade": 1,
+        "comentario_fonte": ("A cota tem os mesmos efeitos de uma tarifa (eleva o preço, reduz importações, prejudica "
+                             "compradores e beneficia vendedores), exceto que a renda vai para os detentores de "
+                             "licenças."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 194", "tipo_fonte": "GRÁFICO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01164
+    {
+        "id": "ECO-E2-L01164-1", "fonte_ref": "E2-L01164", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23B,
+        "rotulo_item": "Item",
+        "assertiva": ("As perdas relativas a bem-estar decorrentes da imposição de uma tarifa sobre produtos "
+                      "importados serão tanto maiores quanto mais inelástica for a curva de demanda por esses "
+                      "produtos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As perdas relativas a bem-estar decorrentes da imposição de uma tarifa sobre produtos "
+                       "importados serão tanto maiores quanto mais ") + vm("inelástica")
+                    + az(" for a curva de demanda por esses produtos.")),
+        "poucas": ("O peso morto do consumo é ½ × t × ΔQ<sub>d</sub>: quanto mais " + azb("elástica") + " a "
+                   "demanda, maior a queda do consumo e " + vm("maior") + " a perda. Demanda inelástica → perda "
+                   "menor."),
+        "destrinchando": [
+            "Peso morto da tarifa (país pequeno) = " + vd("½ × t × ΔQ<sub>s</sub>") + " (distorção na produção) + "
+            + vd("½ × t × ΔQ<sub>d</sub>") + " (distorção no consumo). As alturas são fixas (= t); o que varia é "
+            "a base, isto é, quanto as quantidades reagem ao preço.",
+            "Demanda " + azb("inelástica") + ": o consumo quase não cai com a alta de preço → triângulo de consumo "
+            "pequeno. No limite (demanda vertical), essa distorção é " + vd("zero") + " e a perda do consumidor "
+            "vira quase toda transferência (receita e ganho do produtor).",
+            "Demanda " + azb("elástica") + ": o consumo cai muito → triângulo grande. O mesmo vale para a oferta: "
+            "oferta doméstica mais elástica amplia a distorção na produção.",
+            "É a mesma lógica da tributação interna (regra de " + oc("Ramsey") + "): impostos sobre bases "
+            "inelásticas distorcem menos. Com a ressalva de equidade: bens de demanda inelástica costumam pesar "
+            "mais no orçamento dos pobres.",
+            vm("Regra-âncora: peso morto cresce com as elasticidades (e com o quadrado da tarifa)."),
+        ],
+        "dissecando": (cz("[inversão]") + " Inverte a relação entre elasticidade e peso morto. A confusão vem de "
+                       "outra regra verdadeira: com demanda inelástica, o <b>consumidor arca</b> com mais do "
+                       "imposto (incidência). Incidência ≠ eficiência — a banca explora essa troca."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As perdas de eficiência decorrentes de uma tarifa serão tanto maiores quanto mais elástica for a "
+            "oferta doméstica.”</i> → CERTO",
+            "<i>“Com demanda perfeitamente inelástica, a tarifa não altera o excedente do consumidor.”</i> → ERRADO "
+            "(o consumidor perde; só a distorção no consumo é nula)",
+        ])],
+        "reescrita": ("As perdas relativas a bem-estar decorrentes da imposição de uma tarifa sobre produtos "
+                      "importados serão tanto maiores quanto mais " + hl("elástica") + " for a curva de demanda por "
+                      "esses produtos."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tanto maiores quanto"], "dificuldade": 2,
+        "comentario_fonte": ("Quanto mais inelástica a demanda, menores as perdas de bem-estar decorrentes da "
+                             "tarifa."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 195", "tipo_fonte": "GRÁFICO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01165
+    {
+        "id": "ECO-E2-L01165-1", "fonte_ref": "E2-L01165", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_23B,
+        "rotulo_item": "Item",
+        "assertiva": ("As tarifas ad valorem são caracterizadas pela cobrança de um determinado valor por unidade "
+                      "importada, independentemente do preço do produto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As tarifas ") + vm("ad valorem") + az(" são caracterizadas pela cobrança de um determinado "
+                                                              "valor por unidade importada, independentemente do "
+                                                              "preço do produto.")),
+        "poucas": ("A definição é a da " + azb("tarifa específica") + " (valor fixo por unidade). A "
+                   + azb("ad valorem") + " é um " + vm("percentual do valor") + " do bem importado."),
+        "destrinchando": [
+            azb("Tarifa específica") + ": valor fixo por unidade física — ex.: " + vd("US$ 10 por bicicleta")
+            + ", custe ela US$ 100 ou US$ 1.000. Pesa mais, proporcionalmente, sobre os produtos baratos.",
+            azb("Tarifa ad valorem") + ": percentual do valor — ex.: " + vd("20%") + " sobre uma bicicleta de "
+            "US$ 100 = " + vd("US$ 20") + ". Acompanha o preço: protege igual em termos proporcionais e se ajusta à "
+            "inflação.",
+            "Efeito da inflação: com tarifa específica, a alta de preços corrói a proteção (o valor fixo vira uma "
+            "fração menor do preço); com ad valorem, a proteção se mantém. Há ainda a " + azb("tarifa mista")
+            + " (combina as duas).",
+            rx("Brasil") + ": a Tarifa Externa Comum do Mercosul (TEC) é expressa em alíquotas ad valorem sobre o "
+            "valor aduaneiro.",
+            vm("Regra-âncora: específica = R$ por unidade; ad valorem = % do valor."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Descrição correta de um instrumento com o nome do outro. O "
+                       "“independentemente do preço” é a pista: ad valorem significa literalmente “conforme o "
+                       "valor”."),
+        "modulos": [("🧠 Mnemônico", ["<i>Ad valorem</i> = “ao valor” → percentual; <b>específica</b> = por "
+                                      "<b>espécie</b> (unidade)."])],
+        "reescrita": ("As tarifas " + hl("específicas") + " são caracterizadas pela cobrança de um determinado valor "
+                      "por unidade importada, independentemente do preço do produto."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["independentemente"], "dificuldade": 1,
+        "comentario_fonte": ("Tarifa específica: valor fixo por unidade (US$ 10 por bicicleta); ad valorem: "
+                             "percentual do valor (20% de US$ 100 = US$ 20)."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 196", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01657-1
+    {
+        "id": "ECO-E2-L01657-1", "fonte_ref": "E2-L01657", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_ACO,
+        "frente_figuras": ["ECO-E2-L01657-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Após a tarifa, o excedente dos ofertantes domésticos vai crescer no montante equivalente à soma "
+                      "das áreas C e G."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Após a tarifa, o excedente dos ofertantes domésticos vai crescer no montante equivalente à ")
+                    + vm("soma das áreas") + az(" C ") + vm("e G") + az(".")),
+        "poucas": ("O excedente do produtor " + azb("cresce") + " só pela área " + vd("C") + ". A área G já era "
+                   "excedente do produtor ao preço mundial: C + G é o excedente <b>final</b>, não o aumento."),
+        "destrinchando": [
+            "Leitura do gráfico (convenção de " + oc("Mankiw") + "): ao preço mundial, o consumidor tem "
+            "A + B + C + D + E + F e o produtor doméstico tem G. Com a tarifa, o preço interno sobe para o preço "
+            "com tarifa.",
+            "Depois da tarifa: excedente do consumidor = " + vd("A + B") + "; excedente do produtor = " + vd("C + G")
+            + "; receita do governo = " + vd("E") + "; peso morto = " + vd("D + F") + ".",
+            "Variações: consumidor " + vd("−(C + D + E + F)") + "; produtor " + vd("+C") + "; governo "
+            + vd("+E") + "; total " + vd("−(D + F)") + ". D é a " + azb("distorção na produção") + " (unidades "
+            "produzidas internamente acima do custo de importá-las); F, a " + azb("distorção no consumo") + ".",
+            "C é transferência do consumidor para o produtor: o trapézio entre o preço mundial e o preço com "
+            "tarifa, à esquerda da oferta doméstica (de 0 a Qs2).",
+            vm("Regra-âncora: “cresce” pede a variação (C), não o estoque final (C + G)."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A soma C + G existe no gráfico — é o excedente "
+                       "<b>final</b> do produtor. O erro está no verbo: “crescer no montante” pede a "
+                       "<b>variação</b>. 🔥 Gráficos com áreas em letra sempre testam estoque × variação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Após a tarifa, o excedente dos ofertantes domésticos passa a ser a soma das áreas C e G.”</i> → "
+            "CERTO",
+            "<i>“O peso morto da tarifa corresponde às áreas D, E e F.”</i> → ERRADO (E é receita do governo, não "
+            "perda)",
+        ])],
+        "reescrita": ("Após a tarifa, o excedente dos ofertantes domésticos vai crescer no montante equivalente à "
+                      + hl("área") + " C<s> e G</s>."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("O aumento do excedente do produtor é só a área C; G não faz parte do ganho (a fonte a "
+                             "descreve, erradamente, como “parcela do excedente do consumidor perdida”)."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": FIG_480,
+        "alertas": [ALERTA_480,
+                    "qualidade_fonte: o comentário de origem descreve G como perda do consumidor; G é o excedente do "
+                    "produtor anterior à tarifa"],
+    },
+    # ------------------------------------------------------------------ E2-L01657-2
+    {
+        "id": "ECO-E2-L01657-2", "fonte_ref": "E2-L01657", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_ACO,
+        "frente_figuras": ["ECO-E2-L01657-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Os consumidores, após a tarifa, terão redução do seu excedente que não será compensada pelo "
+                      "aumento do excedente dos ofertantes e pela receita do governo, gerando uma redução do "
+                      "excedente total conhecida como peso morto, dado pela soma das áreas E e F."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Os consumidores, após a tarifa, terão redução do seu excedente que não será compensada pelo "
+                       "aumento do excedente dos ofertantes e pela receita do governo, gerando uma redução do "
+                       "excedente total conhecida como peso morto, dado pela soma das áreas ") + vm("E")
+                    + az(" e F.")),
+        "poucas": ("Todo o raciocínio está certo até a última palavra: o peso morto é " + vd("D + F") + ". A área "
+                   + vm("E") + " é a " + azb("receita do governo") + " — transferência, não perda."),
+        "destrinchando": [
+            "Perda do consumidor com a tarifa: " + vd("C + D + E + F") + " (o trapézio entre o preço mundial e o "
+            "preço com tarifa, à esquerda da demanda).",
+            "Para onde vai cada pedaço: " + vd("C") + " → produtores domésticos (ganho de excedente); " + vd("E")
+            + " → governo (tarifa × importações remanescentes, de Qs2 a QD2); " + vd("D") + " e " + vd("F")
+            + " → ninguém. Por isso o peso morto é D + F.",
+            azb("D (distorção na produção)") + ": entre Qs1 e Qs2, o país passa a produzir internamente, a custo "
+            "acima do preço mundial, unidades que antes importava. " + azb("F (distorção no consumo)") + ": "
+            "entre QD2 e QD1, deixam de ser consumidas unidades que os consumidores valorizavam acima do preço "
+            "mundial.",
+            "Forma de reconhecer no gráfico: as áreas de peso morto são os dois <b>triângulos</b> laterais; a "
+            "receita é o <b>retângulo</b> central, cuja base são as importações após a tarifa.",
+            vm("Regra-âncora: tarifa — receita é o retângulo (E); peso morto são os dois triângulos (D + F)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Item longo, quase todo verdadeiro, com o erro na última letra: "
+                       "troca D (triângulo de distorção) por E (retângulo de receita). 🔥 Itens de tarifa com áreas "
+                       "costumam embutir o erro no fim, depois de uma descrição correta que gera confiança."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…gerando uma redução do excedente total conhecida como peso morto, dado pela soma das áreas D e "
+            "F.”</i> → CERTO",
+            "<i>“A área E representa perda de eficiência associada à redução do consumo.”</i> → ERRADO (E é "
+            "receita; a perda do consumo é F)",
+        ])],
+        "reescrita": ("Os consumidores, após a tarifa, terão redução do seu excedente que não será compensada pelo "
+                      "aumento do excedente dos ofertantes e pela receita do governo, gerando uma redução do "
+                      "excedente total conhecida como peso morto, dado pela soma das áreas " + hl("D") + " e F."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("O peso morto é D + F, não E + F; E é a arrecadação do governo (transferência); D é a "
+                             "perda produtiva e F a perda de consumo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_480,
+        "alertas": [ALERTA_480,
+                    "nota_redacao: item marcado com ❌ na fonte (errei = True), embora a classificação registrasse "
+                    "errei = False para a questão"],
+    },
+    # ------------------------------------------------------------------ E2-L01657-3
+    {
+        "id": "ECO-E2-L01657-3", "fonte_ref": "E2-L01657", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_ACO,
+        "frente_figuras": ["ECO-E2-L01657-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": "A arrecadação do governo com a tarifa de importação é equivalente à soma das áreas E e R.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A arrecadação do governo com a tarifa de importação é equivalente à ") + vm("soma das áreas")
+                    + az(" E") + vm(" e R") + az(".")),
+        "poucas": ("A receita da tarifa é só a área " + vd("E") + ": tarifa × importações após a tarifa (de Qs2 a "
+                   "QD2). Não existe área R no gráfico."),
+        "destrinchando": [
+            "Receita tarifária = " + vd("(preço com tarifa − preço mundial) × (QD2 − Qs2)") + ": o retângulo "
+            "central, cuja altura é a tarifa e cuja base são as importações que continuam a entrar.",
+            "As áreas vizinhas não são receita: " + vd("D") + " e " + vd("F") + " (triângulos laterais) são peso "
+            "morto; " + vd("C") + " é ganho do produtor; " + vd("A + B") + " é o que resta do excedente do "
+            "consumidor; " + vd("G") + " é o excedente do produtor ao preço mundial.",
+            "Erro clássico em itens de receita: usar como base as importações <b>antes</b> da tarifa (QD1 − Qs1). "
+            "Essa base incluiria D e F, que não arrecadam nada — são unidades que deixaram de ser importadas.",
+            "Num país grande, a receita teria uma parte paga pelos estrangeiros (a queda do preço mundial × "
+            "importações), que é o ganho de termos de troca; no gráfico, país pequeno, toda a receita sai do "
+            "consumidor doméstico.",
+        ],
+        "dissecando": (cz("[extrapolação]") + " O item acrescenta à área correta (E) uma área que o gráfico não "
+                       "tem (R). Pista: diante de rótulo desconhecido, confira a figura antes de julgar — a "
+                       "receita da tarifa é sempre um retângulo único."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A arrecadação do governo com a tarifa equivale à área E.”</i> → CERTO",
+            "<i>“A arrecadação do governo com a tarifa equivale às áreas D, E e F.”</i> → ERRADO (D e F são peso "
+            "morto)",
+        ])],
+        "reescrita": ("A arrecadação do governo com a tarifa de importação é equivalente à " + hl("área")
+                      + " E<s> e R</s>."),
+        "tipo_erro": ["EXTRAPOLACAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A arrecadação é só a área E (tarifa × importações após a tarifa); não há área R no "
+                             "gráfico."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_480,
+        "alertas": [ALERTA_480],
+    },
+    # ------------------------------------------------------------------ E2-L01657-4
+    {
+        "id": "ECO-E2-L01657-4", "fonte_ref": "E2-L01657", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_ACO,
+        "frente_figuras": ["ECO-E2-L01657-1-F1"],
+        "rotulo_item": "Item",
+        "assertiva": ("Se o governo optar por uma cota de importação equivalente à tarifa, será melhor para os "
+                      "consumidores pois o preço pago por eles não subirá."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se o governo optar por uma cota de importação equivalente à tarifa, ")
+                    + vm("será melhor para os consumidores pois o preço pago por eles não subirá") + az(".")),
+        "poucas": ("A cota equivalente limita as importações a QD2 − Qs2 e leva o preço interno ao " + vm("mesmo "
+                                                                                                         "nível")
+                   + " da tarifa: para o consumidor, nada muda. Muda só quem fica com a área E."),
+        "destrinchando": [
+            azb("Cota equivalente") + " = a que permite importar exatamente a quantidade que entraria com a tarifa "
+            "(QD2 − Qs2). Com a oferta externa limitada a esse volume, o preço interno sobe até o mesmo preço "
+            "com tarifa.",
+            "Consumidor e produtor doméstico: efeitos idênticos (perda C + D + E + F; ganho C). Peso morto: o "
+            "mesmo (D + F).",
+            "A diferença está no retângulo " + vd("E") + ": com a tarifa, é receita do governo; com a cota, vira "
+            + azb("renda de cota") + " — apropriada pelos importadores que recebem as licenças (ou pelos "
+            "exportadores estrangeiros, numa restrição voluntária). Só se o governo " + vd("leiloar as licenças")
+            + " recupera essa receita.",
+            "Por isso, do ponto de vista nacional, a cota tende a ser pior que a tarifa equivalente: a mesma perda "
+            "para o consumidor, sem a arrecadação correspondente. E, sob choque de demanda, a cota faz o preço "
+            "subir ainda mais (as importações não acompanham).",
+            vm("Regra-âncora: cota equivalente = mesmo preço, mesmo peso morto; E vira renda de cota."),
+        ],
+        "dissecando": (cz("[juízo indevido · nexo indevido]") + " Atribui à cota uma vantagem para o consumidor "
+                       "que ela não tem e a justifica com um mecanismo falso (preço que não sobe). Pista: "
+                       "“equivalente à tarifa” já significa “com o mesmo efeito sobre preço e quantidade”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o governo optar por uma cota de importação equivalente à tarifa, o preço doméstico será o "
+            "mesmo, mas a receita E poderá ficar com os detentores das licenças.”</i> → CERTO",
+            "<i>“A cota equivalente elimina o peso morto, pois não envolve cobrança de imposto.”</i> → ERRADO (o "
+            "peso morto D + F permanece)",
+        ])],
+        "reescrita": ("Se o governo optar por uma cota de importação equivalente à tarifa, " + hl("o efeito para os "
+                                                                                                  "consumidores "
+                                                                                                  "será o mesmo, "
+                                                                                                  "pois o preço "
+                                                                                                  "pago por eles "
+                                                                                                  "subirá igualmente")
+                      + "."),
+        "tipo_erro": ["JUIZO_INDEVIDO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A cota equivalente resulta no mesmo preço doméstico; muda a distribuição: a receita E "
+                             "vai para os importadores com licença, salvo leilão."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": FIG_480,
+        "alertas": [ALERTA_480],
+    },
+    # ------------------------------------------------------------------ E2-L01763
+    {
+        "id": "ECO-E2-L01763-1", "fonte_ref": "E2-L01763", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_TEO,
+        "rotulo_item": "Item",
+        "assertiva": ("A redução da tarifa de importação de arroz pelo governo brasileiro em 2020, diante do aumento "
+                      "dos preços internos deste produto, pode ser explicado pela teoria econômica, sendo esperado "
+                      "por esta um aumento da oferta interna e a redução de preços, aumentando o excedente dos "
+                      "consumidores e mantendo inalterado o excedente dos produtores domésticos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A redução da tarifa de importação de arroz pelo governo brasileiro em 2020, diante do aumento "
+                       "dos preços internos deste produto, pode ser explicado pela teoria econômica, sendo esperado "
+                       "por esta um aumento da oferta interna e a redução de preços, aumentando o excedente dos "
+                       "consumidores e ") + vm("mantendo inalterado") + az(" o excedente dos produtores domésticos.")),
+        "poucas": ("Reduzir a tarifa " + azb("baixa o preço interno") + ": o consumidor ganha, mas o produtor "
+                   "doméstico vende menos e mais barato — seu excedente " + vm("cai") + "."),
+        "destrinchando": [
+            "É o caminho inverso da tarifa: o preço interno cai de P<sub>m</sub> + t para perto de P<sub>m</sub>; "
+            "as importações aumentam (a “oferta interna”, no sentido de oferta disponível no mercado doméstico, "
+            "cresce), o consumo sobe e a produção nacional recua.",
+            "Bem-estar: o consumidor recupera o trapézio entre os dois preços (" + vd("ganho") + "); o produtor "
+            "perde o trapézio entre os dois preços à esquerda da oferta (" + vd("perda") + "); o governo perde "
+            "receita; o país recupera os dois triângulos de peso morto. Saldo nacional positivo, com redistribuição "
+            "de produtores para consumidores.",
+            rx("Brasil") + ": em setembro de " + vd("2020") + ", com o arroz em alta (câmbio depreciado, demanda "
+            "externa forte e consumo doméstico aquecido na pandemia), a Camex zerou temporariamente a tarifa de "
+            "importação de arroz de fora do Mercosul para uma cota de " + vd("400 mil toneladas") + ", até o fim "
+            "do ano — uma cota tarifária.",
+            "Na prática o efeito foi limitado (o preço mundial também subia e o real estava desvalorizado), mas a "
+            "direção prevista pela teoria é a do item, salvo pelo excedente do produtor.",
+            vm("Regra-âncora: tarifa ↓ → preço interno ↓ → consumidor ganha, produtor doméstico perde, país ganha "
+               "(peso morto recuperado)."),
+        ],
+        "dissecando": (cz("[meia-verdade]") + " Tudo é correto até o fim: o erro está em afirmar neutralidade para "
+                       "o produtor. Pista: toda mudança no preço interno redistribui excedente entre os dois lados "
+                       "do mercado — não há como baixar o preço sem afetar quem vende."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…aumentando o excedente dos consumidores e reduzindo o excedente dos produtores domésticos, com "
+            "ganho líquido de bem-estar.”</i> → CERTO",
+            "<i>“A redução da tarifa reduz o bem-estar total do país pequeno, pois os produtores perdem.”</i> → "
+            "ERRADO (o ganho do consumidor supera a perda do produtor e da receita)",
+        ])],
+        "reescrita": ("A redução da tarifa de importação de arroz pelo governo brasileiro em 2020, diante do aumento "
+                      "dos preços internos deste produto, pode ser explicado pela teoria econômica, sendo esperado "
+                      "por esta um aumento da oferta interna e a redução de preços, aumentando o excedente dos "
+                      "consumidores e " + hl("reduzindo") + " o excedente dos produtores domésticos."),
+        "tipo_erro": ["MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Trecho errado: “mantendo inalterado o excedente dos produtores domésticos”. A redução "
+                             "da tarifa beneficia consumidores e reduz o excedente dos produtores domésticos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 526", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (gráfico genérico de tarifa, absorvido no 📖)"}],
+        "alertas": [],
+    },
 ]

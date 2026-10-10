@@ -35,7 +35,7 @@ CARDS = [
                       "do produto per capita apenas no longo prazo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("No modelo de crescimento exógeno de Solow, o aumento da taxa de poupança afeta o "
-                       "crescimento do produto per capita ") + vm("apenas no longo prazo") + az(".")),
+                       "crescimento do produto per capita apenas ") + vm("no longo prazo") + az(".")),
         "poucas": ("É o contrário: a alta da poupança acelera o crescimento per capita só na " + azb("transição")
                    + " para o novo estado estacionário; no longo prazo, muda o " + azb("nível") + " do produto per "
                    "capita, e a taxa de crescimento volta a ser a do progresso técnico."),
@@ -65,7 +65,7 @@ CARDS = [
             "capita.”</i> → ERRADO (efeito nível tratado como efeito crescimento)",
         ])],
         "reescrita": ("No modelo de crescimento exógeno de Solow, o aumento da taxa de poupança afeta o "
-                      "crescimento do produto per capita " + hl("apenas na transição para o novo estado "
+                      "crescimento do produto per capita apenas " + hl("na transição para o novo estado "
                                                                 "estacionário (no longo prazo, afeta só o nível)")
                       + "."),
         "tipo_erro": ["INVERSAO"], "moduladores": ["apenas"], "dificuldade": 1,
@@ -146,8 +146,8 @@ CARDS = [
                       "para todos os países. Tal conclusão é uma implicação da hipótese de retornos marginais "
                       "crescentes do modelo."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Uma das consequências do modelo de Solow é a sua ") + vm("rejeição de")
-                    + az(" convergência de níveis de renda ") + vm("para todos os países")
+        "anotada": (az("Uma das consequências do modelo de Solow é a sua ") + vm("rejeição")
+                    + az(" de convergência de níveis de renda ") + vm("para todos os países")
                     + az(". Tal conclusão é uma implicação da hipótese de retornos marginais ") + vm("crescentes")
                     + az(" do modelo.")),
         "poucas": ("Solow supõe " + azb("rendimentos marginais decrescentes") + " do capital, e é isso que gera a "
@@ -178,7 +178,8 @@ CARDS = [
             "<i>“O modelo de Solow prevê que todos os países convergirão para o mesmo nível de renda per "
             "capita.”</i> → ERRADO (modulador absoluto: a convergência é condicional)",
         ])],
-        "reescrita": ("Uma das consequências do modelo de Solow é a sua " + hl("previsão de") + " convergência de "
+        "reescrita": ("Uma das consequências do modelo de Solow é a sua " + hl("previsão") + " de convergência de "
+
                       "níveis de renda " + hl("entre países com os mesmos fundamentos (convergência condicional)")
                       + ". Tal conclusão é uma implicação da hipótese de retornos marginais " + hl("decrescentes")
                       + " do modelo."),

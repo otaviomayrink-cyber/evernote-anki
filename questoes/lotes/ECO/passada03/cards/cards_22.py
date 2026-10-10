@@ -1031,4 +1031,311 @@ CARDS = [
         "alertas": ["contestavel: “acordos comerciais regionais” não são, a rigor, barreira não tarifária; "
                     "ERRADO seria defensável pela classificação"],
     },
+    # ------------------------------------------------------------------ E3-L00396
+    {
+        "id": "ECO-E3-L00396-1", "fonte_ref": "E3-L00396", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NOV,
+        "excerto": EXC_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("A adoção de normas técnicas rigorosas, como certificações ambientais ou padrões de "
+                      "qualidade, visa principalmente garantir a segurança dos consumidores e não costuma "
+                      "representar um desafio significativo para os países em desenvolvimento no acesso aos "
+                      "mercados dos países mais avançados."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A adoção de normas técnicas rigorosas, como certificações ambientais ou padrões de "
+                       "qualidade, visa principalmente garantir a segurança dos consumidores e ")
+                    + vm("não costuma representar") + az(" um desafio significativo para os países em "
+                                                        "desenvolvimento no acesso aos mercados dos países mais "
+                                                        "avançados.")),
+        "poucas": ("Normas técnicas rigorosas são uma das principais " + azb("barreiras não tarifárias") + " "
+                   "enfrentadas pelos países em desenvolvimento: certificar, testar e rastrear custa caro e exige "
+                   "infraestrutura que muitos não têm."),
+        "destrinchando": [
+            "Com a queda das tarifas após as rodadas do GATT, ganharam peso as " + azb("barreiras técnicas")
+            + " (regulamentos, normas, procedimentos de avaliação da conformidade) e as " + azb("medidas "
+            "sanitárias e fitossanitárias") + ". É o chamado " + azb("neoprotecionismo") + ".",
+            "Por que pesam mais sobre o país em desenvolvimento: exigem " + azb("infraestrutura da qualidade")
+            + " (laboratórios acreditados, metrologia, certificadoras), têm altos custos fixos (prejudicam "
+            "pequenos produtores), mudam com frequência e muitas vezes vêm de " + azb("padrões privados")
+            + " (redes varejistas) ainda mais exigentes que a regulação pública.",
+            "Os objetivos legítimos vão além da segurança do consumidor: saúde humana, animal e vegetal, meio "
+            "ambiente, informação ao consumidor, compatibilidade técnica. A dificuldade está em separar o "
+            "objetivo legítimo do " + azb("protecionismo disfarçado") + ".",
+            "Na OMC, o " + azb("Acordo TBT") + " e o " + azb("Acordo SPS") + " admitem as normas, mas exigem "
+            "não discriminação, base científica (SPS), preferência por padrões internacionais e que a medida "
+            "não seja mais restritiva que o necessário; preveem ainda assistência técnica e tratamento especial "
+            "para países em desenvolvimento.",
+            "Exemplo atual ⏳ (out/2026): o " + rx("regulamento europeu antidesmatamento (EUDR)") + ", que exige "
+            "comprovação de origem livre de desmatamento para soja, carne, café, cacau e madeira, é contestado "
+            "pelo " + rx("Brasil") + " justamente pelo custo de rastreabilidade para exportadores.",
+        ],
+        "dissecando": (cz("[inversão · juízo indevido]") + " O item nega o ponto central da literatura sobre "
+                       "barreiras técnicas (o custo de conformidade é desproporcional para países em "
+                       "desenvolvimento). A primeira oração, que reduz o objetivo das normas à segurança do "
+                       "consumidor, é simplificadora, mas o erro decisivo é o “não costuma representar um "
+                       "desafio”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Normas técnicas legítimas podem funcionar, na prática, como barreiras não tarifárias, ao imporem "
+            "custos de conformidade elevados a exportadores de países em desenvolvimento.”</i> → CERTO",
+            "<i>“O Acordo TBT da OMC proíbe a adoção de regulamentos técnicos mais rigorosos que os padrões "
+            "internacionais.”</i> → ERRADO (extrapolação: admite-os se justificados e não discriminatórios)",
+        ])],
+        "reescrita": ("A adoção de normas técnicas rigorosas, como certificações ambientais ou padrões de "
+                      "qualidade, visa principalmente garantir a segurança dos consumidores e "
+                      + hl("costuma representar") + " um desafio significativo para os países em desenvolvimento "
+                      "no acesso aos mercados dos países mais avançados."),
+        "tipo_erro": ["INVERSAO", "JUIZO_INDEVIDO"], "moduladores": ["principalmente", "não costuma"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Normas técnicas são grandes BNTs: países em desenvolvimento muitas vezes não têm "
+                             "tecnologia ou recursos para cumprir padrões rigorosos (infraestrutura da qualidade, "
+                             "custos fixos, padrões privados); TBT e SPS na OMC."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 572", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00397
+    {
+        "id": "ECO-E3-L00397-1", "fonte_ref": "E3-L00397", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NOV,
+        "excerto": EXC_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("O uso de subsídios à exportação, embora possa aumentar a competitividade dos produtos de um "
+                      "país no mercado internacional, pode levar a disputas comerciais e ações antidumping, uma vez "
+                      "que os países concorrentes podem alegar que o subsídio distorce as condições de competição e "
+                      "leva à venda de produtos abaixo do custo de produção, prejudicando suas indústrias locais."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("O uso de subsídios à exportação, embora possa aumentar a competitividade dos produtos de um "
+                      "país no mercado internacional, <u>pode</u> levar a disputas comerciais e <u>ações "
+                      "antidumping</u>, uma vez que os países concorrentes podem alegar que o subsídio distorce as "
+                      "condições de competição e leva à venda de produtos abaixo do custo de produção, prejudicando "
+                      "suas indústrias locais."),
+        "poucas": ("Subsídio à exportação é " + azb("proibido") + " na OMC e gera disputas e retaliação. O item "
+                   "está certo no efeito, mas o remédio técnico contra subsídio é a " + azb("medida "
+                   "compensatória") + ", não o antidumping."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "na terminologia da OMC, o instrumento contra subsídio concedido por governo é o "
+                          + vd("direito compensatório") + " (ASMC), enquanto o " + vd("antidumping")
+                          + " responde a preço de exportação abaixo do valor normal praticado pela empresa. "
+                          "Uma prova CEBRASPE poderia considerar o item ERRADO pela troca. O CERTO se sustenta "
+                          "pelos moduladores (“pode”, “podem alegar”) e porque, na prática, exportações "
+                          "subsidiadas a preço abaixo do custo também podem ser alvo de investigação "
+                          "antidumping (valor normal construído).")],
+        "destrinchando": [
+            azb("Acordo sobre Subsídios e Medidas Compensatórias (ASMC)") + ": subsídio = contribuição financeira "
+            "do governo que confere benefício, sendo " + azb("específico") + ". Classes: " + vd("proibidos")
+            + " (vinculados à exportação ou ao uso de conteúdo local, art. 3) e " + vd("acionáveis") + " "
+            "(contestáveis se causarem efeitos adversos).",
+            "Dois caminhos contra um subsídio: (i) o " + azb("multilateral") + " — painel no Órgão de Solução de "
+            "Controvérsias, que pode autorizar retaliação; (ii) o " + azb("unilateral") + " — investigação "
+            "nacional e imposição de " + azb("direito compensatório") + " sobre as importações subsidiadas, se "
+            "houver dano à indústria doméstica e nexo causal.",
+            azb("Antidumping") + " é outra coisa: combate a discriminação de preços praticada pela "
+            "<b>empresa</b> exportadora (preço de exportação &lt; valor normal), sem precisar provar subsídio "
+            "governamental.",
+            "Casos emblemáticos: " + rx("Embraer × Bombardier") + " (Brasil e Canadá se condenaram mutuamente "
+            "por subsídios a jatos regionais — Proex × apoios canadenses, 1999–2002) e o contencioso do "
+            + rx("algodão") + " contra os EUA.",
+            vm("Regra-âncora: subsídio de governo → medida compensatória; preço de empresa abaixo do valor normal "
+               "→ antidumping; surto de importações leais → salvaguarda."),
+        ],
+        "dissecando": (cz("[modulador relativo · detalhe]") + " O item é salvo pelos “pode”/“podem alegar”, mas "
+                       "embaralha os remédios de defesa comercial. 🔥 A distinção antidumping × compensatória × "
+                       "salvaguarda é cobrança clássica do CEBRASPE; num item de banca oficial, “ações "
+                       "antidumping contra subsídios” costuma ser o erro."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Contra exportações subsidiadas que causem dano à indústria doméstica, o país importador pode "
+            "aplicar direitos compensatórios.”</i> → CERTO",
+            "<i>“Os subsídios à exportação de bens industriais são acionáveis, isto é, permitidos salvo prova de "
+            "efeitos adversos.”</i> → ERRADO (troca de conceito: são proibidos)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "DETALHE"], "moduladores": ["pode", "podem alegar"],
+        "dificuldade": 2,
+        "comentario_fonte": ("A OMC regula subsídios porque distorcem preços, permitindo que países afetados "
+                             "apliquem medidas compensatórias."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: o remédio contra subsídio é a medida compensatória, não o antidumping; ERRADO "
+                    "seria defensável pela troca de instrumento"],
+    },
+    # ------------------------------------------------------------------ E3-L00398
+    {
+        "id": "ECO-E3-L00398-1", "fonte_ref": "E3-L00398", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NOV,
+        "excerto": EXC_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição de tarifas à importação tem como principal efeito o aumento da competitividade "
+                      "dos produtos domésticos, provocando impactos positivos sobre o bem-estar de produtores e "
+                      "consumidores nacionais, uma vez que estimula um maior nível de produção nacional e o consumo "
+                      "de bens internamente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A imposição de tarifas à importação tem como principal efeito o aumento da competitividade "
+                       "dos produtos domésticos, provocando impactos positivos sobre o bem-estar de produtores ")
+                    + vm("e consumidores") + az(" nacionais, uma vez que estimula um maior nível de produção "
+                                                "nacional ") + vm("e o consumo de bens internamente") + az(".")),
+        "poucas": ("A tarifa eleva o preço interno: o " + azb("produtor") + " ganha, mas o " + azb("consumidor")
+                   + " perde — paga mais e consome menos. Há receita para o governo e " + azb("peso morto")
+                   + "; o bem-estar total cai (país pequeno)."),
+        "destrinchando": [
+            "Efeitos da tarifa em país pequeno: preço interno P<sub>m</sub> + t; " + azb("efeito produção")
+            + " (Q<sup>S</sup> ↑, produtor ganha excedente); " + azb("efeito consumo") + " (Q<sup>D</sup> ↓, "
+            "consumidor perde excedente); " + azb("efeito receita") + " (governo arrecada t × importações); "
+            + azb("efeito comércio") + " (importações ↓).",
+            "Saldo: a perda do consumidor é maior que a soma do ganho do produtor com a receita; a diferença são "
+            "os dois triângulos de " + azb("peso morto") + " (distorção de produção e de consumo).",
+            "O consumo interno do bem <b>diminui</b>: o aumento da produção nacional não compensa a queda das "
+            "importações, porque o preço é mais alto para todos.",
+            "Argumentos pró-tarifa existem, mas são outros: " + azb("indústria nascente") + " (" + oc("Hamilton")
+            + ", " + oc("List") + "), " + azb("tarifa ótima") + " em país grande, correção de falhas de mercado e "
+            "a tradição cepalina de industrialização por substituição de importações. Nenhum deles afirma que o "
+            "consumidor ganha no curto prazo.",
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " Parte verdadeira (produtor ganha, produção nacional "
+                       "sobe) com parte falsa enxertada (consumidor ganha, consumo sobe). Pista: medida que "
+                       "beneficia “produtores e consumidores” ao mesmo tempo, via aumento de preço, é contradição "
+                       "em termos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A tarifa de importação transfere excedente dos consumidores para os produtores domésticos e para "
+            "o governo, com perda líquida de bem-estar.”</i> → CERTO",
+            "<i>“A tarifa reduz o consumo interno, mas o aumento da produção nacional compensa exatamente a queda "
+            "das importações.”</i> → ERRADO (as importações caem mais do que a produção sobe)",
+        ])],
+        "reescrita": ("A imposição de tarifas à importação tem como principal efeito o aumento da competitividade "
+                      "dos produtos domésticos, provocando impactos positivos sobre o bem-estar de produtores "
+                      + hl("e negativos sobre o de consumidores") + " nacionais, uma vez que estimula um maior "
+                      "nível de produção nacional " + hl("mas reduz o consumo do bem internamente") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Tarifas geram peso morto; ajudam produtores locais, mas prejudicam consumidores "
+                             "(preços mais altos) e reduzem o bem-estar agregado."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "IMAGEM 573", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00432
+    {
+        "id": "ECO-E3-L00432-1", "fonte_ref": "E3-L00432", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": True,
+        "comando": CMD_OUT,
+        "excerto": EXC_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("Seguindo a tradição das teorias críticas, segundo modelos de comércio mais modernos, como o "
+                      "modelo gravitacional, em um cenário de livre comércio, a imposição de tarifas sobre produtos "
+                      "importados pode resultar em um aumento da receita do governo e, ao mesmo tempo, uma melhoria "
+                      "no bem-estar econômico total do país que impõe a tarifa."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (vm("Seguindo a tradição das teorias críticas, segundo modelos de comércio mais modernos, como "
+                       "o modelo gravitacional") + az(", em um cenário de livre comércio, a imposição de tarifas "
+                                                      "sobre produtos importados pode resultar em um aumento da "
+                                                      "receita do governo e, ao mesmo tempo, uma melhoria no "
+                                                      "bem-estar econômico total do país que impõe a tarifa.")),
+        "poucas": ("Tarifa com ganho de bem-estar nacional é o argumento da " + azb("tarifa ótima") + ", da teoria "
+                   + azb("neoclássica") + " e válido só para " + azb("país grande") + ". Não vem das teorias "
+                   "críticas nem do " + azb("modelo gravitacional") + ", que é empírico."),
+        "destrinchando": [
+            azb("Tarifa ótima") + ": um país grande, com poder sobre o preço mundial, ao tarifar reduz sua "
+            "demanda por importações e força a queda do preço que paga ao exterior — melhora dos "
+            + azb("termos de troca") + ". Se esse ganho supera os triângulos de peso morto, o bem-estar nacional "
+            "sobe (o mundo, porém, perde). Fórmula clássica: t* = 1/ε, com ε a elasticidade da oferta externa de "
+            "exportações. Em país pequeno (ε → ∞), t* = 0.",
+            azb("Modelo gravitacional") + " (" + oc("Jan Tinbergen") + ", 1962): o comércio bilateral cresce com "
+            "o tamanho das economias (PIB) e cai com a distância. É uma ferramenta " + azb("empírica")
+            + " de previsão de fluxos, não uma teoria normativa de tarifas e bem-estar.",
+            azb("Teorias críticas") + " (estruturalismo cepalino, dependência): defendem proteção por razões de "
+            "desenvolvimento — deterioração dos termos de troca da periferia (" + oc("Prebisch") + "–"
+            + oc("Singer") + "), indústria nascente, mudança estrutural —, não pela maximização do excedente "
+            "total no sentido neoclássico.",
+            "Já as “novas teorias” (" + oc("Krugman") + ", concorrência imperfeita e economias de escala) "
+            "abriram espaço para a " + azb("política comercial estratégica") + " (" + oc("Brander") + "–"
+            + oc("Spencer") + "), mas com ressalvas fortes sobre retaliação e informação.",
+        ],
+        "dissecando": (cz("[troca de ator · troca de conceito]") + " A segunda metade descreve um resultado "
+                       "verdadeiro em condições específicas (tarifa ótima); o erro está na atribuição a "
+                       "tradições e modelos que não o sustentam. 🔥 Se aparecer “modelo gravitacional” + "
+                       "“bem-estar” + “tarifa”, desconfie: a gravidade explica quem comercia com quem, não "
+                       "prescreve política."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para um país pequeno, a tarifa ótima é nula.”</i> → CERTO",
+            "<i>“O modelo gravitacional prevê que o comércio entre dois países aumenta com a distância entre "
+            "eles.”</i> → ERRADO (inversão: diminui com a distância)",
+        ])],
+        "reescrita": (hl("Segundo a teoria neoclássica do comércio, no caso de um país grande, com poder sobre os "
+                         "termos de troca (argumento da tarifa ótima)") + ", em um cenário de livre comércio, a "
+                      "imposição de tarifas sobre produtos importados pode resultar em um aumento da receita do "
+                      "governo e, ao mesmo tempo, uma melhoria no bem-estar econômico total do país que impõe a "
+                      "tarifa."),
+        "tipo_erro": ["TROCA_ATOR", "TROCA_CONCEITO"], "moduladores": ["pode"], "dificuldade": 2,
+        "comentario_fonte": ("Mistura incoerente: tarifa ótima é argumento neoclássico para país grande; o modelo "
+                             "gravitacional é empírico (PIB e distância), não normativo; teorias críticas defendem "
+                             "proteção por razões de desenvolvimento."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 598", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 599", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 600", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (não passa no teste do quadro-negro: o erro é de atribuição)"},
+                          {"ref": "IMAGEM 601", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00464
+    {
+        "id": "ECO-E3-L00464-1", "fonte_ref": "E3-L00464", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Fevereiro/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_TEORIAS,
+        "rotulo_item": "Item",
+        "assertiva": ("Em economias que privilegiam a produção, quotas são preferíveis às tarifas, porque, as "
+                      "tarifas tendem a reduzir o excedente de consumidores e produtores nacionais, já que esses "
+                      "dividem a tarifa imposta de maneira proporcional às elasticidades preço da demanda e da "
+                      "oferta pelo produto importado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em economias que privilegiam a produção, ") + vm("quotas são preferíveis às tarifas")
+                    + az(", porque, as tarifas tendem a reduzir o excedente de consumidores ")
+                    + vm("e produtores nacionais, já que esses dividem a tarifa imposta de maneira proporcional às "
+                         "elasticidades preço da demanda e da oferta pelo produto importado") + az(".")),
+        "poucas": ("A tarifa " + azb("aumenta") + " o excedente do produtor nacional — tal como a cota. E o ônus "
+                   "da tarifa se divide entre " + azb("consumidores domésticos e exportadores estrangeiros")
+                   + ", não entre consumidores e produtores nacionais."),
+        "destrinchando": [
+            "Tarifa e cota protegem o produtor do mesmo modo: ambas elevam o preço interno, a produção nacional "
+            "e o " + azb("excedente do produtor") + ". Em concorrência perfeita, há uma tarifa equivalente a cada "
+            "cota (" + oc("Bhagwati") + ").",
+            azb("Incidência da tarifa") + ": quem divide a cunha são os " + azb("compradores domésticos") + " e "
+            "os " + azb("vendedores estrangeiros") + ", na proporção inversa das elasticidades da demanda por "
+            "importações e da oferta externa. Em " + azb("país pequeno") + " (oferta externa perfeitamente "
+            "elástica), o consumidor doméstico arca com tudo; em país grande, parte recai sobre o exportador "
+            "estrangeiro (melhora dos termos de troca).",
+            "Não há regra geral de que cotas sejam preferíveis para quem privilegia a produção. Argumentos a "
+            "favor da cota: certeza sobre a quantidade importada. Contra: perde-se a receita (vira renda da "
+            "cota), o preço dispara quando a demanda cresce, há rent-seeking, e a OMC proíbe em regra restrições "
+            "quantitativas (" + vd("art. XI do GATT") + ").",
+            vm("Regra-âncora: tarifa → consumidor perde, produtor nacional ganha, governo arrecada, há peso morto."),
+        ],
+        "dissecando": (cz("[troca de ator · inversão]") + " O item pega a lógica da incidência de um imposto "
+                       "interno (comprador × vendedor, conforme elasticidades) e troca o vendedor estrangeiro "
+                       "pelo produtor nacional — que, na verdade, é o grande beneficiado. Pista: “reduzir o "
+                       "excedente de produtores nacionais” com uma medida protecionista é contradição."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em um país pequeno, o ônus de uma tarifa de importação recai integralmente sobre os consumidores "
+            "domésticos.”</i> → CERTO",
+            "<i>“A cota de importação, ao contrário da tarifa, não eleva o excedente do produtor doméstico.”</i> "
+            "→ ERRADO (ambas elevam o preço interno e o excedente do produtor)",
+        ])],
+        "reescrita": ("Em economias que privilegiam a produção, " + hl("quotas e tarifas protegem igualmente o "
+                      "produtor") + ", porque, as tarifas tendem a reduzir o excedente de consumidores "
+                      + hl("mas elevam o dos produtores nacionais; o ônus da tarifa divide-se entre consumidores "
+                           "domésticos e exportadores estrangeiros, conforme as elasticidades da demanda por "
+                           "importações e da oferta externa") + "."),
+        "tipo_erro": ["TROCA_ATOR", "INVERSAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Tarifas aumentam (não reduzem) o excedente do produtor nacional; a incidência por "
+                             "elasticidades divide o ônus entre consumidores domésticos e exportadores estrangeiros; "
+                             "não há preferência geral por quotas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 668", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
 ]

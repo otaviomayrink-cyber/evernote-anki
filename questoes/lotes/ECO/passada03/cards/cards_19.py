@@ -179,7 +179,7 @@ CARDS = [
             "cresce com " + azb("investimento líquido") + " (FBCF acima da depreciação), qualquer que seja a "
             "fonte de financiamento — poupança doméstica ou externa.",
             "Distinção útil: a " + azb("conta capital") + " do BP (transferências de capital, ativos não "
-            "financeiros não produzidos, como marcas e patentes) não tem relação com o “estoque de capital” "
+            "financeiros não produzidos, como direitos de exploração de recursos naturais e marcas) não tem relação com o “estoque de capital” "
             "da macroeconomia.",
         ],
         "dissecando": (cz("[contraintuitivo]") + " O item parece falso porque ambas as operações aparecem como "

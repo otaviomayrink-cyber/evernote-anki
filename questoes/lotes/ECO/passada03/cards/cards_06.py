@@ -247,7 +247,7 @@ CARDS = [
                       "impacto no dia a dia do cidadão comum."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A condução da política cambial em um regime de câmbio flutuante ou administrado ")
-                    + vm("não tem impacto") + az(" no dia a dia do cidadão comum.")),
+                    + vm("não") + az(" tem impacto no dia a dia do cidadão comum.")),
         "poucas": ("O câmbio chega ao cotidiano por vários canais — " + azb("preços de importados e insumos") + ", "
                    "combustíveis, inflação, juros e emprego —, qualquer que seja o regime."),
         "destrinchando": [
@@ -277,7 +277,7 @@ CARDS = [
             "(restrição indevida: o repasse ocorre em qualquer regime)",
         ])],
         "reescrita": ("A condução da política cambial em um regime de câmbio flutuante ou administrado "
-                      + hl("tem impacto") + " no dia a dia do cidadão comum."),
+                      + "<s>não</s> tem impacto no dia a dia do cidadão comum."),
         "tipo_erro": ["CONTRADICAO", "GENERALIZACAO"], "moduladores": ["não"], "dificuldade": 1,
         "comentario_fonte": ("Gabarito ERRADO; o câmbio afeta preço de importados, insumos, combustíveis, turismo, "
                              "inflação e até os juros, em qualquer regime."),
@@ -413,8 +413,8 @@ CARDS = [
                       "que o sistema for adotado."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("No sistema conhecido como crawling band, fixa-se uma faixa dentro da qual a cotação da "
-                       "moeda pode flutuar livremente; o piso e o teto ") + vm("não podem ser alterados durante "
-                       "todo o período") + az(" em que o sistema for adotado.")),
+                       "moeda pode flutuar livremente; o piso e o teto ") + vm("não podem ser alterados durante")
+                    + az(" todo o período em que o sistema for adotado.")),
         "poucas": ("<i>Crawling</i> = “rastejante”: na " + azb("banda móvel") + ", piso e teto são "
                    + vm("ajustados gradualmente") + " ao longo do tempo. Banda que nunca muda é banda fixa."),
         "destrinchando": [
@@ -442,8 +442,8 @@ CARDS = [
             "(intervém nas bordas da faixa)",
         ])],
         "reescrita": ("No sistema conhecido como crawling band, fixa-se uma faixa dentro da qual a cotação da moeda "
-                      "pode flutuar livremente; o piso e o teto " + hl("são ajustados gradualmente ao longo de "
-                      "todo o período") + " em que o sistema for adotado."),
+                      "pode flutuar livremente; o piso e o teto " + hl("são ajustados gradualmente ao longo de")
+                      + " todo o período em que o sistema for adotado."),
         "tipo_erro": ["TROCA_CONCEITO", "MEIA_VERDADE"], "moduladores": ["não podem", "todo"], "dificuldade": 1,
         "comentario_fonte": ("Errado: a banda é móvel (“crawling”) porque teto e piso se deslocam gradualmente "
                              "conforme a média da taxa no período."),
@@ -616,7 +616,7 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A vantagem do regime de taxas de câmbio fixas é a de ") + vm("ajustar automaticamente a "
                     "economia") + az(", o que facilita as transações internacionais")
-                    + vm(" e desonera o Banco Central do Brasil dessa incumbência") + az(".")),
+                    + vm(" e desonera") + az(" o Banco Central do Brasil ") + vm("dessa incumbência") + az(".")),
         "poucas": ("Ajuste automático e Banco Central desonerado são atributos do " + azb("câmbio flutuante")
                    + ". No " + azb("câmbio fixo") + ", o BC é obrigado a intervir sempre para sustentar a "
                    "paridade; a vantagem é a " + vd("previsibilidade") + "."),
@@ -647,8 +647,8 @@ CARDS = [
             "expande a base monetária se não houver esterilização.”</i> → CERTO",
         ])],
         "reescrita": ("A vantagem do regime de taxas de câmbio fixas é a de " + hl("reduzir a incerteza cambial")
-                      + ", o que facilita as transações internacionais" + hl(", mas obriga o Banco Central do "
-                      "Brasil a intervir continuamente no mercado de câmbio") + "."),
+                      + ", o que facilita as transações internacionais" + hl(", mas obriga")
+                      + " o Banco Central do Brasil " + hl("a intervir continuamente no mercado de câmbio") + "."),
         "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["automaticamente"], "dificuldade": 1,
         "comentario_fonte": ("Errado: no câmbio fixo a política monetária depende da entrada de divisas e nada é "
                              "automático; o BC compra o excesso de divisas e emite moeda; vantagem: controle da "
@@ -670,8 +670,8 @@ CARDS = [
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("A adoção do câmbio flutuante apresenta a desvantagem de ficar o câmbio condicionado à "
                        "movimentação especulativa dos capitais externos, que são muito voláteis")
-                    + vm(" e implicam excessivo ônus para a autoridade reguladora da estabilidade econômica do "
-                         "país") + az(".")),
+                    + vm(" e implicam excessivo ônus para a")
+                    + az(" autoridade reguladora da estabilidade econômica do país.")),
         "poucas": ("A 1ª parte é verdadeira (volatilidade e especulação são o custo do flutuante). O erro é o "
                    + vm("ônus para o Banco Central") + ": esse ônus — gastar reservas para defender a taxa — é "
                    "típico do " + azb("câmbio fixo") + "."),
@@ -702,8 +702,8 @@ CARDS = [
         ])],
         "reescrita": ("A adoção do câmbio flutuante apresenta a desvantagem de ficar o câmbio condicionado à "
                       "movimentação especulativa dos capitais externos, que são muito voláteis"
-                      + hl(", sem, porém, impor à autoridade reguladora da estabilidade econômica do país o ônus de "
-                           "defender uma paridade") + "."),
+                      + hl(", sem, porém, impor à") + " autoridade reguladora da estabilidade econômica do país"
+                      + hl(" o ônus de defender uma paridade") + "."),
         "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": ["excessivo"], "dificuldade": 2,
         "comentario_fonte": ("Errado: a 1ª parte é correta (volatilidade, especulação), a 2ª errada — o flutuante "
                              "desonera o BACEN; o ônus é do câmbio fixo; quadro de Vasconcellos (vantagens e "
@@ -1362,7 +1362,7 @@ CARDS = [
         "assertiva": ("Em regime de câmbio fixo, a autoridade monetária não pode utilizar a taxa de juros como "
                       "instrumento de defesa da paridade cambial previamente estabelecida."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("Em regime de câmbio fixo, a autoridade monetária ") + vm("não pode") + az(" utilizar a taxa "
+        "anotada": (az("Em regime de câmbio fixo, a autoridade monetária ") + vm("não") + az(" pode utilizar a taxa "
                     "de juros como instrumento de defesa da paridade cambial previamente estabelecida.")),
         "poucas": ("Os " + azb("juros") + " são uma das principais armas de defesa da paridade: subir i atrai "
                    "capitais e encarece apostas contra a moeda. No câmbio fixo, a política monetária fica "
@@ -1390,7 +1390,8 @@ CARDS = [
             "<i>“A defesa de uma paridade fixa pode exigir tanto a venda de reservas quanto a elevação dos "
             "juros.”</i> → CERTO",
         ])],
-        "reescrita": ("Em regime de câmbio fixo, a autoridade monetária " + hl("pode") + " utilizar a taxa de juros "
+        "reescrita": ("Em regime de câmbio fixo, a autoridade monetária " + "<s>não</s> pode utilizar a taxa de juros "
+
                       "como instrumento de defesa da paridade cambial previamente estabelecida."),
         "tipo_erro": ["INVERSAO", "RESTRICAO"], "moduladores": ["não pode"], "dificuldade": 1,
         "comentario_fonte": "Só o gabarito (ERRADO).",

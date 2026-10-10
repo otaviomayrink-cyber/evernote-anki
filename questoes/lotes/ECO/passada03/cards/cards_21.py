@@ -320,8 +320,8 @@ CARDS = [
                "preço que vigora internamente."),
         ],
         "dissecando": (cz("[dado alterado]") + " Item de cálculo: a banca oferece um número redondo próximo do "
-                       "correto. O 20 sai de quem lê Q<sub>d</sub> como (100 − 10)/4,5 ou soma a quantidade de "
-                       "autarquia (10) ao excesso de demanda. Conferir sempre os dois lados (Q<sub>d</sub> e "
+                       "correto. O 20 é a quantidade demandada a preço zero (100/5): armadilha para quem confunde o "
+                       "intercepto da demanda com o consumo ao preço mundial. Conferir sempre os dois lados (Q<sub>d</sub> e "
                        "Q<sub>s</sub>) separadamente."),
         "modulos": [("😈 Para dificultar", [
             "<i>“Ao preço internacional de 10, a produção doméstica do bem será nula.”</i> → CERTO",

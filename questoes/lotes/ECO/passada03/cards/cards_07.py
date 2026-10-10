@@ -304,9 +304,11 @@ CARDS += [
                       "comprometer o equilíbrio estabelecido."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("No regime de <i>currency board</i>, o Banco Central ")
-                    + vm("tem liberdade para imprimir moeda nacional sempre que necessário, desde que mantenha")
+                    + vm("tem liberdade para imprimir") + az(" moeda nacional ")
+                    + vm("sempre que necessário, desde que mantenha")
                     + az(" a paridade cambial fixa com uma moeda estrangeira forte, como o dólar, o que ")
-                    + vm("expande a quantidade de moeda em circulação sem comprometer o equilíbrio estabelecido")
+                    + vm("expande") + az(" a quantidade de moeda em circulação ")
+                    + vm("sem comprometer o equilíbrio estabelecido")
                     + az(".")),
         "poucas": ("No " + azb("currency board") + " (caixa de conversão), cada unidade de moeda nacional precisa "
                    "de " + vd("lastro em reservas") + " na moeda-âncora: não há emissão discricionária. A base "
@@ -343,10 +345,11 @@ CARDS += [
             "<i>“Na dolarização oficial, o país mantém moeda própria lastreada em dólares.”</i> → ERRADO (troca "
             "de conceito: isso é o currency board)",
         ])],
-        "reescrita": ("No regime de <i>currency board</i>, o Banco Central " + hl("só pode emitir moeda nacional "
-                      "com lastro em reservas, para manter") + " a paridade cambial fixa com uma moeda estrangeira "
-                      "forte, como o dólar, o que " + hl("subordina a quantidade de moeda em circulação ao fluxo "
-                      "de divisas") + "."),
+        "reescrita": ("No regime de <i>currency board</i>, o Banco Central " + hl("só pode emitir") + " moeda nacional "
+                      + hl("com lastro em reservas, para manter") + " a paridade cambial fixa com uma moeda "
+                      "estrangeira forte, como o dólar, o que " + hl("subordina") + " a quantidade de moeda em "
+                      "circulação " + hl("ao fluxo de divisas") + "."),
+
         "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": ["sempre que necessário"], "dificuldade": 1,
         "comentario_fonte": "Currency board: paridade rígida, emissão restrita às reservas, perda de autonomia "
                             "monetária; vários comentários empilhados com tipologia de regimes do FMI e casos "

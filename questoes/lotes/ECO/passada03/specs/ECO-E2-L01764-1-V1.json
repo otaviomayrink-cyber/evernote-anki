@@ -1,0 +1,136 @@
+{
+ "id": "ECO-E2-L01764-1-V1",
+ "uso": "verso",
+ "legenda": "País pequeno exportador ao preço mundial Pm. O subsídio à produção desloca a oferta de O₁ para O₂: ao mesmo Pm, a produção sobe de q₁ˢ para q₂ˢ, o consumo interno (qᵈ) não muda e as exportações (oferta − demanda) aumentam.",
+ "eixos": {
+  "x": "q",
+  "y": "p",
+  "xmax": 10,
+  "ymax": 10
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    9.5
+   ],
+   "p2": [
+    9.5,
+    0.5
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "S1",
+   "tipo": "reta",
+   "p1": [
+    0.5,
+    0.5
+   ],
+   "p2": [
+    8.0,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "S2",
+   "tipo": "reta",
+   "p1": [
+    2.0,
+    0.5
+   ],
+   "p2": [
+    9.5,
+    9.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O₂"
+  },
+  {
+   "id": "Pw",
+   "tipo": "horizontal",
+   "y": 7,
+   "x": [
+    0,
+    9.8
+   ],
+   "familia": "referencia",
+   "rotulo": "Pm"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "B",
+   "intersecao": [
+    "D",
+    "Pw"
+   ],
+   "marcar": false,
+   "projetar": "x",
+   "rotulo_x": "qᵈ"
+  },
+  {
+   "id": "A1",
+   "intersecao": [
+    "S1",
+    "Pw"
+   ],
+   "marcar": false,
+   "projetar": "x",
+   "rotulo_x": "q₁ˢ"
+  },
+  {
+   "id": "A2",
+   "intersecao": [
+    "S2",
+    "Pw"
+   ],
+   "marcar": false,
+   "projetar": "x",
+   "rotulo_x": "q₂ˢ"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "S1",
+   "para": "S2",
+   "sentido": "direita",
+   "em_y": 3
+  }
+ ],
+ "setas": [
+  {
+   "de": [
+    "B.x",
+    7.9
+   ],
+   "para": [
+    "A2.x",
+    7.9
+   ],
+   "estilo": "<|-|>"
+  }
+ ],
+ "checar": [
+  "A2.x > A1.x",
+  "B.x < A1.x",
+  "(A2.x - B.x) > (A1.x - B.x)"
+ ],
+ "textos": [
+  {
+   "xy": [
+    5.0,
+    8.35
+   ],
+   "texto": "exportações",
+   "cor": "vermelho",
+   "negrito": true
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "id": "ECO-E3-L00120-1-V1",
+ "uso": "verso",
+ "legenda": "Com a tarifa de 9, o importado chega a 9 + 9 = 18, acima do preço de autarquia (15): a tarifa é proibitiva, ninguém importa e o mercado volta ao equilíbrio interno E (Q = 10, P = 15).",
+ "eixos": {
+  "x": "Q",
+  "y": "P",
+  "xmax": 30,
+  "ymax": 22,
+  "numeros": false
+ },
+ "curvas": [
+  {
+   "id": "D",
+   "tipo": "funcao",
+   "expr": "20 - x/2",
+   "dominio": [
+    0,
+    29
+   ],
+   "familia": "demanda",
+   "rotulo": "D"
+  },
+  {
+   "id": "S",
+   "tipo": "funcao",
+   "expr": "1.5*x",
+   "dominio": [
+    0,
+    13.5
+   ],
+   "familia": "oferta",
+   "rotulo": "O nacional"
+  },
+  {
+   "id": "Pw",
+   "tipo": "horizontal",
+   "y": 9,
+   "x": [
+    0,
+    29
+   ],
+   "familia": "referencia",
+   "rotulo": "Pm = 9"
+  },
+  {
+   "id": "Pt",
+   "tipo": "horizontal",
+   "y": 18,
+   "x": [
+    0,
+    29
+   ],
+   "familia": "destaque",
+   "rotulo": "Pm + t = 18",
+   "tracejada": true
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E",
+   "intersecao": [
+    "D",
+    "S"
+   ],
+   "rotulo": "E",
+   "projetar": true,
+   "rotulo_x": "10",
+   "rotulo_y": "15",
+   "rotulo_desloc": [
+    -10,
+    14
+   ]
+  },
+  {
+   "id": "A",
+   "intersecao": [
+    "S",
+    "Pw"
+   ],
+   "marcar": false,
+   "projetar": "x",
+   "rotulo_x": "6"
+  },
+  {
+   "id": "B",
+   "intersecao": [
+    "D",
+    "Pw"
+   ],
+   "marcar": false,
+   "projetar": "x",
+   "rotulo_x": "22"
+  }
+ ],
+ "checar": [
+  "abs(E.x - 10) < 0.01",
+  "abs(E.y - 15) < 0.01",
+  "Pt.ys[0] > E.y",
+  "abs(B.x - A.x - 16) < 0.01"
+ ]
+}

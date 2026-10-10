@@ -389,7 +389,7 @@ CARDS = [
         "assertiva": ("O capital humano é irrelevante nos modelos de crescimento de inspiração clássica, pois "
                       "considera-se que sua contribuição se limita à reprodução da força de trabalho."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (az("O capital humano ") + vm("é irrelevante") + az(" nos modelos de crescimento de inspiração "
+        "anotada": (az("O capital humano é ") + vm("irrelevante") + az(" nos modelos de crescimento de inspiração "
                        "clássica, pois ") + vm("considera-se que sua contribuição se limita à reprodução da força "
                                               "de trabalho") + az(".")),
         "poucas": ("Desde " + oc("Adam Smith") + " as habilidades adquiridas pelos trabalhadores contam como "
@@ -421,7 +421,7 @@ CARDS = [
             "<i>“O modelo de Solow ampliado por Mankiw, Romer e Weil exclui o capital humano da função de "
             "produção.”</i> → ERRADO (é justamente o que ele inclui)",
         ])],
-        "reescrita": ("O capital humano " + hl("não") + " é irrelevante nos modelos de crescimento de inspiração "
+        "reescrita": ("O capital humano é " + hl("relevante") + " nos modelos de crescimento de inspiração "
                       "clássica, pois " + hl("já Adam Smith contava as habilidades adquiridas dos trabalhadores "
                       "como capital, fonte de maior produtividade") + "."),
         "tipo_erro": ["GENERALIZACAO", "NEXO_INDEVIDO"], "moduladores": ["irrelevante", "se limita"],

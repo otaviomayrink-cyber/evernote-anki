@@ -1570,8 +1570,7 @@ CARDS = [
             "CERTO",
         ])],
         "reescrita": ("Uma desvalorização cambial tende a elevar o valor das reservas internacionais em moeda "
-                      "doméstica. " + hl("Ainda") + " assim, em resposta
- a uma desvalorização da moeda doméstica, "
+                      "doméstica. " + hl("Ainda") + " assim, em resposta a uma desvalorização da moeda doméstica, "
                       + hl("não haverá, por si só,") + " expansão da base monetária."),
         "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["sendo assim", "haverá"], "dificuldade": 2,
         "comentario_fonte": ("A desvalorização eleva o valor contábil das reservas, mas o ganho patrimonial não cria "

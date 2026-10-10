@@ -853,7 +853,7 @@ CARDS = [
                       "compensar qualquer efeito sobre os preços, elemento que atua como outro diferenciador em "
                       "relação aos impostos."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
-        "anotada": (vm("Apesar de as quotas imporem") + az(" um limite ao número de unidades que podem ser "
+        "anotada": (vm("Apesar de") + az(" as quotas ") + vm("imporem") + az(" um limite ao número de unidades que podem ser "
                                                            "importadas, elas ")
                     + vm("não afetam os preços do produto comercializado, já que a taxa de câmbio se ajusta para "
                          "compensar qualquer efeito sobre os preços, elemento que atua como outro diferenciador em "
@@ -887,7 +887,7 @@ CARDS = [
             "<i>“Sob quota, um aumento da demanda doméstica eleva as importações, mantendo o preço "
             "constante.”</i> → ERRADO (inversão: isso ocorre com a tarifa; com cota, sobe o preço)",
         ])],
-        "reescrita": (hl("Como as quotas impõem") + " um limite ao número de unidades que podem ser importadas, "
+        "reescrita": (hl("Como") + " as quotas " + hl("impõem") + " um limite ao número de unidades que podem ser importadas, "
                       "elas " + hl("elevam o preço interno do produto comercializado, como faria a tarifa "
                       "equivalente; o que as diferencia dos impostos é o destino da renda gerada, que vai a quem "
                       "detém as licenças, e não ao governo") + "."),
@@ -912,7 +912,7 @@ CARDS = [
                       "da liberalização comercial."),
         "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
         "anotada": (az("Em conformidade com as normas da OMC, o capítulo de Defesa Comercial do Acordo ")
-                    + vm("limita a possibilidade de aplicação de") + az(" medidas antidumping e compensatórias "
+                    + vm("limita a possibilidade") + az(" de aplicação de medidas antidumping e compensatórias "
                                                                        "entre as partes")
                     + vm(", em favor da liberalização comercial") + az(".")),
         "poucas": ("O capítulo de defesa comercial do acordo Mercosul–UE " + azb("reafirma") + " os direitos e "
@@ -952,7 +952,7 @@ CARDS = [
             ]),
         ],
         "reescrita": ("Em conformidade com as normas da OMC, o capítulo de Defesa Comercial do Acordo "
-                      + hl("preserva o direito de aplicação de") + " medidas antidumping e compensatórias entre as "
+                      + hl("preserva o direito") + " de aplicação de medidas antidumping e compensatórias entre as "
                       "partes" + hl(", observados os acordos multilaterais") + "."),
         "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": ("O capítulo de Defesa Comercial reafirma os direitos de aplicação de antidumping e "
@@ -1084,7 +1084,7 @@ CARDS = [
         ])],
         "reescrita": ("A adoção de normas técnicas rigorosas, como certificações ambientais ou padrões de "
                       "qualidade, visa principalmente garantir a segurança dos consumidores e "
-                      + hl("costuma representar") + " um desafio significativo para os países em desenvolvimento "
+                      + hl("<s>não</s> costuma representar") + " um desafio significativo para os países em desenvolvimento "
                       "no acesso aos mercados dos países mais avançados."),
         "tipo_erro": ["INVERSAO", "JUIZO_INDEVIDO"], "moduladores": ["principalmente", "não costuma"],
         "dificuldade": 1,

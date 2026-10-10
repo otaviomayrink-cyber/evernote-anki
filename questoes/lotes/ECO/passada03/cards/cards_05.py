@@ -1275,8 +1275,7 @@ CARDS = [
         ])],
         "reescrita": ("No regime de Bretton Woods, os países membros " + hl("podiam") + " realizar desvalorizações cambiais"
                       + hl(", com consulta ao FMI, em") + " casos de “desequilíbrio fundamental”, devendo "
-                      "manter a paridade fixa " + hl("nos demais casos") + " para
- evitar as desvalorizações "
+                      "manter a paridade fixa " + hl("nos demais casos") + " para evitar as desvalorizações "
                       "competitivas dos anos 1930."),
         "tipo_erro": ["GENERALIZACAO", "CONTRADICAO"], "moduladores": ["proibidos", "mesmo", "a qualquer custo"],
         "dificuldade": 1,
@@ -1644,7 +1643,7 @@ CARDS = [
             "financiamento de prazo mais longo para choques climáticos e pandêmicos — mas isso não altera seu "
             "mandato principal. ⏳ (out/2026)",
             "O " + rx("Brasil") + " recorreu ao FMI nas crises da dívida (anos 1980) e em 1998–2002; quitou "
-            "antecipadamente a dívida com o Fundo em " + vd("2005") + " e hoje é credor da instituição.",
+            "antecipadamente a dívida com o Fundo em " + vd("2005") + " e hoje é credor da instituição ⏳ (out/2026).",
             vm("Regra-âncora: FMI = balanço de pagamentos e estabilidade; Banco Mundial = projetos e "
                "desenvolvimento."),
         ],

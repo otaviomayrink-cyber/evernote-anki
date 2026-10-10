@@ -735,4 +735,300 @@ CARDS = [
                           {"ref": "IMAGEM 460", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E3-L00326
+    {
+        "id": "ECO-E3-L00326-1", "fonte_ref": "E3-L00326", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TQ,
+        "rotulo_item": "Item",
+        "assertiva": ("A tarifa lump sum, ou tarifa específica, é um imposto de valor fixo que independe do valor "
+                      "do transacionado, dependendo apenas do número de unidades recebida pelo país importador."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A tarifa lump sum, ou tarifa específica, é um imposto de <u>valor fixo</u> que "
+                      "<u>independe do valor</u> do transacionado, dependendo apenas do <u>número de unidades</u> "
+                      "recebida pelo país importador."),
+        "poucas": ("A " + azb("tarifa específica") + " cobra um valor monetário fixo por unidade física (US$ 2 "
+                   "por par, R$ 0,50 por litro), qualquer que seja o preço do bem; a " + azb("ad valorem")
+                   + " cobra um percentual do valor."),
+        "destrinchando": [
+            "Tipos de tarifa pela base de cálculo: " + azb("ad valorem") + " (percentual sobre o valor aduaneiro, "
+            "em geral CIF — ex.: 20%); " + azb("específica") + " (valor fixo por unidade, peso ou volume); "
+            + azb("mista ou composta") + " (combinação das duas, ex.: 10% + US$ 2 por unidade).",
+            "Efeitos da específica: a proteção, em termos percentuais, <b>sobe quando o preço mundial cai</b> e "
+            "<b>se corrói com a inflação</b> (o valor nominal fica parado). É " + azb("regressiva") + " dentro "
+            "da mesma categoria: pesa mais, proporcionalmente, sobre a versão barata do produto, o que incentiva "
+            "importar a variedade de maior valor (efeito <i>upgrading</i>).",
+            "A ad valorem acompanha preço e inflação e é mais transparente para comparação internacional; em "
+            "compensação, depende da valoração aduaneira e abre espaço ao subfaturamento. A específica é simples "
+            "de cobrar (basta contar ou pesar).",
+            "Sobre o rótulo do item: na teoria tributária, <i>lump sum</i> designa o imposto de "
+            + azb("montante fixo") + " que não depende de nenhuma decisão do contribuinte (e por isso não "
+            "distorce). A tarifa específica depende da quantidade importada, logo não é <i>lump sum</i> nesse "
+            "sentido estrito; o item usa o termo como sinônimo informal de “valor fixo por unidade”, e a "
+            "definição que dá é a correta.",
+            "No " + rx("Brasil") + ", o Imposto de Importação segue a TEC do Mercosul e é essencialmente "
+            "<b>ad valorem</b>.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " A definição está certa; o ruído é o rótulo “lump sum”, "
+                       "impreciso na teoria, que pode levar o candidato a marcar ERRADO por desconfiança. Julgue "
+                       "pelo conteúdo: valor fixo por unidade, independente do preço = específica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A tarifa específica mantém constante a proteção efetiva quando o preço internacional do bem "
+            "cai.”</i> → ERRADO (inversão: com preço menor, a proteção percentual aumenta)",
+            "<i>“A tarifa ad valorem é calculada como percentual do valor da mercadoria importada.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["apenas"], "dificuldade": 1,
+        "comentario_fonte": ("Tarifa específica: valor fixo por unidade física, independente do preço; ad valorem: "
+                             "percentual do valor; composta: combinação. Ressalva: “lump sum” não é a nomenclatura "
+                             "técnica (em teoria, imposto de montante fixo total)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 461", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 462", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 463", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["nota_redacao: termo “lump sum” impreciso no enunciado; gabarito mantido por a definição dada "
+                    "ser a da tarifa específica"],
+    },
+    # ------------------------------------------------------------------ E3-L00327
+    {
+        "id": "ECO-E3-L00327-1", "fonte_ref": "E3-L00327", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TQ,
+        "rotulo_item": "Item",
+        "assertiva": ("A quota de importação tem o mesmo objetivo de um imposto sobre importações, contudo o peso "
+                      "morto causado pela sua adoção não é parcialmente compensado com arrecadação tributária, o "
+                      "que a difere dos impostos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A quota de importação tem o mesmo objetivo de um imposto sobre importações, contudo o peso "
+                      "morto causado pela sua adoção <u>não é parcialmente compensado com arrecadação "
+                      "tributária</u>, o que a difere dos impostos."),
+        "poucas": ("Cota e tarifa equivalentes geram o mesmo preço, o mesmo peso morto e o mesmo retângulo entre "
+                   "os preços; na tarifa ele é " + azb("receita do governo") + "; na cota, " + azb("renda da cota")
+                   + " de quem detém as licenças."),
+        "destrinchando": [
+            "Objetivo comum: elevar o preço interno, reduzir importações e proteger a produção nacional. Em "
+            "concorrência perfeita, para cada cota existe uma " + azb("tarifa equivalente") + " que produz o "
+            "mesmo preço e as mesmas quantidades (" + oc("Jagdish Bhagwati") + ", 1965).",
+            "A diferença está no retângulo (P<sub>interno</sub> − P<sub>m</sub>) × importações: com tarifa, é "
+            + azb("arrecadação") + " que fica com o Estado; com cota, é " + azb("renda da cota") + " (<i>quota "
+            "rent</i>), apropriada por quem tem o direito de importar.",
+            "Destino da renda da cota: (i) licenças gratuitas a importadores nacionais → fica no país, mas com "
+            "privado; (ii) " + azb("restrição voluntária de exportação") + " (o exportador controla a cota) → vai "
+            "para o estrangeiro e a perda nacional aumenta; (iii) " + azb("leilão de licenças") + " → vira "
+            "receita pública, e a cota fica economicamente idêntica à tarifa.",
+            "Além disso, a cota estimula " + azb("rent-seeking") + " (gasto de recursos para obter licenças), "
+            "que pode dissipar a renda e ampliar a perda social, e trava a importação mesmo se a demanda crescer, "
+            "fazendo o preço subir mais que sob a tarifa.",
+            "Por isso a OMC prefere tarifas: o " + vd("art. XI do GATT") + " proíbe, em regra, restrições "
+            "quantitativas; o Acordo sobre Agricultura converteu cotas em tarifas (" + azb("tarificação") + ").",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Formulação correta do resultado-padrão. O ponto "
+                       "decisivo é ler “não é parcialmente compensado com arrecadação tributária”: o peso morto "
+                       "é o mesmo; o que muda é o destino do retângulo. A armadilha seria afirmar que a cota gera "
+                       "peso morto <b>maior</b> que a tarifa equivalente (só ocorre com rent-seeking ou "
+                       "demanda crescente)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se as licenças de importação forem leiloadas pelo governo, a cota produz efeitos de bem-estar "
+            "equivalentes aos da tarifa.”</i> → CERTO",
+            "<i>“A restrição voluntária de exportação é menos custosa para o país importador do que a tarifa "
+            "equivalente.”</i> → ERRADO (inversão: a renda da cota vai para o exportador estrangeiro)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["parcialmente"], "dificuldade": 2,
+        "comentario_fonte": ("Tarifa e quota protegem igualmente; na tarifa o retângulo é arrecadação, na quota é "
+                             "renda de quota (licenças gratuitas, VERs, leilão); OMC prefere tarifas; rent-seeking."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 464", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00328
+    {
+        "id": "ECO-E3-L00328-1", "fonte_ref": "E3-L00328", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_TQ,
+        "rotulo_item": "Item",
+        "assertiva": ("Apesar de as quotas imporem um limite ao número de unidades que podem ser importadas, elas "
+                      "não afetam os preços do produto comercializado, já que a taxa de câmbio se ajusta para "
+                      "compensar qualquer efeito sobre os preços, elemento que atua como outro diferenciador em "
+                      "relação aos impostos."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (vm("Apesar de as quotas imporem") + az(" um limite ao número de unidades que podem ser "
+                                                           "importadas, elas ")
+                    + vm("não afetam os preços do produto comercializado, já que a taxa de câmbio se ajusta para "
+                         "compensar qualquer efeito sobre os preços, elemento que atua como outro diferenciador em "
+                         "relação aos impostos") + az(".")),
+        "poucas": ("A cota restringe a oferta disponível e " + azb("eleva o preço interno") + ", exatamente como "
+                   "a tarifa equivalente. Câmbio não neutraliza o efeito sobre um produto específico, e preço não "
+                   "é o que diferencia cota de tarifa."),
+        "destrinchando": [
+            "Mecanismo: com a importação limitada, a oferta total (nacional + cota) fica abaixo da demanda ao "
+            "preço mundial; o preço interno sobe até que Q<sub>D</sub> − Q<sub>S</sub> = cota. Resultado: "
+            + vd("P ↑") + ", consumo ↓, produção nacional ↑.",
+            "O câmbio é um preço macroeconômico, determinado por fluxos de comércio e de capitais, juros, "
+            "expectativas. Uma cota sobre um bem altera marginalmente a demanda por divisas e não tem como "
+            "“devolver” o preço daquele bem ao nível anterior. Mesmo em equilíbrio geral, eventual apreciação "
+            "cambial afeta <b>todos</b> os bens comerciáveis, e não anula a cunha criada pela cota no bem "
+            "restringido.",
+            "Em concorrência perfeita, cota e tarifa são " + azb("equivalentes") + " em preço e quantidade ("
+            + oc("Bhagwati") + "). As diferenças reais são outras: o destino do retângulo (receita na tarifa, "
+            + azb("renda da cota") + " na cota), a resposta a choques de demanda (a cota trava a quantidade e "
+            "deixa o preço subir mais) e, com monopólio doméstico, a cota pode dar poder de mercado que a "
+            "tarifa não dá.",
+            vm("Regra-âncora: cota afeta preço como a tarifa; o que muda é quem fica com a renda."),
+        ],
+        "dissecando": (cz("[nexo indevido · troca de conceito]") + " O item inventa um mecanismo (o câmbio "
+                       "neutraliza o preço) e, sobre ele, cria uma falsa diferença entre cota e tarifa. Pista: a "
+                       "concessão “apesar de imporem um limite” já denuncia a incoerência — limitar a quantidade "
+                       "sem afetar o preço exigiria demanda perfeitamente inelástica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em concorrência perfeita, uma quota de importação e a tarifa equivalente produzem o mesmo preço "
+            "doméstico.”</i> → CERTO",
+            "<i>“Sob quota, um aumento da demanda doméstica eleva as importações, mantendo o preço "
+            "constante.”</i> → ERRADO (inversão: isso ocorre com a tarifa; com cota, sobe o preço)",
+        ])],
+        "reescrita": (hl("Como as quotas impõem") + " um limite ao número de unidades que podem ser importadas, "
+                      "elas " + hl("elevam o preço interno do produto comercializado, como faria a tarifa "
+                      "equivalente; o que as diferencia dos impostos é o destino da renda gerada, que vai a quem "
+                      "detém as licenças, e não ao governo") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": ["qualquer"], "dificuldade": 1,
+        "comentario_fonte": ("Quotas afetam preços (restrição de oferta eleva o preço interno); o ajuste cambial "
+                             "automático não tem fundamento; cota e tarifa são equivalentes em preço e quantidade "
+                             "(Bhagwati), diferindo na apropriação da renda."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 465", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["texto_corrigido: “podem sem importadas” → “podem ser importadas” (erro de digitação da fonte)"],
+    },
+    # ------------------------------------------------------------------ E3-L00361
+    {
+        "id": "ECO-E3-L00361-1", "fonte_ref": "E3-L00361", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Dezembro/2024", "ano": 2024,
+        "cacd": False, "errei": True,
+        "comando": CMD_MSUE,
+        "excerto": EXC_MSUE,
+        "rotulo_item": "Item",
+        "assertiva": ("Em conformidade com as normas da OMC, o capítulo de Defesa Comercial do Acordo limita a "
+                      "possibilidade de aplicação de medidas antidumping e compensatórias entre as partes, em favor "
+                      "da liberalização comercial."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em conformidade com as normas da OMC, o capítulo de Defesa Comercial do Acordo ")
+                    + vm("limita a possibilidade de aplicação de") + az(" medidas antidumping e compensatórias "
+                                                                       "entre as partes")
+                    + vm(", em favor da liberalização comercial") + az(".")),
+        "poucas": ("O capítulo de defesa comercial do acordo Mercosul–UE " + azb("reafirma") + " os direitos e "
+                   "obrigações da OMC: as partes continuam podendo aplicar antidumping e medidas compensatórias, "
+                   "observados os acordos multilaterais."),
+        "destrinchando": [
+            "Acordos de livre comércio, em regra, <b>preservam</b> os instrumentos de " + azb("defesa "
+            "comercial") + " — antidumping, medidas compensatórias e salvaguardas — nos termos do " + vd("art. VI "
+            "do GATT") + ", do " + azb("Acordo Antidumping") + " e do " + azb("ASMC") + ". Isso não contraria a "
+            "liberalização: são remédios contra comércio desleal (dumping, subsídio), não barreiras.",
+            "O que esses capítulos costumam acrescentar é procedimento: transparência, notificação prévia, "
+            "consultas e troca de informações antes da aplicação. O acordo Mercosul–UE também prevê "
+            + azb("salvaguardas bilaterais") + " para surtos de importação decorrentes da própria redução "
+            "tarifária no período de transição.",
+            "Exceção que confirma a regra: só em integrações profundas a defesa comercial intrabloco desaparece "
+            "— na UE, o mercado único substituiu o antidumping entre membros pelas regras de concorrência e de "
+            "auxílios de Estado.",
+            "Contexto ⏳ (out/2026): as negociações foram concluídas politicamente em " + vd("dezembro de 2024")
+            + " (Cúpula de Montevidéu), após mais de 25 anos; a entrada em vigor depende das etapas de "
+            "assinatura e ratificação nas partes, e o acordo segue cercado de resistências agrícolas europeias.",
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " O item inverte o conteúdo do capítulo (preserva → "
+                       "limita) e acrescenta uma justificativa de aparência lógica (“em favor da liberalização”). "
+                       "Pista: “em conformidade com as normas da OMC” combina com <b>preservar</b> os direitos "
+                       "multilaterais, não com restringi-los."),
+        "modulos": [
+            ("🟣 Posição do Brasil", [
+                rx("O Brasil") + " é usuário frequente de antidumping (investigação pela Secex, decisão pelo "
+                "Gecex/Camex) e buscou, na negociação, manter intacto esse instrumental e garantir salvaguardas "
+                "para setores sensíveis da indústria.",
+            ]),
+            ("😈 Para dificultar", [
+                "<i>“O acordo Mercosul–UE reafirma os direitos e obrigações das partes no âmbito da OMC em matéria "
+                "de antidumping e medidas compensatórias.”</i> → CERTO",
+                "<i>“O acordo elimina a possibilidade de salvaguardas entre as partes durante o período de "
+                "transição.”</i> → ERRADO (inversão: prevê salvaguardas bilaterais)",
+            ]),
+        ],
+        "reescrita": ("Em conformidade com as normas da OMC, o capítulo de Defesa Comercial do Acordo "
+                      + hl("preserva o direito de aplicação de") + " medidas antidumping e compensatórias entre as "
+                      "partes" + hl(", observados os acordos multilaterais") + "."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("O capítulo de Defesa Comercial reafirma os direitos de aplicação de antidumping e "
+                             "medidas compensatórias conforme a OMC; ALCs não restringem esses instrumentos, apenas "
+                             "acrescentam transparência e diálogo prévio."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 514", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 515", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetia a assertiva)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E3-L00395
+    {
+        "id": "ECO-E3-L00395-1", "fonte_ref": "E3-L00395", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Novembro/2024", "ano": 2024,
+        "cacd": False, "errei": False,
+        "comando": CMD_NOV,
+        "excerto": EXC_NOV,
+        "rotulo_item": "Item",
+        "assertiva": ("Adoção de acordos comerciais regionais e a implementação de normas técnicas são formas de "
+                      "barreiras não-tarifárias que, ao facilitar a integração e a harmonização de mercados entre "
+                      "países membros, podem resultar em distúrbios nas relações comerciais com países "
+                      "não-participantes, potencialmente criando efeitos de exclusão ou distorcendo a competição "
+                      "internacional, ao favorecer a cooperação intrabloco em detrimento das trocas com o resto do "
+                      "mundo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("Adoção de acordos comerciais regionais e a implementação de normas técnicas são formas de "
+                      "<u>barreiras não-tarifárias</u> que, ao facilitar a integração e a harmonização de mercados "
+                      "entre países membros, <u>podem</u> resultar em distúrbios nas relações comerciais com países "
+                      "não-participantes, potencialmente criando efeitos de exclusão ou distorcendo a competição "
+                      "internacional, ao favorecer a cooperação intrabloco em detrimento das trocas com o resto do "
+                      "mundo."),
+        "poucas": ("Acordos regionais e normas harmonizadas no bloco podem gerar " + azb("desvio de comércio")
+                   + " e exclusão de terceiros — o núcleo do item está certo, protegido por “podem” e "
+                   "“potencialmente”."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "classificar “acordos comerciais regionais” como barreira não tarifária é impreciso: "
+                          "acordo regional é forma de integração (preferência tarifária), e não instrumento de "
+                          "barreira; barreiras não tarifárias são cotas, licenças, normas técnicas, medidas "
+                          "sanitárias, exigências de conteúdo local. Numa prova CEBRASPE, a enumeração poderia "
+                          "levar ao ERRADO; o gabarito CERTO se apoia nos efeitos (desvio de comércio, exclusão) "
+                          "e nos moduladores.")],
+        "destrinchando": [
+            oc("Jacob Viner") + " (<i>The Customs Union Issue</i>, 1950): a integração regional gera "
+            + azb("criação de comércio") + " (produção cara de um membro substituída por importação mais barata "
+            "de outro membro — ganho) e " + azb("desvio de comércio") + " (importação de terceiro eficiente "
+            "substituída por importação de membro menos eficiente, só porque este não paga tarifa — perda). O "
+            "efeito líquido é ambíguo.",
+            "Harmonização de " + azb("normas técnicas") + " e reconhecimento mútuo dentro do bloco barateiam o "
+            "comércio intrabloco, mas o produtor de fora continua tendo de certificar-se separadamente — é um "
+            "canal não tarifário de exclusão.",
+            "Na OMC, o " + vd("art. XXIV do GATT") + " admite uniões aduaneiras e áreas de livre comércio se "
+            "cobrirem “substancialmente todo o comércio” e não elevarem as barreiras a terceiros; a "
+            + azb("Cláusula de Habilitação") + " (" + vd("1979") + ") permite acordos entre países em "
+            "desenvolvimento (base do Mercosul). Normas técnicas seguem o " + azb("Acordo TBT") + " (e o SPS, "
+            "para sanitárias), que exige não discriminação e não serem mais restritivas que o necessário.",
+            "Contraponto: o “regionalismo aberto” da Cepal (anos 1990) via os blocos como degrau para a inserção "
+            "global, não como fortaleza.",
+        ],
+        "dissecando": (cz("[modulador relativo · paráfrase fiel]") + " O efeito descrito (desvio de comércio, "
+                       "exclusão) é real, e “podem” + “potencialmente” protegem a afirmação. O ponto frágil é a "
+                       "classificação inicial; em itens longos, separe a premissa conceitual (o que é BNT) do "
+                       "efeito (o que pode acontecer)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Acordos regionais de comércio sempre elevam o bem-estar mundial, por eliminarem tarifas entre os "
+            "membros.”</i> → ERRADO (modulador absoluto: o desvio de comércio pode superar a criação)",
+            "<i>“O Acordo TBT da OMC exige que regulamentos técnicos não sejam mais restritivos ao comércio do "
+            "que o necessário para alcançar um objetivo legítimo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO", "PARAFRASE_FIEL"], "moduladores": ["podem", "potencialmente"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Acordos regionais podem gerar desvio de comércio, favorecendo membros ineficientes em "
+                             "detrimento de não membros mais eficientes."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: “acordos comerciais regionais” não são, a rigor, barreira não tarifária; "
+                    "ERRADO seria defensável pela classificação"],
+    },
 ]

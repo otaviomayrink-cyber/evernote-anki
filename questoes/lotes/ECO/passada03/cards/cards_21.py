@@ -292,4 +292,659 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00553
+    {
+        "id": "ECO-E2-L00553-1", "fonte_ref": "E2-L00553", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MERC,
+        "rotulo_item": "Item",
+        "assertiva": ("Assumindo que o preço internacional do bem seja de 10 unidades monetárias, o país importará 20 "
+                      "unidades desse bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Assumindo que o preço internacional do bem seja de 10 unidades monetárias, o país importará ")
+                    + vm("20") + az(" unidades desse bem.")),
+        "poucas": ("Ao preço 10: Q<sub>d</sub> = " + vd("18") + " e Q<sub>s</sub> = " + vd("0") + ". Importação = "
+                   "18 − 0 = " + vd("18") + " unidades, não 20."),
+        "destrinchando": [
+            "Passo 1 — autarquia: 100 − 5Q = 10 + 4Q → " + vd("Q = 10, P = 50") + ". Como o preço internacional "
+            "(10) está abaixo do preço de autarquia (50), o país abre-se como <b>importador</b>.",
+            "Passo 2 — demanda ao preço mundial: 10 = 100 − 5Q<sub>d</sub> → " + vd("Q<sub>d</sub> = 18") + ".",
+            "Passo 3 — oferta ao preço mundial: 10 = 10 + 4Q<sub>s</sub> → " + vd("Q<sub>s</sub> = 0") + ". O "
+            "preço 10 é exatamente o intercepto da oferta inversa: abaixo dele nenhum produtor doméstico produz. "
+            "Com livre comércio, a produção nacional desaparece.",
+            "Passo 4 — importação = Q<sub>d</sub> − Q<sub>s</sub> = " + vd("18") + ". O consumo inteiro é "
+            "atendido de fora.",
+            "Cuidado com a forma das curvas: aqui elas vêm <b>inversas</b> (P em função de Q). Para achar "
+            "quantidades a um preço dado, isole Q: Q<sub>d</sub> = (100 − P)/5 e Q<sub>s</sub> = (P − 10)/4.",
+            vm("Regra-âncora: importação = Q<sub>d</sub>(P<sub>m</sub>) − Q<sub>s</sub>(P<sub>m</sub>), sempre ao "
+               "preço que vigora internamente."),
+        ],
+        "dissecando": (cz("[dado alterado]") + " Item de cálculo: a banca oferece um número redondo próximo do "
+                       "correto. O 20 sai de quem lê Q<sub>d</sub> como (100 − 10)/4,5 ou soma a quantidade de "
+                       "autarquia (10) ao excesso de demanda. Conferir sempre os dois lados (Q<sub>d</sub> e "
+                       "Q<sub>s</sub>) separadamente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Ao preço internacional de 10, a produção doméstica do bem será nula.”</i> → CERTO",
+            "<i>“Ao preço internacional de 10, o país exportará o bem, pois o preço externo é menor que o de "
+            "autarquia.”</i> → ERRADO (inversão: preço externo menor → importa)",
+        ])],
+        "reescrita": ("Assumindo que o preço internacional do bem seja de 10 unidades monetárias, o país importará "
+                      + hl("18") + " unidades desse bem."),
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("100 − 5Q = 10 + 4Q → Q = 10, P = 50. Ao preço 10: Qd = 18, Qs = 0; importação = 18 "
+                             "unidades."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 089", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00554
+    {
+        "id": "ECO-E2-L00554-1", "fonte_ref": "E2-L00554", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MERC,
+        "rotulo_item": "Item",
+        "assertiva": ("Caso seja imposta uma cota de 9 unidades de importação, o preço praticado no mercado doméstico "
+                      "será de 30 unidades monetárias."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Caso seja imposta uma cota de 9 unidades de importação, o preço praticado no mercado "
+                      "doméstico será de <u>30</u> unidades monetárias."),
+        "poucas": ("Com a cota, o preço interno sobe até que " + vd("Q<sub>d</sub> − Q<sub>s</sub> = 9") + ": "
+                   "(100 − P)/5 − (P − 10)/4 = 9 → " + vd("P = 30") + " (Q<sub>d</sub> = 14, Q<sub>s</sub> = 5)."),
+        "destrinchando": [
+            "Sem restrição (preço mundial 10), o país importaria " + vd("18") + " unidades. A cota de 9 "
+            "<b>morde</b> (9 &lt; 18): a oferta disponível internamente passa a ser a oferta doméstica + 9, e o "
+            "preço interno sobe acima do mundial.",
+            "Conta: Q<sub>d</sub> = (100 − P)/5 e Q<sub>s</sub> = (P − 10)/4. Exigindo Q<sub>d</sub> − "
+            "Q<sub>s</sub> = 9 e multiplicando por 20: 4(100 − P) − 5(P − 10) = 180 → 450 − 9P = 180 → "
+            + vd("P = 30") + ". Conferência: Q<sub>d</sub> = 14, Q<sub>s</sub> = 5, diferença 9.",
+            azb("Renda de cota") + ": (30 − 10) × 9 = " + vd("180") + ". Quem fica com ela depende da alocação "
+            "das licenças (governo, se leiloadas; importadores, se distribuídas; exportadores estrangeiros, numa "
+            "restrição voluntária).",
+            azb("Tarifa equivalente") + ": uma tarifa específica de " + vd("20") + " levaria o preço a 30 e as "
+            "importações a 9 — mesmo preço, mesma quantidade, mesmo peso morto (50 na produção + 40 no consumo "
+            "= " + vd("90") + "). A diferença está só no destino do retângulo de 180.",
+            vm("Regra-âncora: com cota que morde, o preço interno é o que faz o excesso de demanda doméstico igual "
+               "à cota."),
+        ],
+        "dissecando": (cz("[detalhe]") + " Cálculo direto, mas exige montar a condição certa (excesso de demanda = "
+                       "cota). Erro comum: somar a cota à oferta e igualar à demanda <b>ao preço mundial</b>, ou "
+                       "esquecer que a cota só altera o preço se for menor que a importação livre."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma cota de 20 unidades elevaria o preço doméstico acima de 10.”</i> → ERRADO (cota maior que a "
+            "importação livre, 18, não morde)",
+            "<i>“Uma tarifa específica de 20 produziria o mesmo preço doméstico que a cota de 9 unidades.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Sem restrição, importação de 18. Com cota de 9: Qd − Qs = 9 → 4(100 − P) − 5(P − 10) "
+                             "= 180 → P = 30."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 090", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00889-1 (cota e novo preço doméstico, outro mercado)"],
+    },
+    # ------------------------------------------------------------------ E2-L00555
+    {
+        "id": "ECO-E2-L00555-1", "fonte_ref": "E2-L00555", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MERC,
+        "rotulo_item": "Item",
+        "assertiva": ("Assumindo que o preço internacional do bem seja de 10, caso seja imposta uma tarifa específica "
+                      "no valor de 20 unidades monetárias, a quantidade importada no mercado doméstico será de 10 "
+                      "unidades do bem."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Assumindo que o preço internacional do bem seja de 10, caso seja imposta uma tarifa "
+                       "específica no valor de 20 unidades monetárias, a quantidade importada no mercado doméstico "
+                       "será de ") + vm("10") + az(" unidades do bem.")),
+        "poucas": ("Com a tarifa, o preço interno vai a 10 + 20 = " + vd("30") + ": Q<sub>d</sub> = 14 e "
+                   "Q<sub>s</sub> = 5. Importação = " + vd("9") + " unidades, não 10."),
+        "destrinchando": [
+            "País pequeno: a " + azb("tarifa específica") + " (valor fixo por unidade) soma-se integralmente ao "
+            "preço mundial → " + vd("P interno = 10 + 20 = 30") + ".",
+            "A 30: Q<sub>d</sub> = (100 − 30)/5 = " + vd("14") + "; Q<sub>s</sub> = (30 − 10)/4 = " + vd("5")
+            + ". Importação = 14 − 5 = " + vd("9") + " (antes da tarifa eram 18).",
+            "Efeitos: receita do governo = 20 × 9 = " + vd("180") + "; ganho do produtor = área entre 10 e 30 à "
+            "esquerda da oferta = (0 + 5)/2 × 20 = " + vd("50") + "; perda do consumidor = (14 + 18)/2 × 20 = "
+            + vd("320") + "; peso morto = 320 − 50 − 180 = " + vd("90") + " (50 de distorção na produção + 40 no "
+            "consumo).",
+            "Repare que a tarifa de 20 é a " + azb("tarifa equivalente") + " a uma cota de 9 unidades: ambas "
+            "levam o preço a 30. A banca costuma explorar essa equivalência no mesmo bloco.",
+        ],
+        "dissecando": (cz("[dado alterado]") + " O 10 é isca dupla: coincide com o preço internacional e com a "
+                       "quantidade de autarquia. Quem não recalcula Q<sub>s</sub> ao novo preço (ou usa a oferta "
+                       "inversa sem isolar Q) cai nele."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com a tarifa de 20, a receita tributária será de 180 unidades monetárias.”</i> → CERTO",
+            "<i>“Com a tarifa de 20, o preço doméstico subirá menos que o valor da tarifa.”</i> → ERRADO (país "
+            "pequeno: sobe a tarifa inteira)",
+        ])],
+        "reescrita": ("Assumindo que o preço internacional do bem seja de 10, caso seja imposta uma tarifa específica "
+                      "no valor de 20 unidades monetárias, a quantidade importada no mercado doméstico será de "
+                      + hl("9") + " unidades do bem."),
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Preço com tarifa = 10 + 20 = 30; Qd = 14, Qs = 5; importação = 9.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 091", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00887-1 (tarifa específica e nova importação, outro mercado)"],
+    },
+    # ------------------------------------------------------------------ E2-L00556
+    {
+        "id": "ECO-E2-L00556-1", "fonte_ref": "E2-L00556", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MERC,
+        "rotulo_item": "Item",
+        "assertiva": ("Em uma economia grande tanto a imposição de uma tarifa de importação quanto a concessão de um "
+                      "subsídio à exportação podem levar a uma melhora no bem-estar. Isso ocorre devido ao ganho nos "
+                      "termos de troca."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em uma economia grande ") + vm("tanto") + az(" a imposição de uma tarifa de importação ")
+                    + vm("quanto a concessão de um subsídio à exportação podem")
+                    + az(" levar a uma melhora no bem-estar. Isso ocorre devido ao ganho nos termos de troca.")),
+        "poucas": ("Só a " + azb("tarifa") + " do país grande pode melhorar o bem-estar (ganho de termos de troca). "
+                   "O " + vm("subsídio à exportação piora") + " os termos de troca de quem o concede."),
+        "destrinchando": [
+            vd("Tarifa no país grande") + ": a demanda mundial pelo bem importado cai, o preço mundial cai e o país "
+            "passa a pagar menos pelo que importa — " + azb("ganho de termos de troca") + ". Se esse ganho superar "
+            "as duas distorções (produção e consumo), o bem-estar nacional sobe. É o argumento da "
+            + azb("tarifa ótima") + ".",
+            vd("Subsídio à exportação no país grande") + ": a oferta mundial do bem exportado aumenta, o preço "
+            "mundial cai e o país passa a receber menos pelo que vende — " + azb("perda de termos de troca") + ". "
+            "Somam-se a ela o custo fiscal e as distorções de produção e consumo: perda de bem-estar "
+            "<b>inequívoca</b>.",
+            "Resumo em balanço (convenção de " + oc("Krugman e Obstfeld") + "): na tarifa, saldo = ganho de termos de "
+            "troca − (distorção na produção + distorção no consumo), de sinal ambíguo; no subsídio, saldo = −(perda "
+            "de termos de troca + distorções), sempre negativo.",
+            "No país pequeno, ambos reduzem o bem-estar: não há efeito sobre o preço mundial para compensar as "
+            "distorções.",
+            vm("Regra-âncora: país grande — tarifa pode ganhar (termos de troca melhoram); subsídio à exportação "
+               "sempre perde (termos de troca pioram)."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " Junta um instrumento que pode ganhar (tarifa) "
+                       "com outro que sempre perde (subsídio) sob o mesmo “tanto… quanto” e o mesmo motivo. O "
+                       "“podem” relativiza, mas não salva o subsídio: para ele o efeito sobre os termos de troca tem "
+                       "o sinal oposto. 🔥 Tarifa × subsídio em país grande é par recorrente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em uma economia grande, a imposição de uma tarifa de importação pode levar a uma melhora no "
+            "bem-estar, devido ao ganho nos termos de troca.”</i> → CERTO",
+            "<i>“Em uma economia pequena, a tarifa ótima é positiva.”</i> → ERRADO (no país pequeno a tarifa ótima "
+            "é zero)",
+        ])],
+        "reescrita": ("Em uma economia grande <s>tanto</s> a imposição de uma tarifa de importação "
+                      + hl("pode (mas a concessão de um subsídio à exportação, não)")
+                      + " levar a uma melhora no bem-estar. Isso ocorre devido ao ganho nos termos de troca."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": ["tanto … quanto", "podem"],
+        "dificuldade": 2,
+        "comentario_fonte": ("Tarifa em economia grande pode elevar o bem-estar pelo ganho de termos de troca; "
+                             "subsídio à exportação reduz o preço internacional, piora os termos de troca e reduz o "
+                             "bem-estar."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00700-1 (subsídio à exportação e termos de troca do país grande)"],
+    },
+    # ------------------------------------------------------------------ E2-L00700
+    {
+        "id": "ECO-E2-L00700-1", "fonte_ref": "E2-L00700", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CAMB,
+        "rotulo_item": "Item",
+        "assertiva": ("Subsídios à exportação aumentam o bem-estar do país exportador “grande”, pois melhoram seus "
+                      "termos de troca no mercado internacional."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Subsídios à exportação ") + vm("aumentam") + az(" o bem-estar do país exportador “grande”, "
+                                                                          "pois ")
+                    + vm("melhoram") + az(" seus termos de troca no mercado internacional.")),
+        "poucas": ("O subsídio do país grande " + azb("derruba o preço mundial") + " do que ele exporta: os termos "
+                   "de troca " + vm("pioram") + " e o bem-estar " + vm("cai") + " sem ambiguidade."),
+        "destrinchando": [
+            "Mecanismo: o subsídio torna exportar mais lucrativo → a oferta do país no mercado mundial aumenta → "
+            "como o país é grande, o " + vd("preço internacional cai") + ". Ele passa a vender suas exportações "
+            "mais barato: " + azb("termos de troca") + " (P<sub>X</sub>/P<sub>M</sub>) " + vd("pioram") + ".",
+            "Balanço interno: o preço doméstico sobe (fica acima do novo preço mundial no valor do subsídio); "
+            "consumidores perdem, produtores ganham, o governo arca com s × exportações. O gasto do governo mais a "
+            "perda do consumidor superam o ganho do produtor: sobram as distorções de produção e consumo <b>mais</b> "
+            "a perda de termos de troca.",
+            "Quem ganha é o resto do mundo, em especial os importadores do bem, que compram mais barato — por isso "
+            "subsídios à exportação são, ao mesmo tempo, ruins para quem concede e alvo de disputa por quem "
+            "concorre com eles (na OMC, são subsídios proibidos pelo Acordo SMC, salvo regras próprias da "
+            "agricultura).",
+            "Contraste: a " + azb("tarifa") + " do país grande faz o oposto nos termos de troca (melhora) e pode "
+            "elevar o bem-estar nacional.",
+            vm("Regra-âncora: subsídio à exportação → preço mundial ↓ → termos de troca ↓ → bem-estar ↓ (sempre)."),
+        ],
+        "dissecando": (cz("[inversão]") + " Inverte o sinal do efeito sobre os termos de troca e, por consequência, "
+                       "sobre o bem-estar. A frase é sedutora porque transplanta para o subsídio o raciocínio da "
+                       "tarifa ótima. Pista: subsidiar exportação = ofertar mais = preço de venda menor."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Subsídios à exportação reduzem o bem-estar do país exportador grande, pois pioram seus termos de "
+            "troca.”</i> → CERTO",
+            "<i>“No país pequeno, o subsídio à exportação não altera o preço doméstico do bem.”</i> → ERRADO (o "
+            "preço doméstico sobe no montante do subsídio)",
+        ])],
+        "reescrita": ("Subsídios à exportação " + hl("reduzem") + " o bem-estar do país exportador “grande”, pois "
+                      + hl("pioram") + " seus termos de troca no mercado internacional."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O subsídio do país grande aumenta a oferta mundial, reduz o preço internacional e piora "
+                             "os termos de troca; com o custo fiscal e as distorções, há perda inequívoca de "
+                             "bem-estar."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00556-1 (tarifa × subsídio em país grande)"],
+    },
+    # ------------------------------------------------------------------ E2-L00701
+    {
+        "id": "ECO-E2-L00701-1", "fonte_ref": "E2-L00701", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_CAMB,
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição de uma tarifa sobre a importação de um país sempre impõe uma perda líquida de "
+                      "bem-estar (peso morto) composta por distorções tanto no consumo quanto na produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A imposição de uma tarifa sobre a importação de um país ") + vm("sempre")
+                    + az(" impõe uma perda líquida de bem-estar (peso morto) composta por distorções tanto no "
+                         "consumo quanto na produção.")),
+        "poucas": ("O “" + vm("sempre") + "” falha no " + azb("país grande") + ": o ganho de termos de troca pode "
+                   "superar as distorções, e o efeito líquido sobre o bem-estar pode ser positivo (" + azb("tarifa "
+                                                                                                        "ótima")
+                   + ")."),
+        "destrinchando": [
+            "As distorções existem em qualquer caso: a tarifa leva a produzir internamente unidades mais caras que "
+            "as importadas (" + azb("distorção na produção") + ") e a deixar de consumir unidades que valiam mais "
+            "que o preço mundial (" + azb("distorção no consumo") + "). São os dois triângulos de peso morto.",
+            "No " + vd("país pequeno") + ", o saldo nacional é exatamente esse peso morto: a tarifa sempre reduz o "
+            "bem-estar.",
+            "No " + vd("país grande") + ", entra um terceiro termo: a queda do preço mundial do bem importado "
+            "(" + azb("ganho de termos de troca") + ", o retângulo entre o preço mundial antigo e o novo, vezes as "
+            "importações). Saldo = ganho de termos de troca − distorções; para tarifas pequenas o ganho domina, e "
+            "existe uma " + azb("tarifa ótima") + " positiva que maximiza o bem-estar nacional.",
+            "Ressalvas que a banca pode cobrar: o ganho é à custa dos parceiros (o mundo como um todo perde) e "
+            "convida à retaliação, que pode anular o ganho — por isso o argumento é mais teórico que recomendação "
+            "de política.",
+            vm("Regra-âncora: tarifa em país pequeno → perda certa; em país grande → resultado ambíguo (tarifa "
+               "ótima &gt; 0)."),
+        ],
+        "dissecando": (cz("[modulador absoluto]") + " O conteúdo descreve bem o país pequeno; o “sempre” estende a "
+                       "conclusão ao país grande, onde ela não vale. Observação: o item mistura “perda líquida” com "
+                       "“peso morto” — os triângulos sempre existem, mas o saldo líquido pode ser positivo; o "
+                       "gabarito lê “perda líquida” como saldo. 🔥 “Sempre” + tarifa = pensar no país grande."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A imposição de uma tarifa sobre a importação de um país pequeno sempre impõe uma perda líquida de "
+            "bem-estar.”</i> → CERTO",
+            "<i>“Para um país grande, quanto maior a tarifa, maior o ganho de bem-estar.”</i> → ERRADO (acima da "
+            "tarifa ótima, as distorções dominam)",
+        ])],
+        "reescrita": ("A imposição de uma tarifa sobre a importação de um país " + hl("pequeno") + " <s>sempre</s> "
+                      "impõe uma perda líquida de bem-estar (peso morto) composta por distorções tanto no "
+                      "consumo quanto na produção."),
+        "tipo_erro": ["GENERALIZACAO"], "moduladores": ["sempre"], "dificuldade": 2,
+        "comentario_fonte": ("O erro está em “sempre”: no país grande, a tarifa pode melhorar os termos de troca e, "
+                             "se o ganho superar as perdas de eficiência, elevar o bem-estar (tarifa ótima)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00831
+    {
+        "id": "ECO-E2-L00831-1", "fonte_ref": "E2-L00831", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_IPC,
+        "rotulo_item": "Item",
+        "assertiva": ("As restrições voluntárias às exportações se referem à situação em que uma nação exportadora "
+                      "induz uma outra a restringir suas importações de uma commodity voluntariamente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As restrições voluntárias às exportações se referem à situação em que uma nação ")
+                    + vm("exportadora") + az(" induz uma outra a restringir suas ") + vm("importações")
+                    + az(" de uma commodity voluntariamente.")),
+        "poucas": ("Na " + azb("RVE") + " é a nação " + vm("importadora") + " que induz a exportadora a limitar "
+                   "as próprias " + vm("exportações") + ": uma cota administrada pelo exportador."),
+        "destrinchando": [
+            "A " + azb("restrição voluntária às exportações") + " (RVE; em inglês, VER — <i>voluntary export "
+            "restraint</i>) é uma cota de comércio aplicada pelo <b>país exportador</b>, em geral a pedido do "
+            "importador, que a aceita para evitar barreiras piores (tarifas, cotas unilaterais, medidas "
+            "antidumping).",
+            "Exemplo clássico: a limitação das exportações de automóveis do " + vd("Japão") + " para os "
+            + vd("EUA") + " a partir de " + vd("1981") + ". Outro: o Acordo Multifibras (têxteis), que vigorou de "
+            "1974 até sua eliminação gradual no âmbito da OMC (concluída em 2005).",
+            "Efeito econômico: igual ao de uma cota de importação — o preço no importador sobe —, com uma "
+            "diferença decisiva: a " + azb("renda de cota") + " fica com os exportadores estrangeiros, que vendem "
+            "menos unidades a preço mais alto. Para o importador, é mais custosa que a tarifa equivalente.",
+            "O “voluntário” é eufemismo: a restrição é negociada sob ameaça. Por isso o Acordo sobre Salvaguardas da "
+            "OMC (1994) proibiu novas RVEs e mandou eliminar as existentes.",
+            vm("Regra-âncora: na RVE, o exportador restringe as próprias exportações, pressionado pelo importador."),
+        ],
+        "dissecando": (cz("[inversão · troca de ator]") + " Inverte os papéis: troca quem induz (importador → "
+                       "exportador) e o que se restringe (exportações → importações). Pista no próprio nome do "
+                       "instrumento: é restrição às <b>exportações</b>, logo quem a aplica é o exportador."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na restrição voluntária às exportações, a renda de cota é apropriada pelos exportadores "
+            "estrangeiros.”</i> → CERTO",
+            "<i>“A restrição voluntária às exportações é instrumento estimulado pelo Acordo sobre Salvaguardas da "
+            "OMC.”</i> → ERRADO (o acordo as proibiu)",
+        ])],
+        "reescrita": ("As restrições voluntárias às exportações se referem à situação em que uma nação "
+                      + hl("importadora") + " induz uma outra a restringir suas " + hl("exportações")
+                      + " de uma commodity voluntariamente."),
+        "tipo_erro": ["INVERSAO", "TROCA_ATOR"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A RVE é uma cota imposta pelo país exportador, em vez do importador, geralmente a pedido "
+                             "deste; exemplo: automóveis japoneses para os EUA depois de 1981."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 126", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetia a assertiva)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00202-1 (restrição voluntária às exportações e bem-estar)"],
+    },
+    # ------------------------------------------------------------------ E2-L00832
+    {
+        "id": "ECO-E2-L00832-1", "fonte_ref": "E2-L00832", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_IPC,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma tarifa específica sobre importações reduz o excedente do consumidor, ao passo que a adoção "
+                      "de um subsídio à exportação também diminui esse excedente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma tarifa específica sobre importações <u>reduz</u> o excedente do consumidor, ao passo que a "
+                      "adoção de um subsídio à exportação <u>também diminui</u> esse excedente."),
+        "poucas": ("Os dois instrumentos " + azb("elevam o preço doméstico") + ": a tarifa, para P<sub>m</sub> + t; "
+                   "o subsídio, para P<sub>m</sub> + s. Preço maior → " + vd("consumidor perde") + " nos dois casos."),
+        "destrinchando": [
+            vd("Tarifa de importação") + " (país importador): o preço interno sobe do preço mundial para o preço "
+            "mundial + tarifa. O consumidor paga mais e consome menos — perde o trapézio entre os dois preços, à "
+            "esquerda da demanda. Produtores ganham; o governo arrecada; sobram dois triângulos de peso morto.",
+            vd("Subsídio à exportação") + " (país exportador): por arbitragem, o preço interno sobe até o preço "
+            "mundial + subsídio (ninguém vende dentro por menos do que ganharia exportando). O consumidor doméstico "
+            "também paga mais e consome menos. Produtores ganham; o governo <b>gasta</b>; também sobram dois "
+            "triângulos de peso morto.",
+            "Paralelo útil: tarifa e subsídio à exportação são “primos” — ambos protegem o produtor elevando o "
+            "preço interno e ambos têm o consumidor como perdedor. A diferença está no governo: na tarifa ele "
+            "arrecada, no subsídio ele paga.",
+            "O que muda no país grande: a tarifa reduz o preço mundial (o consumidor perde menos que t por "
+            "unidade); o subsídio também reduz o preço mundial, mas o preço interno continua acima dele — o "
+            "consumidor doméstico perde em qualquer caso.",
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " O “subsídio” soa como benefício a todos, e a leitura apressada "
+                       "supõe que barateie o produto internamente. O item é CERTO porque o subsídio é à "
+                       "<b>exportação</b>, não ao consumo. Pista: pergunte sempre o que acontece com o preço "
+                       "interno."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…ao passo que a adoção de um subsídio à exportação aumenta o excedente do consumidor doméstico, "
+            "por baratear o bem.”</i> → ERRADO (inversão: o preço interno sobe)",
+            "<i>“Tanto a tarifa quanto o subsídio à exportação geram receita para o governo.”</i> → ERRADO (o "
+            "subsídio é gasto)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["também"], "dificuldade": 1,
+        "comentario_fonte": ("A tarifa eleva o preço doméstico e reduz o excedente do consumidor; o subsídio à "
+                             "exportação também eleva o preço doméstico (preço mundial + subsídio) e igualmente reduz "
+                             "esse excedente; produtores ganham e o governo gasta."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 127", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "absorvida (descrição incorporada ao 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00833
+    {
+        "id": "ECO-E2-L00833-1", "fonte_ref": "E2-L00833", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_IPC,
+        "rotulo_item": "Item",
+        "assertiva": ("O instrumento de política industrial mediante o qual o governo brasileiro, com o objetivo de "
+                      "fomentar a inovação e a industrialização nas cadeias produtivas de petróleo e gás natural (P&amp;G) "
+                      "no país, estabelece índices mínimos de participação dos fornecedores de máquinas e equipamentos "
+                      "no valor da produção da indústria de P&amp;G é denominado política de quotas de importação."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O instrumento de política industrial mediante o qual o governo brasileiro, com o objetivo de "
+                       "fomentar a inovação e a industrialização nas cadeias produtivas de petróleo e gás natural "
+                       "(P&amp;G) no país, estabelece índices mínimos de participação dos fornecedores de máquinas e "
+                       "equipamentos no valor da produção da indústria de P&amp;G é denominado ")
+                    + vm("política de quotas de importação") + az(".")),
+        "poucas": ("Índice mínimo de participação nacional no valor da produção é " + azb("exigência de conteúdo "
+                                                                                          "local")
+                   + ", não cota de importação (que limita diretamente a quantidade importada)."),
+        "destrinchando": [
+            "Uma " + azb("exigência de conteúdo local") + " obriga que determinada fração do valor (ou das peças) "
+            "de um bem final seja produzida domesticamente. Não fixa quantidade importada: fixa uma "
+            "<b>proporção</b>, e o produtor escolhe a combinação.",
+            "Diferenças em relação à cota, na linha de " + oc("Krugman e Obstfeld") + ": a exigência de conteúdo "
+            "local não gera receita para o governo nem renda de cota; o custo maior dos insumos nacionais entra na "
+            "média do custo e é repassado ao consumidor. Exemplo: com 50% de peças nacionais a US$ 10.000 e peças "
+            "importadas a US$ 6.000, o custo médio vai a " + vd("US$ 8.000") + ".",
+            rx("Brasil") + ": os contratos de exploração da ANP trazem cláusulas de conteúdo local desde as "
+            "primeiras rodadas de licitação (fim dos anos 1990), e a política ganhou peso com o pré-sal; os "
+            "percentuais foram reduzidos e simplificados a partir de 2017 ⏳ (out/2026).",
+            "Na OMC, exigências de conteúdo local vinculadas a investimento colidem com o Acordo TRIMs e com o "
+            "tratamento nacional do GATT; o " + rx("Brasil") + " foi condenado em painel sobre o Inovar-Auto e "
+            "outros programas (2017-2018).",
+            vm("Regra-âncora: cota = limite à quantidade importada; conteúdo local = proporção mínima de insumo "
+               "nacional."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Descreve com precisão a política de conteúdo local e lhe dá o "
+                       "nome de um instrumento vizinho (barreira não tarifária também, mas de outra natureza). "
+                       "Pista: “índices mínimos de participação” no valor da produção indicam proporção, não teto de "
+                       "importação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A exigência de conteúdo local, ao contrário da cota, não gera renda de cota nem receita "
+            "tarifária.”</i> → CERTO",
+            "<i>“A exigência de conteúdo local é uma barreira tarifária.”</i> → ERRADO (é não tarifária)",
+        ])],
+        "reescrita": ("O instrumento de política industrial mediante o qual o governo brasileiro, com o objetivo de "
+                      "fomentar a inovação e a industrialização nas cadeias produtivas de petróleo e gás natural "
+                      "(P&amp;G) no país, estabelece índices mínimos de participação dos fornecedores de máquinas e "
+                      "equipamentos no valor da produção da indústria de P&amp;G é denominado "
+                      + hl("política de conteúdo local") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Exigência de conteúdo local requer que fração do bem seja produzida domesticamente; não "
+                             "gera receita nem renda de cota; exemplo do custo médio de autopeças (US$ 8.000)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 128", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetia a assertiva)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00834
+    {
+        "id": "ECO-E2-L00834-1", "fonte_ref": "E2-L00834", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_IPC,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma cota de importação constitui uma restrição indireta sobre a quantidade de algum bem que pode "
+                      "ser importado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma cota de importação constitui uma restrição ") + vm("indireta")
+                    + az(" sobre a quantidade de algum bem que pode ser importado.")),
+        "poucas": ("A cota é a restrição " + vm("direta") + " por excelência: fixa a quantidade máxima importável, "
+                   "em geral por meio de " + azb("licenças de importação") + "."),
+        "destrinchando": [
+            "Definição de " + oc("Krugman e Obstfeld") + ": “uma cota de importação é uma restrição direta sobre a "
+            "quantidade de algum bem que pode ser importado”, normalmente aplicada pela emissão de licenças a "
+            "grupos de pessoas ou empresas.",
+            "Restrições <b>indiretas</b> são as que reduzem importações sem fixar quantidade: a " + azb("tarifa")
+            + " (atua pelo preço), as " + azb("exigências de conteúdo local") + ", barreiras técnicas e "
+            "sanitárias, compras governamentais preferenciais, burocracia aduaneira.",
+            "Efeito da cota: com a quantidade importada limitada, o preço interno sobe até o excesso de demanda "
+            "doméstico igualar a cota. Daí a " + azb("tarifa equivalente") + " (que produziria o mesmo preço) e a "
+            + azb("renda de cota") + " (preço interno − preço mundial) × cota, que vai para quem detém as "
+            "licenças.",
+            "Diferença dinâmica: com a tarifa, um aumento de demanda eleva as importações; com a cota, eleva o "
+            "preço interno (a quantidade importada não se move). Por isso a cota protege mais em mercado aquecido.",
+        ],
+        "dissecando": (cz("[inversão]") + " Troca um único adjetivo: direta → indireta. O item é curto e técnico, e "
+                       "o erro está na palavra que qualifica o instrumento. Pista: a cota atua na própria "
+                       "quantidade, sem intermediação do preço."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A tarifa de importação constitui uma restrição indireta à quantidade importada, por atuar via "
+            "preço.”</i> → CERTO",
+            "<i>“Com a cota, um aumento da demanda doméstica eleva a quantidade importada.”</i> → ERRADO (eleva o "
+            "preço interno; a quantidade fica limitada)",
+        ])],
+        "reescrita": ("Uma cota de importação constitui uma restrição " + hl("direta") + " sobre a quantidade de "
+                      "algum bem que pode ser importado."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Cota de importação é restrição direta na quantidade importada, aplicada com a emissão "
+                             "de licenças."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01154-1 (natureza da cota de importação)"],
+    },
+    # ------------------------------------------------------------------ E2-L00886
+    {
+        "id": "ECO-E2-L00886-1", "fonte_ref": "E2-L00886", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_A,
+        "rotulo_item": "Item",
+        "assertiva": "Na hipótese de livre comércio, a quantidade importada será de 800 unidades.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na hipótese de livre comércio, a quantidade importada será de <u>800</u> unidades."),
+        "poucas": ("A p = 10: Q<sub>d</sub> = 1600 − 200 = " + vd("1.400") + " e Q<sub>s</sub> = " + vd("600")
+                   + ". Importação = " + vd("800") + "."),
+        "destrinchando": [
+            "Autarquia: 1600 − 20p = 60p → " + vd("p = 20, Q = 1.200") + ". O preço internacional (10) está "
+            "abaixo do de autarquia: o país importa.",
+            "Ao preço mundial: Q<sub>d</sub> = " + vd("1.400") + "; Q<sub>s</sub> = " + vd("600")
+            + "; importação = Q<sub>d</sub> − Q<sub>s</sub> = " + vd("800") + ". A produção doméstica atende 600 "
+            "e o resto vem de fora.",
+            "Ganhos do comércio frente à autarquia: o consumidor ganha (paga 10 em vez de 20 e consome mais); o "
+            "produtor perde (vende menos e mais barato); o ganho do consumidor supera a perda do produtor — o "
+            "saldo é o triângulo entre as curvas de 1.200 até as quantidades de livre comércio: ½ × 800 × 10 = "
+            + vd("4.000") + ".",
+            "Se o governo instituir uma tarifa de R$ 5 por unidade, o preço interno vai a 15, a importação cai para "
+            "400 (produção 900, consumo 1.300) e surge peso morto de R$ 1.000.",
+        ],
+        "dissecando": (cz("[detalhe]") + " Cálculo direto com curvas já na forma Q(p). O erro típico seria "
+                       "confundir a quantidade importada (800) com a demandada (1.400) ou com a de autarquia "
+                       "(1.200)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na hipótese de livre comércio, a produção doméstica será de 1.200 unidades.”</i> → ERRADO (1.200 "
+            "é a quantidade de autarquia; com comércio, 600)",
+            "<i>“Na ausência de comércio, o preço doméstico seria de R$ 20,00.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Ao preço 10: Qd = 1400, Qs = 600; importação = 800.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 142", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00887
+    {
+        "id": "ECO-E2-L00887-1", "fonte_ref": "E2-L00887", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_A,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o governo passa a instituir uma tarifa de importação de R$ 5,00 por unidade importada, a "
+                      "quantidade importada será igual a 200 unidades."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Se o governo passa a instituir uma tarifa de importação de R$ 5,00 por unidade importada, a "
+                       "quantidade importada será igual a ") + vm("200") + az(" unidades.")),
+        "poucas": ("Preço interno = 10 + 5 = " + vd("15") + ": Q<sub>d</sub> = " + vd("1.300") + ", Q<sub>s</sub> "
+                   "= " + vd("900") + ". Importação = " + vd("400") + ", não 200."),
+        "destrinchando": [
+            "País pequeno (preço internacional dado): a " + azb("tarifa específica") + " de R$ 5 soma-se ao preço "
+            "→ " + vd("p = 15") + ".",
+            "Q<sub>d</sub> = 1600 − 20 × 15 = " + vd("1.300") + " (o consumo cai 100); Q<sub>s</sub> = 60 × 15 = "
+            + vd("900") + " (a produção doméstica sobe 300). Importação = " + vd("400") + " (era 800).",
+            "Repare na decomposição: a importação cai 400 = 300 de substituição por produção nacional + 100 de "
+            "redução do consumo. A oferta é mais sensível ao preço (inclinação 60) que a demanda (20), por isso "
+            "a maior parte do ajuste vem da produção.",
+            "Bem-estar: receita = 5 × 400 = " + vd("R$ 2.000") + "; peso morto = ½ × 300 × 5 + ½ × 100 × 5 = "
+            + vd("R$ 1.000") + ". E uma cota de 400 unidades levaria ao mesmo preço de R$ 15 (tarifa "
+            "equivalente).",
+        ],
+        "dissecando": (cz("[dado alterado]") + " O 200 é metade do valor correto e sai de erros típicos: aplicar a "
+                       "tarifa só à demanda, ou subtrair a variação da produção da variação do consumo. Recalcule as "
+                       "duas quantidades ao novo preço."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com a tarifa de R$ 5,00, a receita do governo será de R$ 2.000,00.”</i> → CERTO",
+            "<i>“Com a tarifa de R$ 5,00, a produção doméstica cairá para 300 unidades.”</i> → ERRADO (sobe para "
+            "900)",
+        ])],
+        "reescrita": ("Se o governo passa a instituir uma tarifa de importação de R$ 5,00 por unidade importada, a "
+                      "quantidade importada será igual a " + hl("400") + " unidades."),
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Com a tarifa, p = 15; Qd = 1300, Qs = 900; importação = 400.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 143", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00555-1 (tarifa específica e nova importação, outro mercado)"],
+    },
+    # ------------------------------------------------------------------ E2-L00888
+    {
+        "id": "ECO-E2-L00888-1", "fonte_ref": "E2-L00888", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_A + " Admita que o governo institua uma tarifa de importação de R$ 5,00 por unidade "
+                               "importada.",
+        "rotulo_item": "Item",
+        "assertiva": "O peso morto da tarifa de importação será R$ 1.500.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O peso morto da tarifa de importação será ") + vm("R$ 1.500") + az("."),
+        "poucas": ("Peso morto = dois triângulos de altura 5: ½ × 300 × 5 (produção) + ½ × 100 × 5 (consumo) = "
+                   + vd("R$ 1.000") + "."),
+        "destrinchando": [
+            "Com a tarifa, p = 15: Q<sub>s</sub> sobe de 600 para " + vd("900") + " e Q<sub>d</sub> cai de 1.400 "
+            "para " + vd("1.300") + ". A importação cai de 800 para " + vd("400") + ".",
+            azb("Distorção na produção") + ": as 300 unidades a mais produzidas internamente custam entre 10 e 15, "
+            "quando poderiam ser importadas a 10 → ½ × 300 × 5 = " + vd("750") + ".",
+            azb("Distorção no consumo") + ": as 100 unidades que deixam de ser consumidas valiam para o consumidor "
+            "entre 10 e 15 → ½ × 100 × 5 = " + vd("250") + ".",
+            "Atalho: como as duas alturas são iguais à tarifa, peso morto = ½ × (queda das importações) × t = "
+            "½ × 400 × 5 = " + vd("1.000") + ".",
+            "Conferência pelo balanço completo: perda do consumidor = (1.300 + 1.400)/2 × 5 = 6.750; ganho do "
+            "produtor = (600 + 900)/2 × 5 = 3.750; receita = 5 × 400 = 2.000. Saldo: 6.750 − 3.750 − 2.000 = "
+            + vd("1.000") + ".",
+            vm("Regra-âncora: peso morto da tarifa = ½ × t × (Δprodução + Δconsumo) = ½ × t × Δimportações."),
+        ],
+        "grafico_verso": "ECO-E2-L00888-1-V1",
+        "dissecando": (cz("[dado alterado]") + " O 1.500 é 1,5 vez o correto — resultado de quem soma triângulos "
+                       "errados (por exemplo, ½ × 600 × 5, usando a produção inicial como base). Item de cálculo: "
+                       "localizar as duas bases (300 e 100) resolve."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O peso morto da tarifa decorre em maior parte da distorção na produção.”</i> → CERTO (750 de "
+            "1.000)",
+            "<i>“A receita tributária da tarifa corresponde a peso morto, por ser renda retirada dos "
+            "consumidores.”</i> → ERRADO (receita é transferência, não perda)",
+        ])],
+        "reescrita": "O peso morto da tarifa de importação será " + hl("R$ 1.000") + ".",
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Peso morto = ½ × 400 × 5 = 1.000 (750 da produção + 250 do consumo). Comentários "
+                             "empilhados com o mesmo resultado."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 144", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "redesenhada (gráfico didático com os números do item)"}],
+        "alertas": ["nota_redacao: a fonte omitia o valor da tarifa (R$ 5,00, dado em item do mesmo bloco); "
+                    "acrescentado ao comando para o card ser autossuficiente"],
+    },
+    # ------------------------------------------------------------------ E2-L00889
+    {
+        "id": "ECO-E2-L00889-1", "fonte_ref": "E2-L00889", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_A,
+        "rotulo_item": "Item",
+        "assertiva": ("Partindo da hipótese de livre comércio e equilíbrio com importação, se o governo passa a "
+                      "instituir uma quota de 400 unidades, o preço doméstico será R$ 20."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Partindo da hipótese de livre comércio e equilíbrio com importação, se o governo passa a "
+                       "instituir uma quota de 400 unidades, o preço doméstico será ") + vm("R$ 20") + az(".")),
+        "poucas": ("Com a quota, 1600 − 20p = 60p + 400 → " + vd("p = R$ 15") + ". R$ 20 é o preço de "
+                   "<b>autarquia</b>, que só vigoraria com importação zero."),
+        "destrinchando": [
+            "A quota limita a importação a 400 (a livre importação era 800: a quota morde). A oferta disponível "
+            "internamente vira " + vd("60p + 400") + "; igualando à demanda: 1600 − 20p = 60p + 400 → 80p = 1.200 "
+            "→ " + vd("p = 15") + ".",
+            "Conferência: Q<sub>d</sub> = 1.300, Q<sub>s</sub> = 900, diferença 400 = quota.",
+            "É o mesmo preço da tarifa de R$ 5,00 por unidade: a quota de 400 e a tarifa de 5 são "
+            + azb("equivalentes") + " (mesmo preço, mesma quantidade, mesmo peso morto de R$ 1.000). Muda o "
+            "destino do retângulo (15 − 10) × 400 = " + vd("R$ 2.000") + ": receita do governo na tarifa, "
+            + azb("renda de cota") + " de quem detém as licenças na quota.",
+            "De onde vem o R$ 20? É o preço de equilíbrio sem comércio (1600 − 20p = 60p → p = 20). Com qualquer "
+            "quota positiva, o preço fica entre o mundial (10) e o de autarquia (20).",
+        ],
+        "dissecando": (cz("[dado alterado]") + " A banca oferece um número que existe no problema — o preço de "
+                       "autarquia —, para quem esquece de somar a quota à oferta doméstica. Pista: a quota é "
+                       "positiva, logo o preço não pode chegar ao de economia fechada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma quota de 400 unidades e uma tarifa de R$ 5,00 por unidade levam ao mesmo preço "
+            "doméstico.”</i> → CERTO",
+            "<i>“Uma quota de zero unidades levaria o preço doméstico a R$ 20,00.”</i> → CERTO",
+        ])],
+        "reescrita": ("Partindo da hipótese de livre comércio e equilíbrio com importação, se o governo passa a "
+                      "instituir uma quota de 400 unidades, o preço doméstico será " + hl("R$ 15") + "."),
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Oferta total = 60p + 400; 1600 − 20p = 60p + 400 → p = 15 (igual ao da tarifa de "
+                             "R$ 5,00)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00554-1 (cota e novo preço doméstico, outro mercado)"],
+    },
 ]

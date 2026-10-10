@@ -843,4 +843,204 @@ CARDS = [
         "alertas": ["quase_duplicata: ECO-E1-0673-1 (mesma prova e mesmo enunciado; Stolper-Samuelson com proteção "
                     "a Y no país B)"],
     },
+    # ------------------------------------------------------------------ E1-0790
+    {
+        "id": "ECO-E1-0790-1", "fonte_ref": "E1-0790", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2024", "ano": 2024, "cacd": True, "errei": True,
+        "comando": CMD_BANDA,
+        "excerto": EXC_BANDA,
+        "rotulo_item": "Item",
+        "assertiva": "Carlos tem vantagem comparativa em ser guitarrista.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Carlos tem vantagem <u>comparativa</u> em ser guitarrista."),
+        "poucas": ("Carlos é melhor que João na bateria (vantagem absoluta), mas tirá-lo da guitarra custaria "
+                   "muito à banda. Seu menor " + azb("custo de oportunidade") + " está na guitarra; o de João, na "
+                   "bateria."),
+        "destrinchando": [
+            "O enunciado traz duas pistas: João “não é nem o melhor baterista da sua banda” e Carlos “poderia "
+            "ser o baterista”. Logo, Carlos toca bateria melhor que João — " + azb("vantagem absoluta") + " de "
+            "Carlos na bateria. E, sendo o guitarrista titular, presume-se que também o seja na guitarra.",
+            azb("Vantagem comparativa") + " (" + oc("David Ricardo") + ") compara " + azb("custos de "
+            "oportunidade") + ": quanto a banda perde, em ganho monetário, ao pôr cada um em cada função. Se "
+            "Carlos vai para a bateria, a banda ganha um pouco na bateria e perde muito na guitarra; se João fica "
+            "na bateria, a perda é só a pequena diferença de qualidade entre os dois bateristas.",
+            "Exemplo numérico: Carlos gera 100 na guitarra e 60 na bateria; João, 20 na guitarra e 50 na bateria. "
+            "Custo de oportunidade da bateria: Carlos " + vd("100/60 ≈ 1,7") + " de guitarra; João "
+            + vd("20/50 = 0,4") + ". Carlos tem vantagem comparativa na guitarra; João, na bateria — mesmo sendo "
+            "pior nas duas.",
+            "É a lógica de Ricardo transposta de países para pessoas: o mais produtivo em tudo ainda ganha ao se "
+            "especializar onde sua vantagem relativa é maior (o exemplo clássico de " + oc("Mankiw") + " é o do "
+            "advogado que digita melhor que a secretária).",
+            vm("Regra-âncora: vantagem absoluta = quem faz melhor; vantagem comparativa = quem sacrifica menos "
+               "ao fazer."),
+        ],
+        "dissecando": (cz("[contraintuitivo]") + " O texto motivador sugere que Carlos é “melhor baterista”, e o "
+                       "candidato apressado conclui que ele deveria tocar bateria. A banca cobra exatamente a "
+                       "separação entre ser melhor (absoluta) e ter menor custo de oportunidade (comparativa)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Carlos tem vantagem comparativa em ser baterista, pois toca bateria melhor que João.”</i> → ERRADO "
+            "(confunde absoluta com comparativa)",
+            "<i>“Carlos tem vantagem absoluta em ser baterista.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Muitos comentários concordantes (professores e alunos): Carlos tem vantagem absoluta nos "
+                             "dois instrumentos, mas comparativa na guitarra; exemplos numéricos de ganho do show; "
+                             "lembrança do Foo Fighters (Dave Grohl, baterista que toca guitarra). Duas imagens "
+                             "com fórmulas de custo de oportunidade não preservadas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (266).png, image (279).png", "tipo_fonte": "não informado", "lado": "verso",
+                           "acao": "irrecuperavel (imagens do verso não preservadas; exemplo numérico refeito no "
+                                   "📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0791
+    {
+        "id": "ECO-E1-0791-1", "fonte_ref": "E1-0791", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2024", "ano": 2024, "cacd": True, "errei": False,
+        "comando": CMD_BANDA,
+        "excerto": EXC_BANDA,
+        "rotulo_item": "Item",
+        "assertiva": "João teria vantagem absoluta em ser guitarrista.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("João ") + vm("teria") + az(" vantagem absoluta em ser guitarrista."),
+        "poucas": ("Nada indica que João toque guitarra melhor que Carlos — que é o guitarrista e ainda toca bateria "
+                   "melhor que ele. " + azb("Vantagem absoluta") + " na guitarra, se alguém a tem, é de Carlos."),
+        "destrinchando": [
+            azb("Vantagem absoluta") + " (" + oc("Adam Smith") + ", <i>A Riqueza das Nações</i>, 1776): produzir "
+            "mais com os mesmos recursos — aqui, gerar mais ganho no show na mesma função. Compara-se "
+            "diretamente o desempenho de cada um.",
+            "O que o texto permite inferir: Carlos é melhor baterista que João (João não é o melhor da banda, "
+            "e Carlos poderia substituí-lo); Carlos é o guitarrista titular. Sobre João na guitarra, nada — e o "
+            "mais razoável é supor que seja pior que o titular.",
+            "Leitura do caso: Carlos tem vantagem absoluta nos dois instrumentos; João não tem vantagem absoluta "
+            "em nenhum. Ainda assim, João tem " + azb("vantagem comparativa") + " na bateria, porque seu custo de "
+            "oportunidade ali é o menor.",
+            "Esse é o ponto de " + oc("Ricardo") + ": não ter vantagem absoluta em nada não impede alguém de "
+            "contribuir — basta especializar-se onde sua desvantagem é menor.",
+            vm("Regra-âncora: absoluta compara desempenho bruto; comparativa compara o que se sacrifica."),
+        ],
+        "dissecando": (cz("[troca de ator · extrapolação]") + " O item atribui a João uma vantagem que o "
+                       "enunciado não sustenta e que, pela lógica do caso, pertence a Carlos. Truque típico: "
+                       "trocar o personagem e o tipo de vantagem para ver se o candidato confunde os dois "
+                       "conceitos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“João tem vantagem comparativa em ser baterista.”</i> → CERTO",
+            "<i>“João teria vantagem absoluta em ser baterista.”</i> → ERRADO (Carlos toca bateria melhor)",
+        ])],
+        "reescrita": ("João " + hl("não teria") + " vantagem absoluta em ser guitarrista" + hl(": nada no "
+                      "enunciado o indica, e Carlos, o guitarrista, é melhor que ele até na bateria") + "."),
+        "tipo_erro": ["TROCA_ATOR", "EXTRAPOLACAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Muitos comentários concordantes: não há base para afirmar vantagem absoluta de João na "
+                             "guitarra; Carlos teria vantagem absoluta nos dois instrumentos; exemplos numéricos de "
+                             "ganho do show. Duas imagens com fórmulas não preservadas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (275).png, image (277).png", "tipo_fonte": "não informado", "lado": "verso",
+                           "acao": "irrecuperavel (imagens do verso não preservadas; raciocínio refeito no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0792
+    {
+        "id": "ECO-E1-0792-1", "fonte_ref": "E1-0792", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2024", "ano": 2024, "cacd": True, "errei": False,
+        "comando": CMD_BANDA,
+        "excerto": EXC_BANDA,
+        "rotulo_item": "Item",
+        "assertiva": ("O custo de oportunidade relativo de João ser baterista é menor que o custo de oportunidade "
+                      "relativo de Carlos ser baterista."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O custo de oportunidade relativo de <u>João</u> ser baterista é <u>menor</u> que o custo de "
+                      "oportunidade relativo de Carlos ser baterista."),
+        "poucas": ("Pôr Carlos na bateria faz a banda " + azb("perder o guitarrista") + "; manter João na bateria "
+                   "custa só a diferença de qualidade entre os dois bateristas. O custo de oportunidade de João "
+                   "é menor — daí sua " + azb("vantagem comparativa") + " na bateria."),
+        "destrinchando": [
+            azb("Custo de oportunidade") + " = valor da melhor alternativa sacrificada. O de uma pessoa numa "
+            "função é o que ela deixaria de gerar na outra função, medido em relação ao que gera nesta.",
+            "Carlos: ao tocar bateria, sacrifica sua contribuição na guitarra, que é alta — custo de "
+            "oportunidade " + vd("alto") + ". João: ao tocar bateria, sacrifica sua contribuição na guitarra, "
+            "que é baixa ou nula — custo de oportunidade " + vd("baixo") + ".",
+            "Ter o menor custo de oportunidade numa atividade é a <b>definição</b> de vantagem comparativa. Por "
+            "isso o item é o espelho exato de “Carlos tem vantagem comparativa na guitarra”: com dois agentes e "
+            "duas tarefas, se um tem vantagem comparativa numa, o outro necessariamente a tem na outra.",
+            "Objeção comum (algumas respostas de cursinho): “não sabemos quanto João rende na guitarra”. A banca "
+            "deu CERTO porque a lógica do caso (João é o baterista, sem destaque em nada) implica contribuição "
+            "alternativa pequena.",
+            vm("Regra-âncora: dois agentes, duas tarefas → cada um tem vantagem comparativa em uma; quem tem menor "
+               "custo de oportunidade numa tem maior na outra."),
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Reescreve a definição de vantagem comparativa "
+                       "com nomes trocados. O contraintuitivo é aceitar que o “pior” baterista tem o menor custo "
+                       "de oportunidade na bateria."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O custo de oportunidade relativo de Carlos ser baterista é menor que o de João, pois Carlos toca "
+            "bateria melhor.”</i> → ERRADO (confunde desempenho com custo de oportunidade)",
+            "<i>“O custo de oportunidade relativo de Carlos ser guitarrista é menor que o de João ser "
+            "guitarrista.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Muitos comentários pelo CERTO (Carlos perderia a guitarra; João não abre mão de nada "
+                             "relevante); um deles argumenta, sem base, que o item seria incorreto por falta de "
+                             "informação sobre João na guitarra; citação do curso do Natale sobre custo de "
+                             "oportunidade."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0793
+    {
+        "id": "ECO-E1-0793-1", "fonte_ref": "E1-0793", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2024", "ano": 2024, "cacd": True, "errei": False,
+        "comando": CMD_BANDA,
+        "excerto": EXC_BANDA,
+        "rotulo_item": "Item",
+        "assertiva": ("O custo de oportunidade relativo de João ser guitarrista é menor que o custo de custo de "
+                      "oportunidade relativo de Carlos ser guitarrista."),
+        "gabarito": "ANULADO", "gabarito_origem": "fonte", "status": "anulado",
+        "anotada": (az("O custo de oportunidade relativo de João ser guitarrista é menor que o ")
+                    + vm("custo de custo de oportunidade") + az(" relativo de Carlos ser guitarrista.")),
+        "poucas": ("Pelo conteúdo, seria " + vd("ERRADO") + " (Carlos tem o menor custo de oportunidade na "
+                   "guitarra), mas o erro de redação “custo de custo de oportunidade” tornou o item ambíguo e a "
+                   "banca o anulou."),
+        "condicionais": [
+            ("⚠️ Gabarito contestável",
+             "Item anulado. O gabarito preliminar era ERRADO, coerente com o caso: na guitarra, o menor custo de "
+             "oportunidade é o de Carlos, e o de João é maior (ele teria de deixar a bateria, sua única função "
+             "útil, para render pouco na guitarra). A expressão duplicada impediu o julgamento objetivo."),
+            ("🏛️ Justificativa da banca",
+             cz("Deferido com anulação. O emprego da expressão “o custo do custo de oportunidade” prejudicou o "
+                "julgamento objetivo do item.")),
+        ],
+        "destrinchando": [
+            "Com dois agentes e duas tarefas, os custos de oportunidade são recíprocos: o custo de João na "
+            "guitarra é o inverso do seu custo na bateria. Se João tem o menor custo de oportunidade na "
+            + azb("bateria") + ", tem o maior na " + azb("guitarra") + ".",
+            "Exemplo: Carlos gera 100 na guitarra e 60 na bateria; João, 20 e 50. Custo da guitarra: Carlos "
+            + vd("60/100 = 0,6") + " de bateria; João " + vd("50/20 = 2,5") + ". Carlos tem vantagem comparativa "
+            "na guitarra.",
+            "Com o mesmo enunciado, a banca cobrou um conjunto coerente: Carlos tem vantagem comparativa na "
+            "guitarra (CERTO); João não tem vantagem absoluta na guitarra (a afirmação de que teria é ERRADO); o "
+            "custo de oportunidade de João na bateria é menor que o de Carlos (CERTO); e o deste item seria "
+            "ERRADO.",
+            "Lição para recurso: erro material que muda o objeto da comparação (aqui, “custo do custo”) é "
+            "fundamento clássico de anulação no " + azb("CEBRASPE") + ", mesmo quando a intenção do examinador é "
+            "clara.",
+            vm("Regra-âncora: quem tem vantagem comparativa numa tarefa tem desvantagem comparativa na outra."),
+        ],
+        "dissecando": (cz("[outro: erro material de redação · inversão]") + " Pretendia-se testar a inversão do "
+                       "item sobre a bateria (trocando “baterista” por “guitarrista”, o “menor” fica falso). O "
+                       "erro de digitação gerou a anulação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O custo de oportunidade relativo de João ser guitarrista é maior que o custo de oportunidade "
+            "relativo de Carlos ser guitarrista.”</i> → CERTO",
+            "<i>“João tem vantagem comparativa em ser guitarrista.”</i> → ERRADO (troca de ator: é Carlos)",
+        ])],
+        "tipo_erro": ["OUTRO", "INVERSAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Anotação “ERRADO > ANULADA”, com o motivo oficial (expressão “o custo do custo de "
+                             "oportunidade”) e dois comentários curtos: o custo de oportunidade de João na guitarra "
+                             "é maior que o de Carlos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: assertiva mantida com o erro “custo de custo de oportunidade”, que é o motivo da "
+                    "anulação"],
+    },
 ]

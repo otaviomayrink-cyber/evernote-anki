@@ -1221,4 +1221,299 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: ECO-E1-0640-1 (expansão monetária no flutuante deprecia, não aprecia)"],
     },
+    # ------------------------------------------------------------------ E1-0868
+    {
+        "id": "ECO-E1-0868-1", "fonte_ref": "E1-0868", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado 07/2023", "ano": 2023, "cacd": False,
+        "errei": True,
+        "comando": "Acerca do modelo IS-LM-BP e dos regimes cambiais, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em uma economia aberta sob regime de câmbio fixo, a adoção de uma política fiscal "
+                      "expansionista provocaria um acúmulo de reservas internacionais e um aumento no nível do "
+                      "produto nacional."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("Em uma economia aberta sob regime de câmbio fixo, a adoção de uma política fiscal "
+                      "expansionista provocaria <u>um acúmulo de reservas internacionais</u> e um aumento no nível "
+                      "do produto nacional."),
+        "poucas": ("É o resultado de " + oc("Mundell-Fleming") + " com " + azb("mobilidade alta ou perfeita") + ": "
+                   "juros ↑ atraem capital, o BC compra divisas para segurar o câmbio (reservas ↑), a moeda se "
+                   "expande e o produto sobe."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "A fonte dá CERTO, a leitura padrão (mobilidade perfeita). Mas o item não diz o grau de "
+                          "mobilidade: com " + vm("mobilidade fraca") + " (BP mais inclinada que a LM), a expansão "
+                          "fiscal gera déficit no BP e o BC " + vm("perde reservas") + "; com mobilidade nula, perde "
+                          "reservas e o produto volta ao nível inicial. O item só é verdadeiro sem ressalvas se se "
+                          "presumir mobilidade alta.")],
+        "destrinchando": [
+            "Mobilidade perfeita (BP horizontal): G ↑ → IS para a direita → i tende a subir → entrada de "
+            "capital → pressão de apreciação → BC " + vd("compra divisas") + " → " + vd("reservas ↑") + " e "
+            "M ↑ → LM para a direita → i volta a i* com " + vd("Y bem maior") + ". Fiscal com eficácia máxima.",
+            "Mobilidade imperfeita com BP mais plana que a LM: o mesmo sentido (superávit, reservas ↑), com "
+            "efeito menor sobre Y.",
+            "Mobilidade imperfeita com BP mais íngreme que a LM: o aumento das importações supera a entrada de "
+            "capital → déficit → BC " + vd("vende reservas") + " → LM para a esquerda → Y sobe pouco.",
+            "Mobilidade nula (BP vertical): a renda maior só piora a conta corrente → venda de reservas até a "
+            "LM recuar e Y voltar ao nível compatível com o equilíbrio externo: fiscal " + vd("ineficaz") + ".",
+            "Exemplo citado na fonte: a " + azb("China") + ", com câmbio administrado e forte demanda, acumulou "
+            "reservas maciças intervindo para evitar a valorização do yuan.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Item que pressupõe, sem dizer, a mobilidade perfeita de "
+                       "capitais — convenção comum em simulados. O risco está no “acúmulo de reservas”, que depende "
+                       "do sinal do saldo do BP após a expansão; com mobilidade baixa, ele se inverte."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em uma economia aberta sob câmbio fixo e fraca mobilidade de capitais, a expansão fiscal "
+            "provocaria acúmulo de reservas internacionais.”</i> → ERRADO (há déficit no BP e perda de reservas)",
+            "<i>“Em uma economia aberta sob câmbio fixo e perfeita mobilidade de capitais, a expansão monetária "
+            "provocaria acúmulo de reservas e aumento do produto.”</i> → ERRADO (perde reservas e o produto não "
+            "muda)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Resposta de IA longa: expansão fiscal eleva juros, atrai capital, BC compra divisas, "
+                            "reservas e moeda aumentam, LM vai à direita, produto sobe; exemplos da Alemanha "
+                            "Ocidental e da China.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (286).png", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "cortada"}],
+        "alertas": ["contestavel: o acúmulo de reservas só ocorre com mobilidade de capitais alta (BP mais plana que "
+                    "a LM); com mobilidade fraca ou nula a expansão fiscal reduz reservas",
+                    "quase_duplicata: ECO-E1-0448-1 (fiscal eficaz no câmbio fixo)"],
+    },
+    # ------------------------------------------------------------------ E1-0871
+    {
+        "id": "ECO-E1-0871-1", "fonte_ref": "E1-0871", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Prof. Daniel (Telegram Economia CACD)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca do modelo IS-LM-BP, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Em um regime de câmbio fixo e perfeita mobilidade de capitais, a autoridade monetária tem "
+                      "capacidade de fazer política monetária eficaz, mesmo com a pressão exercida sobre as reservas "
+                      "internacionais do país."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em um regime de câmbio fixo e perfeita mobilidade de capitais, a autoridade monetária ")
+                    + vm("tem") + az(" capacidade de fazer política monetária eficaz, ") + vm("mesmo com a")
+                    + az(" pressão exercida sobre as reservas internacionais do país.")),
+        "poucas": ("É justamente a pressão sobre as reservas que " + vm("anula") + " a política monetária: para "
+                   "manter a paridade, o BC vende ou compra divisas e desfaz a expansão ou a contração. Câmbio "
+                   "fixo + capital livre = " + azb("monetária ineficaz") + "."),
+        "destrinchando": [
+            "Expansão: M ↑ → i &lt; i* → fuga de capital → pressão de depreciação → BC " + vd("vende reservas")
+            + " e recolhe moeda → M volta → LM volta. Resultado: menos reservas, Y igual.",
+            "Contração: M ↓ → i &gt; i* → entrada de capital → pressão de apreciação → BC " + vd("compra "
+            "divisas") + " e emite → M volta. Resultado: mais reservas, Y igual.",
+            "A pressão sobre as reservas não é um obstáculo que a política “vence”: é o " + azb("mecanismo de "
+            "neutralização") + ". Com mobilidade perfeita, o fluxo de capital é ilimitado e a esterilização não "
+            "se sustenta.",
+            "É o " + azb("trilema") + ": câmbio fixo + mobilidade perfeita ⇒ sem política monetária autônoma; a "
+            "oferta de moeda torna-se endógena.",
+            vm("Regra-âncora: câmbio fixo + mobilidade perfeita → monetária ineficaz; só a fiscal mexe na renda."),
+        ],
+        "dissecando": (cz("[contradição · nexo indevido]") + " O item reconhece a pressão sobre as reservas, mas a "
+                       "trata como algo a superar (“mesmo com”), quando ela é a própria razão da ineficácia. Pista: "
+                       "câmbio fixo + perfeita mobilidade é a combinação-assinatura da monetária ineficaz."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em um regime de câmbio flutuante e perfeita mobilidade de capitais, a autoridade monetária tem "
+            "capacidade de fazer política monetária eficaz.”</i> → CERTO",
+            "<i>“Com controles de capital, um país com câmbio fixo pode conduzir política monetária "
+            "autônoma.”</i> → CERTO",
+        ])],
+        "reescrita": ("Em um regime de câmbio fixo e perfeita mobilidade de capitais, a autoridade monetária "
+                      + hl("não tem") + " capacidade de fazer política monetária eficaz, " + hl("em razão da")
+                      + " pressão exercida sobre as reservas internacionais do país."),
+        "tipo_erro": ["CONTRADICAO", "NEXO_INDEVIDO"], "moduladores": ["mesmo com"], "dificuldade": 1,
+        "comentario_fonte": "Verso só com o gabarito ERRADO, link do canal e uma imagem.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (285).png", "tipo_fonte": "desconhecido", "lado": "verso",
+                           "acao": "cortada"}],
+        "alertas": ["quase_duplicata: ECO-E1-0705-1, ECO-E1-0754-1 (monetária ineficaz no câmbio fixo)"],
+    },
+    # ------------------------------------------------------------------ E1-0876
+    {
+        "id": "ECO-E1-0876-1", "fonte_ref": "E1-0876", "destino": "70", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Macro - Aula 1", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Considerando o modelo IS-LM-BP para economias pequenas, julgue o item (C ou E).",
+        "rotulo_item": "Item",
+        "assertiva": ("Em uma economia sem mobilidade de capitais, quanto maior o grau de abertura comercial menor "
+                      "será o impacto de políticas fiscais sobre o produto."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("Em uma economia sem mobilidade de capitais, quanto maior o grau de abertura comercial "
+                      "<u>menor</u> será o impacto de políticas fiscais sobre o produto."),
+        "poucas": ("Pela lógica do " + azb("multiplicador da economia aberta") + ", 1/(1 − c + m): quanto maior a "
+                   "propensão a importar (abertura), mais o gasto " + vd("vaza") + " para fora e menor o efeito "
+                   "sobre Y."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "A fonte dá CERTO pela regra do multiplicador. No Mundell-Fleming, porém, com mobilidade "
+                          "nula e " + vm("câmbio flutuante") + ", a depreciação zera o déficit externo: o "
+                          "vazamento para importações é devolvido e o multiplicador fica igual ao da economia "
+                          "fechada, " + vm("independentemente da abertura") + ". Com câmbio fixo e mobilidade nula, "
+                          "a fiscal é ineficaz no equilíbrio final. O item vale para a análise de curto prazo, antes "
+                          "do ajuste do BP.")],
+        "destrinchando": [
+            "Na cruz keynesiana aberta, Y = C + I + G + X − M, com C = c(Y − T) e M = m·Y. O "
+            + azb("multiplicador") + " é " + vd("1/(1 − c + m)") + ": cada real de gasto que vira importação "
+            "gera renda lá fora, não aqui.",
+            "Exemplo: c = 0,8. Economia fechada (m = 0) → multiplicador 5. Com m = 0,2 → 1/0,4 = " + vd("2,5")
+            + ". Quanto mais aberta, menor o efeito de ΔG sobre Y.",
+            "Sem mobilidade de capitais, a BP é vertical: o BP só fecha com conta corrente equilibrada. A "
+            "expansão fiscal eleva a renda e as importações, gerando déficit externo — e o desfecho depende do "
+            "regime: no fixo, o BC perde reservas e a LM recua (renda volta); no flutuante, o câmbio deprecia, "
+            "recupera as exportações líquidas e a renda sobe como na economia fechada.",
+            "A afirmação da fonte de que “qualquer que seja a situação” a abertura reduz o impacto fiscal vale "
+            "para o multiplicador simples, não para todos os casos do Mundell-Fleming.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Item que aplica a regra do multiplicador aberto e "
+                       "acrescenta o dado “sem mobilidade de capitais”, sem dizer o regime cambial. A banca de "
+                       "curso considerou só o vazamento de importações; o candidato que lembra do ajuste cambial "
+                       "pode hesitar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quanto maior a propensão marginal a importar, maior o multiplicador dos gastos do governo.”</i> "
+            "→ ERRADO (inversão: o multiplicador cai)",
+            "<i>“Sem mobilidade de capitais e com câmbio fixo, a expansão fiscal provoca perda de reservas.”</i> "
+            "→ CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["quanto maior… menor"], "dificuldade": 2,
+        "comentario_fonte": "Qualquer que seja a situação, quanto maior a abertura, menor o impacto fiscal, porque "
+                            "parte do aumento de renda vaza para importações (multiplicador menor).",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "image (289).png", "tipo_fonte": "desconhecido", "lado": "frente",
+                           "acao": "cortada"}],
+        "alertas": ["contestavel: com mobilidade nula e câmbio flutuante, a depreciação neutraliza o vazamento e o "
+                    "multiplicador independe da abertura; o CERTO vale para o multiplicador simples",
+                    "nota_redacao: imagem da frente não preservada; o item está todo em texto e se julga sem ela"],
+    },
+    # ------------------------------------------------------------------ E1-0877
+    {
+        "id": "ECO-E1-0877-1", "fonte_ref": "E1-0877", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Macro - Aula 1", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Considerando o modelo IS-LM-BP para economias pequenas, julgue o item (C ou E).",
+        "rotulo_item": "Item",
+        "assertiva": "Em um regime de câmbio fixo com perfeita mobilidade de capitais, a oferta de moeda é uma variável endógena.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um regime de câmbio fixo com perfeita mobilidade de capitais, a oferta de moeda é uma "
+                      "variável <u>endógena</u>."),
+        "poucas": ("Para manter a paridade, o BC compra ou vende divisas na quantidade que o mercado pedir: a oferta "
+                   "de moeda passa a ser " + azb("determinada pelo BP") + ", não pela vontade do BC."),
+        "destrinchando": [
+            azb("Endógena") + " = determinada dentro do modelo, como resultado das outras variáveis; "
+            + azb("exógena") + " = fixada de fora (pelo BC). No IS-LM fechado e no flutuante, M é exógena; no "
+            "fixo com capital livre, M é endógena.",
+            "Base monetária = reservas internacionais + crédito doméstico do BC. Superávit no BP → BC compra "
+            "divisas → " + vd("base ↑") + "; déficit → BC vende divisas → " + vd("base ↓") + ". M se ajusta até "
+            "que i = i* e o BP feche.",
+            "Consequências: (1) a política monetária é ineficaz (qualquer mudança de M é revertida); (2) a "
+            "política fiscal é muito eficaz (a expansão de M acompanha a IS); (3) a inflação doméstica tende à "
+            "do país-âncora.",
+            "Paralelo histórico: no " + azb("padrão-ouro") + ", a oferta de moeda seguia o saldo externo pelo "
+            "mecanismo preço-espécie-fluxo de " + oc("Hume") + "; nos " + azb("currency boards") + " (Argentina "
+            "1991–2001, Hong Kong), a emissão é lastreada nas reservas.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Conceito-chave em linguagem técnica. A armadilha é de vocabulário: "
+                       "quem confunde “endógena” com “controlada pelo BC” marca ERRADO. A banca costuma inverter "
+                       "para o câmbio flutuante, em que M volta a ser exógena."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em um regime de câmbio flutuante com perfeita mobilidade de capitais, a oferta de moeda é "
+            "endógena, determinada pelo saldo do balanço de pagamentos.”</i> → ERRADO (no flutuante, o BC "
+            "controla M)",
+            "<i>“Sob câmbio fixo e perfeita mobilidade, um superávit no balanço de pagamentos expande a base "
+            "monetária.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "A oferta de moeda se ajusta para manter o câmbio fixo: o BC reage às pressões do "
+                            "mercado de câmbio. Um trecho fala, impropriamente, em “superávit comercial” em vez de "
+                            "saldo do BP.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (295).png", "tipo_fonte": "desconhecido", "lado": "frente",
+                           "acao": "cortada"}],
+        "alertas": ["quase_duplicata: ECO-E1-0754-1 (oferta de moeda não controlável no câmbio fixo)",
+                    "nota_redacao: imagem da frente não preservada; o item está todo em texto e se julga sem ela"],
+    },
+    # ------------------------------------------------------------------ E1-0878
+    {
+        "id": "ECO-E1-0878-1", "fonte_ref": "E1-0878", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Macro - Aula 1", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Considerando o modelo IS-LM-BP para economias pequenas, julgue o item (C ou E).",
+        "aviso_frente": "Enunciado reconstruído: na fonte, a frente era só uma imagem, não preservada.",
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo IS-LM-BP com câmbio fixo, quanto maior a mobilidade de capitais, maior a eficácia "
+                      "da política fiscal expansionista."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo IS-LM-BP com câmbio fixo, quanto <u>maior</u> a mobilidade de capitais, "
+                      "<u>maior</u> a eficácia da política fiscal expansionista."),
+        "poucas": ("No câmbio fixo, mais mobilidade = mais capital entrando quando a fiscal eleva o juro = mais "
+                   "compra de divisas e " + azb("expansão monetária") + " acomodando a IS. Com mobilidade "
+                   "perfeita, " + vd("eficácia máxima") + " e crowding out nulo."),
+        "destrinchando": [
+            "Mobilidade nula (BP vertical): a expansão fiscal só gera déficit em conta corrente → BC perde "
+            "reservas → LM recua até a renda voltar: " + vd("ineficaz") + ".",
+            "Mobilidade baixa (BP mais íngreme que a LM): déficit no BP → venda de reservas → LM para a "
+            "esquerda → Y sobe pouco, com " + azb("crowding out") + " forte.",
+            "Mobilidade alta (BP mais plana que a LM): superávit → compra de reservas → LM para a direita → Y "
+            "sobe mais que no IS-LM fechado.",
+            "Mobilidade perfeita (BP horizontal): o juro não sobe nada; a LM acompanha a IS inteira → "
+            + azb("multiplicador keynesiano pleno") + ", sem crowding out.",
+            vm("Regra-âncora: no câmbio fixo, a eficácia fiscal cresce com a mobilidade; no flutuante, cai com "
+               "ela."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Relação monotônica de manual. A banca costuma inverter o regime "
+                       "(no flutuante, mais mobilidade = fiscal <b>menos</b> eficaz) ou o sentido da relação. "
+                       "Guarde as duas monotonias juntas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo IS-LM-BP com câmbio flutuante, quanto maior a mobilidade de capitais, maior a eficácia "
+            "da política fiscal.”</i> → ERRADO (inversão: no flutuante a eficácia fiscal cai com a mobilidade)",
+            "<i>“No câmbio fixo, quanto maior a mobilidade de capitais, maior o efeito crowding out da política "
+            "fiscal.”</i> → ERRADO (o crowding out diminui)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["quanto maior… maior"], "dificuldade": 2,
+        "comentario_fonte": "Com câmbio fixo e perfeita mobilidade, máxima eficácia fiscal, sem crowding out; "
+                            "quanto maior a mobilidade, menos sobe o juro (respostas de IA concordantes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (294).png", "tipo_fonte": "QUESTÃO EM IMAGEM", "lado": "frente",
+                           "acao": "irrecuperavel"}],
+        "alertas": ["texto_reconstruido: frente só com imagem não preservada; assertiva reconstruída pelo "
+                    "comentário, que diz “a afirmação está correta” e a explica como “no modelo IS-LM-BP com câmbio "
+                    "fixo, uma maior mobilidade de capitais aumenta a eficácia da política fiscal expansionista”"],
+    },
+    # ------------------------------------------------------------------ E1-0880
+    {
+        "id": "ECO-E1-0880-1", "fonte_ref": "E1-0880", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Considerando um modelo IS-LM-BP com baixa mobilidade de capital e câmbio fixo, julgue o item.",
+        "rotulo_item": "Item",
+        "assertiva": "Uma expansão fiscal é eficaz quanto ao objetivo de elevar a renda.",
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma expansão fiscal é <u>eficaz</u> quanto ao objetivo de elevar a renda."),
+        "poucas": ("Com mobilidade baixa (mas não nula), a fiscal eleva a renda, ainda que pouco: o BC perde "
+                   "reservas e enxuga moeda para defender o câmbio, mas o equilíbrio final tem " + vd("Y maior")
+                   + ". Só seria ineficaz com mobilidade " + azb("nula") + "."),
+        "destrinchando": [
+            "G ↑ → IS para a direita → Y e i sobem. Com " + azb("BP mais íngreme que a LM") + " (mobilidade "
+            "baixa), o aumento das importações supera a entrada de capitais → " + vd("déficit no BP") + ".",
+            "Para defender a paridade, o BC " + vd("vende reservas") + " e recolhe moeda → LM para a "
+            "<b>esquerda</b> → juros sobem mais e há crowding out do investimento. Mesmo assim, o novo equilíbrio "
+            "sobre a BP tem renda maior que a inicial.",
+            "Correção do comentário da fonte: com mobilidade baixa, a intervenção do BC " + vm("contrai") + " a "
+            "base monetária (não a expande). A expansão da base só ocorre com mobilidade alta, quando a "
+            "expansão fiscal gera superávit.",
+            "Quadro-síntese da fiscal no câmbio fixo: mobilidade nula → ineficaz; baixa → pouco eficaz; alta → "
+            "eficaz; perfeita → eficácia máxima.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " “Eficaz” no sentido dos manuais = capaz de alterar a "
+                       "renda, não importa quanto. Quem associa “baixa mobilidade” a “ineficácia” marca ERRADO; o "
+                       "extremo ineficaz é só a mobilidade nula."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Considerando um modelo IS-LM-BP sem mobilidade de capital e câmbio fixo, uma expansão fiscal é "
+            "eficaz para elevar a renda.”</i> → ERRADO (mobilidade nula: ineficaz no equilíbrio final)",
+            "<i>“…com baixa mobilidade de capital e câmbio fixo, a expansão fiscal eleva a renda e as reservas "
+            "internacionais.”</i> → ERRADO (as reservas caem: há déficit no BP)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Expansão fiscal desloca a IS e eleva a renda; o BC intervém e expande a base, "
+                            "deslocando a LM para a direita (mecanismo errado para mobilidade baixa).",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0862-1 (fiscal eficaz no câmbio fixo com mobilidade fraca)"],
+    },
 ]

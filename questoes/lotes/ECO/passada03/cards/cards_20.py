@@ -1390,4 +1390,239 @@ CARDS = [
         "alertas": ["quase_duplicata: ECO-E1-0943-1 (medidas sanitárias e fitossanitárias como barreira não "
                     "tarifária)"],
     },
+    # ------------------------------------------------------------------ E2-L00185
+    {
+        "id": "ECO-E2-L00185-1", "fonte_ref": "E2-L00185", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_1,
+        "rotulo_item": "Item",
+        "assertiva": ("O subsídio à exportação eleva o excedente do produtor à custa da redução do excedente do "
+                      "consumidor."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O subsídio à exportação <u>eleva</u> o excedente do produtor à custa da <u>redução</u> do "
+                      "excedente do consumidor."),
+        "poucas": ("O subsídio faz a venda externa render Pm + s; o produtor só vende internamente a esse preço, "
+                   "e o " + vd("preço doméstico sobe") + ": o " + azb("produtor ganha") + ", o "
+                   + azb("consumidor perde") + " (e o governo paga a conta)."),
+        "destrinchando": [
+            "Mecanismo (país pequeno): com subsídio s por unidade exportada, o preço interno sobe de Pm para "
+            + vd("Pm + s") + ". Produção ↑, consumo doméstico ↓, exportações ↑.",
+            "Contabilidade de bem-estar: consumidores perdem a faixa entre os preços à esquerda da demanda; "
+            "produtores ganham a faixa à esquerda da oferta (maior que a perda dos consumidores); o governo "
+            "gasta s × exportações. " + azb("Resultado líquido negativo") + ": o custo fiscal supera o ganho "
+            "líquido privado, deixando dois triângulos de " + azb("peso morto") + ".",
+            "Logo, o ganho do produtor vem de <b>duas</b> fontes: parte é transferência do consumidor doméstico, "
+            "parte vem do Tesouro. O item destaca a primeira, o que não o torna errado.",
+            "País grande: as exportações maiores derrubam o preço mundial — perda adicional de termos de troca, "
+            "em benefício dos consumidores estrangeiros.",
+            vm("Regra-âncora: subsídio à exportação = espelho da tarifa de exportação — preço interno sobe, "
+               "produtor ganha, consumidor e Tesouro perdem."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " O item é verdadeiro, ainda que incompleto (omite o custo "
+                       "fiscal). O risco é confundir com o subsídio à <b>produção</b> em economia fechada, que "
+                       "beneficia o consumidor. Pista: “à exportação” → o preço interno sobe."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O subsídio à exportação eleva tanto o excedente do produtor quanto o do consumidor "
+            "doméstico.”</i> → ERRADO (troca de conceito: isso vale para subsídio à produção em economia "
+            "fechada)",
+            "<i>“O ganho do produtor com o subsídio à exportação é integralmente custeado pelo consumidor "
+            "doméstico.”</i> → ERRADO (modulador absoluto: parte é custo fiscal)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["à custa de"], "dificuldade": 1,
+        "comentario_fonte": ("O subsídio eleva o preço recebido pelo produtor, incentiva a produção e desvia oferta "
+                             "do mercado interno, pressionando o preço doméstico para cima: aumenta o excedente do "
+                             "produtor e reduz o do consumidor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: na fonte, “excedente do produto” (erro evidente de digitação por “produtor”)",
+                    "quase_duplicata: ECO-E1-0951-1, ECO-E2-L00201-1 (subsídio à exportação e excedente do "
+                    "consumidor)"],
+    },
+    # ------------------------------------------------------------------ E2-L00186
+    {
+        "id": "ECO-E2-L00186-1", "fonte_ref": "E2-L00186", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_1,
+        "rotulo_item": "Item",
+        "assertiva": ("Ceteris paribus, o efeito de uma tarifa aplicada ao comércio tende a ter um efeito mais "
+                      "intenso no longo prazo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Ceteris paribus, o efeito de uma tarifa aplicada ao comércio tende a ter um efeito mais "
+                       "intenso no ") + vm("longo") + az(" prazo.")),
+        "poucas": ("O efeito da tarifa sobre o saldo comercial é mais forte no " + azb("curto prazo") + ": com o "
+                   "tempo, a " + azb("apreciação cambial") + " que ela provoca barateia as demais importações e "
+                   "encarece as exportações, anulando o ganho."),
+        "destrinchando": [
+            "Curto prazo: a tarifa encarece o importado, as importações caem e o saldo comercial melhora; há "
+            "menos demanda por moeda estrangeira (ou mais oferta líquida de divisas).",
+            "Ajuste: com câmbio flexível, a moeda nacional se " + azb("valoriza") + ". Os demais importados "
+            "ficam mais baratos e os exportadores perdem competitividade — o saldo volta ao nível determinado "
+            "por " + vd("S − I") + ", que a tarifa não alterou.",
+            "Longo prazo: sobra só a mudança de <b>composição</b> (mais produção do bem protegido, menos dos "
+            "exportáveis) e a perda de eficiência; o efeito sobre o saldo se dissipa.",
+            "Com câmbio fixo, o Banco Central impede a apreciação e o efeito pode persistir — por isso o "
+            "<i>ceteris paribus</i> do item é lido, na tradição de prova, com câmbio flexível.",
+        ],
+        "dissecando": (cz("[inversão]") + " Troca curto por longo prazo. Leitura esperada: efeito sobre o saldo "
+                       "externo, neutralizado pelo câmbio. Atenção: numa leitura microeconômica (elasticidades "
+                       "maiores no longo prazo), o efeito sobre <b>quantidades</b> do bem protegido poderia "
+                       "crescer; o gabarito pressupõe a leitura macroeconômica."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Sob câmbio flexível, os efeitos de uma tarifa sobre a balança comercial tendem a ser anulados no "
+            "longo prazo pela apreciação cambial.”</i> → CERTO",
+            "<i>“A tarifa deprecia a moeda nacional e, assim, reforça seu efeito sobre a balança no longo "
+            "prazo.”</i> → ERRADO (inversão: a moeda se aprecia)",
+        ])],
+        "reescrita": ("Ceteris paribus, o efeito de uma tarifa aplicada ao comércio tende a ter um efeito mais "
+                      "intenso no " + hl("curto") + " prazo."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["tende a", "ceteris paribus"], "dificuldade": 2,
+        "comentario_fonte": ("No curto prazo, as tarifas preservam reservas, as divisas ficam abundantes e a moeda "
+                             "nacional se valoriza; no longo prazo, a valorização torna as importações competitivas "
+                             "e anula o efeito tarifário."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0933-1, ECO-E1-0909-1 (tarifa neutralizada pelo câmbio no longo "
+                    "prazo)"],
+    },
+    # ------------------------------------------------------------------ E2-L00199
+    {
+        "id": "ECO-E2-L00199-1", "fonte_ref": "E2-L00199", "destino": "79", "subtema": H2["cot"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_5,
+        "rotulo_item": "Item",
+        "assertiva": ("A adoção de cotas de importação aumenta o bem-estar nacional, ao passo que a adoção de uma "
+                      "tarifa específica sobre importações aumenta o excedente do consumidor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A adoção de cotas de importação ") + vm("aumenta") + az(" o bem-estar nacional, ao passo "
+                    "que a adoção de uma tarifa específica sobre importações ") + vm("aumenta") + az(" o "
+                    "excedente do consumidor.")),
+        "poucas": ("Em país pequeno, a cota " + azb("reduz") + " o bem-estar nacional (peso morto, e a renda de "
+                   "cota pode ir para fora), e a tarifa " + azb("reduz") + " o excedente do consumidor (preço "
+                   "interno maior)."),
+        "destrinchando": [
+            "Tarifa específica (valor fixo por unidade, ex.: R$ 5/kg): o preço interno sobe em t; o consumidor "
+            "compra menos e paga mais — " + vd("excedente do consumidor ↓") + ". Quem ganha: produtor doméstico "
+            "e governo (receita).",
+            "Cota: limita a quantidade importada e eleva o preço interno. Consumidor perde, produtor ganha, há "
+            "os mesmos dois triângulos de " + azb("peso morto") + " da tarifa equivalente, e o retângulo vira "
+            + azb("renda de cota") + ". Bem-estar nacional: cai pelo peso morto; cai ainda mais se a renda for "
+            "para estrangeiros (restrição voluntária de exportação).",
+            "Única exceção teórica: país grande, em que a restrição derruba o preço mundial e o ganho de "
+            "termos de troca supera o peso morto. O item não oferece essa condição.",
+            vm("Regra-âncora: proteção (tarifa ou cota) → consumidor sempre perde; produtor ganha; bem-estar "
+               "nacional cai no país pequeno."),
+        ],
+        "dissecando": (cz("[inversão]") + " Dois sinais invertidos, um em cada oração. O item não tem parte "
+                       "verdadeira: basta lembrar que toda proteção encarece o bem para o consumidor e gera "
+                       "peso morto."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A adoção de cotas de importação reduz o bem-estar nacional, e a de uma tarifa específica reduz "
+            "o excedente do consumidor.”</i> → CERTO",
+            "<i>“A tarifa específica, por ser fixa por unidade, não afeta o preço interno do bem.”</i> → ERRADO "
+            "(eleva o preço interno em t)",
+        ])],
+        "reescrita": ("A adoção de cotas de importação " + hl("reduz") + " o bem-estar nacional, ao passo que a "
+                      "adoção de uma tarifa específica sobre importações " + hl("reduz") + " o excedente do "
+                      "consumidor."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Cotas tendem a reduzir o bem-estar e podem transferir renda via renda de cota; a "
+                             "tarifa específica eleva o preço doméstico e reduz o excedente do consumidor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00200
+    {
+        "id": "ECO-E2-L00200-1", "fonte_ref": "E2-L00200", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_5,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma tarifa específica sobre importações reduz o excedente do produtor, ao passo que a adoção "
+                      "de cotas de importação aumenta esse excedente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma tarifa específica sobre importações ") + vm("reduz") + az(" o excedente do produtor, ")
+                    + vm("ao passo que") + az(" a adoção de cotas de importação aumenta esse excedente.")),
+        "poucas": ("Tarifa e cota " + azb("elevam") + " o excedente do produtor doméstico — ambas sobem o preço "
+                   "interno. O item inverte o efeito da tarifa e cria um contraste que não existe."),
+        "destrinchando": [
+            "Com a tarifa, o preço interno sobe de Pm para " + vd("Pm + t") + "; o produtor doméstico vende mais "
+            "e a preço maior: seu excedente cresce pela faixa entre os dois preços, à esquerda da oferta.",
+            "Com a cota, o mecanismo é o mesmo por outro caminho: a quantidade importada é travada, o preço "
+            "interno sobe e o produtor ganha a mesma faixa (se a cota for equivalente à tarifa).",
+            "A diferença entre os instrumentos não está no produtor nem no consumidor, mas no retângulo: "
+            + azb("receita") + " (tarifa) × " + azb("renda de cota") + " (cota).",
+            "Proteção é, por definição, transferência do consumidor para o produtor doméstico — é por isso que "
+            "setores organizados fazem lobby por ela (" + oc("Olson") + ", lógica da ação coletiva: ganhos "
+            "concentrados, perdas difusas).",
+        ],
+        "dissecando": (cz("[inversão · meia-verdade]") + " A 2ª oração é verdadeira (cota eleva o excedente do "
+                       "produtor); o erro está na 1ª, e o “ao passo que” fabrica uma oposição inexistente. 🔥 "
+                       "Itens em par tarifa × cota quase sempre testam se o candidato sabe que os efeitos sobre "
+                       "excedentes são iguais."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Tanto a tarifa quanto a cota de importação elevam o excedente do produtor doméstico.”</i> → "
+            "CERTO",
+            "<i>“A tarifa eleva o excedente do produtor, e a cota, por gerar renda de cota, reduz esse "
+            "excedente.”</i> → ERRADO (nexo indevido: a renda de cota não sai do produtor)",
+        ])],
+        "reescrita": ("Uma tarifa específica sobre importações " + hl("aumenta") + " o excedente do produtor, "
+                      + hl("assim como") + " a adoção de cotas de importação aumenta esse excedente."),
+        "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": ["ao passo que"], "dificuldade": 1,
+        "comentario_fonte": ("A tarifa específica aumenta o excedente do produtor e reduz o do consumidor; cotas "
+                             "também elevam o preço interno e o excedente do produtor; a assertiva inverte o efeito "
+                             "tarifário."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0937-1 (tarifa eleva o excedente do produtor)"],
+    },
+    # ------------------------------------------------------------------ E2-L00201
+    {
+        "id": "ECO-E2-L00201-1", "fonte_ref": "E2-L00201", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_5,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma tarifa específica sobre importações reduz o excedente do consumidor, ao passo que a "
+                      "adoção de um subsídio à exportação também diminui esse excedente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma tarifa específica sobre importações <u>reduz</u> o excedente do consumidor, ao passo que "
+                      "a adoção de um subsídio à exportação <u>também diminui</u> esse excedente."),
+        "poucas": ("Os dois instrumentos " + vd("elevam o preço interno") + ": a tarifa encarece o importado; o "
+                   "subsídio desvia oferta para fora. Em ambos, o " + azb("consumidor doméstico perde") + "."),
+        "destrinchando": [
+            azb("Tarifa de importação") + " (país importador): preço interno sobe a Pm + t → consumo cai → "
+            "excedente do consumidor ↓; produtor e governo ganham; peso morto.",
+            azb("Subsídio à exportação") + " (país exportador): o produtor só vende internamente se receber "
+            "Pm + s → preço interno sobe → consumo cai → excedente do consumidor ↓; produtor ganha; governo "
+            "<b>gasta</b>; peso morto.",
+            "Simetria útil: tarifa de importação e subsídio à exportação favorecem o produtor doméstico e "
+            "prejudicam o consumidor; tarifa de exportação e subsídio à importação fazem o oposto.",
+            "Diferença fiscal: a tarifa arrecada; o subsídio custa ao Tesouro — por isso o subsídio à "
+            "exportação gera perda nacional maior por real de proteção, e a OMC o proíbe para bens industriais "
+            "(Acordo SMC) e, desde " + vd("2015") + ", para agrícolas.",
+            vm("Regra-âncora: tudo o que eleva o preço interno (tarifa de importação, subsídio à exportação, "
+               "cota) reduz o excedente do consumidor."),
+        ],
+        "dissecando": (cz("[literalidade]") + " O “ao passo que” sugere contraste, mas o item o neutraliza com "
+                       "“também” — os dois efeitos têm o mesmo sinal. Quem confunde subsídio à exportação com "
+                       "subsídio à produção (que barateia o bem) marca ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O subsídio à exportação, ao contrário da tarifa de importação, eleva o excedente do consumidor "
+            "doméstico.”</i> → ERRADO (inversão: também o reduz)",
+            "<i>“A tarifa de exportação reduz o preço interno e eleva o excedente do consumidor doméstico.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["também"], "dificuldade": 1,
+        "comentario_fonte": ("A tarifa específica eleva o preço doméstico e reduz o excedente do consumidor; o "
+                             "subsídio à exportação desloca oferta para o exterior e eleva o preço doméstico, "
+                             "reduzindo também o excedente do consumidor, com ganho do produtor e custo fiscal."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0951-1, ECO-E2-L00185-1 (subsídio à exportação reduz o excedente do "
+                    "consumidor)"],
+    },
 ]

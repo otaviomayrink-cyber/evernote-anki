@@ -1224,4 +1224,298 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00169
+    {
+        "id": "ECO-E2-L00169-1", "fonte_ref": "E2-L00169", "destino": "59", "subtema": H2["desemp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("O desemprego cíclico é gerado exclusivamente por mudanças permanentes nos padrões "
+                      "tecnológicos de produção, resultando em substituição de mão de obra por máquinas "
+                      "avançadas, afetando especialmente os trabalhadores que não conseguem adaptar-se rapidamente "
+                      "a novas tecnologias no mercado de trabalho."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O desemprego ") + vm("cíclico") + az(" é gerado ") + vm("exclusivamente")
+                    + az(" por mudanças permanentes nos padrões tecnológicos de produção, resultando em "
+                         "substituição de mão de obra por máquinas avançadas, afetando especialmente os "
+                         "trabalhadores que não conseguem adaptar-se rapidamente a novas tecnologias no mercado de "
+                         "trabalho.")),
+        "poucas": ("O item descreve o " + azb("desemprego estrutural (tecnológico)") + " e o rotula de cíclico. "
+                   "O " + azb("cíclico") + " vem das recessões — queda da demanda agregada — e é temporário."),
+        "destrinchando": [
+            azb("Cíclico") + " (conjuntural, keynesiano): na recessão, as vendas caem, as firmas cortam produção "
+            "e demitem; na retomada, recontratam. É o desvio do desemprego em relação à taxa natural e responde "
+            "a políticas fiscal e monetária anticíclicas.",
+            azb("Estrutural") + ": descompasso duradouro entre as qualificações ou a localização dos "
+            "trabalhadores e as vagas (automação, declínio de setores, abertura comercial), ou salário acima do "
+            "equilíbrio (salário mínimo, sindicatos, salário-eficiência). Persiste mesmo na expansão e pede "
+            "requalificação e políticas ativas de emprego.",
+            "As pistas do item são todas estruturais: “mudanças permanentes”, “substituição de mão de obra por "
+            "máquinas”, “trabalhadores que não conseguem adaptar-se”.",
+            "O “exclusivamente” é um segundo erro: mesmo o estrutural tem outras causas além da tecnologia "
+            "(mudança na composição da demanda, rigidez salarial, descompasso regional).",
+            vm("Regra-âncora: temporário + recessão = cíclico; permanente + tecnologia/qualificação = "
+               "estrutural."),
+        ],
+        "dissecando": (cz("[troca de conceito · modulador absoluto]") + " Definição correta do estrutural com o "
+                       "rótulo trocado, reforçada por um “exclusivamente”. Leia o adjetivo do sujeito antes do "
+                       "resto: o predicado é que denuncia o tipo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O desemprego estrutural pode persistir mesmo em fases de crescimento econômico.”</i> → CERTO",
+            "<i>“O desemprego cíclico integra a taxa natural de desemprego.”</i> → ERRADO (troca de conceito: é "
+            "o desvio em relação a ela)",
+        ])],
+        "reescrita": ("O desemprego " + hl("estrutural") + " é gerado" + hl(", entre outras causas,") + " por "
+                      "mudanças permanentes nos padrões tecnológicos de produção, resultando em substituição de mão "
+                      "de obra por máquinas avançadas, afetando especialmente os trabalhadores que não conseguem "
+                      "adaptar-se rapidamente a novas tecnologias no mercado de trabalho."),
+        "tipo_erro": ["TROCA_CONCEITO", "GENERALIZACAO"], "moduladores": ["exclusivamente"], "dificuldade": 1,
+        "comentario_fonte": "Cíclico decorre das flutuações econômicas (recessões); a descrição é do estrutural "
+                            "tecnológico; erros extras: “exclusivamente” e “mudanças permanentes” (vários "
+                            "comentários de IA empilhados, convergentes).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00170
+    {
+        "id": "ECO-E2-L00170-1", "fonte_ref": "E2-L00170", "destino": "59", "subtema": H2["desemp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("O desemprego friccional ocorre naturalmente no pleno emprego dos fatores e reflete um "
+                      "período de transição para os trabalhadores que estão trocando de empregos ou buscando novas "
+                      "oportunidades."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O desemprego friccional ocorre naturalmente <u>no pleno emprego</u> dos fatores e reflete "
+                      "um período de transição para os trabalhadores que estão trocando de empregos ou buscando "
+                      "novas oportunidades."),
+        "poucas": ("Pleno emprego não é desemprego zero: mesmo nele há o " + azb("friccional") + ", fruto do "
+                   "tempo de busca e de casamento entre trabalhadores e vagas."),
+        "destrinchando": [
+            "O " + azb("friccional") + " existe porque trabalhadores e vagas são heterogêneos e a informação é "
+            "imperfeita: leva tempo para o recém-formado achar o primeiro emprego, para quem pediu demissão "
+            "encontrar coisa melhor, para a firma achar o candidato certo.",
+            "Por isso é visto como “saudável”: realoca trabalhadores para usos mais produtivos. Junto com o "
+            "estrutural, compõe a " + azb("taxa natural de desemprego") + " — a que prevalece com o produto no "
+            "potencial, ou seja, no " + azb("pleno emprego") + ".",
+            "Determinantes: rotatividade da economia, eficiência da intermediação (agências públicas e privadas, "
+            "plataformas digitais), benefícios que alongam a busca (seguro-desemprego) e mobilidade "
+            "geográfica.",
+            "Contraste: o " + azb("cíclico") + " é zero no pleno emprego por definição — ele mede justamente o "
+            "desemprego acima da taxa natural.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " Definição de manual. A armadilha é a "
+                       "intuição de que “pleno emprego” significa todos empregados; o “naturalmente” remete à "
+                       "taxa natural."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No pleno emprego, a taxa de desemprego é nula.”</i> → ERRADO (há desemprego friccional e "
+            "estrutural)",
+            "<i>“Programas de intermediação de mão de obra tendem a reduzir o desemprego friccional.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": ["naturalmente"], "dificuldade": 1,
+        "comentario_fonte": "Friccional ocorre naturalmente na transição entre empregos; inerente ao funcionamento "
+                            "eficiente do mercado de trabalho.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00171
+    {
+        "id": "ECO-E2-L00171-1", "fonte_ref": "E2-L00171", "destino": "59", "subtema": H2["desemp"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN,
+        "rotulo_item": "Item",
+        "assertiva": ("O conceito de desemprego estrutural aplica-se adequadamente aos momentos em que a economia "
+                      "enfrenta uma recessão, forçando as empresas a reduzir seu quadro de funcionários devido a "
+                      "uma queda na demanda por bens e serviços, caracterizando um desequilíbrio temporário e "
+                      "reversível no mercado de trabalho."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O conceito de desemprego ") + vm("estrutural") + az(" aplica-se adequadamente aos "
+                                                                           "momentos em que a economia "
+                                                                           "enfrenta uma recessão, forçando as "
+                                                                           "empresas a reduzir seu quadro de "
+                                                                           "funcionários devido a uma queda na "
+                                                                           "demanda por bens e serviços, "
+                                                                           "caracterizando um desequilíbrio "
+                                                                           "temporário e reversível no mercado "
+                                                                           "de trabalho.")),
+        "poucas": ("Recessão + queda da demanda + temporário e reversível = " + azb("desemprego cíclico")
+                   + ". O " + azb("estrutural") + " é persistente e nasce de mudanças na estrutura produtiva."),
+        "destrinchando": [
+            azb("Cíclico") + ": a demanda agregada cai, as firmas vendem menos e demitem. É " + vd("temporário")
+            + " — desaparece com a retomada — e combatido com política fiscal e monetária expansionista. Na "
+            "visão keynesiana, é desemprego " + azb("involuntário") + " por insuficiência de demanda efetiva.",
+            azb("Estrutural") + ": descompasso entre o perfil dos trabalhadores e o das vagas (tecnologia, "
+            "declínio de setores, mudança regional) ou rigidez salarial. É " + vd("persistente") + ", não some "
+            "com a retomada, e exige requalificação e realocação.",
+            "Na " + rx("recessão brasileira de 2014–2016") + ", a desocupação subiu de cerca de " + vd("7%")
+            + " (fim de 2014) para mais de " + vd("13%") + " (início de 2017), pela PNAD Contínua: predominou o componente cíclico, revertido "
+            "lentamente na recuperação.",
+            "Ressalva: recessões longas podem converter desemprego cíclico em estrutural (perda de qualificação "
+            "e de vínculo com o mercado) — é a " + azb("histerese") + " (" + oc("Blanchard e Summers") + ", "
+            + vd("1986") + ").",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Descrição perfeita do cíclico com o rótulo trocado. O item "
+                       "ainda oferece as pistas contra si mesmo: “recessão”, “queda na demanda”, “temporário e "
+                       "reversível”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Recessões prolongadas podem transformar parte do desemprego cíclico em estrutural.”</i> → "
+            "CERTO",
+            "<i>“O desemprego estrutural é eliminado por políticas de estímulo à demanda agregada.”</i> → ERRADO "
+            "(troca de conceito: pede requalificação e realocação)",
+        ])],
+        "reescrita": ("O conceito de desemprego " + hl("cíclico") + " aplica-se adequadamente aos momentos em que a "
+                      "economia enfrenta uma recessão, forçando as empresas a reduzir seu quadro de funcionários "
+                      "devido a uma queda na demanda por bens e serviços, caracterizando um desequilíbrio "
+                      "temporário e reversível no mercado de trabalho."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["adequadamente"], "dificuldade": 1,
+        "comentario_fonte": "A definição é do desemprego cíclico (recessões temporárias); o estrutural decorre "
+                            "de mudanças tecnológicas ou na estrutura econômica.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00920
+    {
+        "id": "ECO-E2-L00920-1", "fonte_ref": "E2-L00920", "destino": "59", "subtema": H2["desemp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_DESEMP,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando há inovação tecnológica em um segmento da economia, gerando aumento da "
+                      "produtividade, sem que ocorra aumento de emprego em outros segmentos, tem-se o desemprego "
+                      "denominado estrutural."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quando há inovação tecnológica em um segmento da economia, gerando aumento da "
+                      "produtividade, <u>sem que ocorra aumento de emprego em outros segmentos</u>, tem-se o "
+                      "desemprego denominado <u>estrutural</u>."),
+        "poucas": ("Inovação que poupa trabalho num setor, sem absorção dos trabalhadores em outros, gera "
+                   + azb("desemprego estrutural") + " na variante " + azb("tecnológica") + "."),
+        "destrinchando": [
+            "O " + azb("desemprego estrutural") + " resulta de incompatibilidade persistente entre a oferta e a "
+            "demanda de mão de obra. Causas típicas: mudança tecnológica e setorial (qualificações que deixam de "
+            "ser demandadas) e rigidez que mantém o salário real acima do equilíbrio (salário mínimo, poder "
+            "sindical, legislação).",
+            "Junto com o friccional, compõe a " + azb("taxa natural de desemprego") + ".",
+            "A condição “sem que ocorra aumento de emprego em outros segmentos” é o ponto técnico: em geral, o "
+            "ganho de produtividade barateia produtos, eleva a renda real e cria vagas em outras atividades "
+            "(efeito compensação). Quando essa absorção não ocorre — ou exige qualificações que os demitidos não "
+            "têm —, o desemprego persiste.",
+            "A expressão " + azb("desemprego tecnológico") + " foi popularizada por " + oc("Keynes") + " ("
+            + vd("1930") + "), que o via como fase de transição. O debate volta a cada onda de automação — hoje, "
+            "a inteligência artificial.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " Item CERTO cuidadoso: a ressalva “sem aumento de "
+                       "emprego em outros segmentos” afasta a objeção de que a inovação cria empregos alhures. "
+                       "Sem ela, a afirmação seria discutível."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Toda inovação tecnológica que eleva a produtividade gera desemprego no conjunto da "
+            "economia.”</i> → ERRADO (modulador absoluto: há efeito compensação)",
+            "<i>“O desemprego estrutural integra a taxa natural de desemprego.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["sem que"], "dificuldade": 1,
+        "comentario_fonte": "Estrutural: incompatibilidade persistente entre demanda e oferta de mão de obra; "
+                            "causas: mudanças tecnológicas e setoriais e salários reais acima do equilíbrio; compõe "
+                            "a taxa natural com o friccional.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00921
+    {
+        "id": "ECO-E2-L00921-1", "fonte_ref": "E2-L00921", "destino": "59", "subtema": H2["desemp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_DESEMP,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando um trabalhador demora para encontrar uma vaga de trabalho devido apenas a custos de "
+                      "locomoção e procura, tem-se o desemprego denominado cíclico."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Quando um trabalhador demora para encontrar uma vaga de trabalho devido apenas a custos de "
+                       "locomoção e procura, tem-se o desemprego denominado ") + vm("cíclico") + az(".")),
+        "poucas": ("Demora causada só por custos de busca e locomoção é " + azb("desemprego friccional")
+                   + ". O " + azb("cíclico") + " vem da queda da demanda agregada nas recessões."),
+        "destrinchando": [
+            azb("Friccional") + ": o tempo necessário para trabalhadores e vagas se encontrarem. Procurar custa "
+            "(deslocamento, entrevistas, informação), e o trabalhador pondera aceitar a primeira oferta ou "
+            "esperar uma melhor. Existe mesmo no pleno emprego.",
+            azb("Cíclico") + ": associado às flutuações do produto. Na recessão há menos vagas para todos, e o "
+            "desemprego sobe acima da taxa natural; na expansão, cai.",
+            "O “apenas” do item é a pista: se a única barreira é o custo de procurar e de se locomover, há vaga "
+            "disponível — falta só o encontro. No cíclico, falta a vaga.",
+            "Políticas contra o friccional: intermediação de mão de obra (no " + rx("Brasil") + ", o "
+            + rx("Sine") + "), informação sobre vagas, auxílio-transporte para busca. Contra o cíclico: política "
+            "fiscal e monetária.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " A situação descrita é friccional de manual; o rótulo foi "
+                       "trocado pelo tipo mais famoso. Pergunte sempre: falta vaga (cíclico/estrutural) ou falta "
+                       "o encontro (friccional)?"),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Quando um trabalhador demora a se recolocar por causa de uma recessão que reduziu as vagas em "
+            "toda a economia, tem-se desemprego cíclico.”</i> → CERTO",
+            "<i>“O desemprego friccional desaparece quando a economia atinge o pleno emprego.”</i> → ERRADO "
+            "(o friccional existe no pleno emprego)",
+        ])],
+        "reescrita": ("Quando um trabalhador demora para encontrar uma vaga de trabalho devido apenas a custos de "
+                      "locomoção e procura, tem-se o desemprego denominado " + hl("friccional") + "."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["apenas"], "dificuldade": 1,
+        "comentario_fonte": "É desemprego friccional (tempo para procurar e encontrar recolocação); o cíclico se "
+                            "associa às flutuações do produto e da demanda.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00922
+    {
+        "id": "ECO-E2-L00922-1", "fonte_ref": "E2-L00922", "destino": "59", "subtema": H2["desemp"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_NAB_DESEMP,
+        "rotulo_item": "Item",
+        "assertiva": ("O programa de seguro-desemprego reduz o desemprego friccional, visto que os trabalhadores "
+                      "desempregados recebem, durante certo período de tempo, parte do salário que recebiam no seu "
+                      "último emprego."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O programa de seguro-desemprego ") + vm("reduz") + az(" o desemprego friccional, visto que "
+                                                                             "os trabalhadores desempregados "
+                                                                             "recebem, durante certo período de "
+                                                                             "tempo, parte do salário que "
+                                                                             "recebiam no seu último emprego.")),
+        "poucas": ("Com renda durante a busca, o trabalhador pode procurar por mais tempo e recusar ofertas: o "
+                   "seguro-desemprego " + azb("tende a aumentar") + " o desemprego friccional."),
+        "destrinchando": [
+            "O benefício reduz o custo de ficar desempregado e eleva o " + azb("salário de reserva") + " (o "
+            "mínimo que o trabalhador aceita). A busca se alonga e a taxa de desemprego friccional — e, com ela, "
+            "a " + azb("taxa natural") + " — tende a subir. É o argumento de " + oc("Mankiw") + " nos manuais.",
+            "A própria justificativa do item (recebem parte do salário anterior) explica o aumento, não a "
+            "redução: o nexo foi invertido.",
+            "Contrapeso: a busca mais longa pode gerar " + azb("melhores casamentos") + " entre trabalhador e "
+            "vaga (mais produtividade e menos rotatividade futura), e o seguro protege a renda e o consumo na "
+            "recessão (estabilizador automático). Por isso o desenho importa: duração limitada, valor "
+            "decrescente, exigência de busca ativa.",
+            "O que reduz o friccional são políticas de " + azb("intermediação e treinamento") + ", que encurtam o "
+            "tempo de encontro entre trabalhadores e vagas. No " + rx("Brasil") + ", o seguro-desemprego é "
+            "pago em " + vd("3 a 5 parcelas") + ", com recursos do " + rx("FAT") + ".",
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " Fato verdadeiro (o trabalhador recebe parte do "
+                       "salário) usado para sustentar a conclusão oposta à da teoria. Pista: renda durante o "
+                       "desemprego diminui a urgência de aceitar a primeira oferta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Programas de intermediação de mão de obra tendem a reduzir a taxa natural de "
+            "desemprego.”</i> → CERTO",
+            "<i>“O seguro-desemprego, por elevar o salário de reserva, tende a reduzir a duração do "
+            "desemprego.”</i> → ERRADO (inversão: tende a alongá-la)",
+        ])],
+        "reescrita": ("O programa de seguro-desemprego " + hl("tende a aumentar") + " o desemprego friccional, visto "
+                      "que os trabalhadores desempregados recebem, durante certo período de tempo, parte do salário "
+                      "que recebiam no seu último emprego."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "O seguro-desemprego tende a aumentar o friccional (mais tempo de busca, recusa de "
+                            "propostas); treinamento e intermediação reduzem o friccional e a taxa natural.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

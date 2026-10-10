@@ -876,4 +876,377 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00160
+    {
+        "id": "ECO-E2-L00160-1", "fonte_ref": "E2-L00160", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_3,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um regime de câmbio flutuante, uma política monetária expansiva resulta em uma desvalorização "
+                      "cambial, o que, por sua vez, aumenta as exportações e reduz as importações, levando a um novo "
+                      "deslocamento positivo da curva IS."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um regime de câmbio flutuante, uma política monetária expansiva resulta em uma "
+                      "<u>desvalorização cambial</u>, o que, por sua vez, aumenta as exportações e reduz as "
+                      "importações, levando a um <u>novo deslocamento positivo da curva IS</u>."),
+        "poucas": ("No câmbio flutuante, a expansão monetária derruba os juros, provoca saída de capitais e "
+                   + azb("deprecia") + " o câmbio; NX ↑ desloca a IS para a direita — a renda sobe pelos canais dos "
+                   "juros " + vd("e") + " do câmbio."),
+        "destrinchando": [
+            "Cadeia em cinco elos: (1) BC expande a moeda → LM para a direita; (2) i cai abaixo de i*; (3) fuga "
+            "de capitais → demanda por divisas ↑; (4) " + vd("depreciação") + " (e = R$/US$ sobe); (5) X ↑, M ↓ "
+            "→ " + vd("NX ↑") + " → IS para a direita.",
+            "Equilíbrio final (mobilidade perfeita): i = i*, renda bem maior, câmbio depreciado, BP equilibrado "
+            "— a melhora da conta corrente compensa a saída pela conta financeira.",
+            "O “novo” deslocamento positivo é preciso: o primeiro impulso veio da LM (movimento ao longo da IS); "
+            "o segundo, do câmbio, desloca a própria IS. É por isso que a política monetária é " + azb("mais "
+            "eficaz") + " na economia aberta com câmbio flutuante do que na fechada.",
+            "Condições: " + azb("Marshall-Lerner") + " satisfeita; no curtíssimo prazo, a " + azb("curva J")
+            + " pode atrasar a melhora do saldo. O Mundell-Fleming trabalha com o ajuste já completo.",
+            "Contraste: no câmbio fixo, o elo (4) é bloqueado — o BC vende reservas para impedir a depreciação, "
+            "a moeda volta e a renda não se move.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Descrição canônica do canal cambial. O item é longo e encadeado; "
+                       "o risco é desconfiar da “desvalorização” (achar que expansão monetária valoriza) ou do "
+                       "deslocamento da IS (achar que política monetária só mexe na LM)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em um regime de câmbio fixo, uma política monetária expansiva resulta em desvalorização cambial e "
+            "novo deslocamento positivo da IS.”</i> → ERRADO (troca de regime: o BC impede a desvalorização)",
+            "<i>“Em um regime de câmbio flutuante, uma política fiscal expansiva resulta em desvalorização "
+            "cambial.”</i> → ERRADO (troca de política: com mobilidade perfeita, a fiscal valoriza o câmbio)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. A expansão monetária desloca a LM, reduz os juros e desvaloriza a moeda; a "
+                             "desvalorização aumenta exportações e reduz importações, deslocando a IS para a direita. "
+                             "Várias respostas empilhadas com o passo a passo, Marshall-Lerner, curva J e trindade "
+                             "impossível."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 013", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (cadeia de cinco passos refeita no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00143-1, ECO-E1-0884-1 (expansão monetária sob câmbio flutuante e "
+                    "mobilidade perfeita)"],
+    },
+    # ------------------------------------------------------------------ E2-L00161
+    {
+        "id": "ECO-E2-L00161-1", "fonte_ref": "E2-L00161", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_3,
+        "rotulo_item": "Item",
+        "assertiva": ("Quando a economia opera sob um regime de câmbio fixo, uma política monetária expansiva não "
+                      "consegue alterar o nível de renda de forma significativa, pois o Banco Central precisa agir "
+                      "para manter a taxa de câmbio fixa, anulando o impacto inicial de expansão monetária."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Quando a economia opera sob um regime de câmbio fixo, uma política monetária expansiva <u>não "
+                      "consegue alterar o nível de renda</u> de forma significativa, pois o Banco Central precisa agir "
+                      "para manter a taxa de câmbio fixa, <u>anulando o impacto inicial</u> de expansão monetária."),
+        "poucas": ("Câmbio fixo + mobilidade perfeita: a expansão monetária gera fuga de capitais; para defender a "
+                   "paridade, o BC " + azb("vende reservas") + " e recolhe a moeda emitida, e a LM volta ao ponto de "
+                   "partida — " + vd("renda inalterada") + "."),
+        "destrinchando": [
+            "M ↑ → LM₁ → LM₂ → juros abaixo de i* no ponto provisório E′ → saída de capitais → pressão de "
+            "desvalorização.",
+            "Defesa da paridade: o BC " + vd("vende dólares") + " e retira reais de circulação → base monetária ↓ → "
+            "a LM retorna a LM₁. Fim: " + vd("Y, i e M iguais") + " aos iniciais; o único rastro é a " + vd("perda "
+            "de reservas") + " (o BC trocou reservas por títulos domésticos).",
+            "A política monetária deixa de ser instrumento: a oferta de moeda é " + azb("endógena") + ", "
+            "determinada pelo balanço de pagamentos. É o vértice “abre mão da autonomia monetária” da "
+            + azb("trindade impossível") + " (" + oc("Mundell") + ").",
+            "Com mobilidade imperfeita, sobra um efeito transitório; e o BC pode tentar " + azb("esterilizar")
+            + " a perda de reservas, mas só enquanto elas durarem.",
+            "Exemplos: " + azb("currency board") + " argentino (1991–2001) e as bandas do Plano Real até jan./1999 — "
+            + rx("Brasil") + ": a defesa da paridade exigiu juros altíssimos e queima de reservas até a flutuação.",
+            vm("Regra-âncora: câmbio fixo → monetária nula, fiscal forte."),
+        ],
+        "grafico_verso": "ECO-E2-L00161-1-V1",
+        "dissecando": (cz("[literalidade · modulador relativo]") + " O “de forma significativa” protege o item de "
+                       "discussões sobre efeitos transitórios. A justificativa (BC precisa defender o câmbio e anula "
+                       "a expansão) é exatamente a do modelo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…o Banco Central precisa comprar dólares para manter a taxa de câmbio fixa.”</i> → ERRADO "
+            "(inversão: a fuga de capitais exige vender dólares)",
+            "<i>“Sob câmbio flutuante, uma política monetária expansiva não consegue alterar o nível de "
+            "renda.”</i> → ERRADO (troca de regime: no flutuante ela é muito eficaz)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["de forma significativa"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. A necessidade de manter o câmbio leva o BC a vender dólares e retirar moeda "
+                             "doméstica, restaurando a LM à posição inicial e anulando a elevação da renda."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0948-1, ECO-E1-0892-1 (monetária ineficaz em câmbio fixo)"],
+    },
+    # ------------------------------------------------------------------ E2-L00162
+    {
+        "id": "ECO-E2-L00162-1", "fonte_ref": "E2-L00162", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_3,
+        "rotulo_item": "Item",
+        "assertiva": ("Sob um câmbio fixo, a política fiscal expansiva é ineficiente, pois, ao elevar a taxa de juros "
+                      "como resposta ao aumento da renda, ocorre uma valorização da moeda nacional que impede o "
+                      "aumento desejado nas exportações líquidas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Sob um câmbio fixo, a política fiscal expansiva é ") + vm("ineficiente") + az(", pois, ao "
+                    "elevar a taxa de juros como resposta ao aumento da renda, ")
+                    + vm("ocorre uma valorização da moeda nacional que impede o aumento desejado nas exportações "
+                         "líquidas") + az(".")),
+        "poucas": ("Em câmbio fixo com mobilidade perfeita, a fiscal tem " + azb("eficácia máxima") + ": o BC "
+                   + vm("impede") + " a valorização comprando divisas, a moeda se expande e não há crowding out. A "
+                   "história do item é a do câmbio flutuante."),
+        "destrinchando": [
+            "G ↑ → IS para a direita → i tende a subir → entrada de capitais → pressão de valorização. No câmbio "
+            "fixo, o BC " + vd("compra dólares") + " para manter a paridade: base ↑, " + vd("LM para a direita")
+            + ", juros de volta a i*.",
+            "Resultado: " + vd("Y ↑ forte") + ", câmbio inalterado, reservas ↑. Nem os juros nem o câmbio expulsam "
+            "demanda privada — o multiplicador opera inteiro.",
+            "O mecanismo descrito no item (juros ↑ → " + azb("valorização efetiva") + " → NX ↓ → IS volta) é o do "
+            + vd("câmbio flutuante") + ", onde a fiscal é ineficaz com mobilidade perfeita (" + azb("crowding out "
+            "cambial") + ").",
+            "Detalhe de enunciado: a fiscal não busca “aumentar exportações líquidas”; o que a valorização faria "
+            "seria reduzi-las e devolver o estímulo. O item embaralha objetivo e efeito colateral.",
+            vm("Regra-âncora: fixo → fiscal forte; flutuante → monetária forte."),
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " Transplanta para o câmbio fixo o roteiro do câmbio "
+                       "flutuante. Pista: “ocorre uma valorização” é incompatível com câmbio fixo, em que a "
+                       "intervenção existe justamente para que ela não ocorra."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Sob câmbio flutuante, a política fiscal expansiva é ineficaz, pois a valorização da moeda nacional "
+            "reduz as exportações líquidas.”</i> → CERTO",
+            "<i>“Sob câmbio fixo, a política fiscal expansiva leva o Banco Central a vender reservas.”</i> → "
+            "ERRADO (inversão: com mobilidade alta, ele compra)",
+        ])],
+        "reescrita": ("Sob um câmbio fixo, a política fiscal expansiva é " + hl("eficaz") + ", pois, ao elevar a taxa "
+                      "de juros como resposta ao aumento da renda, " + hl("atrai capitais, e o Banco Central, para "
+                      "impedir a valorização da moeda nacional, compra divisas e expande a oferta de moeda") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. A fiscal é eficiente em câmbio fixo: o aumento da renda eleva a demanda "
+                             "monetária e o BC, ao comprar moeda estrangeira, introduz moeda nacional, intensificando "
+                             "o efeito fiscal."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00163
+    {
+        "id": "ECO-E2-L00163-1", "fonte_ref": "E2-L00163", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_3,
+        "rotulo_item": "Item",
+        "assertiva": ("O efeito crowding out é observado em uma política fiscal expansiva em câmbio flutuante, onde o "
+                      "aumento na taxa de juros leva a uma valorização cambial, anulando o ganho inicial da renda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": (vm("O efeito crowding out") + az(" é observado em uma política fiscal expansiva em câmbio "
+                    "flutuante, onde o aumento na taxa de juros leva a uma valorização cambial, anulando o ganho "
+                    "inicial da renda.")),
+        "poucas": ("Pela leitura da fonte, o que anula a renda no câmbio flutuante é a " + azb("queda das "
+                   "exportações líquidas") + " (crowding out cambial), com juros de volta a i* — não o crowding out "
+                   "clássico, em que juros altos expulsam o investimento."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "A fonte dá ERRADO, mas o mecanismo descrito é o resultado-padrão do Mundell-Fleming sob "
+                          "câmbio flutuante e mobilidade perfeita (premissa do comando): a alta provisória dos juros "
+                          "atrai capital, o câmbio se valoriza, NX cai e o ganho de renda " + vd("é anulado")
+                          + ". Manuais como o de " + oc("Mankiw") + " chamam isso de crowding out das exportações "
+                          "líquidas. A resposta mais defensável seria " + vm("CERTO") + "; o ERRADO só se sustenta "
+                          "numa leitura estrita de “efeito crowding out” como expulsão do investimento via juros.")],
+        "destrinchando": [
+            "Sequência: G ↑ → IS para a direita → i provisoriamente acima de i* → entrada de capitais → "
+            + vd("valorização") + " → X ↓, M ↑ → NX ↓ → IS volta à posição inicial. Final: " + vd("Y e i "
+            "inalterados") + ", câmbio apreciado, " + vd("ΔNX = −ΔG") + ".",
+            azb("Crowding out clássico") + " (economia fechada): o gasto público eleva juros e reduz o investimento "
+            "privado. " + azb("Crowding out cambial") + " (economia aberta, câmbio flutuante): o gasto público "
+            "valoriza a moeda e reduz as exportações líquidas. No caso de mobilidade perfeita, o segundo é total e "
+            "o primeiro não ocorre (i volta a i*).",
+            "Por isso a crítica da fonte: o item atribui o resultado ao “aumento na taxa de juros” como se ele "
+            "persistisse e chama de “crowding out” um efeito que não passa pelo investimento.",
+            "Com mobilidade apenas alta (não perfeita), os dois canais coexistem e a renda sobe um pouco: "
+            "anulação parcial, não total.",
+            vm("Regra-âncora: câmbio flutuante + mobilidade perfeita → fiscal sem efeito sobre Y; quem é expulso é "
+               "NX, não I."),
+        ],
+        "dissecando": (cz("[troca de conceito · outro: rótulo disputado]") + " A banca joga com o nome do "
+                       "mecanismo: o resultado (renda anulada) é o do modelo, mas o rótulo “efeito crowding out” "
+                       "e o protagonismo dos juros são discutíveis. Em prova, vale verificar se a banca distingue "
+                       "crowding out de juros e de câmbio."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em câmbio flutuante com perfeita mobilidade de capitais, a política fiscal expansiva reduz as "
+            "exportações líquidas na mesma magnitude do aumento do gasto, sem alterar a renda.”</i> → CERTO",
+            "<i>“…em câmbio fixo, onde o aumento na taxa de juros leva a uma valorização cambial, anulando o ganho "
+            "da renda.”</i> → ERRADO (troca de regime: no fixo, o BC impede a valorização e a fiscal é eficaz)",
+        ])],
+        "reescrita": (hl("O deslocamento das exportações líquidas (crowding out cambial, e não o crowding out "
+                         "clássico do investimento)") + " é observado em uma política fiscal expansiva em câmbio "
+                      "flutuante, onde o aumento na taxa de juros leva a uma valorização cambial, anulando o ganho "
+                      "inicial da renda."),
+        "tipo_erro": ["TROCA_CONCEITO", "OUTRO"], "moduladores": [], "dificuldade": 3,
+        "comentario_fonte": ("ERRADO. Respostas empilhadas e divergentes: uma diz que crowding out não implica "
+                             "anulação total; outra, que em mobilidade perfeita a anulação é total, mas via NX, sem "
+                             "alta persistente de juros nem crowding out clássico do investimento."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: sob câmbio flutuante e mobilidade perfeita (premissa do comando), a expansão "
+                    "fiscal é integralmente anulada pela valorização e queda de NX — resultado que muitos manuais "
+                    "chamam de crowding out; a resposta mais defensável seria CERTO. Mantido o ERRADO da fonte",
+                    "qualidade_fonte: uma das respostas de origem afirma que o ganho de renda não é necessariamente "
+                    "anulado, ignorando a premissa de mobilidade perfeita do comando",
+                    "quase_duplicata: ECO-E2-L00164-1, ECO-E2-L00505-1"],
+    },
+    # ------------------------------------------------------------------ E2-L00164
+    {
+        "id": "ECO-E2-L00164-1", "fonte_ref": "E2-L00164", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_4,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um cenário de câmbio flutuante com perfeita mobilidade de capitais, a política fiscal "
+                      "expansiva não afeta a renda ou a taxa de juros, já que a curva IS retorna ao ponto de "
+                      "equilíbrio inicial devido à movimentação do câmbio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um cenário de câmbio flutuante com perfeita mobilidade de capitais, a política fiscal "
+                      "expansiva <u>não afeta a renda ou a taxa de juros</u>, já que a curva IS <u>retorna ao ponto de "
+                      "equilíbrio inicial</u> devido à movimentação do câmbio."),
+        "poucas": ("É a " + azb("ineficácia total da fiscal") + " no Mundell-Fleming: a IS avança, a valorização "
+                   "cambial derruba NX e a IS volta a IS₁ — " + vd("Y e i") + " terminam onde começaram."),
+        "destrinchando": [
+            "G ↑ → IS₁ → IS₂ → no ponto provisório E′, Y e i sobem (i > i*) → entrada maciça de capitais → "
+            + vd("valorização") + " → NX ↓ → a IS volta a IS₁.",
+            "Por que volta exatamente? Com mobilidade perfeita, o equilíbrio exige i = i*. Com a LM parada (o BC "
+            "não intervém no câmbio flutuante), há um único Y compatível com M/P e i*: o inicial. A IS precisa "
+            "voltar ao mesmo lugar.",
+            "Composição muda: mais " + vd("G") + ", menos " + vd("NX") + " na mesma medida (" + azb("crowding out "
+            "cambial") + " total). Investimento e consumo ficam iguais, porque juros e renda não mudaram.",
+            "Contraste: no câmbio fixo, o BC compraria divisas e a LM acompanharia a IS — fiscal forte. Com "
+            "mobilidade imperfeita no flutuante, sobra algum efeito sobre Y e i.",
+            "Aplicação: em país grande (EUA), a expansão fiscal eleva também o juro mundial e o resultado é menos "
+            "extremo — o modelo é de " + azb("pequena economia aberta") + ".",
+            vm("Regra-âncora: flutuante + mobilidade perfeita → ΔG = −ΔNX; Y e i inalterados."),
+        ],
+        "grafico_verso": "ECO-E2-L00164-1-V1",
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " Contraria a intuição keynesiana de que gasto "
+                       "público sempre eleva a renda. As premissas (flutuante + perfeita) são as do caso extremo, e "
+                       "o item tira a conclusão correta — inclusive sobre os juros, que voltam a i*."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a política fiscal expansiva eleva a taxa de juros de forma permanente, mas não afeta a "
+            "renda.”</i> → ERRADO (com mobilidade perfeita, i volta a i*)",
+            "<i>“…em câmbio fixo com perfeita mobilidade de capitais, a política fiscal expansiva não afeta a "
+            "renda.”</i> → ERRADO (troca de regime: no fixo, a fiscal tem eficácia máxima)",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("CERTO. A fiscal desloca a IS e eleva os juros; o capital estrangeiro valoriza o câmbio e "
+                             "aumenta importações, e a IS retorna ao ponto inicial, anulando os efeitos sobre renda e "
+                             "juros."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00505-1, ECO-E2-L00658-1 (fiscal ineficaz sob câmbio flutuante e "
+                    "mobilidade perfeita)"],
+    },
+    # ------------------------------------------------------------------ E2-L00165
+    {
+        "id": "ECO-E2-L00165-1", "fonte_ref": "E2-L00165", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_4,
+        "rotulo_item": "Item",
+        "assertiva": ("Em câmbio fixo e alta mobilidade de capitais, uma política fiscal expansiva leva a um aumento "
+                      "na renda, enquanto a política monetária produz efeitos sobre o nível de renda, pois o Banco "
+                      "Central não pode atuar para neutralizar impactos cambiais causados por flutuações na "
+                      "quantidade de moeda nacional."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em câmbio fixo e alta mobilidade de capitais, uma política fiscal expansiva leva a um aumento "
+                       "na renda, enquanto a política monetária ") + vm("produz") + az(" efeitos sobre o nível de "
+                       "renda, pois o Banco Central ") + vm("não pode") + az(" atuar para neutralizar impactos "
+                       "cambiais causados por flutuações na quantidade de moeda nacional.")),
+        "poucas": ("A primeira oração está certa (fiscal eficaz). Na segunda, o modelo diz o oposto: o BC "
+                   + vm("precisa") + " neutralizar os impactos cambiais da moeda, e por isso a política monetária "
+                   + azb("não") + " afeta a renda."),
+        "destrinchando": [
+            azb("Fiscal") + " (correto): G ↑ → juros pressionados para cima → entrada de capitais → pressão de "
+            "valorização → BC " + vd("compra dólares") + ", emite moeda → LM para a direita → " + vd("Y ↑") + " "
+            "sem crowding out.",
+            azb("Monetária") + " (errado no item): M ↑ → juros pressionados para baixo → saída de capitais → "
+            "pressão de desvalorização → BC " + vd("vende dólares") + ", recolhe moeda → LM volta → " + vd("Y "
+            "inalterado") + ".",
+            "Ou seja, o BC não só pode como " + vd("é obrigado") + " a neutralizar os efeitos cambiais das "
+            "variações de moeda: é o que define o câmbio fixo. Com isso perde o controle da oferta monetária "
+            "(" + azb("trindade impossível") + ").",
+            "A frase seria verdadeira sob " + azb("câmbio flutuante") + ": aí o BC não intervém, o câmbio absorve "
+            "o choque e a política monetária afeta fortemente a renda.",
+            vm("Regra-âncora: câmbio fixo → fiscal eficaz, monetária ineficaz; o BC é refém da paridade."),
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " Começa com uma verdade (fiscal eficaz em câmbio fixo) "
+                       "para dar credibilidade e inverte a segunda metade. Pista: “não pode atuar” contradiz a "
+                       "própria definição de câmbio fixo, em que o BC atua sempre."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…enquanto a política monetária não produz efeitos sobre o nível de renda, pois o Banco Central "
+            "precisa atuar para manter a paridade.”</i> → CERTO",
+            "<i>“Em câmbio fixo e alta mobilidade de capitais, uma política fiscal expansiva leva o Banco Central a "
+            "vender moeda estrangeira.”</i> → ERRADO (inversão: ele compra)",
+        ])],
+        "reescrita": ("Em câmbio fixo e alta mobilidade de capitais, uma política fiscal expansiva leva a um aumento na "
+                      "renda, enquanto a política monetária " + hl("não produz") + " efeitos sobre o nível de renda, "
+                      "pois o Banco Central " + hl("precisa") + " atuar para neutralizar impactos cambiais causados "
+                      "por flutuações na quantidade de moeda nacional."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO. A fiscal tem impacto positivo na renda (o comentário diz que o BC vende moeda "
+                             "estrangeira e compra moeda nacional, ampliando a base); a monetária não produz efeitos, "
+                             "pois o BC neutraliza as flutuações monetárias para manter o câmbio."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem diz que, na expansão fiscal, o BC vende moeda "
+                    "estrangeira e compra moeda nacional, “ampliando a base monetária”; o correto é comprar moeda "
+                    "estrangeira e emitir moeda nacional — corrigido"],
+    },
+    # ------------------------------------------------------------------ E2-L00166
+    {
+        "id": "ECO-E2-L00166-1", "fonte_ref": "E2-L00166", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_4,
+        "rotulo_item": "Item",
+        "assertiva": ("No regime de câmbio flutuante com forte mobilidade de capitais, uma política monetária "
+                      "expansiva não afeta a taxa de juros, mas gera uma significativa elevação na renda, devido à "
+                      "interação entre o aumento das exportações e a desvalorização cambial que o movimento de "
+                      "capital ocasiona."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No regime de câmbio flutuante com forte mobilidade de capitais, uma política monetária "
+                       "expansiva ") + vm("não afeta") + az(" a taxa de juros, mas gera uma significativa elevação na "
+                       "renda, devido à interação entre o aumento das exportações e a desvalorização cambial que o "
+                       "movimento de capital ocasiona.")),
+        "poucas": ("“Forte” não é “perfeita”: com a BP " + azb("inclinada") + ", o equilíbrio final admite juros "
+                   "um pouco " + vm("menores") + " que os iniciais. A renda sobe muito, mas a taxa de juros também "
+                   "muda."),
+        "destrinchando": [
+            "Mobilidade " + vd("perfeita") + " → BP horizontal em i* → no equilíbrio, i = i* sempre: a expansão "
+            "monetária eleva Y sem mudar i.",
+            "Mobilidade " + vd("forte, mas imperfeita") + " → BP positivamente inclinada, mais plana que a LM. Os "
+            "capitais reagem bastante ao diferencial de juros, mas não infinitamente: para cada nível de renda "
+            "existe um juro de equilíbrio externo diferente.",
+            "Ajuste: M ↑ → LM à direita → i ↓ → saída de capitais → depreciação → NX ↑ → IS e BP à direita. O "
+            "novo cruzamento tem " + vd("Y bem maior") + " e " + vd("i um pouco menor") + " que o inicial.",
+            "O mecanismo descrito na segunda parte (desvalorização → exportações → renda) está certo; o erro é "
+            "só o “não afeta”, que pertence ao caso-limite.",
+            vm("Regra-âncora: “juros inalterados” é marca exclusiva da mobilidade perfeita (BP horizontal)."),
+        ],
+        "dissecando": (cz("[troca de conceito · modulador absoluto]") + " A banca troca “perfeita” por “forte” e "
+                       "mantém a conclusão do caso-limite. Leia o grau de mobilidade antes de tudo: é ele que decide "
+                       "se os juros voltam a i*."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No regime de câmbio flutuante com perfeita mobilidade de capitais, uma política monetária "
+            "expansiva não afeta a taxa de juros, mas eleva significativamente a renda.”</i> → CERTO",
+            "<i>“…com forte mobilidade de capitais, uma política monetária expansiva valoriza o câmbio.”</i> → "
+            "ERRADO (sentido trocado: a saída de capitais deprecia)",
+        ])],
+        "reescrita": ("No regime de câmbio flutuante com forte mobilidade de capitais, uma política monetária "
+                      "expansiva " + hl("reduz levemente") + " a taxa de juros, mas gera uma significativa elevação "
+                      "na renda, devido à interação entre o aumento das exportações e a desvalorização cambial que o "
+                      "movimento de capital ocasiona."),
+        "tipo_erro": ["TROCA_CONCEITO", "GENERALIZACAO"], "moduladores": ["forte"], "dificuldade": 3,
+        "comentario_fonte": ("ERRADO. A monetária expansiva reduz os juros momentaneamente; a saída de capital deprecia "
+                             "o câmbio e desloca a IS, mas a taxa de juros pode não retornar ao nível original: há "
+                             "efeitos sobre renda e juros."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

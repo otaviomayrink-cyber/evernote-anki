@@ -654,3 +654,374 @@ CARDS = [
         "figuras_fonte": [corte("IMAGEM 222", "IS → IS′, E → E′")],
         "alertas": ["quase_duplicata: ECO-E2-L01046-1"],
     },
+    # ------------------------------------------------------------------ E2-L01445
+    {
+        "id": "ECO-E2-L01445-1", "fonte_ref": "E2-L01445", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_A,
+        "rotulo_item": "Item",
+        "assertiva": ("Se o Brasil tem perfeita mobilidade de capitais e um regime de câmbio flutuante, a redução de "
+                      "juros pelo Banco Central terá mais eficácia em combater os impactos da pandemia do que a "
+                      "expansão de gastos do governo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o Brasil tem perfeita mobilidade de capitais e um regime de câmbio flutuante, a "
+                      "<u>redução de juros</u> pelo Banco Central terá <u>mais eficácia</u> em combater os impactos "
+                      "da pandemia do que a expansão de gastos do governo."),
+        "poucas": ("No Mundell-Fleming com câmbio flutuante e mobilidade perfeita, a " + azb("monetária") + " é "
+                   "eficaz (juro ↓ → depreciação → NX ↑) e a " + azb("fiscal") + " é ineficaz (apreciação → NX ↓). "
+                   "Logo, cortar juros estimula mais a demanda do que gastar."),
+        "destrinchando": [
+            "Corte de juros: LM para a direita → i abaixo de i* → saída de capitais → " + vd("depreciação")
+            + " → exportações mais competitivas, importações mais caras → NX ↑ → IS também para a direita. "
+            "Os canais doméstico (investimento, consumo) e externo se somam.",
+            "Expansão de gastos: IS para a direita → i acima de i* → entrada de capitais → " + vd("apreciação")
+            + " → NX ↓ → IS volta. Com mobilidade perfeita, o efeito sobre a renda é " + vd("nulo") + ": "
+            "crowding-out completo via câmbio.",
+            "O item é julgado <b>dentro do modelo</b>. Na pandemia real, havia ressalvas: o choque era também "
+            "de oferta, a Selic chegou a " + vd("2% a.a.") + " em 2020 (perto do limite inferior) e boa parte "
+            "do gasto público tinha função de proteção de renda (auxílio emergencial), não de estímulo "
+            "keynesiano clássico. Nada disso muda o gabarito, que pede a conclusão teórica.",
+            "A mesma lógica explica a recomendação usual para economias com câmbio flutuante e conta de capital "
+            "aberta: usar a política monetária como instrumento principal de estabilização da demanda.",
+            REGRA_MF,
+        ],
+        "dissecando": (cz("[literalidade · contraintuitivo]") + " O contexto da pandemia é distrator: puxa para a "
+                       "intuição de que gasto público é o remédio óbvio. Mas as premissas dadas (mobilidade "
+                       "perfeita + câmbio flutuante) definem o resultado do modelo. 🔥 Itens desse professor "
+                       "embrulham o Mundell-Fleming em conjuntura brasileira."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se o Brasil tem perfeita mobilidade de capitais e câmbio fixo, a redução de juros terá mais "
+            "eficácia do que a expansão de gastos.”</i> → ERRADO (troca de regime: no fixo, só a fiscal é "
+            "eficaz)",
+            "<i>“…a redução de juros terá mais eficácia porque provoca apreciação do real e barateia "
+            "importações.”</i> → ERRADO (inversão: o corte de juros deprecia o real)",
+        ])],
+        "tipo_erro": ["LITERAL", "CONTRAINTUITIVO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Monetária eficaz e fiscal ineficaz com câmbio flutuante e mobilidade perfeita "
+                            "(vários comentários de IA convergentes, com ressalvas sobre a pandemia).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [corte("IMAGEM 343", "expansão fiscal no flutuante: IS vai e volta")],
+        "alertas": ["quase_duplicata: ECO-E2-L01584-1 (monetária no flutuante com mobilidade alta)"],
+    },
+    # ------------------------------------------------------------------ E2-L01446
+    {
+        "id": "ECO-E2-L01446-1", "fonte_ref": "E2-L01446", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_A,
+        "excerto": ("<p><i>Proposição anterior, à qual o item se refere: “Se o Brasil tem perfeita mobilidade de "
+                    "capitais e um regime de câmbio flutuante, a redução de juros pelo Banco Central terá mais "
+                    "eficácia em combater os impactos da pandemia do que a expansão de gastos do governo.”</i></p>"),
+        "rotulo_item": "Item",
+        "assertiva": ("Na situação do item anterior, se o governo proíbe os fluxos de capital, a política fiscal será "
+                      "eficaz e a política monetária ineficaz para estimular a economia."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Na situação do item anterior, se o governo proíbe os fluxos de capital, a política fiscal "
+                       "será eficaz e a política monetária ") + vm("ineficaz") + az(" para estimular a "
+                                                                                    "economia.")),
+        "poucas": ("Sem mobilidade de capital e com câmbio flutuante, a BP é vertical e o câmbio ajusta a balança "
+                   "comercial: " + azb("as duas políticas são eficazes") + ", ambas reforçadas pela "
+                   "depreciação. A monetária não fica ineficaz."),
+        "destrinchando": [
+            "Proibir fluxos de capital torna a " + azb("BP vertical") + ": o balanço de pagamentos se reduz à "
+            "balança comercial, que só depende da renda (importações) e do câmbio. O juro deixa de afetar o "
+            "equilíbrio externo.",
+            "Política monetária: LM para a direita → i ↓, Y ↑ → importações sobem → déficit comercial → "
+            "com câmbio flutuante, " + vd("depreciação") + " → NX ↑ → IS e BP para a direita → Y sobe ainda "
+            "mais. " + vd("Eficaz") + ".",
+            "Política fiscal: IS para a direita → Y ↑ → déficit comercial → depreciação → IS e BP para a "
+            "direita. Também " + vd("eficaz") + " — e, sem a entrada de capitais, não há apreciação para "
+            "anulá-la, como havia com mobilidade perfeita.",
+            "Pela " + azb("trindade impossível") + ", abrir mão da mobilidade de capitais devolve graus de "
+            "liberdade; com o câmbio também flutuando, o país tem autonomia monetária plena. Ineficácia da "
+            "monetária é marca do <b>câmbio fixo</b>, não da falta de mobilidade.",
+            vm("Regra-âncora: câmbio flutuante → a monetária é eficaz em qualquer grau de mobilidade de capital."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A primeira parte (fiscal eficaz) é verdadeira "
+                       "e dá credibilidade ao item; o erro está no “ineficaz”, que pertence ao câmbio fixo. A "
+                       "pista: o regime continua flutuante — e câmbio flutuante nunca anula a política "
+                       "monetária no modelo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…se o governo proíbe os fluxos de capital e fixa o câmbio, a política monetária torna-se "
+            "ineficaz para estimular a economia.”</i> → CERTO",
+            "<i>“…se o governo proíbe os fluxos de capital, mantido o câmbio flutuante, ambas as políticas "
+            "elevam a renda, acompanhadas de depreciação cambial.”</i> → CERTO",
+        ])],
+        "reescrita": ("Na situação do item anterior, se o governo proíbe os fluxos de capital, a política fiscal será "
+                      "eficaz e a política monetária " + hl("também eficaz") + " para estimular a economia."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Sem mobilidade de capitais e com câmbio flutuante, ambas as políticas são eficazes (BP "
+                            "vertical; depreciação reforça); vários comentários de IA, um deles dizendo que a "
+                            "monetária “perde o canal cambial”, o que é impreciso.",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [corte("IMAGEM 343", "expansão fiscal no flutuante com mobilidade perfeita"),
+                          corte("IMAGEM 344", "expansão fiscal no flutuante sem mobilidade de capital")],
+        "alertas": ["qualidade_fonte: um dos comentários de IA dizia que, sem mobilidade, a monetária perde o canal "
+                    "cambial; na verdade, com BP vertical e câmbio flutuante, a depreciação reforça a expansão "
+                    "monetária"],
+    },
+    # ------------------------------------------------------------------ E2-L01486
+    {
+        "id": "ECO-E2-L01486-1", "fonte_ref": "E2-L01486", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_PAND,
+        "rotulo_item": "Item",
+        "assertiva": ("Supondo que o Brasil tem alta mobilidade de capitais, e que o BC quisesse manter o câmbio "
+                      "fixo, não deixando a moeda se depreciar, esta política de redução de juros seria ineficaz em "
+                      "estimular a atividade econômica."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Supondo que o Brasil tem <u>alta mobilidade de capitais</u>, e que o BC quisesse manter o "
+                      "<u>câmbio fixo</u>, não deixando a moeda se depreciar, esta política de redução de juros "
+                      "seria <u>ineficaz</u> em estimular a atividade econômica."),
+        "poucas": ("Câmbio fixo + mobilidade alta: o corte de juros provoca saída de capitais; para segurar o "
+                   "câmbio, o BC " + vd("vende reservas") + " e recolhe a moeda que tinha emitido. A LM volta e a "
+                   "atividade não reage: " + azb("política monetária ineficaz") + "."),
+        "destrinchando": [
+            "Mecanismo: redução de juros (LM para a direita) → i abaixo de i* + prêmio de risco → saída de "
+            "capitais → pressão de " + azb("depreciação") + ". Para manter a paridade, o BC vende moeda "
+            "estrangeira e compra reais: a base monetária encolhe e a LM retorna à posição inicial.",
+            "Resultado: " + vd("renda e juros iguais aos iniciais") + ", reservas menores. A tentativa de baixar "
+            "juros apenas troca reservas internacionais por títulos na carteira do BC.",
+            "É a " + azb("trindade impossível") + ": câmbio fixo + mobilidade de capitais = sem autonomia "
+            "monetária. Com reservas finitas, insistir na expansão termina em crise cambial — o que aconteceu "
+            "com várias âncoras cambiais nos anos 1990.",
+            "Conexão histórica: em janeiro de 1999, o " + rx("Brasil") + " abandonou a banda cambial depois de "
+            "perder reservas em sequência; a flutuação devolveu ao Banco Central a capacidade de usar os juros "
+            "para metas domésticas (adoção do regime de metas de inflação em junho de 1999).",
+            REGRA_MF,
+        ],
+        "dissecando": (cz("[literalidade]") + " Aplicação direta do trilema, vestida de conjuntura. A expressão "
+                       "“não deixando a moeda se depreciar” é a chave: o BC compromete a política monetária com "
+                       "a paridade, e a redução de juros é desfeita pela venda de reservas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…esta política de redução de juros seria eficaz, pois a saída de capitais elevaria as "
+            "exportações líquidas.”</i> → ERRADO (com câmbio fixo, não há depreciação)",
+            "<i>“…se o BC deixasse o câmbio flutuar, a redução de juros estimularia a atividade via depreciação "
+            "cambial.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Com câmbio fixo e alta mobilidade, a política monetária é ineficaz (trilema): a saída de "
+                            "capitais obriga o BC a vender reservas e contrair a base, anulando o estímulo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00905-1, ECO-E2-L01630-1"],
+    },
+    # ------------------------------------------------------------------ E2-L01487
+    {
+        "id": "ECO-E2-L01487-1", "fonte_ref": "E2-L01487", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_PAND,
+        "excerto": ("<p><i>Proposição anterior, à qual o item se refere: “Supondo que o Brasil tem alta mobilidade "
+                    "de capitais, e que o BC quisesse manter o câmbio fixo, não deixando a moeda se depreciar, esta "
+                    "política de redução de juros seria ineficaz em estimular a atividade econômica.”</i></p>"),
+        "rotulo_item": "Item",
+        "assertiva": ("No caso do item anterior, se o Brasil aplicasse controles proibindo a mobilidade de capital, "
+                      "com câmbio fixo, a política de redução de juros seria eficaz em expandir a renda."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No caso do item anterior, se o Brasil aplicasse controles proibindo a mobilidade de "
+                       "capital, com câmbio fixo, a política de redução de juros seria ") + vm("eficaz")
+                    + az(" em expandir a renda.")),
+        "poucas": ("Mesmo sem mobilidade de capital, o câmbio fixo anula a monetária: a renda maior eleva as "
+                   "importações, surge " + azb("déficit comercial") + ", o BC vende reservas e a moeda volta a "
+                   "encolher. A renda retorna ao nível inicial."),
+        "destrinchando": [
+            "Sem mobilidade, a " + azb("BP é vertical") + " no nível de renda que equilibra a balança comercial "
+            "(Y₀). Não há fuga de capitais quando o juro cai — esse canal some.",
+            "Mas há outro: a expansão monetária (LM para a direita) reduz o juro e eleva a renda para Y₁ &gt; Y₀. "
+            "Com mais renda, as importações sobem e aparece " + vd("déficit no balanço de pagamentos") + " "
+            "(excesso de demanda por divisas).",
+            "Para manter o câmbio fixo, o BC " + vd("vende reservas") + ", contraindo a oferta monetária; a LM "
+            "volta até a renda coincidir de novo com Y₀. No equilíbrio final, só caíram as reservas.",
+            "O ajuste é mais lento que com mobilidade perfeita (passa pela balança comercial, não por fluxos "
+            "financeiros instantâneos), e um BC com muitas reservas pode sustentar o estímulo por algum tempo. "
+            "No modelo, porém, o resultado de equilíbrio é a " + azb("ineficácia") + ".",
+            vm("Regra-âncora: câmbio fixo → política monetária ineficaz em qualquer grau de mobilidade; o que "
+               "muda com a mobilidade é a velocidade da perda de reservas."),
+        ],
+        "dissecando": (cz("[nexo indevido · extrapolação]") + " O item supõe que, eliminada a fuga de capitais, "
+                       "acaba o problema; esquece o canal comercial. É o erro de tratar o trilema como se só "
+                       "falasse de capitais: no modelo, o câmbio fixo amarra a moeda ao balanço de pagamentos "
+                       "inteiro. Quem pensa no curto prazo (antes da perda de reservas) tende a marcar CERTO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…com controles de capital e câmbio flutuante, a política de redução de juros seria eficaz em "
+            "expandir a renda.”</i> → CERTO",
+            "<i>“…com controles de capital e câmbio fixo, a política fiscal expansionista seria eficaz em "
+            "expandir a renda.”</i> → ERRADO (com BP vertical e câmbio fixo, a fiscal também é ineficaz)",
+        ])],
+        "reescrita": ("No caso do item anterior, se o Brasil aplicasse controles proibindo a mobilidade de capital, "
+                      "com câmbio fixo, a política de redução de juros seria " + hl("ineficaz") + " em expandir a "
+                      "renda."),
+        "tipo_erro": ["NEXO_INDEVIDO", "EXTRAPOLACAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Mesmo com controles de capital, sob câmbio fixo, o aumento da renda gera déficit "
+                            "comercial e perda de reservas; o BC contrai a moeda e a LM volta (gráfico IS-LM-BP com "
+                            "BP vertical, A → B → A).",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [corte("IMAGEM 380", "expansão monetária com câmbio fixo sem mobilidade, A → B → A")],
+        "alertas": ["quase_duplicata: ECO-E2-L01586-1 (monetária no câmbio fixo com baixa mobilidade)"],
+    },
+    # ------------------------------------------------------------------ E2-L01513
+    {
+        "id": "ECO-E2-L01513-1", "fonte_ref": "E2-L01513", "destino": "70", "subtema": H2["flut"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_B,
+        "rotulo_item": "Item",
+        "assertiva": ("Num regime de câmbio flexível e perfeita mobilidade de capitais, a política fiscal será "
+                      "ineficaz em expandir a demanda agregada, devido à apreciação cambial."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Num regime de câmbio flexível e perfeita mobilidade de capitais, a política fiscal será "
+                      "<u>ineficaz</u> em expandir a demanda agregada, devido à <u>apreciação cambial</u>."),
+        "poucas": ("É o caso clássico: expansão fiscal → juro acima de i* → entrada de capitais → "
+                   + azb("apreciação") + " → NX caem exatamente o que G subiu. A demanda agregada (e a renda) não "
+                   "muda."),
+        "destrinchando": [
+            "A IS desloca-se para a direita com o gasto maior. O juro tende a subir; com mobilidade perfeita, "
+            "basta um diferencial mínimo em relação a i* para atrair capital em grande volume, e o câmbio "
+            "flexível se " + vd("aprecia") + ".",
+            "Apreciação → exportações caem, importações sobem → " + vd("NX ↓") + " → IS volta à posição "
+            "inicial. Equilíbrio final: mesmo Y, mesmo i (= i*), câmbio mais apreciado, " + vd("ΔNX = −ΔG")
+            + ".",
+            "“Demanda agregada” aqui é a demanda total por bens domésticos (C + I + G + NX), que no equilíbrio "
+            "do IS-LM coincide com a renda. Ela não se expande porque a perda no setor externo compensa o "
+            "gasto público: muda a composição, não o total.",
+            "O mesmo raciocínio vale ao contrário: uma " + azb("contração fiscal") + " deprecia o câmbio, eleva "
+            "NX e também não altera a renda.",
+            REGRA_MF,
+        ],
+        "dissecando": (cz("[literalidade]") + " Enunciado do resultado-padrão, com o mecanismo correto (apreciação). "
+                       "Pegadinhas habituais: trocar “apreciação” por “depreciação”, ou atribuir a ineficácia à "
+                       "alta dos juros (que, no equilíbrio final, não ocorre)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a política fiscal será ineficaz em expandir a demanda agregada, devido à elevação permanente "
+            "da taxa de juros doméstica.”</i> → ERRADO (o juro final é i*; o canal é o câmbio)",
+            "<i>“Num regime de câmbio fixo e perfeita mobilidade de capitais, a política fiscal será ineficaz "
+            "devido à apreciação cambial.”</i> → ERRADO (troca de regime)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Expansão fiscal eleva os juros, atrai capital, aprecia a moeda e reduz NX; a IS volta: "
+                            "crowding-out externo, política fiscal ineficaz.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [corte("IMAGEM 393", "três diagramas IS-LM-BP de expansão fiscal")],
+        "alertas": ["quase_duplicata: ECO-E2-L00906-1, ECO-E2-L01024-1"],
+    },
+    # ------------------------------------------------------------------ E2-L01514
+    {
+        "id": "ECO-E2-L01514-1", "fonte_ref": "E2-L01514", "destino": "70", "subtema": H2["fixo"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_B,
+        "rotulo_item": "Item",
+        "assertiva": ("Num regime de câmbio fixo e sem mobilidade de capital, a política fiscal expansionista levará "
+                      "a um superávit comercial e terá máxima eficácia em expandir o produto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Num regime de câmbio fixo e sem mobilidade de capital, a política fiscal expansionista "
+                       "levará a um ") + vm("superávit") + az(" comercial e ") + vm("terá máxima eficácia")
+                    + az(" em expandir o produto.")),
+        "poucas": ("Dois erros: a expansão fiscal gera " + vm("déficit") + " comercial (mais renda, mais "
+                   "importações), e a defesa do câmbio contrai a moeda até a renda voltar ao nível de equilíbrio "
+                   "externo. Com BP vertical, a fiscal é " + vm("ineficaz") + "."),
+        "destrinchando": [
+            "Sem mobilidade de capital, a " + azb("BP é vertical") + ": existe um único nível de renda (Y₁) que "
+            "equilibra a balança comercial ao câmbio fixado. Qualquer renda maior gera déficit.",
+            "G ↑ → IS para a direita → Y e i sobem (ponto à direita da BP) → importações sobem → "
+            + vd("déficit comercial") + " → excesso de demanda por divisas. Juro maior não atrai capital (não "
+            "há mobilidade), então nada compensa o déficit.",
+            "Para manter a paridade, o BC " + vd("vende reservas") + " e a oferta de moeda cai: a LM se desloca "
+            "para a esquerda até cruzar a nova IS sobre a BP. Equilíbrio final: " + vd("renda igual a Y₁")
+            + ", juro maior, reservas menores. O gasto público expulsou investimento na mesma medida "
+            "(" + azb("crowding-out total via juros") + ").",
+            "Onde está a “máxima eficácia”? No câmbio fixo com <b>mobilidade perfeita</b>: lá, o juro maior atrai "
+            "capital, o BC compra divisas e a moeda se expande junto. O item trocou o grau de mobilidade.",
+            vm("Regra-âncora (câmbio fixo): a eficácia da fiscal cresce com a mobilidade de capital — nula sem "
+               "mobilidade, máxima com mobilidade perfeita."),
+        ],
+        "grafico_verso": "ECO-E2-L01514-1-V1",
+        "dissecando": (cz("[inversão · troca de conceito]") + " Dois erros empilhados: o sinal do saldo comercial "
+                       "(superávit × déficit) e o caso de mobilidade (a “máxima eficácia” é da mobilidade "
+                       "perfeita). Muitos comentários tratam a fiscal como “eficaz” nesse caso e só apontam o "
+                       "superávit; no equilíbrio do modelo, ela é ineficaz. Basta o primeiro erro para marcar "
+                       "ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Num regime de câmbio fixo e com perfeita mobilidade de capital, a política fiscal expansionista "
+            "terá máxima eficácia em expandir o produto.”</i> → CERTO",
+            "<i>“…sem mobilidade de capital, a política fiscal expansionista provocará perda de reservas e "
+            "aumento da taxa de juros, sem alterar o produto de equilíbrio.”</i> → CERTO",
+        ])],
+        "reescrita": ("Num regime de câmbio fixo e sem mobilidade de capital, a política fiscal expansionista levará "
+                      "a um " + hl("déficit") + " comercial" + hl(" transitório") + " e " + hl("será ineficaz")
+                      + " em expandir o produto."),
+        "tipo_erro": ["INVERSAO", "TROCA_CONCEITO"], "moduladores": ["máxima"], "dificuldade": 2,
+        "comentario_fonte": "Expansão fiscal com câmbio fixo e sem mobilidade gera déficit comercial, não superávit; "
+                            "comentários divergem sobre a eficácia (um diz “eficaz”; as figuras e a análise fundida "
+                            "da linha duplicada concluem “política fiscal ineficaz”, com retorno da renda ao nível "
+                            "inicial).",
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [redes("IMAGEM 394", "ECO-E2-L01514-1-V1", "fiscal com câmbio fixo sem mobilidade"),
+                          {"ref": "IMAGEM 469 (linha E2-L01629)", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "cortada (mesmo mecanismo; absorvida no 📖)"}],
+        "alertas": ["duplicata: E2-L01629 (mesma assertiva, mesma prova) fundida neste card",
+                    "qualidade_fonte: o primeiro comentário da fonte dava a política fiscal como “eficaz” nesse "
+                    "caso; com BP vertical e câmbio fixo, a renda de equilíbrio volta ao nível inicial"],
+    },
+    # ------------------------------------------------------------------ E2-L01515
+    {
+        "id": "ECO-E2-L01515-1", "fonte_ref": "E2-L01515", "destino": "70", "subtema": H2["bp"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_B,
+        "rotulo_item": "Item",
+        "assertiva": ("Numa economia aberta ao comércio porém sem mobilidade de capital, uma política monetária "
+                      "expansionista será menos eficaz em expandir o produto do que numa economia fechada."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": (az("Numa economia aberta ao comércio porém sem mobilidade de capital, uma política monetária "
+                       "expansionista será ") + vm("menos") + az(" eficaz em expandir o produto do que numa "
+                                                                 "economia fechada.")),
+        "poucas": ("Com câmbio flexível (a leitura da fonte), a expansão monetária gera déficit comercial, o câmbio "
+                   "se " + azb("deprecia") + ", NX sobe e a renda cresce " + vm("mais") + " do que numa economia "
+                   "fechada."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "O item não informa o regime cambial. A fonte dá ERRADO supondo câmbio flexível, em que "
+                          "a abertura comercial amplia a eficácia monetária. Mas, com " + azb("câmbio fixo")
+                          + " e sem mobilidade, a monetária é ineficaz (o BC perde reservas e a LM volta), e aí "
+                          "ela seria, sim, " + vm("menos eficaz") + " que numa economia fechada. A leitura mais "
+                          "defensável exige especificar o regime; mantido o gabarito da fonte.")],
+        "destrinchando": [
+            "Economia fechada: M ↑ → LM para a direita → i ↓ → I ↑ → Y ↑. Só o canal dos juros.",
+            "Economia aberta, sem mobilidade, " + vd("câmbio flexível") + ": a renda maior eleva as importações; "
+            "sem fluxos de capital, o déficit comercial " + vd("deprecia o câmbio") + "; NX ↑ desloca a IS (e a "
+            "BP vertical) para a direita. Ao canal dos juros soma-se o canal cambial: " + vd("mais eficaz")
+            + " que na economia fechada.",
+            "Economia aberta, sem mobilidade, " + vd("câmbio fixo") + ": o déficit comercial obriga o BC a vender "
+            "reservas; a moeda encolhe e a renda volta ao nível que equilibra a balança comercial. "
+            + vd("Ineficaz") + ".",
+            "Moral: a comparação “aberta × fechada” depende do regime. No câmbio flexível, a abertura reforça a "
+            "monetária e enfraquece a fiscal (quando há mobilidade de capital); no câmbio fixo, faz o contrário.",
+            vm("Regra-âncora: câmbio flexível → a abertura comercial amplia a eficácia da política monetária."),
+        ],
+        "dissecando": (cz("[inversão · extrapolação]") + " O item inverte a comparação (“menos” no lugar de “mais”) "
+                       "para o caso de câmbio flexível, que é o que a fonte tem em mente. A omissão do regime "
+                       "cambial abre margem a recurso: com câmbio fixo, a afirmação se sustentaria."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Numa economia aberta sem mobilidade de capital e com câmbio flexível, a política monetária "
+            "expansionista será mais eficaz do que numa economia fechada.”</i> → CERTO",
+            "<i>“…com câmbio fixo e sem mobilidade de capital, a política monetária expansionista será mais "
+            "eficaz do que numa economia fechada.”</i> → ERRADO (no fixo, ela é ineficaz)",
+        ])],
+        "reescrita": ("Numa economia aberta ao comércio porém sem mobilidade de capital, uma política monetária "
+                      "expansionista será " + hl("mais") + " eficaz em expandir o produto do que numa economia "
+                      "fechada" + hl(", se o câmbio for flexível") + "."),
+        "tipo_erro": ["INVERSAO", "EXTRAPOLACAO"], "moduladores": [], "dificuldade": 3,
+        "comentario_fonte": "Com câmbio flexível, a depreciação potencializa a monetária (mais eficaz que na economia "
+                            "fechada); com câmbio fixo, ela seria ineficaz; a fonte considera a assertiva errada "
+                            "pela possibilidade de maior eficácia.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [corte("IMAGEM 395", "aumento do risco-país com câmbio flexível"),
+                          corte("IMAGEM 396", "expansão monetária com câmbio fixo sem mobilidade")],
+        "alertas": ["contestavel: o item não especifica o regime cambial; com câmbio fixo e sem mobilidade, a "
+                    "política monetária é ineficaz e a afirmação seria verdadeira; gabarito da fonte (ERRADO) "
+                    "mantido, na leitura de câmbio flexível"],
+    },
+]

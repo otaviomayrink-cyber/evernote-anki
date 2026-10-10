@@ -1252,3 +1252,286 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0821
+    {
+        "id": "ECO-E1-0821-1", "fonte_ref": "E1-0821", "destino": "66", "subtema": H2["det"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True,
+        "errei": False,
+        "comando": CMD_CACD26,
+        "excerto": EXCERTO_CACD26,
+        "rotulo_item": "Item",
+        "assertiva": ("A elevação do risco de um país, provocada por uma crise de confiança, leva à saída de capitais "
+                      "e aumenta a pressão de depreciação cambial."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A elevação do risco de um país, provocada por uma crise de confiança, leva à <u>saída de "
+                      "capitais</u> e aumenta a pressão de <u>depreciação</u> cambial."),
+        "poucas": ("Mais " + azb("prêmio de risco") + " = ativos do país menos atraentes ao mesmo juro → capitais "
+                   "saem → demanda por divisas sobe → " + vd("E ↑") + " (pressão de depreciação)."),
+        "destrinchando": [
+            "Paridade de juros com prêmio de risco: " + vd("i = i* + (Eᵉ − E)/E + ρ") + ". Se o risco ρ sobe e "
+            "os juros domésticos i não mudam, o retorno ajustado ao risco de aplicar no país cai; os investidores "
+            "vendem ativos locais e compram divisas.",
+            "Efeito no câmbio: com câmbio flutuante, a moeda se deprecia; com câmbio fixo, a pressão aparece como "
+            + azb("perda de reservas") + " — o BC vende divisas para segurar a paridade, e pode ter de subir juros.",
+            "Respostas de política (como o texto lembra): elevar juros para compensar o prêmio, intervir com "
+            "reservas ou swaps, ou deixar o câmbio absorver o choque. A eficácia depende do regime e do grau de "
+            "mobilidade de capitais.",
+            rx("Brasil") + ": na eleição de " + vd("2002") + ", a crise de confiança levou o risco-país a mais de "
+            "2.000 pontos e o real a forte depreciação; em " + vd("2015") + ", a deterioração fiscal e a perda do "
+            "grau de investimento produziram movimento semelhante.",
+            vm("Regra-âncora: risco ↑ → saída de capitais → depreciação (ou perda de reservas, no câmbio fixo)."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Cadeia causal direta, ancorada no próprio texto (“choques de "
+                       "confiança e alterações no prêmio de risco podem afetar fluxos de capitais e pressionar a "
+                       "taxa de câmbio”). O “aumenta a pressão” é cuidadoso: não diz que a depreciação ocorrerá "
+                       "sempre, o que protege o item no câmbio fixo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A elevação do risco-país tende a apreciar a moeda doméstica, pois eleva os juros exigidos pelos "
+            "investidores.”</i> → ERRADO (inversão: o efeito imediato é saída de capitais e depreciação)",
+            "<i>“Sob câmbio fixo, uma crise de confiança tende a se manifestar em perda de reservas "
+            "internacionais.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Só o gabarito (CERTO).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0822-1, ECO-E1-0823-1 (mesmo texto motivador, CACD 2026)"],
+    },
+    # ------------------------------------------------------------------ E1-0822
+    {
+        "id": "ECO-E1-0822-1", "fonte_ref": "E1-0822", "destino": "66", "subtema": H2["real"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True,
+        "errei": False,
+        "comando": CMD_CACD26,
+        "excerto": EXCERTO_CACD26,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma taxa de câmbio real definida por q = EP*/P (em que E = moeda nacional por moeda "
+                      "estrangeira, P = nível de preços doméstico e P* = nível de preços externo) em trajetória "
+                      "ascendente ao longo do tempo indica, ceteris paribus, aumento da competitividade-preço das "
+                      "exportações do país."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma taxa de câmbio real definida por q = EP*/P (em que E = moeda nacional por moeda "
+                      "estrangeira, P = nível de preços doméstico e P* = nível de preços externo) em trajetória "
+                      "<u>ascendente</u> ao longo do tempo indica, ceteris paribus, <u>aumento</u> da "
+                      "competitividade-preço das exportações do país."),
+        "poucas": ("Com q = EP*/P, " + vd("q ↑") + " significa que os bens estrangeiros ficaram mais caros em "
+                   "relação aos nacionais (" + azb("depreciação real") + "): os produtos do país ganham "
+                   "competitividade-preço."),
+        "destrinchando": [
+            "Leitura da fórmula: EP* é o preço da cesta estrangeira convertido em moeda nacional; P é o preço da "
+            "cesta nacional. Logo q = quantas cestas nacionais compra-se com uma cesta estrangeira — o "
+            + azb("preço relativo") + " dos bens externos.",
+            "q sobe quando: E sobe (depreciação nominal), P* sobe (inflação externa) ou P cai/sobe menos "
+            "(inflação doméstica menor). Em todos os casos, o bem nacional fica relativamente mais barato → "
+            "exportações mais competitivas e importações menos atraentes.",
+            "Atenção à convenção: alguns textos definem o câmbio real ao contrário (P/EP*); aí, alta significa "
+            + azb("apreciação real") + " e perda de competitividade. O item resolve a ambiguidade ao dar a "
+            "fórmula — sempre leia a definição antes de julgar a direção.",
+            "Distinção cobrada no texto: a variação do " + azb("câmbio nominal") + " só melhora a competitividade "
+            "se não for anulada pela inflação. Exemplo: depreciação nominal de 10% com inflação doméstica 10% "
+            "acima da externa deixa q praticamente inalterado.",
+            vm("Regra-âncora: com q = EP*/P, q ↑ = depreciação real = ganho de competitividade-preço."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " O item depende inteiramente da convenção dada. O risco "
+                       "é o candidato associar “subir” a “valorizar” (como no preço de um ativo) e marcar ERRADO. "
+                       "O “ceteris paribus” afasta objeções sobre qualidade, tarifas ou demanda externa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com q definido como P/(EP*), uma trajetória ascendente de q indica ganho de competitividade-preço "
+            "das exportações.”</i> → ERRADO (convenção invertida: aí a alta é apreciação real)",
+            "<i>“Uma depreciação nominal de 10%, acompanhada de inflação doméstica 10 pontos acima da externa, "
+            "deixa a taxa de câmbio real aproximadamente constante.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["ceteris paribus"], "dificuldade": 2,
+        "comentario_fonte": "Só o gabarito (CERTO).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0821-1, ECO-E1-0823-1 (mesmo texto motivador, CACD 2026)",
+                    "quase_duplicata: ECO-E1-0867-1 (inflação doméstica e câmbio real)"],
+    },
+    # ------------------------------------------------------------------ E1-0823
+    {
+        "id": "ECO-E1-0823-1", "fonte_ref": "E1-0823", "destino": "66", "subtema": H2["reg"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True,
+        "errei": False,
+        "comando": CMD_CACD26,
+        "excerto": EXCERTO_CACD26,
+        "rotulo_item": "Item",
+        "assertiva": ("Em regime de câmbio fixo, a autoridade monetária não pode utilizar a taxa de juros como "
+                      "instrumento de defesa da paridade cambial previamente estabelecida."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em regime de câmbio fixo, a autoridade monetária ") + vm("não pode") + az(" utilizar a taxa "
+                    "de juros como instrumento de defesa da paridade cambial previamente estabelecida.")),
+        "poucas": ("Os " + azb("juros") + " são uma das principais armas de defesa da paridade: subir i atrai "
+                   "capitais e encarece apostas contra a moeda. No câmbio fixo, a política monetária fica "
+                   "<b>a serviço</b> do câmbio."),
+        "destrinchando": [
+            "Sob câmbio fixo e mobilidade de capitais, se o mercado aposta numa desvalorização, capitais saem e "
+            "as reservas caem. O BC pode (1) vender reservas e (2) " + vd("elevar os juros") + ", aumentando o "
+            "retorno de manter ativos em moeda nacional e o custo de tomar emprestado nela para comprar divisas.",
+            "Pelo " + azb("trilema") + ", o país com câmbio fixo e capitais livres perde a autonomia monetária — "
+            "mas isso significa justamente que os juros passam a ser usados para sustentar o câmbio, e não que "
+            "ficam proibidos.",
+            "Casos clássicos: a Suécia elevou sua taxa marginal a " + vd("500%") + " em setembro de 1992, na "
+            "crise do Sistema Monetário Europeu; " + rx("o Brasil") + " levou a taxa básica a mais de 40% na "
+            "crise asiática (1997) e na russa (1998) para defender a âncora cambial do Plano Real.",
+            "Limite: juros muito altos agravam a recessão e a dívida pública; se o mercado duvidar de que o país "
+            "aguenta esse custo, o ataque continua e a paridade cai (modelos de crise de " + oc("Obstfeld") + ").",
+            vm("Regra-âncora: no câmbio fixo, os juros não são livres — são o instrumento de defesa da paridade."),
+        ],
+        "dissecando": (cz("[inversão · restrição indevida]") + " Confunde “perder autonomia monetária” (não poder "
+                       "usar os juros para objetivos internos) com “não poder usar os juros” de forma alguma. O "
+                       "próprio texto lista “juros, intervenção e reservas” como respostas de política."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em regime de câmbio fixo com livre mobilidade de capitais, a política monetária perde autonomia "
+            "para perseguir objetivos internos, como o nível de emprego.”</i> → CERTO",
+            "<i>“A defesa de uma paridade fixa pode exigir tanto a venda de reservas quanto a elevação dos "
+            "juros.”</i> → CERTO",
+        ])],
+        "reescrita": ("Em regime de câmbio fixo, a autoridade monetária " + hl("pode") + " utilizar a taxa de juros "
+                      "como instrumento de defesa da paridade cambial previamente estabelecida."),
+        "tipo_erro": ["INVERSAO", "RESTRICAO"], "moduladores": ["não pode"], "dificuldade": 1,
+        "comentario_fonte": "Só o gabarito (ERRADO).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0821-1, ECO-E1-0822-1 (mesmo texto motivador, CACD 2026)"],
+    },
+    # ------------------------------------------------------------------ E1-0867
+    {
+        "id": "ECO-E1-0867-1", "fonte_ref": "E1-0867", "destino": "66", "subtema": H2["real"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2022, "cacd": False,
+        "errei": False,
+        "comando": "Julgue o item a seguir, relativo à taxa de câmbio real.",
+        "rotulo_item": "Item",
+        "assertiva": "O aumento da inflação doméstica terá como efeito uma depreciação da taxa de câmbio real.",
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O aumento da inflação doméstica terá como efeito uma ") + vm("depreciação")
+                    + az(" da taxa de câmbio real.")),
+        "poucas": ("Com q = EP*/P, " + vd("P ↑") + " (mantidos E e P*) " + vd("reduz q") + ": é "
+                   + azb("apreciação real") + " — os bens nacionais ficam mais caros em relação aos "
+                   "estrangeiros."),
+        "destrinchando": [
+            "Taxa de câmbio real: " + vd("q = E·P*/P") + " (E = moeda nacional por estrangeira). Ela mede o "
+            "preço dos bens estrangeiros em termos dos nacionais. q ↑ = depreciação real; q ↓ = apreciação real.",
+            "Inflação doméstica maior, sem depreciação nominal que a compense, eleva P e derruba q: o país "
+            "perde competitividade-preço — exporta menos e importa mais. É a " + azb("apreciação real") + " pela "
+            "via dos preços.",
+            "Exemplo: E constante, inflação doméstica de 10% e externa de 2% → q cai cerca de " + vd("8%") + ". "
+            "Para manter q constante, o câmbio nominal teria de se depreciar uns 8% (é o que prevê a "
+            + azb("PPC relativa") + ").",
+            "Caso histórico: na âncora cambial do Plano Real (1994–1998), a inflação residual acima da externa, "
+            "com câmbio nominal quase estável, produziu apreciação real e déficits comerciais crescentes.",
+            "Correção de um comentário da fonte, que descreve a fórmula ao contrário (“nominal × inflação "
+            "doméstica ÷ inflação externa”): os preços externos vão no numerador e os domésticos no denominador.",
+            vm("Regra-âncora: inflação doméstica ↑ (com E fixo) → câmbio real ↓ → apreciação real."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca apreciação por depreciação. A armadilha é associar inflação a "
+                       "“moeda fraca”: a inflação de fato tende a depreciar o câmbio <b>nominal</b> ao longo do "
+                       "tempo, mas, mantido o nominal, ela <b>aprecia</b> o câmbio real."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O aumento da inflação externa, mantidos o câmbio nominal e os preços domésticos, deprecia a taxa "
+            "de câmbio real.”</i> → CERTO",
+            "<i>“Pela paridade do poder de compra relativa, a inflação doméstica mais alta tende a apreciar o "
+            "câmbio nominal.”</i> → ERRADO (tende a depreciá-lo)",
+        ])],
+        "reescrita": ("O aumento da inflação doméstica terá como efeito uma " + hl("apreciação")
+                      + " da taxa de câmbio real."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("ERRADO: a inflação doméstica aprecia o câmbio real; mas um dos comentários descreve a "
+                             "fórmula invertida (nominal × inflação doméstica ÷ externa) e outro inventa uma "
+                             "apreciação nominal pela via do déficit comercial."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0822-1 (câmbio real q = EP*/P)"],
+    },
+    # ------------------------------------------------------------------ E1-0879
+    {
+        "id": "ECO-E1-0879-1", "fonte_ref": "E1-0879", "destino": "66", "subtema": H2["det"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos regimes de câmbio e dos determinantes da taxa de câmbio, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Uma redução da taxa de juros doméstica, coeteris paribus, aumenta a taxa de câmbio flutuante, "
+                      "se houver mobilidade de capitais."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma redução da taxa de juros doméstica, coeteris paribus, <u>aumenta</u> a taxa de câmbio "
+                      "flutuante, se houver mobilidade de capitais."),
+        "poucas": ("Juros menores → capitais saem → mais procura por divisas → " + vd("E sobe") + ": mais moeda "
+                   "nacional por unidade de moeda estrangeira, ou seja, " + azb("depreciação") + "."),
+        "destrinchando": [
+            "Convenção: a taxa de câmbio E é o preço da moeda estrangeira em moeda nacional (R$/US$). “Aumentar "
+            "a taxa de câmbio” = depreciar a moeda nacional.",
+            "Mecanismo, pela " + azb("paridade descoberta de juros") + " (i = i* + depreciação esperada): com "
+            "i abaixo de i*, aplicar no país rende menos; os investidores migram para fora e compram divisas até "
+            "que o câmbio suba.",
+            "As duas condições do item são essenciais: " + azb("câmbio flutuante") + " (no fixo, o BC venderia "
+            "reservas e a taxa não subiria; aliás, ele nem conseguiria sustentar juros abaixo dos externos por "
+            "muito tempo) e " + azb("mobilidade de capitais") + " (sem ela, o diferencial de juros pouco afeta "
+            "o fluxo financeiro).",
+            "O “coeteris paribus” isola o efeito: se ao mesmo tempo os juros externos caíssem ou o risco-país "
+            "diminuísse, o câmbio poderia não subir.",
+            vm("Regra-âncora: i ↓ → E ↑ (depreciação); i ↑ → E ↓ (apreciação), com capitais móveis e câmbio "
+               "flutuante."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " A dificuldade é de vocabulário: “aumenta a taxa de "
+                       "câmbio” soa como “fortalece a moeda” para quem não domina a convenção R$/US$. As condições "
+                       "(flutuante, mobilidade, coeteris paribus) estão todas no lugar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma redução da taxa de juros doméstica, coeteris paribus, aprecia a moeda nacional sob câmbio "
+            "flutuante e mobilidade de capitais.”</i> → ERRADO (inversão: deprecia)",
+            "<i>“Sem mobilidade de capitais, variações na taxa de juros doméstica têm efeito reduzido sobre a "
+            "taxa de câmbio pelo canal financeiro.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["coeteris paribus", "se"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO: juros menores reduzem a atratividade dos ativos nacionais, geram saída de "
+                             "capital e depreciação (aumento da taxa de câmbio)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0427-1 (queda de juros e depreciação)"],
+    },
+    # ------------------------------------------------------------------ E1-0886
+    {
+        "id": "ECO-E1-0886-1", "fonte_ref": "E1-0886", "destino": "66", "subtema": H2["reg"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": "Acerca dos regimes cambiais, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Na presença de uma crise interna com deterioração fiscal: o regime de câmbio flutuante pode "
+                      "acelerar os benefícios das rendas geradas com as exportações."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na presença de uma crise interna com deterioração fiscal: o regime de câmbio flutuante "
+                      "<u>pode</u> acelerar os benefícios das rendas geradas com as exportações."),
+        "poucas": ("No " + azb("câmbio flutuante") + ", a crise deprecia a moeda de imediato; cada dólar exportado "
+                   "passa a render mais em moeda nacional e as exportações ganham competitividade, o que amortece "
+                   "o choque."),
+        "destrinchando": [
+            "Uma crise fiscal eleva o risco-país e provoca saída de capitais. No flutuante, isso se traduz logo "
+            "em " + azb("depreciação") + ": o exportador recebe mais reais por dólar (renda maior em moeda "
+            "nacional) e o produto nacional fica mais barato lá fora.",
+            "O câmbio funciona como " + azb("amortecedor de choques") + ": a demanda externa compensa parte da "
+            "queda da demanda interna. No câmbio fixo, esse alívio não vem — o ajuste recai sobre reservas, juros "
+            "e atividade, e pode terminar numa desvalorização desordenada.",
+            "O “pode” é necessário, porque há custos: a depreciação pressiona a inflação (repasse cambial), "
+            "aumenta o peso das dívidas em moeda estrangeira (risco de " + azb("efeito balanço") + ") e leva "
+            "tempo para elevar volumes exportados (curva J).",
+            rx("Brasil") + ": na recessão de 2015–2016, marcada por deterioração fiscal, a forte depreciação do "
+            "real ajudou a reverter o déficit comercial e a reduzir o déficit em transações correntes.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " O “pode” salva uma formulação vaga (“acelerar os "
+                       "benefícios das rendas”). Itens com potencial sem garantia, sobre canais conhecidos (câmbio → "
+                       "exportações), tendem a ser CERTOS; a versão ERRADA costuma trocar o “pode” por "
+                       "“garante” ou atribuir o efeito ao câmbio fixo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em uma crise fiscal, o regime de câmbio fixo permite ajuste imediato da competitividade das "
+            "exportações pela variação da taxa de câmbio.”</i> → ERRADO (troca de regime: no fixo a taxa não "
+            "varia)",
+            "<i>“Em uma crise fiscal, a depreciação no câmbio flutuante garante a recuperação do produto no curto "
+            "prazo.”</i> → ERRADO (modulador absoluto)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("CERTO: em crise fiscal, o câmbio flutuante permite desvalorizar, barateando as "
+                             "exportações e gerando entrada de divisas que mitiga a crise."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+]

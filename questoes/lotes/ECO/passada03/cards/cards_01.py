@@ -788,4 +788,358 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0730
+    {
+        "id": "ECO-E1-0730-1", "fonte_ref": "E1-0730", "destino": "56", "subtema": H2["ee"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado 07/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_SOLOW,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma das críticas ao modelo de crescimento de Solow é que ele não é capaz de explicar a "
+                      "relação entre as taxas de poupança e investimento e o crescimento econômico. Neste modelo, a "
+                      "taxa de investimento não afeta a taxa de crescimento equilibrado, restringindo seu efeito ao "
+                      "nível de renda de equilíbrio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma das críticas ao modelo de crescimento de Solow é que ele não é capaz de explicar a "
+                      "relação entre as taxas de poupança e investimento e o crescimento econômico. Neste modelo, a "
+                      "taxa de investimento <u>não afeta a taxa de crescimento equilibrado</u>, restringindo seu "
+                      "efeito ao <u>nível de renda</u> de equilíbrio."),
+        "poucas": ("Em Solow, a taxa de investimento (= poupança) tem só " + azb("efeito nível") + ". Os dados, "
+                   "porém, mostram correlação entre investimento e crescimento de longo prazo — daí a crítica que "
+                   "motivou os modelos de " + azb("crescimento endógeno") + "."),
+        "destrinchando": [
+            "Resultado do modelo: na trajetória de crescimento equilibrado, y cresce à taxa " + vd("g")
+            + " (exógena), qualquer que seja s. Uma taxa de investimento maior leva a um k* e a um y* maiores, "
+            "com crescimento mais rápido só durante a transição.",
+            "A crítica: o crescimento de longo prazo fica explicado por uma variável que o próprio modelo não "
+            "explica (g “cai do céu”), e a poupança — o que o modelo de fato modela — não influencia esse "
+            "crescimento. Empiricamente, países com investimento alto por décadas (Leste Asiático) cresceram "
+            "mais por décadas.",
+            "Respostas teóricas: modelo " + azb("AK") + " (capital em sentido amplo, sem rendimentos "
+            "decrescentes: g = s·A − δ, logo s afeta a taxa); " + oc("Romer") + " (1986 e 1990) e "
+            + oc("Lucas") + " (1988), com externalidades, ideias e capital humano.",
+            "Outra crítica de linhagem keynesiana, presente na fonte: Solow supõe que toda poupança vira "
+            "investimento produtivo, sem problema de demanda efetiva — a hipótese que " + oc("Harrod") + " e "
+            + oc("Domar") + " não faziam.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " A 1ª frase parece exagerada (“não é capaz de "
+                       "explicar a relação”), mas a 2ª a delimita: a relação que falta é com a <b>taxa</b> de "
+                       "crescimento equilibrado. Quem lê só a 1ª e lembra que Solow liga poupança a renda marca "
+                       "ERRADO. A banca inverteria dizendo que o investimento afeta a taxa equilibrada."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Solow, a taxa de investimento eleva permanentemente a taxa de crescimento "
+            "equilibrado.”</i> → ERRADO (efeito nível tratado como efeito crescimento)",
+            "<i>“No modelo AK, a taxa de poupança afeta a taxa de crescimento de longo prazo.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Certo: em Solow a poupança é exógena e toda poupança vira investimento; o "
+                             "investimento não afeta a taxa de crescimento equilibrado, só o nível de renda; "
+                             "crítica keynesiana sobre poupança × investimento."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0732
+    {
+        "id": "ECO-E1-0732-1", "fonte_ref": "E1-0732", "destino": "56", "subtema": H2["ee"],
+        "tipo": "C/E", "banca": "Daniel – Economia CACD (Telegram)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_DANIEL,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo o modelo neoclássico de Solow, um aumento da taxa de poupança faz a economia crescer "
+                      "até que alcance o novo estado estacionário. Logo, políticas que aumentem a taxa de poupança "
+                      "são eficazes para ampliar o PIB per capita."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo o modelo neoclássico de Solow, um aumento da taxa de poupança faz a economia crescer "
+                      "<u>até que alcance o novo estado estacionário</u>. Logo, políticas que aumentem a taxa de "
+                      "poupança são eficazes para ampliar o <u>PIB per capita</u>."),
+        "poucas": ("Alta de s → crescimento " + azb("transitório") + " até um k* maior → " + vd("PIB per capita "
+                   "de estado estacionário maior") + ". A política funciona para o <b>nível</b>, não para a "
+                   "taxa de crescimento de longo prazo."),
+        "destrinchando": [
+            DINAMICA,
+            "Com s maior, s·f(k) supera (n + δ)k, o capital por trabalhador cresce e y cresce junto, até o novo "
+            "estado estacionário. Ali, " + vd("y* = f(k*)") + " está mais alto, permanentemente.",
+            "O “Logo” é válido porque a conclusão fala em <b>ampliar o PIB per capita</b> (nível), e não em "
+            "elevar a taxa de crescimento de longo prazo — esta continua dada pelo progresso técnico e pelo "
+            "crescimento populacional, exógenos.",
+            "Ressalva útil: PIB per capita maior não é o mesmo que bem-estar maior. Se a economia já poupa acima "
+            "da " + azb("regra de ouro") + ", elevar s aumenta y, mas reduz o " + azb("consumo") + " per capita "
+            "de estado estacionário. E, na transição, o consumo cai primeiro.",
+            "Exemplos de política de poupança discutidos no " + rx("Brasil") + ": previdência de capitalização, "
+            "incentivos fiscais à poupança de longo prazo e redução do déficit público (poupança do governo).",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Frase-padrão do modelo seguida de uma "
+                       "conclusão bem delimitada: “ampliar o PIB per capita” (nível). A armadilha seria ler "
+                       "“eficazes” como efeito permanente sobre o crescimento. A banca inverteria com “elevar "
+                       "permanentemente a taxa de crescimento”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…Logo, políticas que aumentem a taxa de poupança são eficazes para elevar permanentemente a "
+            "taxa de crescimento do PIB per capita.”</i> → ERRADO (efeito apenas de nível)",
+            "<i>“…Logo, políticas que aumentem a taxa de poupança sempre elevam o consumo per capita de longo "
+            "prazo.”</i> → ERRADO (modulador absoluto: acima da regra de ouro, o consumo cai)",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["Logo"], "dificuldade": 1,
+        "comentario_fonte": ("Certo (verso com imagem não preservada e link para o canal do Telegram); nota: "
+                             "tecnologia e crescimento da mão de obra são variáveis exógenas."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "image (238).png", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "irrecuperavel (não preservada; comentário escrito a partir do conteúdo)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0734
+    {
+        "id": "ECO-E1-0734-1", "fonte_ref": "E1-0734", "destino": "56", "subtema": H2["ee"],
+        "tipo": "C/E", "banca": "Daniel – Economia CACD (Telegram)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_DANIEL,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de Solow é uma Teoria Neoclássica que descreve como a taxa de crescimento na "
+                      "economia é instável e resultado de uma combinação de três forças principais: a tecnologia, o "
+                      "capital e o trabalho."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O modelo de Solow é uma Teoria Neoclássica que descreve como a taxa de crescimento na "
+                       "economia é ") + vm("instável") + az(" e resultado de uma combinação de três forças "
+                                                           "principais: a tecnologia, o capital e o trabalho.")),
+        "poucas": ("Solow mostra exatamente o contrário: o crescimento é " + azb("estável") + " — a economia "
+                   "converge automaticamente para o estado estacionário. Instabilidade (“fio da navalha”) é a "
+                   "conclusão de " + oc("Harrod") + "-" + oc("Domar") + "."),
+        "destrinchando": [
+            "Em " + oc("Harrod") + " (1939) e " + oc("Domar") + " (1946), a produção usa capital e trabalho em "
+            "proporções fixas. O crescimento equilibrado exige que a taxa garantida (s/v) coincida com a taxa "
+            "natural (n): coincidência improvável, e qualquer desvio se acumula — o " + azb("fio da navalha")
+            + ".",
+            oc("Solow") + " (1956) e " + oc("Swan") + " (1956) introduzem " + azb("substituição entre fatores")
+            + " e rendimentos marginais decrescentes. Se k está abaixo de k*, o investimento supera o necessário "
+            "e k sobe; se está acima, k cai. O estado estacionário é " + vd("globalmente estável") + ".",
+            "A segunda parte do item está certa: em Solow, o produto resulta de capital, trabalho e tecnologia "
+            "(Y = F(K, A·L)) — os mesmos três componentes da contabilidade do crescimento.",
+            vm("Regra-âncora: Harrod-Domar = instável (fio da navalha); Solow = estável (convergência para o "
+               "estado estacionário)."),
+        ],
+        "dissecando": (cz("[troca de conceito]") + " Um adjetivo errado num item que, de resto, descreve bem o "
+                       "modelo. A troca atribui a Solow a marca do modelo que ele veio corrigir. Pista: "
+                       "“neoclássico” em crescimento evoca ajuste automático e estabilidade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo de Harrod-Domar descreve uma trajetória de crescimento equilibrado instável, conhecida "
+            "como fio da navalha.”</i> → CERTO",
+            "<i>“O modelo de Solow supõe proporções fixas entre capital e trabalho.”</i> → ERRADO (troca de "
+            "modelo: proporções fixas são de Harrod-Domar)",
+        ])],
+        "reescrita": ("O modelo de Solow é uma Teoria Neoclássica que descreve como a taxa de crescimento na "
+                      "economia é " + hl("estável") + " e resultado de uma combinação de três forças principais: a "
+                      "tecnologia, o capital e o trabalho."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Errado (verso com imagem não preservada e links para o canal do Telegram).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (241).png", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "irrecuperavel (não preservada; comentário escrito a partir do conteúdo)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0735
+    {
+        "id": "ECO-E1-0735-1", "fonte_ref": "E1-0735", "destino": "56", "subtema": H2["ee"],
+        "tipo": "C/E", "banca": "Daniel – Economia CACD (Telegram)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_DANIEL,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de Solow, o aumento da taxa de poupança faz a economia crescer até que alcance o "
+                      "novo estado estacionário. Assim, a acumulação de capital é a poupança descontada da taxa de "
+                      "depreciação e a taxa de poupança é o principal determinante do estoque de capital no estado "
+                      "estacionário."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de Solow, o aumento da taxa de poupança faz a economia crescer até que alcance o "
+                      "novo estado estacionário. Assim, a acumulação de capital é <u>a poupança descontada da "
+                      "taxa de depreciação</u> e a taxa de poupança é o <u>principal determinante</u> do estoque "
+                      "de capital no estado estacionário."),
+        "poucas": ("ΔK = s·Y − δK: a acumulação é a " + azb("poupança menos a depreciação") + ". E, no estado "
+                   "estacionário, " + vd("k* = [s·A/(n + δ)]<sup>1/(1−α)</sup>") + ": a poupança é o parâmetro "
+                   "que o modelo destaca como determinante de k*."),
+        "destrinchando": [
+            "Lei de movimento do capital: " + vd("ΔK = s·Y − δK") + " (agregado) ou " + vd("Δk = s·f(k) − "
+                                                                                          "(n + δ)k")
+            + " (por trabalhador, em que o crescimento populacional funciona como uma depreciação adicional). O "
+            "item usa a versão simples, sem n: correta.",
+            "No estado estacionário, s·f(k*) = (n + δ)k*. Com Cobb-Douglas, k* cresce com s e cai com n e δ. "
+            "“Principal determinante” é a leitura didática de " + oc("Mankiw") + ": a poupança é o canal pelo qual "
+            "as escolhas de uma sociedade mudam o capital (e a renda) de longo prazo.",
+            "Exemplos usados nos manuais: Japão e Alemanha do pós-guerra, com poupança alta, convergiram para "
+            "estados estacionários elevados; diferenças de taxa de investimento ajudam a explicar diferenças de "
+            "renda per capita entre países.",
+            "Limite do argumento: o efeito da poupança é sobre o " + azb("nível") + " de k* e y*; a taxa de "
+            "crescimento de longo prazo continua dada pelo progresso técnico.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Três afirmações encadeadas, todas do manual. O ponto de "
+                       "hesitação é o “principal determinante”, que soa como juízo de valor: no modelo, s é o "
+                       "deslocador central de k* (ao lado de n e δ). A banca inverteria dizendo que a acumulação é "
+                       "o consumo descontado da depreciação, ou que s é irrelevante para k*."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a taxa de poupança é irrelevante para o estoque de capital no estado estacionário, que depende "
+            "apenas da tecnologia.”</i> → ERRADO (restrição indevida: s, n e δ também determinam k*)",
+            "<i>“…um aumento da depreciação eleva o estoque de capital de estado estacionário.”</i> → ERRADO "
+            "(sinal trocado: δ maior reduz k*)",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["principal"], "dificuldade": 1,
+        "comentario_fonte": "Certo (verso com imagem não preservada e link para o canal do Telegram).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (252).png", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "irrecuperavel (não preservada; comentário escrito a partir do conteúdo)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0737
+    {
+        "id": "ECO-E1-0737-1", "fonte_ref": "E1-0737", "destino": "56", "subtema": H2["pop"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de Solow sem progresso tecnológico, uma vez que, no longo prazo, a taxa de "
+                      "crescimento do produto per capita é igual à taxa de crescimento populacional, países com "
+                      "maior crescimento da população tendem a ter maior nível de renda per capita."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No modelo de Solow sem progresso tecnológico, ") + vm("uma vez que")
+                    + az(", no longo prazo, a taxa de crescimento do produto ") + vm("per capita é")
+                    + az(" igual à taxa de crescimento populacional, países com maior crescimento da população "
+                         "tendem a ter ") + vm("maior") + az(" nível de renda per capita.")),
+        "poucas": ("Dois erros: no longo prazo, quem cresce à taxa n é o produto " + azb("agregado") + " (o per "
+                   "capita fica constante); e n maior <b>reduz</b> o capital e a renda per capita de estado "
+                   "estacionário."),
+        "destrinchando": [
+            "Sem progresso técnico, no estado estacionário k e y são constantes: " + vd("g(y) = 0") + ". Como "
+            "Y = y·L e L cresce a n, " + vd("g(Y) = n") + ". A 1ª parte troca o agregado pelo per capita.",
+            "Efeito de n sobre o nível: a reta de investimento necessário (n + δ)k fica mais inclinada, cruza "
+            "s·f(k) num " + vd("k* menor") + " e, portanto, " + vd("y* menor") + ". Cada trabalhador novo "
+            "precisa ser equipado, e a mesma poupança se espalha por mais gente (diluição do capital).",
+            "Implicação empírica destacada por " + oc("Mankiw, Romer e Weil") + " (1992): países com crescimento "
+            "populacional alto tendem a ser mais pobres, controlada a poupança.",
+            "Resumo das taxas sem tecnologia: Y e K crescem a n; y, k e c, a zero. Com tecnologia: Y e K a "
+            "n + g; y, k e c a g.",
+            vm("Regra-âncora: n ↑ → k* ↓ e y* ↓ (nível per capita menor), mas crescimento agregado ↑."),
+        ],
+        "dissecando": (cz("[troca de conceito · inversão]") + " A 1ª oração parece certa “por um detalhe”: a "
+                       "taxa n vale para o produto, não para o produto per capita. Sobre essa premissa trocada, o "
+                       "item tira uma conclusão de sinal invertido. Pista: em Solow, “mais população” só pode "
+                       "aparecer com sinal negativo no nível per capita."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Solow sem progresso tecnológico, no longo prazo, o produto agregado cresce à taxa "
+            "de crescimento populacional, e o produto per capita é constante.”</i> → CERTO",
+            "<i>“Um aumento da taxa de crescimento populacional eleva o capital por trabalhador de estado "
+            "estacionário.”</i> → ERRADO (sinal trocado: reduz k*)",
+        ])],
+        "reescrita": ("No modelo de Solow sem progresso tecnológico, " + hl("embora") + ", no longo prazo, a taxa "
+                      "de crescimento do produto " + hl("agregado seja") + " igual à taxa de crescimento "
+                      "populacional, países com maior crescimento da população tendem a ter " + hl("menor")
+                      + " nível de renda per capita."),
+        "tipo_erro": ["TROCA_CONCEITO", "INVERSAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("É o contrário: n maior leva a estado estacionário com menos capital per capita; e a "
+                             "taxa n é a do produto, não do produto per capita, que fica constante."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00578-1 (mesmo mecanismo: n maior reduz k* e eleva o crescimento "
+                    "agregado)"],
+    },
+    # ------------------------------------------------------------------ E1-0738
+    {
+        "id": "ECO-E1-0738-1", "fonte_ref": "E1-0738", "destino": "56", "subtema": H2["ouro"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("Se um país tem um estoque de capital per capita abaixo do nível da regra de ouro, então este "
+                      "país precisa elevar sua taxa de poupança para elevar o consumo per capita."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se um país tem um estoque de capital per capita <u>abaixo</u> do nível da regra de ouro, "
+                      "então este país precisa <u>elevar</u> sua taxa de poupança para elevar o consumo per "
+                      "capita."),
+        "poucas": ("Abaixo de k ouro, falta capital: elevar s leva a um k* maior, mais perto de k ouro, onde o "
+                   + azb("consumo per capita de estado estacionário") + " é máximo. Poupa-se mais (propensão a "
+                   "consumir menor), mas consome-se mais (nível de consumo maior)."),
+        "destrinchando": [
+            "Consumo de estado estacionário: " + vd("c* = f(k*) − (n + δ)k*") + ". Ele é máximo em "
+            + vd("f′(k ouro) = n + δ") + " (regra de ouro de " + oc("Phelps") + ", 1961). À esquerda de k ouro, "
+            "f′(k) > n + δ: uma unidade a mais de capital rende mais do que custa mantê-la, e c* sobe com k*.",
+            "Logo, se k* &lt; k ouro, a única forma de aumentar c* é elevar k*, e a única forma de elevar k* (com "
+            "n, δ e tecnologia dados) é " + azb("elevar s") + ". Com Cobb-Douglas, s ouro = α (a participação do "
+            "capital na renda).",
+            "Distinção que confunde: a " + azb("propensão a consumir") + " (1 − s) cai, mas o " + azb("consumo")
+            + " por trabalhador sobe, porque y cresce mais que proporcionalmente à fatia perdida.",
+            "Custo de transição: no momento da alta de s, o consumo <b>cai</b> (y ainda não mudou e a fatia "
+            "consumida diminuiu); só depois, com a acumulação, supera o nível antigo. Por isso a decisão envolve "
+            "sacrificar gerações presentes em favor das futuras.",
+            "Simetria: acima de k ouro (" + azb("ineficiência dinâmica") + "), reduzir s eleva o consumo já e "
+            "em todas as datas futuras.",
+        ],
+        "grafico_verso": "ECO-E1-0738-1-V1",
+        "dissecando": (cz("[contraintuitivo]") + " “Poupar mais para consumir mais” parece paradoxal, e quem "
+                       "pensa na propensão a consumir marca ERRADO. O verbo “precisa” é correto para o longo "
+                       "prazo: abaixo de k ouro, não há outro caminho para aumentar c*. A banca inverteria com "
+                       "“acima do nível da regra de ouro”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Se um país tem estoque de capital per capita acima do nível da regra de ouro, ele precisa elevar "
+            "sua taxa de poupança para elevar o consumo per capita.”</i> → ERRADO (inversão: acima de k ouro, "
+            "deve reduzir a poupança)",
+            "<i>“Ao elevar a poupança abaixo da regra de ouro, o consumo per capita aumenta já no período "
+            "imediatamente seguinte.”</i> → ERRADO (o consumo cai primeiro e só depois supera o nível inicial)",
+        ])],
+        "tipo_erro": ["CONTRAINTUITIVO"], "moduladores": ["precisa"], "dificuldade": 2,
+        "comentario_fonte": ("Para chegar à regra de ouro, é preciso subir a poupança de S1 para S2; reduz-se a "
+                             "propensão a consumir, mas aumenta o consumo per capita, porque o produto per capita "
+                             "cresce (com gráfico de aula)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "macro_aula_7-05.png, image (262).png", "tipo_fonte": "GRÁFICO",
+                           "lado": "verso", "acao": "irrecuperavel (não preservadas; redesenho didático em "
+                                                    "ECO-E1-0738-1-V1)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0739
+    {
+        "id": "ECO-E1-0739-1", "fonte_ref": "E1-0739", "destino": "56", "subtema": H2["pop"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "", "ano": None, "cacd": False,
+        "errei": True,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de Solow com progresso tecnológico, o equilíbrio de longo prazo se dará com uma "
+                      "taxa de crescimento do produto per capita igual à taxa de progresso tecnológico mais a taxa "
+                      "de crescimento populacional, se não houver depreciação."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No modelo de Solow com progresso tecnológico, o equilíbrio de longo prazo se dará com uma "
+                       "taxa de crescimento do produto per capita igual à taxa de progresso tecnológico ")
+                    + vm("mais a taxa de crescimento populacional, se não houver depreciação") + az(".")),
+        "poucas": ("O produto " + azb("per capita") + " cresce só a " + vd("g") + "; quem cresce a "
+                   + vd("n + g") + " é o produto " + azb("agregado") + ". E a depreciação não altera taxas de "
+                   "crescimento de longo prazo, só o nível de k̃*."),
+        "destrinchando": [
+            "Com Y = F(K, A·L), o estado estacionário fixa " + vd("k̃ = K/(A·L)") + " e ỹ = Y/(A·L). Como "
+            "Y = ỹ·A·L, com ỹ constante: " + vd("g(Y) = g + n") + ". Dividindo por L: " + vd("g(Y/L) = g")
+            + ".",
+            "Quadro-resumo das taxas no estado estacionário: k̃ e ỹ → 0; K/L e Y/L → g; K e Y → n + g.",
+            "A depreciação δ entra só na reta (n + g + δ)k̃: quanto maior δ, mais inclinada a reta e menor k̃* "
+            "(efeito nível). Nenhuma taxa de crescimento de longo prazo depende de δ — por isso a condição “se "
+            "não houver depreciação” é irrelevante e não salva o item.",
+            "Erro clássico: somar n porque “mais gente produz mais”. Mais gente aumenta o produto total, mas, "
+            "dividido por cabeça, o efeito se anula.",
+            vm("Regra-âncora: per capita cresce a g; agregado cresce a n + g; δ não muda taxas, só níveis."),
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " Erro “por um pequeno detalhe”: a taxa "
+                       "n + g é verdadeira para o produto agregado e foi colada no per capita. A condição final "
+                       "(“se não houver depreciação”) é um distrator que dá aparência de rigor técnico a algo que "
+                       "não depende de δ."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Solow com progresso tecnológico, o equilíbrio de longo prazo se dará com uma taxa "
+            "de crescimento do produto agregado igual à taxa de progresso tecnológico mais a taxa de crescimento "
+            "populacional.”</i> → CERTO",
+            "<i>“…uma taxa de depreciação mais alta reduz a taxa de crescimento de longo prazo do produto per "
+            "capita.”</i> → ERRADO (δ afeta só o nível de k̃*)",
+        ])],
+        "reescrita": ("No modelo de Solow com progresso tecnológico, o equilíbrio de longo prazo se dará com uma "
+                      "taxa de crescimento do produto per capita igual à taxa de progresso tecnológico"
+                      + hl(", haja ou não depreciação") + "."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": ["se"], "dificuldade": 2,
+        "comentario_fonte": ("Errado por um detalhe: o produto agregado (Y) cresce a n + g; o per capita, só a g. A "
+                             "depreciação não muda as taxas de longo prazo, só o nível do capital por trabalhador "
+                             "(várias respostas de IA convergentes)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

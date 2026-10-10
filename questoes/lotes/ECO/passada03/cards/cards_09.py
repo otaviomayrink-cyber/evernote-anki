@@ -1275,5 +1275,209 @@ CARDS = [
         "alertas": ["quase_duplicata: ECO-E2-L00640-1 (mesma assertiva em lista Nabuco de 2026)",
                     "texto_corrigido: numeração “4.” retirada da assertiva"],
     },
+    # ------------------------------------------------------------------ E2-L01239
+    {
+        "id": "ECO-E2-L01239-1", "fonte_ref": "E2-L01239", "destino": "69", "subtema": H2["par"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": "A respeito dos conceitos de macroeconomia aberta, julgue os itens a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Pela paridade descoberta da taxa de juros e supondo que não exista risco de crédito, o "
+                      "investidor terá um retorno mais elevado ao comprar um título que paga uma taxa de juros mais "
+                      "elevada do que teria se investisse em um título que paga uma taxa de juros menor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Pela paridade descoberta da taxa de juros e supondo que não exista risco de crédito, o "
+                       "investidor ") + vm("terá um retorno mais elevado") + az(" ao comprar um título que paga uma "
+                       "taxa de juros mais elevada do que teria se investisse em um título que paga uma taxa de "
+                       "juros menor.")),
+        "poucas": ("A paridade descoberta é justamente a condição de " + azb("retornos esperados iguais") + ": o "
+                   "juro maior é compensado pela " + vd("depreciação esperada") + " da moeda do título que paga "
+                   "mais."),
+        "destrinchando": [
+            "Equação: " + vd("i = i* + ΔE<sup>e</sup> + ρ") + ". Sem risco de crédito (ρ = 0): i − i* = "
+            "ΔE<sup>e</sup>. O título doméstico rende i; o externo rende i* + ΔE<sup>e</sup> em moeda doméstica "
+            "— que é exatamente i.",
+            "Exemplo: título brasileiro a 10%, americano a 4%. A paridade implica depreciação esperada do real "
+            "de cerca de 6%: aplicar nos EUA rende 4% + 6% ≈ " + vd("10%") + " em reais. Mesmo retorno.",
+            "Se o retorno esperado fosse maior no título de juro alto, haveria arbitragem: todos comprariam esse "
+            "título e venderiam o outro, apreciando a moeda dele hoje até a vantagem desaparecer.",
+            "Ressalvas: a igualdade vale para o retorno <b>esperado</b>; o realizado depende do câmbio que de fato "
+            "ocorrer. E, empiricamente, a paridade descoberta falha com frequência — o que dá lucro ao "
+            + azb("carry trade") + ", à custa de risco de perdas bruscas.",
+            vm("Regra-âncora: sob paridade descoberta, não há almoço grátis — juro alto paga depreciação "
+               "esperada (e risco)."),
+        ],
+        "dissecando": (cz("[contradição]") + " O item contradiz a própria condição que invoca: a paridade "
+                       "descoberta <b>é</b> a igualdade dos retornos esperados. O erro se esconde no senso comum "
+                       "“juro maior rende mais”, que esquece a variação cambial."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela paridade descoberta e sem risco de crédito, o retorno esperado em moeda comum é o mesmo "
+            "para títulos com juros diferentes.”</i> → CERTO",
+            "<i>“Pela paridade coberta, o investidor obtém retorno maior no título de juro mais alto mesmo após "
+            "contratar o hedge cambial.”</i> → ERRADO (o prêmio a termo absorve o diferencial)",
+        ])],
+        "reescrita": ("Pela paridade descoberta da taxa de juros e supondo que não exista risco de crédito, o "
+                      "investidor " + hl("não terá um retorno esperado mais elevado") + " ao comprar um título que "
+                      "paga uma taxa de juros mais elevada do que teria se investisse em um título que paga uma "
+                      "taxa de juros menor" + hl(", pois a depreciação esperada compensa o diferencial") + "."),
+        "tipo_erro": ["CONTRADICAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("i = i* + ΔE<sup>e</sup> + prêmio de risco; sem prêmio, a remuneração do título "
+                             "nacional equivale à do estrangeiro somada à desvalorização esperada: o retorno é o "
+                             "mesmo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 216", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"}],
+        "alertas": ["texto_corrigido: numeração “3.” retirada da assertiva"],
+    },
+    # ------------------------------------------------------------------ E2-L01510
+    {
+        "id": "ECO-E2-L01510-1", "fonte_ref": "E2-L01510", "destino": "69", "subtema": H2["par"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_ABERTA,
+        "rotulo_item": "Item",
+        "assertiva": ("Se for válida a paridade coberta de juros, ao sofrer um súbito aumento do seu risco, um país "
+                      "precisará elevar sua taxa de juros se quiser manter a taxa de câmbio estável."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se for válida a paridade coberta de juros, ao sofrer um súbito aumento do seu risco, um país "
+                      "<u>precisará elevar</u> sua taxa de juros <u>se quiser manter a taxa de câmbio "
+                      "estável</u>."),
+        "poucas": ("Na paridade com risco, " + vd("i = i* + ΔE<sup>e</sup> + ρ") + ". Se ρ sobe e o país quer E "
+                   "parado (sem depreciação), o ajuste tem de vir pelo " + azb("juro doméstico") + ": i ↑ na mesma "
+                   "medida."),
+        "destrinchando": [
+            "Choque de risco: investidores passam a exigir mais para manter ativos do país. Com i inalterado, "
+            "o retorno ajustado cai abaixo do externo → saída de capitais → " + vd("depreciação") + ".",
+            "Para evitar a depreciação, há dois instrumentos: " + azb("subir os juros") + " (restaurar a "
+            "paridade) ou " + azb("vender reservas") + " (atender à demanda por divisas). No modelo do item, a "
+            "resposta é a primeira.",
+            "Nota de nomenclatura: na literatura padrão, a " + azb("paridade coberta") + " compara retornos com "
+            "hedge a termo — (1 + i) = (1 + i*)·F/S — e o risco que sobra é de crédito, conversibilidade ou "
+            "controle de capitais (o “risco-país”). O curso usa a forma i = i* + depreciação + risco; com F "
+            "acompanhando S, a conclusão é a mesma.",
+            "Dilema real: elevar juros para defender o câmbio contrai a atividade e piora a dívida pública, o que "
+            "pode aumentar ainda mais o risco percebido. No " + rx("Brasil") + " de 2002, com o risco-país acima "
+            "de 2.000 pontos, o real se depreciou fortemente mesmo com alta da Selic.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " O item é condicional (“se quiser manter a taxa "
+                       "de câmbio estável”): não diz que o país deve subir juros, mas que, para segurar o câmbio, "
+                       "precisa fazê-lo. A versão ERRADA inverteria (reduzir juros) ou diria que o câmbio se "
+                       "aprecia com o aumento do risco."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Um súbito aumento do risco-país, mantidos os juros, tende a apreciar a moeda doméstica.”</i> → "
+            "ERRADO (inversão: há saída de capitais e depreciação)",
+            "<i>“Sem alterar os juros, o país pode conter a depreciação provocada pelo aumento do risco vendendo "
+            "reservas internacionais.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["se quiser"], "dificuldade": 2,
+        "comentario_fonte": ("Aumento do risco-país pressiona a saída de capitais e a depreciação; para manter o "
+                             "câmbio estável, é preciso elevar o juro doméstico e compensar o prêmio de risco."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: o curso chama de “paridade coberta” a forma i = i* + depreciação esperada + "
+                    "risco; na literatura padrão essa forma é a descoberta com risco-país"],
+    },
+    # ------------------------------------------------------------------ E2-L01511
+    {
+        "id": "ECO-E2-L01511-1", "fonte_ref": "E2-L01511", "destino": "69", "subtema": H2["par"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_ABERTA,
+        "rotulo_item": "Item",
+        "assertiva": ("A depreciação cambial torna os bens exportados pelo país mais baratos no exterior, favorecendo "
+                      "as exportações e auxiliando no combate à inflação doméstica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A depreciação cambial torna os bens exportados pelo país mais baratos no exterior, "
+                       "favorecendo as exportações e ") + vm("auxiliando no combate à") + az(" inflação "
+                       "doméstica.")),
+        "poucas": ("A primeira parte está certa; a segunda, não. A depreciação " + azb("encarece importados") + " e "
+                   "insumos e aquece a demanda externa: é " + vm("inflacionária") + " (" + azb("pass-through")
+                   + ")."),
+        "destrinchando": [
+            azb("Repasse cambial") + " (pass-through): a depreciação eleva em reais o preço dos bens finais "
+            "importados, dos insumos importados (custos) e dos comercializáveis cotados em dólar (commodities, "
+            "combustíveis, alimentos). O efeito chega aos índices de preços em semanas ou meses.",
+            "Canal da demanda: exportações ↑ e importações ↓ → exportações líquidas ↑ → demanda agregada ↑ → "
+            "pressão adicional sobre preços. Além disso, a demanda externa por exportáveis pode subir seu preço "
+            "no mercado interno.",
+            "A intensidade do repasse depende do grau de abertura, do hiato do produto, da credibilidade do "
+            "banco central e da persistência esperada da depreciação: em economias com inflação ancorada, o "
+            "repasse tende a ser menor.",
+            "Exemplo: no " + rx("Brasil") + ", a forte depreciação do real em 2015, somada ao reajuste de preços "
+            "administrados, levou o IPCA a " + vd("10,67%") + " naquele ano.",
+            "Efeito sobre o saldo comercial: melhora, mas com defasagem — a " + azb("curva J") + " — e desde que "
+            "valha a condição de " + oc("Marshall-Lerner") + " (soma das elasticidades-preço de X e M em módulo "
+            "maior que 1).",
+            vm("Regra-âncora: depreciação → exportações ↑, mas inflação ↑; apreciação → ajuda a desinflacionar."),
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " A 1ª parte é o efeito-competitividade, verdadeiro; o erro "
+                       "foi enxertado no final, invertendo o efeito sobre preços. 🔥 Itens de câmbio costumam "
+                       "juntar uma consequência certa com outra de sinal trocado."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A apreciação cambial, ao baratear os importados, auxilia no combate à inflação doméstica.”</i> "
+            "→ CERTO",
+            "<i>“A depreciação cambial melhora imediatamente a balança comercial, independentemente das "
+            "elasticidades.”</i> → ERRADO (curva J e condição de Marshall-Lerner)",
+        ])],
+        "reescrita": ("A depreciação cambial torna os bens exportados pelo país mais baratos no exterior, favorecendo "
+                      "as exportações e " + hl("pressionando a") + " inflação doméstica."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Trecho incorreto: “auxiliando no combate à inflação doméstica”. A depreciação encarece "
+                             "importações e insumos e tem efeito inflacionário (pass-through)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01554
+    {
+        "id": "ECO-E2-L01554-1", "fonte_ref": "E2-L01554", "destino": "69", "subtema": H2["par"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": True,
+        "comando": CMD_RT_UIP,
+        "rotulo_item": "Item",
+        "assertiva": ("Seja a taxa de juros brasileira i = 6,5% a.a.; a taxa de juros internacional i* = 1,5%; e o "
+                      "prêmio de risco-Brasil (risco de calote) igual a 3,0%. Se a paridade de juros coberta for "
+                      "válida, os investidores esperam que o real esteja mais depreciado daqui 1 ano (há "
+                      "expectativa de depreciação da moeda doméstica)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Seja a taxa de juros brasileira i = 6,5% a.a.; a taxa de juros internacional i* = 1,5%; e o "
+                      "prêmio de risco-Brasil (risco de calote) igual a 3,0%. Se a paridade de juros coberta for "
+                      "válida, os investidores <u>esperam que o real esteja mais depreciado</u> daqui 1 ano (há "
+                      "expectativa de depreciação da moeda doméstica)."),
+        "poucas": ("Com " + vd("i = i* + ρ + ΔE<sup>e</sup>") + ": 6,5% = 1,5% + 3,0% + ΔE<sup>e</sup> → "
+                   + vd("ΔE<sup>e</sup> = 2,0%") + " &gt; 0. Há " + azb("expectativa de depreciação") + " do real."),
+        "destrinchando": [
+            "Decomposição do diferencial de " + vd("5 p.p.") + " (6,5% − 1,5%): " + vd("3 p.p.") + " pagam o risco "
+            "de calote e " + vd("2 p.p.") + " compensam a depreciação esperada do real. Se o diferencial fosse "
+            "só de 3 p.p., a depreciação esperada seria zero.",
+            "Leitura: os investidores aceitam juros de 6,5% no Brasil, e não exigem mais, porque contam perder "
+            "cerca de 2% na reconversão; ao mesmo tempo, não migram para fora porque o juro brasileiro paga o "
+            "risco e essa perda esperada.",
+            "Nota de nomenclatura: o item fala em paridade “coberta”, mas usa a equação com câmbio "
+            + azb("esperado") + " e prêmio de risco — que é a " + azb("descoberta") + " ajustada ao risco (é a "
+            "equação indicada no próprio comando). Na coberta estrita, (1 + i) = (1 + i*)·F/S: a diferença de "
+            "juros aparece no " + azb("prêmio a termo") + " (F acima de S), que só coincide com a depreciação "
+            "esperada se a descoberta também valer.",
+            "Erro clássico de conta: esquecer o prêmio de risco e concluir por depreciação esperada de 5%.",
+        ],
+        "dissecando": (cz("[detalhe]") + " Item de cálculo em que o examinador inclui o prêmio de risco para ver se o "
+                       "candidato o desconta. O resultado positivo (2%) basta para o CERTO; uma versão ERRADA "
+                       "pediria o valor exato errado (5%) ou falaria em apreciação."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…os investidores esperam depreciação do real de 5% em um ano.”</i> → ERRADO (dado alterado: "
+            "esqueceu o prêmio de risco de 3%)",
+            "<i>“Se o prêmio de risco-Brasil subisse para 5,0%, mantidos os juros, haveria expectativa de "
+            "apreciação do real.”</i> → CERTO (ΔE<sup>e</sup> = 6,5 − 1,5 − 5,0 = 0, hmm)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("i = i* + risco + expectativa de depreciação: 6,5% = 1,5% + 3,0% + ΔE<sup>e</sup> → "
+                             "ΔE<sup>e</sup> = 2,0%; há expectativa de depreciação do real."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 422", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 423", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 424", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"},
+                          {"ref": "IMAGEM 425", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"},
+                          {"ref": "IMAGEM 426", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["nota_redacao: o item diz “paridade de juros coberta”, mas aplica a forma com câmbio esperado e "
+                    "risco-país (descoberta ajustada ao risco), coerente com o comando; gabarito mantido"],
+    },
     # FIM
 ]

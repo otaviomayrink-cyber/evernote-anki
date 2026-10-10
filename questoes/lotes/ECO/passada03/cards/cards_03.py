@@ -643,5 +643,372 @@ CARDS = [
         "alertas": [ALERTA_BANCA_2019.replace("formato C/E", "formato C/E, ano 2022"),
                     "quase_duplicata: ECO-E1-0452-1, ECO-E2-L00620-1 (destruição criadora)"],
     },
+    # ------------------------------------------------------------------ E1-0729
+    {
+        "id": "ECO-E1-0729-1", "fonte_ref": "E1-0729", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado 07/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": CMD_GEN,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de crescimento econômico de Harrod-Domar, a taxa garantida de crescimento – ou "
+                      "seja, aquela que mantém o equilíbrio entre a taxa de poupança e investimento de longo prazo e "
+                      "garante que o estoque de capital disponível, em cada ponto do tempo, seja suficiente para "
+                      "produzir a quantidade de bens que as firmas desejam – é instável e, portanto, improvável que "
+                      "coincida com a taxa de crescimento natural."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No modelo de crescimento econômico de Harrod-Domar, a <u>taxa garantida</u> de crescimento – "
+                      "ou seja, aquela que mantém o equilíbrio entre a taxa de poupança e investimento de longo prazo "
+                      "e garante que o estoque de capital disponível, em cada ponto do tempo, seja suficiente para "
+                      "produzir a quantidade de bens que as firmas desejam – é <u>instável</u> e, portanto, "
+                      "<u>improvável</u> que coincida com a taxa de crescimento natural."),
+        "poucas": ("Harrod distingue a " + azb("taxa garantida") + " (g<sub>w</sub> = s/v, que satisfaz os "
+                   "empresários) da " + azb("taxa natural") + " (g<sub>n</sub> = n + progresso técnico, que mantém "
+                   "o pleno emprego). Nada as iguala, e a garantida é um equilíbrio instável: o pleno emprego com "
+                   "crescimento equilibrado é obra do acaso."),
+        "destrinchando": [
+            "Três taxas em " + oc("Harrod") + " (1939): a " + vd("efetiva") + " (g, a que de fato ocorre); a "
+            + vd("garantida") + " (g<sub>w</sub> = s/v: com ela, o capital existente é exatamente o desejado e "
+            "os empresários repetem suas decisões); a " + vd("natural") + " (g<sub>n</sub>: crescimento da força "
+            "de trabalho mais o da produtividade do trabalho, teto do crescimento com pleno emprego).",
+            "Primeiro problema — " + azb("instabilidade") + " (o “fio da navalha”): se g > g<sub>w</sub>, falta "
+            "capacidade, as firmas investem mais, a demanda cresce ainda mais (multiplicador) e o desvio se "
+            "amplia; se g &lt; g<sub>w</sub>, sobra capacidade, o investimento cai e a economia afunda. Os "
+            "desvios são cumulativos.",
+            "Segundo problema — " + azb("coincidência") + ": s, v e g<sub>n</sub> são determinados por fatores "
+            "independentes (hábitos de poupança, tecnologia, demografia). Só por acaso s/v = g<sub>n</sub>. Se "
+            "g<sub>w</sub> > g<sub>n</sub>, a economia tende à estagnação e à capacidade ociosa; se "
+            "g<sub>w</sub> &lt; g<sub>n</sub>, ao desemprego estrutural crescente.",
+            "Respostas teóricas: " + oc("Solow") + " (1956) torna v variável (substituição entre K e L) e faz "
+            "g<sub>w</sub> se ajustar a g<sub>n</sub>; " + oc("Kaldor") + " e " + oc("Pasinetti") + " tornam s "
+            "variável pela distribuição da renda entre salários e lucros.",
+            vm("Regra-âncora: Harrod-Domar → g_w instável (fio da navalha) e g_w = g_n só por acaso."),
+        ],
+        "dissecando": (cz("[literalidade · paráfrase fiel]") + " O enunciado é longo, mas a definição de taxa "
+                       "garantida está correta, e os dois problemas de Harrod (instabilidade e coincidência "
+                       "improvável) aparecem juntos. O “portanto” liga as duas ideias de forma frouxa, mas não "
+                       "chega a criar um nexo falso: um equilíbrio instável também torna improvável o encontro com "
+                       "g<sub>n</sub>."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Harrod-Domar, a taxa garantida converge automaticamente para a taxa natural por "
+            "meio de ajustes na relação capital-produto.”</i> → ERRADO (esse é o mecanismo de Solow)",
+            "<i>“Se a taxa garantida supera a natural, o modelo de Harrod prevê tendência à estagnação, com "
+            "capacidade ociosa crescente.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "PARAFRASE_FIEL"], "moduladores": ["improvável"], "dificuldade": 2,
+        "comentario_fonte": "Taxa garantida g = s/c e taxa natural n = p + a, independentes; só coincidem por "
+                            "acaso; g > n gera escassez de mão de obra e inflação, g &lt; n gera desemprego.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0740-1, ECO-E2-L01058-1, ECO-E2-L00765-1 (fio da navalha)"],
+    },
+    # ------------------------------------------------------------------ E1-0731
+    {
+        "id": "ECO-E1-0731-1", "fonte_ref": "E1-0731", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "ME", "banca": "FGV", "prova": "Senado Federal/Consultor (Área XX)/2022", "ano": 2022,
+        "cacd": False, "errei": True,
+        "comando": "Em relação ao modelo de crescimento de Harrod-Domar, analise as afirmativas a seguir.",
+        "rotulo_item": "Questão",
+        "assertiva": ("1. O aumento do investimento agregado resulta em: (i) aumento da demanda pelo produto e (ii) "
+                      "aumento da capacidade da economia em elaborar o produto.</p><p>2. Existe o equilíbrio fio da "
+                      "navalha, em que se um país sai da trajetória de equilíbrio de longo prazo, ele não retorna "
+                      "mais a essa trajetória.</p><p>3. Se um país está em crescimento equilibrado, considerando uma "
+                      "taxa de poupança de 10% e produtividade média social potencial do capital igual a 20%, então "
+                      "as taxas de crescimento do investimento líquido e do produto devem ser iguais a 1%.</p><p>Está "
+                      "correto o que se afirma em</p><p>(A) 1, 2 e 3.</p><p>(B) 1 e 2, apenas.</p><p>(C) 1 e 3, "
+                      "apenas.</p><p>(D) 2 e 3, apenas.</p><p>(E) 2, apenas."),
+        "gabarito": "B", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": ("❌ " + az("(A) 1, 2 ") + vm("e 3") + az(".") + "</p><p>✅ " + az("(B) 1 e 2, apenas.")
+                    + "</p><p>❌ " + az("(C) 1 e ") + vm("3") + az(", apenas.") + "</p><p>❌ " + az("(D) 2 e ")
+                    + vm("3") + az(", apenas.") + "</p><p>❌ " + az("(E) 2, ") + vm("apenas") + az(".")),
+        "poucas": ("1 e 2 descrevem o " + azb("duplo papel do investimento") + " e o " + azb("fio da navalha")
+                   + ". A 3 erra a conta: " + vd("g = s·σ = 10% × 20% = 2%") + ", não 1%."),
+        "destrinchando": [
+            "Afirmativa 1 — CERTA. É a contribuição central de " + oc("Domar") + " (1946): o investimento tem "
+            + azb("duplo caráter") + " — pelo lado da demanda, gera renda via multiplicador (ΔY = ΔI/s); pelo "
+            "lado da oferta, amplia a capacidade produtiva (ΔY<sub>potencial</sub> = σ·I). O crescimento "
+            "equilibrado exige que a demanda cresça no ritmo da capacidade.",
+            "Afirmativa 2 — CERTA. " + azb("Fio da navalha") + ": a trajetória de crescimento equilibrado é "
+            "instável; um desvio da taxa efetiva em relação à garantida se amplia em vez de se corrigir, porque "
+            "as decisões de investimento reforçam o desequilíbrio.",
+            "Afirmativa 3 — ERRADA. σ é a “produtividade social média potencial do investimento” (termo de "
+            "Domar; σ = 1/v, a relação produto-capital). Igualando o crescimento da demanda ao da capacidade: "
+            + vd("ΔI/I = ΔY/Y = s·σ = 0,10 × 0,20 = 0,02 = 2%") + ". No crescimento equilibrado, investimento, "
+            "produto e capital crescem todos a essa taxa.",
+            "(A) ❌ inclui a 3. (B) ✅ só 1 e 2. (C) ❌ inclui a 3 e exclui a 2. (D) ❌ inclui a 3 e exclui a "
+            "1. (E) ❌ exclui a 1, que é o próprio núcleo do modelo.",
+            vm("Regra-âncora: Harrod-Domar → g = s·σ = s/v; investimento = demanda + capacidade."),
+        ],
+        "dissecando": (cz("[dado alterado]") + " A afirmativa falsa erra só o número (1% no lugar de 2%) e se "
+                       "esconde atrás do nome pomposo “produtividade média social potencial do capital”, que é "
+                       "apenas σ = 1/v. Quem não reconhece o termo de Domar tende a dividir (10%/20%… ou 20%/10%) "
+                       "em vez de multiplicar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com taxa de poupança de 10% e relação capital-produto igual a 5, a taxa de crescimento "
+            "equilibrado é de 2%.”</i> → CERTO (g = s/v = 0,10/5)",
+            "<i>“No modelo de Harrod-Domar, o investimento afeta apenas a demanda agregada, como no modelo "
+            "keynesiano de curto prazo.”</i> → ERRADO (restrição indevida: também cria capacidade)",
+        ])],
+        "tipo_erro": ["DADO_ALTERADO"], "moduladores": ["apenas"], "dificuldade": 2,
+        "comentario_fonte": "Comentário de professor: 1 certo (duplo papel), 2 certo (instabilidade), 3 errado "
+                            "(g = 0,10 × 0,20 = 2%); gabarito B; resumo do modelo (Lopes e Vasconcellos) com o "
+                            "fio da navalha.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (237), (242)-(248), (250), (251).png", "tipo_fonte": "QUESTÃO EM IMAGEM",
+                           "lado": "verso", "acao": "irrecuperavel (imagens do verso não preservadas)"}],
+        "alertas": ["banca_confirmada: concurso do Senado Federal de 2022 organizado pela FGV",
+                    "texto_corrigido: “Harro-Domar” → “Harrod-Domar” (erro de digitação da fonte)"],
+    },
+    # ------------------------------------------------------------------ E1-0733
+    {
+        "id": "ECO-E1-0733-1", "fonte_ref": "E1-0733", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Prof. Daniel (Telegram Economia CACD)", "prova": "", "ano": None, "cacd": False,
+        "errei": True,
+        "comando": CMD_DANIEL,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de Harrod-Domar conclui que uma economia não alcança o pleno emprego e taxas estáveis "
+                      "de crescimento naturalmente."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O modelo de Harrod-Domar conclui que uma economia não alcança o pleno emprego e taxas "
+                      "estáveis de crescimento <u>naturalmente</u>."),
+        "poucas": ("Conclusão keynesiana de " + oc("Harrod") + ": não há mecanismo de mercado que leve a "
+                   "economia ao " + azb("crescimento equilibrado com pleno emprego") + " — a taxa garantida é "
+                   "instável e só por acaso coincide com a natural."),
+        "destrinchando": [
+            "O pleno emprego com crescimento estável exigiria duas condições ao mesmo tempo: g (efetiva) = "
+            "g<sub>w</sub> = s/v (capital desejado = capital existente) e g<sub>w</sub> = g<sub>n</sub> (força de "
+            "trabalho plenamente empregada). Como s, v e g<sub>n</sub> são dados independentes, o encontro é "
+            "fortuito — a “" + azb("idade de ouro") + "”, na expressão de " + oc("Joan Robinson") + ".",
+            "Mesmo que a economia esteja em g<sub>w</sub>, qualquer choque a afasta cumulativamente: é o "
+            + azb("fio da navalha") + ". Não há preço que se ajuste para corrigir (salário e juros não substituem "
+            "capital por trabalho, porque v é fixo).",
+            "Daí a mensagem de política: o crescimento estável com pleno emprego depende de " + azb("ação do "
+            "Estado") + " (política fiscal anticíclica, planejamento do investimento) — a extensão dinâmica da "
+            "conclusão de " + oc("Keynes") + " de que o mercado não garante o pleno emprego.",
+            "Contraste neoclássico: no " + oc("Solow") + " (1956), com substituição entre fatores e preços "
+            "flexíveis, a economia converge sozinha para o estado estacionário com pleno emprego — o "
+            "“naturalmente” que o Harrod-Domar nega.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item curto, que cobra a conclusão política do modelo. O "
+                       "“naturalmente” (= por mecanismos de mercado) é a palavra-chave: o pleno emprego "
+                       "<b>pode</b> ocorrer, mas não é garantido. Trocar Harrod-Domar por Solow inverteria o "
+                       "gabarito."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo de Solow conclui que uma economia não alcança naturalmente taxas estáveis de "
+            "crescimento.”</i> → ERRADO (troca de ator: Solow converge ao estado estacionário)",
+            "<i>“No modelo de Harrod-Domar, o crescimento equilibrado com pleno emprego é impossível.”</i> → "
+            "ERRADO (modulador absoluto: é possível, mas improvável e instável)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["naturalmente"], "dificuldade": 1,
+        "comentario_fonte": "Verso só com o gabarito CERTO, uma imagem não preservada e o link do canal do "
+                            "Telegram.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [{"ref": "image (240).png", "tipo_fonte": "QUESTÃO EM IMAGEM", "lado": "verso",
+                           "acao": "irrecuperavel (imagem do verso não preservada; comentário refeito no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E1-0736-1 (mesmo professor; ausência de equilíbrio automático)"],
+    },
+    # ------------------------------------------------------------------ E1-0736
+    {
+        "id": "ECO-E1-0736-1", "fonte_ref": "E1-0736", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Prof. Daniel (Telegram Economia CACD)", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_DANIEL,
+        "rotulo_item": "Item",
+        "assertiva": ("O Modelo Harrod-Domar de crescimento econômico apresenta uma grande simplicidade e, na medida "
+                      "em que dá primazia à acumulação de capital e não garante qualquer equilíbrio automático da "
+                      "economia através dos mecanismos de mercado."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O Modelo Harrod-Domar de crescimento econômico apresenta uma grande simplicidade e, na medida "
+                      "em que dá <u>primazia à acumulação de capital</u> e <u>não garante qualquer equilíbrio "
+                      "automático</u> da economia através dos mecanismos de mercado."),
+        "poucas": ("As três características estão certas: modelo " + azb("simples") + " (g = s/v), centrado na "
+                   + azb("acumulação de capital") + " e sem " + azb("mecanismo automático de equilíbrio") + " (fio "
+                   "da navalha)."),
+        "destrinchando": [
+            azb("Simplicidade") + ": duas relações bastam. Pelo lado da oferta, a relação marginal "
+            "produto-capital (quanto a produção aumenta quando o investimento eleva o estoque de capital em uma "
+            "unidade); pelo lado da demanda, a propensão marginal a poupar. Delas sai " + vd("g = s/v")
+            + ". Foi justamente essa simplicidade que o tornou ferramenta de planejamento.",
+            azb("Primazia da acumulação de capital") + ": o produto depende só do capital (Y = K/v); o trabalho "
+            "é suposto abundante e não há progresso técnico. Crescer = investir. Daí a leitura desenvolvimentista "
+            "dos anos 1950: países pobres crescem pouco porque poupam pouco.",
+            azb("Sem equilíbrio automático") + ": proporções fixas impedem a substituição entre capital e "
+            "trabalho; a taxa garantida é instável (" + azb("fio da navalha") + ") e só por acaso coincide com a "
+            "natural. Os mercados não corrigem os desvios — eles os amplificam.",
+            "Por isso o modelo é classificado como " + azb("keynesiano") + " (ou pós-keynesiano) de crescimento, "
+            "em oposição ao neoclássico de " + oc("Solow") + ", em que a relação capital-produto se ajusta e a "
+            "economia converge.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Item descritivo, com redação truncada (“e, na medida em que dá… "
+                       "e não garante…” fica sem a oração principal), mas sem afirmação falsa. Atenção ao "
+                       "“qualquer”: aqui ele é exato, porque o modelo não tem mecanismo de mercado algum de volta "
+                       "ao equilíbrio."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo de Harrod-Domar dá primazia ao progresso tecnológico como motor do crescimento.”</i> → "
+            "ERRADO (troca de conceito: a primazia é da acumulação de capital)",
+            "<i>“No modelo de Harrod-Domar, os mecanismos de mercado garantem a convergência para a taxa "
+            "natural.”</i> → ERRADO (inversão)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["qualquer"], "dificuldade": 1,
+        "comentario_fonte": "Link para texto da FGV-EAESP sobre o modelo Harrod-Domar; modelo baseado na relação "
+                            "marginal produto-capital (oferta) e na propensão marginal a poupar (demanda).",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: assertiva mantida fiel, com a construção truncada da fonte (“e, na medida em "
+                    "que dá… e não garante…”)",
+                    "quase_duplicata: ECO-E1-0733-1"],
+    },
+    # ------------------------------------------------------------------ E1-0740
+    {
+        "id": "ECO-E1-0740-1", "fonte_ref": "E1-0740", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Aula 8 - Macro", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT_A8,
+        "rotulo_item": "Item",
+        "assertiva": ("No modelo de Harrod-Domar, a taxa de crescimento do produto é um equilíbrio estável, isto é, "
+                      "uma vez fora do equilíbrio, a economia tem mecanismos que a conduzem naturalmente de volta à "
+                      "trajetória de crescimento equilibrado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("No modelo de Harrod-Domar, a taxa de crescimento do produto é um equilíbrio ")
+                    + vm("estável") + az(", isto é, uma vez fora do equilíbrio, a economia ") + vm("tem")
+                    + az(" mecanismos que a ") + vm("conduzem") + az(" naturalmente de volta à trajetória de "
+                                                                     "crescimento equilibrado.")),
+        "poucas": ("É o contrário: no Harrod-Domar o crescimento equilibrado é " + vm("instável") + " — o "
+                   + azb("fio da navalha") + ". Quem tem equilíbrio estável, com retorno automático, é o modelo de "
+                   + oc("Solow") + "."),
+        "destrinchando": [
+            "Mecanismo da instabilidade (" + oc("Harrod") + ", 1939): se a taxa efetiva supera a garantida "
+            "(s/v), o capital fica aquém do desejado; as firmas aceleram o investimento, a demanda cresce ainda "
+            "mais pelo multiplicador e o desvio aumenta. Se fica abaixo, sobra capacidade, o investimento cai e "
+            "a economia se afasta para baixo. Os desvios são " + vd("cumulativos") + ".",
+            "Raiz técnica: proporções fixas (v constante) e poupança s fixa. Não há variável de preço que mude "
+            "a intensidade de capital ou a poupança para trazer a economia de volta.",
+            "No " + oc("Solow") + " (1956), com rendimentos marginais decrescentes e substituição entre K e L, "
+            "fora do estado estacionário a economia volta sozinha: se k &lt; k*, s·f(k) > (n+δ)k e k sobe; se "
+            "k > k*, k cai. É o equilíbrio " + vd("globalmente estável") + ".",
+            "Atenção à palavra “instável”: não significa que a economia oscile em torno do equilíbrio, e sim "
+            "que ela se afasta dele depois de qualquer perturbação.",
+            vm("Regra-âncora: Harrod-Domar = instável (fio da navalha); Solow = estável (convergência a k*)."),
+        ],
+        "dissecando": (cz("[troca de ator · inversão]") + " O item cola a propriedade do Solow (estabilidade) no "
+                       "Harrod-Domar. A explicação depois do “isto é” é coerente com o “estável”, o que dá "
+                       "falsa segurança: o erro está na premissa, não na definição. 🔥 Cobrança recorrente: "
+                       "fio da navalha × convergência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No modelo de Solow, uma vez fora do estado estacionário, a economia tem mecanismos que a "
+            "conduzem de volta a ele.”</i> → CERTO",
+            "<i>“O modelo de Solow apresenta o equilíbrio em fio de navalha.”</i> → ERRADO (troca de ator: é o "
+            "Harrod-Domar)",
+        ])],
+        "reescrita": ("No modelo de Harrod-Domar, a taxa de crescimento do produto é um equilíbrio "
+                      + hl("instável") + ", isto é, uma vez fora do equilíbrio, a economia " + hl("não tem")
+                      + " mecanismos que a " + hl("conduzam") + " naturalmente de volta à trajetória de "
+                      "crescimento equilibrado."),
+        "tipo_erro": ["TROCA_ATOR", "INVERSAO"], "moduladores": ["naturalmente"], "dificuldade": 1,
+        "comentario_fonte": "Equilíbrio estável é o de Solow; Harrod-Domar tem equilíbrio instável, o fio da "
+                            "navalha.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00765-1, ECO-E2-L01058-1, ECO-E1-0729-1 (fio da navalha)"],
+    },
+    # ------------------------------------------------------------------ E1-0741
+    {
+        "id": "ECO-E1-0741-1", "fonte_ref": "E1-0741", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Aula 8 - Macro", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT_A8,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria do desenvolvimento de Schumpeter rejeita a noção do fluxo circular da renda, "
+                      "introduzindo o papel das inovações tecnológicas, e também rejeita a noção da neutralidade "
+                      "monetária, tendo o crédito e a capacidade de criação de poder de compra pelo sistema "
+                      "bancário um papel fundamental no desenvolvimento econômico."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria do desenvolvimento de Schumpeter rejeita a noção do fluxo circular da renda, "
+                      "introduzindo o papel das inovações tecnológicas, e também rejeita a noção da <u>neutralidade "
+                      "monetária</u>, tendo o <u>crédito</u> e a capacidade de criação de poder de compra pelo "
+                      "sistema bancário um papel fundamental no desenvolvimento econômico."),
+        "poucas": ("Em " + oc("Schumpeter") + ", o desenvolvimento é a " + azb("ruptura do fluxo circular")
+                   + " pelas inovações, e a moeda não é neutra: o " + azb("crédito bancário") + " cria o poder de "
+                   "compra com que o empresário inovador retira recursos dos usos antigos."),
+        "destrinchando": [
+            "<i>Teoria do Desenvolvimento Econômico</i> (" + vd("1911") + "): o " + azb("fluxo circular") + " é a "
+            "economia estacionária, que se repete ano a ano, sem lucro (além dos salários de gestão) e sem juro. "
+            "Schumpeter o usa como ponto de partida e mostra que ele <b>não explica</b> o desenvolvimento, que "
+            "só surge quando o empresário rompe a rotina com novas combinações.",
+            "Moeda e crédito: o inovador não tem os meios de produção; precisa desviá-los de quem já os usa. O "
+            "banqueiro — o “" + azb("éforo da economia de troca") + "”, nas palavras de Schumpeter — cria poder "
+            "de compra novo (crédito sem poupança prévia) e o entrega ao inovador. A moeda é, assim, causa ativa "
+            "do desenvolvimento, e não um véu neutro sobre a economia real.",
+            "Juro e lucro: o " + azb("lucro") + " é o prêmio temporário da inovação (some com a imitação); o "
+            + azb("juro") + " é uma parcela desse lucro paga ao banqueiro. No fluxo circular, sem inovação, não "
+            "haveria juro.",
+            "Contraste com a visão clássica e neoclássica da " + azb("neutralidade da moeda") + " (teoria "
+            "quantitativa: moeda só afeta preços) e com a ideia de que o investimento depende de poupança "
+            "prévia.",
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Item longo, com duas “rejeições” verdadeiras. O "
+                       "“rejeita o fluxo circular” é uma simplificação aceita pela banca: Schumpeter não nega o "
+                       "fluxo circular como descrição da economia estacionária, mas o rejeita como explicação do "
+                       "desenvolvimento. A pegadinha provável seria afirmar a neutralidade da moeda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Schumpeter, o financiamento das inovações depende exclusivamente da poupança prévia das "
+            "famílias.”</i> → ERRADO (o crédito bancário cria poder de compra novo)",
+            "<i>“Para Schumpeter, no fluxo circular, sem inovações, a taxa de juros tende a zero.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "Verso repete a assertiva com “Certíssimo”.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0742
+    {
+        "id": "ECO-E1-0742-1", "fonte_ref": "E1-0742", "destino": "57", "subtema": H2["cresc"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Aula 8 - Macro", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_RT_A8,
+        "rotulo_item": "Item",
+        "assertiva": ("O processo de destruição criadora de Schumpeter é caracterizado pelo impacto das inovações no "
+                      "sistema econômico, que embora sejam responsáveis pela dinâmica do desenvolvimento, podem "
+                      "destruir empresas velhas e modelos de negócios ultrapassados, criando falências e "
+                      "desemprego."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O processo de destruição criadora de Schumpeter é caracterizado pelo impacto das inovações no "
+                      "sistema econômico, que embora sejam responsáveis pela dinâmica do desenvolvimento, <u>podem "
+                      "destruir</u> empresas velhas e modelos de negócios ultrapassados, criando falências e "
+                      "desemprego."),
+        "poucas": ("A " + azb("destruição criadora") + " tem dois lados inseparáveis: a inovação gera "
+                   "desenvolvimento e, ao mesmo tempo, " + vd("destrói") + " empresas, setores e empregos "
+                   "ligados às técnicas antigas."),
+        "destrinchando": [
+            "A inovação traz lucro extraordinário ao pioneiro; os imitadores entram em enxame; a concorrência "
+            "derruba preços e margens; quem ficou com a técnica antiga perde mercado e quebra. O desemprego "
+            "aparece nos setores em declínio, enquanto os novos setores absorvem — com atraso e em outro lugar "
+            "— parte da mão de obra.",
+            "Para " + oc("Schumpeter") + ", esse lado destrutivo explica os " + azb("ciclos econômicos") + ": "
+            "ondas de inovação geram expansão (crédito, investimento, euforia) e depois depressão (ajuste, "
+            "falências, “limpeza” do sistema). As crises não são acidentes, mas parte do mecanismo.",
+            "Exemplos: a máquina a vapor e os artesãos têxteis; o automóvel e os fabricantes de carroças; a "
+            "fotografia digital e a Kodak; o streaming e as locadoras de vídeo.",
+            "Debate atual: automação e inteligência artificial reacendem a discussão sobre o “desemprego "
+            "tecnológico”. A teoria schumpeteriana sugere que o emprego total se recompõe no longo prazo, mas "
+            "com custos concentrados em trabalhadores e regiões específicos — daí políticas de requalificação.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Definição correta, protegida por "
+                       "“podem destruir”. O candidato pode estranhar a menção a falências e desemprego num "
+                       "conceito “positivo”, mas a destruição é metade do processo. Variante ERRADA comum: "
+                       "dizer que a destruição criadora não afeta o emprego ou que só ocorre em crises "
+                       "externas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Schumpeter, as inovações sempre preservam as empresas existentes, que se adaptam "
+            "gradualmente.”</i> → ERRADO (modulador absoluto e inversão)",
+            "<i>“Na visão schumpeteriana, os ciclos econômicos estão ligados à difusão das inovações.”</i> → "
+            "CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["podem"], "dificuldade": 1,
+        "comentario_fonte": "Verso repete a assertiva com “Certíssimo”.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E1-0452-1, ECO-E1-0717-1 (destruição criadora)"],
+    },
     # FIM
 ]

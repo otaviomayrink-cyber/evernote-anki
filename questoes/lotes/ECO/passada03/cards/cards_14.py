@@ -761,4 +761,417 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E2-L00195
+    {
+        "id": "ECO-E2-L00195-1", "fonte_ref": "E2-L00195", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_04,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo o modelo Heckscher-Ohlin (H-O), o comércio internacional ocorre devido à diferença "
+                      "entre a abundância relativa de recursos entre os países."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo o modelo Heckscher-Ohlin (H-O), o comércio internacional ocorre devido à diferença "
+                      "entre a <u>abundância relativa</u> de recursos entre os países."),
+        "poucas": ("É o núcleo do " + azb("H-O") + ": com tecnologia e preferências iguais, o que gera vantagem "
+                   "comparativa é a diferença de " + vd("dotação relativa de fatores") + " (K/L, terra/L) entre "
+                   "países."),
+        "destrinchando": [
+            oc("Eli Heckscher") + " (1919) e " + oc("Bertil Ohlin") + " (1933, <i>Interregional and "
+            "International Trade</i>) perguntaram de onde vem a vantagem comparativa que " + oc("Ricardo")
+            + " tomava como dada. A resposta: das diferenças de " + azb("abundância relativa de fatores")
+            + ".",
+            "Mecanismo: o fator relativamente abundante é relativamente barato em autarquia → o bem que o usa "
+            "intensivamente sai relativamente barato → o país o exporta. Por isso o modelo também é chamado de "
+            + azb("teoria das proporções de fatores") + ".",
+            "Para isolar esse canal, o modelo supõe " + vd("tecnologias idênticas") + " e preferências iguais e "
+            "homotéticas entre países. Se as tecnologias diferissem, a explicação voltaria a ser ricardiana.",
+            "Abundância é sempre relativa: compara-se a razão K/L de um país com a do outro. Os EUA têm muito "
+            "trabalho em termos absolutos, mas são relativamente abundantes em capital.",
+            vm("Regra-âncora: Ricardo → diferença de tecnologia; H-O → diferença de dotação relativa de fatores."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Reescreve o teorema com “recursos” no lugar de “fatores”. O "
+                       "risco está na palavra “relativa”: trocá-la por “absoluta” ou atribuir o comércio a "
+                       "diferenças tecnológicas tornaria o item ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o modelo H-O, o comércio internacional ocorre devido às diferenças tecnológicas entre os "
+            "países.”</i> → ERRADO (troca de modelo: é Ricardo)",
+            "<i>“No modelo H-O, a abundância de um fator é avaliada em termos absolutos.”</i> → ERRADO "
+            "(abundância é relativa)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("No H-O, o padrão de comércio deriva das diferenças na dotação relativa de fatores; "
+                             "cada país exporta bens intensivos no fator relativamente abundante."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00196
+    {
+        "id": "ECO-E2-L00196-1", "fonte_ref": "E2-L00196", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_04,
+        "rotulo_item": "Item",
+        "assertiva": ("A equalização dos preços dos fatores não se manterá se os países tiverem tecnologias "
+                      "diferentes no modelo H-O."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A equalização dos preços dos fatores <u>não se manterá</u> se os países tiverem tecnologias "
+                      "diferentes no modelo H-O."),
+        "poucas": ("O " + azb("teorema da equalização dos preços dos fatores") + " depende de " + vd("tecnologia "
+                   "idêntica") + ": só assim os mesmos preços de bens implicam os mesmos salários e aluguéis. Com "
+                   "técnicas diferentes, os preços dos fatores podem divergir mesmo com livre-comércio."),
+        "destrinchando": [
+            "O teorema (" + oc("Samuelson") + ", 1948–1949; intuição em " + oc("Heckscher") + " e "
+            + oc("Ohlin") + "): o livre-comércio de bens iguala, entre países, os preços dos bens e, por meio "
+            "deles, as remunerações absolutas e relativas dos fatores, mesmo sem migração. O comércio de bens "
+            "funciona como substituto do movimento de fatores.",
+            "Como funciona: com tecnologia igual e produção diversificada, as condições preço = custo unitário "
+            "ligam (p<sub>1</sub>, p<sub>2</sub>) a um único par (w, r). Preços de bens iguais → (w, r) iguais. "
+            "Se a função de produção difere, o mesmo preço é compatível com salários diferentes: o país mais "
+            "produtivo paga mais.",
+            "Outras condições exigidas: concorrência perfeita, rendimentos constantes, ausência de custos de "
+            "transporte e tarifas, " + azb("produção diversificada") + " (os dois países produzem os dois bens) e "
+            "ausência de " + azb("reversão de intensidade fatorial") + ".",
+            "Na prática, a equalização plena não se observa: salários reais diferem muito entre países, em parte "
+            "por diferenças tecnológicas e de produtividade, exatamente o que o item aponta. O teorema ilumina "
+            "uma tendência à convergência, não um resultado literal.",
+            vm("Regra-âncora: sem tecnologia idêntica (e sem as demais hipóteses), não há equalização dos preços "
+               "dos fatores."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Item de hipótese do teorema, com a negação na posição certa. A "
+                       "banca o tornaria ERRADO dizendo que a equalização “independe” da tecnologia ou que exige "
+                       "mobilidade internacional dos fatores (é o contrário: ocorre sem ela)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A equalização dos preços dos fatores exige a livre mobilidade internacional de capital e "
+            "trabalho.”</i> → ERRADO (o comércio de bens substitui essa mobilidade)",
+            "<i>“Tarifas e custos de transporte impedem a plena equalização dos preços dos fatores.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("O teorema exige mesma tecnologia, concorrência perfeita e ausência de custos de "
+                             "comércio; com tecnologias diferentes, salários e aluguéis podem divergir mesmo com "
+                             "comércio."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00197
+    {
+        "id": "ECO-E2-L00197-1", "fonte_ref": "E2-L00197", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_04,
+        "rotulo_item": "Item",
+        "assertiva": ("O país tem vantagem comparativa na produção de um bem quando o custo de oportunidade deste "
+                      "bem em comparação com outro bem é menor do que o do outro país."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O país tem vantagem comparativa na produção de um bem quando o <u>custo de oportunidade</u> "
+                      "deste bem em comparação com outro bem é <u>menor</u> do que o do outro país."),
+        "poucas": ("Definição ricardiana: " + azb("vantagem comparativa") + " = menor " + azb("custo de "
+                   "oportunidade") + " (quanto do outro bem se sacrifica para produzir uma unidade) em relação ao "
+                   "outro país."),
+        "destrinchando": [
+            "Custo de oportunidade de X em termos de Y = a<sub>LX</sub>/a<sub>LY</sub> (horas para fazer X ÷ "
+            "horas para fazer Y). Exemplo: se o Brasil gasta 1/3 h no vestuário e 1/7 h no calçado, cada "
+            "unidade de vestuário custa " + vd("7/3 calçados") + "; se o México gasta 1/2 h e 1 h, custa "
+            + vd("1/2 calçado") + ". A vantagem comparativa em vestuário é do México.",
+            "A comparação é <b>dentro</b> de cada país (razão entre bens) e depois <b>entre</b> países. Nunca se "
+            "comparam horas diretamente entre países; isso é vantagem absoluta (" + oc("Adam Smith") + ").",
+            "Consequência: com dois bens, cada país sempre tem vantagem comparativa em um deles (a menos que os "
+            "custos de oportunidade sejam iguais, caso em que não há ganho de comércio). Até o país menos "
+            "eficiente em tudo tem algo a exportar.",
+            "Os termos de troca que permitem ganho mútuo ficam entre os dois custos de oportunidade.",
+            vm("Regra-âncora: comparativa = custo de oportunidade menor; absoluta = menos insumo por unidade."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual. A banca costuma errar o item trocando "
+                       "“custo de oportunidade” por “custo de produção” ou “horas de trabalho”, que levam à "
+                       "vantagem absoluta, ou invertendo para “maior”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O país tem vantagem comparativa na produção de um bem quando o produz com menos horas de trabalho "
+            "do que o outro país.”</i> → ERRADO (troca de conceito: isso é vantagem absoluta)",
+            "<i>“Um país pode ter vantagem comparativa em um bem no qual tem desvantagem absoluta.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Vantagem comparativa = menor custo de oportunidade (custo relativo); mesmo com "
+                             "desvantagem absoluta em ambos os bens, o país ganha ao se especializar onde a "
+                             "desvantagem relativa é menor."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00198
+    {
+        "id": "ECO-E2-L00198-1", "fonte_ref": "E2-L00198", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_04,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo o modelo Hecksher – Ohlim – Samuelson, a utilização intensa do fator abundante "
+                      "aumenta a demanda do fator e eleva a remuneração do mesmo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo o modelo Hecksher – Ohlim – Samuelson, a utilização intensa do fator abundante "
+                      "aumenta a demanda do fator e <u>eleva a remuneração</u> do mesmo."),
+        "poucas": ("Com a abertura, o país expande o setor intensivo no " + azb("fator abundante") + "; a demanda "
+                   "por esse fator sobe e, pelo " + azb("teorema de Stolper-Samuelson") + ", sua remuneração "
+                   "real " + vd("aumenta") + " (e a do fator escasso cai)."),
+        "destrinchando": [
+            "Cadeia: abertura → o preço relativo do bem exportável (intensivo no fator abundante) sobe "
+            "internamente → o setor exportador se expande e o importador se contrai → o setor que cresce demanda "
+            "muito do fator abundante e o que encolhe libera pouco dele → " + vd("remuneração real do fator "
+            "abundante ↑") + "; a do escasso ↓.",
+            "O modelo " + azb("Heckscher-Ohlin-Samuelson (HOS)") + " é a formalização de " + oc("Samuelson")
+            + " do H-O, que inclui o " + azb("Stolper-Samuelson") + " (1941), a " + azb("equalização dos preços "
+            "dos fatores") + " (1948) e, na mesma tradição, o " + azb("teorema de Rybczynski") + " (1955).",
+            "Implicação distributiva: o comércio gera ganhos agregados, mas com ganhadores (donos do fator "
+            "abundante) e perdedores (donos do fator escasso). Daí a economia política do protecionismo: o fator "
+            "escasso pede tarifas.",
+            "Aplicação: num país abundante em trabalho pouco qualificado, a abertura tenderia a elevar os salários "
+            "desse grupo; num país abundante em capital, a elevar o retorno do capital.",
+            vm("Regra-âncora: livre-comércio → fator abundante ganha, fator escasso perde (Stolper-Samuelson)."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Formulação informal (sem citar preços relativos) do resultado de "
+                       "Stolper-Samuelson. Os erros de grafia dos nomes não alteram o conteúdo. A banca o tornaria "
+                       "ERRADO trocando “abundante” por “escasso” ou dizendo que “ambos os fatores ganham”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o modelo HOS, o livre-comércio eleva a remuneração real de todos os fatores de "
+            "produção.”</i> → ERRADO (o fator escasso perde)",
+            "<i>“Segundo o modelo HOS, a proteção tarifária tende a beneficiar o fator escasso.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Stolper-Samuelson: aumento do preço relativo do bem intensivo no fator abundante "
+                             "eleva a remuneração real desse fator e reduz a do escasso."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00212
+    {
+        "id": "ECO-E2-L00212-1", "fonte_ref": "E2-L00212", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_01,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria das vantagens absolutas de Adam Smith propõe que cada país deve se especializar em "
+                      "produzir e exportar o bem que pode ser produzido ao menor custo de trabalho, ou seja, onde a "
+                      "economia tenha a vantagem absoluta."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria das vantagens absolutas de Adam Smith propõe que cada país deve se especializar em "
+                      "produzir e exportar o bem que pode ser produzido ao <u>menor custo de trabalho</u>, ou seja, "
+                      "onde a economia tenha a vantagem absoluta."),
+        "poucas": ("Para " + oc("Adam Smith") + " (<i>A Riqueza das Nações</i>, " + vd("1776") + "), cada país deve "
+                   "exportar o que produz com " + azb("menos trabalho") + " por unidade que os demais e importar o "
+                   "que os outros fazem mais barato."),
+        "destrinchando": [
+            "Contexto: Smith escreve contra o " + azb("mercantilismo") + ", que via o comércio como jogo de soma "
+            "zero e a riqueza como acúmulo de metais. Para ele, a riqueza é a capacidade produtiva, ampliada pela "
+            + azb("divisão do trabalho") + ", e o comércio estende essa divisão ao plano internacional.",
+            "Critério da " + azb("vantagem absoluta") + ": compara-se diretamente o custo em trabalho do mesmo bem "
+            "entre países. Quem precisa de menos horas tem a vantagem. Cada país se especializa onde é absolutamente "
+            "mais eficiente e ambos ganham.",
+            "Limite: se um país for mais eficiente em <b>todos</b> os bens, a teoria de Smith não explica o "
+            "comércio. " + oc("David Ricardo") + " (" + vd("1817") + ") resolve com a " + azb("vantagem "
+            "comparativa") + ": o que importa é o custo de oportunidade.",
+            "Smith usa a teoria do valor-trabalho em versão simples: o custo relevante é o trabalho. Daí a "
+            "expressão “menor custo de trabalho” do item.",
+            vm("Regra-âncora: Smith → vantagem absoluta (menos trabalho por unidade); Ricardo → vantagem "
+               "comparativa (menor custo de oportunidade)."),
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição de manual, coerente nas duas orações. A versão ERRADA "
+                       "clássica atribui a Smith o critério do custo de oportunidade ou diz que ele explicava o "
+                       "comércio mesmo sem vantagem absoluta."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Adam Smith, mesmo um país sem vantagem absoluta em nenhum bem ganha com o comércio.”</i> → "
+            "ERRADO (troca de autor: é a tese de Ricardo)",
+            "<i>“A teoria das vantagens absolutas rompe com a visão mercantilista do comércio como jogo de soma "
+            "zero.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Smith: especialização nos bens com vantagem de custo absoluto; comércio livre, todos "
+                             "ganham com a troca do que produzem de forma mais eficiente."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00213
+    {
+        "id": "ECO-E2-L00213-1", "fonte_ref": "E2-L00213", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_01,
+        "rotulo_item": "Item",
+        "assertiva": ("O modelo de Heckscher-Ohlin sugere que uma economia deveria se especializar na produção de "
+                      "bens que fazem uso intensivo de seus fatores de produção mais abundantes. Porém, ele não "
+                      "considera variáveis como a tecnologia, o que o limita significativamente em contextos "
+                      "modernos e o impede de fundamentar modelos neoclássicos desenvolvidos posteriormente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O modelo de Heckscher-Ohlin sugere que uma economia deveria se especializar na produção de "
+                       "bens que fazem uso intensivo de seus fatores de produção mais abundantes. Porém, ele ")
+                    + vm("não considera variáveis como a tecnologia") + az(", o que o limita significativamente em "
+                                                                            "contextos modernos")
+                    + vm(" e o impede de fundamentar") + az(" modelos neoclássicos desenvolvidos posteriormente.")),
+        "poucas": ("A 1ª frase é o teorema H-O. O erro está na 2ª: o modelo não ignora a tecnologia (supõe-na "
+                   + vd("idêntica") + " entre países) e é justamente a " + azb("base") + " dos teoremas "
+                   "neoclássicos posteriores (Stolper-Samuelson, equalização, Rybczynski)."),
+        "destrinchando": [
+            "Tecnologia no H-O: as funções de produção são <b>iguais</b> entre países. É uma escolha deliberada "
+            "para isolar a dotação de fatores como fonte da vantagem comparativa. Tecnologia constante e simétrica "
+            "não é tecnologia ignorada.",
+            "A limitação é real: quando há diferenças tecnológicas grandes (semicondutores, aviação) ou economias "
+            "de escala, o H-O explica pouco. O " + azb("paradoxo de Leontief") + " (1953) foi o primeiro grande "
+            "teste empírico desfavorável.",
+            "Mas o H-O é o alicerce da teoria neoclássica do comércio. " + oc("Samuelson") + " o formalizou no "
+            "modelo " + azb("HOS") + " e dele derivou o " + azb("Stolper-Samuelson") + " (1941) e a "
+            + azb("equalização dos preços dos fatores") + " (1948); " + oc("Rybczynski") + " (1955) acrescentou o "
+            "efeito da dotação sobre a produção. Depois vieram o H-O-Vanek (muitos fatores) e as extensões com "
+            "capital humano.",
+            "As críticas posteriores (ciclo do produto de " + oc("Vernon") + ", novas teorias de " + oc("Krugman")
+            + ") complementam o H-O e partem dele como referência; não o substituem.",
+            vm("Regra-âncora: H-O supõe tecnologia idêntica e é a base, não um obstáculo, dos modelos "
+               "neoclássicos."),
+        ],
+        "dissecando": (cz("[meia-verdade · inversão]") + " A 1ª frase, correta, dá credibilidade; o “Porém” "
+                       "enxerta uma crítica com dois exageros: “não considera” (em vez de “supõe idêntica”) e "
+                       "“impede de fundamentar” (quando fundamentou). Pista: H-O e HOS são a mesma linhagem."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O modelo H-O supõe tecnologias idênticas entre países, o que limita seu poder explicativo quando "
+            "há grandes diferenças tecnológicas.”</i> → CERTO",
+            "<i>“O teorema de Stolper-Samuelson foi desenvolvido para refutar o modelo H-O.”</i> → ERRADO (é "
+            "desdobramento do próprio H-O)",
+        ])],
+        "reescrita": ("O modelo de Heckscher-Ohlin sugere que uma economia deveria se especializar na produção de "
+                      "bens que fazem uso intensivo de seus fatores de produção mais abundantes. Porém, ele "
+                      + hl("supõe tecnologia idêntica entre os países") + ", o que o limita significativamente em "
+                      "contextos modernos" + hl(", mas não o impediu de fundamentar") + " modelos neoclássicos "
+                      "desenvolvidos posteriormente."),
+        "tipo_erro": ["MEIA_VERDADE", "INVERSAO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("A 1ª parte está certa; a 2ª erra ao dizer que o H-O não considera a tecnologia (supõe "
+                             "tecnologia idêntica) e que o impede de fundamentar modelos neoclássicos (é o "
+                             "alicerce do HOS: Stolper-Samuelson, equalização, Rybczynski). Vários comentários "
+                             "empilhados, com comparação H-O × HOS."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 020", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (comparação H-O × HOS no 📖)"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00214
+    {
+        "id": "ECO-E2-L00214-1", "fonte_ref": "E2-L00214", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_01,
+        "rotulo_item": "Item",
+        "assertiva": ("Na teoria do comércio de David Ricardo, são as vantagens comparativas que determinam em que "
+                      "setor uma nação deve se especializar. Esta teoria baseia-se na eficiência relativa do fator "
+                      "trabalho e propõe que mesmo que um país não tenha vantagem absoluta em nenhum produto, pode "
+                      "beneficiar-se do comércio."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na teoria do comércio de David Ricardo, são as vantagens comparativas que determinam em que "
+                      "setor uma nação deve se especializar. Esta teoria baseia-se na <u>eficiência relativa</u> do "
+                      "fator trabalho e propõe que <u>mesmo que um país não tenha vantagem absoluta em nenhum "
+                      "produto, pode beneficiar-se</u> do comércio."),
+        "poucas": ("Resumo exato de " + oc("Ricardo") + " (" + vd("1817") + "): especialização pela " + azb("vantagem "
+                   "comparativa") + ", medida pela produtividade <b>relativa</b> do trabalho; o país sem vantagem "
+                   "absoluta alguma ainda ganha exportando o bem em que sua desvantagem é menor."),
+        "destrinchando": [
+            "Hipóteses do modelo ricardiano: um único fator (" + azb("trabalho") + "), produtividade constante, "
+            "trabalho móvel entre setores e imóvel entre países, concorrência perfeita, diferenças de "
+            + azb("tecnologia") + " entre países. A FPP é reta e a especialização tende a ser completa.",
+            "Exemplo de " + oc("Ricardo") + ": Portugal fazia vinho e tecido com menos trabalho que a Inglaterra, "
+            "mas sua vantagem era relativamente maior no vinho. A Inglaterra, sem vantagem absoluta em nada, tinha "
+            "vantagem comparativa no tecido. Especializando-se e trocando, os dois consumiam mais.",
+            "Por que o país menos eficiente ganha? Porque produzir o bem importado lhe custaria mais, em termos do "
+            "outro bem sacrificado, do que comprá-lo no exterior. O critério é o " + azb("custo de oportunidade")
+            + ".",
+            "A tese responde ao limite de " + oc("Adam Smith") + ", cuja vantagem absoluta não explicava o comércio "
+            "de um país mais eficiente em tudo.",
+            vm("Regra-âncora: vantagem comparativa basta para haver ganho de comércio; vantagem absoluta não é "
+               "necessária."),
+        ],
+        "dissecando": (cz("[paráfrase fiel · contraintuitivo]") + " Reúne a definição e a conclusão mais "
+                       "contraintuitiva de Ricardo (ganho sem vantagem absoluta). Marca ERRADO quem acha que "
+                       "“sem vantagem absoluta, não há o que exportar”. O “pode” mantém o item prudente."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…esta teoria baseia-se na dotação relativa de capital e trabalho de cada país.”</i> → ERRADO "
+            "(troca de modelo: é H-O)",
+            "<i>“…o país sem vantagem absoluta só ganha com o comércio se os termos de troca lhe forem "
+            "favoráveis além do custo de oportunidade do parceiro.”</i> → ERRADO (basta ficarem entre os custos "
+            "dos dois)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "CONTRAINTUITIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Ricardo mostrou que o comércio beneficia mesmo o país sem vantagem absoluta, pela "
+                             "especialização onde a eficiência relativa é maior."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00215
+    {
+        "id": "ECO-E2-L00215-1", "fonte_ref": "E2-L00215", "destino": "73", "subtema": H2["vant"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_01,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria do valor trabalho propõe que o valor de um bem é determinado inteiramente pelo total "
+                      "de trabalho incorporado em sua produção, ignorando outros fatores como o capital e a inovação "
+                      "tecnológica. Esta abordagem explícita favorece a análise de produção em economias homogêneas, "
+                      "mas reconhece implicitamente que em contextos mais modernos e complexos, essa visão pode ser "
+                      "restringida e, portanto, integrada com percepções sobre a inovação tecnológica e capital."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A teoria do valor trabalho propõe que o valor de um bem é determinado inteiramente pelo "
+                       "total de trabalho incorporado em sua produção, ")
+                    + vm("ignorando outros fatores como o capital e a inovação tecnológica")
+                    + az(". Esta abordagem explícita ")
+                    + vm("favorece a análise de produção em economias homogêneas, mas reconhece implicitamente que "
+                         "em contextos mais modernos e complexos, essa visão pode ser restringida e, portanto, "
+                         "integrada com percepções sobre a inovação tecnológica e capital") + az(".")),
+        "poucas": ("A " + azb("teoria do valor-trabalho") + " não ignora o capital: trata-o como " + vd("trabalho "
+                   "pretérito") + " incorporado nos meios de produção. E foi aplicada a economias capitalistas "
+                   "complexas; as críticas à sua insuficiência vieram de fora da tradição, com os "
+                   + azb("marginalistas") + "."),
+        "destrinchando": [
+            oc("Adam Smith") + " distinguiu trabalho incorporado e trabalho comandado. Reconheceu que o valor pelo "
+            "trabalho valia de forma pura no “estado primitivo” e, com capital e terra apropriados, passou a "
+            "decompor o preço em salário + lucro + renda.",
+            oc("David Ricardo") + " (" + vd("1817") + ") fixou o valor na quantidade de trabalho necessária, "
+            + azb("direta e indireta") + ": o trabalho gasto antes em ferramentas e máquinas entra no valor. O "
+            "capital aparece como trabalho acumulado. Ricardo admitiu desvios quando a proporção de capital fixo "
+            "varia entre setores.",
+            oc("Karl Marx") + " refinou a teoria com o " + azb("tempo de trabalho socialmente necessário") + " e a "
+            "divisão entre capital constante (máquinas, insumos: transfere valor) e capital variável (força de "
+            "trabalho: cria mais-valia). A inovação é central: eleva a " + azb("composição orgânica do capital")
+            + " e barateia as mercadorias. É a base da lei da tendência à queda da taxa de lucro.",
+            "As críticas que levaram à superação da teoria vieram dos " + azb("marginalistas") + " (" + oc("Jevons")
+            + ", " + oc("Menger") + ", " + oc("Walras") + ", década de " + vd("1870") + "): valor pela utilidade "
+            "marginal e pela escassez, com o paradoxo da água e do diamante, além do problema da transformação de "
+            "valores em preços.",
+            "Ligação com o comércio: os coeficientes de horas do modelo ricardiano das vantagens comparativas são "
+            "aplicação direta do valor-trabalho.",
+        ],
+        "dissecando": (cz("[juízo indevido · extrapolação]") + " Item prolixo, com aparência de síntese "
+                       "equilibrada. Atribui à teoria uma omissão que ela não tem (o capital é trabalho "
+                       "pretérito) e uma autocrítica “implícita” que nenhum clássico fez. Pista: “ignorando” e "
+                       "“reconhece implicitamente” são juízos sem base nos autores."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Para Ricardo, o valor de uma mercadoria depende do trabalho direto e também do trabalho "
+            "incorporado nos meios de produção utilizados.”</i> → CERTO",
+            "<i>“Para Marx, o capital constante é a fonte da mais-valia.”</i> → ERRADO (troca de conceito: a "
+            "mais-valia vem do capital variável)",
+        ])],
+        "reescrita": ("A teoria do valor trabalho propõe que o valor de um bem é determinado inteiramente pelo total "
+                      "de trabalho incorporado em sua produção, " + hl("tratando o capital como trabalho pretérito e "
+                      "a inovação tecnológica como redução do trabalho necessário") + ". Esta abordagem explícita "
+                      + hl("foi aplicada a economias capitalistas complexas, e as críticas à sua suficiência vieram "
+                           "sobretudo de fora da tradição clássica, com os marginalistas") + "."),
+        "tipo_erro": ["JUIZO_INDEVIDO", "EXTRAPOLACAO"], "moduladores": ["inteiramente"], "dificuldade": 3,
+        "comentario_fonte": ("A TVT não ignora o capital (trabalho pretérito, capital constante) nem a tecnologia "
+                             "(tempo socialmente necessário, composição orgânica); foi aplicada a economias "
+                             "complexas; as críticas vieram dos marginalistas. Vários comentários empilhados com "
+                             "reescritas."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 021", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (análise da TVT no 📖)"}],
+        "alertas": ["qualidade_fonte: um comentário de origem chama o paradoxo da água e do diamante de "
+                    "“paradoxo de Jevons”; é o paradoxo do valor (Smith), e o paradoxo de Jevons trata de "
+                    "eficiência e consumo de recursos — corrigido"],
+    },
 ]

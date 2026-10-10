@@ -1367,3 +1367,245 @@ CARDS += [
         "alertas": [],
     },
 ]
+
+CARDS += [
+    # ------------------------------------------------------------------ E2-L00797
+    {
+        "id": "ECO-E2-L00797-1", "fonte_ref": "E2-L00797", "destino": "66", "subtema": H2["reg"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EI,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um regime de câmbio flutuante, o Banco Central mantém a taxa de câmbio variável por meio "
+                      "de operações de compra e venda de moeda estrangeira."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em um regime de câmbio flutuante, ") + vm("o Banco Central mantém a taxa de câmbio "
+                       "variável por meio de operações de compra e venda de moeda estrangeira") + az(".")),
+        "poucas": ("No câmbio " + azb("flutuante") + ", quem forma a taxa é o " + vd("mercado") + " (oferta e "
+                   "demanda de divisas). A taxa é variável por natureza, não porque o BC a “mantenha” variável "
+                   "com compras e vendas."),
+        "destrinchando": [
+            "Em um regime " + azb("flutuante puro") + " (flutuação limpa), o Banco Central não tem meta de câmbio "
+            "nem compromisso de intervir: a taxa resulta do encontro entre oferta (exportadores, ingresso de "
+            "capitais) e demanda (importadores, saída de capitais) de divisas.",
+            "Compra e venda de divisas pelo BC são o instrumento típico de quem quer <b>influenciar</b> o "
+            "câmbio: no " + azb("fixo") + ", para mantê-lo constante; na " + azb("flutuação suja") + ", para "
+            "suavizar oscilações. Ninguém intervém para “manter a taxa variável” — a variabilidade é o estado "
+            "natural sem intervenção.",
+            "Atuação do BC sob flutuação: pode comprar divisas para formar reservas (como o " + rx("Brasil")
+            + " fez nos anos 2000), mas, se isso passar a mover o câmbio de forma sistemática, o regime vira "
+            "flutuação administrada.",
+            "Comparação rápida — quem determina E: fixo → governo; bandas → mercado dentro da faixa, governo nos "
+            "limites; flutuação suja → mercado, com intervenções eventuais; flutuação limpa → só o mercado.",
+        ],
+        "dissecando": (cz("[troca de ator · nexo indevido]") + " O item transfere ao Banco Central o papel do "
+                       "mercado e inventa um objetivo sem sentido (manter a taxa “variável”). Pista: intervenção "
+                       "serve para estabilizar ou fixar o câmbio, nunca para fazê-lo variar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em um regime de câmbio flutuante, a taxa de câmbio é determinada pela oferta e pela demanda de "
+            "divisas.”</i> → CERTO",
+            "<i>“Em um regime de câmbio fixo, o Banco Central compra e vende divisas para manter a "
+            "paridade.”</i> → CERTO",
+        ])],
+        "reescrita": ("Em um regime de câmbio flutuante, " + hl("a taxa de câmbio varia conforme a oferta e a "
+                      "demanda de divisas, sem compromisso do Banco Central com um nível") + "."),
+        "tipo_erro": ["TROCA_ATOR", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "No flutuante, a taxa é determinada pela oferta e demanda de divisas; intervenção do "
+                            "BC caracteriza flutuação administrada (suja); a taxa é variável por natureza.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00798-1 (mesmo bloco: flutuação suja, CERTO)"],
+    },
+    # ------------------------------------------------------------------ E2-L00798
+    {
+        "id": "ECO-E2-L00798-1", "fonte_ref": "E2-L00798", "destino": "66", "subtema": H2["reg"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EI,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um sistema de câmbio flutuante, a taxa de câmbio é determinada pela interação entre a "
+                      "oferta e a demanda de divisas, mas o Banco Central pode eventualmente intervir para evitar "
+                      "flutuações excessivas, caracterizando a chamada “flutuação suja”."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Em um sistema de câmbio flutuante, a taxa de câmbio é determinada pela interação entre a "
+                      "oferta e a demanda de divisas, mas o Banco Central <u>pode eventualmente</u> intervir para "
+                      "evitar flutuações excessivas, caracterizando a chamada “flutuação suja”."),
+        "poucas": ("É a definição de " + azb("flutuação suja") + " (administrada): o mercado forma o câmbio e o "
+                   "BC intervém de vez em quando para conter " + vd("volatilidade excessiva") + ", sem meta de "
+                   "nível."),
+        "destrinchando": [
+            azb("Flutuação limpa") + " (clean float): nenhuma intervenção sistemática; rara na prática. "
+            + azb("Flutuação suja") + " (dirty/managed float): o câmbio continua de mercado, mas o BC atua em "
+            "momentos de estresse — vendendo divisas quando o real despenca, comprando quando se aprecia rápido "
+            "demais, ou recompondo reservas.",
+            "Instrumentos no " + rx("Brasil") + " ⏳ (out/2026): leilões de dólar à vista, leilões de linha "
+            "(venda com compromisso de recompra) e " + rx("swaps cambiais") + " (que oferecem hedge sem gastar "
+            "reservas). O regime brasileiro desde 1999 é tipicamente descrito como flutuação suja.",
+            "O fenômeno do " + azb("fear of floating") + " (" + oc("Calvo e Reinhart") + ", 2002): muitos países "
+            "que declaram flutuar intervêm bastante, por medo dos efeitos do câmbio sobre inflação e dívida "
+            "em moeda estrangeira.",
+            "Diferença para as bandas: na flutuação suja não há piso e teto anunciados; o BC escolhe quando e "
+            "quanto intervir. Nas bandas, a intervenção é obrigatória nos limites.",
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Definição de manual, com o modulador certo "
+                       "(“pode eventualmente”). A banca erraria o item trocando por “deve intervir "
+                       "permanentemente” ou por “para manter a taxa fixa”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na flutuação suja, o Banco Central se compromete a manter a taxa de câmbio dentro de uma faixa "
+            "anunciada.”</i> → ERRADO (troca de conceito: isso é banda cambial)",
+            "<i>“A flutuação suja preserva a determinação da taxa de câmbio pelo mercado.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["pode", "eventualmente"],
+        "dificuldade": 1,
+        "comentario_fonte": "Definição de flutuação administrada ou suja: câmbio de mercado com intervenções "
+                            "pontuais para suavizar volatilidade, sem valor fixo.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00797-1 e ECO-E2-L00121-1 (flutuação administrada)"],
+    },
+    # ------------------------------------------------------------------ E2-L00799
+    {
+        "id": "ECO-E2-L00799-1", "fonte_ref": "E2-L00799", "destino": "66", "subtema": H2["reg"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EI,
+        "rotulo_item": "Item",
+        "assertiva": ("Em um regime de bandas cambiais, a taxa de câmbio é mantida constante dentro de limites "
+                      "estabelecidos, sem a possibilidade de flutuações fora dessas bandas."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Em um regime de bandas cambiais, a taxa de câmbio é ") + vm("mantida constante")
+                    + az(" dentro de limites estabelecidos, sem a possibilidade de flutuações fora dessas "
+                         "bandas.")),
+        "poucas": ("Dentro da " + azb("banda") + ", o câmbio " + vd("flutua") + " livremente; o Banco Central só "
+                   "atua quando ele se aproxima do piso ou do teto. Câmbio constante é câmbio fixo."),
+        "destrinchando": [
+            "A " + azb("banda cambial") + " define uma faixa: entre o piso e o teto, quem determina a taxa é o "
+            "mercado. O BC se compromete a " + vd("vender divisas no teto") + " (impedindo depreciação "
+            "adicional) e a " + vd("comprar no piso") + " (impedindo apreciação adicional).",
+            "A segunda metade do item é a promessa do regime: o câmbio não sai da faixa enquanto o BC tiver "
+            "reservas e credibilidade para defendê-la. Se o mercado duvidar, vem o ataque especulativo — e a "
+            "banda pode ser rompida ou abandonada, como no " + rx("Brasil") + " em " + vd("janeiro de 1999") + ".",
+            "Contraste dos regimes intermediários: " + azb("câmbio fixo com margem estreita") + " (±1%) quase "
+            "não deixa o câmbio variar; " + azb("banda larga") + " deixa-o oscilar bastante; " + azb("crawling "
+            "peg") + " move a paridade aos poucos; " + azb("crawling band") + " move a própria faixa.",
+            vm("Regra-âncora: banda = flutuação dentro da faixa + intervenção nos limites."),
+        ],
+        "grafico_verso": "ECO-E2-L00799-1-V1",
+        "dissecando": (cz("[troca de conceito]") + " Troca “flutua” por “mantida constante”, aproximando a banda "
+                       "do câmbio fixo. A parte final (não sai da banda) é verdadeira e serve de isca. Pista: se "
+                       "a taxa fosse constante, não haveria por que definir dois limites."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“No regime de bandas cambiais, o Banco Central intervém quando a taxa de câmbio atinge os limites "
+            "da banda.”</i> → CERTO",
+            "<i>“No regime de bandas cambiais, o Banco Central intervém continuamente para manter a taxa no "
+            "centro da banda.”</i> → ERRADO (dentro da faixa quem forma a taxa é o mercado)",
+        ])],
+        "reescrita": ("Em um regime de bandas cambiais, a taxa de câmbio é " + hl("livre para flutuar")
+                      + " dentro de limites estabelecidos, sem a possibilidade de flutuações fora dessas bandas."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["constante"], "dificuldade": 1,
+        "comentario_fonte": "Nas bandas, a taxa flutua livremente entre limites; o BC só intervém se ameaçar "
+                            "ultrapassá-los; não é mantida constante.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 119", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["quase_duplicata: ECO-E2-L00105-1 (definição de bandas, CERTO)"],
+    },
+    # ------------------------------------------------------------------ E2-L00800
+    {
+        "id": "ECO-E2-L00800-1", "fonte_ref": "E2-L00800", "destino": "66", "subtema": H2["ppc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": None, "cacd": False, "errei": False,
+        "comando": CMD_NAB_EI,
+        "rotulo_item": "Item",
+        "assertiva": ("A taxa de câmbio nominal corresponde ao preço de uma moeda em relação a outra. Na "
+                      "determinação dos fluxos comerciais entre os países, utiliza-se a chamada taxa de câmbio "
+                      "real, que corresponde ao relativo de preços entre o produto nacional e estrangeiro (ou "
+                      "vice-versa, conforme definição da taxa de câmbio nominal)."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A taxa de câmbio nominal corresponde ao preço de uma moeda em relação a outra. Na "
+                      "determinação dos fluxos comerciais entre os países, utiliza-se a chamada taxa de câmbio "
+                      "<u>real</u>, que corresponde ao relativo de preços entre o produto nacional e estrangeiro "
+                      "(<u>ou vice-versa, conforme definição</u> da taxa de câmbio nominal)."),
+        "poucas": ("O " + azb("câmbio nominal") + " é o preço de uma moeda em outra; o " + azb("câmbio real")
+                   + " é o preço relativo dos bens (" + vd("q = E·P*/P") + ") — e é ele que decide para onde vão "
+                   "exportações e importações."),
+        "destrinchando": [
+            azb("Nominal") + " (E): quantos reais custa um dólar (R$/US$). " + azb("Real") + " (q): quantas "
+            "cestas brasileiras são precisas para comprar uma cesta americana — o nominal corrigido pelos "
+            "níveis de preços: " + vd("q = E · P*/P") + ".",
+            "Os fluxos comerciais respondem ao real, não ao nominal: um dólar 10% mais caro não ajuda o "
+            "exportador se os preços internos também subiram 10% — q fica igual, e a competitividade também.",
+            "Convenções: com E em R$/US$, q = E·P*/P (alta de q = depreciação real). Com E em US$/R$ (cotação "
+            "do certo), a fórmula inverte: q = E·P/P*. Daí o “ou vice-versa” do item — a definição do real "
+            "acompanha a do nominal.",
+            "Na prática, usa-se a " + azb("taxa de câmbio real efetiva") + ": média ponderada dos câmbios reais "
+            "bilaterais com os parceiros comerciais (o BCB publica índices desse tipo).",
+            vm("Regra-âncora: comércio exterior responde ao câmbio real, isto é, ao preço relativo dos bens."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Item definicional que se protege com o parêntese "
+                       "(“ou vice-versa”), evitando que a convenção vire pegadinha. A versão ERRADA usual diria "
+                       "que os fluxos comerciais dependem do câmbio nominal."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os fluxos comerciais entre países dependem apenas da taxa de câmbio nominal.”</i> → ERRADO "
+            "(restrição indevida: dependem do câmbio real)",
+            "<i>“Uma depreciação nominal acompanhada de inflação doméstica de mesma magnitude deixa inalterada a "
+            "competitividade externa.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["ou vice-versa"], "dificuldade": 1,
+        "comentario_fonte": "Nominal = preço relativo de duas moedas; real R = E·P*/P, determinante da "
+                            "competitividade; real = preço em reais de uma cesta estrangeira em relação à "
+                            "doméstica.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01043
+    {
+        "id": "ECO-E2-L01043-1", "fonte_ref": "E2-L01043", "destino": "66", "subtema": H2["ppc"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "Pré-TPS/2023", "ano": 2023, "cacd": False, "errei": False,
+        "comando": CMD_NAB_MA,
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria da paridade do poder de compra, ao considerar que os países com elevadas taxas de "
+                      "inflação devem depreciar suas moedas, é incompatível com a existência de uma taxa real de "
+                      "câmbio constante."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A teoria da paridade do poder de compra, ao considerar que os países com elevadas taxas de "
+                       "inflação devem depreciar suas moedas, é ") + vm("incompatível") + az(" com a existência "
+                                                                                             "de uma taxa real de "
+                                                                                             "câmbio constante.")),
+        "poucas": ("É o contrário: a depreciação nominal do país de inflação alta é exatamente o que "
+                   + vd("mantém o câmbio real constante") + ". A " + azb("PPC") + " implica câmbio real "
+                   "constante."),
+        "destrinchando": [
+            "Câmbio real: " + vd("q = E · P*/P") + ". Em variações: " + vd("%Δq ≈ %ΔE + π* − π") + ". Para q "
+            "constante, %ΔE = π − π* — que é a própria " + azb("PPC relativa") + ".",
+            "Logo, quando a PPC diz que o país de inflação alta “deve depreciar” sua moeda, está descrevendo o "
+            "ajuste que <b>neutraliza</b> o diferencial de preços. Ex.: π = " + vd("7%") + ", π* = "
+            + vd("2%") + " → depreciação de cerca de " + vd("5%") + " → %Δq ≈ 5% + 2% − 7% = 0.",
+            "Na " + azb("PPC absoluta") + " (E = P/P*), o câmbio real é constante e igual a 1. Nas duas versões, "
+            "a PPC é uma teoria de " + vd("câmbio real constante") + " no longo prazo.",
+            "A incompatibilidade só apareceria se o câmbio nominal <b>não</b> se ajustasse: com inflação alta e "
+            "E parado, q cai (apreciação real) — o que viola a PPC, não a confirma.",
+            "Evidência: no curto prazo, os desvios da PPC são grandes e persistentes; no longo prazo, há "
+            "tendência de convergência, lenta.",
+            vm("Regra-âncora: PPC ⇔ câmbio real constante; a depreciação nominal é o meio, não a contradição."),
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " A premissa (países com inflação alta depreciam) é "
+                       "correta; o erro está na conclusão, que inverte “compatível” em “incompatível”. Pista: a "
+                       "depreciação nominal e a inflação entram na fórmula do câmbio real com sinais opostos e "
+                       "se anulam."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo a PPC relativa, a variação do câmbio nominal compensa o diferencial de inflação, de modo "
+            "que o câmbio real permanece constante.”</i> → CERTO",
+            "<i>“Se a PPC vale, o câmbio nominal permanece constante ao longo do tempo.”</i> → ERRADO (troca de "
+            "conceito: constante é o real; o nominal acompanha o diferencial de inflação)",
+        ])],
+        "reescrita": ("A teoria da paridade do poder de compra, ao considerar que os países com elevadas taxas de "
+                      "inflação devem depreciar suas moedas, é " + hl("compatível") + " com a existência de uma "
+                      "taxa real de câmbio constante."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": "PPC absoluta e relativa implicam câmbio real constante; Δe/e = ΔE/E + π* − π = 0. "
+                            "Vários comentários empilhados com reescritas equivalentes.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 176", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"},
+                          {"ref": "IMAGEM 177", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"},
+                          {"ref": "IMAGEM 178", "tipo_fonte": "FÓRMULA", "lado": "verso", "acao": "texto"}],
+        "alertas": ["texto_corrigido: retirado o número do item (“1.”) do início da assertiva",
+                    "quase_duplicata: ECO-E2-L00192-1 (PPC e câmbio real)"],
+    },
+]

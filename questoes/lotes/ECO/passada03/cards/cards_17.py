@@ -505,7 +505,7 @@ CARDS = [
         ])],
         "reescrita": ("Nos anos 1950 e 1960, os economistas com tradição cepalina acreditavam que a oferta "
                       "agropecuária não respondia a preços, tendo sido o Brasil, à época, prisioneiro da "
-                      "inelasticidade " + hl("da oferta agrícola interna, causada pela estrutura agrária")
+                      "inelasticidade" + hl(" da oferta agrícola interna, causada pela estrutura agrária")
                       + "."),
         "tipo_erro": ["NEXO_INDEVIDO", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 3,
         "comentario_fonte": ("Inelasticidade da oferta = incapacidade da produção agrícola para o mercado interno "
@@ -1295,5 +1295,393 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
         "alertas": ["quase_duplicata: ECO-E2-L00219-1 (comércio intrafirma)"],
+    },
+    # ------------------------------------------------------------------ E2-L00216
+    {
+        "id": "ECO-E2-L00216-1", "fonte_ref": "E2-L00216", "destino": "75", "subtema": H2["novas"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_BOZAN_02,
+        "rotulo_item": "Item",
+        "assertiva": ("Na diferenciação vertical de produtos, a principal característica considerada é a "
+                      "qualidade, em que dois produtos oferecem a mesma funcionalidade, mas apresentam diferenças "
+                      "de qualidade significativas."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Na diferenciação <u>vertical</u> de produtos, a principal característica considerada é a "
+                      "<u>qualidade</u>, em que dois produtos oferecem a <u>mesma funcionalidade</u>, mas "
+                      "apresentam diferenças de qualidade significativas."),
+        "poucas": (azb("Diferenciação vertical") + " = mesma função, " + vd("qualidade") + " diferente: a "
+                   "preço igual, todos prefeririam a mesma versão. É a definição de manual."),
+        "destrinchando": [
+            "Teste prático para distinguir: <b>se os dois produtos custassem o mesmo, todos escolheriam o "
+            "mesmo?</b> Sim → " + azb("vertical") + " (há ordem de qualidade: processador mais rápido, carro "
+            "mais seguro). Não, cada um escolheria por gosto → " + azb("horizontal") + " (cor, design, sabor, "
+            "marca).",
+            "No comércio: a diferenciação vertical se associa a diferenças de " + azb("renda") + " e de "
+            + azb("tecnologia") + " entre países — os mais ricos e intensivos em capital exportam as versões "
+            "de alta qualidade e importam as básicas. Por isso o comércio intraindustrial vertical também "
+            "ocorre entre países de renda diferente, e parte da literatura o liga a Heckscher-Ohlin "
+            "(qualidade intensiva em capital).",
+            "A horizontal sustenta o modelo de " + oc("Krugman") + " (gosto pela variedade): países "
+            "semelhantes trocam variedades equivalentes.",
+            "Na prática, a maioria dos produtos combina as duas dimensões, e a separação é analítica.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definição pura. O risco é a troca de rótulos (vertical ↔ "
+                       "horizontal), mais frequente quando a banca cobra as duas no mesmo bloco."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na diferenciação vertical, os produtos se distinguem por atributos como cor e design, "
+            "escolhidos segundo as preferências pessoais.”</i> → ERRADO (troca de conceito: isso é a "
+            "horizontal)",
+            "<i>“O comércio intraindustrial com diferenciação vertical pode ocorrer entre países de níveis de "
+            "renda distintos.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Diferenciação vertical ligada à qualidade (tecnologia, segurança), distinta da "
+                             "horizontal (cor, design); exemplo da indústria automotiva."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00205-1 (mesma definição, outra questão da mesma prova)"],
+    },
+    # ------------------------------------------------------------------ E2-L00217
+    {
+        "id": "ECO-E2-L00217-1", "fonte_ref": "E2-L00217", "destino": "75", "subtema": H2["novas"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_02,
+        "rotulo_item": "Item",
+        "assertiva": ("O comércio intrasetorial envolve a troca de produtos entre países dentro do mesmo setor onde "
+                      "tanto exportação quanto importação ocorrem simultaneamente. Adicionalmente, a diferenciação "
+                      "horizontal não interfere nas transações, pois estas são baseadas em diferenciação "
+                      "qualitativa, sem levar em consideração as preferências dos consumidores que podem afetar o "
+                      "comércio internacional bilateralmente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O comércio intrasetorial envolve a troca de produtos entre países dentro do mesmo setor "
+                       "onde tanto exportação quanto importação ocorrem simultaneamente. Adicionalmente, a "
+                       "diferenciação horizontal ") + vm("não interfere nas transações, pois estas são baseadas "
+                    "em diferenciação qualitativa, sem levar em consideração") + az(" as preferências dos "
+                    "consumidores que podem afetar o comércio internacional bilateralmente.")),
+        "poucas": ("A 1ª frase está certa. A 2ª, não: a " + azb("diferenciação horizontal") + " é justamente "
+                   "a baseada nas " + vm("preferências") + " dos consumidores, e é uma das bases do comércio "
+                   "intrassetorial."),
+        "destrinchando": [
+            "Definição (correta no item): " + azb("comércio intrassetorial") + " = exportações e importações "
+            "simultâneas de bens do mesmo setor.",
+            "O erro: o item atribui à diferenciação horizontal a natureza “qualitativa” (que é da "
+            + azb("vertical") + ") e nega o papel das preferências. Na verdade, a horizontal = variedades de "
+            "qualidade semelhante que se distinguem por atributos (design, cor, marca, sabor), escolhidas por "
+            + azb("gosto") + ".",
+            "Por que ela gera comércio: consumidores valorizam a " + azb("variedade") + " (" + oc("Dixit-"
+            "Stiglitz") + ", 1977); com economias de escala, cada país produz poucas variedades em grande "
+            "escala e importa as demais. É o núcleo do modelo de " + oc("Krugman") + " (1979–1980), que "
+            "explica o comércio intraindustrial entre países semelhantes.",
+            "As duas diferenciações coexistem: a vertical explica trocas de qualidades distintas; a horizontal, "
+            "trocas de variedades equivalentes.",
+            vm("Regra-âncora: vertical = qualidade; horizontal = preferências e atributos."),
+        ],
+        "dissecando": (cz("[meia-verdade · troca de conceito]") + " A 1ª frase é definição de manual; a 2ª "
+                       "inverte o conceito de diferenciação horizontal e nega o papel das preferências. O "
+                       "“Adicionalmente” é o ponto de enxerto típico de meia-verdade."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A diferenciação horizontal, baseada nas preferências dos consumidores por atributos distintos, "
+            "é uma das explicações do comércio intrassetorial.”</i> → CERTO",
+            "<i>“O comércio intrassetorial ocorre apenas quando há diferenciação vertical.”</i> → ERRADO "
+            "(restrição indevida)",
+        ])],
+        "reescrita": ("O comércio intrasetorial envolve a troca de produtos entre países dentro do mesmo setor onde "
+                      "tanto exportação quanto importação ocorrem simultaneamente. Adicionalmente, a diferenciação "
+                      "horizontal " + hl("interfere nas transações, pois se baseia em atributos distintos de "
+                      "produtos de qualidade semelhante, levando em consideração") + " as preferências dos "
+                      "consumidores que podem afetar o comércio internacional bilateralmente."),
+        "tipo_erro": ["MEIA_VERDADE", "TROCA_CONCEITO"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("O comércio intrassetorial não ignora a diferenciação horizontal, que trata de "
+                             "diferenças estéticas e culturais capazes de alterar preferências e o comércio "
+                             "bilateral."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00218
+    {
+        "id": "ECO-E2-L00218-1", "fonte_ref": "E2-L00218", "destino": "75", "subtema": H2["novas"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_02,
+        "rotulo_item": "Item",
+        "assertiva": ("Economias de escala internas à firma ocorrem quando uma empresa reduz seus custos de "
+                      "produção à medida que aumenta sua produção total. Já as economias externas à firma são "
+                      "aquelas em que é o crescimento da indústria como um todo que possibilita a redução de custos "
+                      "de todas as empresas individuais desse setor."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Economias de escala <u>internas</u> à firma ocorrem quando uma empresa reduz seus custos de "
+                      "produção à medida que aumenta <u>sua</u> produção total. Já as economias <u>externas</u> à "
+                      "firma são aquelas em que é o crescimento da <u>indústria como um todo</u> que possibilita a "
+                      "redução de custos de todas as empresas individuais desse setor."),
+        "poucas": ("Interna: o custo médio cai com o tamanho da " + azb("firma") + ". Externa: cai com o "
+                   "tamanho da " + azb("indústria") + " (local), mesmo que cada firma seja pequena."),
+        "destrinchando": [
+            azb("Economias internas") + ": custos fixos altos diluídos, especialização de tarefas, compras em "
+            "grande escala. Favorecem firmas grandes e mercados de " + azb("concorrência imperfeita") + " "
+            "(monopólio, oligopólio, concorrência monopolística). No comércio: modelo de " + oc("Krugman")
+            + " (variedades diferenciadas).",
+            azb("Economias externas") + " (" + oc("Alfred Marshall") + ", <i>Princípios</i>, 1890): três "
+            "fontes clássicas — " + vd("fornecedores especializados") + ", " + vd("mercado de trabalho "
+            "comum") + " e " + vd("transbordamento de conhecimento") + ". Compatíveis com muitas firmas "
+            "pequenas e concorrência perfeita. Explicam " + azb("clusters") + ": Vale do Silício, relógios "
+            "suíços, calçados em Franca (SP) e no Vale dos Sinos (RS).",
+            "Consequências para o comércio com economias externas: o padrão de especialização pode ser "
+            "“travado” pela história (quem começou primeiro), mesmo que outro país pudesse produzir mais "
+            "barato se tivesse a mesma escala; e os ganhos de comércio não são garantidos para todos.",
+            "Na curva de custo: internas → custo médio de longo prazo decrescente da firma; externas → a curva "
+            "de custo de cada firma desce quando a indústria cresce (curva de oferta da indústria decrescente "
+            "no longo prazo).",
+        ],
+        "dissecando": (cz("[literalidade]") + " Definições de manual (" + oc("Krugman e Obstfeld") + "). A "
+                       "versão ERRADA usual troca os sujeitos: “internas = crescimento da indústria”, "
+                       "“externas = crescimento da firma”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Economias externas à firma exigem que o setor seja dominado por poucas empresas "
+            "grandes.”</i> → ERRADO (troca de conceito: compatíveis com muitas firmas pequenas)",
+            "<i>“Economias de escala internas tendem a gerar mercados de concorrência imperfeita.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Internas: custos médios menores pelo aumento da produção da própria empresa. "
+                             "Externas: beneficiam todas as empresas quando a indústria cresce (clusters)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00219
+    {
+        "id": "ECO-E2-L00219-1", "fonte_ref": "E2-L00219", "destino": "75", "subtema": H2["novas"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_BOZAN_02,
+        "rotulo_item": "Item",
+        "assertiva": ("O conceito de comércio intrafirma refere-se ao comércio de bens e insumos entre subsidiárias "
+                      "da mesma corporação, localizadas em diferentes países. No entanto, a transferência de bens "
+                      "entre subsidiárias da mesma empresa tende, invariavelmente, a ser limitada quando há "
+                      "significativas diferenças tecnológicas entre elas, gerando desafios para manter a "
+                      "competitividade no mercado internacional."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O conceito de comércio intrafirma refere-se ao comércio de bens e insumos entre "
+                       "subsidiárias da mesma corporação, localizadas em diferentes países. No entanto, a "
+                       "transferência de bens entre subsidiárias da mesma empresa ") + vm("tende, invariavelmente, "
+                    "a ser limitada") + az(" quando há significativas diferenças tecnológicas entre elas, gerando "
+                                           "desafios para manter a competitividade no mercado internacional.")),
+        "poucas": ("A definição está certa; o erro é o " + vm("“invariavelmente”") + ". Diferenças tecnológicas "
+                   "entre unidades costumam " + azb("motivar") + " o comércio intrafirma (cada filial faz a "
+                   "etapa que lhe cabe), em vez de limitá-lo."),
+        "destrinchando": [
+            azb("Comércio intrafirma") + ": transações entre matriz e filiais (ou entre filiais) da mesma "
+            + azb("empresa transnacional") + " em países diferentes. É a face comercial do " + azb("investimento "
+            "estrangeiro direto") + " e das " + azb("cadeias globais de valor") + ": cada unidade se "
+            "especializa numa etapa (P&amp;D na matriz, montagem onde a mão de obra é barata, componentes onde "
+            "há escala).",
+            "Por isso, diferenças tecnológicas e de custos entre as unidades são, com frequência, a " + vd("razão")
+            + " da divisão do trabalho dentro da empresa — a matriz envia componentes de alta tecnologia e "
+            "recebe produtos montados. Quando a diferença atrapalha, a empresa transfere " + azb("know-how")
+            + ", padroniza processos ou investe na filial.",
+            "Por que internalizar em vez de comprar no mercado: " + azb("teoria da internalização") + " e "
+            "paradigma eclético OLI de " + oc("John Dunning") + " (propriedade, localização, internalização) — "
+            "proteger tecnologia, reduzir custos de transação, controlar qualidade.",
+            "Tema sensível: os " + azb("preços de transferência") + " (preços internos entre unidades) podem "
+            "deslocar lucros para jurisdições de imposto baixo; daí regras da OCDE e da Receita Federal.",
+            vm("Regra-âncora: em itens de definição, desconfie do modulador absoluto enxertado na 2ª frase."),
+        ],
+        "dissecando": (cz("[modulador absoluto · meia-verdade]") + " 1ª frase: definição correta. 2ª frase: "
+                       "“tende, invariavelmente” — combinação contraditória (tendência não é invariável) que "
+                       "denuncia o enxerto. E a ideia de fundo também é falsa: diferença tecnológica é motor, "
+                       "não freio, do comércio intrafirma."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O comércio intrafirma está associado à atuação de empresas transnacionais e à fragmentação "
+            "internacional da produção.”</i> → CERTO",
+            "<i>“O comércio intrafirma, por definição, só envolve bens da mesma indústria.”</i> → ERRADO "
+            "(restrição indevida: pode ser interindustrial)",
+        ])],
+        "reescrita": ("O conceito de comércio intrafirma refere-se ao comércio de bens e insumos entre subsidiárias "
+                      "da mesma corporação, localizadas em diferentes países. No entanto, a transferência de bens "
+                      "entre subsidiárias da mesma empresa " + hl("pode ser dificultada, em alguns casos,")
+                      + " quando há significativas diferenças tecnológicas entre elas, gerando desafios para "
+                      "manter a competitividade no mercado internacional."),
+        "tipo_erro": ["GENERALIZACAO", "MEIA_VERDADE"], "moduladores": ["invariavelmente"], "dificuldade": 1,
+        "comentario_fonte": ("O comércio intrafirma preserva tecnologia e otimiza lucros entre subsidiárias; não é "
+                             "invariavelmente limitado por diferenças tecnológicas, que se contornam com "
+                             "transferência de know-how e padronização."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L00206-1 (intrassetorial × intrafirma)"],
+    },
+    # ------------------------------------------------------------------ E2-L00297
+    {
+        "id": "ECO-E2-L00297-1", "fonte_ref": "E2-L00297", "destino": "75", "subtema": H2["novas"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": True,
+        "comando": CMD_RT,
+        "rotulo_item": "Item",
+        "assertiva": ("A Teoria do Ciclo de Vida do Produto (Vernon) explica o comércio intraindustrial entre "
+                      "países desenvolvidos, argumentando que a diferenciação de produtos e as economias de escala "
+                      "são mais relevantes que as vantagens comparativas tradicionais para explicar esse fluxo."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A ") + vm("Teoria do Ciclo de Vida do Produto (Vernon)") + az(" explica o comércio "
+                    "intraindustrial entre países desenvolvidos, argumentando que a diferenciação de produtos e as "
+                    "economias de escala são mais relevantes que as vantagens comparativas tradicionais para "
+                    "explicar esse fluxo.")),
+        "poucas": ("Fenômeno e mecanismo certos, " + vm("teoria errada") + ": quem explica o comércio "
+                   "intraindustrial por escala e diferenciação é a " + azb("Nova Teoria do Comércio") + " ("
+                   + oc("Krugman") + ", " + oc("Helpman") + "). " + oc("Vernon") + " explica a "
+                   + azb("migração") + " da produção ao longo da vida do produto."),
+        "destrinchando": [
+            oc("Raymond Vernon") + " (" + vd("1966") + ") — " + azb("ciclo de vida do produto") + ": "
+            "(1) " + vd("produto novo") + ": inventado e produzido no país inovador (os EUA no pós-guerra), "
+            "perto do mercado de alta renda e da P&amp;D; exportado para o mundo; (2) " + vd("maturidade") + ": "
+            "a tecnologia se difunde, outros países desenvolvidos passam a produzir; o inovador começa a "
+            "importar e investe no exterior (IED); (3) " + vd("padronização") + ": o produto vira commodity, "
+            "o custo da mão de obra decide, e a produção migra para países em desenvolvimento; o inovador "
+            "vira importador líquido.",
+            "O que Vernon explica: a " + azb("dinâmica") + " do comércio interindustrial e do IED no tempo — "
+            "uma versão dinâmica de H-O, em que a vantagem passa do capital tecnológico ao trabalho barato. "
+            "Também ajuda a explicar o " + azb("paradoxo de Leontief") + " (os EUA exportando bens intensivos "
+            "em trabalho qualificado).",
+            "O que a " + azb("Nova Teoria do Comércio") + " explica: o comércio " + azb("intraindustrial")
+            + " entre países semelhantes, por " + azb("economias de escala internas") + ", "
+            + azb("diferenciação de produtos") + " e " + azb("concorrência monopolística") + " (modelo "
+            + oc("Dixit-Stiglitz") + "-Krugman). Krugman: Nobel de " + vd("2008") + ". Complemento pela "
+            "demanda: " + oc("Linder") + " (1961).",
+            "Outras peças do mapa: " + oc("Melitz") + " (2003, firmas heterogêneas: só as mais produtivas "
+            "exportam); Nova Geografia Econômica (" + oc("Krugman") + ", 1991: aglomeração × custos de "
+            "transporte); " + oc("Porter") + " (vantagem competitiva, “diamante”).",
+            vm("Regra-âncora: Vernon = migração no tempo (inovador → imitador); Krugman = intraindustrial entre "
+               "iguais."),
+        ],
+        "dissecando": (cz("[troca de ator]") + " Erro de atribuição: o item descreve corretamente a Nova Teoria "
+                       "do Comércio e põe o nome de Vernon. Como o ciclo do produto também é “nova teoria” "
+                       "(anos 1960, pós-Leontief), a confusão é natural. 🔥 A banca adora trocar os rótulos "
+                       "entre Vernon, Linder, Krugman e Melitz."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo Vernon, à medida que o produto se padroniza, sua produção tende a migrar para países "
+            "de menor custo de mão de obra.”</i> → CERTO",
+            "<i>“A Nova Teoria do Comércio explica o comércio intraindustrial com base nas diferenças de "
+            "dotações de fatores entre os países.”</i> → ERRADO (troca de conceito: escala e diferenciação)",
+        ])],
+        "reescrita": ("A " + hl("Nova Teoria do Comércio (Krugman)") + " explica o comércio intraindustrial entre "
+                      "países desenvolvidos, argumentando que a diferenciação de produtos e as economias de escala "
+                      "são mais relevantes que as vantagens comparativas tradicionais para explicar esse fluxo."),
+        "tipo_erro": ["TROCA_ATOR"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("Erro de atribuição: o comércio intraindustrial por escala e diferenciação é "
+                             "explicado pela Nova Teoria do Comércio (Krugman/Helpman); Vernon explica a migração "
+                             "da produção do inovador para os imitadores. Panorama de Ricardo, H-O, Vernon, "
+                             "Krugman, Linder, Melitz, Nova Geografia Econômica e Porter, com duas tabelas."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 031", "tipo_fonte": "TABELA", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 032", "tipo_fonte": "TABELA", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00499
+    {
+        "id": "ECO-E2-L00499-1", "fonte_ref": "E2-L00499", "destino": "75", "subtema": H2["novas"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a nova teoria do comércio internacional, a existência de economias de escala e "
+                      "de marcas globais são uma explicação mais convincente para o comércio internacional, "
+                      "descartando as teorias tradicionais baseadas em vantagens comparativas ou diferenças na "
+                      "abundância de fatores de produção."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com a nova teoria do comércio internacional, a existência de economias de escala "
+                       "e de marcas globais são uma explicação mais convincente para o comércio internacional, ")
+                    + vm("descartando") + az(" as teorias tradicionais baseadas em vantagens comparativas ou "
+                                             "diferenças na abundância de fatores de produção.")),
+        "poucas": ("A nova teoria " + azb("complementa") + ", não " + vm("descarta") + ", as tradicionais: "
+                   "Ricardo e H-O seguem explicando o comércio " + azb("interindustrial") + "; escala e "
+                   "diferenciação explicam o " + azb("intraindustrial") + "."),
+        "destrinchando": [
+            "Divisão de trabalho entre as teorias: " + oc("Ricardo") + " (produtividade) e "
+            + oc("Heckscher-Ohlin") + " (dotações) → comércio entre países " + azb("diferentes") + ", de bens "
+            "diferentes (Norte-Sul, primários × manufaturas). " + oc("Krugman") + " e " + oc("Helpman")
+            + " (escala, diferenciação, concorrência monopolística) → comércio entre países "
+            + azb("semelhantes") + ", de bens do mesmo setor.",
+            "O próprio " + oc("Helpman e Krugman") + " (<i>Market Structure and Foreign Trade</i>, 1985) "
+            "integraram os dois mundos: num modelo com dotações diferentes e escala, o comércio "
+            "interindustrial reflete as vantagens comparativas e o intraindustrial reflete a escala. Quanto "
+            "mais parecidas as dotações, maior a fatia intraindustrial (o que se mede com o índice de "
+            "Grubel-Lloyd).",
+            "Sobre “mais convincente”: só para os fluxos entre economias parecidas. Para o comércio do "
+            + rx("Brasil") + " com a China (soja e minério por manufaturas), a explicação continua sendo de "
+            "vantagens comparativas e dotações.",
+            vm("Regra-âncora: nova teoria + teorias tradicionais = complementares."),
+        ],
+        "dissecando": (cz("[extrapolação · modulador absoluto]") + " O item parte de algo verdadeiro (a nova "
+                       "teoria explica bem parte do comércio) e extrapola para o descarte das clássicas. "
+                       "“Descartando” é a palavra-gatilho: teorias econômicas novas raramente “descartam”; em "
+                       "prova, “complementam”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A nova teoria do comércio complementa as teorias tradicionais, explicando sobretudo o comércio "
+            "intraindustrial.”</i> → CERTO",
+            "<i>“Segundo a nova teoria, países com dotações de fatores idênticas não têm motivos para "
+            "comerciar.”</i> → ERRADO (contradição: a escala gera comércio mesmo entre iguais)",
+        ])],
+        "reescrita": ("De acordo com a nova teoria do comércio internacional, a existência de economias de escala e "
+                      "de marcas globais são uma explicação mais convincente para o comércio internacional, "
+                      + hl("complementando") + " as teorias tradicionais baseadas em vantagens comparativas ou "
+                      "diferenças na abundância de fatores de produção."),
+        "tipo_erro": ["EXTRAPOLACAO", "GENERALIZACAO"], "moduladores": ["descartando"], "dificuldade": 1,
+        "comentario_fonte": ("A nova teoria complementa as tradicionais: Ricardo e H-O explicam o comércio "
+                             "interindustrial; a nova teoria, o intraindustrial, por escala e diferenciação."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00500
+    {
+        "id": "ECO-E2-L00500-1", "fonte_ref": "E2-L00500", "destino": "75", "subtema": H2["novas"],
+        "tipo": "C/E", "banca": "Nabuco", "prova": "", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_NAB_COM,
+        "rotulo_item": "Item",
+        "assertiva": ("As economias de escala fornecem um incentivo ao comércio internacional porque cada país "
+                      "especializa-se em produzir produtos diversificados, usando a mesma escala das plantas, "
+                      "fazendo uso das mesmas operações e/ou insumos de forma mais eficiente."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As economias de escala fornecem um incentivo ao comércio internacional porque cada país "
+                       "especializa-se em produzir ") + vm("produtos diversificados, usando a mesma escala das "
+                    "plantas") + az(", fazendo uso das mesmas operações e/ou insumos de forma mais eficiente.")),
+        "poucas": ("Com escala, compensa " + azb("concentrar") + ": cada país produz uma " + vm("gama limitada")
+                   + " de bens em plantas " + vd("maiores") + " e obtém a variedade pelo comércio. "
+                   "“Diversificar com a mesma escala” anula o ganho."),
+        "destrinchando": [
+            "Lógica de " + oc("Krugman") + ": com custo fixo por variedade, o custo médio cai com o volume. Um "
+            "país isolado, para ter variedade, precisa produzir muitas variedades em pequena escala, com custo "
+            "médio alto. Com o comércio, cada país " + azb("especializa-se em poucas variedades") + ", produz "
+            "em grande escala e importa as outras.",
+            "Resultado: o mercado integrado sustenta " + vd("mais variedades") + " a " + vd("custo médio "
+            "menor") + " do que cada mercado nacional sozinho — ganho de comércio que não depende de diferença "
+            "de tecnologia ou de dotação.",
+            "O item inverte a direção: “produtos diversificados” é o que o consumidor ganha com o comércio "
+            "(variedade no consumo), não o que cada país produz. E “mesma escala das plantas” contradiz a "
+            "própria ideia de economias de escala (plantas maiores, custo menor).",
+            "Exemplo: o " + azb("Acordo Automotivo EUA-Canadá") + " (" + vd("1965") + ") — antes, fábricas "
+            "canadenses produziam muitos modelos em escala pequena; com o livre-comércio setorial, "
+            "especializaram-se em poucos modelos para todo o mercado norte-americano, e a produtividade "
+            "subiu.",
+            vm("Regra-âncora: escala → especializar a produção; comércio → diversificar o consumo."),
+        ],
+        "dissecando": (cz("[inversão · contradição]") + " Troca “especializar-se em poucos produtos” por "
+                       "“produzir produtos diversificados” e acrescenta “mesma escala”, que nega a premissa. O "
+                       "item soa plausível porque “diversificação” e “eficiência” aparecem juntas nos manuais "
+                       "— mas a diversificação é do consumo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Com economias de escala, o comércio permite a cada país produzir uma gama limitada de bens em "
+            "maior escala, enquanto o consumidor tem acesso a maior variedade.”</i> → CERTO",
+            "<i>“As economias de escala só geram ganhos de comércio entre países com dotações de fatores "
+            "diferentes.”</i> → ERRADO (restrição indevida: geram também entre países idênticos)",
+        ])],
+        "reescrita": ("As economias de escala fornecem um incentivo ao comércio internacional porque cada país "
+                      "especializa-se em produzir " + hl("uma gama limitada de produtos, em plantas de maior "
+                      "escala") + ", fazendo uso das mesmas operações e/ou insumos de forma mais eficiente."),
+        "tipo_erro": ["INVERSAO", "CONTRADICAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("O incentivo vem da especialização numa gama limitada de bens, com maior escala e "
+                             "menores custos médios; a variedade se obtém pelo comércio."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
     },
 ]

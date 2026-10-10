@@ -1074,4 +1074,197 @@ CARDS = [
                            "acao": "substituída pelo redesenho didático ECO-E1-0028-1-V1"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0159
+    {
+        "id": "ECO-E1-0159-1", "fonte_ref": "E1-0159", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_SUB,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma forma de se fazer política comercial se dá com o subsídio à exportação de um "
+                      "determinado produto. Uma característica dessa política é que acarreta custo para o "
+                      "Governo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma forma de se fazer política comercial se dá com o subsídio à exportação de um "
+                      "determinado produto. Uma característica dessa política é que acarreta <u>custo para o "
+                      "Governo</u>."),
+        "poucas": ("O subsídio é um " + azb("pagamento") + " do governo por unidade exportada: gera " + vd("gasto "
+                   "fiscal") + ", ao contrário da tarifa, que gera receita."),
+        "destrinchando": [
+            "Mecanismo (país pequeno): com subsídio s por unidade exportada, o produtor só vende no mercado "
+            "interno se receber o mesmo que exportando — o " + azb("preço doméstico sobe") + " de Pm para "
+            "Pm + s. Produção ↑, consumo interno ↓, exportações ↑.",
+            "Bem-estar (notação de " + oc("Krugman e Obstfeld") + "): produtores ganham; consumidores perdem; "
+            "o governo gasta s × exportações; o saldo é " + azb("perda líquida") + " (distorções de produção e "
+            "de consumo). No " + azb("país grande") + ", a oferta extra derruba o preço mundial e há ainda "
+            "perda de " + azb("termos de troca") + ": o país subsidia o consumidor estrangeiro.",
+            "Regras da " + azb("OMC") + ": o Acordo sobre Subsídios e Medidas Compensatórias (SMC) "
+            + vd("proíbe") + " subsídios condicionados à exportação para bens industriais (art. 3); na "
+            "agricultura, a Conferência Ministerial de " + vd("Nairóbi (2015)") + " decidiu eliminar os "
+            "subsídios à exportação. O país afetado pode recorrer ao sistema de solução de controvérsias ou "
+            "aplicar " + azb("direitos compensatórios") + ".",
+            rx("Brasil") + ": venceu os EUA no contencioso do algodão (DS267, aberto em 2002) e litigou com o Canadá sobre "
+            "aviões regionais (Embraer × Bombardier, anos 1990–2000), em que o Proex brasileiro também foi "
+            "questionado.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Afirmação de manual, sem armadilha. A banca costuma explorar "
+                       "o contraste com a tarifa (“o subsídio gera receita ao governo” → ERRADO) ou o efeito "
+                       "sobre o preço doméstico (“reduz o preço ao consumidor nacional” → ERRADO)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O subsídio à exportação eleva o preço doméstico do bem subsidiado.”</i> → CERTO",
+            "<i>“O subsídio à exportação, por gerar receita, é preferível à tarifa do ponto de vista "
+            "fiscal.”</i> → ERRADO (troca de conceito: quem gera receita é a tarifa)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Subsídio à exportação é pagamento por unidade exportada: custo fiscal direto; "
+                             "tende a reduzir o bem-estar nacional."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0160
+    {
+        "id": "ECO-E1-0160-1", "fonte_ref": "E1-0160", "destino": "79", "subtema": H2["sub"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_SUB,
+        "rotulo_item": "Item",
+        "assertiva": ("Uma forma de se fazer política comercial se dá com o subsídio à exportação de um "
+                      "determinado produto. Uma característica dessa política é que acarreta redução da produção "
+                      "do produto."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma forma de se fazer política comercial se dá com o subsídio à exportação de um "
+                       "determinado produto. Uma característica dessa política é que acarreta ")
+                    + vm("redução") + az(" da produção do produto.")),
+        "poucas": ("O subsídio eleva o preço recebido pelo produtor (Pm + s): a produção " + vd("aumenta")
+                   + ". Quem cai é o " + azb("consumo interno") + "."),
+        "destrinchando": [
+            "Com subsídio s por unidade exportada, o produtor recebe Pm + s ao exportar; para vender no mercado "
+            "interno, exige o mesmo. O preço doméstico sobe para Pm + s, e a empresa sobe ao longo da curva de "
+            "oferta: " + vd("produção ↑") + ".",
+            "Do lado da demanda, o preço maior reduz o " + vd("consumo interno ↓") + ". Exportações = produção "
+            "− consumo → " + vd("sobem") + " pelos dois lados.",
+            "Comparação com a tarifa: ambas elevam o preço doméstico e a produção nacional, e ambas reduzem o "
+            "consumo interno. A diferença está no governo: tarifa arrecada; subsídio gasta. E a tarifa reduz o "
+            "comércio, enquanto o subsídio o amplia.",
+            vm("Regra-âncora: subsídio à exportação → preço interno ↑, produção ↑, consumo ↓, exportação ↑, "
+               "gasto público ↑."),
+        ],
+        "dissecando": (cz("[inversão]") + " Inverte o efeito sobre a produção, talvez confundindo com o "
+                       "consumo interno, que de fato cai. Pista: subsídio é incentivo — incentivo a produzir "
+                       "não reduz a produção."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O subsídio à exportação acarreta redução do consumo doméstico do produto.”</i> → CERTO",
+            "<i>“O subsídio à exportação reduz o preço pago pelos consumidores domésticos.”</i> → ERRADO "
+            "(inversão: o preço interno sobe)",
+        ])],
+        "reescrita": ("Uma forma de se fazer política comercial se dá com o subsídio à exportação de um "
+                      "determinado produto. Uma característica dessa política é que acarreta " + hl("aumento")
+                      + " da produção do produto."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": "Subsídio à exportação torna as vendas externas mais lucrativas e estimula a produção.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0166
+    {
+        "id": "ECO-E1-0166-1", "fonte_ref": "E1-0166", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": None, "cacd": False,
+        "errei": False,
+        "comando": CMD_SUB,
+        "rotulo_item": "Item",
+        "assertiva": ("Caso um país decida reduzir a tarifa ad valorem até então existente sobre uma mercadoria "
+                      "específica, como resultado haverá redução da arrecadação do Governo."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": az("Caso um país decida reduzir a tarifa ad valorem até então existente sobre uma mercadoria "
+                      "específica, como resultado <u>haverá</u> redução da arrecadação do Governo."),
+        "poucas": ("Na leitura da banca: alíquota menor sobre a mesma base → " + vd("arrecada-se menos") + ". "
+                   "Mas a base (o valor importado) cresce quando a tarifa cai, e o resultado depende da "
+                   + azb("elasticidade") + " das importações."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "arrecadação = alíquota × valor importado, e o valor importado <b>aumenta</b> quando a "
+                          "tarifa cai. Se a tarifa inicial for muito alta — no limite, " + azb("proibitiva")
+                          + ", com arrecadação zero — reduzi-la eleva a receita (lógica da " + azb("curva de "
+                          "Laffer") + "). O “haverá” categórico só vale com importações pouco elásticas ou "
+                          "tarifas moderadas; seria mais defensável “tende a haver” ou ERRADO pela "
+                          "generalização.")],
+        "destrinchando": [
+            azb("Tarifa ad valorem") + ": percentual sobre o valor aduaneiro (no " + rx("Brasil") + ", o "
+            "Imposto de Importação incide em regra sobre o valor CIF, com alíquotas da TEC do Mercosul). "
+            + azb("Tarifa específica") + ": valor fixo por unidade física (R$ por tonelada).",
+            "Efeito da redução: preço interno cai, consumo ↑, produção doméstica ↓, importações ↑. A receita "
+            "muda por dois efeitos opostos: " + vd("efeito alíquota") + " (menos por unidade) e "
+            + vd("efeito base") + " (mais unidades).",
+            "Quando a receita certamente cai: importações inelásticas, ou corte para zero (receita zero). "
+            "Quando pode subir: tarifa inicial próxima da proibitiva, com demanda de importações elástica.",
+            "Bem-estar: reduzir a tarifa diminui o peso morto (distorções de produção e consumo), aumenta o "
+            "excedente do consumidor e reduz o do produtor doméstico — por isso a liberalização tem ganhadores "
+            "difusos e perdedores concentrados.",
+        ],
+        "dissecando": (cz("[literalidade · modulador absoluto]") + " A banca considerou a leitura mecânica "
+                       "(alíquota menor = menos receita). O risco está no “haverá”, que ignora o efeito base; "
+                       "em prova, itens com “tende a” protegem o CERTO, e afirmações categóricas sobre receita "
+                       "tributária costumam ser a armadilha."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A redução de uma tarifa proibitiva aumenta a arrecadação do governo.”</i> → CERTO",
+            "<i>“A redução da tarifa de importação eleva o excedente do produtor doméstico.”</i> → ERRADO "
+            "(inversão: o preço interno cai e o produtor perde)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["haverá"], "dificuldade": 2,
+        "comentario_fonte": "Tarifa ad valorem é proporcional ao valor; reduzir a alíquota reduz a receita por unidade.",
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["contestavel: a redução da tarifa amplia a base importada; com tarifa inicial alta "
+                    "(proibitiva ou próxima), a arrecadação pode subir"],
+    },
+    # ------------------------------------------------------------------ E1-0442
+    {
+        "id": "ECO-E1-0442-1", "fonte_ref": "E1-0442", "destino": "79", "subtema": H2["tar"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simuladão Clipping", "ano": 2025, "cacd": False,
+        "errei": False,
+        "comando": ("Conflitos comerciais entre países, conhecidos como guerras comerciais, têm se tornado eventos "
+                    "recorrentes na economia global contemporânea. Geralmente caracterizadas pela imposição "
+                    "recíproca de tarifas, essas disputas afetam tanto o fluxo de bens quanto as expectativas "
+                    "dos agentes econômicos. Com base nesse contexto, julgue o item a seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("A imposição de tarifas eleva o preço dos bens importados, o que pode gerar efeitos "
+                      "regressivos sobre o consumo das famílias, sobretudo nas camadas de menor renda, devido à "
+                      "perda de poder de compra."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A imposição de tarifas eleva o preço dos bens importados, o que <u>pode</u> gerar efeitos "
+                      "<u>regressivos</u> sobre o consumo das famílias, sobretudo nas camadas de menor renda, "
+                      "devido à perda de poder de compra."),
+        "poucas": ("A tarifa é um " + azb("imposto sobre o consumo") + " de bens comerciáveis; como os mais "
+                   "pobres gastam fração maior da renda em bens, perdem proporcionalmente mais: efeito "
+                   + azb("regressivo") + "."),
+        "destrinchando": [
+            azb("Regressivo") + " = onera proporcionalmente mais quem ganha menos (o peso no orçamento cai com a "
+            "renda). " + azb("Progressivo") + " = o contrário.",
+            "Por que a tarifa é regressiva: famílias de baixa renda consomem quase toda a renda (propensão "
+            "média a consumir próxima de 1) e gastam parcela maior em bens comerciáveis (alimentos, vestuário, "
+            "eletrodomésticos); as de alta renda poupam mais e gastam mais em serviços.",
+            "A tarifa encarece não só o importado: o produtor nacional concorrente também eleva o preço até "
+            "perto do preço com tarifa. A perda do consumidor supera a receita do governo — parte vira ganho "
+            "do produtor protegido e parte é peso morto.",
+            "Em guerras comerciais, as tarifas sobre insumos se propagam pelas cadeias e chegam ao preço final. "
+            "Estudos sobre as tarifas dos EUA em 2018–2019 encontraram repasse quase integral aos preços "
+            "domésticos (" + oc("Amiti, Redding e Weinstein") + ", 2019).",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " O “pode” e o “sobretudo” blindam o item. A banca "
+                       "tornaria ERRADO dizendo que a tarifa é “progressiva” ou que “recai apenas sobre os "
+                       "exportadores estrangeiros”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Por incidir sobre bens importados, consumidos principalmente pelas camadas de maior renda, as "
+            "tarifas têm efeito progressivo.”</i> → ERRADO (inversão: o efeito típico é regressivo)",
+            "<i>“O ônus de uma tarifa recai integralmente sobre o exportador estrangeiro.”</i> → ERRADO "
+            "(modulador absoluto: em país pequeno recai sobre o consumidor doméstico)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode", "sobretudo"], "dificuldade": 1,
+        "comentario_fonte": ("Tarifas funcionam como imposto sobre o consumo de importados; famílias de baixa "
+                             "renda gastam proporção maior em bens de consumo: efeito regressivo."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["duplicata: E1-0544 (mesmo item e mesmo comentário) fundido neste card"],
+    },
 ]

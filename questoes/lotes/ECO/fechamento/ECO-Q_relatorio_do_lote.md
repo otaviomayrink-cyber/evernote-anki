@@ -418,7 +418,7 @@
 
 ## 7. Sugestões para o prompt
 
-**Volume e ritmo.** Três passadas (774 · 752 · 687 cards), em lotes de ~30 itens por redator, até 20 redatores em paralelo (≈15 min por lote). Cada passada teve uma revisão independente: uma amostra de 11% conferida contra a fonte, mais todos os ERRADO. Por passada: 83 / 83 / 76 cards na amostra, sem nenhum gabarito ou assertiva infiel nas três.
+**Volume e ritmo.** Três passadas (774 · 752 · 687 cards), em lotes de ~30 itens por redator, até 20 redatores em paralelo (≈15 min por lote). Cada passada teve uma revisão independente: uma amostra de 11% conferida contra a fonte, mais todos os ERRADO. Por passada: 85 / 83 / 76 cards na amostra, sem nenhum gabarito ou assertiva infiel nas três.
 
 **O que a execução revelou e o ajuste proposto**
 

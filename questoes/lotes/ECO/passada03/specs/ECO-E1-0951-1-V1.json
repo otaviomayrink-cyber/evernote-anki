@@ -1,0 +1,25 @@
+{
+ "id": "ECO-E1-0951-1-V1",
+ "uso": "verso",
+ "legenda": "O subsídio s à exportação eleva o preço interno de Pm para Pm + s: o consumo doméstico cai de q₁ᵈ para q₂ᵈ e a produção sobe de q₁ˢ para q₂ˢ. A faixa vermelha é a perda do consumidor doméstico — o efeito negativo que o item nega.",
+ "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "D", "tipo": "reta", "p1": [0.5, 9.5], "p2": [9.5, 0.5], "familia": "demanda", "rotulo": "D"},
+  {"id": "S", "tipo": "reta", "p1": [0.5, 0.5], "p2": [9.0, 9.0], "familia": "oferta", "rotulo": "O"},
+  {"id": "Pw", "tipo": "horizontal", "y": 6, "x": [0, 9.6], "familia": "referencia", "rotulo": "Pm"},
+  {"id": "Ps", "tipo": "horizontal", "y": 7.5, "x": [0, 9.6], "familia": "destaque", "rotulo": "Pm + s", "tracejada": true}
+ ],
+ "pontos": [
+  {"id": "Ad", "intersecao": ["D", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "q₁ᵈ"},
+  {"id": "As", "intersecao": ["S", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "q₁ˢ"},
+  {"id": "Bd", "intersecao": ["D", "Ps"], "marcar": false, "projetar": "x", "rotulo_x": "q₂ᵈ"},
+  {"id": "Bs", "intersecao": ["S", "Ps"], "marcar": false, "projetar": "x", "rotulo_x": "q₂ˢ"}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": [[0, 6], [0, 7.5], "Bd", "Ad"], "papel": "perda", "rotulo": "perda do consumidor", "rotulo_xy": [1.5, 6.75]}
+ ],
+ "setas": [
+  {"de": ["Bd.x", 8.6], "para": ["Bs.x", 8.6], "estilo": "<|-|>", "rotulo": "exportações com subsídio"}
+ ],
+ "checar": ["Bd.x < Ad.x", "Bs.x > As.x", "Ps.ys[0] > Pw.ys[0]", "(Bs.x - Bd.x) > (As.x - Ad.x)"]
+}

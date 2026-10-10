@@ -1,0 +1,25 @@
+{
+ "id": "ECO-E1-0937-1-V1",
+ "uso": "verso",
+ "legenda": "A tarifa eleva o preço interno de Pm para Pm + t: a produção doméstica sobe de q₁ˢ para q₂ˢ e o excedente do produtor cresce pela faixa verde. O consumidor perde toda a faixa entre os dois preços; parte vira receita (amarelo) e parte, peso morto (vermelho).",
+ "eixos": {"x": "q", "y": "p", "xmax": 10, "ymax": 10},
+ "curvas": [
+  {"id": "D", "tipo": "reta", "p1": [0.5, 9.5], "p2": [9.5, 0.5], "familia": "demanda", "rotulo": "D"},
+  {"id": "S", "tipo": "reta", "p1": [0.5, 0.5], "p2": [9.0, 9.0], "familia": "oferta", "rotulo": "O doméstica"},
+  {"id": "Pw", "tipo": "horizontal", "y": 2.5, "x": [0, 9.6], "familia": "referencia", "rotulo": "Pm"},
+  {"id": "Pt", "tipo": "horizontal", "y": 4, "x": [0, 9.6], "familia": "destaque", "rotulo": "Pm + t", "tracejada": true}
+ ],
+ "pontos": [
+  {"id": "A", "intersecao": ["S", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "q₁ˢ"},
+  {"id": "C", "intersecao": ["S", "Pt"], "marcar": false, "projetar": "x", "rotulo_x": "q₂ˢ"},
+  {"id": "F", "intersecao": ["D", "Pt"], "marcar": false, "projetar": "x", "rotulo_x": "q₂ᵈ"},
+  {"id": "B", "intersecao": ["D", "Pw"], "marcar": false, "projetar": "x", "rotulo_x": "q₁ᵈ"}
+ ],
+ "areas": [
+  {"tipo": "poligono", "vertices": [[0, 2.5], [0, 4], "C", "A"], "papel": "ganho", "rotulo": "ganho do produtor", "rotulo_xy": [1.6, 3.25]},
+  {"tipo": "poligono", "vertices": ["A", "C", ["C.x", 2.5]], "papel": "peso_morto"},
+  {"tipo": "poligono", "vertices": ["C", "F", ["F.x", 2.5], ["C.x", 2.5]], "papel": "receita_tributaria", "rotulo": "receita", "rotulo_xy": [5, 3.25]},
+  {"tipo": "poligono", "vertices": [["F.x", 2.5], "F", "B"], "papel": "peso_morto"}
+ ],
+ "checar": ["C.x > A.x", "F.x < B.x", "abs((Pt.ys[0] - Pw.ys[0]) - 1.5) < 0.01", "(C.x + A.x) / 2 * 1.5 > 0"]
+}

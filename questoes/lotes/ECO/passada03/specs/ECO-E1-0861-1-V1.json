@@ -1,0 +1,169 @@
+{
+ "id": "ECO-E1-0861-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio flutuante e mobilidade forte, mas imperfeita (BP mais plana que a LM): a expansão fiscal leva a IS a IS₂ e o ponto E′ fica acima da BP₁ (superávit). A apreciação desloca a BP para cima (BP₂) e faz a IS recuar só até IS₃: o equilíbrio E₃ tem renda maior que a inicial (Y₃ > Y₁).",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁",
+   "estado": "inicial",
+   "rotulo_xy": [
+    1.3,
+    7.9
+   ]
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    7.5
+   ],
+   "p2": [
+    9.5,
+    2.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂ (provisória)",
+   "tracejada": true,
+   "rotulo_xy": [
+    8.2,
+    3.0
+   ]
+  },
+  {
+   "id": "IS3",
+   "tipo": "reta",
+   "p1": [
+    3.4,
+    7.3
+   ],
+   "p2": [
+    8.4,
+    2.3
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₃",
+   "rotulo_xy": [
+    3.0,
+    7.75
+   ]
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM"
+  },
+  {
+   "id": "BP1",
+   "tipo": "funcao",
+   "expr": "4.5 + 0.3*(x-5)",
+   "dominio": [
+    0.5,
+    9.6
+   ],
+   "familia": "terceira",
+   "rotulo": "BP₁",
+   "estado": "inicial"
+  },
+  {
+   "id": "BP2",
+   "tipo": "funcao",
+   "expr": "5.1 + 0.3*(x-5.6)",
+   "dominio": [
+    0.5,
+    9.6
+   ],
+   "familia": "terceira",
+   "rotulo": "BP₂"
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁",
+   "projetar": "x",
+   "rotulo_x": "Y₁",
+   "rotulo_desloc": [
+    -32,
+    -14
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS2",
+    "LM1"
+   ],
+   "rotulo": "E′",
+   "rotulo_desloc": [
+    -30,
+    10
+   ]
+  },
+  {
+   "id": "E3",
+   "intersecao": [
+    "IS3",
+    "LM1"
+   ],
+   "rotulo": "E₃",
+   "projetar": "x",
+   "rotulo_x": "Y₃",
+   "rotulo_desloc": [
+    12,
+    -12
+   ]
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 6.8
+  },
+  {
+   "de": "IS2",
+   "para": "IS3",
+   "sentido": "esquerda",
+   "em_y": 3.3
+  }
+ ],
+ "checar": [
+  "Ep.y > BP1(Ep.x)",
+  "E3.x > E1.x",
+  "E3.x < Ep.x",
+  "E3.y > E1.y",
+  "abs(E3.y - BP2(E3.x)) < 0.01"
+ ]
+}

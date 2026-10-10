@@ -1060,4 +1060,280 @@ CARDS = [
                           {"ref": "IMAGEM 314", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
         "alertas": ["quase_duplicata: ECO-E3-L00258-1 (mesma assertiva, em outro simulado do mesmo curso)"],
     },
+    # ------------------------------------------------------------------ E3-L00222
+    {
+        "id": "ECO-E3-L00222-1", "fonte_ref": "E3-L00222", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": NIDI, "prova": "Simulado Abril/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": CMD_NIDI_TCI,
+        "rotulo_item": "Item",
+        "assertiva": ("Suponha que a produção de soja no Brasil seja intensiva em mão de obra e que o país imponha uma "
+                      "barreira tarifária sobre a soja americana, segundo o Teorema Stolper-Samuelson, a renda do "
+                      "fator trabalho no Brasil se reduz."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Suponha que a produção de soja no Brasil seja intensiva em mão de obra e que o país imponha "
+                       "uma barreira tarifária sobre a soja americana, segundo o Teorema Stolper-Samuelson, a renda "
+                       "do fator trabalho no Brasil ") + vm("se reduz") + az(".")),
+        "poucas": ("A tarifa eleva o preço interno da soja; se a soja é " + azb("trabalho-intensiva") + ", pelo "
+                   + azb("Stolper-Samuelson") + " a remuneração real do trabalho <b>sobe</b> (e a do capital cai)."),
+        "destrinchando": [
+            "Cadeia: tarifa sobre a soja importada → preço interno da soja ↑ → produção nacional de soja se expande "
+            "→ demanda por trabalho (fator intensivo) ↑ → " + vd("salário real ↑") + "; o setor que encolhe libera "
+            "capital → " + vd("remuneração do capital ↓") + ".",
+            "Enunciado do teorema (" + oc("Stolper e Samuelson") + ", " + vd("1941") + "): o aumento no preço "
+            "relativo de um bem eleva o retorno real do fator usado intensivamente na sua produção e reduz o do "
+            "outro — com magnificação (o salário sobe mais que o preço da soja).",
+            "Origem histórica: o artigo de 1941 nasceu justamente da pergunta “a proteção pode beneficiar o "
+            "trabalho?”. Num país em que o trabalho é o fator <b>escasso</b> e os importados são "
+            "trabalho-intensivos, a tarifa aumenta o salário real — o que explica o apoio de sindicatos ao "
+            "protecionismo em países ricos.",
+            "Premissa contrafactual: na realidade, a soja brasileira é intensiva em terra e capital, e o Brasil é "
+            "exportador líquido, não importador. O item pede para <b>supor</b> o contrário; julga-se a lógica, "
+            "não o fato.",
+            vm("Regra-âncora: tarifa → preço do bem protegido ↑ → fator intensivo nele ganha."),
+        ],
+        "dissecando": (cz("[inversão]") + " Premissas bem montadas e conclusão invertida. O “Suponha” sinaliza "
+                       "que não importa se a soja é de fato trabalho-intensiva: basta aplicar a regra. A pista é "
+                       "lembrar que tarifa = preço interno maior."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…a renda do fator trabalho no Brasil se eleva, e a do capital se reduz.”</i> → CERTO",
+            "<i>“…a renda de ambos os fatores se eleva, pois a produção de soja aumenta.”</i> → ERRADO (o outro "
+            "fator perde)",
+        ])],
+        "reescrita": ("Suponha que a produção de soja no Brasil seja intensiva em mão de obra e que o país imponha "
+                      "uma barreira tarifária sobre a soja americana, segundo o Teorema Stolper-Samuelson, a renda "
+                      "do fator trabalho no Brasil " + hl("se eleva") + "."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("A tarifa eleva o preço da soja; sendo a soja intensiva em trabalho, o salário real "
+                             "sobe, e não cai; o capital perde."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 315", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "cortada (repetição do enunciado)"},
+                          {"ref": "IMAGEM 316", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (cadeia da tarifa no 📖)"},
+                          {"ref": "IMAGEM 317", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["texto_corrigido: OCR da assertiva — “pais” → “país”, “tarifaria” → “tarifária”, “sofre” → "
+                    "“sobre”",
+                    "quase_duplicata: ECO-E2-L01542-1, ECO-E2-L01621-1 (Stolper-Samuelson invertido)"],
+    },
+    # ------------------------------------------------------------------ E3-L00258
+    {
+        "id": "ECO-E3-L00258-1", "fonte_ref": "E3-L00258", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": NIDI, "prova": "Simulado Março/2025", "ano": 2025, "cacd": False, "errei": False,
+        "comando": "No que diz respeito à Teoria do Comércio Internacional, julgue certo ou errado (C ou E) o item "
+                   "a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A teoria neoclássica do comércio internacional, conhecida como Teorema de Hecksher-Ohlin, "
+                      "demonstra como a oferta relativa de fatores de produção e o emprego desses fatores em "
+                      "diferentes intensidades na produção explicam os padrões de especialização e as possibilidades "
+                      "do comércio internacional."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A teoria neoclássica do comércio internacional, conhecida como Teorema de Hecksher-Ohlin, "
+                      "demonstra como a <u>oferta relativa de fatores</u> de produção e o emprego desses fatores em "
+                      "<u>diferentes intensidades</u> na produção explicam os padrões de especialização e as "
+                      "possibilidades do comércio internacional."),
+        "poucas": ("É a máxima do " + azb("Heckscher-Ohlin") + ": um país exporta os bens que usam "
+                   "intensivamente o fator que ele tem em " + azb("abundância relativa") + " e importa os que usam "
+                   "o fator escasso."),
+        "destrinchando": [
+            "Duas premissas, e o item menciona as duas: (1) " + azb("diferença de dotação") + " — os países têm "
+            "abundâncias relativas distintas (compara-se K/L entre países: o Japão tem muito capital por "
+            "trabalhador, o " + rx("Brasil") + ", muita terra); (2) " + azb("diferença de intensidade") + " — os "
+            "bens usam fatores em proporções distintas (agricultura intensiva em terra, indústria pesada em "
+            "capital, confecção em trabalho).",
+            "Por que é “neoclássica”: tecnologia dada e igual entre países, retornos constantes, concorrência "
+            "perfeita, fatores móveis entre setores e imóveis entre países — e o comércio decorre de preços "
+            "relativos de fatores que diferem na autarquia.",
+            "Abundância pode ser definida por quantidades físicas (K/L) ou por preços dos fatores na autarquia "
+            "(w/r): país abundante em capital tem r/w baixo. As duas definições coincidem se as preferências forem "
+            "idênticas e homotéticas.",
+            "Desdobramentos cobrados junto: Stolper-Samuelson (quem ganha e quem perde), equalização dos preços dos "
+            "fatores e Rybczynski; e o teste empírico mais famoso, o " + azb("paradoxo de Leontief") + ".",
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " A banca reaproveita esta mesma redação em mais de um simulado. "
+                       "Não há armadilha; o candidato erra quando desconfia de “demonstra” (forte, mas correto para "
+                       "um teorema dentro das suas hipóteses) ou confunde H-O com Ricardo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O teorema de Heckscher-Ohlin explica o comércio pelas diferenças de tecnologia entre os "
+            "países.”</i> → ERRADO (troca de conceito: é Ricardo)",
+            "<i>“Pelo H-O, um país abundante em trabalho exporta bens trabalho-intensivos.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Transcrição da máxima do modelo: país exporta bens intensivos no fator abundante e "
+                             "importa os intensivos no fator escasso; dotação × intensidade."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E3-L00220-1 (mesma assertiva, em outro simulado do mesmo curso)"],
+    },
+    # ------------------------------------------------------------------ E3-L00431
+    {
+        "id": "ECO-E3-L00431-1", "fonte_ref": "E3-L00431", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": NIDI, "prova": "Outubro/2024", "ano": 2024, "cacd": False, "errei": False,
+        "comando": CMD_JB_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("Segundo o teorema de Stolper-Samuelson, a abertura comercial beneficia o fator de produção "
+                      "relativamente abundante em um país, aumentando sua remuneração, e pode prejudicar o fator "
+                      "relativamente escasso, o que implica em uma redistribuição dos ganhos do comércio entre os "
+                      "agentes econômicos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Segundo o teorema de Stolper-Samuelson, a abertura comercial beneficia o fator de produção "
+                      "relativamente <u>abundante</u> em um país, aumentando sua remuneração, e <u>pode</u> "
+                      "prejudicar o fator relativamente <u>escasso</u>, o que implica em uma redistribuição dos "
+                      "ganhos do comércio entre os agentes econômicos."),
+        "poucas": ("Com a abertura, sobe o preço do bem exportado (intensivo no fator " + azb("abundante")
+                   + ") e cai o do importado (intensivo no " + azb("escasso") + "): pelo " + azb("Stolper-Samuelson")
+                   + ", o abundante ganha e o escasso perde — conflito distributivo."),
+        "destrinchando": [
+            "Teorema de " + oc("Wolfgang Stolper") + " e " + oc("Paul Samuelson") + " (" + vd("1941") + "): a "
+            "alta do preço relativo de um bem eleva a remuneração real do fator usado intensivamente nele e reduz a "
+            "do outro. A abertura é exatamente uma mudança de preços relativos: o bem exportável encarece "
+            "internamente, o importável barateia.",
+            "Daí a leitura distributiva: o país como um todo ganha (os ganhadores poderiam compensar os "
+            "perdedores), mas há " + azb("ganhadores e perdedores internos") + ". Por isso a abertura gera "
+            "coalizões políticas a favor (donos do fator abundante) e contra (donos do fator escasso).",
+            "Exemplos: num país abundante em terra, como o " + rx("Brasil") + ", a abertura favorece o "
+            "agronegócio exportador; nos EUA, abundantes em capital e trabalho qualificado, a concorrência com "
+            "importações trabalho-intensivas pressiona o salário do trabalhador pouco qualificado.",
+            "O “pode prejudicar” é até cauteloso: no modelo, o fator escasso <b>perde</b> em termos reais. A "
+            "única forma de proteger sua remuneração é a tarifa sobre o bem que compete com as importações.",
+            vm("Regra-âncora: Stolper-Samuelson = comércio redistribui renda entre fatores dentro de cada país."),
+        ],
+        "dissecando": (cz("[literalidade · modulador relativo]") + " Definição exata do teorema, protegida pelo "
+                       "“pode”. A regência “implica em” é coloquial (a norma prefere “implica”), mas não altera o "
+                       "julgamento de conteúdo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Segundo o teorema de Stolper-Samuelson, a abertura comercial beneficia todos os fatores de "
+            "produção, pois amplia o bem-estar do país.”</i> → ERRADO (modulador absoluto)",
+            "<i>“…a abertura beneficia o fator relativamente escasso, que passa a ser importado indiretamente.”</i> "
+            "→ ERRADO (inversão)",
+        ]), ("🃏 Carta na manga", [
+            "Stolper-Samuelson é o argumento padrão para defender que a liberalização comercial venha acompanhada "
+            "de políticas compensatórias (requalificação, seguro, transferências) aos grupos perdedores."])],
+        "tipo_erro": ["LITERAL", "MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Definição exata do Stolper-Samuelson: abertura altera preços relativos; dono do fator "
+                             "abundante ganha, dono do escasso perde, gerando conflito distributivo."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 597", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (autores, data e papel da tarifa no 📖)"}],
+        "alertas": ["quase_duplicata: ECO-E2-L01544-1 (fator abundante ganha, escasso perde)"],
+    },
+    # ------------------------------------------------------------------ E3-L00433
+    {
+        "id": "ECO-E3-L00433-1", "fonte_ref": "E3-L00433", "destino": "73", "subtema": H2["ho"],
+        "tipo": "C/E", "banca": NIDI, "prova": "Outubro/2024", "ano": 2024, "cacd": False, "errei": True,
+        "comando": CMD_JB_OUT,
+        "rotulo_item": "Item",
+        "assertiva": ("No contexto de concorrência perfeita, o modelo de Heckscher-Ohlin prevê que os países tendem "
+                      "a exportar bens que utilizam intensivamente os fatores de produção nos quais são relativamente "
+                      "abundantes, resultando em uma completa equalização dos preços dos fatores de produção entre "
+                      "os países."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "contestavel",
+        "anotada": (az("No contexto de concorrência perfeita, o modelo de Heckscher-Ohlin prevê que os países tendem "
+                       "a exportar bens que utilizam intensivamente os fatores de produção nos quais são "
+                       "relativamente abundantes, ")
+                    + vm("resultando em uma completa equalização dos preços dos fatores de produção entre os países")
+                    + az(".")),
+        "poucas": ("A 1ª parte é o " + azb("teorema de Heckscher-Ohlin") + ". A “completa equalização” não decorre "
+                   "automaticamente dele: é outro resultado (" + azb("teorema da equalização dos preços dos "
+                   "fatores") + ", de " + oc("Samuelson") + "), que exige hipóteses adicionais muito restritivas."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "no modelo canônico 2 × 2 × 2 de Heckscher-Ohlin-Samuelson (tecnologias idênticas, "
+                          "retornos constantes, sem custos de transporte nem tarifas, sem reversão de intensidade e "
+                          "com os dois países produzindo os dois bens), a equalização completa é resultado padrão, e "
+                          "muitos manuais a apresentam como previsão do modelo. O ERRADO se sustenta na leitura de que "
+                          "o item trata como consequência automática, “no contexto de concorrência perfeita”, um "
+                          "resultado que depende de várias outras hipóteses — e que " + oc("Ohlin") + " via apenas "
+                          "como tendência parcial. Numa prova CEBRASPE, a versão sem ressalvas tende a ser julgada "
+                          "ERRADA, mas a questão admitiria recurso.")],
+        "destrinchando": [
+            "Teorema de Heckscher-Ohlin (padrão de comércio): cada país exporta o bem intensivo no fator "
+            "relativamente abundante. Essa parte do item está correta.",
+            azb("Teorema da equalização dos preços dos fatores") + " (" + oc("Samuelson") + ", " + vd("1948–1949")
+            + "): com livre-comércio, preços dos bens iguais entre países e tecnologias idênticas, a igualdade dos "
+            "preços dos bens leva à igualdade dos preços dos fatores (salários e aluguel do capital), em termos "
+            "absolutos e relativos — o comércio de bens substitui a mobilidade dos fatores.",
+            "Hipóteses exigidas para a equalização <b>completa</b>: ausência de custos de transporte e barreiras; "
+            "mesma tecnologia; " + azb("diversificação") + " (os dois países continuam produzindo os dois bens — "
+            "com especialização completa, a ligação entre preços dos bens e dos fatores se rompe); ausência de "
+            + azb("reversão de intensidade fatorial") + "; número de bens pelo menos igual ao de fatores.",
+            "Na realidade, quase nenhuma vale: há tarifas, custos de transporte, tecnologias muito distintas — e "
+            "salários de trabalhadores comparáveis diferem enormemente entre países com comércio intenso. O que se "
+            "observa é, no máximo, uma " + azb("tendência à convergência") + ".",
+            vm("Regra-âncora: H-O prevê o padrão de comércio; a equalização completa é um teorema à parte, "
+               "condicionado a hipóteses fortes."),
+        ],
+        "dissecando": (cz("[extrapolação · modulador absoluto]") + " A 1ª metade é literal e verdadeira; o erro "
+                       "foi enxertado no gerúndio “resultando em”, que transforma um resultado condicional em "
+                       "consequência necessária, reforçado por “completa”. Pista: “tendem a exportar” (cauteloso) "
+                       "contrasta com “completa equalização” (absoluto)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…o que tende a aproximar os preços dos fatores de produção entre os países.”</i> → CERTO",
+            "<i>“Pelo teorema da equalização, o livre-comércio iguala os preços dos fatores mesmo que um dos "
+            "países se especialize completamente.”</i> → ERRADO (exige diversificação)",
+        ])],
+        "reescrita": ("No contexto de concorrência perfeita, o modelo de Heckscher-Ohlin prevê que os países tendem "
+                      "a exportar bens que utilizam intensivamente os fatores de produção nos quais são relativamente "
+                      "abundantes, " + hl("o que tende a aproximar os preços dos fatores de produção entre os "
+                      "países, cuja equalização completa só ocorre sob as hipóteses restritivas do teorema de "
+                      "Samuelson") + "."),
+        "tipo_erro": ["EXTRAPOLACAO", "GENERALIZACAO"], "moduladores": ["tendem a", "completa"], "dificuldade": 3,
+        "comentario_fonte": ("A 1ª parte (padrão de comércio) está certa; a “completa equalização” é outro "
+                             "resultado (Samuelson), contingente a hipóteses restritivas que não se verificam; o "
+                             "slide da professora data o teorema de Samuelson de 1971 e fala em imobilidade dos "
+                             "fatores entre setores."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [{"ref": "IMAGEM 602", "tipo_fonte": "TEXTO", "lado": "verso",
+                           "acao": "absorvida (com correção da data do teorema)"},
+                          {"ref": "IMAGEM 603", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": ["contestavel: no modelo HOS canônico a equalização completa é resultado padrão; ERRADO "
+                    "depende de ler o item como generalização sem as hipóteses do teorema de Samuelson",
+                    "qualidade_fonte: slide da fonte data o teorema de Samuelson de 1971 (é de 1948–1949) e cita "
+                    "“imobilidade dos fatores entre setores” como hipótese (o modelo supõe mobilidade "
+                    "intersetorial); corrigido no card"],
+    },
+    # ------------------------------------------------------------------ E3-L00465
+    {
+        "id": "ECO-E3-L00465-1", "fonte_ref": "E3-L00465", "destino": "73", "subtema": H2["va"],
+        "tipo": "C/E", "banca": NIDI, "prova": "Fevereiro/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "No que se refere à economia internacional e suas teorias de comércio, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("As teorias clássicas do comércio internacional baseiam-se na produtividade relativa da mão de "
+                      "obra, e a teoria neoclássica do comércio internacional, na diferença relativa de dotação dos "
+                      "fatores de produção."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As teorias <u>clássicas</u> do comércio internacional baseiam-se na <u>produtividade relativa "
+                      "da mão de obra</u>, e a teoria <u>neoclássica</u> do comércio internacional, na <u>diferença "
+                      "relativa de dotação dos fatores</u> de produção."),
+        "poucas": ("Clássicos (" + oc("Smith") + ", " + oc("Ricardo") + "): comércio por diferenças de "
+                   + azb("produtividade do trabalho") + ". Neoclássicos (" + oc("Heckscher-Ohlin") + "): comércio "
+                   "por diferenças de " + azb("dotação relativa de fatores") + ", com tecnologia igual."),
+        "destrinchando": [
+            "<b>Clássicos</b> — " + oc("Adam Smith") + " (" + vd("1776") + ", vantagem absoluta) e " + oc("David "
+            "Ricardo") + " (" + vd("1817") + ", vantagem comparativa): um só fator, o trabalho (teoria do "
+            "valor-trabalho); o que difere entre países é a tecnologia, medida pela produtividade do trabalho. Em "
+            "Ricardo, o que conta é a produtividade <b>relativa</b> (custo de oportunidade).",
+            "<b>Neoclássicos</b> — " + oc("Heckscher") + " (" + vd("1919") + ") e " + oc("Ohlin") + " ("
+            + vd("1933") + "), depois " + oc("Samuelson") + ": dois ou mais fatores, tecnologia idêntica entre "
+            "países; o comércio nasce das diferenças de <b>abundância relativa</b> de capital, trabalho e terra, "
+            "combinadas com a intensidade fatorial dos bens.",
+            "Consequência que a banca explora: no modelo clássico não há conflito distributivo interno (só existe "
+            "trabalho); no neoclássico, o comércio cria ganhadores (fator abundante) e perdedores (fator escasso).",
+            "Depois vieram as " + azb("novas teorias do comércio") + " (" + oc("Krugman") + ", anos 1970–80): "
+            "escala, concorrência imperfeita e comércio intraindustrial entre países semelhantes.",
+            vm("Regra-âncora: clássicos = produtividade do trabalho; neoclássicos = dotação relativa de fatores."),
+        ],
+        "dissecando": (cz("[paráfrase fiel]") + " Síntese correta das duas tradições, com o adjetivo “relativa” "
+                       "bem empregado nas duas metades. A armadilha usual seria inverter as bases (clássicos com "
+                       "dotação, neoclássicos com produtividade) ou trocar “relativa” por “absoluta” em Ricardo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As teorias clássicas baseiam-se na diferença de dotação de fatores, e a neoclássica, na "
+            "produtividade do trabalho.”</i> → ERRADO (inversão)",
+            "<i>“A teoria neoclássica supõe tecnologias de produção idênticas entre os países.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Clássicos (Smith, Ricardo): produtividade do trabalho; neoclássicos (H-O): dotação "
+                             "relativa de fatores combinada com intensidade fatorial."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E2-L01620-1, ECO-E2-L01622-1 (clássicos × neoclássicos)"],
+    },
 ]

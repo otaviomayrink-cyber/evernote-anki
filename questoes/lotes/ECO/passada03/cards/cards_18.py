@@ -1154,4 +1154,278 @@ CARDS = [
         "figuras_fonte": [],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0856
+    {
+        "id": "ECO-E1-0856-1", "fonte_ref": "E1-0856", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Maio/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_NIDI_CGV,
+        "rotulo_item": "Item",
+        "assertiva": ASSERT_CGV_OMC,
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Uma característica marcante das Cadeias Globais de Valor (CGVs) é a existência de uma "
+                      "estrutura de <u>governança distribuída</u> entre várias unidades em diversos países. Essa "
+                      "característica é <u>um dos principais fatores</u> que dificulta o enquadramento das CGVs nas "
+                      "normas vigentes da OMC."),
+        "poucas": ("As regras da " + azb("OMC") + " foram pensadas para bens finais trocados entre países; nas "
+                   + azb("CGVs") + ", a produção é fragmentada entre firmas e jurisdições, e as regras de origem, "
+                   "tarifas e disciplinas de serviços e investimento encaixam mal."),
+        "destrinchando": [
+            "Nas " + azb("cadeias globais de valor") + ", as etapas — P&amp;D, design, componentes, montagem, "
+            "logística, marketing — ficam em países diferentes, coordenadas por uma " + azb("firma líder")
+            + " por meio de filiais, contratos e fornecedores independentes. A governança é transnacional e "
+            "distribuída.",
+            "O arcabouço do " + vd("GATT (1947)") + " e da " + vd("OMC (1995)") + " parte da lógica de bens finais "
+            "e de fronteiras nacionais. Nas CGVs aparecem problemas novos: " + vd("regras de origem") + " para "
+            "bens com insumos de dez países; " + vd("tarifas em cascata") + " sobre insumos que cruzam fronteiras "
+            "várias vezes; serviços incorporados (logística, TI, propriedade intelectual) e investimento, que a "
+            "OMC disciplina só em parte (GATS, TRIMs, TRIPS); e " + vd("padrões privados") + " impostos pela "
+            "firma líder, fora do alcance da OMC.",
+            "Por isso a OCDE e a OMC criaram a base " + azb("TiVA") + " (comércio em valor adicionado, 2013): a "
+            "estatística bruta conta várias vezes o mesmo valor e distorce saldos bilaterais.",
+            "Resposta institucional: os " + azb("acordos preferenciais profundos") + " (“OMC-plus”), com "
+            "capítulos de investimento, serviços, concorrência e regulação — o que " + oc("Richard Baldwin")
+            + " chama de regras do “comércio do século XXI”, contra a OMC “do século XX”.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " “Um dos principais fatores” evita a "
+                       "armadilha do fator único. A banca inverteria com “a OMC disciplina plenamente as CGVs” ou "
+                       "trocaria “distribuída” por “centralizada em um único país”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As normas vigentes da OMC foram concebidas especificamente para regular cadeias produtivas "
+            "fragmentadas.”</i> → ERRADO (foram concebidas para o comércio de bens finais)",
+            "<i>“Medir o comércio em valor adicionado altera a leitura dos saldos bilaterais em relação às "
+            "estatísticas brutas.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["um dos principais"],
+        "dificuldade": 2,
+        "comentario_fonte": "As CGVs fragmentam etapas entre firmas e jurisdições; as regras da OMC, concebidas para "
+                            "bens finais, lidam mal com valor adicionado, origem, serviços incorporados, investimento, "
+                            "padrões privados e múltiplas travessias de fronteira.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["quase_duplicata: ECO-E3-L00254-1 (mesma assertiva, simulado Março/2025)"],
+    },
+    # ------------------------------------------------------------------ E1-0857
+    {
+        "id": "ECO-E1-0857-1", "fonte_ref": "E1-0857", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Maio/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": CMD_NIDI_CGV,
+        "rotulo_item": "Item",
+        "assertiva": ("O processo decisório de uma firma entre verticalizar a produção em mais de um país ou "
+                      "subcontratar terceiros é mais conveniente em setores cujos processos de produção são "
+                      "contínuos. A decisão pela subcontratação dependerá da qualidade do serviço e da existência "
+                      "de barreiras à operação nos demais países."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O processo decisório de uma firma entre verticalizar a produção em mais de um país ou "
+                       "subcontratar terceiros é mais conveniente em setores cujos processos de produção são ")
+                    + vm("contínuos") + az(". A decisão pela subcontratação dependerá da qualidade do serviço e da "
+                                           "existência de barreiras à operação nos demais países.")),
+        "poucas": ("Só faz sentido escolher entre filial e terceiro em outro país quando a produção pode ser "
+                   + azb("fatiada") + " em etapas: setores de processo " + azb("descontínuo") + ". Processos "
+                   "contínuos são pouco fragmentáveis."),
+        "destrinchando": [
+            azb("Processos descontínuos") + " (ou discretos): o produto é montado a partir de partes que podem "
+            "ser feitas em lugares e momentos diferentes — eletrônicos, automóveis, vestuário, aeronaves. São os "
+            "setores típicos das " + azb("cadeias globais de valor") + ".",
+            azb("Processos contínuos") + ": a transformação ocorre em fluxo ininterrupto e integrado — siderurgia, "
+            "petroquímica, papel e celulose, cimento. Separar as etapas entre países é técnica e economicamente "
+            "difícil; esses setores tendem a manter a produção integrada num mesmo local.",
+            "Dada a fragmentação possível, a firma decide " + azb("onde") + " (localização: custos, mercados, "
+            "barreiras) e " + azb("como") + ": fazer dentro (IED vertical, filial) ou comprar fora "
+            "(subcontratação, <i>outsourcing</i>). Pela teoria dos " + azb("custos de transação") + " ("
+            + oc("Coase") + ", " + oc("Williamson") + ") e pelo paradigma " + azb("OLI") + " de " + oc("Dunning")
+            + ", internaliza-se quando há ativos específicos, risco de oportunismo ou tecnologia difícil de "
+            "proteger por contrato.",
+            "A segunda frase do item está correta: qualidade do fornecedor e barreiras à operação no exterior "
+            "pesam na escolha entre subcontratar e verticalizar.",
+        ],
+        "dissecando": (cz("[troca de conceito]") + " O erro está numa palavra (“contínuos” no lugar de "
+                       "“descontínuos”); a segunda frase, correta, dá credibilidade ao conjunto. Pista: decidir "
+                       "“em mais de um país” pressupõe dividir a produção em etapas."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A fragmentação internacional da produção é mais frequente em setores de processo produtivo "
+            "descontínuo, como eletrônicos e automóveis.”</i> → CERTO",
+            "<i>“A subcontratação internacional independe da existência de barreiras à operação nos demais "
+            "países.”</i> → ERRADO (as barreiras pesam na decisão)",
+        ])],
+        "reescrita": ("O processo decisório de uma firma entre verticalizar a produção em mais de um país ou "
+                      "subcontratar terceiros é mais conveniente em setores cujos processos de produção são "
+                      + hl("descontínuos") + ". A decisão pela subcontratação dependerá da qualidade do serviço e "
+                      "da existência de barreiras à operação nos demais países."),
+        "tipo_erro": ["TROCA_CONCEITO"], "moduladores": ["mais conveniente"], "dificuldade": 2,
+        "comentario_fonte": "Processos contínuos e integrados elevam custos de coordenação e favorecem a integração "
+                            "vertical; a subcontratação é viável quando as etapas são separáveis e especificáveis por "
+                            "contrato.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: “nos demais país” → “nos demais países” (erro de digitação na fonte)"],
+    },
+    # ------------------------------------------------------------------ E2-L00241
+    {
+        "id": "ECO-E2-L00241-1", "fonte_ref": "E2-L00241", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("A participação de países em desenvolvimento nas Cadeias Globais de Valor (CGVs), ainda que "
+                      "concentrada em etapas de menor valor agregado, tem permitido a esses países uma transição "
+                      "relativamente rápida para segmentos mais sofisticados da cadeia, desde que adotem políticas "
+                      "industriais focadas na exportação de bens primários e na abertura comercial."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A participação de países em desenvolvimento nas Cadeias Globais de Valor (CGVs), ainda que "
+                       "concentrada em etapas de menor valor agregado, ") + vm("tem permitido")
+                    + az(" a esses países uma transição ") + vm("relativamente rápida")
+                    + az(" para segmentos mais sofisticados da cadeia, desde que adotem políticas industriais "
+                         "focadas ") + vm("na exportação de bens primários e na abertura comercial") + az(".")),
+        "poucas": ("O " + azb("upgrading") + " nas CGVs não é rápido nem automático, e não vem de exportar bens "
+                   "primários e abrir a economia: exige " + vd("capacitação tecnológica") + ", inovação e "
+                   "diversificação produtiva."),
+        "destrinchando": [
+            "A " + azb("curva sorriso") + " (<i>smile curve</i>, de " + oc("Stan Shih") + ", da Acer): o valor "
+            "adicionado é alto nas pontas — P&amp;D, design, marca, serviços pós-venda — e baixo no meio, na "
+            "fabricação e montagem. Países em desenvolvimento costumam entrar pelo meio.",
+            "Tipologia de " + oc("Humphrey e Schmitz") + " (2002) para o " + azb("upgrading") + ": "
+            + vd("de processo") + " (produzir com mais eficiência), " + vd("de produto") + " (bens mais "
+            "sofisticados), " + vd("funcional") + " (assumir funções de maior valor, como design e marca) e "
+            + vd("intersetorial") + " (levar a competência a outra cadeia).",
+            "A literatura (" + oc("Gereffi") + ", UNCTAD, OCDE) mostra que o upgrading é " + vm("lento e "
+            "incerto") + ": firmas líderes podem bloquear a subida funcional, e há risco de "
+            + azb("armadilha da baixa agregação") + ". Os casos de sucesso — Coreia do Sul, Taiwan, China — "
+            "combinaram inserção nas cadeias com política industrial ativa, educação, P&amp;D e "
+            "aprendizado tecnológico.",
+            "Especializar-se em bens primários com abertura pura tende a reforçar a posição nos elos de baixo "
+            "valor (exportação de insumos “a montante”), sem gerar as capacitações necessárias à subida.",
+        ],
+        "dissecando": (cz("[nexo indevido · extrapolação]") + " O item começa com um diagnóstico correto (inserção "
+                       "em etapas de menor valor), promete um resultado otimista (“relativamente rápida”) e "
+                       "amarra-o a uma receita que não leva ao upgrading. Pista: “política industrial focada na "
+                       "exportação de bens primários” é quase uma contradição."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O upgrading nas CGVs depende de capacitação tecnológica, inovação e políticas de "
+            "desenvolvimento produtivo.”</i> → CERTO",
+            "<i>“A inserção nas CGVs garante a convergência de renda dos países em desenvolvimento.”</i> → ERRADO "
+            "(modulador absoluto)",
+        ])],
+        "reescrita": ("A participação de países em desenvolvimento nas Cadeias Globais de Valor (CGVs), ainda que "
+                      "concentrada em etapas de menor valor agregado, " + hl("pode permitir") + " a esses países uma "
+                      "transição " + hl("gradual") + " para segmentos mais sofisticados da cadeia, desde que adotem "
+                      "políticas industriais focadas " + hl("em inovação, capacitação tecnológica e diversificação "
+                      "produtiva") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "EXTRAPOLACAO"], "moduladores": ["relativamente rápida", "desde que"],
+        "dificuldade": 2,
+        "comentario_fonte": "A abertura ou o foco em commodities não promove o upgrade nas CGVs; tende a manter os "
+                            "países em etapas de baixo valor. O avanço exige inovação, capacitação tecnológica e "
+                            "diversificação.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00242
+    {
+        "id": "ECO-E2-L00242-1", "fonte_ref": "E2-L00242", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": True,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("A digitalização das Cadeias Globais de Valor na década de 2020, ao reduzir a necessidade de "
+                      "coordenação presencial entre os elos produtivos, tem favorecido sobretudo os países com maior "
+                      "densidade populacional e disponibilidade de mão de obra barata, que voltaram a ocupar "
+                      "posições centrais na fragmentação geográfica da produção global."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A digitalização das Cadeias Globais de Valor na década de 2020, ao reduzir a necessidade de "
+                       "coordenação presencial entre os elos produtivos, tem favorecido sobretudo os países com ")
+                    + vm("maior densidade populacional e disponibilidade de mão de obra barata, que voltaram a "
+                         "ocupar") + az(" posições centrais na fragmentação geográfica da produção global.")),
+        "poucas": ("A digitalização, com " + azb("automação") + " e IA, " + vm("reduz") + " a vantagem da mão de "
+                   "obra barata: favorece países com infraestrutura tecnológica e trabalho qualificado, e permite "
+                   "trazer etapas de volta (" + azb("reshoring") + ")."),
+        "destrinchando": [
+            "Ondas da fragmentação (" + oc("Richard Baldwin") + ", <i>The Great Convergence</i>, 2016): a "
+            "primeira “desagregação” (barateamento do transporte) separou produção e consumo; a segunda (TIC, "
+            "anos 1990) separou as etapas da produção e levou a montagem para países de salário baixo — foi "
+            "aí que a mão de obra barata ganhou centralidade.",
+            "Na digitalização dos anos 2020 — " + vd("automação, robótica, IA, impressão 3D, plataformas") + " — "
+            "o peso do custo do trabalho na decisão de localização " + vm("cai") + ": se o robô monta, a "
+            "diferença salarial importa menos que energia, logística, proximidade do mercado, dados e "
+            "qualificação.",
+            "Resultado: tendência de " + azb("reshoring") + " e " + azb("nearshoring") + " (produção mais perto "
+            "do consumidor) e de cadeias mais curtas e regionais; ganham os países com " + vd("infraestrutura "
+            "digital") + ", capital humano e ambiente regulatório para dados. A UNCTAD (World Investment Report "
+            "2020) já apontava esse risco para os países que dependem da vantagem de baixo custo.",
+            "Ao mesmo tempo, a digitalização abre espaço para " + azb("serviços") + " remotos (TI, "
+            "contabilidade, atendimento) em países de renda média — mas o insumo é trabalho qualificado e "
+            "conectado, não “densidade populacional”.",
+        ],
+        "dissecando": (cz("[inversão · nexo indevido]") + " A premissa (menos coordenação presencial) é "
+                       "verdadeira; a conclusão inverte o efeito, como se a digitalização devolvesse ao trabalho "
+                       "barato a centralidade que ele teve na onda anterior. Pista: “voltaram a ocupar” sugere "
+                       "retorno a um padrão que a automação está desfazendo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A automação associada à digitalização das CGVs reduz o peso do custo do trabalho nas decisões de "
+            "localização e estimula o reshoring.”</i> → CERTO",
+            "<i>“A digitalização elimina a fragmentação geográfica da produção.”</i> → ERRADO (modulador "
+            "absoluto: reconfigura, não elimina)",
+        ])],
+        "reescrita": ("A digitalização das Cadeias Globais de Valor na década de 2020, ao reduzir a necessidade de "
+                      "coordenação presencial entre os elos produtivos, tem favorecido sobretudo os países com "
+                      + hl("infraestrutura tecnológica avançada e mão de obra qualificada, que reforçaram") + " "
+                      "posições centrais na fragmentação geográfica da produção global."),
+        "tipo_erro": ["INVERSAO", "NEXO_INDEVIDO"], "moduladores": ["sobretudo"], "dificuldade": 2,
+        "comentario_fonte": "A digitalização diminui a vantagem da mão de obra barata; a automação permite "
+                            "relocalizar a produção para países de alto custo e alta qualificação; favorece "
+                            "infraestrutura tecnológica, não densidade populacional.",
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00243
+    {
+        "id": "ECO-E2-L00243-1", "fonte_ref": "E2-L00243", "destino": "76", "subtema": H2["cgv"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": CMD_ARM,
+        "rotulo_item": "Item",
+        "assertiva": ("Nos países desenvolvidos, a elevada participação no valor adicionado doméstico das "
+                      "exportações decorre do controle sobre etapas estratégicas e intensivas em conhecimento, o que "
+                      "se coaduna com a lógica das CGVs, em que a dispersão geográfica da produção é proporcional à "
+                      "sofisticação tecnológica dos bens comercializados."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Nos países desenvolvidos, a elevada participação no valor adicionado doméstico das "
+                      "exportações decorre do controle sobre etapas estratégicas e intensivas em conhecimento, o que "
+                      "se coaduna com a lógica das CGVs, em que a dispersão geográfica da produção é "
+                      "<u>proporcional</u> à sofisticação tecnológica dos bens comercializados."),
+        "poucas": ("Os países ricos retêm as etapas de maior valor (" + azb("P&amp;D, design, marca") + ") e, por "
+                   "isso, grande parte do valor de suas exportações é doméstico; e os bens mais complexos são "
+                   "justamente os de cadeias mais " + azb("fragmentadas") + "."),
+        "destrinchando": [
+            azb("Valor adicionado doméstico nas exportações") + " (base TiVA, OCDE/OMC): a parcela do valor "
+            "exportado que foi gerada no próprio país, descontados os insumos importados. É um indicador de "
+            "captura de valor, não só de volume.",
+            "Nos países desenvolvidos, essa parcela é elevada nas etapas que eles controlam: as " + vd("pontas da "
+            "curva sorriso") + " — pesquisa, design, propriedade intelectual, marca, serviços. O exemplo clássico "
+            "é o iPhone: a maior fatia do valor fica com a Apple e fornecedores de componentes sofisticados; a "
+            "montagem na China capta uma fração pequena.",
+            "A segunda parte do item: quanto mais " + azb("sofisticado") + " o bem, mais etapas e componentes ele "
+            "tem e mais vantajoso é distribuí-los geograficamente — eletrônicos, automóveis e aeronaves são as "
+            "cadeias mais longas; commodities, as mais curtas. Daí a associação entre complexidade e dispersão.",
+            "Leitura cuidadosa: “proporcional” é usado em sentido amplo (cresce junto), não como relação "
+            "matemática exata. A dispersão envolve sobretudo as etapas de fabricação e montagem; as etapas de "
+            "comando continuam concentradas nos países desenvolvidos — o que é coerente com a primeira parte do "
+            "item.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · detalhe]") + " Item longo, que junta dois fatos verdadeiros da "
+                       "literatura de CGVs com um nexo coerente. O ponto de tensão é “proporcional”: a banca o "
+                       "usa como “acompanha”, e a fonte dá CERTO. Erros prováveis em versões alternativas: "
+                       "trocar “intensivas em conhecimento” por “intensivas em trabalho”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Nos países desenvolvidos, a elevada participação no valor adicionado doméstico das exportações "
+            "decorre da especialização em etapas de montagem intensivas em trabalho.”</i> → ERRADO (troca de "
+            "conceito: etapas intensivas em conhecimento)",
+            "<i>“Bens de maior complexidade tecnológica tendem a ter cadeias produtivas mais fragmentadas "
+            "geograficamente.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "DETALHE"], "moduladores": ["proporcional"], "dificuldade": 3,
+        "comentario_fonte": "Verso sem comentário (só o gabarito CERTO).",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
 ]

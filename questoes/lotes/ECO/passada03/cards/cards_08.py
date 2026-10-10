@@ -1131,4 +1131,452 @@ CARDS = [
                            "acao": "irrecuperavel"}],
         "alertas": ["dado_aproximado: trajetória das reservas brasileiras em 1998 citada em ordem de grandeza"],
     },
+    # ------------------------------------------------------------------ E1-0751
+    {
+        "id": "ECO-E1-0751-1", "fonte_ref": "E1-0751", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2019, "cacd": False,
+        "errei": False,
+        "comando": "Acerca das intervenções do Banco Central no mercado de câmbio, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Ao alienar reservas em moeda estrangeira, o Banco Central reduz a oferta de moeda doméstica "
+                      "disponível. Na ausência de operações de esterilização compensatórias, essa transação poderia "
+                      "ter como resultado a depreciação da moeda doméstica."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Ao alienar reservas em moeda estrangeira, o Banco Central reduz a oferta de moeda doméstica "
+                       "disponível. Na ausência de operações de esterilização compensatórias, essa transação "
+                       "poderia ter como resultado a ") + vm("depreciação") + az(" da moeda doméstica.")),
+        "poucas": ("Vender divisas aumenta a oferta de dólares e recolhe moeda doméstica: os dois efeitos "
+                   "apontam para a " + azb("apreciação") + " da moeda nacional, não para a depreciação."),
+        "destrinchando": [
+            "Balanço do banco central: ao vender US$ 1 bilhão das reservas, o " + azb("ativo") + " (reservas) "
+            "cai, e o banco central recebe moeda doméstica em troca, que deixa de circular — o " + azb("passivo "
+            "monetário") + " (base monetária) cai na mesma medida. A primeira frase do item está correta.",
+            "Efeito no câmbio, canal direto: mais dólares ofertados no mercado → a cotação (moeda doméstica por "
+            "dólar) cai → " + vd("apreciação") + ".",
+            "Canal monetário (sem esterilização): menos moeda doméstica → juros internos sobem → entra capital → "
+            "reforço da " + vd("apreciação") + ".",
+            "Esterilização: para que a base monetária não caia, o banco central compraria títulos no mercado "
+            "aberto (ou reduziria compromissadas), devolvendo a liquidez. A operação vira só uma troca de "
+            "composição — ainda aprecia pela via direta, mas sem o efeito sobre os juros.",
+            "Espelho: comprar divisas expande a base e tende a depreciar a moeda doméstica; para evitar a "
+            "pressão inflacionária, o banco central esteriliza vendendo títulos.",
+            vm("Regra-âncora: BC vende reservas → base ↓ e oferta de dólares ↑ → moeda doméstica se aprecia."),
+        ],
+        "dissecando": (cz("[inversão]") + " A primeira frase (base cai) está certa e dá credibilidade ao item; o "
+                       "erro está na consequência, invertida. Pista: menos moeda doméstica em circulação a torna "
+                       "mais escassa — e, portanto, mais valiosa."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Ao adquirir reservas em moeda estrangeira, o Banco Central expande a base monetária; sem "
+            "esterilização, a transação tende a depreciar a moeda doméstica.”</i> → CERTO",
+            "<i>“A venda de reservas esterilizada reduz a base monetária.”</i> → ERRADO (a esterilização "
+            "justamente a mantém)",
+        ])],
+        "reescrita": ("Ao alienar reservas em moeda estrangeira, o Banco Central reduz a oferta de moeda doméstica "
+                      "disponível. Na ausência de operações de esterilização compensatórias, essa transação poderia "
+                      "ter como resultado a " + hl("apreciação") + " da moeda doméstica."),
+        "tipo_erro": ["INVERSAO"], "moduladores": ["poderia"], "dificuldade": 2,
+        "comentario_fonte": ("Comentário trata da aquisição (e não da alienação) de divisas: compra eleva o ativo e "
+                             "a base monetária, e a liquidez adicional pressionaria a cotação e os preços."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário de origem descreve a compra de divisas, enquanto o item trata da "
+                    "venda (alienação); explicação refeita para a operação do item"],
+    },
+    # ------------------------------------------------------------------ E1-0778
+    {
+        "id": "ECO-E1-0778-1", "fonte_ref": "E1-0778", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2024", "ano": 2024, "cacd": True, "errei": False,
+        "comando": "Acerca da gestão das reservas internacionais pela autoridade monetária, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("A gestão da autoridade monetária sobre os investimentos das reservas internacionais não é "
+                      "afetada pelos níveis de juros nem pelas paridades das moedas de investimento contra a moeda "
+                      "numerário de reserva de valor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("A gestão da autoridade monetária sobre os investimentos das reservas internacionais ")
+                    + vm("não é afetada") + az(" pelos níveis de juros ") + vm("nem") + az(" pelas paridades das "
+                    "moedas de investimento contra a moeda numerário de reserva de valor.")),
+        "poucas": ("Reservas são uma " + azb("carteira de investimentos") + ": o retorno depende dos " + vd("juros")
+                   + " (títulos soberanos) e das " + vd("paridades") + " entre as moedas da carteira e a moeda "
+                   "numerário (o dólar). Ambos afetam a gestão."),
+        "destrinchando": [
+            "O " + rx("Banco Central do Brasil") + " administra as reservas segundo três critérios, nessa ordem: "
+            + azb("liquidez, segurança e rentabilidade") + ". A carteira concentra-se em títulos soberanos de "
+            "alta qualidade, sobretudo americanos, com parcelas em outras moedas e em ouro.",
+            azb("Juros") + ": determinam o rendimento dos títulos (“carregamento”) e o valor de mercado deles — "
+            "alta de juros reduz o preço dos títulos já em carteira (marcação a mercado). Juros americanos "
+            "altos elevam o ganho de carregamento.",
+            azb("Paridades") + ": o desempenho é medido em dólar (a " + azb("moeda numerário") + "). Ativos em "
+            "euro, libra, iene ou yuan ganham ou perdem valor conforme essas moedas se movem contra o dólar; "
+            "uma valorização do dólar gera resultado negativo na parcela em outras moedas.",
+            "Por isso o banco central define uma " + azb("carteira de referência") + " (benchmark), com metas de "
+            "composição por moeda e de prazo médio (duration), e divulga relatórios anuais de gestão das "
+            "reservas explicando o resultado por juros e por paridades.",
+            "Distinção útil: em reais, as reservas também variam com o câmbio R$/US$ — o que afeta o resultado "
+            "cambial do banco central e as transferências ao Tesouro — mas isso é efeito de valoração, não "
+            "decisão de gestão da carteira.",
+            vm("Regra-âncora: reservas = carteira em moeda forte; juros e paridades definem o retorno e orientam a "
+               "gestão."),
+        ],
+        "dissecando": (cz("[inversão · modulador absoluto]") + " Nega as duas variáveis que mais pesam na gestão "
+                       "(“não é afetada… nem…”). O jargão (“moeda numerário de reserva de valor”) intimida, mas "
+                       "basta pensar nas reservas como uma aplicação financeira: nenhuma aplicação ignora juros "
+                       "e câmbio."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A política de investimento das reservas pelo Banco Central do Brasil obedece aos critérios de "
+            "liquidez, segurança e rentabilidade.”</i> → CERTO",
+            "<i>“A valorização do dólar frente às demais moedas da carteira eleva o retorno das reservas medido em "
+            "dólar.”</i> → ERRADO (inversão: reduz o valor dos ativos em outras moedas)",
+        ])],
+        "reescrita": ("A gestão da autoridade monetária sobre os investimentos das reservas internacionais "
+                      + hl("é afetada") + " pelos níveis de juros " + hl("e") + " pelas paridades das moedas de "
+                      "investimento contra a moeda numerário de reserva de valor."),
+        "tipo_erro": ["INVERSAO", "GENERALIZACAO"], "moduladores": ["não", "nem"], "dificuldade": 2,
+        "comentario_fonte": ("Juros e paridades influenciam o valor das carteiras: juros altos geram ganho de "
+                             "carregamento e a valorização do dólar gera resultado negativo; um comentário "
+                             "confunde a gestão com fluxos de divisas na economia."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0795
+    {
+        "id": "ECO-E1-0795-1", "fonte_ref": "E1-0795", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2024", "ano": 2024, "cacd": True, "errei": True,
+        "comando": ("Em relação à macroeconomia internacional dos fluxos de bens e de capital, julgue o item a "
+                    "seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Um superávit comercial produz aumento no passivo da autoridade monetária, como um banco "
+                      "central, por exemplo, uma vez que as reservas cambiais são incluídas na base monetária do "
+                      "país."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Um superávit comercial ") + vm("produz") + az(" aumento no passivo da autoridade monetária, "
+                    "como um banco central, por exemplo, ") + vm("uma vez que as reservas cambiais são incluídas "
+                    "na base monetária") + az(" do país.")),
+        "poucas": ("Reservas cambiais estão no " + azb("ativo") + " do banco central; a " + azb("base monetária")
+                   + " está no passivo. Se o banco central compra as divisas e emite moeda, os dois lados crescem "
+                   "— mas as reservas não “entram” na base."),
+        "destrinchando": [
+            "Balanço simplificado do banco central: " + vd("ativo") + " = reservas internacionais + títulos "
+            "públicos + crédito a bancos; " + vd("passivo") + " = base monetária (papel-moeda emitido + reservas "
+            "bancárias) + depósitos do Tesouro + compromissadas.",
+            "Superávit comercial: exportadores recebem dólares e os vendem aos bancos. Só se o " + azb("banco "
+            "central comprar") + " essas divisas é que as reservas sobem (ativo) e, como contrapartida, ele "
+            "paga em reais recém-emitidos — a base monetária sobe (passivo). Sob câmbio flutuante sem "
+            "intervenção, o dólar pode ficar no setor privado e o balanço do banco central não se altera.",
+            "Mesmo quando há compra, o aumento do passivo pode ser neutralizado: na " + azb("esterilização") + ", "
+            "o banco central vende títulos (compromissadas), trocando base monetária por outro passivo "
+            "não monetário.",
+            "Logo há dois erros: a automaticidade (“produz”) e a justificativa (as reservas seriam parte da "
+            "base). As reservas são o lastro do lado do ativo; a moeda emitida para comprá-las é que integra a "
+            "base.",
+            vm("Regra-âncora: reservas = ativo do BC; base monetária = passivo do BC."),
+        ],
+        "dissecando": (cz("[troca de conceito · nexo indevido]") + " Mistura as duas pontas do balanço: a "
+                       "contrapartida (moeda emitida) é que vai para a base, não as reservas. Quem lembra que "
+                       "“reservas sobem e base sobe juntas” marca CERTO sem ler o “uma vez que”. 🔥 O CACD "
+                       "cobra contabilidade do banco central com frequência."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A compra de divisas pelo banco central, sem esterilização, eleva simultaneamente as reservas "
+            "internacionais, no ativo, e a base monetária, no passivo.”</i> → CERTO",
+            "<i>“A esterilização de uma compra de divisas mantém a base monetária e reduz as reservas "
+            "internacionais.”</i> → ERRADO (as reservas permanecem maiores; muda só a composição do passivo)",
+        ])],
+        "reescrita": ("Um superávit comercial " + hl("pode produzir") + " aumento no passivo da autoridade "
+                      "monetária, como um banco central, por exemplo, " + hl("quando este compra as divisas e emite "
+                      "moeda; as reservas cambiais, porém, são registradas no ativo, e não na base monetária")
+                      + " do país."),
+        "tipo_erro": ["TROCA_CONCEITO", "NEXO_INDEVIDO"], "moduladores": ["uma vez que"], "dificuldade": 2,
+        "comentario_fonte": ("Reservas são ativo do Bacen; a base monetária é passivo. Com a compra de divisas sem "
+                             "esterilização, a base cresce na mesma proporção, mas as reservas não são incluídas "
+                             "nela. Inclui revisão longa do balanço de pagamentos."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "image (272).png", "tipo_fonte": "não informado", "lado": "verso",
+                           "acao": "irrecuperavel"},
+                          {"ref": "41c9ffda-ec50-4fe0-b718-b85c018e22e6", "tipo_fonte": "não informado",
+                           "lado": "verso", "acao": "irrecuperavel"}],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0820
+    {
+        "id": "ECO-E1-0820-1", "fonte_ref": "E1-0820", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "CEBRASPE", "prova": "IRBr/CACD/2026", "ano": 2026, "cacd": True, "errei": False,
+        "comando": ("Acerca de macroeconomia aberta, regime cambial e determinação da taxa de câmbio, julgue o item "
+                    "subsequente, considerando o texto a seguir."),
+        "excerto": ("<p><i>Em economias abertas, choques de confiança e alterações no prêmio de risco podem afetar "
+                    "fluxos de capitais e pressionar a taxa de câmbio. A resposta de política econômica — "
+                    "incluindo-se o uso de juros, intervenção e reservas — depende, entre outros fatores, do regime "
+                    "cambial vigente e das restrições impostas pelo grau de mobilidade de capitais. Ademais, "
+                    "distinções conceituais entre taxa de câmbio nominal e taxa de câmbio real são relevantes para "
+                    "analisar preços relativos e competitividade, assim como para discutir mecanismos de "
+                    "transmissão do câmbio para a inflação.</i></p>"),
+        "rotulo_item": "Item",
+        "assertiva": ("São trade-offs típicos da política cambial tanto a escolha entre suavizar oscilações do câmbio "
+                      "e preservar reservas internacionais quanto o dilema entre manter a atividade econômica em "
+                      "sua meta e conter a inflação doméstica."),
+        "gabarito": "ANULADO", "gabarito_origem": "fonte", "status": "anulado",
+        "anotada": (az("São trade-offs típicos da política cambial tanto a escolha entre suavizar oscilações do "
+                       "câmbio e preservar reservas internacionais quanto ")
+                    + vm("o dilema entre manter a atividade econômica em sua meta e conter a inflação doméstica")
+                    + az(".")),
+        "poucas": ("O primeiro dilema (intervir × preservar reservas) é tipicamente " + azb("cambial") + "; o "
+                   "segundo (atividade × inflação) é o dilema clássico da " + azb("política monetária") + ", mas "
+                   "também passa pelo câmbio. A ambiguidade derrubou o gabarito preliminar (ERRADO)."),
+        "condicionais": [("⚠️ Gabarito contestável",
+                          "O gabarito preliminar era " + vm("ERRADO") + " e o item foi " + vd("anulado") + ". A "
+                          "fonte não traz a justificativa da banca. Motivo provável: a leitura que sustentava o "
+                          "ERRADO — atividade × inflação seria trade-off da política monetária, não da cambial — "
+                          "é discutível, porque o câmbio afeta as duas variáveis (exportações líquidas e repasse "
+                          "cambial) e a política cambial enfrenta, sim, esse dilema, sobretudo em regimes de câmbio "
+                          "fixo ou administrado. A redação admite as duas respostas.")],
+        "destrinchando": [
+            azb("Suavizar o câmbio × preservar reservas") + ": cada leilão de venda à vista reduz o estoque de "
+            "reservas, que é finito e serve de seguro contra crises. Intervir demais enfraquece o colchão e pode "
+            "até alimentar ataques especulativos; intervir de menos deixa a volatilidade contaminar inflação e "
+            "balanços. Os " + azb("swaps cambiais") + " do " + rx("Banco Central do Brasil") + " foram a "
+            "resposta a esse dilema: oferecem proteção sem gastar reservas.",
+            azb("Atividade × inflação") + ": é o dilema canônico da política monetária (curva de " + oc("Phillips")
+            + ", regra de " + oc("Taylor") + "). Em economia aberta, ele aparece também no câmbio: depreciar "
+            "estimula exportações e atividade, mas eleva a inflação pelo " + azb("repasse cambial") + "; "
+            "apreciar ajuda a desinflação, mas tira competitividade.",
+            "Outros trade-offs da política cambial: competitividade × estabilidade de preços; acumular reservas × "
+            "custo fiscal de carregá-las (esterilização com juros domésticos acima dos externos); câmbio fixo × "
+            "autonomia monetária (o " + azb("trilema") + ").",
+            "Sob metas de inflação e câmbio flutuante (o arranjo brasileiro desde 1999), o câmbio não é meta: "
+            "entra na política monetária como canal de transmissão. Isso reforça a leitura de que "
+            "atividade × inflação é, antes de tudo, dilema monetário — e explica a escolha preliminar da banca.",
+            vm("Regra-âncora: intervir × preservar reservas = dilema cambial típico; atividade × inflação = dilema "
+               "monetário que o câmbio também transmite."),
+        ],
+        "dissecando": (cz("[outro: ambiguidade de enquadramento]") + " O item soma um trade-off "
+                       "inequivocamente cambial a um que é primariamente monetário. A banca apostou que o "
+                       "candidato rejeitaria o segundo (ERRADO), mas a fronteira entre política cambial e "
+                       "monetária é porosa em economia aberta — e a anulação reconheceu isso."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“É trade-off típico da política cambial a escolha entre suavizar oscilações do câmbio e preservar "
+            "reservas internacionais.”</i> → CERTO",
+            "<i>“Intervenções por swaps cambiais consomem diretamente as reservas internacionais.”</i> → ERRADO "
+            "(são liquidadas em reais)",
+        ])],
+        "tipo_erro": ["OUTRO"], "moduladores": ["típicos", "tanto… quanto"], "dificuldade": 3,
+        "comentario_fonte": "Apenas a anotação “ERRADO > ANULADA”, sem comentário.",
+        "qualidade_fonte": "ausente",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: gabarito preliminar ERRADO, alterado para ANULADO; a fonte não traz a "
+                    "justificativa da banca — motivo da anulação inferido e marcado como provável no card"],
+    },
+    # ------------------------------------------------------------------ E1-0870
+    {
+        "id": "ECO-E1-0870-1", "fonte_ref": "E1-0870", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Simulado Julho/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": "Acerca da política cambial e das operações de esterilização, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Se o objetivo de uma política cambial é promover a valorização da taxa de câmbio sem alterar o "
+                      "nível de liquidez da economia em moeda nacional, um mecanismo eficiente seria a venda de "
+                      "determinado montante das reservas cambiais pelo Banco Central e a compra do montante "
+                      "equivalente em moeda nacional, realizando ainda uma ação esterilizante de compra de títulos "
+                      "no mercado interno em valor correspondente à operação cambial."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Se o objetivo de uma política cambial é promover a valorização da taxa de câmbio sem alterar "
+                      "o nível de liquidez da economia em moeda nacional, um mecanismo eficiente seria a "
+                      "<u>venda</u> de determinado montante das reservas cambiais pelo Banco Central e a compra do "
+                      "montante equivalente em moeda nacional, realizando ainda uma ação esterilizante de "
+                      "<u>compra de títulos</u> no mercado interno em valor correspondente à operação cambial."),
+        "poucas": ("Vender divisas valoriza a moeda nacional, mas recolhe liquidez; comprar títulos no mesmo valor "
+                   "devolve a liquidez. É a " + azb("intervenção esterilizada") + ": muda o câmbio sem mudar a "
+                   "base monetária."),
+        "destrinchando": [
+            "Passo 1 — venda de reservas: o banco central oferta dólares e recebe moeda nacional. Mais dólares "
+            "no mercado → " + vd("valorização") + " da moeda doméstica. Efeito colateral: a base monetária cai "
+            "(liquidez ↓, juros ↑).",
+            "Passo 2 — esterilização: o banco central " + azb("compra títulos") + " no mercado aberto pagando "
+            "com moeda nova, no mesmo valor. A base volta ao nível inicial. No balanço: reservas ↓ e títulos ↑ "
+            "no ativo; o passivo monetário fica igual.",
+            "Regra de sinal da esterilização: compra de divisas (injeta liquidez) → esteriliza-se " + vm("vendendo")
+            + " títulos; venda de divisas (enxuga liquidez) → esteriliza-se " + vm("comprando") + " títulos. O "
+            "item traz a combinação correta.",
+            "Eficácia: com mobilidade perfeita de capitais e ativos domésticos e externos substitutos perfeitos, "
+            "a intervenção esterilizada perde força — sem mudar os juros, o câmbio tende a voltar. Ela funciona "
+            "melhor pelo " + azb("canal de portfólio") + " (ativos imperfeitamente substitutos) e pelo "
+            + azb("canal de sinalização") + " (indica a intenção do banco central).",
+            vm("Regra-âncora: intervenção esterilizada = operação cambial + operação de mercado aberto de sinal "
+               "oposto sobre a liquidez."),
+        ],
+        "dissecando": (cz("[detalhe]") + " O item é longo para esconder a direção de duas operações. Teste: a "
+                       "venda de divisas enxuga reais, então a esterilização precisa injetá-los — compra de "
+                       "títulos. A versão errada típica troca para “venda de títulos”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…realizando ainda uma ação esterilizante de venda de títulos no mercado interno em valor "
+            "correspondente à operação cambial.”</i> → ERRADO (sinal trocado: enxugaria ainda mais a liquidez)",
+            "<i>“Com mobilidade perfeita de capitais e substituição perfeita entre ativos, a intervenção "
+            "esterilizada tem efeito duradouro sobre o câmbio.”</i> → ERRADO (perde eficácia)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": ["eficiente"], "dificuldade": 2,
+        "comentario_fonte": ("Repete o enunciado e define política esterilizante como a que reverte o impacto da "
+                             "operação sobre outros segmentos da economia."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L00104
+    {
+        "id": "ECO-E2-L00104-1", "fonte_ref": "E2-L00104", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "IDEG – Prof. Bozan", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False,
+        "errei": False,
+        "comando": "Sobre o equilíbrio de mercado e as intervenções no mercado cambial, julgue a assertiva a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("O Banco Central tem a possibilidade de adotar políticas cambiais para ajustar a quantidade de "
+                      "moeda nacional e estrangeira dentro do sistema. Ao vender dólares no mercado, o Banco Central "
+                      "retira moeda estrangeira do sistema, o que leva à desvalorização do real."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O Banco Central tem a possibilidade de adotar políticas cambiais para ajustar a quantidade "
+                       "de moeda nacional e estrangeira dentro do sistema. Ao vender dólares no mercado, o Banco "
+                       "Central ") + vm("retira") + az(" moeda estrangeira ") + vm("do") + az(" sistema, o que leva "
+                       "à ") + vm("desvalorização") + az(" do real.")),
+        "poucas": ("Vender dólares " + azb("injeta") + " moeda estrangeira no mercado (e retira reais): o dólar "
+                   "fica mais abundante e o real se " + azb("valoriza") + "."),
+        "destrinchando": [
+            "Quem vende dólares os <b>entrega</b> ao mercado. O Banco Central tira dólares das reservas e os "
+            "coloca nas mãos de bancos e empresas — a oferta de divisas aumenta.",
+            "No mercado de câmbio, mais oferta de dólares com a mesma demanda → a cotação (R$/US$) " + vd("cai")
+            + " → o real se " + vd("valoriza") + ". É o que o Banco Central faz em momentos de depreciação "
+            "brusca, por leilões à vista ou de linha.",
+            "Do outro lado, o Banco Central recebe reais: a base monetária cai (se não houver esterilização), o "
+            "que também puxa para a valorização via juros.",
+            "Operação inversa: comprar dólares retira divisas do mercado e injeta reais — a cotação sobe e o "
+            "real se desvaloriza. Foi o que o Brasil fez entre 2006 e 2012 para acumular reservas e conter a "
+            "apreciação.",
+            vm("Regra-âncora: BC vende dólar → oferta de US$ ↑ → real se valoriza; BC compra dólar → real se "
+               "desvaloriza."),
+        ],
+        "grafico_verso": "ECO-E2-L00104-1-V1",
+        "dissecando": (cz("[inversão]") + " Inverte o sentido do fluxo (vender = “retirar”) e, por coerência, o "
+                       "efeito. Teste do bom senso: o comprador dos dólares vendidos pelo Banco Central é o "
+                       "mercado, que passa a ter mais divisas, não menos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Ao comprar dólares no mercado, o Banco Central retira moeda estrangeira do sistema, o que tende "
+            "a desvalorizar o real.”</i> → CERTO",
+            "<i>“Ao vender dólares, o Banco Central expande a base monetária.”</i> → ERRADO (inversão: recebe "
+            "reais e contrai a base)",
+        ])],
+        "reescrita": ("O Banco Central tem a possibilidade de adotar políticas cambiais para ajustar a quantidade de "
+                      "moeda nacional e estrangeira dentro do sistema. Ao vender dólares no mercado, o Banco Central "
+                      + hl("injeta") + " moeda estrangeira " + hl("no") + " sistema, o que leva à "
+                      + hl("valorização") + " do real."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Vender dólares torna-os menos escassos e valoriza o real; a intervenção serve para "
+                             "controlar a desvalorização tornando o dólar mais abundante."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01746
+    {
+        "id": "ECO-E2-L01746-1", "fonte_ref": "E2-L01746", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": "A respeito do processo de oferta de moeda, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Tudo o mais constante, há um aumento da base monetária quando o Banco Central compra dólares "
+                      "dos bancos, elevando as reservas internacionais, de maneira que para manter a liquidez "
+                      "constante, a autoridade monetária deve simultaneamente vender títulos do Tesouro no mercado "
+                      "aberto, o que eleva a dívida pública."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Tudo o mais constante, há um aumento da base monetária quando o Banco Central compra dólares "
+                      "dos bancos, elevando as reservas internacionais, de maneira que para manter a liquidez "
+                      "constante, a autoridade monetária deve simultaneamente <u>vender</u> títulos do Tesouro no "
+                      "mercado aberto, o que <u>eleva a dívida pública</u>."),
+        "poucas": ("É a " + azb("esterilização") + " de compras de divisas: a compra de dólares expande a base; a "
+                   "venda de títulos a recolhe — e os títulos em poder do mercado aumentam a " + vd("dívida "
+                   "bruta") + "."),
+        "destrinchando": [
+            "Compra de dólares: o Banco Central paga em reais novos — reservas ↑ (ativo) e " + azb("base "
+            "monetária") + " ↑ (passivo). Mais liquidez pressiona os juros para baixo e a inflação para cima.",
+            "Esterilização: para manter a meta de juros, o Banco Central vende títulos (no " + rx("Brasil")
+            + ", por " + azb("operações compromissadas") + " com títulos do Tesouro de sua carteira). Os reais "
+            "voltam ao Banco Central; a base retorna ao nível inicial.",
+            "Efeito fiscal: os títulos que passam ao mercado elevam a " + vd("dívida bruta do governo geral") + " "
+            "(o BCB inclui as compromissadas na DBGG). A " + azb("dívida líquida") + " não sobe na mesma medida, "
+            "porque as reservas são um ativo do setor público.",
+            "Custo de carregamento: o setor público paga juros domésticos (Selic) sobre a dívida e recebe juros "
+            "externos baixos sobre as reservas. Esse diferencial foi o “custo das reservas” no período de "
+            "acumulação acelerada (2006–2012), quando as reservas passaram de cerca de " + vd("US$ 50 bi") + " "
+            "para mais de " + vd("US$ 370 bi") + ".",
+            vm("Regra-âncora: compra de divisas + esterilização = reservas ↑, base estável, dívida bruta ↑."),
+        ],
+        "dissecando": (cz("[literalidade · detalhe]") + " Descrição correta, passo a passo, da esterilização. "
+                       "O detalhe que derruba candidatos é a última oração: parece que a operação é neutra, mas "
+                       "ela aumenta a dívida bruta. Versões erradas trocam “vender” por “comprar” títulos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“…para manter a liquidez constante, a autoridade monetária deve comprar títulos no mercado "
+            "aberto.”</i> → ERRADO (sinal trocado: comprar títulos injetaria mais liquidez)",
+            "<i>“A esterilização de compras de divisas tem custo fiscal quando a taxa de juros doméstica supera a "
+            "remuneração das reservas.”</i> → CERTO",
+        ])],
+        "tipo_erro": ["LITERAL", "DETALHE"], "moduladores": ["tudo o mais constante", "deve"], "dificuldade": 2,
+        "comentario_fonte": ("Compra de dólares expande a base; o BC vende títulos para retirar o excesso de "
+                             "liquidez, o que aumenta a dívida pública mobiliária em poder do mercado (custo fiscal "
+                             "da esterilização)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [],
+        "alertas": ["dado_aproximado: evolução das reservas entre 2006 e 2012 em ordem de grandeza"],
+    },
+    # ------------------------------------------------------------------ E3-L00418
+    {
+        "id": "ECO-E3-L00418-1", "fonte_ref": "E3-L00418", "destino": "67", "subtema": H2["res"],
+        "tipo": "C/E", "banca": "Nidi/Jacqueline Bueno", "prova": "Outubro/2024", "ano": 2024, "cacd": False,
+        "errei": False,
+        "comando": ("A respeito dos efeitos que alterações na política monetária ou a flutuação do mercado cambial "
+                    "produzem sobre a base monetária e a liquidez do sistema financeiro nacional, julgue o item a "
+                    "seguir."),
+        "rotulo_item": "Item",
+        "assertiva": ("Uma desvalorização cambial tende a elevar o valor das reservas internacionais em moeda "
+                      "doméstica. Sendo assim, em resposta a uma desvalorização da moeda doméstica, haverá uma "
+                      "expansão da base monetária."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Uma desvalorização cambial tende a elevar o valor das reservas internacionais em moeda "
+                       "doméstica. ") + vm("Sendo assim") + az(", em resposta a uma desvalorização da moeda "
+                       "doméstica, ") + vm("haverá uma") + az(" expansão da base monetária.")),
+        "poucas": ("A desvalorização gera um " + azb("ganho contábil") + " nas reservas medidas em reais, mas não "
+                   "cria moeda: a base monetária só se expande se o Banco Central " + azb("comprar ativos") + " ou "
+                   "emitir moeda de fato."),
+        "destrinchando": [
+            "Primeira frase, correta: US$ 100 bilhões de reservas valem R$ 500 bilhões a R$ 5,00/US$ e "
+            + vd("R$ 600 bilhões") + " a R$ 6,00/US$. É uma " + azb("reavaliação") + " do ativo do Banco "
+            "Central.",
+            "A base monetária (papel-moeda emitido + reservas bancárias) só cresce quando o Banco Central põe "
+            "moeda em circulação: comprando divisas ou títulos, concedendo redesconto, ou quando o Tesouro gasta "
+            "recursos da Conta Única. Reavaliar um ativo não move nenhum real para fora do Banco Central.",
+            "Onde o ganho vai parar: no " + azb("resultado cambial") + " do Banco Central. No " + rx("Brasil")
+            + ", a Lei nº " + vd("13.820/2019") + " separa esse resultado do operacional: o ganho cambial "
+            "positivo forma reserva de resultado, e a transferência ao Tesouro só ocorre em situações "
+            "previstas (como grave restrição de liquidez da dívida), para evitar monetização indireta.",
+            "Canal indireto possível: se o ganho fosse transferido ao Tesouro e gasto, a base se expandiria — "
+            "mas isso exige decisões e, mesmo assim, pode ser esterilizado por compromissadas. Não há relação "
+            "automática.",
+            vm("Regra-âncora: valorizar reservas em reais ≠ emitir moeda; base monetária só muda com operação "
+               "efetiva."),
+        ],
+        "dissecando": (cz("[nexo indevido]") + " Duas afirmações ligadas por um “sendo assim” que fabrica "
+                       "causalidade: a primeira é verdadeira; a segunda não decorre dela. O “haverá” "
+                       "(certeza) reforça o erro. Pista: reavaliação contábil é efeito de estoque, base monetária "
+                       "é fluxo de moeda."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Uma desvalorização cambial eleva o valor em reais das reservas internacionais, gerando resultado "
+            "cambial positivo para o Banco Central.”</i> → CERTO",
+            "<i>“A compra de divisas pelo Banco Central, sem esterilização, expande a base monetária.”</i> → "
+            "CERTO",
+        ])],
+        "reescrita": ("Uma desvalorização cambial tende a elevar o valor das reservas internacionais em moeda "
+                      "doméstica. " + hl("Ainda assim") + ", em resposta a uma desvalorização da moeda doméstica, "
+                      + hl("não haverá, por si só,") + " expansão da base monetária."),
+        "tipo_erro": ["NEXO_INDEVIDO"], "moduladores": ["sendo assim", "haverá"], "dificuldade": 2,
+        "comentario_fonte": ("A desvalorização eleva o valor contábil das reservas, mas o ganho patrimonial não cria "
+                             "moeda nova; a base só se expande com ação ativa do BC (compra de divisas, menos "
+                             "esterilização, monetização)."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 587–592", "tipo_fonte": "TEXTO/DIAGRAMA", "lado": "verso",
+                           "acao": "absorvida"}],
+        "alertas": [],
+    },
 ]

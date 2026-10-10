@@ -1464,8 +1464,8 @@ CARDS = [
         "modulos": [("😈 Para dificultar", [
             "<i>“…os investidores esperam depreciação do real de 5% em um ano.”</i> → ERRADO (dado alterado: "
             "esqueceu o prêmio de risco de 3%)",
-            "<i>“Se o prêmio de risco-Brasil subisse para 5,0%, mantidos os juros, haveria expectativa de "
-            "apreciação do real.”</i> → CERTO (ΔE<sup>e</sup> = 6,5 − 1,5 − 5,0 = 0, hmm)",
+            "<i>“Se o prêmio de risco-Brasil fosse de 6,0%, mantidos os juros, a paridade implicaria expectativa "
+            "de apreciação do real.”</i> → CERTO (ΔE<sup>e</sup> = 6,5 − 1,5 − 6,0 = −1%)",
         ])],
         "tipo_erro": ["DETALHE"], "moduladores": [], "dificuldade": 2,
         "comentario_fonte": ("i = i* + risco + expectativa de depreciação: 6,5% = 1,5% + 3,0% + ΔE<sup>e</sup> → "
@@ -1479,5 +1479,103 @@ CARDS = [
         "alertas": ["nota_redacao: o item diz “paridade de juros coberta”, mas aplica a forma com câmbio esperado e "
                     "risco-país (descoberta ajustada ao risco), coerente com o comando; gabarito mantido"],
     },
-    # FIM
+    # ------------------------------------------------------------------ E2-L01556
+    {
+        "id": "ECO-E2-L01556-1", "fonte_ref": "E2-L01556", "destino": "69", "subtema": H2["par"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_UIP,
+        "rotulo_item": "Item",
+        "assertiva": ("As taxas de juros pagas pelos títulos brasileiros são bem superiores às taxas de juros pagas "
+                      "pelos títulos americanos. Portanto, os investidores deveriam ter somente títulos brasileiros "
+                      "em sua carteira."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("As taxas de juros pagas pelos títulos brasileiros são bem superiores às taxas de juros "
+                       "pagas pelos títulos americanos. ") + vm("Portanto,") + az(" os investidores ")
+                    + vm("deveriam") + az(" ter somente títulos brasileiros em sua carteira.")),
+        "poucas": ("Juro nominal maior não é retorno maior: pela paridade descoberta, o diferencial paga o "
+                   + azb("risco-país") + " e a " + azb("depreciação esperada") + " do real. Não há vantagem que "
+                   "justifique concentrar a carteira."),
+        "destrinchando": [
+            "Paridade com risco: " + vd("i<sub>BR</sub> = i<sub>EUA</sub> + ΔE<sup>e</sup> + ρ") + ". O juro "
+            "brasileiro mais alto é a soma do juro americano, da desvalorização esperada do real e do prêmio por "
+            "risco de crédito e de conversibilidade. Ajustados, os retornos se equivalem.",
+            "Mesmo que sobrasse algum excesso de retorno, a teoria de carteiras (" + oc("Markowitz") + ") "
+            "recomenda " + azb("diversificação") + ": combinar ativos imperfeitamente correlacionados reduz o "
+            "risco total para um mesmo retorno esperado. Concentrar tudo num único país é ineficiente.",
+            "Em crises de confiança, ativos de emergentes caem juntos e a moeda se deprecia ao mesmo tempo — a "
+            "perda cambial pode superar com folga o ganho de juros de vários anos (a saída abrupta do "
+            + azb("carry trade") + ").",
+            "O próprio comportamento dos investidores confirma: o capital estrangeiro aplica no " + rx("Brasil")
+            + " uma parte da carteira, sensível ao risco-país e às expectativas cambiais, e não migra por "
+            "inteiro.",
+        ],
+        "dissecando": (cz("[nexo indevido · restrição indevida]") + " A premissa (juros brasileiros bem maiores) é "
+                       "verdadeira; o “portanto” cria uma conclusão que não decorre dela, e o “somente” leva essa "
+                       "conclusão ao extremo. 🔥 Conclusão normativa com “somente” costuma ser ERRADO."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Pela paridade descoberta, o diferencial entre os juros brasileiros e americanos reflete a "
+            "depreciação esperada do real e o prêmio de risco-Brasil.”</i> → CERTO",
+            "<i>“Como os juros brasileiros superam os americanos, a paridade descoberta prevê apreciação "
+            "esperada do real.”</i> → ERRADO (inversão: juro maior implica depreciação esperada)",
+        ])],
+        "reescrita": ("As taxas de juros pagas pelos títulos brasileiros são bem superiores às taxas de juros pagas "
+                      "pelos títulos americanos. " + hl("Ainda assim,") + " os investidores " + hl("não deveriam")
+                      + " ter somente títulos brasileiros em sua carteira" + hl(": o diferencial compensa o "
+                      "risco-país e a depreciação esperada") + "."),
+        "tipo_erro": ["NEXO_INDEVIDO", "RESTRICAO"], "moduladores": ["somente", "portanto"], "dificuldade": 1,
+        "comentario_fonte": ("Trecho errado: “os investidores deveriam ter somente títulos brasileiros”. Juros "
+                             "maiores compensam risco maior; investidores diversificam para otimizar risco e "
+                             "retorno."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E2-L01557
+    {
+        "id": "ECO-E2-L01557-1", "fonte_ref": "E2-L01557", "destino": "69", "subtema": H2["par"],
+        "tipo": "C/E", "banca": "Prof. Rodrigo Teixeira", "prova": "Intensivo Pré-TPS/2023", "ano": 2023,
+        "cacd": False, "errei": False,
+        "comando": CMD_RT_UIP,
+        "rotulo_item": "Item",
+        "assertiva": ("Sob mobilidade perfeita de capitais, quando há expectativa de depreciação cambial, podemos "
+                      "afirmar que a taxa de juros doméstica supera a taxa de juros externa acrescida do "
+                      "risco-país."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Sob <u>mobilidade perfeita de capitais</u>, quando há expectativa de depreciação cambial, "
+                      "podemos afirmar que a taxa de juros doméstica <u>supera</u> a taxa de juros externa "
+                      "acrescida do risco-país."),
+        "poucas": ("Da paridade " + vd("i = i* + ρ + ΔE<sup>e</sup>") + ": se ΔE<sup>e</sup> &gt; 0, então "
+                   + vd("i &gt; i* + ρ") + ". O excedente sobre i* + ρ é a " + azb("compensação pela depreciação "
+                   "esperada") + "."),
+        "destrinchando": [
+            azb("Mobilidade perfeita") + " garante que a arbitragem funcione e a paridade valha a todo momento: "
+            "qualquer retorno ajustado diferente provoca fluxos imediatos até a igualdade se restabelecer.",
+            "O diferencial i − i* tem duas parcelas: " + vd("ρ") + " (risco de crédito, conversibilidade, "
+            "instabilidade) e " + vd("ΔE<sup>e</sup>") + " (perda cambial esperada). Com ΔE<sup>e</sup> &gt; 0, "
+            "o juro doméstico precisa superar i* + ρ; com ΔE<sup>e</sup> &lt; 0 (apreciação esperada), ficaria "
+            "abaixo.",
+            "Exemplo: i* = 4%, ρ = 3% e depreciação esperada de 2% → i = " + vd("9%") + " &gt; 7%.",
+            "Leitura de política: quando surge expectativa de depreciação (crise de confiança, incerteza "
+            "política), o banco central tende a subir os juros para conter a saída de capitais — é o mesmo "
+            "mecanismo visto de trás para a frente.",
+        ],
+        "dissecando": (cz("[literalidade]") + " Reprodução direta da equação. As pistas que a banca dá são "
+                       "“mobilidade perfeita” (a paridade vale) e “acrescida do risco-país” (ρ já está no lado "
+                       "direito). Uma versão ERRADA diria que, com expectativa de depreciação, o juro doméstico "
+                       "fica abaixo do externo acrescido do risco."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Sob mobilidade perfeita de capitais, quando há expectativa de apreciação cambial, a taxa de "
+            "juros doméstica supera a externa acrescida do risco-país.”</i> → ERRADO (inversão: fica abaixo)",
+            "<i>“Com mobilidade nula de capitais, a paridade descoberta determina o diferencial de juros.”</i> → "
+            "ERRADO (sem mobilidade, não há arbitragem que imponha a paridade)",
+        ])],
+        "tipo_erro": ["LITERAL"], "moduladores": ["podemos afirmar"], "dificuldade": 1,
+        "comentario_fonte": ("Pela paridade descoberta, i = i* + expectativa de depreciação + risco-país; se há "
+                             "expectativa de depreciação, i deve ser maior que i* + risco."),
+        "qualidade_fonte": "bom",
+        "figuras_fonte": [{"ref": "IMAGEM 427", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
+                          {"ref": "IMAGEM 428", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
+        "alertas": [],
+    },
 ]

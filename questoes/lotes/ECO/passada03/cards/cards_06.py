@@ -24,10 +24,13 @@ EXCERTO_CACD26 = (
     "mecanismos de transmissão do câmbio para a inflação.</i></p>"
 )
 
-ALERTA_JUROS = "quase_duplicata: ECO-E1-0426-1, ECO-E1-0427-1, ECO-E1-0428-1 (mesmo enunciado com variações de sentido)"
+def alerta_juros(eu):
+    ids = [i for i in ("ECO-E1-0426-1", "ECO-E1-0427-1", "ECO-E1-0428-1") if i != eu]
+    return "quase_duplicata: " + ", ".join(ids) + " (mesmo enunciado com variações de sentido)"
 
-ALERTA_CLIP = ("quase_duplicata: ECO-E1-0763-1, ECO-E1-0764-1, ECO-E1-0765-1, ECO-E1-0766-1 (mesmo simulado; "
-               "troca fixo × flutuante)")
+def alerta_clip(eu):
+    ids = [i for i in ("ECO-E1-0763-1", "ECO-E1-0764-1", "ECO-E1-0765-1", "ECO-E1-0766-1") if i != eu]
+    return "quase_duplicata: " + ", ".join(ids) + " (mesmo simulado; troca fixo × flutuante)"
 
 CARDS = [
     # ------------------------------------------------------------------ E1-0369
@@ -137,7 +140,7 @@ CARDS = [
         "comentario_fonte": "ERRADO: a depreciação estimula exportações e desestimula importações, aumentando X − M.",
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": [ALERTA_JUROS],
+        "alertas": [alerta_juros("ECO-E1-0426-1")],
     },
     # ------------------------------------------------------------------ E1-0427
     {
@@ -184,7 +187,7 @@ CARDS = [
                              "o saldo comercial."),
         "qualidade_fonte": "raso",
         "figuras_fonte": [],
-        "alertas": [ALERTA_JUROS],
+        "alertas": [alerta_juros("ECO-E1-0427-1")],
     },
     # ------------------------------------------------------------------ E1-0428
     {
@@ -231,7 +234,7 @@ CARDS = [
         "qualidade_fonte": "raso",
         "figuras_fonte": [{"ref": "Untitled (91).jpeg", "tipo_fonte": "desconhecido", "lado": "verso",
                            "acao": "irrecuperavel (imagem do verso não preservada; comentário coberto pelo texto)"}],
-        "alertas": [ALERTA_JUROS],
+        "alertas": [alerta_juros("ECO-E1-0428-1")],
     },
     # ------------------------------------------------------------------ E1-0670
     {
@@ -764,7 +767,7 @@ CARDS = [
                              "“flutuante” fica certo; menção ao trilema."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [ALERTA_CLIP],
+        "alertas": [alerta_clip("ECO-E1-0763-1")],
     },
     # ------------------------------------------------------------------ E1-0764
     {
@@ -814,7 +817,7 @@ CARDS = [
         "comentario_fonte": "Descreveu o câmbio fixo e o chamou de flutuante.",
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [ALERTA_CLIP],
+        "alertas": [alerta_clip("ECO-E1-0764-1")],
     },
     # ------------------------------------------------------------------ E1-0765
     {
@@ -866,7 +869,7 @@ CARDS = [
                              "volatilidade ao flutuante."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [ALERTA_CLIP],
+        "alertas": [alerta_clip("ECO-E1-0765-1")],
     },
     # ------------------------------------------------------------------ E1-0766
     {
@@ -916,7 +919,7 @@ CARDS = [
                              "e mantém a taxa, intervindo com reservas."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": [ALERTA_CLIP],
+        "alertas": [alerta_clip("ECO-E1-0766-1")],
     },
     # ------------------------------------------------------------------ E1-0767
     {

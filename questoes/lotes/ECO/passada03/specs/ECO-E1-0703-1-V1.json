@@ -1,0 +1,144 @@
+{
+ "id": "ECO-E1-0703-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio flutuante e mobilidade perfeita: a expansão fiscal leva a IS a IS₂ e o juro sobe só no ponto provisório E′; a entrada de capital aprecia a moeda, as exportações líquidas caem e a IS volta a IS₁. Como a LM não se move, o único ponto com i = i* é o inicial: a renda final é Y₁ (neutralização total).",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₁ (inicial = final)",
+   "rotulo_xy": [
+    0.9,
+    7.9
+   ]
+  },
+  {
+   "id": "IS2",
+   "tipo": "reta",
+   "p1": [
+    4.5,
+    7.5
+   ],
+   "p2": [
+    9.5,
+    2.5
+   ],
+   "familia": "demanda",
+   "rotulo": "IS₂ (provisória)",
+   "tracejada": true,
+   "rotulo_xy": [
+    7.3,
+    7.9
+   ]
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM"
+  },
+  {
+   "id": "BP",
+   "tipo": "horizontal",
+   "y": 4.5,
+   "x": [
+    0.3,
+    9.7
+   ],
+   "familia": "terceira",
+   "rotulo": "BP",
+   "rotulo_xy": [
+    0.9,
+    4.95
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁ = E final",
+   "projetar": "x",
+   "rotulo_x": "Y₁",
+   "rotulo_desloc": [
+    -120,
+    -26
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS2",
+    "LM1"
+   ],
+   "rotulo": "E′",
+   "rotulo_desloc": [
+    -30,
+    8
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.15,
+    4.75
+   ],
+   "texto": "i*",
+   "cor": "texto"
+  },
+  {
+   "xy": [
+    6.6,
+    3.0
+   ],
+   "texto": "apreciação → NX ↓",
+   "cor": "vermelho"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "IS1",
+   "para": "IS2",
+   "sentido": "direita",
+   "em_y": 6.6
+  },
+  {
+   "de": "IS2",
+   "para": "IS1",
+   "sentido": "esquerda",
+   "em_y": 3.6
+  }
+ ],
+ "checar": [
+  "Ep.y > E1.y",
+  "Ep.x > E1.x",
+  "abs(E1.y - 4.5) < 0.01"
+ ]
+}

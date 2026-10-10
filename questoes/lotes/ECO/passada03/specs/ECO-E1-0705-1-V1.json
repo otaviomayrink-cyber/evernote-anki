@@ -1,0 +1,143 @@
+{
+ "id": "ECO-E1-0705-1-V1",
+ "uso": "verso",
+ "legenda": "Câmbio fixo e mobilidade perfeita: a expansão monetária leva a LM a LM₂ e o juro cai abaixo de i* no ponto provisório E′; a fuga de capital obriga o BC a vender reservas e recolher moeda, e a LM volta a LM₁. A economia termina em E₁, com a mesma renda e menos reservas.",
+ "eixos": {
+  "x": "Y",
+  "y": "i",
+  "xmax": 10,
+  "ymax": 9
+ },
+ "curvas": [
+  {
+   "id": "IS1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    7.5
+   ],
+   "p2": [
+    7.5,
+    2
+   ],
+   "familia": "demanda",
+   "rotulo": "IS"
+  },
+  {
+   "id": "LM1",
+   "tipo": "reta",
+   "p1": [
+    2,
+    1.5
+   ],
+   "p2": [
+    8,
+    7.5
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₁ (inicial = final)",
+   "rotulo_xy": [
+    6.2,
+    8.1
+   ]
+  },
+  {
+   "id": "LM2",
+   "tipo": "reta",
+   "p1": [
+    4,
+    1.5
+   ],
+   "p2": [
+    9.6,
+    7.1
+   ],
+   "familia": "oferta",
+   "rotulo": "LM₂ (provisória)",
+   "tracejada": true,
+   "rotulo_xy": [
+    8.3,
+    6.2
+   ]
+  },
+  {
+   "id": "BP",
+   "tipo": "horizontal",
+   "y": 4.5,
+   "x": [
+    0.3,
+    9.7
+   ],
+   "familia": "terceira",
+   "rotulo": "BP",
+   "rotulo_xy": [
+    0.9,
+    4.95
+   ]
+  }
+ ],
+ "pontos": [
+  {
+   "id": "E1",
+   "intersecao": [
+    "IS1",
+    "LM1"
+   ],
+   "rotulo": "E₁ = E final",
+   "projetar": "x",
+   "rotulo_x": "Y₁",
+   "rotulo_desloc": [
+    -120,
+    26
+   ]
+  },
+  {
+   "id": "Ep",
+   "intersecao": [
+    "IS1",
+    "LM2"
+   ],
+   "rotulo": "E′",
+   "rotulo_desloc": [
+    10,
+    -14
+   ]
+  }
+ ],
+ "textos": [
+  {
+   "xy": [
+    0.15,
+    4.75
+   ],
+   "texto": "i*",
+   "cor": "texto"
+  },
+  {
+   "xy": [
+    6.4,
+    1.6
+   ],
+   "texto": "BC vende reservas → M ↓",
+   "cor": "vermelho"
+  }
+ ],
+ "deslocamentos": [
+  {
+   "de": "LM1",
+   "para": "LM2",
+   "sentido": "direita",
+   "em_y": 6.4
+  },
+  {
+   "de": "LM2",
+   "para": "LM1",
+   "sentido": "esquerda",
+   "em_y": 2.4
+  }
+ ],
+ "checar": [
+  "Ep.y < E1.y",
+  "abs(E1.y - 4.5) < 0.01"
+ ]
+}

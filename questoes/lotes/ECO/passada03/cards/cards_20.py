@@ -145,7 +145,7 @@ CARDS = [
         "qualidade_fonte": "com_erro",
         "figuras_fonte": [{"ref": "IMAGEM 672 (duplicata E3-L00467)", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida"}],
-        "alertas": ["duplicata: E3-L00467 fundida (mesmo item, comentários somados)",
+        "alertas": ["quase_duplicata: ECO-E3-L00467-1 (mesmo item em outra prova)", "duplicata: E3-L00467 fundida (mesmo item, comentários somados)",
                     "qualidade_fonte: o comentário do caderno E1 justifica o ERRADO com um critério inexistente "
                     "(coordenação predatória contra terceiros); o critério é o do art. XXIV"],
     },
@@ -318,7 +318,7 @@ CARDS = [
                            "lado": "verso", "acao": "absorvida"},
                           {"ref": "IMAGEM 670 (duplicata E3-L00466)", "tipo_fonte": "GRÁFICO", "lado": "verso",
                            "acao": "cortada (sequência IS-LM-BP descrita no 📖)"}],
-        "alertas": ["duplicata: E3-L00466 fundida (mesmo item, comentários somados)",
+        "alertas": ["quase_duplicata: ECO-E3-L00466-1 (mesmo item em outra prova)", "duplicata: E3-L00466 fundida (mesmo item, comentários somados)",
                     "quase_duplicata: ECO-E2-L00186-1, ECO-E1-0909-1 (tarifa neutralizada pelo câmbio)"],
     },
     # ------------------------------------------------------------------ E1-0937

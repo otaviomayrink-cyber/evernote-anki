@@ -1338,4 +1338,482 @@ CARDS = [
         "figuras_fonte": [{"ref": "IMAGEM 668", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"}],
         "alertas": [],
     },
+    # ------------------------------------------------------------------ E1-0489
+    {
+        "id": "ECO-E1-0489-1", "fonte_ref": "E1-0489", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2017, "cacd": False,
+        "errei": False,
+        "comando": CMD_CONJ,
+        "rotulo_item": "Item",
+        "assertiva": ("A redução da participação do setor industrial na economia brasileira nos últimos anos pode "
+                      "estar relacionada com a situação conhecida como doença holandesa, em que a abundância de "
+                      "recursos naturais ou o bom desempenho de commodities leva a uma valorização cambial, "
+                      "prejudicando a competitividade industrial."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("A redução da participação do setor industrial na economia brasileira nos últimos anos "
+                      "<u>pode estar relacionada</u> com a situação conhecida como doença holandesa, em que a "
+                      "abundância de recursos naturais ou o bom desempenho de commodities leva a uma valorização "
+                      "cambial, prejudicando a competitividade industrial."),
+        "poucas": ("A " + azb("doença holandesa") + " — boom de recursos naturais → apreciação cambial → perda de "
+                   "competitividade da manufatura — é uma das explicações em debate para a "
+                   + azb("desindustrialização") + " brasileira; o “pode” torna o item correto."),
+        "destrinchando": [
+            "O termo nasce da Holanda dos anos 1960–70: a descoberta de gás natural valorizou o florim e encolheu "
+            "a indústria. Formalização de " + oc("Corden") + " e " + oc("Neary") + " (1982): o setor em boom "
+            "atrai fatores (efeito deslocamento de recursos) e, via câmbio e demanda, encarece os não "
+            "comerciáveis (efeito gasto), espremendo a manufatura exportadora.",
+            "No " + rx("Brasil") + ", a tese foi difundida por " + oc("Bresser-Pereira") + ": no superciclo de "
+            "commodities (" + vd("2003–2011") + "), a forte entrada de divisas apreciou o real e a indústria de "
+            "transformação perdeu espaço no PIB e na pauta exportadora — a participação dos manufaturados nas "
+            "exportações caiu e os produtos básicos voltaram a liderar a partir de " + vd("2010") + ".",
+            "Explicações concorrentes ou complementares: desindustrialização “natural” (renda maior → demanda "
+            "migra para serviços, como nos países ricos), mas no Brasil ela foi " + azb("precoce") + " (começou "
+            "com renda per capita baixa, desde meados dos anos 1980, segundo " + oc("Palma") + "); juros reais "
+            "altos; custo Brasil e baixa produtividade; competição chinesa.",
+            "Contraponto: parte da literatura atribui o câmbio apreciado sobretudo aos juros e aos fluxos de "
+            "capital, e não às commodities, e lembra que a desindustrialização é fenômeno global.",
+        ],
+        "dissecando": (cz("[modulador relativo]") + " O “pode estar relacionada” transforma uma tese disputada "
+                       "num item correto: a banca não pede que a doença holandesa seja <b>a</b> causa, só que "
+                       "seja uma explicação plausível. Seria ERRADO com “decorre exclusivamente”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A desindustrialização brasileira decorre exclusivamente da doença holandesa provocada pelo "
+            "pré-sal.”</i> → ERRADO (modulador absoluto e anacronismo: o processo é anterior ao pré-sal)",
+            "<i>“Na doença holandesa, o boom de recursos naturais tende a depreciar a moeda nacional, estimulando "
+            "a indústria.”</i> → ERRADO (inversão: aprecia a moeda e prejudica a indústria)",
+        ])],
+        "tipo_erro": ["MODULADOR_RELATIVO"], "moduladores": ["pode"], "dificuldade": 1,
+        "comentario_fonte": ("Países com recursos de extração tendem a se “viciar” na venda desses produtos, "
+                             "postergando ou depredando a matriz industrial, motor autônomo do crescimento."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": [],
+    },
+    # ------------------------------------------------------------------ E1-0918
+    {
+        "id": "ECO-E1-0918-1", "fonte_ref": "E1-0918", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Clipping", "prova": "Simulado julho/2023", "ano": 2023, "cacd": False,
+        "errei": False,
+        "comando": CMD_PAUTA,
+        "rotulo_item": "Item",
+        "assertiva": ("O setor econômico brasileiro com maior crescimento nas exportações no ano de 2022 foi o "
+                      "agropecuário, que apresentou aumento em valor, consequência da guerra na Ucrânia, mas também "
+                      "foi registrada elevação nos volumes exportados."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("O setor econômico brasileiro com maior crescimento nas exportações no ano de 2022 foi o "
+                      "<u>agropecuário</u>, que apresentou aumento em valor, consequência da guerra na Ucrânia, mas "
+                      "<u>também</u> foi registrada elevação nos volumes exportados."),
+        "poucas": ("Em 2022, as exportações brasileiras bateram recorde ⏳ (out/2026), e a " + azb("agropecuária")
+                   + " foi o setor de maior alta: sobretudo por preços — inflados pela guerra na Ucrânia —, mas "
+                   "também por volume."),
+        "destrinchando": [
+            "Classificação da Secex por setor (ISIC): " + azb("agropecuária") + ", " + azb("indústria "
+            "extrativa") + " e " + azb("indústria de transformação") + ". Em 2022 ⏳ (out/2026), as exportações "
+            "totais chegaram a cerca de " + vd("US$ 335 bilhões") + " (recorde, alta próxima de 20%), com "
+            "superávit comercial de cerca de " + vd("US$ 60 bilhões") + ".",
+            "A guerra (fevereiro de 2022) tirou do mercado parte das exportações de grãos e fertilizantes da "
+            "Ucrânia e da Rússia e elevou os preços de " + azb("milho, trigo, soja e óleos vegetais") + ". O "
+            "efeito preço foi o principal motor do valor exportado pelo agro.",
+            "Volume: houve quebra de safra de soja no Sul (estiagem), mas o " + azb("milho") + " teve "
+            "exportações recordes — com a abertura do mercado chinês ao milho brasileiro no fim de 2022 — e "
+            "cresceram carnes e açúcar, de modo que o volume agregado do setor também subiu ⏳ (out/2026).",
+            "Na extrativa, o minério de ferro caiu de preço, enquanto o petróleo subiu; a transformação cresceu "
+            "menos que o agro em termos relativos.",
+            "Lição para conjuntura: separe sempre " + azb("efeito preço") + " e " + azb("efeito quantidade") + " — "
+            "a Secex divulga os índices de preço e de volume das exportações.",
+        ],
+        "dissecando": (cz("[detalhe]") + " Item de dado conjuntural que cobra a decomposição preço × "
+                       "quantidade. A armadilha seria afirmar que o aumento foi “exclusivamente” de preços, ou "
+                       "que o volume caiu por causa da quebra da soja."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O crescimento das exportações agropecuárias em 2022 decorreu exclusivamente da alta de "
+            "preços.”</i> → ERRADO (restrição indevida: o volume também cresceu)",
+            "<i>“A China é o principal destino das exportações do agronegócio brasileiro.”</i> → CERTO ⏳ "
+            "(out/2026)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": ["também"], "dificuldade": 2,
+        "comentario_fonte": ("Alta de preços das commodities agrícolas em 2022 (guerra na Ucrânia) e aumento do "
+                             "volume exportado de milho, soja, carnes e açúcar; maior crescimento entre os setores."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["dado_aproximado: totais de 2022 (exportações ~US$ 335 bi; saldo ~US$ 60 bi) em ordem de "
+                    "grandeza; a fonte afirmava alta de volume da soja, que caiu em 2022 — substituída pelo milho"],
+    },
+    # ------------------------------------------------------------------ E1-0934
+    {
+        "id": "ECO-E1-0934-1", "fonte_ref": "E1-0934", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2017, "cacd": False,
+        "errei": False,
+        "comando": CMD_PAUTA,
+        "rotulo_item": "Item",
+        "assertiva": ("No Brasil, apesar de décadas de tentativas de aumento da participação industrial nas "
+                      "exportações, commodities ainda têm importância para a pauta de exportações, com o aumento, "
+                      "em anos recentes, da relevância de países asiáticos como destinatários de produtos."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("No Brasil, apesar de décadas de tentativas de aumento da participação industrial nas "
+                      "exportações, commodities ainda têm importância para a pauta de exportações, com o aumento, em "
+                      "anos recentes, da relevância de <u>países asiáticos</u> como destinatários de produtos."),
+        "poucas": ("A pauta brasileira segue ancorada em " + azb("commodities") + " (soja, minério, petróleo, "
+                   "carnes) e, desde os anos 2000, a " + azb("Ásia") + " — sobretudo a China, principal destino "
+                   "desde " + vd("2009") + " — ganhou peso como compradora."),
+        "destrinchando": [
+            "Trajetória: a industrialização por substituição de importações e a promoção de exportações dos anos "
+            "1970 elevaram os manufaturados até cerca de metade da pauta nos anos 1980–90. Com o "
+            + azb("superciclo de commodities") + " (2003–2011), os " + azb("produtos básicos") + " voltaram a "
+            "superar os manufaturados (a partir de " + vd("2010") + ").",
+            "Destinos: a " + rx("China") + " tornou-se o maior comprador do Brasil em " + vd("2009") + ", "
+            "superando os EUA, e hoje absorve cerca de " + vd("30%") + " das exportações ⏳ (out/2026), "
+            "concentradas em soja, minério de ferro, petróleo e carnes.",
+            "Leitura crítica: a combinação “pauta primária + destino asiático” é chamada de "
+            + azb("reprimarização") + " ou especialização regressiva — expõe a balança aos ciclos de preços e à "
+            "demanda chinesa e reforça o debate sobre doença holandesa e desindustrialização.",
+            "Contraponto: o agro brasileiro é intensivo em tecnologia (Embrapa, ganhos de produtividade), e a "
+            "pauta para a América do Sul e os EUA continua majoritariamente industrial.",
+        ],
+        "dissecando": (cz("[paráfrase fiel · modulador relativo]") + " Afirmação qualitativa e prudente "
+                       "(“ainda têm importância”, “aumento da relevância”), difícil de derrubar. Seria ERRADO se "
+                       "dissesse que os manufaturados voltaram a liderar a pauta ou que a UE superou a Ásia como "
+                       "destino."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Desde 2009, a China é o principal destino das exportações brasileiras.”</i> → CERTO ⏳ "
+            "(out/2026)",
+            "<i>“Na última década, os manufaturados voltaram a responder pela maior parte das exportações "
+            "brasileiras.”</i> → ERRADO (inversão: predominam os básicos)",
+        ])],
+        "tipo_erro": ["PARAFRASE_FIEL", "MODULADOR_RELATIVO"], "moduladores": ["ainda", "em anos recentes"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Processo conhecido como “especialização regressiva”, nocivo ao desenvolvimento e que "
+                             "deixa a estabilidade comercial à mercê dos ciclos de preços das commodities."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["dado_aproximado: participação da China (~30%) em ordem de grandeza"],
+    },
+    # ------------------------------------------------------------------ E1-0966
+    {
+        "id": "ECO-E1-0966-1", "fonte_ref": "E1-0966", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2014, "cacd": False,
+        "errei": True,
+        "comando": CMD_PAUTA,
+        "rotulo_item": "Item",
+        "assertiva": ("De acordo com a classificação oficialmente adotada, as exportações brasileiras por fator "
+                      "agregado são decrescentes, ou seja, da maior para a menor proporção de valor agregado."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("De acordo com a classificação oficialmente adotada, as exportações brasileiras por fator "
+                       "agregado são ") + vm("decrescentes, ou seja, da maior para a menor") + az(" proporção de "
+                                                                                                 "valor agregado.")),
+        "poucas": ("A classificação por " + azb("fator agregado") + " vai do menor ao maior grau de elaboração: "
+                   + azb("básicos → semimanufaturados → manufaturados") + " — ordem crescente."),
+        "condicionais": [("⏳ Desatualizado (out/2026)",
+                          "a Secex passou a divulgar a balança comercial sobretudo pela classificação por setor "
+                          "(ISIC: agropecuária, indústria extrativa, indústria de transformação); a divisão por "
+                          "fator agregado continua útil para séries históricas e é a que o item cobra.")],
+        "destrinchando": [
+            azb("Básicos") + ": bens de baixo valor agregado, próximos do estado natural (minério de ferro, soja "
+            "em grão, café em grão, carne <i>in natura</i>, petróleo bruto).",
+            azb("Semimanufaturados") + ": passaram por alguma transformação, mas ainda são insumos (açúcar "
+            "bruto, celulose, ferro-gusa, couro, óleo de soja em bruto).",
+            azb("Manufaturados") + ": maior grau de elaboração (aviões, automóveis, máquinas, etanol, suco de "
+            "laranja, açúcar refinado). Somados aos semimanufaturados, formam os " + azb("industrializados") + "; "
+            "há ainda as " + azb("operações especiais") + " (consumo de bordo, reexportação).",
+            "Na época do item (" + vd("2013") + "), os básicos já eram o maior grupo — perto de metade da pauta — "
+            "e os manufaturados haviam caído para menos de 40%, inversão iniciada em " + vd("2010") + ".",
+            vm("Regra-âncora: fator agregado em ordem crescente: básicos &lt; semimanufaturados &lt; manufaturados."),
+        ],
+        "dissecando": (cz("[inversão]") + " Troca a ordem da classificação. O “ou seja” dá uma definição "
+                       "aparentemente didática que reforça o erro. Lembre que a lista oficial começa pelos "
+                       "básicos."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Na classificação por fator agregado, o açúcar bruto e a celulose são semimanufaturados.”</i> → "
+            "CERTO",
+            "<i>“Desde 2010, os manufaturados representam a maior parcela das exportações brasileiras por fator "
+            "agregado.”</i> → ERRADO (inversão: os básicos passaram à frente)",
+        ])],
+        "reescrita": ("De acordo com a classificação oficialmente adotada, as exportações brasileiras por fator "
+                      "agregado são " + hl("crescentes, ou seja, da menor para a maior") + " proporção de valor "
+                      "agregado."),
+        "tipo_erro": ["INVERSAO"], "moduladores": [], "dificuldade": 1,
+        "comentario_fonte": ("Classificação de maior a menor valor adicionado, com manufaturados primeiro e básicos "
+                             "depois (minérios, grãos, carne in natura)."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: o comentário da fonte dizia que a classificação vai do maior ao menor valor "
+                    "agregado, o que contradiz o próprio gabarito; corrigido para a ordem oficial crescente",
+                    "dado_aproximado: participações de 2013 (básicos perto de metade; manufaturados abaixo de 40%)"],
+    },
+    # ------------------------------------------------------------------ E1-0967
+    {
+        "id": "ECO-E1-0967-1", "fonte_ref": "E1-0967", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2014, "cacd": False,
+        "errei": False,
+        "comando": CMD_PAUTA,
+        "rotulo_item": "Item",
+        "assertiva": ("O Brasil apresentou superávit em 2013, tendo havido déficit na maioria dos meses do ano, com "
+                      "reversão do saldo negativo a partir do começo do 2.º semestre."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("O Brasil apresentou superávit em 2013, tendo havido déficit na ") + vm("maioria")
+                    + az(" dos meses do ano") + vm(", com reversão do saldo negativo a partir do começo do 2.º "
+                                                   "semestre") + az(".")),
+        "poucas": ("O superávit comercial de 2013 (cerca de " + vd("US$ 2,6 bilhões") + ", o menor desde 2000 ⏳ "
+                   "(out/2026)) existiu, mas os meses de déficit não foram maioria, e o saldo acumulado só se "
+                   "firmou positivo no fim do ano."),
+        "destrinchando": [
+            "O ano começou muito mal: " + vd("janeiro de 2013") + " teve um dos piores déficits mensais da série "
+            "(perto de US$ 4 bilhões), puxado por importações de combustíveis contabilizadas com atraso.",
+            "Os déficits mensais se concentraram no primeiro semestre, mas não foram maioria; houve ainda meses "
+            "negativos no segundo semestre, e o saldo acumulado do ano só voltou ao azul nos últimos meses, com "
+            "exportações fortes de fim de ano — incluindo exportações fictas de " + azb("plataformas de "
+            "petróleo") + " pelo regime aduaneiro do Repetro.",
+            "Contexto: 2013 marcou a erosão do superávit comercial que vinha desde 2001 — queda dos preços de "
+            "commodities, déficit em combustíveis (gasolina e diesel importados com preço interno represado) e "
+            "importações de manufaturados elevadas. Em " + vd("2014") + ", a balança fecharia em déficit pela "
+            "primeira vez desde 2000 ⏳ (out/2026).",
+            "Para julgar itens assim, separe três afirmações: o saldo anual (positivo ✓), a contagem de meses "
+            "(maioria? ✗) e o momento da reversão (início do 2.º semestre? ✗).",
+        ],
+        "dissecando": (cz("[dado alterado · meia-verdade]") + " A primeira oração (superávit em 2013) é "
+                       "verdadeira e dá credibilidade ao resto; o erro está na contagem (“maioria dos meses”) e "
+                       "no marco temporal da virada. 🔥 Itens de conjuntura antiga empilham detalhes de série "
+                       "mensal: basta um falhar."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Em 2013, o Brasil registrou o menor superávit comercial desde 2000.”</i> → CERTO ⏳ (out/2026)",
+            "<i>“Em 2014, a balança comercial brasileira voltou a registrar superávit.”</i> → ERRADO (dado "
+            "alterado: houve déficit)",
+        ])],
+        "reescrita": ("O Brasil apresentou superávit em 2013, tendo havido déficit na " + hl("minoria")
+                      + " dos meses do ano" + hl(", concentrados no primeiro semestre, e saldo acumulado positivo "
+                                                 "só nos últimos meses") + "."),
+        "tipo_erro": ["DADO_ALTERADO", "MEIA_VERDADE"], "moduladores": ["maioria"], "dificuldade": 3,
+        "comentario_fonte": ("Superávit consistente a partir do segundo semestre; déficits em 3 meses do primeiro "
+                             "semestre de 2013, conforme gráfico (imagem não preservada)."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [{"ref": "00045.jpeg", "tipo_fonte": "GRÁFICO", "lado": "verso",
+                           "acao": "irrecuperavel (imagem não preservada; série mensal descrita em texto)"}],
+        "alertas": ["dado_aproximado: superávit de 2013 (~US$ 2,6 bi), déficit de janeiro (~US$ 4 bi) e "
+                    "momento em que o acumulado voltou a ser positivo descritos de memória, sem a série mensal",
+                    "figura_irrecuperavel: gráfico do saldo mensal de 2013 (00045.jpeg) não veio na exportação"],
+    },
+    # ------------------------------------------------------------------ E1-0968
+    {
+        "id": "ECO-E1-0968-1", "fonte_ref": "E1-0968", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2014, "cacd": False,
+        "errei": False,
+        "comando": CMD_PAUTA,
+        "rotulo_item": "Item",
+        "assertiva": ("Ao se examinar a atual pauta de exportações brasileiras por blocos econômicos, constata-se "
+                      "que os países do MERCOSUL são grandes importadores do Brasil, somente superados pela Ásia e "
+                      "pela União Europeia."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("Ao se examinar a atual pauta de exportações brasileiras por blocos econômicos, constata-se "
+                      "que os países do MERCOSUL são grandes importadores do Brasil, <u>somente superados pela Ásia "
+                      "e pela União Europeia</u>."),
+        "poucas": ("Na época do item (dados de " + vd("2013") + "), a ordem por blocos era " + azb("Ásia")
+                   + " (cerca de um terço) → " + azb("União Europeia") + " (cerca de um quinto) → "
+                   + rx("Mercosul") + " (cerca de 11%, puxado pela Argentina) → EUA."),
+        "condicionais": [("⏳ Desatualizado (out/2026)",
+                          "a ordem mudou: com a China sozinha perto de 30% das exportações e a perda de peso da "
+                          "Argentina, o Mercosul caiu para a casa de um dígito e ficou atrás também dos EUA. Hoje "
+                          "o item tenderia a ser ERRADO.")],
+        "destrinchando": [
+            "Para o " + rx("Brasil") + ", o Mercosul sempre foi destino de qualidade: compra sobretudo "
+            + azb("manufaturados") + " (automóveis e autopeças, máquinas, químicos), ao contrário da Ásia, que "
+            "compra commodities. A Argentina chegou a ser o terceiro maior parceiro individual, atrás de China e "
+            "EUA.",
+            "A participação do bloco nas exportações brasileiras atingiu o auge no fim dos anos 1990 (perto de "
+            + vd("17%") + " em 1998) e encolheu depois, com as crises argentinas, o comércio administrado no "
+            "setor automotivo e a ascensão chinesa.",
+            "Leitura de pauta por blocos exige atenção ao recorte: “América Latina e Caribe” (que inclui o "
+            "Mercosul) é maior que “Mercosul”; “Ásia” inclui China, Japão, Coreia e Índia.",
+            "A observação da fonte sobre o peso do Brasil nas pautas dos vizinhos é verdadeira no sentido "
+            "inverso: o Brasil é o maior ou um dos maiores fornecedores de Argentina, Paraguai e Uruguai, o que "
+            "gera assimetrias e atritos no bloco.",
+        ],
+        "dissecando": (cz("[detalhe · literalidade]") + " Item de ranking. O “somente superados” exige saber a "
+                       "posição exata: terceiro lugar. A pegadinha mais comum é incluir os EUA à frente — o que "
+                       "não valia em 2013, mas passou a valer depois ⏳ (out/2026)."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“As exportações brasileiras para o Mercosul concentram-se em produtos manufaturados.”</i> → CERTO",
+            "<i>“O Mercosul é o principal destino das exportações brasileiras de produtos básicos.”</i> → ERRADO "
+            "(troca de ator: é a Ásia, sobretudo a China)",
+        ])],
+        "tipo_erro": ["DETALHE", "LITERAL"], "moduladores": ["somente"], "dificuldade": 2,
+        "comentario_fonte": ("O Brasil é o país latino-americano dominante nas pautas de exportação dos vizinhos, "
+                             "posição que gera tensão com os parceiros."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["dado_aproximado: participações por bloco em 2013 e o pico de 1998 em ordem de grandeza"],
+    },
+    # ------------------------------------------------------------------ E1-0969
+    {
+        "id": "ECO-E1-0969-1", "fonte_ref": "E1-0969", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Banca não identificada", "prova": "", "ano": 2014, "cacd": False,
+        "errei": False,
+        "comando": CMD_PAUTA,
+        "rotulo_item": "Item",
+        "assertiva": ("As importações brasileiras são constituídas por numerosos grupos de produtos, destacando-se "
+                      "óleos brutos de petróleo, com menos de 10% do total."),
+        "gabarito": "CERTO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": az("As importações brasileiras são constituídas por numerosos grupos de produtos, destacando-se "
+                      "óleos brutos de petróleo, com <u>menos de 10%</u> do total."),
+        "poucas": ("A pauta de importações brasileira é " + azb("diversificada") + " (insumos, bens de capital, "
+                   "combustíveis); o petróleo bruto era o principal item individual, mas com cerca de " + vd("7%")
+                   + " do total em 2013 ⏳ (out/2026)."),
+        "destrinchando": [
+            "Por categoria de uso, as importações brasileiras se dividem em " + azb("bens intermediários") + " "
+            "(o maior grupo, mais da metade), " + azb("bens de capital") + ", " + azb("bens de consumo") + " e "
+            + azb("combustíveis e lubrificantes") + ". Dependência de insumos importados é traço estrutural da "
+            "indústria brasileira.",
+            "Em " + vd("2013") + ", o país importou cerca de US$ 16 bilhões em petróleo bruto, perto de "
+            + vd("7%") + " de importações totais de cerca de US$ 240 bilhões ⏳ (out/2026) — item individual "
+            "relevante, mas abaixo de 10%.",
+            "Comparação histórica: após os choques de 1973 e 1979, o petróleo chegou a responder por " + vd("perto "
+            "da metade") + " das importações brasileiras no início dos anos 1980 — um dos motores da crise da "
+            "dívida. A autossuficiência foi buscada com Proálcool, Bacia de Campos e, depois, o pré-sal.",
+            "Hoje ⏳ (out/2026) o quadro se inverteu: com o pré-sal, o " + rx("Brasil") + " é grande "
+            + azb("exportador líquido de petróleo bruto") + " — que passou a disputar com a soja o posto de "
+            "principal produto da pauta de exportação —, mas segue importando derivados (diesel, gasolina, "
+            "nafta) por limitação de refino.",
+        ],
+        "dissecando": (cz("[detalhe]") + " Item de ordem de grandeza: o candidato sabe que o petróleo pesa na "
+                       "pauta e tende a superestimar. O limiar “menos de 10%” é o ponto decisivo."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“Os bens intermediários constituem a maior parte das importações brasileiras por categoria de "
+            "uso.”</i> → CERTO",
+            "<i>“O Brasil é hoje importador líquido de petróleo bruto.”</i> ⏳ (out/2026) → ERRADO (inversão: com o "
+            "pré-sal, é exportador líquido)",
+        ])],
+        "tipo_erro": ["DETALHE"], "moduladores": ["menos de 10%"], "dificuldade": 2,
+        "comentario_fonte": ("O petróleo representa, em média, 8% da pauta de importações; no fim dos anos 1970, "
+                             "após o choque do petróleo, chegou a 80% do valor importado."),
+        "qualidade_fonte": "com_erro",
+        "figuras_fonte": [],
+        "alertas": ["qualidade_fonte: a fonte dizia que o petróleo chegou a 80% das importações no fim dos anos "
+                    "1970; o pico foi perto da metade, no início dos anos 1980",
+                    "dado_aproximado: valores de 2013 (petróleo bruto ~US$ 16 bi; total ~US$ 240 bi) em ordem de "
+                    "grandeza"],
+    },
+    # ------------------------------------------------------------------ E1-0983
+    {
+        "id": "ECO-E1-0983-1", "fonte_ref": "E1-0983", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Prof. Daniel (Telegram Economia CACD)", "prova": "", "ano": 2022,
+        "cacd": False, "errei": False,
+        "comando": "Acerca da política comercial brasileira recente, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Nesse ano de 2022, a Câmara de Comércio Exterior (Camex) tentou aprovar a redução do Imposto "
+                      "de Importação, via inclusão na Lista de Exceções à Tarifa Externa Comum do Mercosul (Letec), "
+                      "para insumos industriais como glifosato e resinas plásticas, mas tal tentativa fracassou por "
+                      "violar as regras do bloco. Reduções nas tarifas de importação possuem a capacidade de reduzir "
+                      "os custos dos insumos importados, abrindo espaço para uma inflação menor."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Nesse ano de 2022, a Câmara de Comércio Exterior (Camex) ") + vm("tentou aprovar")
+                    + az(" a redução do Imposto de Importação, via inclusão na Lista de Exceções à Tarifa Externa "
+                         "Comum do Mercosul (Letec), para insumos industriais como glifosato e resinas plásticas")
+                    + vm(", mas tal tentativa fracassou por violar as regras do bloco") + az(". Reduções nas tarifas "
+                    "de importação possuem a capacidade de reduzir os custos dos insumos importados, abrindo espaço "
+                    "para uma inflação menor.")),
+        "poucas": ("A Camex (pelo Gecex) " + azb("efetivamente reduziu") + " o Imposto de Importação de insumos "
+                   "industriais em 2022, usando a " + azb("Letec") + " — instrumento previsto pelas próprias "
+                   "normas do Mercosul. A segunda frase (tarifa menor → custo menor → inflação menor) está certa."),
+        "destrinchando": [
+            "A " + azb("Letec") + " (Lista Nacional de Exceções à TEC) é uma lista de códigos NCM, em número "
+            "limitado e autorizado pelo Mercosul, nos quais cada sócio pode aplicar alíquota diferente da TEC. "
+            "Usá-la é cumprir, e não violar, as regras do bloco. Há também a lista de " + azb("desabastecimento")
+            + " e o regime de " + azb("ex-tarifários") + " para bens de capital e informática.",
+            "Em 2021–2022 ⏳ (out/2026), em meio à alta da inflação, o governo reduziu tarifas em várias rodadas: "
+            "corte linear de " + vd("10%") + " em novembro de 2021, novo corte de " + vd("10%") + " em maio de "
+            "2022 (temporário, até o fim de 2023) e reduções pontuais para insumos industriais e alimentos, "
+            "incluindo inclusões na Letec. Em julho de 2022, o Mercosul aprovou redução de " + vd("10%") + " da "
+            "própria TEC para a maior parte do universo tarifário.",
+            "Canal inflacionário: tarifa menor reduz o preço interno de importados e de insumos, diminui custos de "
+            "produção e aumenta a concorrência — efeito " + azb("desinflacionário") + ", em geral pontual (nível "
+            "de preços), não permanente sobre a taxa de inflação.",
+            "Pano de fundo: a TEC média do Mercosul é alta para padrões internacionais, e o " + rx("Brasil")
+            + " defendia sua redução; Argentina resistia, e o Uruguai pressionava por flexibilizar acordos "
+            "extrabloco.",
+        ],
+        "dissecando": (cz("[inversão · meia-verdade]") + " O item narra um fracasso que não houve e, em seguida, "
+                       "acerta o mecanismo econômico. Pista: Letec é instrumento <b>do próprio</b> Mercosul — "
+                       "usá-la não pode “violar as regras do bloco”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“A Letec permite que cada membro do Mercosul aplique, em número limitado de produtos, alíquotas "
+            "de importação diferentes da TEC.”</i> → CERTO",
+            "<i>“A redução de tarifas de importação tende a pressionar a inflação para cima, por aumentar a "
+            "demanda por importados.”</i> → ERRADO (inversão: barateia importados e insumos)",
+        ])],
+        "reescrita": ("Nesse ano de 2022, a Câmara de Comércio Exterior (Camex) " + hl("aprovou") + " a redução do "
+                      "Imposto de Importação, via inclusão na Lista de Exceções à Tarifa Externa Comum do Mercosul "
+                      "(Letec), para insumos industriais como glifosato e resinas plásticas"
+                      + hl(", instrumento previsto pelas regras do bloco") + ". Reduções nas tarifas de importação "
+                      "possuem a capacidade de reduzir os custos dos insumos importados, abrindo espaço para uma "
+                      "inflação menor."),
+        "tipo_erro": ["INVERSAO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 2,
+        "comentario_fonte": ("O Brasil efetivamente reduziu esse imposto (Gecex reduz tarifas de importação de "
+                             "insumos industriais, ago/2022); cortes de 10% em nov/2021 (permanente) e mai/2022 "
+                             "(até o fim de 2023)."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["texto_corrigido: “resinas plástiva” → “resinas plásticas”",
+                    "dado_aproximado: cronologia dos cortes tarifários de 2021–2022 resumida de memória"],
+    },
+    # ------------------------------------------------------------------ E2-L00349
+    {
+        "id": "ECO-E2-L00349-1", "fonte_ref": "E2-L00349", "destino": "83", "subtema": H2["conj"],
+        "tipo": "C/E", "banca": "Armstrong", "prova": "Pré-TPS/2026", "ano": 2026, "cacd": False, "errei": False,
+        "comando": "Acerca da política monetária brasileira recente, julgue o item a seguir.",
+        "rotulo_item": "Item",
+        "assertiva": ("Entre 2021 e 2025, a contração monetária elevou a Selic do piso histórico a patamar de dois "
+                      "dígitos, ancorando expectativas e produzindo convergência do IPCA para a meta projetada (3,8% "
+                      "em 2025). Tais ganhos ocorreram sem custos relevantes sobre crédito e investimento, dada a "
+                      "rápida normalização global."),
+        "gabarito": "ERRADO", "gabarito_origem": "fonte", "status": "normal",
+        "anotada": (az("Entre 2021 e 2025, a contração monetária elevou a Selic do piso histórico a patamar de dois "
+                       "dígitos, ancorando expectativas e produzindo convergência do IPCA para a meta projetada (3,8% "
+                       "em 2025). Tais ganhos ") + vm("ocorreram sem custos relevantes") + az(" sobre crédito e "
+                                                                                             "investimento")
+                    + vm(", dada a rápida normalização global") + az(".")),
+        "poucas": ("Juros reais entre os mais altos do mundo têm " + azb("custo") + ": crédito mais caro e "
+                   "escasso, investimento contido, endividamento e inadimplência. E a normalização monetária "
+                   "global foi lenta e desigual ⏳ (out/2026)."),
+        "destrinchando": [
+            "Trajetória da Selic ⏳ (out/2026): piso histórico de " + vd("2%") + " (agosto de 2020 a março de "
+            "2021) → alta até " + vd("13,75%") + " (agosto de 2022) → cortes até " + vd("10,50%") + " (maio de "
+            "2024) → novo ciclo de alta até " + vd("15%") + " (junho de 2025), maior nível desde 2006.",
+            "Mecanismo de transmissão: juro básico ↑ → custo do crédito ↑ e concessões ↓ → consumo e "
+            "investimento ↓ → hiato do produto negativo → inflação ↓. O " + azb("custo") + " em atividade é "
+            "parte do canal, não um efeito colateral evitável: a política monetária desinflaciona justamente "
+            "esfriando a demanda.",
+            "Custos observados ⏳ (out/2026): juro real ex-ante perto de 10% ao ano, desaceleração do crédito "
+            "livre, alta da inadimplência e do comprometimento de renda das famílias, encarecimento da dívida "
+            "pública (maior despesa com juros) e investimento produtivo contido.",
+            "Exterior: o Fed só iniciou cortes em setembro de 2024 e manteve juros altos por longo período; a "
+            "normalização foi heterogênea entre países, e o dólar forte pressionou moedas emergentes — nada de "
+            "“rápida normalização global” que poupasse a economia brasileira.",
+            "A primeira frase é generosa — as expectativas chegaram a se desancorar em 2024–2025, e o IPCA de "
+            "2025 voltou ao intervalo de tolerância, mas acima do centro da meta de " + vd("3%") + " (meta "
+            "contínua desde 2025, com tolerância de 1,5 ponto) ⏳ (out/2026) —, porém o gabarito se decide na "
+            "segunda.",
+        ],
+        "dissecando": (cz("[meia-verdade · nexo indevido]") + " A primeira frase narra fatos conhecidos (Selic de "
+                       "2% a dois dígitos) para ganhar credibilidade; o erro está na segunda: “sem custos "
+                       "relevantes” contraria o próprio mecanismo de transmissão, e a justificativa (“rápida "
+                       "normalização global”) é falsa. Desconfie de política monetária contracionista “sem "
+                       "custos”."),
+        "modulos": [("😈 Para dificultar", [
+            "<i>“O ciclo de aperto monetário iniciado em 2021 elevou a Selic do piso histórico de 2% para "
+            "13,75% em 2022.”</i> → CERTO ⏳ (out/2026)",
+            "<i>“A política monetária contracionista reduz a inflação sem afetar o nível de atividade no curto "
+            "prazo.”</i> → ERRADO (o canal passa justamente pela demanda)",
+        ])],
+        "reescrita": ("Entre 2021 e 2025, a contração monetária elevou a Selic do piso histórico a patamar de dois "
+                      "dígitos, ancorando expectativas e produzindo convergência do IPCA para a meta projetada (3,8% "
+                      "em 2025). Tais ganhos " + hl("tiveram custos relevantes") + " sobre crédito e investimento"
+                      + hl(", num cenário de normalização global lenta e heterogênea") + "."),
+        "tipo_erro": ["MEIA_VERDADE", "NEXO_INDEVIDO"], "moduladores": ["sem custos relevantes"],
+        "dificuldade": 1,
+        "comentario_fonte": ("Houve custos relevantes (crédito/investimento) e riscos institucionais; a "
+                             "normalização global foi heterogênea."),
+        "qualidade_fonte": "raso",
+        "figuras_fonte": [],
+        "alertas": ["nota_redacao: a primeira frase (ancoragem e convergência a 3,8% em 2025) também é discutível; "
+                    "mantida em azul por o gabarito se apoiar na segunda frase"],
+    },
 ]

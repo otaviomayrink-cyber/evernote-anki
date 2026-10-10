@@ -791,7 +791,7 @@ CARDS = [
         "figuras_fonte": [{"ref": "IMAGEM 380", "tipo_fonte": "TEXTO", "lado": "verso", "acao": "absorvida"},
                           {"ref": "IMAGEM 381", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "cortada (repetia o enunciado)"}],
-        "alertas": [provavel(2017),
+        "alertas": ["quase_duplicata: ECO-E3-L00274-1 (mesmo item em outra prova)", provavel(2017),
                     "duplicata: verso da linha E3-L00274 (mesmo item) fundido neste card",
                     "quase_duplicata: ECO-E2-L00361-1, ECO-E2-L00486-1 (planos Keynes × White)"],
     },

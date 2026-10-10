@@ -649,7 +649,7 @@ CARDS = [
         "qualidade_fonte": "bom",
         "figuras_fonte": [{"ref": "IMAGEM 401 (duplicata E3-L00292)", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida (repetia o enunciado)"}],
-        "alertas": ["duplicata: comentário de E3-L00292 (mesmo item, “Questão 65 — Item 3”) fundido",
+        "alertas": ["quase_duplicata: ECO-E3-L00292-1 (mesmo item em outra prova)", "duplicata: comentário de E3-L00292 (mesmo item, “Questão 65 — Item 3”) fundido",
                     "banca_provavel: CEBRASPE, IRBr/CACD/2018 (marca ⌚ e numeração “Questão 65” na duplicata; "
                     "não confirmada)"],
     },
@@ -708,7 +708,7 @@ CARDS = [
                              "(Calvo), macroprudenciais, encaje chileno, Brasil pós-2008."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["duplicata: comentário de E3-L00293 (mesmo item, “Questão 65 — Item 4”) fundido",
+        "alertas": ["quase_duplicata: ECO-E3-L00293-1 (mesmo item em outra prova)", "duplicata: comentário de E3-L00293 (mesmo item, “Questão 65 — Item 4”) fundido",
                     "banca_provavel: CEBRASPE, IRBr/CACD/2018 (marca ⌚ e numeração “Questão 65” na duplicata; "
                     "não confirmada)",
                     "qualidade_fonte: o comentário de origem chama swaps cambiais de medida prudencial; são "

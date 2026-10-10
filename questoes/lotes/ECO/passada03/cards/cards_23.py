@@ -264,7 +264,11 @@ CARDS = [
             "<i>“O capital subscrito inicial do NDB, de US$ 50 bilhões, foi dividido igualmente entre os "
             "membros fundadores.”</i> → CERTO",
         ])],
-        "reescrita": ("[…] Para isso, cada país contribuirá, inicialmente, com " + hl("uma parcela diferenciada")
+        "reescrita": ("O Arranjo Contingente de Reservas (CRA) e o Novo Banco de Desenvolvimento constituem passos importantes "
+                      "na criação de uma arquitetura financeira conjunta do BRICS. Com função similar à do Fundo Monetário "
+                      "Internacional, o CRA pretende complementar a rede global de proteção financeira, ajudando a prevenir "
+                      "pressões de curto prazo, reais ou potenciais, sobre o balanço de pagamentos dos países do grupo. "
+                      "Para isso, cada país contribuirá, inicialmente, com " + hl("uma parcela diferenciada")
                       + " do total de recursos (US$ 100 bilhões) comprometidos" + hl(": China, US$ 41 bilhões; "
                       "Brasil, Rússia e Índia, US$ 18 bilhões cada; África do Sul, US$ 5 bilhões") + "."),
         "tipo_erro": ["DADO_ALTERADO", "TROCA_CONCEITO"], "moduladores": ["cada"], "dificuldade": 2,
@@ -449,7 +453,10 @@ CARDS = [
             "<i>“O G20 decidiu proibir o modelo em que o emissor remunera a agência de rating.”</i> → ERRADO "
             "(extrapolação: houve registro e supervisão, não proibição do modelo)",
         ])],
-        "reescrita": ("[…] Um ponto " + hl("presente") + " nessas pautas foi a necessidade de reforma das agências "
+        "reescrita": ("Em várias reuniões do G20 foram apontadas falhas graves de regulamentação e supervisão, além dos "
+                      "riscos irresponsavelmente assumidos por parte de bancos e outras instituições financeiras, que "
+                      "acabaram criando fragilidades que contribuíram para o agravamento da crise econômica de 2008. "
+                      "Um ponto " + hl("presente") + " nessas pautas foi a necessidade de reforma das agências "
                       "de classificação de risco, pois elas têm subestimado os impactos que uma classificação "
                       "equivocada de riscos pode provocar no mercado e nas economias sob suas análises."),
         "tipo_erro": ["CONTRADICAO", "MEIA_VERDADE"], "moduladores": [], "dificuldade": 1,

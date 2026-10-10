@@ -280,7 +280,7 @@ CARDS = [
         "anotada": (az("No modelo de Solow, se o estoque de capital por trabalhador se encontra acima do nível "
                        "associado à regra de ouro, então o aumento da taxa de crescimento populacional ")
                     + vm("pode aumentar") + az(" (tudo o mais constante) o nível de consumo per capita, ")
-                    + vm("dado que") + az(" permite diminuir o estoque de capital por trabalhador.")),
+                    + vm("dado que permite") + az(" diminuir o estoque de capital por trabalhador.")),
         "poucas": ("Com s fixo (“tudo o mais constante”), o consumo de estado estacionário é " + vd("c* = (1−s)·f(k*)")
                    + ". Se n sobe, k* cai, f(k*) cai e c* " + vm("cai") + " — esteja a economia acima ou abaixo "
                    "da regra de ouro."),
@@ -314,7 +314,8 @@ CARDS = [
         "reescrita": ("No modelo de Solow, se o estoque de capital por trabalhador se encontra acima do nível "
                       "associado à regra de ouro, então o aumento da taxa de crescimento populacional "
                       + hl("reduz") + " (tudo o mais constante) o nível de consumo per capita, "
-                      + hl("embora") + " permita diminuir o estoque de capital por trabalhador."),
+                      + hl("embora permita") + " diminuir o estoque de capital por trabalhador."),
+
         "tipo_erro": ["NEXO_INDEVIDO", "MEIA_VERDADE"], "moduladores": ["pode", "tudo o mais constante"],
         "dificuldade": 3,
         "comentario_fonte": "Com s fixo, c = (1−s)·f(k); n maior reduz k e f(k), logo reduz o consumo per capita; "

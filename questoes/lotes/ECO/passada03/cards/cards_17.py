@@ -922,7 +922,7 @@ CARDS = [
                              "(Krugman, 1979)."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["duplicata: comentários das linhas E3-L00219 e E3-L00257 fundidos neste card"],
+        "alertas": ["quase_duplicata: ECO-E3-L00219-1, ECO-E3-L00257-1 (mesmo item em outra prova)", "duplicata: comentários das linhas E3-L00219 e E3-L00257 fundidos neste card"],
     },
     # ------------------------------------------------------------------ E1-0898
     {

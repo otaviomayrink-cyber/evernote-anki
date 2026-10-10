@@ -1115,7 +1115,7 @@ CARDS += [
                            "acao": "absorvida (verso da duplicata E2-L01045)"},
                           {"ref": "IMAGEM 181", "tipo_fonte": "TEXTO", "lado": "verso",
                            "acao": "absorvida (verso da duplicata E2-L01045)"}],
-        "alertas": ["duplicata: E2-L01045 (mesma assertiva, mesma banca Nabuco, lista de 24/07/2023) fundida "
+        "alertas": ["quase_duplicata: ECO-E2-L01045-1 (mesmo item em outra prova)", "duplicata: E2-L01045 (mesma assertiva, mesma banca Nabuco, lista de 24/07/2023) fundida "
                     "neste card; comentários unidos"],
     },
 ]

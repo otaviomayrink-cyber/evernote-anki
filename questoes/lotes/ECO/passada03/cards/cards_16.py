@@ -1611,6 +1611,6 @@ CARDS = [
                              "E2-L01159)."),
         "qualidade_fonte": "bom",
         "figuras_fonte": [],
-        "alertas": ["quase_duplicata: ECO-E1-0896-1, ECO-E1-0675-1 (elasticidades dos primários na tese cepalina)"],
+        "alertas": ["quase_duplicata: ECO-E2-L01159-1 (mesmo item em outra prova)", "quase_duplicata: ECO-E1-0896-1, ECO-E1-0675-1 (elasticidades dos primários na tese cepalina)"],
     },
 ]

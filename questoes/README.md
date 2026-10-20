@@ -20,6 +20,7 @@ Anexar a cada sessão de lote: o prompt preenchido, os quatro documentos e um zi
 | `graficos/qgraf.py` (+ `modelos.py`) | spec JSON → PNG no estilo do caderno; calcula interseções e áreas; confere rótulos, geometria e as checagens econômicas; `--galeria` para revisão visual |
 | `montar_nota_q.py` | fonte dos cards → JSONL + HTML + ENEX com as figuras embutidas (`<en-media>` + `<resource>`) |
 | `verificar_q.py` | contrato da Folha -Q v3 §9 (inclusive figuras) e verificação do JSONL |
+| `juntar_enex.py` | junta os ENEX das passadas num ENEX único do lote, na ordem do plano |
 
 ```bash
 pip install -r questoes/requirements.txt
